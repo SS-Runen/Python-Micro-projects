@@ -53,19 +53,30 @@ def txt_to_csv(
     print_logfile_entry = True
     ):
 
-    str_logfile_path = str(outfolder_path) + "scripts_logfile.txt"    
+    try:
+        script_path = Path(os.path.abspath(__file__)).parent
+        os.chdir((script_path))
+        print(f"Set current directory to script location:\n{script_path}")
+    except Exception as e:
+        print(
+            """Failed to change current working directory to the folder containing this script.
+            \nThis could be because you are not using a Windows or Unix operating system. Error:\n*****
+            """)
+        print(e)
+
+    str_logfile_path = "scripts_logfile.txt"    
 
     if not outfolder_path.exists():
         os.mkdir(str(outfolder_path))
 
-    # lst_infile_paths = [str(filepath) for filepath in input_filepath.glob(f"{filename_prefix}*.txt")]
-    lst_infile_paths = [str(filepath) for filepath in input_filepath.glob("%s*.txt" % filename_prefix)]
+    lst_infile_paths = [Path(filepath).absolute() for filepath in input_filepath.glob(f"{filename_prefix}*.txt")]
+    # lst_infile_paths = [str(filepath) for filepath in input_filepath.glob("%s*.txt" % filename_prefix)]
     for absolute_path in lst_infile_paths:
         lst_records = parse_textfile(absolute_path)
         fileobj = None
         if (outfolder_path / outfile_name).exists:            
-            # fileobj = open(file=(outfolder_path / outfile_name), mode='a')
-            fileobj = open(file=str((outfolder_path / outfile_name)), mode='a')
+            fileobj = open(file=(outfolder_path / outfile_name), mode='a')
+            # fileobj = open(file=str((outfolder_path / outfile_name)), mode='a')
         else:
             fileobj = open(file=str((outfolder_path / outfile_name)), mode='x')
 
@@ -79,7 +90,9 @@ def txt_to_csv(
         logfile = open(str_logfile_path, 'x')
     
     str_log = "\n****\n" + str(dt.datetime.now()) + '\n'
-    str_log += "Processed the following files:\n"
+    str_log += f"\nInput Files at:\n {input_filepath.resolve()}"
+    str_log += f"\nOutput Folder at:\n {outfolder_path.resolve()}"
+    str_log += "\nProcessed the following files:\n"
     str_log += pprint.pformat(lst_infile_paths)
     str_log += "\n====\n"
 
