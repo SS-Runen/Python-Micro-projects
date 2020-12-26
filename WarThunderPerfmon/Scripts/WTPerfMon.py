@@ -74,8 +74,9 @@ def txt_to_csv(
     for absolute_path in lst_infile_paths:
         lst_records = parse_textfile(absolute_path)
         fileobj = None
-        if (outfolder_path / outfile_name).exists:            
-            fileobj = open(file=(outfolder_path / outfile_name), mode='a')
+        if (outfolder_path / outfile_name).exists:
+            str_timestamp = str(dt.datetime.now()).replace(':', '.')
+            fileobj = open(file=(outfolder_path / (outfile_name + str_timestamp)), mode='x')
             # fileobj = open(file=str((outfolder_path / outfile_name)), mode='a')
         else:
             fileobj = open(file=str((outfolder_path / outfile_name)), mode='x')

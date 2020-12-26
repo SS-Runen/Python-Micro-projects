@@ -1,72 +1,6 @@
 
 ****
-2020-12-25 11:40:31.163576
-
-Input Files at:
- C:\Users\max\Documents\GitHub\Python-Micro-projects\WarThunderPerfmon\InputFiles
-Output Folder at:
- C:\Users\max\Documents\GitHub\Python-Micro-projects\WarThunderPerfmon\OutputFiles
-Processed the following files:
-['..\\InputFiles\\Temp KD Achilles.txt',
- '..\\InputFiles\\Temp KD Archer.txt',
- '..\\InputFiles\\Temp KD Centurion Mk. 1.txt',
- '..\\InputFiles\\Temp KD Centurion Mk. 10.txt',
- '..\\InputFiles\\Temp KD Challenger 1 Mk. 2.txt',
- '..\\InputFiles\\Temp KD Cheiftain Mk. 5.txt',
- '..\\InputFiles\\Temp KD Crusader 3.txt',
- '..\\InputFiles\\Temp KD Firefly.txt',
- '..\\InputFiles\\Temp KD Panther A.txt',
- '..\\InputFiles\\Temp KD Panzer IV-70.txt',
- '..\\InputFiles\\Temp KD Tiger E.txt',
- '..\\InputFiles\\Temp KD Valentine IX.txt']
-====
-
-****
-2020-12-25 11:40:31.171577
-
-Input Files at:
- C:\Users\max\Documents\GitHub\Python-Micro-projects\WarThunderPerfmon\InputFiles
-Output Folder at:
- C:\Users\max\Documents\GitHub\Python-Micro-projects\WarThunderPerfmon\OutputFiles
-Processed the following files:
-['..\\InputFiles\\Temp KD Centurion Mk. 10.txt']
-====
-
-****
-2020-12-25 11:46:01.306459
-
-Input Files at:
- C:\Users\max\Documents\GitHub\Python-Micro-projects\WarThunderPerfmon\InputFiles
-Output Folder at:
- C:\Users\max\Documents\GitHub\Python-Micro-projects\WarThunderPerfmon\OutputFiles
-Processed the following files:
-[WindowsPath('../InputFiles/Temp KD Achilles.txt'),
- WindowsPath('../InputFiles/Temp KD Archer.txt'),
- WindowsPath('../InputFiles/Temp KD Centurion Mk. 1.txt'),
- WindowsPath('../InputFiles/Temp KD Centurion Mk. 10.txt'),
- WindowsPath('../InputFiles/Temp KD Challenger 1 Mk. 2.txt'),
- WindowsPath('../InputFiles/Temp KD Cheiftain Mk. 5.txt'),
- WindowsPath('../InputFiles/Temp KD Crusader 3.txt'),
- WindowsPath('../InputFiles/Temp KD Firefly.txt'),
- WindowsPath('../InputFiles/Temp KD Panther A.txt'),
- WindowsPath('../InputFiles/Temp KD Panzer IV-70.txt'),
- WindowsPath('../InputFiles/Temp KD Tiger E.txt'),
- WindowsPath('../InputFiles/Temp KD Valentine IX.txt')]
-====
-
-****
-2020-12-25 11:46:01.399465
-
-Input Files at:
- C:\Users\max\Documents\GitHub\Python-Micro-projects\WarThunderPerfmon\InputFiles
-Output Folder at:
- C:\Users\max\Documents\GitHub\Python-Micro-projects\WarThunderPerfmon\OutputFiles
-Processed the following files:
-[WindowsPath('../InputFiles/Temp KD Centurion Mk. 10.txt')]
-====
-
-****
-2020-12-25 11:47:33.268719
+2020-12-27 06:16:28.851921
 
 Input Files at:
  C:\Users\max\Documents\GitHub\Python-Micro-projects\WarThunderPerfmon\InputFiles
@@ -88,40 +22,7 @@ Processed the following files:
 ====
 
 ****
-2020-12-25 11:47:33.274720
-
-Input Files at:
- C:\Users\max\Documents\GitHub\Python-Micro-projects\WarThunderPerfmon\InputFiles
-Output Folder at:
- C:\Users\max\Documents\GitHub\Python-Micro-projects\WarThunderPerfmon\OutputFiles
-Processed the following files:
-[WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Centurion Mk. 10.txt')]
-====
-
-****
-2020-12-25 11:48:18.227291
-
-Input Files at:
- C:\Users\max\Documents\GitHub\Python-Micro-projects\WarThunderPerfmon\InputFiles
-Output Folder at:
- C:\Users\max\Documents\GitHub\Python-Micro-projects\WarThunderPerfmon\OutputFiles
-Processed the following files:
-[WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Achilles.txt'),
- WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Archer.txt'),
- WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Centurion Mk. 1.txt'),
- WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Centurion Mk. 10.txt'),
- WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Challenger 1 Mk. 2.txt'),
- WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Cheiftain Mk. 5.txt'),
- WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Crusader 3.txt'),
- WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Firefly.txt'),
- WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Panther A.txt'),
- WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Panzer IV-70.txt'),
- WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Tiger E.txt'),
- WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Valentine IX.txt')]
-====
-
-****
-2020-12-25 11:48:18.232291
+2020-12-27 06:16:28.855922
 
 Input Files at:
  C:\Users\max\Documents\GitHub\Python-Micro-projects\WarThunderPerfmon\InputFiles
