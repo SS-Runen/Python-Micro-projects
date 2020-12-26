@@ -71,12 +71,15 @@ def txt_to_csv(
 
     lst_infile_paths = [Path(filepath).absolute() for filepath in input_filepath.glob(f"{filename_prefix}*.txt")]
     # lst_infile_paths = [str(filepath) for filepath in input_filepath.glob("%s*.txt" % filename_prefix)]
+    str_timestamp = str(dt.datetime.now()).replace(':', '.')
+    if (outfolder_path / outfile_name).exists:
+            fileobj = open(file=(outfolder_path / (str_timestamp + outfile_name)), mode='x')
+
     for absolute_path in lst_infile_paths:
         lst_records = parse_textfile(absolute_path)
         fileobj = None
         if (outfolder_path / outfile_name).exists:
-            str_timestamp = str(dt.datetime.now()).replace(':', '.')
-            fileobj = open(file=(outfolder_path / (outfile_name + str_timestamp)), mode='x')
+            fileobj = open(file=(outfolder_path / (str_timestamp + outfile_name)), mode='a')
             # fileobj = open(file=str((outfolder_path / outfile_name)), mode='a')
         else:
             fileobj = open(file=str((outfolder_path / outfile_name)), mode='x')
