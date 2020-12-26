@@ -50,7 +50,8 @@ def txt_to_csv(
     outfile_name = "records.csv",
     outfolder_path = Path(r"../OutputFiles/"),
     filename_prefix = "Temp KD",
-    print_logfile_entry = True
+    print_logfile_entry = True,
+    overwrite_outfiles = False
     ):
 
     try:
@@ -70,20 +71,22 @@ def txt_to_csv(
         os.mkdir(str(outfolder_path))
 
     lst_infile_paths = [Path(filepath).absolute() for filepath in input_filepath.glob(f"{filename_prefix}*.txt")]
-    # lst_infile_paths = [str(filepath) for filepath in input_filepath.glob("%s*.txt" % filename_prefix)]
+    # lst_infile_paths = [str(filepath) for filepath in input_filepath.glob("%s*.txt" % filename_prefix)]    
+
     str_timestamp = str(dt.datetime.now()).replace(':', '.')
-    if (outfolder_path / outfile_name).exists:
-            fileobj = open(file=(outfolder_path / (str_timestamp + outfile_name)), mode='x')
-            fileobj.write("Event,Vehicle,Distance")
+    if (outfolder_path / outfile_name).exists and (overwrite_outfiles is False):
+        fileobj = open(file=(outfolder_path / (outfile_name)), mode='x')
+        fileobj.write("Event,Vehicle,Distance")
+    else:
+        fileobj = open(file=(outfolder_path / outfile_name), mode='w')
+        fileobj.write("Event,Vehicle,Distance")
+    fileobj.close()
 
     for absolute_path in lst_infile_paths:
         lst_records = parse_textfile(absolute_path)
-        fileobj = None
-        if (outfolder_path / (str_timestamp + outfile_name)).exists:
-            fileobj = open(file=(outfolder_path / (str_timestamp + outfile_name)), mode='a')
-            # fileobj = open(file=str((outfolder_path / outfile_name)), mode='a')
-        else:
-            fileobj = open(file=str((outfolder_path / outfile_name)), mode='x')
+        fileobj = None        
+        fileobj = open(file=(outfolder_path / (str_timestamp + outfile_name)), mode='a')
+        # fileobj = open(file=str((outfolder_path / outfile_name)), mode='a')
 
         for line in lst_records:            
             fileobj.write(line + '\n')
