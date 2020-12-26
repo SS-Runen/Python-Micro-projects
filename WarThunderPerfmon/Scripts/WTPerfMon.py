@@ -74,11 +74,12 @@ def txt_to_csv(
     str_timestamp = str(dt.datetime.now()).replace(':', '.')
     if (outfolder_path / outfile_name).exists:
             fileobj = open(file=(outfolder_path / (str_timestamp + outfile_name)), mode='x')
+            fileobj.write("Event,Vehicle,Distance")
 
     for absolute_path in lst_infile_paths:
         lst_records = parse_textfile(absolute_path)
         fileobj = None
-        if (outfolder_path / outfile_name).exists:
+        if (outfolder_path / (str_timestamp + outfile_name)).exists:
             fileobj = open(file=(outfolder_path / (str_timestamp + outfile_name)), mode='a')
             # fileobj = open(file=str((outfolder_path / outfile_name)), mode='a')
         else:

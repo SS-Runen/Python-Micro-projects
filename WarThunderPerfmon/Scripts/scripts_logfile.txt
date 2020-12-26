@@ -1,6 +1,6 @@
 
 ****
-2020-12-27 06:23:28.587929
+2020-12-27 06:35:21.988733
 
 Input Files at:
  C:\Users\max\Documents\GitHub\Python-Micro-projects\WarThunderPerfmon\InputFiles
@@ -22,7 +22,7 @@ Processed the following files:
 ====
 
 ****
-2020-12-27 06:23:28.593929
+2020-12-27 06:35:21.994733
 
 Input Files at:
  C:\Users\max\Documents\GitHub\Python-Micro-projects\WarThunderPerfmon\InputFiles
