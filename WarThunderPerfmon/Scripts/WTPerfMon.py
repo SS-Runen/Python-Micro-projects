@@ -79,8 +79,9 @@ def txt_to_csv(
         fileobj = open(file=(outfolder_path / outfile_name), mode='x')
     else:
         fileobj = open(file=(outfolder_path / outfile_name), mode='w')
-        fileobj.write("Event,Vehicle,Distance\n")
-        fileobj.close()
+                
+    fileobj.writelines(["Event,Vehicle,Distance"])
+    fileobj.close()
 
     for absolute_path in lst_infile_paths:
         lst_records = parse_textfile(absolute_path)                
