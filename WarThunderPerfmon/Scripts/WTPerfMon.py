@@ -73,20 +73,18 @@ def txt_to_csv(
     lst_infile_paths = [Path(filepath).absolute() for filepath in input_filepath.glob(f"{filename_prefix}*.txt")]
     # lst_infile_paths = [str(filepath) for filepath in input_filepath.glob("%s*.txt" % filename_prefix)]    
 
-    str_timestamp = str(dt.datetime.now()).replace(':', '.')
+    str_timestamp = str(dt.datetime.now()).replace(':', '.') + ' '
     if (outfolder_path / outfile_name).exists and (overwrite_outfiles is False):
-        fileobj = open(file=(outfolder_path / (outfile_name)), mode='x')
-        fileobj.write("Event,Vehicle,Distance")
+        outfile_name = str_timestamp + outfile_name
+        fileobj = open(file=(outfolder_path / outfile_name), mode='x')
     else:
         fileobj = open(file=(outfolder_path / outfile_name), mode='w')
         fileobj.write("Event,Vehicle,Distance")
-    fileobj.close()
+        fileobj.close()
 
     for absolute_path in lst_infile_paths:
-        lst_records = parse_textfile(absolute_path)
-        fileobj = None        
-        fileobj = open(file=(outfolder_path / (str_timestamp + outfile_name)), mode='a')
-        # fileobj = open(file=str((outfolder_path / outfile_name)), mode='a')
+        lst_records = parse_textfile(absolute_path)                
+        fileobj = open(file=(outfolder_path / outfile_name), mode='a')        
 
         for line in lst_records:            
             fileobj.write(line + '\n')
@@ -112,11 +110,11 @@ def txt_to_csv(
 
 
 def main():
-    txt_to_csv()
-    txt_to_csv(
-        filename_prefix="Temp KD Centurion Mk. 10",
-        outfile_name="records_centmk10.csv"
-    )
+    txt_to_csv(overwrite_outfiles=True)
+    # txt_to_csv(
+    #     filename_prefix="Temp KD Centurion Mk. 10",
+    #     outfile_name="records_centmk10.csv"
+    # )
     return None
 
 
