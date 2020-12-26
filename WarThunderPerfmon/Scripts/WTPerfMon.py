@@ -80,7 +80,7 @@ def txt_to_csv(
     else:
         fileobj = open(file=(outfolder_path / outfile_name), mode='w')
                 
-    fileobj.writelines(["Event,Vehicle,Distance"])
+    fileobj.writelines(["Event,Vehicle,Distance", ""])
     fileobj.close()
 
     for absolute_path in lst_infile_paths:
