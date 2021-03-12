@@ -100,7 +100,7 @@ def txt_to_csv(
 
 
 def main():
-    txt_to_csv()
+    txt_to_csv(overwrite_outfiles=True)
     # txt_to_csv(
     #     filename_prefix="Temp KD Centurion Mk. 10",
     #     outfile_name="records_centmk10.csv"

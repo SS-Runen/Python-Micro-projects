@@ -1,105 +1,303 @@
-2020-12-20
+I'm the Sherman Firefly near you.
+Do not move or I will shoot.
 
-kb IS-2 (1944)
-k KV-122
-k T-34-85 (D-5T)
+Referral Link:
+http://warthunder.com/en/registration?r=userinvite_28552741
 
-2020-12-17
+Bad Matches per Battle Rating:
 
-k T-34-85 (D-5T) @0.6
-k KV-85
+5.7 xxx
 
-k T-34-85 @1.04
+5.3 xx
 
-k T-34-57
-kb IS-1
+vs. T-34-85 (D-5T) 7/3
+vs. T-34-85 * 5/3
 
-kb T-34-85 (D-5T) @1
+Note:
+As of February 25, 2021 (02-25-2021) when a "kb" is listed, "RelativeOrientation" is
+versus the direction of the enemy shell, not enemy hull.
 
-k IS-2 (1944)
-kb IS-2 (1944)
+Event Vehicle Distance OrientationInSight RelativeMovement SelfMovement RelativeAzimuth
 
-k IS-1
+2021-03-12
 
-k IS-2
+@k @T-34-85E Kaspir @~.6 @Near-Parallel @0 @0
+@k @T-34-85 IGOR112233 @.2 @Diagonal @0 @0
+@kb @IS-1 @.4
 
-2020-12-14
+@kb @T-34-85 (D-5T) @.49 @Parallel @0 @0
+@k Pz IV/70 @.25 @Diagonal @8 @0
 
-k T-44
-k SU-100P
-k PT-76
-k T-34-85 (D-5T) @0.6
-k T-34-85 (D-5T) @0.6
+@K @KV-85 @.6 @Diagonal @5 @0
+@k @KV85 @.3 @Diagonal @5 @0
+@k @ASU-57 @.01 @Parallel @0 @0
 
-kb IS-2 (1944)
+2021-03-10
 
-k T-34-85 (D-5T) @0.04
-k KV-85
+@k @Panther D PotatoLord @.6 @Diagonal @0 @0
+@kb @T-44 @.3 @Diagonal @0 @0
+@k @T-34-85 (D-5T) @.6 @Near-Parallel @0 @0
 
-k T-34-57
+@k @KV-85 @.8 @Perpendicular @0 @0
 
-k T-44
+@kb @IS-2 No. 402 @.43 @Diagonal @0 @0
 
-k T-34-57
+@k @SU-85 @.6 @Parallel @0 @0
+@kb @Panther A @.6 @Diagonal @0 @0
 
-k T-34-57
+2021-03-05
 
-kb IS-2 (1944)
+@k @IS-2 @.3 @Diagonal @0 @0
+@kb @M4A2 @.3 @Diagonal @10 @0
 
-kb KV-220
+@kb @Waffentrager @.3 @Diagonal @0 @15
 
-k KV-1 (Zis-5)
+@kb @R3 T-20 @.4 @Near-Perpendicular @0 @0
 
-k T-34-85 (D-5T) @0.41
+@k @KV-1S @.06 @Diagonal @0 @0
 
-kb T-34-85 (D-5T) @0.14
+@kb @KV-85 @.1 @Diagonal @0 @0
 
-kb T-34-85 (D-5T) @0.18
+@kb @SU-85 @.8 @Diagonal @0 @0
 
-k T-34-57
+@kb @T-34-85 Gai @.8 @Diagonal @15 @0
+@k @Tiger 1H @.8, .8 @Diagonal, Diagonal @0, 0 @0, 0
 
-k IS-2
+@k @M18 @.05 @Near-Parallel @0 @0
+@k @M4A1 @.4 @Perpendicular @0 @0
+@k @T-34E @.1 @Diagonal @5 @0
+@kb @KV-85 @.04 @Diagonal @0 @0
 
-2020-12-11
+@k @M4A2 @.7 @Parallel @0 @0
+@kb @M10 GMC @.8 @Diagonal @0 @0
 
-k T-34-57
-kb T-34-57
+@k @E.B.R (1954) @.04 @Near-Perpendicular @20 @0
+@k @T-55E1 @.03 @Diagonal @0 @0
+@kb @T-34-85 (D-5T) @.3 @Diagonal @5 @0
 
-k KV-85
+@kb @M4A3E2 @.1 @Diagonal @0 @0
 
-k T-34-85 @1.0
+@k @Panzer IV/70(V) @.3 @Diagonal @3 @0
+@kb @Panther F @.7 @Near-Parallel @0 @0
 
-2020-12-10
+@k @M18 @.75 @Diagonal @0 @0
+@kb @M4A3E2 @.3 @Diagonal @0 @0
 
-k KV-122
+2021-02-28
 
-kb M18
+@k @Panther A @.1 @Near-Perpendicular @0 @0
+@kb @M4A1 (FL10) @.4 @Diagonal @0 @0
 
-k IS-1
+@k @M18 @.2 @Near-Parallel @0 @0
+@k @Ikv 103 @.7 @Parallel @0 @0
+@k @M4A3E2 @.8 @Perpendicular @0 @0
+@kb @Ikv 103 @.6 @Diagonal @0 @0
 
-k ISU-122
-k SU-85M
+@k @Tiger E @.5 @Near-Perpendicular @0 @0
+@kb @Panther D @.4 @Near-Perpendicular @0 @0
 
-kb T-34-85 @0.720
+@kb @Tiger II P @.2 @Near-Perpendicular @0 @0
+@k @lkpzM41 @.8 @Perpendicular @0 @0
 
-k ASU-57
+2021-02-25
 
-kb T-34-57
+@kb @Ikv 103 @.02 @Near-Perpendicular @0 @0
+@k @T-55E1 @.05 @Parallel @0 @10
+@k @ZSD63 @.03 @Near-Perpendicular @5 @0
 
-kb T-34-85 Gai @0.700
+@k @M4A4 (SA50) @.8 @Diagonal @0 @0
+@k @M4A1 @.7 @Near-Perpendicular @0 @0
 
-2020-12-06
+@kb @Jagdpanther @.01 @Near-Perpendicular @0 @0
 
-k T-34-85 @0.19
+@k @E.B.R. (1954) @.06 @Near-Parallel @15 @0
 
-k IS-1
+@kb @KV-85 @.7 @Diagonal @0 @0
+@k @T-55E1 @.06 @Diagonal @0 @0
 
-k IS-1
+@kb @PT-76B @.02 @Parallel @0 @0
 
-k IS-2 No.402
-k IS-2 (1944)
-k IS-2
-k T-34-85 Gai @0.750
-======================================
-Following records are after New Power.
-======================================
+@k @IS-1 @.3, .3 @Diagonal, Diagonal @0, -3 @0, 0
+
+@kb @T-34-85 (D-5T) @.01, .01 @Parallel, Near-Perpendicular @0, 3 @0, 0
+@k @PT-76B @.6 @Diagonal @0 @0
+
+@kb @M4A4 (SA50) @.7 @Near-Parallel @0 @0
+
+@kb @Panther G @.1 @Near-Perpendicular @0 @0
+
+2021-02-20
+
+@kb @T-34-57 @.2 @Diagonal @0 @0
+@k @T-34-85 (D-5T) @.02 @Near-Perpendicular @12 @0
+@k @ASU-57 @.39 @Diagonal @20 @0
+@k @T-34-57 @.04 @Diagonal @0 @0
+@k @T-34-57 @.04 @Near-Parallel @0 @0
+@k @KV-85 @.58 @Perpendicular @0 @0
+@k @E.B.R (1954) @.3 @Diagonal @15 @0
+
+@k @PT-76
+@k @ASU-57
+@k @E.B.R.
+@kb @T-34-57
+
+@k @Zis-30 @.04 @Parallel @0 @0
+
+@k @T-34-85 (D-5T) @.28 @Diagonal @0 @0
+@k @M4A2 @.53 @Near-Perpendicular @0 @-3
+@k @M4A1 @.41 @Near-Parallel @-4 @0
+@kb @PT-76B @.20 @Diagonal @0 @-4
+
+@k @M4A1 @1.5 @Near-Parallel @Stationary @Stationary
+@kb @M4A1 @1.6 @Diagonal @Stationary @Stationary
+
+@k @PT-76B @.03, .01 @Diagonal, Diagonal @Lateral-Right, Stationary @Lateral-Left, Stationary
+@k @T-34-57 @0.1 @Diagonal @Stationary @Stationary
+@kb @KV-2 (Zis-6) @.5 @Diagonal @Stationary @Approaching
+
+@k @T-34-85 @.7 @Diagonal @0 @0
+@k @SU-85M @.38 @Diagonal @8 @0
+@k @PT-76B @.47, .47 @Diagonal, Diagonal @13, 0 @0, 0
+@k @T-34-57 @.05 @Diaognal @2 @9
+
+@k @PT-76B @.05 @Near-Perpendicular @Stationary @Stationary
+@kb @IS-1 @.4 @Diagonal @Stationary @Stationary
+
+2021-02-16
+
+@k @M4A1 @0.1 @Near-Parallel @Approaching @Approaching
+@kb @M4A4 (SA50) @.12 @Diagonal @Stationary @Lateral-Right
+
+2021-04-09
+
+@k @M4A3E2 @.76 @Diagonal @0 @0
+@k M4A2 @.62 @Near-Parallel @0 @0
+@k @M18 @1.03, 1.02 @Diagonal, Diagonal @49, 0 @0, 0
+@k M41A1 @.81 @Diagonal @0 @0
+@k @M6A1 @.54 @Parallel @0 @0
+
+@k @FIAT 6614
+@kb @VFW
+
+@k @Nashorn
+@kb @Panzer IV/70
+
+@kb @ISU-122S
+@k @EBR
+@k @M24
+@k @T-34-57
+
+@K @M4A3E2 J2jiggles
+
+2021-02-08
+
+@kb @Panther A
+@k @T-34-85 (S53) @.65 @Near-Parallel @29 @0
+@k @T-34-85 (S53) @.44 @Near-Perpendicular @0 @0
+@kb @Panther A @.47 @Diagonal @0 @0
+
+@k @Tiger H @1.18 @Diagonal @Lateral-Left @Stationary
+@k @T-34-85 (D-5T) @1.06 @Diagonal @Stationary @Stationary
+@k @T-34-85 (S53) @1.07 @Parallel @10 @0
+@K @SU-85M @1.53, 1.53 @Near-Perpendicular @5, 0 @0, 0
+@k @M4 Tipo IC @1.04 @Near-Parallel @Stationary @Stationary
+@k @E.B.R. (1954) @1.08 @Near-Parallel @Stationary @Stationary
+@k @AMX-13 @1.07 @Diagonal @Retreating @Stationary
+@k @AMX-13 DCA 40 @Parallel @0 @0
+@kb @IS-2 @.88 @Diagonal @0 @0
+
+@kb @EBR (1954)
+
+@k @KV-85 @1.16 @Diagonal @Stationary @Stationary
+@k @Tiger H @ @Diagonal @Stationary @Stationary
+@k @Sherman VC @.95 @Diagonal @Lateral-Right @Stationary
+@kb @T-34-85 (D-5T) @.09 @Parallel @Stationary @Perpendicular
+
+@k @IS-1 @1.41 @Diagonal @Stationary @Stationary
+
+@kb @T-34-85 @0.12 @Diagonal @Stationary @Retreating
+
+@k @SU-85M
+@k @T-34-57
+
+@k @Panther F
+@k @Tiger 2P
+@k @M41
+
+@k @Pvkv M/43 (1963) @1.85 @Near-Parallel @Stationary @Statioanry @351
+@k @KV-122 @1.69 @Near-Parallel @Stationary @Stationary @351
+@k @T-34-85 (D-5T) @1.26 @Near-Perpendicular @Lateral-Left @Stationary @7
+
+@K @Tiger H
+@k @EBR
+
+2021-02-04
+
+@k @Panther A @.03, .03 @Diagonal, Diagonal @Lateral-Left, Stationary @Retreating, Stationary @56
+@k @Ferdinand @.44 @Diagonal @Stationary @Stationary @64
+@kb @IS-2 @.06 @Diagonal @Stationary @Stationary @190
+
+@kb @Panzer IV/70 @.41 @Parallel @Stationary @Lateral-Right @240
+
+@k @Tiger E @0.18 @Diagonal @Stationary @Stationary @253
+@k @Panzer IVH @.14 @Perpendicular @Stationary @Stationary @262
+@k @M4A2 @.3 @Perpendicular @Stationary @Stationary @299
+
+@k @IS-1 @.48 @Near-Parallel @Lateral-Right @Stationary @123
+@kb @AUBL/74 @.91 @Diagonal @Stationary @Stationary @340
+
+2021-02-01
+
+@kb @Jagdpanther
+
+@kb @M18
+
+@k T-34-57 @.15 @Near-Perpendicular @Stationary @Stationary
+@k @SU-152 @.10 @Perpendicular @Lateral-Left @Staionary
+@kb @Tiger E @.25 @Diagonal @Stationary @Stationary
+
+@k @T-34-85 (D-5T) @.75 @Near-Perpendicular @Lateral-Left @Stationary @187
+@k 75/46 M43 @.51 @Diagonal @Retreating @Stationary @135
+
+@k @Tiger E
+@kb @Tiger E
+
+@k @AMX-13
+@k @BT-5
+@k @Tiger H
+
+@kb @E.B.R. (1954)
+
+@kb @Jagdpanther
+
+@k @T-34-57
+@k @M4 Tipo
+@k @Tiger E
+
+@K @T-34-85 (D-5T) @0.40 @Diagonal @Stationary @Stationary @72
+
+@k @Panther D @0.49 @Diagonal @Lateral-RIght @Stationary @207
+@kb @T-34-85 S53 @.4 @Diagonal @Stationary @Stationary @15
+
+2021-01-24
+
+@k @KV-85 @.13 @Diagonal @6 @0
+@k @St. Emil @.88, .88 @Diaognal, Diagonal @0, 0 @0, 0
+
+@kb @SU-85M @.55 @Diagaonal @Stationary @Stationary @80
+
+@k @T-34-85 (D-5T) @1.08 @Near-Parallel @Approaching @Stationary @252
+@k @SU-85M @1.37, 1.39, 1.4 @Parallel, Near-Parallel, Diagonal @Approaching, Stationary, Retreating @Stationary, Stationary, Stationary @250, 250, 250
+
+2021-01-11
+
+@k @IS-1 @0.09 @Parallel @Retreating @Stationary @348
+
+2020-01-09
+
+@k @leKPz M41 @1.24 @Diagonal @Approaching @0 @0 @322
+@k @T-34-85 (D-5T) @1.12, 1.13 @Diagonal, Parallel  @Approaching, Stationary @Stationary, Stationary @357
+
+@k @Panther A @0.16 @Perpendicular  @Lateral-Right @Stationary @200
+@k @T-34-85 @0.67 @Parallel @Approaching @Stationary @137
+

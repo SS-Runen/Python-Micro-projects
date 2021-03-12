@@ -394,3 +394,673 @@ Processed the following files:
  WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Tiger E.txt'),
  WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Valentine IX.txt')]
 ====
+
+****
+2021-03-12 08:59:04.551791
+
+Input Files at:
+ C:\Users\max\Documents\GitHub\Python-Micro-projects\WarThunderPerfmon\InputFiles
+Output Folder at:
+ C:\Users\max\Documents\GitHub\Python-Micro-projects\WarThunderPerfmon\OutputFiles
+Processed the following files:
+[WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Achilles.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Archer.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Centurion Mk. 1.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Centurion Mk. 10.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Challenger 1 Mk. 2.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Cheiftain Mk. 5.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Crusader 3.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Firefly.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Panther A.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Panzer IV-70.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Tiger E.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Valentine IX.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Waffentrager.txt')]
+====
+
+****
+2021-03-12 09:14:01.009065
+
+Input Files at:
+ C:\Users\max\Documents\GitHub\Python-Micro-projects\WarThunderPerfmon\InputFiles
+Output Folder at:
+ C:\Users\max\Documents\GitHub\Python-Micro-projects\WarThunderPerfmon\OutputFiles
+Processed the following files:
+[WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Achilles.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Archer.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Centurion Mk. 1.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Centurion Mk. 10.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Challenger 1 Mk. 2.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Cheiftain Mk. 5.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Crusader 3.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Firefly.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Panther A.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Panzer IV-70.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Tiger E.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Valentine IX.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Waffentrager.txt')]
+====
+
+****
+2021-03-12 09:19:28.413792
+
+Input Files at:
+ C:\Users\max\Documents\GitHub\Python-Micro-projects\WarThunderPerfmon\InputFiles
+Output Folder at:
+ C:\Users\max\Documents\GitHub\Python-Micro-projects\WarThunderPerfmon\OutputFiles
+Processed the following files:
+[WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Achilles.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Archer.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Centurion Mk. 1.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Centurion Mk. 10.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Challenger 1 Mk. 2.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Challenger 1 Mk. 3.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Challenger.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Cheiftain Mk. 5.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Crusader 3.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Crusader III.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Firefly.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Panther A.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Panzer IV-70.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Tiger E.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Valentine IX.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Waffentrager.txt')]
+====
+
+****
+2021-03-12 09:21:52.402027
+
+Input Files at:
+ C:\Users\max\Documents\GitHub\Python-Micro-projects\WarThunderPerfmon\InputFiles
+Output Folder at:
+ C:\Users\max\Documents\GitHub\Python-Micro-projects\WarThunderPerfmon\OutputFiles
+Processed the following files:
+[WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Achilles.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Archer.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Centurion Mk. 1.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Centurion Mk. 10.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Challenger 1 Mk. 2.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Challenger 1 Mk. 3.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Challenger.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Cheiftain Mk. 5.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Crusader 3.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Crusader III.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Firefly.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Panther A.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Panzer IV-70.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Tiger E.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Valentine IX.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Waffentrager.txt')]
+====
+
+****
+2021-03-12 09:28:02.866217
+
+Input Files at:
+ C:\Users\max\Documents\GitHub\Python-Micro-projects\WarThunderPerfmon\InputFiles
+Output Folder at:
+ C:\Users\max\Documents\GitHub\Python-Micro-projects\WarThunderPerfmon\OutputFiles
+Processed the following files:
+[WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Achilles.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Archer.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Centurion Mk. 1.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Centurion Mk. 10.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Challenger 1 Mk. 2.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Challenger 1 Mk. 3.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Challenger.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Cheiftain Mk. 5.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Crusader 3.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Crusader III.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Firefly.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Panther A.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Panzer IV-70.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Tiger E.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Valentine IX.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Waffentrager.txt')]
+====
+
+****
+2021-03-12 09:28:48.513827
+
+Input Files at:
+ C:\Users\max\Documents\GitHub\Python-Micro-projects\WarThunderPerfmon\InputFiles
+Output Folder at:
+ C:\Users\max\Documents\GitHub\Python-Micro-projects\WarThunderPerfmon\OutputFiles
+Processed the following files:
+[WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Achilles.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Archer.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Centurion Mk. 1.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Centurion Mk. 10.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Challenger 1 Mk. 2.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Challenger 1 Mk. 3.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Challenger.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Cheiftain Mk. 5.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Crusader 3.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Crusader III.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Firefly.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Panther A.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Panzer IV-70.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Tiger E.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Valentine IX.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Waffentrager.txt')]
+====
+
+****
+2021-03-12 09:29:56.635724
+
+Input Files at:
+ C:\Users\max\Documents\GitHub\Python-Micro-projects\WarThunderPerfmon\InputFiles
+Output Folder at:
+ C:\Users\max\Documents\GitHub\Python-Micro-projects\WarThunderPerfmon\OutputFiles
+Processed the following files:
+[WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Achilles.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Archer.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Centurion Mk. 1.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Centurion Mk. 10.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Challenger 1 Mk. 2.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Challenger 1 Mk. 3.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Challenger.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Cheiftain Mk. 5.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Crusader 3.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Crusader III.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Firefly.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Panther A.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Panzer IV-70.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Tiger E.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Valentine IX.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Waffentrager.txt')]
+====
+
+****
+2021-03-12 09:31:51.667303
+
+Input Files at:
+ C:\Users\max\Documents\GitHub\Python-Micro-projects\WarThunderPerfmon\InputFiles
+Output Folder at:
+ C:\Users\max\Documents\GitHub\Python-Micro-projects\WarThunderPerfmon\OutputFiles
+Processed the following files:
+[WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Achilles.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Archer.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Centurion Mk. 1.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Centurion Mk. 10.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Challenger 1 Mk. 2.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Challenger 1 Mk. 3.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Challenger.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Cheiftain Mk. 5.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Crusader 3.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Crusader III.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Firefly.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Panther A.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Panzer IV-70.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Tiger E.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Valentine IX.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Waffentrager.txt')]
+====
+
+****
+2021-03-12 09:33:21.818460
+
+Input Files at:
+ C:\Users\max\Documents\GitHub\Python-Micro-projects\WarThunderPerfmon\InputFiles
+Output Folder at:
+ C:\Users\max\Documents\GitHub\Python-Micro-projects\WarThunderPerfmon\OutputFiles
+Processed the following files:
+[WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Achilles.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Archer.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Centurion Mk. 1.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Centurion Mk. 10.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Challenger 1 Mk. 2.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Challenger 1 Mk. 3.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Challenger.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Cheiftain Mk. 5.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Crusader 3.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Crusader III.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Firefly.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Panther A.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Panzer IV-70.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Tiger E.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Valentine IX.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Waffentrager.txt')]
+====
+
+****
+2021-03-12 09:39:10.851423
+
+Input Files at:
+ C:\Users\max\Documents\GitHub\Python-Micro-projects\WarThunderPerfmon\InputFiles
+Output Folder at:
+ C:\Users\max\Documents\GitHub\Python-Micro-projects\WarThunderPerfmon\OutputFiles
+Processed the following files:
+[WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Achilles.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Archer.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Centurion Mk. 1.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Centurion Mk. 10.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Challenger 1 Mk. 2.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Challenger 1 Mk. 3.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Challenger.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Cheiftain Mk. 5.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Crusader 3.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Crusader III.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Firefly.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Panther A.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Panzer IV-70.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Tiger E.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Valentine IX.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Waffentrager.txt')]
+====
+
+****
+2021-03-12 09:45:09.393931
+
+Input Files at:
+ C:\Users\max\Documents\GitHub\Python-Micro-projects\WarThunderPerfmon\InputFiles
+Output Folder at:
+ C:\Users\max\Documents\GitHub\Python-Micro-projects\WarThunderPerfmon\OutputFiles
+Processed the following files:
+[WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Achilles.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Archer.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Centurion Mk. 1.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Centurion Mk. 10.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Challenger 1 Mk. 2.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Challenger 1 Mk. 3.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Challenger.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Cheiftain Mk. 5.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Crusader 3.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Crusader III.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Firefly.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Panther A.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Panzer IV-70.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Tiger E.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Valentine IX.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Waffentrager.txt')]
+====
+
+****
+2021-03-12 09:50:12.467265
+
+Input Files at:
+ C:\Users\max\Documents\GitHub\Python-Micro-projects\WarThunderPerfmon\InputFiles
+Output Folder at:
+ C:\Users\max\Documents\GitHub\Python-Micro-projects\WarThunderPerfmon\OutputFiles
+Processed the following files:
+[WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Achilles.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Archer.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Centurion Mk. 1.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Centurion Mk. 10.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Challenger 1 Mk. 2.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Challenger 1 Mk. 3.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Challenger.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Cheiftain Mk. 5.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Crusader 3.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Crusader III.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Firefly.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Panther A.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Panzer IV-70.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Tiger E.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Valentine IX.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Waffentrager.txt')]
+====
+
+****
+2021-03-12 09:59:47.344147
+
+Input Files at:
+ C:\Users\max\Documents\GitHub\Python-Micro-projects\WarThunderPerfmon\InputFiles
+Output Folder at:
+ C:\Users\max\Documents\GitHub\Python-Micro-projects\WarThunderPerfmon\OutputFiles
+Processed the following files:
+[WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Achilles.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Archer.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Centurion Mk. 1.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Centurion Mk. 10.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Challenger 1 Mk. 2.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Challenger 1 Mk. 3.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Challenger.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Cheiftain Mk. 5.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Crusader 3.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Crusader III.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Firefly.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Panther A.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Panzer IV-70.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Tiger E.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Valentine IX.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Waffentrager.txt')]
+====
+
+****
+2021-03-12 10:09:55.691942
+
+Input Files at:
+ C:\Users\max\Documents\GitHub\Python-Micro-projects\WarThunderPerfmon\InputFiles
+Output Folder at:
+ C:\Users\max\Documents\GitHub\Python-Micro-projects\WarThunderPerfmon\OutputFiles
+Processed the following files:
+[WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Achilles.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Archer.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Centurion Mk. 1.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Centurion Mk. 10.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Challenger 1 Mk. 2.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Challenger 1 Mk. 3.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Challenger.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Cheiftain Mk. 5.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Crusader 3.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Crusader III.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Firefly.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Panther A.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Panzer IV-70.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Tiger E.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Valentine IX.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Waffentrager.txt')]
+====
+
+****
+2021-03-12 10:14:00.105922
+
+Input Files at:
+ C:\Users\max\Documents\GitHub\Python-Micro-projects\WarThunderPerfmon\InputFiles
+Output Folder at:
+ C:\Users\max\Documents\GitHub\Python-Micro-projects\WarThunderPerfmon\OutputFiles
+Processed the following files:
+[WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Achilles.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Archer.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Centurion Mk. 1.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Centurion Mk. 10.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Challenger 1 Mk. 2.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Challenger 1 Mk. 3.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Challenger.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Cheiftain Mk. 5.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Crusader 3.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Crusader III.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Firefly.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Panther A.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Panzer IV-70.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Tiger E.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Valentine IX.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Waffentrager.txt')]
+====
+
+****
+2021-03-12 10:18:24.346035
+
+Input Files at:
+ C:\Users\max\Documents\GitHub\Python-Micro-projects\WarThunderPerfmon\InputFiles
+Output Folder at:
+ C:\Users\max\Documents\GitHub\Python-Micro-projects\WarThunderPerfmon\OutputFiles
+Processed the following files:
+[WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Achilles.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Archer.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Centurion Mk. 1.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Centurion Mk. 10.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Challenger 1 Mk. 2.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Challenger 1 Mk. 3.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Challenger.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Cheiftain Mk. 5.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Crusader 3.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Crusader III.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Firefly.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Panther A.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Panzer IV-70.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Tiger E.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Valentine IX.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Waffentrager.txt')]
+====
+
+****
+2021-03-12 10:22:24.646780
+
+Input Files at:
+ C:\Users\max\Documents\GitHub\Python-Micro-projects\WarThunderPerfmon\InputFiles
+Output Folder at:
+ C:\Users\max\Documents\GitHub\Python-Micro-projects\WarThunderPerfmon\OutputFiles
+Processed the following files:
+[WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Achilles.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Archer.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Centurion Mk. 1.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Centurion Mk. 10.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Challenger 1 Mk. 2.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Challenger 1 Mk. 3.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Challenger.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Cheiftain Mk. 5.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Crusader 3.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Crusader III.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Firefly.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Panther A.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Panzer IV-70.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Tiger E.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Valentine IX.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Waffentrager.txt')]
+====
+
+****
+2021-03-12 10:25:27.059213
+
+Input Files at:
+ C:\Users\max\Documents\GitHub\Python-Micro-projects\WarThunderPerfmon\InputFiles
+Output Folder at:
+ C:\Users\max\Documents\GitHub\Python-Micro-projects\WarThunderPerfmon\OutputFiles
+Processed the following files:
+[WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Achilles.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Archer.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Centurion Mk. 1.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Centurion Mk. 10.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Challenger 1 Mk. 2.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Challenger 1 Mk. 3.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Challenger.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Cheiftain Mk. 5.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Crusader 3.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Crusader III.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Firefly.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Panther A.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Panzer IV-70.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Tiger E.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Valentine IX.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Waffentrager.txt')]
+====
+
+****
+2021-03-12 10:27:46.935214
+
+Input Files at:
+ C:\Users\max\Documents\GitHub\Python-Micro-projects\WarThunderPerfmon\InputFiles
+Output Folder at:
+ C:\Users\max\Documents\GitHub\Python-Micro-projects\WarThunderPerfmon\OutputFiles
+Processed the following files:
+[WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Achilles.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Archer.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Centurion Mk. 1.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Centurion Mk. 10.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Challenger 1 Mk. 2.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Challenger 1 Mk. 3.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Challenger.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Cheiftain Mk. 5.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Crusader 3.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Crusader III.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Firefly.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Panther A.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Panzer IV-70.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Tiger E.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Valentine IX.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Waffentrager.txt')]
+====
+
+****
+2021-03-12 10:28:20.092110
+
+Input Files at:
+ C:\Users\max\Documents\GitHub\Python-Micro-projects\WarThunderPerfmon\InputFiles
+Output Folder at:
+ C:\Users\max\Documents\GitHub\Python-Micro-projects\WarThunderPerfmon\OutputFiles
+Processed the following files:
+[WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Achilles.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Archer.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Centurion Mk. 1.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Centurion Mk. 10.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Challenger 1 Mk. 2.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Challenger 1 Mk. 3.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Challenger.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Cheiftain Mk. 5.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Crusader 3.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Crusader III.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Firefly.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Panther A.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Panzer IV-70.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Tiger E.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Valentine IX.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Waffentrager.txt')]
+====
+
+****
+2021-03-12 10:28:51.955933
+
+Input Files at:
+ C:\Users\max\Documents\GitHub\Python-Micro-projects\WarThunderPerfmon\InputFiles
+Output Folder at:
+ C:\Users\max\Documents\GitHub\Python-Micro-projects\WarThunderPerfmon\OutputFiles
+Processed the following files:
+[WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Achilles.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Archer.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Centurion Mk. 1.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Centurion Mk. 10.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Challenger 1 Mk. 2.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Challenger 1 Mk. 3.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Challenger.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Cheiftain Mk. 5.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Crusader 3.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Crusader III.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Firefly.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Panther A.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Panzer IV-70.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Tiger E.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Valentine IX.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Waffentrager.txt')]
+====
+
+****
+2021-03-12 10:31:23.317590
+
+Input Files at:
+ C:\Users\max\Documents\GitHub\Python-Micro-projects\WarThunderPerfmon\InputFiles
+Output Folder at:
+ C:\Users\max\Documents\GitHub\Python-Micro-projects\WarThunderPerfmon\OutputFiles
+Processed the following files:
+[WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Achilles.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Archer.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Centurion Mk. 1.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Centurion Mk. 10.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Challenger 1 Mk. 2.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Challenger 1 Mk. 3.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Challenger.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Cheiftain Mk. 5.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Crusader 3.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Crusader III.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Firefly.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Panther A.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Panzer IV-70.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Tiger E.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Valentine IX.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Waffentrager.txt')]
+====
+
+****
+2021-03-12 10:35:40.091277
+
+Input Files at:
+ C:\Users\max\Documents\GitHub\Python-Micro-projects\WarThunderPerfmon\InputFiles
+Output Folder at:
+ C:\Users\max\Documents\GitHub\Python-Micro-projects\WarThunderPerfmon\OutputFiles
+Processed the following files:
+[WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Achilles.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Archer.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Centurion Mk. 1.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Centurion Mk. 10.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Challenger 1 Mk. 2.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Challenger 1 Mk. 3.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Challenger.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Cheiftain Mk. 5.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Crusader 3.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Crusader III.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Firefly.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Panther A.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Panzer IV-70.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Tiger E.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Valentine IX.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Waffentrager.txt')]
+====
+
+****
+2021-03-12 10:40:07.110549
+
+Input Files at:
+ C:\Users\max\Documents\GitHub\Python-Micro-projects\WarThunderPerfmon\InputFiles
+Output Folder at:
+ C:\Users\max\Documents\GitHub\Python-Micro-projects\WarThunderPerfmon\OutputFiles
+Processed the following files:
+[WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Achilles.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Archer.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Centurion Mk. 1.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Centurion Mk. 10.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Challenger 1 Mk. 2.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Challenger 1 Mk. 3.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Challenger.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Cheiftain Mk. 5.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Crusader 3.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Crusader III.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Firefly.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Panther A.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Panzer IV-70.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Tiger E.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Valentine IX.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Waffentrager.txt')]
+====
+
+****
+2021-03-12 10:44:53.037903
+
+Input Files at:
+ C:\Users\max\Documents\GitHub\Python-Micro-projects\WarThunderPerfmon\InputFiles
+Output Folder at:
+ C:\Users\max\Documents\GitHub\Python-Micro-projects\WarThunderPerfmon\OutputFiles
+Processed the following files:
+[WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Achilles.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Archer.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Centurion Mk. 1.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Centurion Mk. 10.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Challenger 1 Mk. 2.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Challenger 1 Mk. 3.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Challenger.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Cheiftain Mk. 5.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Crusader 3.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Crusader III.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Firefly.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Panther A.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Panzer IV-70.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Tiger E.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Valentine IX.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Waffentrager.txt')]
+====
+
+****
+2021-03-12 10:47:07.595600
+
+Input Files at:
+ C:\Users\max\Documents\GitHub\Python-Micro-projects\WarThunderPerfmon\InputFiles
+Output Folder at:
+ C:\Users\max\Documents\GitHub\Python-Micro-projects\WarThunderPerfmon\OutputFiles
+Processed the following files:
+[WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Achilles.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Archer.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Centurion Mk. 1.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Centurion Mk. 10.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Challenger 1 Mk. 2.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Challenger 1 Mk. 3.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Challenger.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Cheiftain Mk. 5.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Crusader 3.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Crusader III.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Firefly.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Panther A.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Panzer IV-70.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Tiger E.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Valentine IX.txt'),
+ WindowsPath('c:/Users/max/Documents/GitHub/Python-Micro-projects/WarThunderPerfmon/Scripts/../InputFiles/Temp KD Waffentrager.txt')]
+====

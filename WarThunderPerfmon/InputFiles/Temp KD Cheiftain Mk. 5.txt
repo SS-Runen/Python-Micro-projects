@@ -1,77 +1,164 @@
-2020-12-24
 
-k T-55AM-1
-k T-62 No.545
+Event Vehicle Distance OrientationInSight RelativeMovement SelfRelativeMovement CompassLocation
 
-k T-64A (1971)
-kb T-55A
+vs. T-64A (1971) 5/10
+vs. T-55AM-1 7/1
+vs. T-62M-1 8/3
 
-2020-12-20
+2021-03-10
 
-k T-10M
+@K @T-10A @.06 @Near-Perpendicular @10 @0
 
-k T-55AM-1
+2021-03-06
 
-k IT-1
-kb Type 59
+@k @T-62 @.4 @Near-Parallel @0 @0
 
-kb T-55AM-1
+@kb @BMP-2 @.1 @Diaognal @0 @0
+@k @BMP-3 @0.1 @Near-Perpendicular @15 @0
 
-k T-64A (1971)
+2021-03-02
 
-k T-55AM-1
-k T-64A (1971)
-kb BMP-2
+@k @ZTZT59D1 @.02 @Diagonal @0 @0
+@k @T-55AM-1 @.02 @Near-Perpendcular @0 @0
 
-kb T-64A (1971)
+2021-02-22
 
-kb BMP-3
+@k @IT-1 @0.04 @Diagonal @0 @0
+@k @Obj 685 @1.75 @Near-Perpendicular @25 @0
 
-2020-12-16
+@k @BMP-3 @0.07 @Near-Perpendicular @0 @0
 
-kb M60A3 TTS
-k M60A3 TTS
-k T-64A (1971)
-k WZ 305
+@k @BMP 2 @ @ @ @
+@k @T-64A (1971) @ @ @ @
 
-2020-12-08
+@kb @T-64A (1971) @Diagonal @.4 @0 @20
 
-kb T-62M-1
+@k @T-64A (1971) @ @ @ @
+@k @T-10M @ @ @ @
+@k @T-62 @ @ @ @
 
-k T-55A
+@kb @T-64A (1971) @1.4 @Diagonal @0 @0
 
-kb T-64A (1971)
+2021-02-14
 
-k T-55AM-1
-k BMP-3
+@k @WZ305 @.8 @Diagonal @0 @0
+@k @BMP-3 @.43 @Diagonal @0 @0
+@k @Obj 906 @.58 @Diagonal @-22 @0
 
-k BMP-3
-kb BMP-3
+@k @T-55AM-1 @.08 @Diagonal @-5 @10
+@kb @BMP-1 @.17 @Diagonal @0 @-10
 
-k T-55AM-1
-kb T-69 II G
+@k @T-55AM-1 @.49, .49 @Diagonal, Diagonal @0, 0 @0, 12
+@k @BMP-3
 
-kb Obj 279
+@k @T-64A (1971) @ @ @ @
 
-k Obj 279
-k M60A3 TTS
+@kb @T-64A (1971) @1.16 @Diagonal @0 @20
 
-2020-12-06
+@k @T-64A (1971) @.02 @Diagonal @27 @10
+@k @T-62M-1 @.13 @Near-Perpendicular @0 @0
+@k @Object 685 @1.18, 1.18 @Near-Perpendicular, Near-Perpendicular @35, 0 @0, 0
+@k @ZTZ59D1 @.79, .79 @Near-Perpendicular, Near-Perpendicular @-5, 0 @0 @0
 
-k T-55AM-1
+2021-02-10
 
-2020-12-04
+@kb @BMP-3 @1.1 @Diagonal @Stationary @Lateral-Left
 
-kb T-64A (1971)
+@k @ZSU-57-2 @.7 @Diagonal @Stationary @Stationary
 
-kb Obj 906
+@k @T-55AM-1 @.7, .6 @Diagonal, Diagonal @Approaching, Stationary @Stationary, Stationary
 
-kb BMP-3
+@k @BMP-2 @.8 @Near-Parallel @Approaching @0
+@kb @T-64A (1971) @.4 @Diagonal @Approaching @0
 
-kb BMP-2
+@kb @T-64A (1971) @.10 @Diagonal @0 @5
 
-k T-62M-1
+@kb @T-64A (1971) @.36 @Diagonal @0 @0
 
-======================================
-Following records are after New Power.
-======================================
+@kb @T-55AM-1 @.20 @Diagonal @5 @0
+
+@k @T-10A @.13 @Perpendicular @0 @0
+@k @T-64A (1971) @.09 @Diagonal @0 @4
+
+@kb @T-64A (1971) @Near-Parallel @49 @29
+
+2021-02-02
+
+@k @T-62M-1 @.13, .15 @Near-Perpendicular, Near-Perpendicular @Lateral-Right, Stationary @Stationary,Stationary
+@kb @T-55A @.12 @Near-Parallel @Stationary @Lateral-Left
+
+2021-01-29
+
+@k @T-55AM-1 @.71 @Near-Parallel @Stationary @Stationary
+@kb @BMP-3 @.11 @Diagonal @Stationary @Approaching
+
+@k @T-55AM-1 @.87 @Diagonal @Stationary @Stationary
+@k @BMP-3 @.42 @Near-Parallel @Stationary @Statioanry
+
+2021-01-25
+
+@k @T-64A (1971) @.97, .96 @Diagonal, Diagonal @Lateral-Left, Stationary @Stationary, Stationary
+
+@k @IT-1 @.63, .63 @Diagonal, Perpendicular @4, 0 @0, @0
+@k @ZSU-37-2 @.67 @Diagonal @0 @0
+@k @ZSU-37-2 @.59 @Diagonal @5 @0
+
+@k @T-62M-1 @.55, .55 @Near-Parallel, Near-Parallel @Retreating, Stationary @Stationary, Stationary
+@k @T-64A (1971) @.59 @Near-Parallel @Approaching @Lateral-Left
+
+@k @T-55AM-1 @1.3 @Near-Perpendicular @Lateral-Left @Stationary
+
+@k @T-62M-1 @.76, .77 @Perpendicular, Perpendicular @Lateral-Right, Stationary @Stationary, Stationary
+@K @Obj 685 @.1 @ @Near-Perpendicular @Stationary @Stationary
+@kb @BMP-3 @1.3 @Diagonal @Stationary @Stationary
+
+@kb @T-62 @.38 @Diagonal @Stationary @Stationary
+
+@kb T-64A (1971) @.04 @Near-Parallel @Stationary @Stationary
+
+@kb @T-62 @0.38 @Diagonal @Stationary @Stationary
+
+@kb @T-64A (1971) @.06 @Diagonal @Approaching @Stationary
+
+@kb @T-64A (1971) @1.08 @Diagonal @Stationary @Lateral-Left
+
+@kb @T-64A (1971) @.46 @Diagonal @Stationary @Stationary
+
+2021-01-17
+
+@k @T-62M-1 @1.15 @Near-Parallel @Approaching @Stationary @162
+@k @T-55AM-1 @1.03 @Near-Perpendicular @Lateral-Left @Stationary @183
+@k @T-64A (1971) @1.08 @Parallel @Stationary @Stationary @166
+
+@kb @BMP-1 @1.78 @Near-Perpendicular @Stationary @Stationary @260
+@k @T-62M-1 @.41 @Perpendicular @Stationary @Stationary @220
+
+@kb @T-62M-1 @1.88 @Diagonal @Stationary @Stationary @349
+
+@k @T-55AM-1 @0.07 @Near-Perpendicular @Lateral-Right @Stationary @235
+@k @BMP-3 @.13 @Diagonal @Approaching @Stationary @47
+
+@kb @BMP-1 @.32 @Near-Perpendicular @Stationary @Stationary @95
+
+@kb @BMP-3 @.36 @Diagonal @Stationary @Stationary @60
+
+@kb @T-64A (1971) @.85 @Near-Parallel @Approaching @121
+@k @BMP-1 @.43 @Parallel @Stationary @Retreating @90
+
+@k T-64A (1971) @.38 @Parallel @Stationary @Stationary @101
+@k BMP-1 @.61 @Near-Parallel @Approaching @Stationary @15
+@k @T-64A (1971) @.39 @Near-Perpendicular @Lateral-Left @Stationary @212
+@k @T-55AM-1 @0.46 @Parallel @Approaching @Stationary @185
+
+@kb @T-64A (1971) @0.63 @Diagonal @Stationary @Lateral-Right @120
+
+@kb @T-64A (1971) @0.85 @Near-Parallel @Stationary @Stationary @227
+
+@kb @T-62M-1 @1.7 @Diagonal @Stationary @Rotating @185
+
+@kb ZTZ95D1 @0.07 @Diagonal @Appraoching @Stationary @250
+@K @T-62M-1 @0.5 @Diagonal @Approaching @Stationary @157
+@k @T-62M-1 @0.1 @Diagonal @Approaching @Stationary @175
+@k @T-62M-1 @0.03 @Near-Parallel @Approaching @Stationary @169
+
+@kb @T-62M-1 @0.06 @Diagonal @Approaching @Stationary @100

@@ -1,171 +1,288 @@
-2020-12-25
 
-k T-54 (1949) @~2.4
+http://warthunder.com/en/registration?r=userinvite_28552741
 
-k T-54 (1947) @~0.03
+Event Vehicle Distance OrientationInSigh RelativeMovement SelfMovement RelativeAzimuth 
 
-k PT-76B
+vs. T-54 (1949) 24/9
+vs. T-54 (1947) 27/11
 
-k T-44-100
+2021-03-11
+Sights back to normal.
 
-k T-44-100
-k T-44
-k T-44
-k T-44-100
+@k @T-54 (1949) @~.8 @Diagonal @0 @0
+@k @T-54 (1949) @~.08 @Near-Parallel
+@k @IS-6 @~.6 @Near-Parallel
 
-k Type 62
+@k @ASU-85 @.04 @Parallel @0 @0
+@kb @T-54 (1947) @.03 @Parallel @0 @0
 
-2020-12-21
+@kb @IS-3 @.2 @Diagonal @0 @0
+@k @T-54 (1949) gabryl @~.01
+@k @T-54 (1947) gabryl @~.01
 
-Offset 0 deaths.
-Reclaim 1 death.
+@k @T-54 (1949) @.02 @Perpendicular @20 @0
 
-kb IS-6
-k T-54 (1947) @~0.05
+2021-03-07
 
-k IS-6
-k IS-6
-k Type 62
-k PT-76B
+Note: Sights are grossly misaligned.
 
-kb T-54 (1949) @0.4
-k T-54 (1947) @0.4
+@k @T-44 @.12 @Diagonal @2 @0
+@k @T-54 (1949) @.18 @Near-Parallel @0 @0
 
-k T-54 (1947) @1.040
-k T-54 (1949) @0.96
+2021-03-03
 
-k IS-4M
-kb IS-3
+@kb @PT-76B @.
+@k @T-54 (1949) @.89 @Diagonal @0 @0
 
-Sweden
-k T-54 (1949)
-k T-54 (1949)
-kb T-54 (1947) @~0.01
+@k @T-54 (1949) @.04 @Near-Perpendicular @0 @0
 
-k IS-3
-k Obj 268
-k T-54 (1947) @1.07
+@kb @IS-4M @.2 @Near-Parallel @0 @-10
+@k @T-54 (1949) @.3 @Parallel @0 @0
 
-kb T-54 (1949)
+@k @T-54 (1947) @.23 @Diagonal @0 @0
+@kb @ASU-85 @.6 @Diagonal @0 @~20
 
-k T-54 (1949) @~0.05
-kb T-54 (1947) @~0.04
+@k @T-54 (1947) @.93, .93 @Diagonal, Diagonal @28, 0 @0, 0
+@k @T-54 (1949) @.25 @Near-Perpendicular @14 @0
 
-2020-12-18
+@kb @T-44-100 @1.2 @Diagonal @0 @0
 
-k M48
-k Type 62
-k ?T-54 (1947) @~0.800
+@k @T-54 (1947) @.31 @Diagonal @26 @13
 
-k Type 59
-kb Type 59
+@k @T-54 (1949) @.2 @Diagonal @0 @0
+@kb @T-54 (1947) @.1 @Near-Perpendicular @0 @0
 
-k ?T-54 (1949) ~0.03
-k ?T-54 (1949) ~0.03
-kb ZSU-57-2
+2021-02-23
 
-kb T-54 (1951) @~0.600
+@kb @T-54 (1947) @.89 @Diagonal @0 @0
 
-kb T-54 (1951) @~0.400
+@k @T-44-100 @.7, .7 @Diagonal, Diagonal @-4, 0 @0, 0
+@kb @T-54 (1949) @.8 @Diagonal @0 @0
 
-k ?T-54 (1949) @~1.400
-k ?T-54 (1949) @~1.600
-k T-54 (1947) @~0.05
+@kb @PT-76B @.1 @Diagonal @0 @20
 
-k ?T-54 (1949) @~2.000
-kb T-54 (1949) @~1.500
+@k @Type 62 @.1 @Near-Perpendicular @20 @0
 
-k ASU-85
-k ?T-54 (1949) @~0.02
-k T-54 (1947) @~0.06
+@k @T-54 (1949) @.26 @Diagonal @40 @0
+@k @T-54 (1947) @.29 @Near-Parallel @24 @0
 
-kb T-54 (1947) @~0.05
-k T-54 (1949) @~0.06
+No-splash Bug
+@kb @T-54 (1949) @1.0 @Diagonal @Stationary @Stationary
+@k @Type 62 @? @Near-Perpendicular @0 @0
+@k @IS-6 @
 
-k SU-122-54
+@k @T-54 (1949) @.4 @Near-Parallel @0 @0
 
-k SU-122-54
-k SU-122-54
-k ?T-54 (1949)
-k Type 62
-k ?T-54 (1949)
+@kb @T-54 (1947) @.6 @Diagonal @0 @0
 
-k T-54 (1949) @~0.4
-kb T-54 (1947) @~0.6
+@k @T-54 (1947) @1.04 @Diagonal @0 @0
 
-2020-12-17
+@k @T-54 (1949) @.4 @Diagonal @5 @0
+@k @ASU-85 @1 Diagonal @15 @0
+@kb @IS-3 @.4 @Diagonal @0 @0
 
-kb IS-4M
+@kb @T-54 (1949) @.68 @Diaognal @0 @-3
 
-k T-54(1947) @0.9
-k IS-6
-kb T-54 (1949) @0.04
+@kb @T-54 (1947) @.9 @Diagonal @0 @-11
 
-k T-34-100
-kb IS-6
+2021-02-19
 
-2020-12-13
+@k @SU-100P @1 @Diagonal @Stationary @Stationary
+@k @ASU-85 @.6 @Near-Parallel @Stationary @Stationary
+@K @PT-76B @.6 @Diagonal @Retreating @Stationary
 
-k T-54 (1949) @0.7
-kb T-54 (1949) @0.81
+@k @PT-76B @.72 @Parallel @Approaching @Stationary
+@k @T-54 (1949) @.48 @Diagonal @Stationary @Stationary
+@k @T-54 (1947) @.31 @Diagonal @Stationary @Stationary
+@k @T-54 (1947) @1.43 @Near-Perpendicular @Lateral-Right @Stationary
+@k @Obj 268 @1.07 @Near-Parallel @Stationary @Stationary
+@k @ASU-85 @1.63 @Parallel @Stationary @Stationary
 
-k IS-3
-k T-54 (1949) @1.62
-kb T-44-100
+@kb @T-44 @.8 @Near-Perpendicular @Stationary @Stationary
+@k @T-34-100 @.6, .6 @Diagonal, Diagonal @Lateral-Left, Stationary @Stationary, Stationary
+@K @SU-100P @.6 @Near-Perpendicular @Stationary @Stationary
+@k @IS-6 @.38 @Diagonal @Stationary @Approaching
+@k @T-54 (1949) @.06 @Diagonal @Approaching @Retreating
 
-kb IS-3
+2021-02-15
 
-k IS-4M
-k T-44-100
+@k @SU-100P
+@k Type 62
 
-k IS-3
+@k @IS-6 @.8 @Diagonal @Lateral-Left @Stationary
 
-kb T-44-100
-k T-54 (1949) @1.06
+@k @IS-4M @.04 @Diagonal @Approaching @Stationary
 
-k IS-3
-k IS-4M
-k T-44-100
-k T-54 (1947) @0.23
-k T-54 (1947) @0.33
-kb T-54 (1947) @0.25
+@k @T-54 (1949) @.56, .56 @Near-Perpendicular, Near-Perpendicular @Lateral-Right, Stationary @Stationary, Stationary
+@k @ASU-85 @.46 @Diagonal @Stationary @Stationary
+@k @IS-3 @.17 @Diagonal @Stationary @Stationary
+@kb @T-54 (1949) @.05 @Diagonal @Statinary @Stationary
 
-k T-54 (1947) @1.71
-k T-44-100
-k T-54 (1949) @1.57
-k IS-4M
-k T-54 (1949) @1.17
+@k @T-54 (1947) @.13 @Perpendicular @Lateral-Right @Stationary
 
-2020-12-09
+@k @SU-100P @.7 @Diagonal @Lateral-Right @Stationary
 
-k ASU-85
-k T-54 (1947) @0.16
+@k @IS-4M
 
-2020-12-06
+@k @T-44-100
 
-kb Type 59
+2021-02-10
 
-2020-12-05
+@k @IS-3 @.42 @Diagonal @0 @0
+@k @T-54 (1947) @.49 @Diagonal @12 @0
+@k @Type 62 @.03 @Diagonal @-12 @-3
 
-k T-44-100
+@k @T-54 (1949)
+@k @T-54 (1947)
+@kb @T-54 (1947)
 
-kb T-44-100
-k T-54 (1947) @0.77
+@k @T-54 (1949)
+@kb @T-44
 
-k T-54 (1949) @1.10
-k T-54 (1949) @1.34
+@k @T-44-100 @.01 @Diagonal @0 @0
+@k @Obj 268 @.14 @Parallel @0 @0
+@kb @T-54 (1947) @.29 @Diagonal @-7 @0
 
-kb T-44-100
+@k @T-44-100
+@k @Type 62
+@k @SU-100P
 
-k T-44-100
+@k @T-54 (1949)
 
-k Type 59
+@kb @IS-6
 
-k IS-6
-k T-54 (1949) @1.24
-k Type 59
-kb Type-59
+@k @T-54 (1947) jonnyskline
+@K @IS-6
+@k @Type 63
+@kb @IS-3
 
-======================================
-Following records are after New Power.
-======================================
+@kb @T-54 (1947) @.17 @Diagonal @Stationary @Lateral-Left
+@K @T-44-100 @.5 @Diagonal @0 @0
+@k @IS-3 @.17 @Diagonal @0 @0
+
+@k @T-54 (1949) @0.72 @Diagonal @0 @0
+
+@kb @T-54 (1947) @1.26 @Diagonal @Stationary @Stationary
+
+@k @T-54 (1949)
+@k @SU-100P
+@k @T-44
+
+@K @IS-6
+@k @T-44-100
+@k @T-44
+@kb @T-44
+
+2021-02-05
+
+@k @T-54 (1947) @.61 @Diagonal @Retreating @Stationary @156
+@k @T-44-100 @0.93 @Parallel @Retreating @Stationary @81
+@k @T-54 (1947) @.18, 0.02 @Parallel, Perpendicular @Approaching, Stationary @Stationary, Stationary @88, 180
+
+@k @T-44-100 @.53, .53 @Near-Perpendicular, Near-Perpendicular @Lateral-Right, Stationary @Stationary, @Stationary @180, 180
+
+@k @T-44 @ .50 @Parallel @Stationary @Stationary @Lateral-Right @185
+@kb @T-54 (1947) @.53 @Parallel @Stationary @Stationary @170
+
+@k @T-54 (1949) @.45, .45 @Diagonal, Diagonal @Retreating, Stationary @Stationary, Stationary @82, 82
+@k @T-54 (1947) @.12 @Near-Parallel @Stationary @Stationary @79 
+
+@k @T-54 (1947) @1.41 @Diagonal @Lateral-Left @Stationary @310
+@k @IS-3 @1 @Diagonal @Lateral-Left @Stationary @322
+
+@K @T-54 (1947) @.09 @Diagonal @Lateral-Left @Stationary @116
+@k @T-54 (1947) @0.02 @Diagonal @Approaching @Stationary @210
+
+2021-02-03
+
+@k ASU-85
+
+@k @T-54 (1947) @1.27 @Diagonal @Stationary @Stationary @269
+@k @ASU-85 @1.20, 1.20 @Perpendicular, Perpendicular @Lateral-Right, @Stationary @269, 270
+
+@kb Obj 268
+
+@k @T-54 (1947) @.86 @Diagonal @Lateral-Left @Stationary @107
+@k @T-54 (1949) @.90 @Diagonal @Retreating @Approaching @108
+@kb @T-54 (1947) @1.31 @Diagonal @Stationary @Stationary @240
+
+@kb T-54 (1949) @0.7 @Diagonal @Stationary @Retreating @20
+
+@k @PT-76B @.62 @Diagonal @Stationary @Approaching-Left @3
+
+@k @IS-4M Barbarossinan
+@kb @IS-3 Barborossinan
+
+2021-01-30
+
+@k @PT-76B
+
+@k ZSU-37 @.31 @Parallel @Stationary @Stationary @168
+@k @T-54 (1947) @.89 @Near-Perpendicular @Staionary @Stationary @208
+
+@kb @T-54 (1949) @.94 @Diagonal @Stationary @Retreating @303
+@k @IS-4M @.59 @Diagonal @Retreating @Stationary @25
+
+@k @T-54 (1947) @.61, .61 @Parallel, Parallel @Approaching, Stationary @Stationary, Stationary @5, 5
+
+@kb @T-54 (1949) @.05 @Diagonal @Stationary @Approaching @270
+
+2021-01-26
+
+@k @T-54 (1949) @.76 @Near-Parallel @Lateral-Left @Stationary @289
+@k @T-54 (1949) @1.17 @Diagonal @Stationary @Stationary @21
+@k @T-54 (1947) @1.31 @Diagonal @Lateral-Left @Stationary @52
+@k @T-54 (1947) @.4 @Near-Perpendicular @Stationary @Lateral-Right @1
+@k @T-54 (1949) @.03 @Diagonal @Stationary @Retreating @280
+
+@k @T-44-100 @2.05 @Near-Parallel @Approaching @Stationary @266
+
+2020-01-18
+
+@k @IS-3 @.26 @Near-Perpendicular @Lateral-Left @Stationary @279
+@k @T-54 (1949) @.19 @Diagonal @Approaching @Stationary @359
+@k @T-54 (1947) @.25 @Near-Perpendicular @Stationary @Stationary @279
+@kb @T-54 (1949) @.25 @Near-Parallel @Approaching @Stationary @277
+
+@kb @T-54(1949) @.21 @Diagonal @Stationary @Stationary @73
+
+@k @T-54 (1949) @.63 @Diagonal @Retreating @Stationary @13
+@k @IS-3 @.65 @Diagonal @Stationary @Stationary @12 
+@k @T-44-100 @.93 @Diagonal @Approaching @Stationary @11
+
+@kb @T-54 (1949) @.03 @Diagonal @Approaching @Stationary @345
+@k @IS-6 @.34, .34 @Diagonal, Diagonal @Approaching, Stationary @Stationary, Stationary @288, 288
+
+@kb @IS-6 @.47 @Diagonal @Stationary @Retreating @22
+
+@k @PT-76B @.30, .30 @Diagonal, Diagonal @Retreating, Stationary @Staionary, Stationary @112
+@k @IS-3 @.05 @Diagonal @Stationary @Stationary @97
+@K @IS-3 @.28 @Diagonal @Approaching @Stationary @122
+@k @T-54 (1947) @.08 @Near-Perpendicular @Lateral-Left @Stationary @5
+
+@k @T-54 (1949) @.95 @Diagonal @Approaching @Stationary @156
+@k @T-54 (1949) @2.33, 2.33, 2.33 @Diagonal, Diagonal, Diagonal @Retreating, Stationary, Stationary @Stationary,Stationary, Stationary @109, 109, 109
+@k @T-44-100 @1.73, 1.73 @Diagonal, Diagonal @Approaching, Stationary @Stationary, Stationary @141, 142
+
+2021-01-10
+
+@k @T-54 (1949) @1.17 @Perpendicular @Lateral-Right @0 @20 @314
+@k @T-54 (1949) @0.64, 0.66 @Perpendicular @Lateral-Left, Stationary @Stationary, Stationary @328
+@K T-54 (1947) @0.43 @Perpendicular @Stationary @Stationary @277
+@kb T-44-100 @0.14, 0.11 @ @Perpendicular, Diagonal @Stationary @185
+
+@kb @T-54 (1947) @0.65 @Diagonal @Stationary @Stationary @162 
+
+@k @T-44 @.90 @Parallel @Stationary @0 @0 @239
+@k @T-44-100 @0.95 @Perpendicular, Parallel @Lateral-Left, Stationary @Stationary, Stationary @252
+@k @PT-76B @0.88 @Diagonal Staionary @Stationary @236
+
+@k @T-54 (1949) @0.53 @Parallel @Stationary @Stationary @346 
+@k @T-54 (1949) @0.8 @Perpendicular @Stationary @Stationary @341
+@k @T-44-100 @0.47 @Perpendicular @Lateral-Right @Stationary @7
+
+@k @T-54 (1947) @0.95 @Perpendicular @Stationary @Stationary @301 
+@k @T-54 (1949) @0.08 @Diagonal @Stationary @Stationary @242 
+@kb @T-54 (1949) @0.10 @Diagonal @Approaching @Stationary @65 
+
+@k @T-54 (1947) @0.10 @Diagonal @Retreating @Stationary @29
