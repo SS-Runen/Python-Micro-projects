@@ -1,27 +1,8 @@
 import os
 import datetime as dt
 import pprint
+import re
 from pathlib import Path
-
-
-def parse_line(string:str):
-    lst_column = []
-    
-    string = string.rstrip()
-    
-    event_code = (string.split(' ')[0]).rstrip()
-    lst_column.append(event_code)
-    string = string.replace(event_code, "", 1)
-
-    halves = string.split('@')
-    if '@' in string and (len(halves) == 2):
-        lst_column.append(halves[0].rstrip())
-        lst_column.append(halves[1].rstrip())
-    else:
-        lst_column.append(string)
-
-    # print(lst_column)
-    return lst_column
 
 
 def parse_textfile(input_filepath):    
@@ -30,16 +11,24 @@ def parse_textfile(input_filepath):
     file_obj.close()
 
     lst_cleanlines = []
+    vehicle_used = str(input_filepath).split(r'\''.strip("'"))[-1]
+    vehicle_used = vehicle_used.strip(".txt")
+    vehicle_used = re.sub("temp kd", "", vehicle_used, flags=re.I)
 
+    date_recorded = "N.A."
     for row_index in range(len(lst_lines)):
-        if not lst_lines[row_index].isspace() and (len(lst_lines[row_index]) >= 1):
-            lst_cleanlines.append(lst_lines[row_index])
-    
-    del lst_lines
-
-    for row_index in range(len(lst_cleanlines)):
-        lst_columns = parse_line(lst_cleanlines[row_index])
-        lst_cleanlines[row_index] = ','.join(lst_columns)    
+        current_line = lst_lines[row_index].replace(',', '&').split('@')
+        current_line = [n.strip() for n in current_line]
+        if len(current_line) == 1:
+            if re.search(r"\d{4}[\-_/](\d{1,2}[\-_/]\d{1,2})", current_line[0]) is not None:
+                date_recorded = current_line[0]
+                continue
+        elif len(current_line) > 1:
+            del current_line[0]
+            current_line = [date_recorded, vehicle_used] + current_line
+            lst_cleanlines.append(','.join(current_line))
+        else:
+            continue
     
     # pprint.pprint(lst_cleanlines)
     return lst_cleanlines
@@ -71,16 +60,16 @@ def txt_to_csv(
         os.mkdir(str(outfolder_path))
 
     lst_infile_paths = [Path(filepath).absolute() for filepath in input_filepath.glob(f"{filename_prefix}*.txt")]
-    # lst_infile_paths = [str(filepath) for filepath in input_filepath.glob("%s*.txt" % filename_prefix)]    
 
     str_timestamp = str(dt.datetime.now()).replace(':', '.') + ' '
+    fileobj = None
     if (outfolder_path / outfile_name).exists and (overwrite_outfiles is False):
         outfile_name = str_timestamp + outfile_name
         fileobj = open(file=(outfolder_path / outfile_name), mode='x')
     else:
         fileobj = open(file=(outfolder_path / outfile_name), mode='w')
                 
-    fileobj.write("Event,Vehicle,Distance\n")
+    fileobj.write("DateRecorded, VehicleUsed, Event, EnemyVehicle, Distance, OrientationInSight, EnemySpeed, SelfSpeed\n")
     fileobj.close()
 
     for absolute_path in lst_infile_paths:
@@ -88,7 +77,7 @@ def txt_to_csv(
         fileobj = open(file=(outfolder_path / outfile_name), mode='a')        
 
         for line in lst_records:            
-            fileobj.write(line + '\n')
+            fileobj.write(line + "\n")
         fileobj.close()
     
     if Path(str_logfile_path).exists():
@@ -111,7 +100,7 @@ def txt_to_csv(
 
 
 def main():
-    txt_to_csv(overwrite_outfiles=True)
+    txt_to_csv()
     # txt_to_csv(
     #     filename_prefix="Temp KD Centurion Mk. 10",
     #     outfile_name="records_centmk10.csv"
