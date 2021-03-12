@@ -11,7 +11,7 @@ def parse_textfile(input_filepath):
     file_obj.close()
 
     lst_cleanlines = []
-    vehicle_used = str(input_filepath).split(r'\''.strip("'"))[-1]
+    vehicle_used = input_filepath.name
     vehicle_used = vehicle_used.strip(".txt")
     vehicle_used = re.sub("temp kd", "", vehicle_used, flags=re.I)
 
