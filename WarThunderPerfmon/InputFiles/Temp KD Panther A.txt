@@ -1,20 +1,83 @@
-2020-12-25
+5.3 X
+5.7 
 
+Event, Vehicle, Distance, OrientationInSight, Movement, SelfMovement, TargetAzimuth
 
+2021-03-12
 
-2020-12-24
+@kb @CObra King
+@k Strv 74
 
-k T-34-57
+@k @ISU-122 @.9 @Parallel @0 @0
+@k @E.B.R. (1954) @1 @Near-Parallel @0 @0
+@k @Comet I @.8 @Diagonal @0 @0
 
-2020-12-04
+2021-02-25
 
-k T-34-85 (D-5T) @0.400
-k KV-1 (Zis-5)
+@k @T-14 @.6 @Diagonal @0 @0
+@k @ARL-44 @.5 @Near-Parallel @0 @0
+@k @M4A2 @.4 @Near-Parallel @10 @0
+@k @M10 @.6 @Diagonal @0 @0
 
-kb Sherman VC
+2021-02-20
 
-k Centurion Mk. 1
-kb M4A1
+@kb @M4A3E2 (76)W @.63 @Diagonal @0 @0
+
+@kb @T-44 @Diagonal @0 @0 @0
+
+@k @M41A1 @Diagonal @.6 @0 @0
+@k @E.B.R. @Diagonal @.6 @-2 @0
+
+@k @M4A3E2 (76)W @Near-Parallel @1 @0 @0
+
+2021-02-17
+
+@k @AMX-M4 @.9 @Diagonal @0 @0
+
+@K @T-44
+@k @ISU-122
+@k @Super Hellcat
+@k @AMX M4
+@K @Comet I
+
+2021-02-16
+
+@k @M41A1
+@kb @M18
+
+2021-04-09
+
+@k @M4A3E2 (76)W
+@k @EBR
+@k @M41A1
+
+2021-04-08
+
+@k @IS-1
+
+@k @T-34-57
+@k @BT-5
+@kb @Comet I
+
+2021-02-04
+
+@k @M18 @0.56 @Parallel @Stationary @Stationary @3
+@kb @M18 @.56 @Parallel @Stationary @Stationary @3
+
+@k @M18 @.35 @Diagonal @Stationary @Stationary @220
+@k @M4A3 76(W) @Diagonal @Retreating @Stationary @222
+@kb STA-3 @.62 @Diagonal @Stationary @Rotating @340
+
+2021-01-11
+
+@kb @M18 @0.07 @Diagonal @Lateral-Right @Stationary @225
+
+@kb @M18 @0.39 @Diagonal @Stationary @Stationary @37
+@k M4A3 (76W) @0.66 @Diagonal @Lateral-Left @Stationary @330
+@k @T-26E1 @0.35 @Parallel @Approaching @Stationary @76
+@k @M4A3E2 @.36 @Diagonal @Approaching @Stationary @47
+
+@kb @M41A1 @0.84 @Parallel @Stationary @0 @0 @186
 
 ======================================
 Following records are after New Power.

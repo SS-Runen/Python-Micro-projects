@@ -1,14 +1,9 @@
-2020-12-03
+2021-03-05
 
-k KV-85
-k KV-85
-k IS-1
+@k @M4A2 @1.12 Near-Perpendicular @0 @0
+@k @T-34-85 1.21 @Diagonal @0 @0
 
-k T-44
-k ISU-122
-k ISU-122
-k ASU-57
-kb T-44
+@kb @M4A2 (76W) @.01 @Diagonal @0 @0
 
 ======================================
 Following records are after New Power.

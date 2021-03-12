@@ -1,56 +1,208 @@
-2020-12-24
+Event Vehicle Distance OrientationInSight TargetMovement SelfMovement RelativeAzimuth
 
-k IS-1
-k KV-85
+vs. T-34-85 (D-5T) 9/1
+vs. T-34-85 @ 6/2
 
-k ?T-34-85 @~0.8
-k PT-76B
-k T-34-57
+Note:
+As of February 25, 2021 (02-25-2021) when a "kb" is listed, "RelativeOrientation" is
+versus the direction of the enemy shell, not enemy hull.
 
-k T-34-85 @~0.8
-kb T-34-85 (D-5T) @~0.01
+2021-03-08
 
-kb T-34-85 @~0.1
+@k @IS-1 @~.3 @Near-Perpendicular @~5 @0
 
-kb T-34-85 (D-5T) @~0.6
+@k @T-34-85 @.58 @Near-Perpendicular @31 @0
+@k @T-34-85 (S53) @.32 @Diagonal @10 @0
+@k @T-34-85 (D-5T) @.67 @Diagonal @0 @0
 
-k IS-2
+@kb @M4A3E2 @.6 @Diagonal @0 @0
+@k @Achilles @1.1 @Diagonal @0 @0
+@k @M18 @.2 @Near-Perpendicular @15 @0
 
-2020-12-23
+@k @Comet I @1.05 @Parallel @0 @0
+@k @M4A2 (76W) @1.32 @Near-Perpendicular @0 @0
+@k @T-34-85 @1.03 @Diagonal @10 @0
 
-k IS-1
-k PT-76B
-k ISU-122
+@kb @T-34-85E @.6 @Diagonal @0 @5
 
-k IS-1
+@k @T-34-85 (D-5T) @.08 @Diagonal @21 @0
+@k @M18 @.20 @Diagonal @0 @0
+@k @M6A1 @.63 @Diagonal @0 @0
 
-k ?T-34-85 @~0.02
+2021-03-02
 
-k SU-100Y
+@k @M18 @.2 @Parallel @0 @0
+@k @T-34-85 (D-5T) @.2 @Diagonal @5 @0
 
-k T-34-57
-kb T-34-85 (D-5T) @~0.04
+@k @M4A3E2 @.1 @Near-Perpendicular @0 @0
+@kb @KV-2 (Zis-6) @.15 @Near-Parallel @0 @0
 
-2020-12-22
+@k @M4A3 @0.5 @Near-Parallel @0 @0
 
-k T-34-85 @~0.5
-kb IS-2 (1944)
+2021-02-23
 
-kb T-34-85 Gai @~0.05
+@k @T-34-85 (D-5T) @1.89 @Near-Perpendicular @0 @0
+@k @KV-220 @.5 @Diagonal @0 @0
+@k @M4A3E2 @1.05 @Near-Perpendicular @0 @0
+@k @SU-152 @.6 @Near-Perpendicular @0 @0
+@k @Sherman VC @.66 @Diagonal @0 @0
+@kb @Sherman VC @.54 @Diagonal @0 @0
 
-kb SU-100P
+@k @M18 @.6 @Diagonal @0 @0
 
-kb ?T-34-85 @~0.04
+@k @M4A4 (SA50) @.3 @Near-Parallel @10 @0
+@k @M4A3 @Diagonal @.6 @0 @0
+@kb @Pvkv II @.2 @Diagonal @0 @0
 
-2020-12-20
+2021-02-19
 
-kb T-34-57
+@k @T-34-85 (S53) @Diagonal @.53 @0 @0
+@k @QF 3.7 RAM @.35 @Diagonal @0 @0
+@k @ARL-44 @.14 @Near-Perpendicular @0 @0
+@k @ASU-57 @.20 @Diagonal @0 @0
 
-k SU-152
-kb IS-1
+@kb @Comet I @.1 @Diagonal @Stationary @Approaching
 
-2020-12-06
+@kb @Sherman VC @.5 @Diagonal @Stationary @Staionary
+@k @Sherman IC @.5 @Diagonal @Stationary @Stationary
+@k @M24 @.3 @Diagonal @Approaching @Stationary
+@k @A.C. IV @.8 @Near-Perpendicular @Lateral-Right @Stationary
 
-kb T-44
+@k @M18 @.90 @Near-Perpendicular @Lateral-Left @Stationary
 
-k PT-76B
+@kb @EBR @.02 @Near-Perpendicular @Approaching @Approaching
+@k @M24 @.6 @Diagonal @Stationary @Stationary
+
+2021-04-12
+
+@k @T-34-85 @.23 @Diagonal @0 @0
+@k @T-34-85 (D-5T) @.33 @Perpendicular @32 @0
+@k @EBR @.53 @Diagonal @5 @0
+
+@kb @M18
+
+@k @EBR
+@kb @T-20
+
+@kb @Comet 1
+
+@kb @Comet 1
+
+@kb @IS-1 @.11 @Diagonal @0 @0
+@k @M18 @.26 @Diagonal @0 @0
+
+@k @T-34-85 (D-5T) @.78 @Near-Perpendicular @0 @0
+@k @ASU-57 @.93 Diagonal @12 @0
+@k @T-34-85 (D-5T) @.55 @Diagonal @4 @0
+
+@k @IS-1
+@k @M4A2
+
+@k @T-34-85 @Diagonal @.32 @0 @0
+@K @IS-1 @.25 @Diagonal @-3 @0
+@k @M18 @.2 @Diagonal @0 @0
+@kb @M18 @.2 @Diagonal @0 @0
+@k @M4A1 @Diagonal @.35 @0 @0
+@k @Sherman Vc @.32 @Near-Parallel @0 @0
+
+@kb @EBR (1954)
+
+@k @SU-85 @.90 @Diagonal @0 @0
+@kb @T-34-85 (D-5T) @.57 @Diagonal @0 @1
+
+2021-04-05
+
+@k @T-34-85 (D-5T) @.36 @Diagonal @Stationary @Stationary
+@k @KV-85 @.29 @Parallel @Stationary @Stationary
+@k @Pvkv II @.3 @Near-Parallel @Stationary @Stationary
+
+@k @E.B.R
+@k @ARL-44 SgtLuap
+@kb @Comet 1
+
+@k @T-34-85 (D-5T) @.13 @Near-Parallel @Stationary @Stationary
+@k @T-34-85 @.24 Near-Perpendicular @Lateral-Left @Stationary
+@k @M6A1 @.11 @Near-Parallel @Stationary @Stationary
+@kb @T-34-85 @.6 @Diagonal @Stationary @Stationary
+
+@k @T-34-85 (D-5T) @.3 @Diagonal @Stationary @Stationary @190
+@k @KV-2 (Zis-6) @.13 @Perpendicular @Lateral-Left @Stationary @255
+@kb @Avenger @0.43 @Diagonal @Stationary @Stationary @300
+
+@kb @T-34-85 @.20 @Diagonal @Stationary @Retreating
+
+@k @T-34-85 @.21 @Diagonal @Stationary @Stationary
+@k @KV-220 @.3 @Diagonal @Approaching @Stationary
+
+@k @IS-1
+@kb @SU-85M
+
+@2021-02-04
+
+@k @IS-1 @.08 @Near-Parallel @Approaching @Stationary @217
+@k @Avenger @.14 @Near-Perpendicular @Stationary @Stationary @241
+@kb @ARL-44 @.06 @Near-Parallel @Stationary @Lateral-Right @230
+
+@k @T-34-85 (D-5T) @.05 @Near-Parallel @Approaching @Stationary @286
+@k @Achilles @.01 @Diagonal @Approaching @Approaching @230
+@k @Sherman VC @.45 @Diagonal @Stationary @Stationary @257
+@k @Avenger @1.09 @Diagonal @Retreating @Stationary @301
+@k @Sherman VC @.18 @Diagonal @Retreating @Stationary @206
+@k @KV-85 @.39, .39 @Perpendicular, Perpendicular @Lateral-Right, Stationary @Stationary, Stationary @228, 228
+@k @T-34-57 @.21 @Diagonal @Approaching @Stationary @197
+
+2021-02-02
+
+@k @T-34-85 Gai @.51 Diagonal @Lateral-Right @Stationary @221
+
+@K @ASU-57 @1.01,  @Near-Perpendicular, Near-Perpendicular @Lateral-Left, Stationary @Stationary, Stationary @341, 341
+@kb @ARL-44 @1.45 @Diagonal @Stationary @Retreating @30
+
+2021-01-31
+
+@k @KV-220 @0.13 @Diagonal @Diagonal @Approaching @Stationary @173
+@kb @IS-1 @.15 @Diagonal @Diagonal @Stationary @Stationary @292
+
+@k @T-34-85 @0.43 @Diagonal @Stationary @Stationary @255
+@k @M24 @.61 @Diagonal Approaching @Stationary @12
+@K @M24 @.2 @Near-Perpendicular @Stationary @Stationary @19
+
+@k @T-34-85 (D-5T) @.54 @Diagonal @Stationary @Stationary @ 333
+@k @T-34-57 @.43 @Near-Parallel @Stationary @Stationry @339
+@k @KV-2 @.43 @Diagonal @Retreating @Stationary @339
+
+@K @M4A4 (ASA50) @2.06, 2.06, 2.06 @Diagonal, Diagonal, Diagonal @Stationary,  Stationary, Stationary @Stationary, Stationary, Stationary @145, 145, 145
+
+2021-01-25
+
+@kb @ARL-44
+@k @Avenger FiutinDick
+@k @IS-1 STlnsm
+
+@kb @Sherman IC
+
+@k @M4A4 (SA50)
+
+@kb @M18
+
+@k @M4A4 (SA50)
+
+@k @E.B.R. (1954)
+
+@kb @M18 ST Leer
+@k @Comet 1
+
+2021-01-19
+
+@kb @ARL-44
+@k @ASU-57
+
+2021-01-13
+
+@k @M24 @0.23 @Parallel @Staionary @Stationary @100
+@kb @M4A3E2 @0.03 @Parallel @Stationary @Retreating @360
+
+@kb @M24 @0.01 @Diagonal @Lateral-Right @Retreating @125
+@k @T-34-85 @0.30 @Diagonal @Lateral-Left @Stationary @8
+
+@kb @T-20 @0.11 @Diagonal @Stationary @Approaching @263

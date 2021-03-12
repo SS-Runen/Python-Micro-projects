@@ -1,0 +1,8 @@
+5.3 X
+5.7 
+
+Event, Vehicle, Distance, OrientationInSight, Movement, SelfMovement, TargetAzimuth
+
+======================================
+Following records are after New Power.
+======================================

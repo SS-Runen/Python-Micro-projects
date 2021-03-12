@@ -1,0 +1,6 @@
+2021-03-09
+
+@k @?T-50 @.2 @Diaognal @0 @0
+@k @Panzer IIIL @.2 @Diagonal @0 @0
+@k @?Panzer IV F1 @.3 @Diagonal @-2 @0
+@kb @Panzer IV F2 @.2 @Near-Parallel @0 @0
