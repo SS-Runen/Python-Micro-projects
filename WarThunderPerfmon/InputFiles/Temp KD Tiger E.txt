@@ -1,15 +1,110 @@
-Event Vehicle Distance OrientationInSight TargetMovement SelfMovement RelativeAzimuth
-
-vs. T-34-85 (D-5T) 9/1
-vs. T-34-85 @ 6/2
+Event Vehicle Distance OrientationInSight TargetMovement SelfMovement
+vs. T-34-85 (D-5T) 17/2
+vs. T-34-85* 12/3 (14/5)
+	vs. T-34-85 Gai		01/0
+	vs. T-34-85 (S53)	02/0
+	vs. T-34-85E		00/1
+	vs. T-34-85		11/4 
 
 Note:
 As of February 25, 2021 (02-25-2021) when a "kb" is listed, "RelativeOrientation" is
 versus the direction of the enemy shell, not enemy hull.
 
+1. Always use sight over 3rd-person against ground targets.
+2. When moving past uncleared areas, move slow enough to clear thoroughly and to be able to fire accurately.
+3. If the uncleared area is large, have something to cover you from a large portion of it and clear what is left.
+4. If you cannot reliably clear an area and there is no safe route past it (e.g. a large town in open field) do not expose yourself to it.
+
+2021-04-25
+
+@k @Sherman Firefly @~1
+
+@kb @IS-1 @~.06
+@k @T-55E1 @~.6
+@k @Sherman Firefly @~1
+
+@kb @Pvkv II @~.4
+@k @Strv m/42 DT
+
+@kb @M18 @~.02
+
+@k @T-34-85 rokatio @~.2
+@k @IS-1 @~1
+@k @Avenger @~1
+@k @M10 @~.7
+@k @SU-85M @~.1
+
+2021-04-13
+5/2
+====================================
+@k @SU-85 @.63 @Para @0 @0
+@k @M4A2 (76) W @.45 @Diag @0 @0
+@kb @Pvkv II @.46 @Diag @0 @0
+
+@k @M4A2 (76) W @.02 @Diag @0 @0
+@k @M4A3 (76) @.01 @Diag @7 @0
+@kb @T-34-85 (D-5T) @.05 @Diag @20 @0
+
+@k @M6A1 @1.33 @Diag @0 @0
+@k @Sherman VC @1.22 @Perp @27 @0
+@k @M18 @1.11 @Diag @0 @0
+@k @T-34-85 (D-5T) @1.19 @Diag @0 @0
+@k @KV-85 @1.13 @Diag @-4 @0
+@k @T-34-57 (1943) @.63 @Perp @0 @0
+
+@k @T-34-85 (D-5T) @.73, .73 @Diag, Diag @0, @0
+@k @IS-1 @.09 @Near-Perp @-6 @0
+@k @T-34-85 @.78 @Near-Para @0 @0
+@k @SU-100Y @.79 @Near-Para @0 @0
+@k @M4A3E2 @.63 @Para @4 @0
+@k @T-20 @.07, .07 @Para, Diag @-8, 0 @0, 0
+@k @T-34-85 (D-5T) @0.04 @Diag @3 @0
+@k @ZSU-37 @.09 @Diag @0 @0
+@kb M4A1 @.05 @Diag @0 @0
+
+@k @M4A3E2 @.71 @Diag @0 @0
+@kb @Comet 1 @.26 @Diag @0 @0
+
+@kb @Lorraine 155 Mle.50 @.40 @Diag @0 @0
+@k @IS-1 @1.05 @Diag @0 @0
+
+@k @T-34-85 @.84 @Near-Para @0 @0
+@kb @M4A3 (76) W @.81 @Diag @0 @0
+
+@k @KV-220 @.11 @Para @0 @0
+@k @KV-122 @1.11 @Diag @0 @0
+@k @M18 @.9 @Diag @0 @0
+@kb @T-34-85 @0.2 @Diag @0 @4
+
+2021-04-01
+
+@k @T-34-85 (D-5T) @1.02 @Para @7 @0
+@k @SU-85M @.6 @Para @0 @0
+@k @Comet I @.5 @Perp @18 @0
+@k @Comet I @.6 @Diag @0 @0
+
+2021-03-20
+
+@kb @Comet I @1.13 @Near-Parallel @0 @0
+@k @Strv m/42 DT @.30 @Parallel @0 @0
+
+@k @T-34-85 @.76 @Diagonal @0 @0
+@k @IS-1 @.37 @Diagonal @16 @0
+@k @M18 @.68 @Diagonal @0 @0 
+@k @M4A1 @.77 @Near-Parallel @0 @-3
+@k @Sherman IC @.07 @Perpendicular @15 @0
+
+@k @M18 @0.1 @Perpendicular @0 @0
+@k @M4A1 @0.07 @Diagonal @0 @0
+
+2021-03-14
+
+@k @T-34-85 (D-5T) @.33 @Perpendicular @0 @0
+@k @SU-85M @.37 @Near-Parallel @21 @0
+
 2021-03-08
 
-@k @IS-1 @~.3 @Near-Perpendicular @~5 @0
+@k @IS-1 @.3 @Near-Perpendicular @5 @0
 
 @k @T-34-85 @.58 @Near-Perpendicular @31 @0
 @k @T-34-85 (S53) @.32 @Diagonal @10 @0
@@ -78,15 +173,6 @@ versus the direction of the enemy shell, not enemy hull.
 @k @T-34-85 @.23 @Diagonal @0 @0
 @k @T-34-85 (D-5T) @.33 @Perpendicular @32 @0
 @k @EBR @.53 @Diagonal @5 @0
-
-@kb @M18
-
-@k @EBR
-@kb @T-20
-
-@kb @Comet 1
-
-@kb @Comet 1
 
 @kb @IS-1 @.11 @Diagonal @0 @0
 @k @M18 @.26 @Diagonal @0 @0
@@ -172,30 +258,6 @@ versus the direction of the enemy shell, not enemy hull.
 @k @KV-2 @.43 @Diagonal @Retreating @Stationary @339
 
 @K @M4A4 (ASA50) @2.06, 2.06, 2.06 @Diagonal, Diagonal, Diagonal @Stationary,  Stationary, Stationary @Stationary, Stationary, Stationary @145, 145, 145
-
-2021-01-25
-
-@kb @ARL-44
-@k @Avenger FiutinDick
-@k @IS-1 STlnsm
-
-@kb @Sherman IC
-
-@k @M4A4 (SA50)
-
-@kb @M18
-
-@k @M4A4 (SA50)
-
-@k @E.B.R. (1954)
-
-@kb @M18 ST Leer
-@k @Comet 1
-
-2021-01-19
-
-@kb @ARL-44
-@k @ASU-57
 
 2021-01-13
 

@@ -1,0 +1,44 @@
+
+Event, Vehicle, Distance, OrientationInSight, Movement, SelfMovement, TargetAzimuth
+
+2021-04-25
+
+@k @M4A3 @~.03
+@k @Avenger @~.04
+@k @M4A2 @~.08
+
+@kb @T-34-85 AVH77 @~.6
+
+@kb @M4A3 (76) W @~.6
+
+@k @M18 @~.03
+@k @T-34-57 Illuminaati @~.1
+@k @IS-1 @~.4
+@k @Avenger @~1
+@k @T-34-85 -xDowx- Chotagrom @~.3
+@kb @T-34-85 (D-5T) simone14 @~.04
+
+2021-04-13
+
+@k @M4A1 (76) W @.03 @Diag @-3 @0
+@kb @T-34-85 @.04 @Diag @0 @6
+
+@k @M4A3 @~.5 @Perp
+
+@k @T-34-85 @.20 @Diag @0 @0
+@kb Lorraine 155 Mle.50 @.20 @Diag @0 @10
+
+@k @T-20 @.02 @Diag @0 @0
+@k @M4A3 @0.14 @Diag @0 @0
+
+@k @T-34-85 @.24 @Diag @4 @0
+@kb @T-34-85 (D-5T) @.11 @Near-Para @0 @0
+
+2021-03-20
+
+@k @Comet I @.4, .4 @Diagonal, Diagonal @0, 0
+@kb @Comet I @.3 @Diagonal @0 @0
+
+@k @T-34-85 (D-5T) @.12, .12 @Diagonal, Diagonal @0, 0 @0, 0
+@k @Churchill VII @.09 @Perpendicular @0 @0
+@kb @M4A3E2 @.1 @Diagonal @0 @6

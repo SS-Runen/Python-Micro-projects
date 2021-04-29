@@ -6,44 +6,184 @@ http://warthunder.com/en/registration?r=userinvite_28552741
 
 Bad Matches per Battle Rating:
 
-5.7 xxx
+5.7 X
+5.3 X
 
-5.3 xx
 
-vs. T-34-85 (D-5T) 7/3
-vs. T-34-85 * 5/3
-
+vs. T-34-85 (D-5T) 16/5
+vs. T-34-85* 12/3
+	T-34-85 (S53) 3/1
+	T-34-85 Gai 1/1
+	T-34-85E 1/0
+	T-34-85 7/1
+	
 Note:
 As of February 25, 2021 (02-25-2021) when a "kb" is listed, "RelativeOrientation" is
 versus the direction of the enemy shell, not enemy hull.
 
-Event Vehicle Distance OrientationInSight RelativeMovement SelfMovement RelativeAzimuth
+1. Always use sight over 3rd-person against ground targets.
+2. When moving past uncleared areas, move slow enough to clear thoroughly and to be able to fire accurately.
+3. If the uncleared area is large, have something to cover you from a large portion of it and clear what is left.
+4. If you cannot reliably clear an area and there is no safe route past it (e.g. a large town in open field) do not expose yourself to it.
+
+2021-04-22
+2/0
+====================================
+
+@k @SU-85 @.84 @Para @0 @0
+@kb @T-34-57 @.93 @Diag @0 @0
+
+@k @T-34-85 (D-5T) @.45, .40 @Diag, Diag @20, 12 @0, 0
+@k @T-34-85 @.54 @Near-Para @0 @0
+@k @T-14 @.48 @Diag @18 @0
+@k @KV-85 @.5 @Near-Para @0 @0
+@kb @T55E1 @.75 @Diag @0 @0
+
+2021-04-21
+1/0
+
+@k @ISU-122 @.7 @Para @0 @0
+@k @M18 @.8 @Near-Para @0 @0
+
+2021-04-14
+
+@k @PT-76B @.62 @Diag @0 @0
+
+@kb @KV-85 @.13 @Diag @0 @0
+@k @T-34 (1942) @.15 @Diag @0 @0
+
+@k @T-34-85 (D-5T) @.63 @Diag @0 @0
+@k @Chi-To (Late) @.59 @Diag @0 @0
+
+2021-04-05
+1/0
+
+@k @IS-2 @.57 @Perp @21 @0
+@k @T-34-85 (D-5T) @.63, .58 @Perp, Diag @38, 0 @0, 0
+@K @IS-1 @.33 @Diag @0 @0
+@k @T-34-57 @.46 @Diag @0 @0
+@k @M19 @.3 @Diag @7 @0
+@kb @KV-85 @.35 @Diag @8 @0
+
+2021-04-03
+Note: New overpressure mechanics added.
+
+@kb @T-34-57 @.36 @Near-Perp @10 @0
+
+@k @T-34-57 (1943) @.77 @Diag @3 @0
+@k @ASU-57 @.59 @Near-Perp @34 @0
+@k @Tiger H1 @0.01 @Near-Para @7 @0
+
+@k @M4A1 (76) W @.07 @Perp @37 @0
+@k @M4A2 (76) W @.5, .36 @Diag, Diag @13, 0 @0, 0
+@k @SU-85M @.31, .31 @Perp, Perp @8, 0 @0, 0
+@k @IS-1 @.21, .20 @Near-Para, Near-Para @0, 0 @9, 0
+@kb @M18 @0.02 @Diag @18 @-3
+
+2021-04-02
+
+@K @T-34-57 @.86, .87 @Near-Perp, Near-Perp @37, 0 @0, 0
+@k @M18 @.15 @Para @0 @0
+@k @ASU-57 @.81, .81 @Diag, Diag @20, 0 @0, 0
+@k @KV-1 (Zis-5) @.53 @Diag @0 @0
+@k @T-34E STZ @.72, .72 @Para, Para @10, 0 @0, 0
+@k @T-34 (1941) @.13 @Para @0 @0
+
+@k @IS-2 (1944) @.85 @Near-Para @0 @0
+@kb @IS-2 (1944) @.85 @Near-Para @0 @0
+
+@kb @KV-1S @.7 @Diag @15 @0
+@k @M24 @.6 @Para @0 @0
+
+2021-04-01
+
+@k @KV-1 (Zis-5) @.7 @Diag @0 @0
+@k @T-34-85 (D-5T) @.7 @Near-Para @0 @0
+
+2021-03-29
+
+@kb @IS-1 @.5 @Para @7 @0
+@k @M41A1 @.1 @Para @0 @0
+
+@k @T-34-85 Gai @.81, .81 @Diag, Diag @0, 0 @0, 0
+@k @T-34-85 @.34 @Diag @4 @0
+@k @T-34-57 @.74 @Diag @0 @0
+@k @M4A1 (FL10) @.68 @Diag @-4 @0
+@k @T-34E @.68 @Diag @19 @0
+@kb @ARL-44 @.12 @Diag @-3 @0
+
+2021-03-26
+
+@k @T-34-85 (D-5T) @.82 @Near-Para @12 @0
+@k @IS-1 @1.25, 1.27 @Diag, Diag @0, 0 @0, 0
+
+2021-03-24
+
+@k @M4A1 @.22 @Diag @0 @0
+@k @T-34-85 (D-5T) @.19 @Diag @16 @0
+@kb @M10 @.25 @Diag @0 @-5
+
+@kb @KV-1 (Zis-5) @.4 @Diag @0 @0
+@k @T-34-57 @1.85 @Para @0 @0
+@k @Panther D @1.95 @Near-Perp @0 @0
+
+@k @KV-85 @.22 @Diag @0 @0
+@k @R3 T20 FA-HS @.56 @Perp @16 @0
+@k @M4 Tipo IC @.43, .43 @Near-Perp, Diag @9, 0 @0, 0
+@k @T-34-57 @.08, .07 @Perp, Diag @0, 0 @0, 0
+@k @T-34-57 (1943) @.09, .09 @Perp, Near-Para @0, 10 @0, 0
+@k @KV-1 (Zis-5) @.35 @Para @0 @0
+@kb @ZSU-37 @.37 @Near-Para @0 @0
+
+@kb @T55E1 @.9 @Diagonal @0 @4
+
+2021-03-21
+
+@k @M41A1 @.03 @Diagonal @0 @0
+@k @IS-2 @1.73, 1.73 @Near-Perpendicular, Diagonal @7, 0 @0, 0
+@k @M4A3E2 (76) W @.75 @Diagonal @0 @0
+@k @M36 @1.33 @Diagonal @15 @0
+
+2021-03-17
+
+@k @T-34-85 @.2, 2 @Near-Perpendicular, Parallel @0, 0 @0, 0
+@k @T-44 @.35 @Diagonal @0 @0
+@k @T-34-85 @.07, .07 @Diagonal, Diagonal @8, -8 @8, 0
+
+@k @T-34-85 @.77 @Diagonal @12 @0
+
+@kb @T-44 @1.8 @Diagonal @0 @0
+
+2021-03-16
+
+@kb @T-34-85 (D-5T) @.03 @Diagonal @20 @0
+
+@kb @IS-1 @.6 @Diagonal @0 @0
+
+@k @M10 @.02 @Near-Parallel @0 @5
 
 2021-03-12
 
-@k @T-34-85E Kaspir @~.6 @Near-Parallel @0 @0
-@k @T-34-85 IGOR112233 @.2 @Diagonal @0 @0
-@kb @IS-1 @.4
+@k @T-34-85E @.64, .63 @Diagonal, Near-Parallel @3, 0 @0, 0
+@k @T-34-85 (D-5T) @.26 @Diagonal @0 @0
+@kb @IS-1 @.4 @Diagonal @0 @5
 
 @kb @T-34-85 (D-5T) @.49 @Parallel @0 @0
 @k Pz IV/70 @.25 @Diagonal @8 @0
 
-@K @KV-85 @.6 @Diagonal @5 @0
-@k @KV85 @.3 @Diagonal @5 @0
+@K @KV-85 @.27 @Diagonal @12 @0
+@k @KV-85 @.39 @Diagonal, Diagonal @18, 0 @0, 0
 @k @ASU-57 @.01 @Parallel @0 @0
 
 2021-03-10
 
-@k @Panther D PotatoLord @.6 @Diagonal @0 @0
+@k @Panther D @.6 @Diagonal @0 @0
 @kb @T-44 @.3 @Diagonal @0 @0
 @k @T-34-85 (D-5T) @.6 @Near-Parallel @0 @0
 
 @k @KV-85 @.8 @Perpendicular @0 @0
 
 @kb @IS-2 No. 402 @.43 @Diagonal @0 @0
-
-@k @SU-85 @.6 @Parallel @0 @0
-@kb @Panther A @.6 @Diagonal @0 @0
 
 2021-03-05
 
@@ -277,7 +417,7 @@ Event Vehicle Distance OrientationInSight RelativeMovement SelfMovement Relative
 @K @T-34-85 (D-5T) @0.40 @Diagonal @Stationary @Stationary @72
 
 @k @Panther D @0.49 @Diagonal @Lateral-RIght @Stationary @207
-@kb @T-34-85 S53 @.4 @Diagonal @Stationary @Stationary @15
+@kb @T-34-85 (S53) @.4 @Diagonal @Stationary @Stationary @15
 
 2021-01-24
 

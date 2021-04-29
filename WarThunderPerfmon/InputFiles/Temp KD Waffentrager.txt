@@ -1,8 +1,7 @@
-5.3 X
-5.7 
+Event, Vehicle, Distance, OrientationInSight, Speed, SelfSpeed
 
-Event, Vehicle, Distance, OrientationInSight, Movement, SelfMovement, TargetAzimuth
+@k @T-34-85 @~.8 @Near-Para
 
 ======================================
-Following records are after New Power.
+Following records are after New Power and Ixwa Strike.
 ======================================

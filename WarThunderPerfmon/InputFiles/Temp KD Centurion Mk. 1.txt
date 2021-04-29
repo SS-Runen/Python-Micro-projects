@@ -1,8 +1,2 @@
-2021-02-04
-
 Event Vehicle Distance OrientationInSight RelativeMovement SelfMovement CompassBearing
 
-@k @Type 62 @.04 @Parallel @Stationary @Approaching @190
-@kb @T-34-85 @.25 @Diagonal @Stationary @Stationary @280
-
-@k @T-34-85 (D-5T) @0.04, .02 @Diagonal, Perpendicular @Stationary, Rotating @Approaching, Retreating @20, 120

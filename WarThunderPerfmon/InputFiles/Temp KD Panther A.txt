@@ -1,12 +1,73 @@
-5.3 X
-5.7 
+Referral Link:
+http://warthunder.com/en/registration?r=userinvite_28552741
 
 Event, Vehicle, Distance, OrientationInSight, Movement, SelfMovement, TargetAzimuth
 
-2021-03-12
+vs. T-34-85 (D-5T) 2/1
+vs. T-34-85* 0/1
 
-@kb @CObra King
-@k Strv 74
+2021-04-22
+
+@k @M41A1 @~1.4 @Diag
+@k @IS-2 Moridan42 @~1 @Near-Para
+
+@k @T-34-85 @.67 @Near-Perp @0 @0
+@kb @M10 @.43 @Diag @0 @0
+
+2021-04-03
+
+@k @IS-2 (1942) "Revenge" @1.17 @Near-Para @0 @0
+@k @M41A1 @1.41, 1.41 @Near-Perp, Para @25, 0 @0, 0
+
+@kb @M4A3 (76) W @.01 @Diag @0 @0
+
+@k @T-34-57 @.47 @Diag @8 @0
+@kb @ISU-152 @.63 @Diag @0 @0
+
+2021-04-01
+
+@k @T-34-85 (D-5T) @1 @Diag @10 @0
+@k @T-34-85 (D-5T) @1.1 @Para @0 @0
+
+2021-03-29
+
+@k @KV-1 (Zis-5) @.03 @Diag @10 @0
+@kb @ARL-44 @0.1 @Diag @13 @0
+
+2021-03-24
+
+@k @KV-85 @.5 @Diag @13 @0
+@k @KV-1 (Zis-5) @.13, .13 @Diag, Diag @4, 0 @0, 0
+@k @Cursader AA Mk. II @.12 @Diag @0 @0
+@k @Churchill VII @.81 @Diag @0 @0
+
+@k @M4A3E2 (76) W @.42 @Near-Perp @24 @0
+@k @E.B.R. @.44 @Diag @30 @0
+@k @ARL-44 @.57 @Near-Para @0 @0
+@k @M36 @.58, .58 @Diag, Diag @0, 0 @0, 0
+@k @M4A3 (76) W @.55 @Diag @0 @0
+@kb @M4A3 (76) W @.55 @Diag @0 @0
+
+2021-03-23
+
+@k @T-14 @0.02 @Diagonal @0 @8
+@k @M18 @0.5 @Parallel @0 @0
+@kb @IS-2 (1944) @0.1 @Diagonal @0 @0
+
+2021-03-21
+
+@kb @T-34-57 (1943) @.01 @Diagonal @7 @0
+
+2021-03-17
+
+@kb @T-34-85 (D-5T) .32 @Near-Perpendicular @0 @0
+
+@kb @T-34-85 @0.1 @Diagonal @0 @0
+@k @M41A1 @0.1 @Near-Perpendicular @7 @0
+
+@kb @M18 @.6 @Near-Perpendicular @0 @0
+
+2021-03-12
 
 @k @ISU-122 @.9 @Parallel @0 @0
 @k @E.B.R. (1954) @1 @Near-Parallel @0 @0
@@ -23,61 +84,14 @@ Event, Vehicle, Distance, OrientationInSight, Movement, SelfMovement, TargetAzim
 
 @kb @M4A3E2 (76)W @.63 @Diagonal @0 @0
 
-@kb @T-44 @Diagonal @0 @0 @0
+@k @M41A1 @.6 @Diagonal @0 @0
+@k @E.B.R. @.6 @Diagonal @-2 @0
 
-@k @M41A1 @Diagonal @.6 @0 @0
-@k @E.B.R. @Diagonal @.6 @-2 @0
-
-@k @M4A3E2 (76)W @Near-Parallel @1 @0 @0
+@k @M4A3E2 (76) W @Near-Parallel @1 @0 @0
 
 2021-02-17
 
 @k @AMX-M4 @.9 @Diagonal @0 @0
-
-@K @T-44
-@k @ISU-122
-@k @Super Hellcat
-@k @AMX M4
-@K @Comet I
-
-2021-02-16
-
-@k @M41A1
-@kb @M18
-
-2021-04-09
-
-@k @M4A3E2 (76)W
-@k @EBR
-@k @M41A1
-
-2021-04-08
-
-@k @IS-1
-
-@k @T-34-57
-@k @BT-5
-@kb @Comet I
-
-2021-02-04
-
-@k @M18 @0.56 @Parallel @Stationary @Stationary @3
-@kb @M18 @.56 @Parallel @Stationary @Stationary @3
-
-@k @M18 @.35 @Diagonal @Stationary @Stationary @220
-@k @M4A3 76(W) @Diagonal @Retreating @Stationary @222
-@kb STA-3 @.62 @Diagonal @Stationary @Rotating @340
-
-2021-01-11
-
-@kb @M18 @0.07 @Diagonal @Lateral-Right @Stationary @225
-
-@kb @M18 @0.39 @Diagonal @Stationary @Stationary @37
-@k M4A3 (76W) @0.66 @Diagonal @Lateral-Left @Stationary @330
-@k @T-26E1 @0.35 @Parallel @Approaching @Stationary @76
-@k @M4A3E2 @.36 @Diagonal @Approaching @Stationary @47
-
-@kb @M41A1 @0.84 @Parallel @Stationary @0 @0 @186
 
 ======================================
 Following records are after New Power.
