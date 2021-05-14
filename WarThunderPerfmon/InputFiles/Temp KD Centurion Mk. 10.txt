@@ -7,32 +7,115 @@ On 2021-03-31 records with no speed listed were removed before starting the new 
 Old vs. T-54 (1949) 41/11
 Old vs. T-54 (1947) 42/14
 
-vs. T-54 (1949) 41/18 (2.27)
-vs. T-54 (1947) 36/17 (2.11)
+vs. T-54 (1949) 55/21 (2.62)
+vs. T-54 (1947) 46/22 (2.09)
 
-1. Always use sight over 3rd-person against ground targets.
-2. When moving past uncleared areas, move slow enough to clear thoroughly and to be able to fire accurately.
-3. If the uncleared area is large, have something to cover you from a large portion of it and clear what is left.
-4. If you cannot reliably clear an area and there is no safe route past it (e.g. a large town in open field) do not expose yourself to it.
-5. When leading close-range targets, make sure that the shell will hit the target whether or not it continues moving. Impossible to do at long range.
-6. When firing, "bracket" the target: have as much of the target within the upper and lower "spread". Despite slight range errors, round will hit.
+- Always use sight over 3rd-person against ground targets.
+- When moving past uncleared areas, move slow enough to clear thoroughly and to be able to fire accurately.
+- When scanning for targets, always stay hull down or have most of the tank hidden.
+- If the uncleared area is large, have something to cover you from a large portion of it and clear what is left.
+- If you cannot reliably clear an area and there is no safe route past it (e.g. a large town in open field) do not expose yourself to it.
+- When leading close-range targets, make sure that the shell will hit the target whether or not it continues moving. Impossible to do at long range.
+- When firing, "bracket" the target: have as much of the target within the upper and lower "spread". Despite slight range errors, round will hit.
+- When scanning for targets, always keep most of the tank hidden. The most exposure should be from a hull-down position.
+- Always watch for shell "splash" or hits before losing sight of a target.
+
+2021-05-14
+====================================
+3/2
+-3
+
+@kb @T-54 (1947) @.04 @Near-Perp @0 @0
+@k @T-54 (1949) @1.15 @Diag @0 @0
+@k @T-54 (1949) @1.61 @Para @0 @0
+
+@k @IS-6 @.7 @Near-Para @0 @0
+
+@k @T-44-100 @.1 @Near-Para @13 @0
+
+@k @IS-4M @.1 @Para @0 @0
+@k @ASU-85 @1.6 @Near-Para @0 @0
+@k @T-44-100 @1.28 @Diag @0 @0
+@k @T-54 (1947) @1.56 @Diag @0 @0
+
+@k @T-54 (1949) @0.04 @Perp @15 @0
+@kb @T-54 (1949) @0.03 @Diag @0 @0
+
+@k @T-54 (1949) @.36 @Diag @0 @0
+
+@k @T-54 (1947) @.03 @Diag @0 @0
+@kb @T-54 (1947) @.6 @Diag @0 @0
+
+2021-05-10
+2/2
+-6
+
+@k @T-54 (1949) @.97 @Near-Perp @28 @0
+@k @T-54 (1949) @.97 @Perp @32 @0
+@k @T-44-100 @.33 @Perp @30 @0
+
+@k @T-54 (1947) @1.04, @Para @0 @0
+@k @T-54 (1949) @1.6 @Para @0 @0
+@k @T-44-100 @1.02 @Diag @23 @0
+@k @IS-3 @1.14 @Near-Para @0 @0
+@k @IS-3 @.6 @Near-Para @0 @0
+
+@k @T-44-122 @.58 @Diag @11 @0
+@k @T-44-100 @.59 @Near-Perp @0 @-11
+@k @IS-3 @.79, .8 @Diag, Diag @4, 0 @0, 0
+@k @T-54 (1947) @.42, @Near-Para, Diag @-4, 9 @0, 0
+
+@k @T-54 (1949) @1.91 @Diag @0 @0
+@kb @SU-100P @.2 @Diag @0 @0
+
+@kb @T-54 (1947) @1.27 @Diag @0 @0
+
+@k @T-44-100 @.69 @Diag @16 @0
+@kb @T-54 (1947) @.18 @Near-Perp @0 @0
+
+@kb @IS-4M @.03 @Diag @0 @0
+
+2021-04-28
+2/0
++2
+
+@k @IS-4M @1.1 @Near-Para @0 @0
+@k @T-54 (1949) @1.67 @Near-Perp @0 @0
+
+@k @IS-4M @1.46 @Diag @0 @0
+@k @T-54 (1947) @1.03 @Diag @0 @0
+
+@k @T-54 (1949) @.89 @Diag @0 @0
+@k @IS-3 @.95 @Diag @0 @0
+@k @T-44-100 @.72 @Near-Para @0 @0
+@k @T-54 (1947) @.51, .51 @Near-Perp, Near-Para @22, 0 @0, 1
+@k @SU-100P @.50 @Para @0 @0
+@k @ZSU-37 @.56, .56 @Diag, Para @25, 0 @0, 11
+@k @IS-4M @.43, .43 @Diag, Diag @2, 0 @0, 0
+
+@k @T-44-100 @.8 @Near-perp @10 @0
+@kb @SU-100P @.04 @Diag @0 @0
+
+@kb @IS-4M @0.02 @Diag @0 @0
 
 2021-04-24
+4/1
++1
 
-@k @T-54 ZHenya_Petrov @~1.6
-@k @T-54 Artemka091102 @~1.8
+@k @T-54 (1949) @1.62 @Near-Para @0 @0
+@k @T-54 (1947) @1.79, 1.85 @Near-Perp, Para @-7, 0 @0, 0
 
-@kb @T-54 (1949) @~.01
+@kb @T-54 (1949) @.01 @Diag @0 @7
 
-@k @T-54 (1949) werty867 @~1.1 @Near-Para
-@k @T-54 (1947) werty987 @~1.1 @Near-Perp
+@k @T-54 (1949) @1.1 @Near-Para @0 @0
+@k @T-54 (1947) @1.04, 1.03 @Diag, Diag @10, 0 @0, 0
 
-@k @T-54 (1949) @~.9 stuff2000
-@k @IS-6 @~.5
+@k @T-54 (1949) @1.3 @Diag @0 @0
+@k @IS-6 @.34 @Diag @0 @0
 
-@k @T-54 =RKC= Pock @~1.2
-@k @IS-4M @~.6
-@kb T-54 (1949) @~1.2
+@k @T-54 (1947) @1.15 @Diag @0 @0
+@k @IS-4M @.52 @Diag @0 @0
+@kb @T-54 (1949) @.81 @Diag @0 @15
 
 @k @IS-3 @.09 @Para @15 @10
 @kb @T-54 (1947) @.18 @Diag @-3 @0
@@ -43,6 +126,7 @@ vs. T-54 (1947) 36/17 (2.11)
 @kb @T-54 (1949) @.45 @Diag @6 @0
 
 2021-04-20
+1/0
 +1
 
 @k @Obj 268 @.6 @Diag @-1 @0
@@ -54,12 +138,13 @@ vs. T-54 (1947) 36/17 (2.11)
 @k @-54 (1947) @.72, .72 @Diag, Diag @28, 0 @0, 0
 
 2021-04-16
+2/0
 +2
 
 @k @T-54 (1947) @.77 @Diag @0 @0
 @k @T-54 (1947) @.94 @Diag @15 @0
 @k @T-54 (1949) @1.08 @Diag @0 @0
-@kb T-54 (1949) @.33 @Diag @0 @15
+@kb @T-54 (1949) @.33 @Diag @0 @15
 
 @k @T-54 (1949) @.99 @Diag @0 @0
 
@@ -73,7 +158,8 @@ vs. T-54 (1947) 36/17 (2.11)
 @kb @T-54 (1949) @.08 @Diag @0 @0
 
 2021-04-12
-0
+2/1
+-1
 
 @k @T-54 (1949) @1.89 @Diag, Diag @32, 0 @0, 8
 @k @T-54 (1949) @1.32 @Diag @0 @0
@@ -100,7 +186,6 @@ vs. T-54 (1947) 36/17 (2.11)
 @k @T-54 (1947) @1.08 @Diag @0 @0
 
 2021-04-08
--3
 
 @k @T-54 (1947) @1.1 @Near-Para @11 @0
 @kb @T-54 (1949) @.09 @Diag @0 @-11
@@ -153,7 +238,7 @@ Note: Make sure to note the range listing of APDS before switching to HESH. Swit
 
 2021-03-31
 -1
-====================================
+
 @k @T-44-100 @1.3 @Diag @0 @0
 @k @T-44-100 @1 @Diag @0 @0
 @k @IS-4M @1 @Perp @0 @0
@@ -210,7 +295,7 @@ Note: Make sure to note the range listing of APDS before switching to HESH. Swit
 @k @T-44-100 @.9 @Diagonal @0 @0
 @k @T-54 (1949) @.64, .64 @Diagonal @9, 0 @9, 0
 @k @T-54 (1949) @.69 @Near-Para @0 @0
-@kb @T-54 (1949) @.69 Near-Para @0 @-11
+@kb @T-54 (1949) @.69 @Near-Para @0 @-11
 
 2021-03-19
 
@@ -228,7 +313,7 @@ Note: Make sure to note the range listing of APDS before switching to HESH. Swit
 @kb @T-54 (1949) @.56 @Diagonal @0 @0
 
 @kb @IS-4M @.75 @Near-Parallel @0 @0
-@k @T-44-100 @.94 Diagonal @6 @0
+@k @T-44-100 @.94 @Diagonal @6 @0
 @k @T-54 (1947) @.11 @Diagonal @24 @22
 
 @kb @IS-3 @1.2 @Near-Parallel @0 @0
@@ -244,14 +329,13 @@ Note: Make sure to note the range listing of APDS before switching to HESH. Swit
 @k @T-34-100 @.95 @Diagonal @29 @0
 @k @Type 63 @.06 @Diagonal @0 @7
 
-@k @ASU-85 @Perpendicular @20 @0
 @k @IS-3 @.8 @Diagonal @0 @0
 
 @kb @T-54 (1949) @.9 @Diagonal @0 @0
 
 @k @T-44-100 @.09 @Diagonal @0 @10
 @k @T-54 (1947) @.73 @Near-Perpendicular @0 @0
-@kb @IS-4M @.09 @Diagonal
+@kb @IS-4M @.09 @Diagonal @0 @0
 
 @kb @Type 62 @.2 @Near-Parallel @0 @0
 
@@ -285,7 +369,7 @@ Note: Make sure to note the range listing of APDS before switching to HESH. Swit
 
 2021-03-03
 
-@kb @PT-76B @.
+@kb @PT-76B @.1 @Diag @0 @0
 @k @T-54 (1949) @.89 @Diagonal @0 @0
 
 @k @T-54 (1949) @.04 @Near-Perpendicular @0 @0
@@ -320,7 +404,6 @@ Note: Make sure to note the range listing of APDS before switching to HESH. Swit
 @k @T-54 (1949) @.26 @Diagonal @40 @0
 @k @T-54 (1947) @.29 @Near-Parallel @24 @0
 
-No-splash Bug
 @kb @T-54 (1949) @1.0 @Diagonal @0 @0
 @k @Type 62 @1.2 @Near-Perpendicular @0 @0
 
@@ -331,7 +414,7 @@ No-splash Bug
 @k @T-54 (1947) @1.04 @Diagonal @0 @0
 
 @k @T-54 (1949) @.4 @Diagonal @5 @0
-@k @ASU-85 @1 Diagonal @15 @0
+@k @ASU-85 @1 @Diagonal @15 @0
 @kb @IS-3 @.4 @Diagonal @0 @0
 
 @kb @T-54 (1949) @.68 @Diaognal @0 @-3
@@ -376,53 +459,53 @@ No-splash Bug
 
 2021-02-05
 
-@kb @T-54 (1947) @.53 @Parallel @0 @0 @170
+@kb @T-54 (1947) @.53 @Parallel @0 @0
 
-@k @T-54 (1947) @.12 @Near-Parallel @0 @0 @79
+@k @T-54 (1947) @.12 @Near-Parallel @0 @0
 
 2021-02-03
 
 @k ASU-85
 
-@k @T-54 (1947) @1.27 @Diagonal @0 @0 @269
+@k @T-54 (1947) @1.27 @Diagonal @0 @0
 
 @kb Obj 268
 
-@kb @T-54 (1947) @1.31 @Diagonal @0 @0 @240
+@kb @T-54 (1947) @1.31 @Diagonal @0 @0
 
 2021-01-30
 
 @k @PT-76B
 
 @k ZSU-37 @.31 @Parallel @0 @0 @168
-@k @T-54 (1947) @.89 @Near-Perpendicular @0 @0 @208
+@k @T-54 (1947) @.89 @Near-Perpendicular @0 @0
 
 2021-01-26
 
-@k @T-54 (1949) @1.17 @Diagonal @0 @0 @21
+@k @T-54 (1949) @1.17 @Diagonal @0 @0
 
 2020-01-18
 
 @k @T-54 (1947) @.25 @Near-Perpendicular @0 @0
 
-@kb @T-54(1949) @.21 @Diagonal @0 @0 @73
+@kb @T-54(1949) @.21 @Diagonal @0 @0
 
-@k @IS-3 @.65 @Diagonal @0 @0 @12 
+@k @IS-3 @.65 @Diagonal @0 @0
 
-@k @IS-3 @.05 @Diagonal @0 @0 @97
+@k @IS-3 @.05 @Diagonal @0 @0
 
 2021-01-10
 
-@K T-54 (1947) @0.43 @Perpendicular @0 @0 @277
-@kb T-44-100 @0.14, 0.11 @ @Perpendicular, Diagonal @0 @185
+@K T-54 (1947) @0.43 @Perpendicular @0 @0
+@kb T-44-100 @0.14, 0.11 @ @Perpendicular, Diagonal @0
 
-@kb @T-54 (1947) @0.65 @Diagonal @0 @0 @162 
+@kb @T-54 (1947) @0.65 @Diagonal @0 @0
 
-@k @T-44 @.90 @Parallel @0 @0 @0
-@k @PT-76B @0.88 @Diagonal @0 @0 @236
+@k @T-44 @.90 @Parallel @0 @0
+@k @PT-76B @0.88 @Diagonal @0 @0
 
-@k @T-54 (1949) @0.53 @Parallel @0 @0 @346 
-@k @T-54 (1949) @0.8 @Perpendicular @0 @0 @341
+@k @T-54 (1949) @0.53 @Parallel @0 @0
+@k @T-54 (1949) @0.8 @Perpendicular @0 @0
 
-@k @T-54 (1947) @0.95 @Perpendicular @0 @0 @301 
+@k @T-54 (1947) @0.95 @Perpendicular @0 @0
 @k @T-54 (1949) @0.08 @Diagonal @0 @0 @242

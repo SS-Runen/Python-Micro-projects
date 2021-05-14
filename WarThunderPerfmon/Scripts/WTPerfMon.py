@@ -5,20 +5,41 @@ import re
 from pathlib import Path
 
 
+def get_mean_mode(group_records):
+    lst_averages = list()
+    for group in group_records:
+        try:
+            decimals = [float(n) for n  in group.split("&")] 
+            ave = sum(decimals) / len(decimals)
+            lst_averages.append(ave)
+        except ValueError:
+            most_frequent = ""
+            top_occurance = 0
+            for word in group.split('&'):
+                if group.count(word) > top_occurance:
+                    most_frequent, top_occurance = word, group.count(word)            
+            lst_averages.append(most_frequent)
+
+    return lst_averages
+
+
 def parse_textfile(input_filepath):    
     file_obj = open(input_filepath, 'r')
     lst_lines = file_obj.readlines()
     file_obj.close()
 
     lst_cleanlines = []
-    vehicle_used = input_filepath.name
-    vehicle_used = vehicle_used.strip(".txt")
+    vehicle_used = input_filepath.name.strip(".txt")
     vehicle_used = re.sub("temp kd", "", vehicle_used, flags=re.I)
 
-    date_recorded = "N.A."
+    date_recorded = "0001-01-01"
     for row_index in range(len(lst_lines)):
         current_line = lst_lines[row_index].replace(',', '&').split('@')
-        current_line = [n.strip() for n in current_line]
+        current_line = current_line[ :7]
+        for column in current_line:
+            if '&' in str(column):
+                current_line[3: ] = get_mean_mode(current_line[3: ])
+        current_line = [str(n).strip() for n in current_line]
         if len(current_line) == 1:
             if re.search(r"\d{4}[\-_/](\d{1,2}[\-_/]\d{1,2})", current_line[0]) is not None:
                 date_recorded = current_line[0]
@@ -69,7 +90,7 @@ def txt_to_csv(
     else:
         fileobj = open(file=(outfolder_path / outfile_name), mode='w')
                 
-    fileobj.write("DateRecorded, VehicleUsed, Event, EnemyVehicle, Distance, OrientationInSight, EnemySpeed, SelfSpeed\n")
+    fileobj.write("DateRecorded,VehicleUsed,Event,EnemyVehicle,Distance,OrientationInSight,EnemySpeed,SelfSpeed\n")
     fileobj.close()
 
     for absolute_path in lst_infile_paths:

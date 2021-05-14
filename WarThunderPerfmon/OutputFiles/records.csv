@@ -1,37 +1,83 @@
-DateRecorded, VehicleUsed, Event, EnemyVehicle, Distance, OrientationInSight, EnemySpeed, SelfSpeed
-2021-04-24, Centurion Mk. 10,k,T-54 ZHenya_Petrov,~1.6
-2021-04-24, Centurion Mk. 10,k,T-54 Artemka091102,~1.8
-2021-04-24, Centurion Mk. 10,kb,T-54 (1949),~.01
-2021-04-24, Centurion Mk. 10,k,T-54 (1949) werty867,~1.1,Near-Para
-2021-04-24, Centurion Mk. 10,k,T-54 (1947) werty987,~1.1,Near-Perp
-2021-04-24, Centurion Mk. 10,k,T-54 (1949),~.9 stuff2000
-2021-04-24, Centurion Mk. 10,k,IS-6,~.5
-2021-04-24, Centurion Mk. 10,k,T-54 =RKC= Pock,~1.2
-2021-04-24, Centurion Mk. 10,k,IS-4M,~.6
-2021-04-24, Centurion Mk. 10,kb T-54 (1949),~1.2
+DateRecorded,VehicleUsed,Event,EnemyVehicle,Distance,OrientationInSight,EnemySpeed,SelfSpeed
+2021-05-14, Centurion Mk. 10,kb,T-54 (1947),.04,Near-Perp,0,0
+2021-05-14, Centurion Mk. 10,k,T-54 (1949),1.15,Diag,0,0
+2021-05-14, Centurion Mk. 10,k,T-54 (1949),1.61,Para,0,0
+2021-05-14, Centurion Mk. 10,k,IS-6,.7,Near-Para,0,0
+2021-05-14, Centurion Mk. 10,k,T-44-100,.1,Near-Para,13,0
+2021-05-14, Centurion Mk. 10,k,IS-4M,.1,Para,0,0
+2021-05-14, Centurion Mk. 10,k,ASU-85,1.6,Near-Para,0,0
+2021-05-14, Centurion Mk. 10,k,T-44-100,1.28,Diag,0,0
+2021-05-14, Centurion Mk. 10,k,T-54 (1947),1.56,Diag,0,0
+2021-05-14, Centurion Mk. 10,k,T-54 (1949),0.04,Perp,15,0
+2021-05-14, Centurion Mk. 10,kb,T-54 (1949),0.03,Diag,0,0
+2021-05-14, Centurion Mk. 10,k,T-54 (1949),.36,Diag,0,0
+2021-05-14, Centurion Mk. 10,k,T-54 (1947),.03,Diag,0,0
+2021-05-14, Centurion Mk. 10,kb,T-54 (1947),.6,Diag,0,0
+2021-05-10, Centurion Mk. 10,k,T-54 (1949),.97,Near-Perp,28,0
+2021-05-10, Centurion Mk. 10,k,T-54 (1949),.97,Perp,32,0
+2021-05-10, Centurion Mk. 10,k,T-44-100,.33,Perp,30,0
+2021-05-10, Centurion Mk. 10,k,T-54 (1947),1.04,Para,0.0,0.0
+2021-05-10, Centurion Mk. 10,k,T-54 (1949),1.6,Para,0,0
+2021-05-10, Centurion Mk. 10,k,T-44-100,1.02,Diag,23,0
+2021-05-10, Centurion Mk. 10,k,IS-3,1.14,Near-Para,0,0
+2021-05-10, Centurion Mk. 10,k,IS-3,.6,Near-Para,0,0
+2021-05-10, Centurion Mk. 10,k,T-44-122,.58,Diag,11,0
+2021-05-10, Centurion Mk. 10,k,T-44-100,.59,Near-Perp,0,-11
+2021-05-10, Centurion Mk. 10,k,IS-3,0.795,Diag,2.0,0.0
+2021-05-10, Centurion Mk. 10,k,T-54 (1947),.42,Near-Para,2.5,0.0
+2021-05-10, Centurion Mk. 10,k,T-54 (1949),1.91,Diag,0,0
+2021-05-10, Centurion Mk. 10,kb,SU-100P,.2,Diag,0,0
+2021-05-10, Centurion Mk. 10,kb,T-54 (1947),1.27,Diag,0,0
+2021-05-10, Centurion Mk. 10,k,T-44-100,.69,Diag,16,0
+2021-05-10, Centurion Mk. 10,kb,T-54 (1947),.18,Near-Perp,0,0
+2021-05-10, Centurion Mk. 10,kb,IS-4M,.03,Diag,0,0
+2021-04-28, Centurion Mk. 10,k,IS-4M,1.1,Near-Para,0,0
+2021-04-28, Centurion Mk. 10,k,T-54 (1949),1.67,Near-Perp,0,0
+2021-04-28, Centurion Mk. 10,k,IS-4M,1.46,Diag,0,0
+2021-04-28, Centurion Mk. 10,k,T-54 (1947),1.03,Diag,0,0
+2021-04-28, Centurion Mk. 10,k,T-54 (1949),.89,Diag,0,0
+2021-04-28, Centurion Mk. 10,k,IS-3,.95,Diag,0,0
+2021-04-28, Centurion Mk. 10,k,T-44-100,.72,Near-Para,0,0
+2021-04-28, Centurion Mk. 10,k,T-54 (1947),0.51,Near-Perp,11.0,0.5
+2021-04-28, Centurion Mk. 10,k,SU-100P,.50,Para,0,0
+2021-04-28, Centurion Mk. 10,k,ZSU-37,0.56,Diag,12.5,5.5
+2021-04-28, Centurion Mk. 10,k,IS-4M,0.43,Diag,1.0,0.0
+2021-04-28, Centurion Mk. 10,k,T-44-100,.8,Near-perp,10,0
+2021-04-28, Centurion Mk. 10,kb,SU-100P,.04,Diag,0,0
+2021-04-28, Centurion Mk. 10,kb,IS-4M,0.02,Diag,0,0
+2021-04-24, Centurion Mk. 10,k,T-54 (1949),1.62,Near-Para,0,0
+2021-04-24, Centurion Mk. 10,k,T-54 (1947),1.82,Near-Perp,-3.5,0.0
+2021-04-24, Centurion Mk. 10,kb,T-54 (1949),.01,Diag,0,7
+2021-04-24, Centurion Mk. 10,k,T-54 (1949),1.1,Near-Para,0,0
+2021-04-24, Centurion Mk. 10,k,T-54 (1947),1.0350000000000001,Diag,5.0,0.0
+2021-04-24, Centurion Mk. 10,k,T-54 (1949),1.3,Diag,0,0
+2021-04-24, Centurion Mk. 10,k,IS-6,.34,Diag,0,0
+2021-04-24, Centurion Mk. 10,k,T-54 (1947),1.15,Diag,0,0
+2021-04-24, Centurion Mk. 10,k,IS-4M,.52,Diag,0,0
+2021-04-24, Centurion Mk. 10,kb,T-54 (1949),.81,Diag,0,15
 2021-04-24, Centurion Mk. 10,k,IS-3,.09,Para,15,10
 2021-04-24, Centurion Mk. 10,kb,T-54 (1947),.18,Diag,-3,0
 2021-04-24, Centurion Mk. 10,k,IS-6,.55,Diag,1,0
-2021-04-24, Centurion Mk. 10,k,T-54 (1947),.58& .58,Near-Perp& Diag,11& 0,0& 0
+2021-04-24, Centurion Mk. 10,k,T-54 (1947),0.58,Near-Perp,5.5,0.0
 2021-04-24, Centurion Mk. 10,k,T-54 (1949),.64,Para,0,0
 2021-04-24, Centurion Mk. 10,kb,T-54 (1949),.45,Diag,6,0
 2021-04-20, Centurion Mk. 10,k,Obj 268,.6,Diag,-1,0
 2021-04-20, Centurion Mk. 10,k,ASU-85,.99,Diag,0,0
 2021-04-20, Centurion Mk. 10,kb,IS-4M,.80,Diag,0,0
-2021-04-20, Centurion Mk. 10,k,T-44-100,1.13& 1.13,Near-Para& Near-Para,22& 0,0& 0
-2021-04-20, Centurion Mk. 10,k,-54 (1947),.72& .72,Diag& Diag,28& 0,0& 0
+2021-04-20, Centurion Mk. 10,k,T-44-100,1.13,Near-Para,11.0,0.0
+2021-04-20, Centurion Mk. 10,k,-54 (1947),0.72,Diag,14.0,0.0
 2021-04-16, Centurion Mk. 10,k,T-54 (1947),.77,Diag,0,0
 2021-04-16, Centurion Mk. 10,k,T-54 (1947),.94,Diag,15,0
 2021-04-16, Centurion Mk. 10,k,T-54 (1949),1.08,Diag,0,0
-2021-04-16, Centurion Mk. 10,kb T-54 (1949),.33,Diag,0,15
+2021-04-16, Centurion Mk. 10,kb,T-54 (1949),.33,Diag,0,15
 2021-04-16, Centurion Mk. 10,k,T-54 (1949),.99,Diag,0,0
 2021-04-16, Centurion Mk. 10,kb,T-54 (1949),.25,Diag,0,5
-2021-04-16, Centurion Mk. 10,k,IS-4M,.82& .82,Perp& Perp,22& 0,0& 0
+2021-04-16, Centurion Mk. 10,k,IS-4M,0.82,Perp,11.0,0.0
 2021-04-16, Centurion Mk. 10,k,IS-6,.44,Near-Para,0,0
 2021-04-16, Centurion Mk. 10,k,ZSU-37,.2,Diag,0,0
-2021-04-16, Centurion Mk. 10,k,IS-6,.9& .9,Near-Perp& Near-Perp,18& 0,0& 0
+2021-04-16, Centurion Mk. 10,k,IS-6,0.9,Near-Perp,9.0,0.0
 2021-04-16, Centurion Mk. 10,kb,T-54 (1949),.08,Diag,0,0
-2021-04-12, Centurion Mk. 10,k,T-54 (1949),1.89,Diag& Diag,32& 0,0& 8
+2021-04-12, Centurion Mk. 10,k,T-54 (1949),1.89,Diag,16.0,4.0
 2021-04-12, Centurion Mk. 10,k,T-54 (1949),1.32,Diag,0,0
 2021-04-12, Centurion Mk. 10,kb,T-44-100,.8,Diag,0,11
 2021-04-12, Centurion Mk. 10,K,T-54 (1949),.55,Perp,0,0
@@ -55,7 +101,7 @@ DateRecorded, VehicleUsed, Event, EnemyVehicle, Distance, OrientationInSight, En
 2021-04-08, Centurion Mk. 10,k,T-44-100,.8,Diag,0,0
 2021-04-08, Centurion Mk. 10,k,SU-100P,.24,Diag,0,0
 2021-04-08, Centurion Mk. 10,k,ZSU-37,0.2,Perp,9,0
-2021-04-08, Centurion Mk. 10,k,IS-6,.27& .31,Diag& Near-Para,-7& -3,0& 0
+2021-04-08, Centurion Mk. 10,k,IS-6,0.29000000000000004,Diag,-5.0,0.0
 2021-04-08, Centurion Mk. 10,k,IS-6,.11,Diag,9,0
 2021-04-08, Centurion Mk. 10,k,T-54 (1949),.28,Diag,0,0
 2021-04-08, Centurion Mk. 10,kb,T-54 (1947),.15,Near-Para,0,0
@@ -72,10 +118,10 @@ DateRecorded, VehicleUsed, Event, EnemyVehicle, Distance, OrientationInSight, En
 2021-04-03, Centurion Mk. 10,k,T-54 (1947),.71,Near-Perp,23,0
 2021-04-03, Centurion Mk. 10,k,Type 62,.46,Diag,0,0
 2021-04-03, Centurion Mk. 10,k,Obj 268,.8,Para,0,0
-2021-04-03, Centurion Mk. 10,kb,T-54 (1949),.32& .19,diag&,0& 0,29& 0
+2021-04-03, Centurion Mk. 10,kb,T-54 (1949),0.255,diag,0.0,14.5
 2021-04-03, Centurion Mk. 10,kb,IS-4M,.07,Diag,-7,20
 2021-04-03, Centurion Mk. 10,kb,T-54 (1947),1.07,Near-Para,0,0
-2021-04-03, Centurion Mk. 10,k,T-54 (1949),1.79& 1.78,Near-Para& Near-Para,0& -7,0& 0
+2021-04-03, Centurion Mk. 10,k,T-54 (1949),1.7850000000000001,Near-Para,-3.5,0.0
 2021-03-31, Centurion Mk. 10,k,T-44-100,1.3,Diag,0,0
 2021-03-31, Centurion Mk. 10,k,T-44-100,1,Diag,0,0
 2021-03-31, Centurion Mk. 10,k,IS-4M,1,Perp,0,0
@@ -92,29 +138,29 @@ DateRecorded, VehicleUsed, Event, EnemyVehicle, Distance, OrientationInSight, En
 2021-03-31, Centurion Mk. 10,k,T-54 (1949),1,Near-Perp,0,0
 2021-03-31, Centurion Mk. 10,k,T-54 (1949),1.1,Perp,0,0
 2021-03-31, Centurion Mk. 10,k,SU-100P,.8,Near-Perp,15,0
-2021-03-27, Centurion Mk. 10,k,T-54 (1947),.42& .41,Diag& Near-Perp,13& 0,0& 0
+2021-03-27, Centurion Mk. 10,k,T-54 (1947),0.415,Diag,6.5,0.0
 2021-03-27, Centurion Mk. 10,k,T-44-100,.44,Near-Perp,8,18
 2021-03-27, Centurion Mk. 10,k,T-44-100,.99,Diag,44,0
-2021-03-27, Centurion Mk. 10,k,T-54 (1947),.43& .44,Near-Perp& Diag,21& 0,0& 0
+2021-03-27, Centurion Mk. 10,k,T-54 (1947),0.435,Near-Perp,10.5,0.0
 2021-03-23, Centurion Mk. 10,k,T-54 (1949),.88,Diagonal,0,0
 2021-03-23, Centurion Mk. 10,k,T-54 (1949),.61,Diagonal,29,0
 2021-03-23, Centurion Mk. 10,k,SU-100P,.60,Parallel,25,0
-2021-03-23, Centurion Mk. 10,k,T-44-100,1.54,Near-Perpendicular& Near-Perpendicular,10& 0,0& 0
-2021-03-23, Centurion Mk. 10,k,T-54 (1947),1.26& 1.29,Perpendicular& Diagonal,-7& 20,0& 0
-2021-03-23, Centurion Mk. 10,k,IS-4M,1.52,Diagonal& Diagonal,0& 0,0& 0
+2021-03-23, Centurion Mk. 10,k,T-44-100,1.54,Near-Perpendicular,5.0,0.0
+2021-03-23, Centurion Mk. 10,k,T-54 (1947),1.275,Perpendicular,6.5,0.0
+2021-03-23, Centurion Mk. 10,k,IS-4M,1.52,Diagonal,0.0,0.0
 2021-03-23, Centurion Mk. 10,k,T-54 (1949),.9,Diagonal,0,0
 2021-03-23, Centurion Mk. 10,K,ASU-85,.92,Diagonal,0,0
 2021-03-23, Centurion Mk. 10,k,T-44-100,.6,Diagonal,4,0
 2021-03-23, Centurion Mk. 10,k,T-54 (1949),.89,Diagonal,0,0
-2021-03-23, Centurion Mk. 10,k,T-54 (1949),1.07& 1.07,Near-Perp& Near-Perp,4& 0,0& 0
+2021-03-23, Centurion Mk. 10,k,T-54 (1949),1.07,Near-Perp,2.0,0.0
 2021-03-23, Centurion Mk. 10,k,T-54 (1947),.87,Near-Perp,11,0
-2021-03-23, Centurion Mk. 10,k,T-54 (1947),.95& .95,Diag& Diag,-2& 0,0& 0
+2021-03-23, Centurion Mk. 10,k,T-54 (1947),0.95,Diag,-1.0,0.0
 2021-03-23, Centurion Mk. 10,k,T-44-100,.9,Diagonal,0,0
-2021-03-23, Centurion Mk. 10,k,T-54 (1949),.64& .64,Diagonal,9& 0,9& 0
+2021-03-23, Centurion Mk. 10,k,T-54 (1949),0.64,Diagonal,4.5,4.5
 2021-03-23, Centurion Mk. 10,k,T-54 (1949),.69,Near-Para,0,0
-2021-03-23, Centurion Mk. 10,kb,T-54 (1949),.69 Near-Para,0,-11
-2021-03-19, Centurion Mk. 10,k,T-54 (1947),.78& .77,Diagonal& Diagonal,42& 0,0& 0
-2021-03-19, Centurion Mk. 10,k,T-54 (1947),1.1& 1.1,Diagonal& Diagonal,0& 0,0& 0
+2021-03-23, Centurion Mk. 10,kb,T-54 (1949),.69,Near-Para,0,-11
+2021-03-19, Centurion Mk. 10,k,T-54 (1947),0.775,Diagonal,21.0,0.0
+2021-03-19, Centurion Mk. 10,k,T-54 (1947),1.1,Diagonal,0.0,0.0
 2021-03-19, Centurion Mk. 10,k,IS-3,1.61,Near-Perpendicular,17,0
 2021-03-19, Centurion Mk. 10,k,SU-100,1.06,Near-Parallel,30,0
 2021-03-19, Centurion Mk. 10,k,T-44,1.3,Diagonal,0,0
@@ -123,22 +169,21 @@ DateRecorded, VehicleUsed, Event, EnemyVehicle, Distance, OrientationInSight, En
 2021-03-19, Centurion Mk. 10,k,T-54 (1949),.13,Diagonal,0,0
 2021-03-19, Centurion Mk. 10,kb,T-54 (1949),.56,Diagonal,0,0
 2021-03-19, Centurion Mk. 10,kb,IS-4M,.75,Near-Parallel,0,0
-2021-03-19, Centurion Mk. 10,k,T-44-100,.94 Diagonal,6,0
+2021-03-19, Centurion Mk. 10,k,T-44-100,.94,Diagonal,6,0
 2021-03-19, Centurion Mk. 10,k,T-54 (1947),.11,Diagonal,24,22
 2021-03-19, Centurion Mk. 10,kb,IS-3,1.2,Near-Parallel,0,0
-2021-03-15, Centurion Mk. 10,k,IS-4M,.45& .45,Perpendicular& Perpendicular,10& 10,0& 0
-2021-03-15, Centurion Mk. 10,k,T-54 (1947),1.1& 1.1,Perpendicular& Perpendicular,35& 0,0& 0
-2021-03-15, Centurion Mk. 10,k,T-54 (1947),.84& .85,Near-Parallel& Diagonal,-3& 0,0& 0
+2021-03-15, Centurion Mk. 10,k,IS-4M,0.45,Perpendicular,10.0,0.0
+2021-03-15, Centurion Mk. 10,k,T-54 (1947),1.1,Perpendicular,17.5,0.0
+2021-03-15, Centurion Mk. 10,k,T-54 (1947),0.845,Near-Parallel,-1.5,0.0
 2021-03-15, Centurion Mk. 10,k,T-44-100,1.02,Perpendicular,0,0
 2021-03-15, Centurion Mk. 10,k,Obj 268,1.75,Diagonal,0,0
 2021-03-15, Centurion Mk. 10,k,T-34-100,.95,Diagonal,29,0
 2021-03-15, Centurion Mk. 10,k,Type 63,.06,Diagonal,0,7
-2021-03-15, Centurion Mk. 10,k,ASU-85,Perpendicular,20,0
 2021-03-15, Centurion Mk. 10,k,IS-3,.8,Diagonal,0,0
 2021-03-15, Centurion Mk. 10,kb,T-54 (1949),.9,Diagonal,0,0
 2021-03-15, Centurion Mk. 10,k,T-44-100,.09,Diagonal,0,10
 2021-03-15, Centurion Mk. 10,k,T-54 (1947),.73,Near-Perpendicular,0,0
-2021-03-15, Centurion Mk. 10,kb,IS-4M,.09,Diagonal
+2021-03-15, Centurion Mk. 10,kb,IS-4M,.09,Diagonal,0,0
 2021-03-15, Centurion Mk. 10,kb,Type 62,.2,Near-Parallel,0,0
 2021-03-15, Centurion Mk. 10,kb,IS-4M,.2,Diagonal,0,0
 2021-03-15, Centurion Mk. 10,k,T-54 (1947),.20,Diagonal,0,0
@@ -156,21 +201,21 @@ DateRecorded, VehicleUsed, Event, EnemyVehicle, Distance, OrientationInSight, En
 2021-03-11, Centurion Mk. 10,k,T-54 (1949),.02,Perpendicular,20,0
 2021-03-07, Centurion Mk. 10,k,T-44,.12,Diagonal,2,0
 2021-03-07, Centurion Mk. 10,k,T-54 (1949),.18,Near-Parallel,0,0
-2021-03-03, Centurion Mk. 10,kb,PT-76B,.
+2021-03-03, Centurion Mk. 10,kb,PT-76B,.1,Diag,0,0
 2021-03-03, Centurion Mk. 10,k,T-54 (1949),.89,Diagonal,0,0
 2021-03-03, Centurion Mk. 10,k,T-54 (1949),.04,Near-Perpendicular,0,0
 2021-03-03, Centurion Mk. 10,kb,IS-4M,.2,Near-Parallel,0,-10
 2021-03-03, Centurion Mk. 10,k,T-54 (1949),.3,Parallel,0,0
 2021-03-03, Centurion Mk. 10,k,T-54 (1947),.23,Diagonal,0,0
 2021-03-03, Centurion Mk. 10,kb,ASU-85,.6,Diagonal,0,20
-2021-03-03, Centurion Mk. 10,k,T-54 (1947),.93& .93,Diagonal& Diagonal,28& 0,0& 0
+2021-03-03, Centurion Mk. 10,k,T-54 (1947),0.93,Diagonal,14.0,0.0
 2021-03-03, Centurion Mk. 10,k,T-54 (1949),.25,Near-Perpendicular,14,0
 2021-03-03, Centurion Mk. 10,kb,T-44-100,1.2,Diagonal,0,0
 2021-03-03, Centurion Mk. 10,k,T-54 (1947),.31,Diagonal,26,13
 2021-03-03, Centurion Mk. 10,k,T-54 (1949),.2,Diagonal,0,0
 2021-03-03, Centurion Mk. 10,kb,T-54 (1947),.1,Near-Perpendicular,0,0
 2021-02-23, Centurion Mk. 10,kb,T-54 (1947),.89,Diagonal,0,0
-2021-02-23, Centurion Mk. 10,k,T-44-100,.7& .7,Diagonal& Diagonal,-4& 0,0& 0
+2021-02-23, Centurion Mk. 10,k,T-44-100,0.7,Diagonal,-2.0,0.0
 2021-02-23, Centurion Mk. 10,kb,T-54 (1949),.8,Diagonal,0,0
 2021-02-23, Centurion Mk. 10,kb,PT-76B,.1,Diagonal,0,20
 2021-02-23, Centurion Mk. 10,k,Type 62,.1,Near-Perpendicular,20,0
@@ -182,7 +227,7 @@ DateRecorded, VehicleUsed, Event, EnemyVehicle, Distance, OrientationInSight, En
 2021-02-23, Centurion Mk. 10,kb,T-54 (1947),.6,Diagonal,0,0
 2021-02-23, Centurion Mk. 10,k,T-54 (1947),1.04,Diagonal,0,0
 2021-02-23, Centurion Mk. 10,k,T-54 (1949),.4,Diagonal,5,0
-2021-02-23, Centurion Mk. 10,k,ASU-85,1 Diagonal,15,0
+2021-02-23, Centurion Mk. 10,k,ASU-85,1,Diagonal,15,0
 2021-02-23, Centurion Mk. 10,kb,IS-3,.4,Diagonal,0,0
 2021-02-23, Centurion Mk. 10,kb,T-54 (1949),.68,Diaognal,0,-3
 2021-02-23, Centurion Mk. 10,kb,T-54 (1947),.9,Diagonal,0,-11
@@ -207,44 +252,46 @@ DateRecorded, VehicleUsed, Event, EnemyVehicle, Distance, OrientationInSight, En
 2021-02-10, Centurion Mk. 10,k,IS-3,.17,Diagonal,0,0
 2021-02-10, Centurion Mk. 10,k,T-54 (1949),0.72,Diagonal,0,0
 2021-02-10, Centurion Mk. 10,kb,T-54 (1947),1.26,Diagonal,0,0
-2021-02-05, Centurion Mk. 10,kb,T-54 (1947),.53,Parallel,0,0,170
-2021-02-05, Centurion Mk. 10,k,T-54 (1947),.12,Near-Parallel,0,0,79
+2021-02-05, Centurion Mk. 10,kb,T-54 (1947),.53,Parallel,0,0
+2021-02-05, Centurion Mk. 10,k,T-54 (1947),.12,Near-Parallel,0,0
 2021-02-03, Centurion Mk. 10,k ASU-85
-2021-02-03, Centurion Mk. 10,k,T-54 (1947),1.27,Diagonal,0,0,269
+2021-02-03, Centurion Mk. 10,k,T-54 (1947),1.27,Diagonal,0,0
 2021-02-03, Centurion Mk. 10,kb Obj 268
-2021-02-03, Centurion Mk. 10,kb,T-54 (1947),1.31,Diagonal,0,0,240
+2021-02-03, Centurion Mk. 10,kb,T-54 (1947),1.31,Diagonal,0,0
 2021-01-30, Centurion Mk. 10,k,PT-76B
 2021-01-30, Centurion Mk. 10,k ZSU-37,.31,Parallel,0,0,168
-2021-01-30, Centurion Mk. 10,k,T-54 (1947),.89,Near-Perpendicular,0,0,208
-2021-01-26, Centurion Mk. 10,k,T-54 (1949),1.17,Diagonal,0,0,21
+2021-01-30, Centurion Mk. 10,k,T-54 (1947),.89,Near-Perpendicular,0,0
+2021-01-26, Centurion Mk. 10,k,T-54 (1949),1.17,Diagonal,0,0
 2020-01-18, Centurion Mk. 10,k,T-54 (1947),.25,Near-Perpendicular,0,0
-2020-01-18, Centurion Mk. 10,kb,T-54(1949),.21,Diagonal,0,0,73
-2020-01-18, Centurion Mk. 10,k,IS-3,.65,Diagonal,0,0,12
-2020-01-18, Centurion Mk. 10,k,IS-3,.05,Diagonal,0,0,97
-2021-01-10, Centurion Mk. 10,K T-54 (1947),0.43,Perpendicular,0,0,277
-2021-01-10, Centurion Mk. 10,kb T-44-100,0.14& 0.11,,Perpendicular& Diagonal,0,185
-2021-01-10, Centurion Mk. 10,kb,T-54 (1947),0.65,Diagonal,0,0,162
-2021-01-10, Centurion Mk. 10,k,T-44,.90,Parallel,0,0,0
-2021-01-10, Centurion Mk. 10,k,PT-76B,0.88,Diagonal,0,0,236
-2021-01-10, Centurion Mk. 10,k,T-54 (1949),0.53,Parallel,0,0,346
-2021-01-10, Centurion Mk. 10,k,T-54 (1949),0.8,Perpendicular,0,0,341
-2021-01-10, Centurion Mk. 10,k,T-54 (1947),0.95,Perpendicular,0,0,301
-2021-01-10, Centurion Mk. 10,k,T-54 (1949),0.08,Diagonal,0,0,242
+2020-01-18, Centurion Mk. 10,kb,T-54(1949),.21,Diagonal,0,0
+2020-01-18, Centurion Mk. 10,k,IS-3,.65,Diagonal,0,0
+2020-01-18, Centurion Mk. 10,k,IS-3,.05,Diagonal,0,0
+2021-01-10, Centurion Mk. 10,K T-54 (1947),0.43,Perpendicular,0,0
+2021-01-10, Centurion Mk. 10,kb T-44-100,0.14& 0.11,,Perpendicular,0.0
+2021-01-10, Centurion Mk. 10,kb,T-54 (1947),0.65,Diagonal,0,0
+2021-01-10, Centurion Mk. 10,k,T-44,.90,Parallel,0,0
+2021-01-10, Centurion Mk. 10,k,PT-76B,0.88,Diagonal,0,0
+2021-01-10, Centurion Mk. 10,k,T-54 (1949),0.53,Parallel,0,0
+2021-01-10, Centurion Mk. 10,k,T-54 (1949),0.8,Perpendicular,0,0
+2021-01-10, Centurion Mk. 10,k,T-54 (1947),0.95,Perpendicular,0,0
+2021-01-10, Centurion Mk. 10,k,T-54 (1949),0.08,Diagonal,0,0
 2021-03-05, Challenger,kb,Panther A,.05,Diagonal,0,0
+2021-04-27, Cheiftain Mk. 5,k,ZSU-57-2,.16,Diag,0,0
+2021-04-27, Cheiftain Mk. 5,k,T-64A (1971),1.04,Para,31,0
 2021-04-23, Cheiftain Mk. 5,k,BMP-3,.29,Diag,0,0
 2021-04-23, Cheiftain Mk. 5,k,T-62M-1,.32,Para,0,0
 2021-04-23, Cheiftain Mk. 5,k,T-55AM-1,1.4,Diag,0,0
-2021-04-23, Cheiftain Mk. 5,k,Obj 279,.9& .89,Diag& Diag,20& 0,0& 0
+2021-04-23, Cheiftain Mk. 5,k,Obj 279,0.895,Diag,10.0,0.0
 2021-04-23, Cheiftain Mk. 5,k,BMP-3,.71,Diag,12,0
 2021-04-23, Cheiftain Mk. 5,k,T-62,.4,Diag,0,0
 2021-04-23, Cheiftain Mk. 5,k,T-62M-1,1.23,Diag,0,0
 2021-04-23, Cheiftain Mk. 5,k,Obj 906,1.32,Perp,14,0
 2021-04-19, Cheiftain Mk. 5,k,T-64A (1971),.67,Diag,0,0
-2021-04-19, Cheiftain Mk. 5,k,T-62M-1,.52& .52,Diag& Diag,47& 0,0& 0
+2021-04-19, Cheiftain Mk. 5,k,T-62M-1,0.52,Diag,23.5,0.0
 2021-04-19, Cheiftain Mk. 5,k,T-64A (1971),.73,Near-Para,8,0
-2021-04-19, Cheiftain Mk. 5,k,T-55AM-1,.98& .95,Diag& Near-Perp,47& 0,0& 0
+2021-04-19, Cheiftain Mk. 5,k,T-55AM-1,0.965,Diag,23.5,0.0
 2021-04-19, Cheiftain Mk. 5,k,T-55A,1.19,Diag,5,0
-2021-04-19, Cheiftain Mk. 5,k,T-64A (1971),1.23& 1.23,Diag& Diag,14& 0,0& 0
+2021-04-19, Cheiftain Mk. 5,k,T-64A (1971),1.23,Diag,7.0,0.0
 2021-04-19, Cheiftain Mk. 5,kb,ZSU-57-2,.19,Near-Perp,0,0
 2021-04-19, Cheiftain Mk. 5,k,Type 69 II G,0.2,Near-Perp,-4,8
 2021-04-19, Cheiftain Mk. 5,kb,BMP-2,0.02,Diag,0,0
@@ -254,7 +301,7 @@ DateRecorded, VehicleUsed, Event, EnemyVehicle, Distance, OrientationInSight, En
 2021-04-07, Cheiftain Mk. 5,kb,T-55AM-1,.18,0,0
 2021-04-07, Cheiftain Mk. 5,k,Type 69 II G,.6,Near-Para,0,0
 2021-04-07, Cheiftain Mk. 5,kb,T-55A,.03,Diag,0,0
-2021-04-03, Cheiftain Mk. 5,k,T-62M-1,1.01& 1.01,Diag& Diag,0& 0,0& 0
+2021-04-03, Cheiftain Mk. 5,k,T-62M-1,1.01,Diag,0.0,0.0
 2021-04-03, Cheiftain Mk. 5,k,T-55AM-1,.31,Diag,10,10
 2021-04-03, Cheiftain Mk. 5,k,T-10M,1.02,Diag,-6,-12
 2021-04-03, Cheiftain Mk. 5,k,T-10M,.13,Near-Para,0,0
@@ -263,15 +310,15 @@ DateRecorded, VehicleUsed, Event, EnemyVehicle, Distance, OrientationInSight, En
 2021-04-03, Cheiftain Mk. 5,kb,T-62 No. 545,0.05,Diag,0,10
 2021-03-30, Cheiftain Mk. 5,kb,T-64A,.9,Perp,0,0
 2021-03-30, Cheiftain Mk. 5,kb,T-64A,.11,Diag,23,5
-2021-03-30, Cheiftain Mk. 5,k,T-55A,.25& .25,Diag& Diag,18& 0,0& 0
+2021-03-30, Cheiftain Mk. 5,k,T-55A,0.25,Diag,9.0,0.0
 2021-03-30, Cheiftain Mk. 5,kb,T-64A (1971),.3,Diag,0,0
-2021-03-30, Cheiftain Mk. 5,k,T-64A (1971),1.04& 1.04,Diag& Diag,30& 0,0& 0
+2021-03-30, Cheiftain Mk. 5,k,T-64A (1971),1.04,Diag,15.0,0.0
 2021-03-30, Cheiftain Mk. 5,k,T-64A (1971),.6,Para,-2,0
 2021-03-30, Cheiftain Mk. 5,k,IT-1,1.05,Para,0,0
 2021-03-30, Cheiftain Mk. 5,k,T-62,.66,Perp,11,0
 2021-03-30, Cheiftain Mk. 5,kb,T-62M-1,0.02,Near-Perp,0,0
 2021-03-26, Cheiftain Mk. 5,k,T-62,.39,Diag,28,0
-2021-03-26, Cheiftain Mk. 5,k,T-55A,.08& .06,Diag& Diag,22& -3,0& 0
+2021-03-26, Cheiftain Mk. 5,k,T-55A,0.07,Diag,9.5,0.0
 2021-03-26, Cheiftain Mk. 5,k,T-62,.50,Diag,-7,0
 2021-03-22, Cheiftain Mk. 5,k,T-64A (1971),.48,Near-Parallel,0,0
 2021-03-22, Cheiftain Mk. 5,kb,BMP-3,.66,Diagonal,0,-7
@@ -298,16 +345,16 @@ DateRecorded, VehicleUsed, Event, EnemyVehicle, Distance, OrientationInSight, En
 2021-02-14, Cheiftain Mk. 5,k,Obj 906,.58,Diagonal,-22,0
 2021-02-14, Cheiftain Mk. 5,k,T-55AM-1,.08,Diagonal,-5,10
 2021-02-14, Cheiftain Mk. 5,kb,BMP-1,.17,Diagonal,0,-10
-2021-02-14, Cheiftain Mk. 5,k,T-55AM-1,.49& .49,Diagonal& Diagonal,0& 0,0& 12
+2021-02-14, Cheiftain Mk. 5,k,T-55AM-1,0.49,Diagonal,0.0,6.0
 2021-02-14, Cheiftain Mk. 5,k,BMP-3,.3,Near-Perpendicular,16,0
 2021-02-14, Cheiftain Mk. 5,kb,T-64A (1971),1.16,Diagonal,0,20
 2021-02-14, Cheiftain Mk. 5,k,T-64A (1971),.02,Diagonal,27,10
 2021-02-14, Cheiftain Mk. 5,k,T-62M-1,.13,Near-Perpendicular,0,0
-2021-02-14, Cheiftain Mk. 5,k,Object 685,1.18& 1.18,Near-Perpendicular& Near-Perpendicular,35& 0,0& 0
-2021-02-14, Cheiftain Mk. 5,k,ZTZ59D1,.79& .79,Near-Perpendicular& Near-Perpendicular,-5& 0,0,0
+2021-02-14, Cheiftain Mk. 5,k,Object 685,1.18,Near-Perpendicular,17.5,0.0
+2021-02-14, Cheiftain Mk. 5,k,ZTZ59D1,0.79,Near-Perpendicular,-2.5,0.0
 2021-02-10, Cheiftain Mk. 5,kb,BMP-3,1.1,Diagonal,Stationary,Lateral-Left
 2021-02-10, Cheiftain Mk. 5,k,ZSU-57-2,.7,Diagonal,Stationary,Stationary
-2021-02-10, Cheiftain Mk. 5,k,T-55AM-1,.7& .6,Diagonal& Diagonal,Approaching& Stationary,Stationary& Stationary
+2021-02-10, Cheiftain Mk. 5,k,T-55AM-1,0.6499999999999999,Diagonal,Approaching,Stationary
 2021-02-10, Cheiftain Mk. 5,k,BMP-2,.8,Near-Parallel,Approaching,0
 2021-02-10, Cheiftain Mk. 5,kb,T-64A (1971),.4,Diagonal,Approaching,0
 2021-02-10, Cheiftain Mk. 5,kb,T-64A (1971),.10,Diagonal,0,5
@@ -317,9 +364,21 @@ DateRecorded, VehicleUsed, Event, EnemyVehicle, Distance, OrientationInSight, En
 2021-02-10, Cheiftain Mk. 5,k,T-64A (1971),.09,Diagonal,0,4
 2021-03-09, Crusader III,k,T-50,.5,Diagonal,15,0
 2021-03-09, Crusader III,k,Chi-Ha Kai,.7,Diagonal,0,0
+2021-05-12, Firefly,k,T-34-57,1.54,Diag,44,0
+2021-05-12, Firefly,k,SU-152,1.34,Near-Para,0,0
+2021-05-12, Firefly,kb,M19,.27,Diag,0,0
+2021-05-04, Firefly,k,T-34-85 (D-5T),.09,Diag,0,0
+2021-05-04, Firefly,k,T-34-57,0.07,Diag,0,0
+2021-05-04, Firefly,k,PT-76B,.69,Near-Para,0,0
+2021-05-04, Firefly,k,M4A3E2,.31,Diag,-4,0
+2021-05-04, Firefly,k,KV-85,.03,Near-Para,0,0
+2021-05-04, Firefly,k,Pvkv II,.1,Diag,0,0
+2021-05-03, Firefly,k,KV-85,.29,Diag,0,0
+2021-05-03, Firefly,kb,M18,.03,Diag,0,0
+2021-05-03, Firefly,k,IS-2,0.03,Near-Perp,9,0
 2021-04-22, Firefly,k,SU-85,.84,Para,0,0
 2021-04-22, Firefly,kb,T-34-57,.93,Diag,0,0
-2021-04-22, Firefly,k,T-34-85 (D-5T),.45& .40,Diag& Diag,20& 12,0& 0
+2021-04-22, Firefly,k,T-34-85 (D-5T),0.42500000000000004,Diag,16.0,0.0
 2021-04-22, Firefly,k,T-34-85,.54,Near-Para,0,0
 2021-04-22, Firefly,k,T-14,.48,Diag,18,0
 2021-04-22, Firefly,k,KV-85,.5,Near-Para,0,0
@@ -332,7 +391,7 @@ DateRecorded, VehicleUsed, Event, EnemyVehicle, Distance, OrientationInSight, En
 2021-04-14, Firefly,k,T-34-85 (D-5T),.63,Diag,0,0
 2021-04-14, Firefly,k,Chi-To (Late),.59,Diag,0,0
 2021-04-05, Firefly,k,IS-2,.57,Perp,21,0
-2021-04-05, Firefly,k,T-34-85 (D-5T),.63& .58,Perp& Diag,38& 0,0& 0
+2021-04-05, Firefly,k,T-34-85 (D-5T),0.605,Perp,19.0,0.0
 2021-04-05, Firefly,K,IS-1,.33,Diag,0,0
 2021-04-05, Firefly,k,T-34-57,.46,Diag,0,0
 2021-04-05, Firefly,k,M19,.3,Diag,7,0
@@ -342,15 +401,15 @@ DateRecorded, VehicleUsed, Event, EnemyVehicle, Distance, OrientationInSight, En
 2021-04-03, Firefly,k,ASU-57,.59,Near-Perp,34,0
 2021-04-03, Firefly,k,Tiger H1,0.01,Near-Para,7,0
 2021-04-03, Firefly,k,M4A1 (76) W,.07,Perp,37,0
-2021-04-03, Firefly,k,M4A2 (76) W,.5& .36,Diag& Diag,13& 0,0& 0
-2021-04-03, Firefly,k,SU-85M,.31& .31,Perp& Perp,8& 0,0& 0
-2021-04-03, Firefly,k,IS-1,.21& .20,Near-Para& Near-Para,0& 0,9& 0
+2021-04-03, Firefly,k,M4A2 (76) W,0.43,Diag,6.5,0.0
+2021-04-03, Firefly,k,SU-85M,0.31,Perp,4.0,0.0
+2021-04-03, Firefly,k,IS-1,0.20500000000000002,Near-Para,0.0,4.5
 2021-04-03, Firefly,kb,M18,0.02,Diag,18,-3
-2021-04-02, Firefly,K,T-34-57,.86& .87,Near-Perp& Near-Perp,37& 0,0& 0
+2021-04-02, Firefly,K,T-34-57,0.865,Near-Perp,18.5,0.0
 2021-04-02, Firefly,k,M18,.15,Para,0,0
-2021-04-02, Firefly,k,ASU-57,.81& .81,Diag& Diag,20& 0,0& 0
+2021-04-02, Firefly,k,ASU-57,0.81,Diag,10.0,0.0
 2021-04-02, Firefly,k,KV-1 (Zis-5),.53,Diag,0,0
-2021-04-02, Firefly,k,T-34E STZ,.72& .72,Para& Para,10& 0,0& 0
+2021-04-02, Firefly,k,T-34E STZ,0.72,Para,5.0,0.0
 2021-04-02, Firefly,k,T-34 (1941),.13,Para,0,0
 2021-04-02, Firefly,k,IS-2 (1944),.85,Near-Para,0,0
 2021-04-02, Firefly,kb,IS-2 (1944),.85,Near-Para,0,0
@@ -360,14 +419,14 @@ DateRecorded, VehicleUsed, Event, EnemyVehicle, Distance, OrientationInSight, En
 2021-04-01, Firefly,k,T-34-85 (D-5T),.7,Near-Para,0,0
 2021-03-29, Firefly,kb,IS-1,.5,Para,7,0
 2021-03-29, Firefly,k,M41A1,.1,Para,0,0
-2021-03-29, Firefly,k,T-34-85 Gai,.81& .81,Diag& Diag,0& 0,0& 0
+2021-03-29, Firefly,k,T-34-85 Gai,0.81,Diag,0.0,0.0
 2021-03-29, Firefly,k,T-34-85,.34,Diag,4,0
 2021-03-29, Firefly,k,T-34-57,.74,Diag,0,0
 2021-03-29, Firefly,k,M4A1 (FL10),.68,Diag,-4,0
 2021-03-29, Firefly,k,T-34E,.68,Diag,19,0
 2021-03-29, Firefly,kb,ARL-44,.12,Diag,-3,0
 2021-03-26, Firefly,k,T-34-85 (D-5T),.82,Near-Para,12,0
-2021-03-26, Firefly,k,IS-1,1.25& 1.27,Diag& Diag,0& 0,0& 0
+2021-03-26, Firefly,k,IS-1,1.26,Diag,0.0,0.0
 2021-03-24, Firefly,k,M4A1,.22,Diag,0,0
 2021-03-24, Firefly,k,T-34-85 (D-5T),.19,Diag,16,0
 2021-03-24, Firefly,kb,M10,.25,Diag,0,-5
@@ -376,31 +435,31 @@ DateRecorded, VehicleUsed, Event, EnemyVehicle, Distance, OrientationInSight, En
 2021-03-24, Firefly,k,Panther D,1.95,Near-Perp,0,0
 2021-03-24, Firefly,k,KV-85,.22,Diag,0,0
 2021-03-24, Firefly,k,R3 T20 FA-HS,.56,Perp,16,0
-2021-03-24, Firefly,k,M4 Tipo IC,.43& .43,Near-Perp& Diag,9& 0,0& 0
-2021-03-24, Firefly,k,T-34-57,.08& .07,Perp& Diag,0& 0,0& 0
-2021-03-24, Firefly,k,T-34-57 (1943),.09& .09,Perp& Near-Para,0& 10,0& 0
+2021-03-24, Firefly,k,M4 Tipo IC,0.43,Near-Perp,4.5,0.0
+2021-03-24, Firefly,k,T-34-57,0.07500000000000001,Perp,0.0,0.0
+2021-03-24, Firefly,k,T-34-57 (1943),0.09,Perp,5.0,0.0
 2021-03-24, Firefly,k,KV-1 (Zis-5),.35,Para,0,0
 2021-03-24, Firefly,kb,ZSU-37,.37,Near-Para,0,0
 2021-03-24, Firefly,kb,T55E1,.9,Diagonal,0,4
 2021-03-21, Firefly,k,M41A1,.03,Diagonal,0,0
-2021-03-21, Firefly,k,IS-2,1.73& 1.73,Near-Perpendicular& Diagonal,7& 0,0& 0
+2021-03-21, Firefly,k,IS-2,1.73,Near-Perpendicular,3.5,0.0
 2021-03-21, Firefly,k,M4A3E2 (76) W,.75,Diagonal,0,0
 2021-03-21, Firefly,k,M36,1.33,Diagonal,15,0
-2021-03-17, Firefly,k,T-34-85,.2& 2,Near-Perpendicular& Parallel,0& 0,0& 0
+2021-03-17, Firefly,k,T-34-85,1.1,Near-Perpendicular,0.0,0.0
 2021-03-17, Firefly,k,T-44,.35,Diagonal,0,0
-2021-03-17, Firefly,k,T-34-85,.07& .07,Diagonal& Diagonal,8& -8,8& 0
+2021-03-17, Firefly,k,T-34-85,0.07,Diagonal,0.0,4.0
 2021-03-17, Firefly,k,T-34-85,.77,Diagonal,12,0
 2021-03-17, Firefly,kb,T-44,1.8,Diagonal,0,0
 2021-03-16, Firefly,kb,T-34-85 (D-5T),.03,Diagonal,20,0
 2021-03-16, Firefly,kb,IS-1,.6,Diagonal,0,0
 2021-03-16, Firefly,k,M10,.02,Near-Parallel,0,5
-2021-03-12, Firefly,k,T-34-85E,.64& .63,Diagonal& Near-Parallel,3& 0,0& 0
+2021-03-12, Firefly,k,T-34-85E,0.635,Diagonal,1.5,0.0
 2021-03-12, Firefly,k,T-34-85 (D-5T),.26,Diagonal,0,0
 2021-03-12, Firefly,kb,IS-1,.4,Diagonal,0,5
 2021-03-12, Firefly,kb,T-34-85 (D-5T),.49,Parallel,0,0
 2021-03-12, Firefly,k Pz IV/70,.25,Diagonal,8,0
 2021-03-12, Firefly,K,KV-85,.27,Diagonal,12,0
-2021-03-12, Firefly,k,KV-85,.39,Diagonal& Diagonal,18& 0,0& 0
+2021-03-12, Firefly,k,KV-85,0.39,Diagonal,9.0,0.0
 2021-03-12, Firefly,k,ASU-57,.01,Parallel,0,0
 2021-03-10, Firefly,k,Panther D,.6,Diagonal,0,0
 2021-03-10, Firefly,kb,T-44,.3,Diagonal,0,0
@@ -415,7 +474,7 @@ DateRecorded, VehicleUsed, Event, EnemyVehicle, Distance, OrientationInSight, En
 2021-03-05, Firefly,kb,KV-85,.1,Diagonal,0,0
 2021-03-05, Firefly,kb,SU-85,.8,Diagonal,0,0
 2021-03-05, Firefly,kb,T-34-85 Gai,.8,Diagonal,15,0
-2021-03-05, Firefly,k,Tiger 1H,.8& .8,Diagonal& Diagonal,0& 0,0& 0
+2021-03-05, Firefly,k,Tiger 1H,0.8,Diagonal,0.0,0.0
 2021-03-05, Firefly,k,M18,.05,Near-Parallel,0,0
 2021-03-05, Firefly,k,M4A1,.4,Perpendicular,0,0
 2021-03-05, Firefly,k,T-34E,.1,Diagonal,5,0
@@ -450,8 +509,8 @@ DateRecorded, VehicleUsed, Event, EnemyVehicle, Distance, OrientationInSight, En
 2021-02-25, Firefly,kb,KV-85,.7,Diagonal,0,0
 2021-02-25, Firefly,k,T-55E1,.06,Diagonal,0,0
 2021-02-25, Firefly,kb,PT-76B,.02,Parallel,0,0
-2021-02-25, Firefly,k,IS-1,.3& .3,Diagonal& Diagonal,0& -3,0& 0
-2021-02-25, Firefly,kb,T-34-85 (D-5T),.01& .01,Parallel& Near-Perpendicular,0& 3,0& 0
+2021-02-25, Firefly,k,IS-1,0.3,Diagonal,-1.5,0.0
+2021-02-25, Firefly,kb,T-34-85 (D-5T),0.01,Parallel,1.5,0.0
 2021-02-25, Firefly,k,PT-76B,.6,Diagonal,0,0
 2021-02-25, Firefly,kb,M4A4 (SA50),.7,Near-Parallel,0,0
 2021-02-25, Firefly,kb,Panther G,.1,Near-Perpendicular,0,0
@@ -473,12 +532,12 @@ DateRecorded, VehicleUsed, Event, EnemyVehicle, Distance, OrientationInSight, En
 2021-02-20, Firefly,kb,PT-76B,.20,Diagonal,0,-4
 2021-02-20, Firefly,k,M4A1,1.5,Near-Parallel,Stationary,Stationary
 2021-02-20, Firefly,kb,M4A1,1.6,Diagonal,Stationary,Stationary
-2021-02-20, Firefly,k,PT-76B,.03& .01,Diagonal& Diagonal,Lateral-Right& Stationary,Lateral-Left& Stationary
+2021-02-20, Firefly,k,PT-76B,0.02,Diagonal,Lateral-Right,Lateral-Left
 2021-02-20, Firefly,k,T-34-57,0.1,Diagonal,Stationary,Stationary
 2021-02-20, Firefly,kb,KV-2 (Zis-6),.5,Diagonal,Stationary,Approaching
 2021-02-20, Firefly,k,T-34-85,.7,Diagonal,0,0
 2021-02-20, Firefly,k,SU-85M,.38,Diagonal,8,0
-2021-02-20, Firefly,k,PT-76B,.47& .47,Diagonal& Diagonal,13& 0,0& 0
+2021-02-20, Firefly,k,PT-76B,0.47,Diagonal,6.5,0.0
 2021-02-20, Firefly,k,T-34-57,.05,Diaognal,2,9
 2021-02-20, Firefly,k,PT-76B,.05,Near-Perpendicular,Stationary,Stationary
 2021-02-20, Firefly,kb,IS-1,.4,Diagonal,Stationary,Stationary
@@ -486,7 +545,7 @@ DateRecorded, VehicleUsed, Event, EnemyVehicle, Distance, OrientationInSight, En
 2021-02-16, Firefly,kb,M4A4 (SA50),.12,Diagonal,Stationary,Lateral-Right
 2021-04-09, Firefly,k,M4A3E2,.76,Diagonal,0,0
 2021-04-09, Firefly,k M4A2,.62,Near-Parallel,0,0
-2021-04-09, Firefly,k,M18,1.03& 1.02,Diagonal& Diagonal,49& 0,0& 0
+2021-04-09, Firefly,k,M18,1.025,Diagonal,24.5,0.0
 2021-04-09, Firefly,k M41A1,.81,Diagonal,0,0
 2021-04-09, Firefly,k,M6A1,.54,Parallel,0,0
 2021-04-09, Firefly,k,FIAT 6614
@@ -505,7 +564,7 @@ DateRecorded, VehicleUsed, Event, EnemyVehicle, Distance, OrientationInSight, En
 2021-02-08, Firefly,k,Tiger H,1.18,Diagonal,Lateral-Left,Stationary
 2021-02-08, Firefly,k,T-34-85 (D-5T),1.06,Diagonal,Stationary,Stationary
 2021-02-08, Firefly,k,T-34-85 (S53),1.07,Parallel,10,0
-2021-02-08, Firefly,K,SU-85M,1.53& 1.53,Near-Perpendicular,5& 0,0& 0
+2021-02-08, Firefly,K,SU-85M,1.53,Near-Perpendicular,2.5,0.0
 2021-02-08, Firefly,k,M4 Tipo IC,1.04,Near-Parallel,Stationary,Stationary
 2021-02-08, Firefly,k,E.B.R. (1954),1.08,Near-Parallel,Stationary,Stationary
 2021-02-08, Firefly,k,AMX-13,1.07,Diagonal,Retreating,Stationary
@@ -523,26 +582,26 @@ DateRecorded, VehicleUsed, Event, EnemyVehicle, Distance, OrientationInSight, En
 2021-02-08, Firefly,k,Panther F
 2021-02-08, Firefly,k,Tiger 2P
 2021-02-08, Firefly,k,M41
-2021-02-08, Firefly,k,Pvkv M/43 (1963),1.85,Near-Parallel,Stationary,Statioanry,351
-2021-02-08, Firefly,k,KV-122,1.69,Near-Parallel,Stationary,Stationary,351
-2021-02-08, Firefly,k,T-34-85 (D-5T),1.26,Near-Perpendicular,Lateral-Left,Stationary,7
+2021-02-08, Firefly,k,Pvkv M/43 (1963),1.85,Near-Parallel,Stationary,Statioanry
+2021-02-08, Firefly,k,KV-122,1.69,Near-Parallel,Stationary,Stationary
+2021-02-08, Firefly,k,T-34-85 (D-5T),1.26,Near-Perpendicular,Lateral-Left,Stationary
 2021-02-08, Firefly,K,Tiger H
 2021-02-08, Firefly,k,EBR
-2021-02-04, Firefly,k,Panther A,.03& .03,Diagonal& Diagonal,Lateral-Left& Stationary,Retreating& Stationary,56
-2021-02-04, Firefly,k,Ferdinand,.44,Diagonal,Stationary,Stationary,64
-2021-02-04, Firefly,kb,IS-2,.06,Diagonal,Stationary,Stationary,190
-2021-02-04, Firefly,kb,Panzer IV/70,.41,Parallel,Stationary,Lateral-Right,240
-2021-02-04, Firefly,k,Tiger E,0.18,Diagonal,Stationary,Stationary,253
-2021-02-04, Firefly,k,Panzer IVH,.14,Perpendicular,Stationary,Stationary,262
-2021-02-04, Firefly,k,M4A2,.3,Perpendicular,Stationary,Stationary,299
-2021-02-04, Firefly,k,IS-1,.48,Near-Parallel,Lateral-Right,Stationary,123
-2021-02-04, Firefly,kb,AUBL/74,.91,Diagonal,Stationary,Stationary,340
+2021-02-04, Firefly,k,Panther A,0.03,Diagonal,Lateral-Left,Retreating
+2021-02-04, Firefly,k,Ferdinand,.44,Diagonal,Stationary,Stationary
+2021-02-04, Firefly,kb,IS-2,.06,Diagonal,Stationary,Stationary
+2021-02-04, Firefly,kb,Panzer IV/70,.41,Parallel,Stationary,Lateral-Right
+2021-02-04, Firefly,k,Tiger E,0.18,Diagonal,Stationary,Stationary
+2021-02-04, Firefly,k,Panzer IVH,.14,Perpendicular,Stationary,Stationary
+2021-02-04, Firefly,k,M4A2,.3,Perpendicular,Stationary,Stationary
+2021-02-04, Firefly,k,IS-1,.48,Near-Parallel,Lateral-Right,Stationary
+2021-02-04, Firefly,kb,AUBL/74,.91,Diagonal,Stationary,Stationary
 2021-02-01, Firefly,kb,Jagdpanther
 2021-02-01, Firefly,kb,M18
 2021-02-01, Firefly,k T-34-57,.15,Near-Perpendicular,Stationary,Stationary
 2021-02-01, Firefly,k,SU-152,.10,Perpendicular,Lateral-Left,Staionary
 2021-02-01, Firefly,kb,Tiger E,.25,Diagonal,Stationary,Stationary
-2021-02-01, Firefly,k,T-34-85 (D-5T),.75,Near-Perpendicular,Lateral-Left,Stationary,187
+2021-02-01, Firefly,k,T-34-85 (D-5T),.75,Near-Perpendicular,Lateral-Left,Stationary
 2021-02-01, Firefly,k 75/46 M43,.51,Diagonal,Retreating,Stationary,135
 2021-02-01, Firefly,k,Tiger E
 2021-02-01, Firefly,kb,Tiger E
@@ -554,29 +613,36 @@ DateRecorded, VehicleUsed, Event, EnemyVehicle, Distance, OrientationInSight, En
 2021-02-01, Firefly,k,T-34-57
 2021-02-01, Firefly,k,M4 Tipo
 2021-02-01, Firefly,k,Tiger E
-2021-02-01, Firefly,K,T-34-85 (D-5T),0.40,Diagonal,Stationary,Stationary,72
-2021-02-01, Firefly,k,Panther D,0.49,Diagonal,Lateral-RIght,Stationary,207
-2021-02-01, Firefly,kb,T-34-85 (S53),.4,Diagonal,Stationary,Stationary,15
+2021-02-01, Firefly,K,T-34-85 (D-5T),0.40,Diagonal,Stationary,Stationary
+2021-02-01, Firefly,k,Panther D,0.49,Diagonal,Lateral-RIght,Stationary
+2021-02-01, Firefly,kb,T-34-85 (S53),.4,Diagonal,Stationary,Stationary
 2021-01-24, Firefly,k,KV-85,.13,Diagonal,6,0
-2021-01-24, Firefly,k,St. Emil,.88& .88,Diaognal& Diagonal,0& 0,0& 0
-2021-01-24, Firefly,kb,SU-85M,.55,Diagaonal,Stationary,Stationary,80
-2021-01-24, Firefly,k,T-34-85 (D-5T),1.08,Near-Parallel,Approaching,Stationary,252
-2021-01-24, Firefly,k,SU-85M,1.37& 1.39& 1.4,Parallel& Near-Parallel& Diagonal,Approaching& Stationary& Retreating,Stationary& Stationary& Stationary,250& 250& 250
-2021-01-11, Firefly,k,IS-1,0.09,Parallel,Retreating,Stationary,348
-2020-01-09, Firefly,k,leKPz M41,1.24,Diagonal,Approaching,0,0,322
-2020-01-09, Firefly,k,T-34-85 (D-5T),1.12& 1.13,Diagonal& Parallel,Approaching& Stationary,Stationary& Stationary,357
-2020-01-09, Firefly,k,Panther A,0.16,Perpendicular,Lateral-Right,Stationary,200
-2020-01-09, Firefly,k,T-34-85,0.67,Parallel,Approaching,Stationary,137
+2021-01-24, Firefly,k,St. Emil,0.88,Diaognal,0.0,0.0
+2021-01-24, Firefly,kb,SU-85M,.55,Diagaonal,Stationary,Stationary
+2021-01-24, Firefly,k,T-34-85 (D-5T),1.08,Near-Parallel,Approaching,Stationary
+2021-01-24, Firefly,k,SU-85M,1.3866666666666667,Parallel,Approaching,Stationary
+2021-01-11, Firefly,k,IS-1,0.09,Parallel,Retreating,Stationary
+2020-01-09, Firefly,k,leKPz M41,1.24,Diagonal,Approaching,0
+2020-01-09, Firefly,k,T-34-85 (D-5T),1.125,Diagonal,Approaching,Stationary
+2020-01-09, Firefly,k,Panther A,0.16,Perpendicular,Lateral-Right,Stationary
+2020-01-09, Firefly,k,T-34-85,0.67,Parallel,Approaching,Stationary
 2021-03-21, Leopard 1,k,PT-76B,.02,Diagonal,5,0
 2021-03-21, Leopard 1,k,T-54 (1949),.4,Diagonal,0,0
 2021-03-21, Leopard 1,k,Type 59,0.03,Perpendicular,0,0
 2021-03-21, Leopard 1,k,T-54 (1947),0.03,Near-Parallel,5,0
+2021-05-03, Panther A,k,T-34-100,.28,Diag,31,0
+2021-05-03, Panther A,k,AMX-13,.81,Diag,0,0
+2021-05-03, Panther A,k,M41A1,.67,Near-Perp,0,0
+2021-05-03, Panther A,k,M4A3E2,.5,Diag,0,0
+2021-05-03, Panther A,kb,M18,0.02,Diag,0,0
+2021-05-03, Panther A,k,T-34-85,.17,Diag,0,0
+2021-05-03, Panther A,kb,ISU-122,.15,Diag,0,0
 2021-04-22, Panther A,k,M41A1,~1.4,Diag
 2021-04-22, Panther A,k,IS-2 Moridan42,~1,Near-Para
 2021-04-22, Panther A,k,T-34-85,.67,Near-Perp,0,0
 2021-04-22, Panther A,kb,M10,.43,Diag,0,0
 2021-04-03, Panther A,k,IS-2 (1942) "Revenge",1.17,Near-Para,0,0
-2021-04-03, Panther A,k,M41A1,1.41& 1.41,Near-Perp& Para,25& 0,0& 0
+2021-04-03, Panther A,k,M41A1,1.41,Near-Perp,12.5,0.0
 2021-04-03, Panther A,kb,M4A3 (76) W,.01,Diag,0,0
 2021-04-03, Panther A,k,T-34-57,.47,Diag,8,0
 2021-04-03, Panther A,kb,ISU-152,.63,Diag,0,0
@@ -585,13 +651,13 @@ DateRecorded, VehicleUsed, Event, EnemyVehicle, Distance, OrientationInSight, En
 2021-03-29, Panther A,k,KV-1 (Zis-5),.03,Diag,10,0
 2021-03-29, Panther A,kb,ARL-44,0.1,Diag,13,0
 2021-03-24, Panther A,k,KV-85,.5,Diag,13,0
-2021-03-24, Panther A,k,KV-1 (Zis-5),.13& .13,Diag& Diag,4& 0,0& 0
+2021-03-24, Panther A,k,KV-1 (Zis-5),0.13,Diag,2.0,0.0
 2021-03-24, Panther A,k,Cursader AA Mk. II,.12,Diag,0,0
 2021-03-24, Panther A,k,Churchill VII,.81,Diag,0,0
 2021-03-24, Panther A,k,M4A3E2 (76) W,.42,Near-Perp,24,0
 2021-03-24, Panther A,k,E.B.R.,.44,Diag,30,0
 2021-03-24, Panther A,k,ARL-44,.57,Near-Para,0,0
-2021-03-24, Panther A,k,M36,.58& .58,Diag& Diag,0& 0,0& 0
+2021-03-24, Panther A,k,M36,0.58,Diag,0.0,0.0
 2021-03-24, Panther A,k,M4A3 (76) W,.55,Diag,0,0
 2021-03-24, Panther A,kb,M4A3 (76) W,.55,Diag,0,0
 2021-03-23, Panther A,k,T-14,0.02,Diagonal,0,8
@@ -614,47 +680,103 @@ DateRecorded, VehicleUsed, Event, EnemyVehicle, Distance, OrientationInSight, En
 2021-02-20, Panther A,k,E.B.R.,.6,Diagonal,-2,0
 2021-02-20, Panther A,k,M4A3E2 (76) W,Near-Parallel,1,0,0
 2021-02-17, Panther A,k,AMX-M4,.9,Diagonal,0,0
-2021-04-25, Panther D,k,M4A3,~.03
-2021-04-25, Panther D,k,Avenger,~.04
-2021-04-25, Panther D,k,M4A2,~.08
-2021-04-25, Panther D,kb,T-34-85 AVH77,~.6
-2021-04-25, Panther D,kb,M4A3 (76) W,~.6
-2021-04-25, Panther D,k,M18,~.03
-2021-04-25, Panther D,k,T-34-57 Illuminaati,~.1
-2021-04-25, Panther D,k,IS-1,~.4
-2021-04-25, Panther D,k,Avenger,~1
-2021-04-25, Panther D,k,T-34-85 -xDowx- Chotagrom,~.3
-2021-04-25, Panther D,kb,T-34-85 (D-5T) simone14,~.04
+2021-05-13, Panther D,k,T-34-85 Gai,1.24,Diag,1.5,0.0
+2021-05-13, Panther D,kb,KV-2,1.25,Near-Para,0,0
+2021-05-13, Panther D,kb,Avenger,0.06,Diag,0,0
+2021-05-13, Panther D,kb,ARL-44,1.48,Diag,0,0
+2021-05-13, Panther D,kb,T-34-85,.11,Diag,0,0
+2021-05-07, Panther D,k,Achilles,1.1,Near-Para,0,0
+2021-05-07, Panther D,k,Pvkv m/43 (1963),1.2,Perp,10,0
+2021-05-07, Panther D,kb,T-34-85 (D-5T),.2,Diag,0,0
+2021-05-01, Panther D,k,E.B.R. (1954),.04,Para,0,10
+2021-05-01, Panther D,k,E.B.R. (1954),.01,Near-Para,0,0
+2021-05-01, Panther D,k,SU-85,Near-Para,-3,0
+2021-05-01, Panther D,kb,E.B.R. (1954),.01,Diag,0,0
+2021-04-25, Panther D,k,M4A3,.16,Perp,16,0
+2021-04-25, Panther D,k,Avenger,.27,Near-Para,-5,0
+2021-04-25, Panther D,k,M4A2,.15,Diag,0,0
+2021-04-25, Panther D,kb,T-34-85,.28,Diag,0,18
+2021-04-25, Panther D,kb,M4A3 (76) W,.6,Diag,0,0
+2021-04-25, Panther D,k,M18,.14,Near-Para,0,0
+2021-04-25, Panther D,k,T-34-57 (1943),.06,Diag,-2,0
+2021-04-25, Panther D,k,IS-1,.08 Diag,0,0
+2021-04-25, Panther D,k,Avenger,.95,Near-Para,0,0
+2021-04-25, Panther D,k,T-34-85,.37,Diag,0,0
+2021-04-25, Panther D,kb,T-34-85 (D-5T),.05 Diag,18,0
 2021-04-13, Panther D,k,M4A1 (76) W,.03,Diag,-3,0
 2021-04-13, Panther D,kb,T-34-85,.04,Diag,0,6
-2021-04-13, Panther D,k,M4A3,~.5,Perp
 2021-04-13, Panther D,k,T-34-85,.20,Diag,0,0
 2021-04-13, Panther D,kb Lorraine 155 Mle.50,.20,Diag,0,10
 2021-04-13, Panther D,k,T-20,.02,Diag,0,0
 2021-04-13, Panther D,k,M4A3,0.14,Diag,0,0
 2021-04-13, Panther D,k,T-34-85,.24,Diag,4,0
 2021-04-13, Panther D,kb,T-34-85 (D-5T),.11,Near-Para,0,0
-2021-03-20, Panther D,k,Comet I,.4& .4,Diagonal& Diagonal,0& 0
+2021-03-20, Panther D,k,Comet I,0.4,Diagonal,0.0
 2021-03-20, Panther D,kb,Comet I,.3,Diagonal,0,0
-2021-03-20, Panther D,k,T-34-85 (D-5T),.12& .12,Diagonal& Diagonal,0& 0,0& 0
+2021-03-20, Panther D,k,T-34-85 (D-5T),0.12,Diagonal,0.0,0.0
 2021-03-20, Panther D,k,Churchill VII,.09,Perpendicular,0,0
 2021-03-20, Panther D,kb,M4A3E2,.1,Diagonal,0,6
 2021-03-05, Panzer IV-70,k,M4A2,1.12 Near-Perpendicular,0,0
 2021-03-05, Panzer IV-70,k,T-34-85 1.21,Diagonal,0,0
 2021-03-05, Panzer IV-70,kb,M4A2 (76W),.01,Diagonal,0,0
 2021-04-03, Scout AH Mk. 1,kb,Mi24A,3.4,0,0,ATGM
-2021-04-25, Tiger E,k,Sherman Firefly,~1
-2021-04-25, Tiger E,kb,IS-1,~.06
-2021-04-25, Tiger E,k,T-55E1,~.6
-2021-04-25, Tiger E,k,Sherman Firefly,~1
-2021-04-25, Tiger E,kb,Pvkv II,~.4
-2021-04-25, Tiger E,k,Strv m/42 DT
-2021-04-25, Tiger E,kb,M18,~.02
-2021-04-25, Tiger E,k,T-34-85 rokatio,~.2
-2021-04-25, Tiger E,k,IS-1,~1
-2021-04-25, Tiger E,k,Avenger,~1
-2021-04-25, Tiger E,k,M10,~.7
-2021-04-25, Tiger E,k,SU-85M,~.1
+2021-05-11, Tiger E,k,T-34-85 (S-53),.26,Diag,0,0
+2021-05-11, Tiger E,k,T-34-85 Gai,.35,Diag,0,0
+2021-05-11, Tiger E,k,M10,.23,Para,0,0
+2021-05-11, Tiger E,k,ASU-57,.11,Near-Para,12,0
+2021-05-11, Tiger E,k,M4A3E2,11.67,Diag,17.0,0.0
+2021-05-11, Tiger E,k,SU-85,.69,Diag,-8,0
+2021-05-11, Tiger E,kb,M24,.25,Diag,0,4
+2021-05-11, Tiger E,k,KV-1S,.11,Diag,0,9
+2021-05-07, Tiger E,k,T-34-85,.35,Diag,0,0
+2021-05-07, Tiger E,k Sherman VC,.44,Diag,5,0
+2021-05-07, Tiger E,k,ARL-44,1.02,Near-Para,0,0
+2021-05-07, Tiger E,k,Comet I,.82,Diag,0,0
+2021-05-07, Tiger E,k,KV-85,.29,Diag,0,0
+2021-05-07, Tiger E,k,M4A4 (SA50),1.12,Near-Perp,0,0
+2021-05-07, Tiger E,kb,T55E1,.02,Diag,0,10
+2021-05-07, Tiger E,k,M4A1,1.19,Near-Para,0,0
+2021-05-07, Tiger E,k,T-34-85 (D-5T),1.53,Near-Para,0,0
+2021-05-07, Tiger E,k,A.C. IV,1.21,Diag,4,0
+2021-05-07, Tiger E,k,T-34-85 (D-5T),1.14,Near-Perp,20,0
+2021-05-07, Tiger E,k,T-34-85,.66,Para,0,0
+2021-05-07, Tiger E,k,AMX-13 (FL11),.62,Diag,49,0
+2021-05-07, Tiger E,k,SU-152,.91,Near-Para,0,0
+2021-05-07, Tiger E,kb,M18,.87,Diag,0,0
+2021-05-07, Tiger E,k,SU-85,.29,Diag,0,0
+2021-05-07, Tiger E,k,T-34-85 (D-5T),.23,Diag,26,0
+2021-05-07, Tiger E,k,A.C. IV,.36,Diag,0,0
+2021-05-07, Tiger E,k,ARL-44,.08,Diag,0,0
+2021-05-07, Tiger E,k,M4A3E2,.02,Diag,3,0
+2021-05-07, Tiger E,k,KV-220,.6,Diag,0,0
+2021-05-07, Tiger E,k,T-34-85 (D-5T),.7,Diag,0,0
+2021-05-01, Tiger E,k,Strv m/42 DT,1,Diag,0,0
+2021-05-01, Tiger E,kb,Pvkv II,.28,Near-Perp,0,14
+2021-05-01, Tiger E,kb,E.B.R,.05,0,0
+2021-05-01, Tiger E,k,IS-1,.41,Diag,19,0
+2021-05-01, Tiger E,k,M4A3E2,.71,Diag,8,0
+2021-05-01, Tiger E,k,Achilles,.71,Diag,0,0
+2021-05-01, Tiger E,k,Comet I,Near-Perp,4,0
+2021-05-01, Tiger E,kb,E.B.R. (1954),.1,Diag,0,0
+2021-05-01, Tiger E,k,M4A4 (SA50),.25,Diag,13,0
+2021-05-01, Tiger E,k,Strv m/42 DT,.09,Diag,14,0
+2021-05-01, Tiger E,k,M4A3 (76) W,.09,Diag,11,0
+2021-05-01, Tiger E,k,Avenger,.16,Near-Para,12,0
+2021-05-01, Tiger E,k,T55E1,.41,Diag,33,0
+2021-05-01, Tiger E,k,M4A2,.3,Diag,0,0
+2021-05-01, Tiger E,k,T-34-85 (D-5T),.2,Diag,5,0
+2021-05-01, Tiger E,kb,SU-85M,.22,Diag,0,0
+2021-05-01, Tiger E,kb,Strv m/42 DT,.04,Diag,0,0
+2021-04-25, Tiger E,k,Sherman Firefly,.6,Diag,0,0
+2021-04-25, Tiger E,kb,IS-1,.3,Diag,0,0
+2021-04-25, Tiger E,k,T55E1,.57,Diag,0,0
+2021-04-25, Tiger E,k,Sherman VC,1,Diag,0,0
+2021-04-25, Tiger E,kb,M18,.16,Diag,0,39
+2021-04-25, Tiger E,k,T-34-85,0.27,Near-Para,14.5,0.0
+2021-04-25, Tiger E,k,IS-1,.6,Near-Perp,0,0
+2021-04-25, Tiger E,k,Avenger,1.05,Para,15,0
+2021-04-25, Tiger E,k,M10,.8,Diag,15,0
+2021-04-25, Tiger E,k,SU-85M,.31,Diag,-5,0
 2021-04-13, Tiger E,k,SU-85,.63,Para,0,0
 2021-04-13, Tiger E,k,M4A2 (76) W,.45,Diag,0,0
 2021-04-13, Tiger E,kb,Pvkv II,.46,Diag,0,0
@@ -667,12 +789,12 @@ DateRecorded, VehicleUsed, Event, EnemyVehicle, Distance, OrientationInSight, En
 2021-04-13, Tiger E,k,T-34-85 (D-5T),1.19,Diag,0,0
 2021-04-13, Tiger E,k,KV-85,1.13,Diag,-4,0
 2021-04-13, Tiger E,k,T-34-57 (1943),.63,Perp,0,0
-2021-04-13, Tiger E,k,T-34-85 (D-5T),.73& .73,Diag& Diag,0&,0
+2021-04-13, Tiger E,k,T-34-85 (D-5T),0.73,Diag,0,0.0
 2021-04-13, Tiger E,k,IS-1,.09,Near-Perp,-6,0
 2021-04-13, Tiger E,k,T-34-85,.78,Near-Para,0,0
 2021-04-13, Tiger E,k,SU-100Y,.79,Near-Para,0,0
 2021-04-13, Tiger E,k,M4A3E2,.63,Para,4,0
-2021-04-13, Tiger E,k,T-20,.07& .07,Para& Diag,-8& 0,0& 0
+2021-04-13, Tiger E,k,T-20,0.07,Para,-4.0,0.0
 2021-04-13, Tiger E,k,T-34-85 (D-5T),0.04,Diag,3,0
 2021-04-13, Tiger E,k,ZSU-37,.09,Diag,0,0
 2021-04-13, Tiger E,kb M4A1,.05,Diag,0,0
@@ -771,44 +893,44 @@ DateRecorded, VehicleUsed, Event, EnemyVehicle, Distance, OrientationInSight, En
 2021-04-05, Tiger E,k,T-34-85,.24 Near-Perpendicular,Lateral-Left,Stationary
 2021-04-05, Tiger E,k,M6A1,.11,Near-Parallel,Stationary,Stationary
 2021-04-05, Tiger E,kb,T-34-85,.6,Diagonal,Stationary,Stationary
-2021-04-05, Tiger E,k,T-34-85 (D-5T),.3,Diagonal,Stationary,Stationary,190
-2021-04-05, Tiger E,k,KV-2 (Zis-6),.13,Perpendicular,Lateral-Left,Stationary,255
-2021-04-05, Tiger E,kb,Avenger,0.43,Diagonal,Stationary,Stationary,300
+2021-04-05, Tiger E,k,T-34-85 (D-5T),.3,Diagonal,Stationary,Stationary
+2021-04-05, Tiger E,k,KV-2 (Zis-6),.13,Perpendicular,Lateral-Left,Stationary
+2021-04-05, Tiger E,kb,Avenger,0.43,Diagonal,Stationary,Stationary
 2021-04-05, Tiger E,kb,T-34-85,.20,Diagonal,Stationary,Retreating
 2021-04-05, Tiger E,k,T-34-85,.21,Diagonal,Stationary,Stationary
 2021-04-05, Tiger E,k,KV-220,.3,Diagonal,Approaching,Stationary
 2021-04-05, Tiger E,k,IS-1
 2021-04-05, Tiger E,kb,SU-85M
 2021-04-05, Tiger E,2021-02-04
-2021-04-05, Tiger E,k,IS-1,.08,Near-Parallel,Approaching,Stationary,217
-2021-04-05, Tiger E,k,Avenger,.14,Near-Perpendicular,Stationary,Stationary,241
-2021-04-05, Tiger E,kb,ARL-44,.06,Near-Parallel,Stationary,Lateral-Right,230
-2021-04-05, Tiger E,k,T-34-85 (D-5T),.05,Near-Parallel,Approaching,Stationary,286
-2021-04-05, Tiger E,k,Achilles,.01,Diagonal,Approaching,Approaching,230
-2021-04-05, Tiger E,k,Sherman VC,.45,Diagonal,Stationary,Stationary,257
-2021-04-05, Tiger E,k,Avenger,1.09,Diagonal,Retreating,Stationary,301
-2021-04-05, Tiger E,k,Sherman VC,.18,Diagonal,Retreating,Stationary,206
-2021-04-05, Tiger E,k,KV-85,.39& .39,Perpendicular& Perpendicular,Lateral-Right& Stationary,Stationary& Stationary,228& 228
-2021-04-05, Tiger E,k,T-34-57,.21,Diagonal,Approaching,Stationary,197
+2021-04-05, Tiger E,k,IS-1,.08,Near-Parallel,Approaching,Stationary
+2021-04-05, Tiger E,k,Avenger,.14,Near-Perpendicular,Stationary,Stationary
+2021-04-05, Tiger E,kb,ARL-44,.06,Near-Parallel,Stationary,Lateral-Right
+2021-04-05, Tiger E,k,T-34-85 (D-5T),.05,Near-Parallel,Approaching,Stationary
+2021-04-05, Tiger E,k,Achilles,.01,Diagonal,Approaching,Approaching
+2021-04-05, Tiger E,k,Sherman VC,.45,Diagonal,Stationary,Stationary
+2021-04-05, Tiger E,k,Avenger,1.09,Diagonal,Retreating,Stationary
+2021-04-05, Tiger E,k,Sherman VC,.18,Diagonal,Retreating,Stationary
+2021-04-05, Tiger E,k,KV-85,0.39,Perpendicular,Lateral-Right,Stationary
+2021-04-05, Tiger E,k,T-34-57,.21,Diagonal,Approaching,Stationary
 2021-02-02, Tiger E,k,T-34-85 Gai,.51 Diagonal,Lateral-Right,Stationary,221
-2021-02-02, Tiger E,K,ASU-57,1.01&,Near-Perpendicular& Near-Perpendicular,Lateral-Left& Stationary,Stationary& Stationary,341& 341
-2021-02-02, Tiger E,kb,ARL-44,1.45,Diagonal,Stationary,Retreating,30
-2021-01-31, Tiger E,k,KV-220,0.13,Diagonal,Diagonal,Approaching,Stationary,173
-2021-01-31, Tiger E,kb,IS-1,.15,Diagonal,Diagonal,Stationary,Stationary,292
-2021-01-31, Tiger E,k,T-34-85,0.43,Diagonal,Stationary,Stationary,255
+2021-02-02, Tiger E,K,ASU-57,1.01,Near-Perpendicular,Lateral-Left,Stationary
+2021-02-02, Tiger E,kb,ARL-44,1.45,Diagonal,Stationary,Retreating
+2021-01-31, Tiger E,k,KV-220,0.13,Diagonal,Diagonal,Approaching
+2021-01-31, Tiger E,kb,IS-1,.15,Diagonal,Diagonal,Stationary
+2021-01-31, Tiger E,k,T-34-85,0.43,Diagonal,Stationary,Stationary
 2021-01-31, Tiger E,k,M24,.61,Diagonal Approaching,Stationary,12
-2021-01-31, Tiger E,K,M24,.2,Near-Perpendicular,Stationary,Stationary,19
-2021-01-31, Tiger E,k,T-34-85 (D-5T),.54,Diagonal,Stationary,Stationary,333
-2021-01-31, Tiger E,k,T-34-57,.43,Near-Parallel,Stationary,Stationry,339
-2021-01-31, Tiger E,k,KV-2,.43,Diagonal,Retreating,Stationary,339
-2021-01-31, Tiger E,K,M4A4 (ASA50),2.06& 2.06& 2.06,Diagonal& Diagonal& Diagonal,Stationary&  Stationary& Stationary,Stationary& Stationary& Stationary,145& 145& 145
-2021-01-13, Tiger E,k,M24,0.23,Parallel,Staionary,Stationary,100
-2021-01-13, Tiger E,kb,M4A3E2,0.03,Parallel,Stationary,Retreating,360
-2021-01-13, Tiger E,kb,M24,0.01,Diagonal,Lateral-Right,Retreating,125
-2021-01-13, Tiger E,k,T-34-85,0.30,Diagonal,Lateral-Left,Stationary,8
-2021-01-13, Tiger E,kb,T-20,0.11,Diagonal,Stationary,Approaching,263
+2021-01-31, Tiger E,K,M24,.2,Near-Perpendicular,Stationary,Stationary
+2021-01-31, Tiger E,k,T-34-85 (D-5T),.54,Diagonal,Stationary,Stationary
+2021-01-31, Tiger E,k,T-34-57,.43,Near-Parallel,Stationary,Stationry
+2021-01-31, Tiger E,k,KV-2,.43,Diagonal,Retreating,Stationary
+2021-01-31, Tiger E,K,M4A4 (ASA50),2.06,Diagonal,Stationary,Stationary
+2021-01-13, Tiger E,k,M24,0.23,Parallel,Staionary,Stationary
+2021-01-13, Tiger E,kb,M4A3E2,0.03,Parallel,Stationary,Retreating
+2021-01-13, Tiger E,kb,M24,0.01,Diagonal,Lateral-Right,Retreating
+2021-01-13, Tiger E,k,T-34-85,0.30,Diagonal,Lateral-Left,Stationary
+2021-01-13, Tiger E,kb,T-20,0.11,Diagonal,Stationary,Approaching
 2021-03-09, Valentine IX,k,?T-50,.2,Diaognal,0,0
 2021-03-09, Valentine IX,k,Panzer IIIL,.2,Diagonal,0,0
 2021-03-09, Valentine IX,k,?Panzer IV F1,.3,Diagonal,-2,0
 2021-03-09, Valentine IX,kb,Panzer IV F2,.2,Near-Parallel,0,0
-N.A., Waffentrager,k,T-34-85,~.8,Near-Para
+0001-01-01, Waffentrager,k,T-34-85,.8,Near-Para,0,0

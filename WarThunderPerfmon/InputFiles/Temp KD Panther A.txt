@@ -6,6 +6,24 @@ Event, Vehicle, Distance, OrientationInSight, Movement, SelfMovement, TargetAzim
 vs. T-34-85 (D-5T) 2/1
 vs. T-34-85* 0/1
 
+1. Always use sight over 3rd-person against ground targets.
+2. When moving past uncleared areas, move slow enough to clear thoroughly and to be able to fire accurately.
+3. If the uncleared area is large, have something to cover you from a large portion of it and clear what is left.
+4. If you cannot reliably clear an area and there is no safe route past it (e.g. open field near large town) do not expose yourself to it.
+
+2021-05-03
+
+@k @T-34-100 @.28 @Diag @31 @0
+@k @AMX-13 @.81 @Diag @0 @0
+@k @M41A1 @.67 @Near-Perp @0 @0
+
+@k @M4A3E2  @.5 @Diag @0 @0
+
+@kb @M18 @0.02 @Diag @0 @0
+
+@k @T-34-85 @.17 @Diag @0 @0
+@kb @ISU-122 @.15 @Diag @0 @0
+
 2021-04-22
 
 @k @M41A1 @~1.4 @Diag
