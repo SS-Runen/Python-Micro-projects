@@ -1,10 +1,12 @@
 Event Vehicle Distance OrientationInSight TargetMovement SelfMovement
-vs. T-34-85 (D-5T) 22/2
-vs. T-34-85* 12/3 (19/4)
-	vs. T-34-85 Gai		02/0
-	vs. T-34-85 (S53)	02/0
+vs. T-34-85 (D-5T) 23/2		11.5
+vs. T-34-85* 12/3 (21/10)	2.1
+	vs. T-34-85 Gai		02/1
+	vs. T-34-85 (S53)	02/1
 	vs. T-34-85E		00/1
-	vs. T-34-85		15/3
+	vs. T-34-85		17/5
+
+Total: 54/12	3.667
 
 Note:
 As of February 25, 2021 (02-25-2021) when a "kb" is listed, "RelativeOrientation" is
@@ -19,9 +21,121 @@ versus the direction of the enemy shell, not enemy hull.
 - When firing, "bracket" the target: have as much of the target within the upper and lower "spread". Despite slight range errors, round will hit.
 - When scanning for targets, always keep most of the tank hidden. The most exposure should be from a hull-down position.
 - Always watch for shell "splash" or hits before losing sight of a target.
+- When a target is showing a significant part of its side, APDS is usually a safer shell to use than HESH.
+- Always keep as much of the vehicle hidden as possible whether moving or waiting.
+
+Note:
+June 04, 2021. Update "Red Skies".
+- Sound mod.
+- Commander sight mechanics in addition to binocular mode and duplicate commander gun controls.
+- Option for FPE use on squadmates or by light tanks.
+- Modifications to armor calculation where thinnest plate is selected when shell hits a join/joint of armor.
+
+Event - Vehicle - Distance - Orientation - EnemeySpeed - SelfSpeed
+
+2021-06-30
+
+@k @KV-85 @0.01 @Diag @0 @0
+
+@k @M18 @.05 @Diag @10 @0
+@k @M4A2 (76) W @0.02 @Near-Para @6 @0
+@k @M4A2 (76) W @0.04 @Diag @0 @0
+@k @M18 @0.02 @Para @12 @0
+@k @M24 @0.02 @Para @16 @0
+
+@k @IS-1 @~0.02 @Diag
+@k @M4A1 @~.9
+@k @Avenger @~.9
+@k @Pvkv II @~.9
+
+@k @Yag-29K @~1
+@k @Pvkv II @~1.8
+@k @M4A3 @~1.2
+
+@k @T-34-85 @.49 @Diag @0 @0
+@k @M4A3 (76) W @.68 @Near-Para @0 @0
+@kb @M4A3 @.23 @Diag @-5 @0
+
+@k @IS-1 @~1 @Perp
+
+2021-06-24
+
+@kb @T-34-85 @.53 @Diag @0 @10
+
+@kb @Yag-10 (29K) @.15 @Diag @0 @0
+
+@kb @T-34-85 @0.12 @Near-Para @0 @0
+
+@k @T-34-85 @.79 @Para @0 @0
+@k @IS-6 @.86 @Diag @0 @0
+
+@k @M4 @~.8 @
+
+@k @KV-2
+@k @Churchill VII
+@k @M4A2
+
+@kb @T-20 @.66 @Near-Para @0 @0
+
+2021-06-18
+
+@k @T-34-85 (D-5T) @.23 @Near-Para @5 @0
+
+@k @T-34-85 @.68 @Perp @-8 @0
+@k @M4A3E2 @.58 @Near-Para @0 @0
+@k @M18 @.18 @Diag @0 @0
+@k @M4A3 (76) W @.39 @Perp @17 @0
+@k @M18 @.32 @Para @0 @0
+@K @SU-152 @.59 @Para @0 @0
+
+@k @Sherman VC @2.4 @Diag @0 @0
+
+2021-06-06
+====================================
+
+@k @T-34-85 ( D-5T) @.3 @Near-Para @0 @0
+@k @IS-1 @.27 @Near-Para @0 @0
+@k @KV-220 @.28 @Near-Perp @5 @0
+
+@k @T-34-85 @.44 @Near-Perp @0 @0
+@k @M4A2 @.41 @Diag @23 @0
+
+@kb @T-34-85 (S-53) @1.28 @Diag @0 @-8
+
+@kb @M18 @.05 @Diag @0 @0
+
+2021-05-31
+
+@k @E.B.R. (1954) @.42 @Diag @11 @0
+@k @T-34-85 @.32 @Near-Para @0 @0
+@k @E.B.R. (1954) @.27 @Diag @11 @0
+@kb @E.B.R. (1954) @.27 @Diag @11 @0
+
+@kb @T-34-85 @.03 @Diag @0 @0
+@k @M4A3E2 @.01 @Diag @-1 @0
+
+2021-05-25
+
+@k @KV-122 @1.95 @Diag @0 @0
+@k @SU-85 @1.86 @Para @0 @0
+
+2021-05-19
+
+@k @SU-85 @.57 @Diag @0 @0
+@k @M4A4 @.52 @Diag @-2 @0
+@k @Sherman VC @.87 @Diag @8 @0
+
+@k @T-34-85 (S-53) @.03, .03 @Diag, Diag @13, @-1, 0
+@k @M18 @.25 @Diag @0 @0
+
+@kb @T-34-85 @.64 @Diag @0 @2
+
+@kb @T-34-85 Gorillaz @.03 @Near-Para
+@k @T-20 @.74 @Diag @0 @0
+@k @Comet I @.76, .76 @Near-Para, Near-Para @-1, 0 @0, 0
+@k @M4A2 (76) W @.75 @Diag @0 @0
 
 2021-05-11
-====================================
 
 @k @T-34-85 (S-53) @.26 @Diag @0 @0
 @k @T-34-85 Gai @.35 @Diag @0 @0

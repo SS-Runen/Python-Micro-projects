@@ -4,8 +4,8 @@ http://warthunder.com/en/registration?r=userinvite_28552741
 Event Vehicle Distance OrientationInSigh RelativeMovement SelfMovement RelativeAzimuth
 
 On 2021-03-31 records with no speed listed were removed before starting the new count.
-Old vs. T-54 (1949) 41/11
-Old vs. T-54 (1947) 42/14
+Old vs. T-54 (1949) 41/11 3.727
+Old vs. T-54 (1947) 42/14 3
 
 vs. T-54 (1949) 55/21 (2.62)
 vs. T-54 (1947) 46/22 (2.09)
@@ -19,11 +19,340 @@ vs. T-54 (1947) 46/22 (2.09)
 - When firing, "bracket" the target: have as much of the target within the upper and lower "spread". Despite slight range errors, round will hit.
 - When scanning for targets, always keep most of the tank hidden. The most exposure should be from a hull-down position.
 - Always watch for shell "splash" or hits before losing sight of a target.
+- When a target is showing a significant part of its side, APDS is usually safer to use than HESH.
+- Always keep as much of the vehicle hidden as possible whether moving or waiting.
+
+June 04, 2021
+Update "Red Skies".
+- Sound mod.
+- Commander sight mechanics in addition to binocular mode and duplicate commander gun controls.
+- Option for FPE use on squadmates or by light tanks.
+- Modifications to armor calculation where thinnest plate is selected when shell hits a join/joint of armor.
+
+Event - Vehicle - Distance - Orientation - EnemeySpeed - SelfSpeed
+
+2021-07-09
+
+@k @T-54 (1947) @.59 @Near-Perp @0 @0
+
+@k @T-44-100 @~1.2 @Diag
+@k @T-44-100 @~1.2 @Diag
+
+@k @T-54 (1947) @1.17 @Diag @0 @0
+@k @T-44-100 @.85 @Diag @38 @0
+
+@k @T-54 (1949) @Near-Para @1.10 @Diag @0 @0
+@k @T-44 @1.51 @Near-Perp @0 @0
+
+@kb @IS-4M @~.6 @Diag 
+
+@k @T-54 (1947) @.08 @Diag @15 @0
+@k @T-54 (1949) @.9 @Diag @4 @0
+
+@kb @IS-3 @0.04 @Diag @0 @0
+
+2021-07-07
+
+@k @T-54 (1951) @.15 @Diag @0 @0
+@k @ASU-85 @.82 @Near-Perp @0 @0
+@k @ZSU-57-2 @.72 @Diag @0 @0
+@k @PT-76B @1.37 @Diag @23 @0
+
+@kb @ZSU-57-2 @0.04 @Diag @0 @0
+
+2021-07-05
+
+@k @T-54 (1949) @.95 @Near-Para @0 @0
+@k @Obj 268 @.9 @Diag @0 @0
+@k @ASU-85 @.9 @Diag @0 @0
+@k @SU-100 @.94 @Perp @0 @0
+
+@k @T-54 (1949) @.53 @Diag @0 @0
+@k @Type 62 @.66 @Para @-8 @0
+
+@kb @T-54 (1947) @0.01 @Near-Para @0 @-4
+
+@k @T-54 (1949) @1.28 @Diag @0 @0
+
+Second Battle of El Alamein 7:48:31
+@k @T-54 (1947) @.25 @Diag @10 @0
+@k @T-54 (1949) @.38 @Diag @11 @2
+@k @ASU-85 @1.21 @Near-Perp @0 @0
+@k @T-44-100 @.03 @Diag @0 @-5
+@k @SU-100 @.72 @Diag @12 @0
+@k @T-54 (1949) @1.02 @Perp @0 @0
+@kb @T-44-100 @.01 @Near-Para @12 @0
+
+@kb @T-44-100 @0.01 @Near-Para @0 @0
+
+@k @T-54 (1947) @1.23 @Diag @0 @0
+
+@k @IS-6 @1.32 @Para @0 @0
+@k @T-54 (1947) @.44 @Diag @9 @0
+
+2021-07-01
+2/2
+-4
+1/0
++1
+
+@K @SU-100 @1.05 @Perp @0 @0
+@kb @T-54 (1947) @.74 @Diag @0 @14
+
+@k @T-54 (1947) @.94 @Diag @30 @0
+
+@k @T-54 (1949) @.15 @Near-Perp @0 @0
+@k @T-54 (1947) @.27 @Near-Para @0 @11
+
+@kb @T-54 (1947) @0.06 @Near-Para @0 @0 @1
+
+2021-06-23
+1/0
++1
+2/1
+-1
+
+@kb @T-54 (1949) @.8 @Near-Para @0 @0 @1
+
+@k @T-54 (1949) @.48 @Near-Para @18 @0 @1
+@kb @T-44-100 @.11 @Near-Perp @0 @0 @1
+
+@k @Obj 268 @.1 @Diag @-4 @0 @1
+
+@k @IS-4M @.27 @Diag @0 @0 @1
+@k @T-54 (1949) @.87 @Diag @0 @0 @1
+@k @T-54 (1947) @1.07 @Diag @0 @0 @1
+@kb @IS-3 @.95 @Diag @0 @0 @1
+
+2021-06-20
+0/0
+0
+1/0
++1
+
+@k @T-54 (1951) @.47 @Diag @0 @0
+@k @T-54 (1949) @.92 @Near-Perp @23 @0
+@k @IS-6 @1.05 @Near-Perp @0 @0
+
+@k @PT-76B @.4 @Diag @0 @0
+
+2021-06-19
+1/0
++1
+4/2
+-2
+
+@kb @T-54 (1949) @.05 @Diag @0 @0
+
+Seversk-13
+@kb @IS-4M @~.6
+
+@k @IS-6 Fesquez @~.8
+@k @IS-6 Fesquez @~1.1
+
+@kb @T-54 (1949) @1.13 @Near-Perp @0 @25
+
+@k @T-54 (1949) @.51 @Near-Perp @27 @0
+@k @T-54 (1947) @.31 @Perp @38 @-2
+@k @IS-3 @.4 @Diag @-4 @0
+
+@k @T-54 (1949) @.93 @Perp @15 @0
+@k @T-54 (1949) @.97 @Diag @0 @0
+@k @T-54 (1949) @.93 @Para @0 @0
+
+2021-06-15
+0/3
+-9
+3/0
++3
+
+@k @T-54 (1949) @.2 @Near-Para @0 @0
+@k @T-44-100 @0.04 @Para @0 @0
+@kb @T-54 (1947) @0.01 @Near-Para @5 @0
+
+@kb @IS-3 @0.01 @Near-Perp @0 @0
+
+@kb @T-54 (1947) @.8 @Near-Perp @0 @13
+
+@k @T-54 (1949) @1.09 @Near-Para @0 @0
+@k @IS-3 @1.81 @Near-Para @0 @0
+
+@k @ASU-85 @1.49 @Para @0 @0
+@k @IS-4M @1.13 @Diag @0 @23
+@k @T-54 (1949) @1.08 @Para @0 @0
+@kb @T-54 (1947) @1.08 @Para @0 @-10
+
+@k @IS-4M @.2 @Diag @0 @0
+@k @IS-3 @.9 @Diag @0 @0
+@k @T-44 @1 @Diag @0 @0
+
+2021-06-11
+1/1
+-2
+4/3
+-5
+
+@k Obj 268 @1.64 @Near-Para @0 @0
+@kb @T-34-100 @.26 @Near-Perp @0 @0
+
+@kb @T-54 (1949) @~0.2 @Near-Para @0 @8
+
+@k @T-54 (1949) @.59 @Near-Para @-7 @0
+@k @T-44 @.71 @Diag @11 @0
+
+@kb @T-54 (1947) @.05 @Near-Perp @0 @32
+
+@k @SU-100 @1.7 @Diag @11 @0
+@k @T-54 (1949) @.78 @Near-Para @0 @0
+@kb @T-54 (1949) @.78 @Diag @0 @0
+
+@kb @IS-4M @.6 @Diag @0 @20
+
+@kb @T-44-100 @.88 @Near-Para @0 @-7
+
+@k @T-54 (1947) @.33 @Near-Para @0 @0
+@k @IS-3 @.38 @Diag @0 @0
+@kb @Type 62 @.33 @Diag @0 @-5
+
+@k @T-54 (1949) @.4 @Near-Perp @16 @0
+
+@k @T-54 (1949) @.45 @Near-Para @0 @0
+
+@kb @T-54 (1949) @.2 @Near-Perp @0 @0
+
+2021-06-09
+1/0
++1
+1/0
++1
+
+@k @T-54 (1947) @.54 @Para @0 @0
+@k @ZSu-57-2 @.88 @Diag @0 @0
+@k @T-54 (1949) @.67 @Diag @-6 @0
+@k @Type 62 @.6 @Diag @0 @0
+@k @ASU-85 @.76 @Diag @0 @0
+@k @Type 63 @.06 @Diag @3 @0
+
+@k @M48 China @.1 @Diag @0 @0
+
+@kb @ZSU-37 @.06 @Diag @6 @0
+
+@kb @WZ-350 @.02 @Diag @8 @0
+
+2021-06-07
+1/1
+-2
+1/1
+-2
+
+@k @IS-6 @1.87 @DIag @20 @0
+
+@k @T-44-100 @.98 @Near-Para @0 @0
+
+@kb @SU-100P @.88 @Near-Para @0 @0
+
+@kb @T-54 (1947) @.18 @Near-Perp @0 @0
+
+@k @T-54 (1947) @.87 @Near-Para @21 @0
+@k @T-54 (1949) @1.12 @Near-Perp @0 @0
+@k @PT-76B @1.05 @Diag @0 @0
+
+@kb @T-54 (1949) @1.26 @Diag @0 @0
+
+@kb @IS-6 @.43 @Diag @0 @-8
+
+@kb @T-44-100 @.53 @Diag @0 @0
+
+@kb @IS-6 @.06 @Diag @0 @0
+2021-06-03
+1/0
++1
+2/0
++2
+
+@k @T-54 (1947) @.11 @Para @0 @0
+@k @Obj 268 @.52 @Near-Para @0 @0
+@kb IS-4M @.06 @Diag @0 @0
+
+@k @T-54 (1949) @.17 @Diag @-7 @0
+@k @T-54 (1949) @.23 @Diag @0 @0
+@k @IS-3 @.08 @Diag @0 @0
+
+2021-05-26
+0/1
+-3
+3/1
++0
+
+@k @SU-100P @.01 @Perp @0 @0
+@kb @IS-6 @.03 @Diag @0 @0
+
+@k @T-54 (1949) @.02 @Diag @0 @0
+
+@k @T-54 (1949) @.55 @Diag @0 @0
+@kb @T-54 (1947) @.75 @Diag @0 @-5
+
+@kb @T-54 (1949) @.65 @Diag @0 @0
+
+@k @T-54 (1949) @.5 @Diag @15 @0
+@kb @T-54 (1949) @.6 @Diag @0 @0
+
+2021-05-22
+2/2
+-4
+2/0
++2
+
+@k @IS-4M @.86 @Diag @0 @0
+@k @T-44-122 @.3 @Diag @15 @0
+@k @IS-3 @.71 @Near-Perp @0 @0
+
+@kb @T-54 (1947) @0.04 @Diag @0 @0
+@k @IS-3 @Diag @.12 @0 @7
+@k @T-54 (1949) @1.79 @Diag @-5 @0
+
+@k @IS-3 @.02 @Diag @10 @0
+
+@k @T-54 (1947) @.13 @Near-Perp @-7 @15
+@k @T-54 (1949) @.31 @Para @38 @0
+
+@k @ASU-85 @.84 @Diag  @0 @0
+@k @ASU-85 @.83 @Para @0 @0
+@k @T-54 (1947)@.86 @Para @0 @0
+
+@k @T-44 @.03 @Diag @10 @0
+@k @SU-100P @0.02 @Near-Perp @0 @0
+@kb @ASU-85 @.04 @Diag @0 @7
+
+@kb @T-54 (1947) @.02 @Diag @0 @20
+
+2021-05-18
+0/1
+-3
+1/3
+-7
+
+@kb @T-54 (1949) @.01 @Diag @0 @0
+
+@k @T-44-100 @.6 @Near-Para @0 @0
+@kb @T-54 (1949) @.9 @Diag @0 @0
+
+@kb @IS-4M @.5 @Diag @0 @0
+
+@k @T-54 (1949) @.99 @Diag @0 @0
+
+@kb @T-54 (1949) @.2 @Near-Para @0 @0
+
+@kb @T-54 (1947) @.2 @Diag @0 @0
+@k @ASU-85 @.2 @Diag @0 @0
 
 2021-05-14
 ====================================
+
 3/2
 -3
+4/1
++1
 
 @kb @T-54 (1947) @.04 @Near-Perp @0 @0
 @k @T-54 (1949) @1.15 @Diag @0 @0
@@ -49,6 +378,8 @@ vs. T-54 (1947) 46/22 (2.09)
 2021-05-10
 2/2
 -6
+4/0
++4
 
 @k @T-54 (1949) @.97 @Near-Perp @28 @0
 @k @T-54 (1949) @.97 @Perp @32 @0
@@ -101,6 +432,8 @@ vs. T-54 (1947) 46/22 (2.09)
 2021-04-24
 4/1
 +1
+4/3
+-2
 
 @k @T-54 (1949) @1.62 @Near-Para @0 @0
 @k @T-54 (1947) @1.79, 1.85 @Near-Perp, Para @-7, 0 @0, 0
@@ -128,6 +461,7 @@ vs. T-54 (1947) 46/22 (2.09)
 2021-04-20
 1/0
 +1
+0/0
 
 @k @Obj 268 @.6 @Diag @-1 @0
 
@@ -140,6 +474,8 @@ vs. T-54 (1947) 46/22 (2.09)
 2021-04-16
 2/0
 +2
+2/3
+-4
 
 @k @T-54 (1947) @.77 @Diag @0 @0
 @k @T-54 (1947) @.94 @Diag @15 @0
@@ -160,6 +496,8 @@ vs. T-54 (1947) 46/22 (2.09)
 2021-04-12
 2/1
 -1
+5/0
++5
 
 @k @T-54 (1949) @1.89 @Diag, Diag @32, 0 @0, 8
 @k @T-54 (1949) @1.32 @Diag @0 @0
@@ -186,6 +524,10 @@ vs. T-54 (1947) 46/22 (2.09)
 @k @T-54 (1947) @1.08 @Diag @0 @0
 
 2021-04-08
+1/2
+-5
+1/2
+-5
 
 @k @T-54 (1947) @1.1 @Near-Para @11 @0
 @kb @T-54 (1949) @.09 @Diag @0 @-11
@@ -468,8 +810,6 @@ Note: Make sure to note the range listing of APDS before switching to HESH. Swit
 @k ASU-85
 
 @k @T-54 (1947) @1.27 @Diagonal @0 @0
-
-@kb Obj 268
 
 @kb @T-54 (1947) @1.31 @Diagonal @0 @0
 

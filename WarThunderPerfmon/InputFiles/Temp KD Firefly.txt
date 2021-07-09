@@ -9,24 +9,44 @@ Bad Matches per Battle Rating:
 5.7 X
 5.3 X
 
-vs. T-34-85 (D-5T) 17/5
-vs. T-34-85* 12/3
-	T-34-85 (S53) 3/1
-	T-34-85 Gai 1/1
-	T-34-85E 1/0
-	T-34-85 7/1
+vs. T-34-85 (D-5T) 19/5		3.8
+vs. T-34-85* 12/4		3
+	T-34-85 (S53) 3/1	3
+	T-34-85 Gai 1/1		1
+	T-34-85E 1/0		1
+	T-34-85 7/2		3.5
 	
 Note:
 As of February 25, 2021 (02-25-2021) when a "kb" is listed, "RelativeOrientation" is
 versus the direction of the enemy shell, not enemy hull.
 
-1. Always use sight over 3rd-person against ground targets.
-2. When moving past uncleared areas, move slow enough to clear thoroughly and to be able to fire accurately.
-3. If the uncleared area is large, have something to cover you from a large portion of it and clear what is left.
-4. If you cannot reliably clear an area and there is no safe route past it (e.g. a large town in open field) do not expose yourself to it.
+- Always use sight over 3rd-person against ground targets.
+- When moving past uncleared areas, move slow enough to clear thoroughly and to be able to fire accurately.
+- When scanning for targets, always stay hull down or have most of the tank hidden.
+- If the uncleared area is large, have something to cover you from a large portion of it and clear what is left.
+- If you cannot reliably clear an area and there is no safe route past it (e.g. a large town in open field) do not expose yourself to it.
+- When leading close-range targets, make sure that the shell will hit the target whether or not it continues moving. Impossible to do at long range.
+- When firing, "bracket" the target: have as much of the target within the upper and lower "spread". Despite slight range errors, round will hit.
+- When scanning for targets, always keep most of the tank hidden. The most exposure should be from a hull-down position.
+- Always watch for shell "splash" or hits before losing sight of a target.
+
+Event - Vehicle - Distance - Orientation - EnemeySpeed - SelfSpeed
+
+2021-06-07
+====================================
+
+@k @Breda 501 @1.17 @Para @0 @0
+@k @Sherman Vc @1.1 @Para @0 @0
+@k @T-34-85 (D-5T) @.49 @Diag @27 @0
+@k @PT-76B @1.09 @Diag @0 @0
+@k @T-34-85 (D-5T) @Perp @-8 @0
+@kb @AMX-13 DCA 40 @.17 Near-Para @0 @0
+
+2021-06-02
+
+@kb @T-34-85 @.43 @Diag @6 @0
 
 2021-05-12
-====================================
 
 @k @T-34-57 @1.54 @Diag @44 @0
 @k @SU-152 @1.34 @Near-Para @0 @0

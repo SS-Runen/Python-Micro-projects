@@ -6,10 +6,36 @@ Event, Vehicle, Distance, OrientationInSight, Movement, SelfMovement, TargetAzim
 vs. T-34-85 (D-5T) 2/1
 vs. T-34-85* 0/1
 
-1. Always use sight over 3rd-person against ground targets.
-2. When moving past uncleared areas, move slow enough to clear thoroughly and to be able to fire accurately.
-3. If the uncleared area is large, have something to cover you from a large portion of it and clear what is left.
-4. If you cannot reliably clear an area and there is no safe route past it (e.g. open field near large town) do not expose yourself to it.
+- Always use sight over 3rd-person against ground targets.
+- When moving past uncleared areas, move slow enough to clear thoroughly and to be able to fire accurately.
+- When scanning for targets, always stay hull down or have most of the tank hidden.
+- If the uncleared area is large, have something to cover you from a large portion of it and clear what is left.
+- If you cannot reliably clear an area and there is no safe route past it (e.g. a large town in open field) do not expose yourself to it.
+- When leading close-range targets, make sure that the shell will hit the target whether or not it continues moving. Impossible to do at long range.
+- When firing, "bracket" the target: have as much of the target within the upper and lower "spread". Despite slight range errors, round will hit.
+- When scanning for targets, always keep most of the tank hidden. The most exposure should be from a hull-down position.
+- Always watch for shell "splash" or hits before losing sight of a target.
+- When a target is showing a significant part of its side, APDS is usually a safer shell to use than HESH.
+- Always keep as much of the vehicle hidden as possible whether moving or waiting.
+
+2021-06-02
+
+@k @T-34-85 @.29 @Para @0 @0
+@k @M4A1 @.29 @Para @0 @0
+@kb @M6A1 @.2 @Near-Perp @0 @0
+
+@k @KV-85 @.53 @Diag @0 @0
+@k @IS-2 @.36 @Para @0 @0
+@k @T-34-85 (D-5T) @.63 @Diag @-8 @0
+
+2021-05-27
+
+@k @Fiat 6614 @.48 @Para @0 @0
+@k @SU-152 @.86 @Para @0 @0
+@k @M4A4 (SA-50) @Diag @-4 @0
+@k @T-34-85 (D-5T) @.7 @Diag @12 @0
+@k @Type 62 @.97 @Near-Perp @15 @0
+@k @Phong Kong T-34 @.94 @Near-Perp @39 @0
 
 2021-05-03
 
