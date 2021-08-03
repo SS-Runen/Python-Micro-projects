@@ -2,7 +2,3 @@
 http://warthunder.com/en/registration?r=userinvite_28552741
 
 Event Vehicle Distance RelativeMovement SelfMovement Weapon
-
-2021-04-03
-
-@kb @Mi24A @3.4 @0 @0 @ATGM

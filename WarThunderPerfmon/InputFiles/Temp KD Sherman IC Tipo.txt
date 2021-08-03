@@ -26,8 +26,8 @@ Event - Vehicle - Distance - Orientation - EnemeySpeed - SelfSpeed
 
 2021-06-06
 
-@k @T-34-85 (D-5T)> @~.4
-@kb @IS-1 @~0.01
+@k @T-34-85 (D-5T) @.4 @Diag @0 @0
+@kb @IS-1 @0.01 @Perp @0 @0
 
 @k @M18 @1.38 @Perp @0 @0
 @k @IS-1 @.04 @Near-Perp @0 @14

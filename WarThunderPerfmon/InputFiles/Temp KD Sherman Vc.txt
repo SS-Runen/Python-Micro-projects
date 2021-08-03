@@ -24,10 +24,65 @@ versus the direction of the enemy shell, not enemy hull.
 
 Event - Vehicle - Distance - Orientation - EnemeySpeed - SelfSpeed
 
-2021-06-06
+* For SVD, deviation at close range is 600-800.
+2021-07-30
 
-@k @M4A3E2 @~.8
-@kb @T-34-85 (D-5T) @~.02
+@k @KV-85 @.8 @Diag @0 @0
+@k @SU-85 @.9 @Near-Para @0 @0
+
+@k @M4A3E2 @~1.2
+@k @IS-1 @~1.2
+
+2021-07-24
+
+@k @SU-85 @~.1
+
+@k @T-34-85 @1.54 @Diag @0 @0
+@k @Yag-10 (29K) @1.53 @Diag @0 @0
+
+@k @T-34-85 @1.04 @Near-Para @21 @0
+@k @M4A1 (76) W @.81 @Near-Para @22 @-5
+
+@k @SU-152 @1 @Diag @6 @0
+@k @T-34-57 @1 @Near-Para @0 @0
+
+@k @ASU-57 @~.01
+@k @ZUT-37
+@k @Sherman Vc @~1
+
+@k @KV-1S @.34 @Diag @-15 @0
+
+@k @T-34-85 @.67 @Near-Para @0 @0
+
+@k @SU-152 @~.4
+@kb @IS-1 @.04
+
+@kb @T-34-85 @.42 @Diag @0 @0
+@k @E.B.R (1954) @.4 @Near-Perp @24 @0
+
+2021-07-12
+1/0
+1
+1/0
+1
+
+@k @T-34-85 (D-5T) @.61 @Near-Para @0 @0
+@k @T-34-85 @1.18 @Near-Para @0 @0
+
+@k @IS-1 @.37 @Diag @0 @0
+@k @M18 @.11 @Diag @0 @22
+@k @M4A3E2 @.4 @Diag @11 @0
+@K @M18 @.04 @Diag @0 @0
+@k @KV-85 @.16 @Near-Perp @0 @0
+
+2021-06-06
+0/0
+0
+1/1
+-5
+
+@k @M4A3E2 @.8 @Diag @0 @0
+@kb @T-34-85 (D-5T) @.02 @Diag @0 @0
 
 @kb @KV-85 @.72 @Diag @0 @0
 @k @T-34-85 (D-5T) @1.16 @5 @0

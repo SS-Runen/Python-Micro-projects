@@ -17,7 +17,7 @@ vs. T-34-85* 12/4		3
 	T-34-85 7/2		3.5
 	
 Note:
-As of February 25, 2021 (02-25-2021) when a "kb" is listed, "RelativeOrientation" is
+As of February 25, 2021 (02-25-2021) when a "kb" is listed, "Orientation" is
 versus the direction of the enemy shell, not enemy hull.
 
 - Always use sight over 3rd-person against ground targets.
@@ -31,6 +31,31 @@ versus the direction of the enemy shell, not enemy hull.
 - Always watch for shell "splash" or hits before losing sight of a target.
 
 Event - Vehicle - Distance - Orientation - EnemeySpeed - SelfSpeed
+
+2021-07-21
+
+@k @KV-85 @.07 @Diag @-13 @0
+@k @SU-85 @.04 @Diag @0 @0
+@kb @KV-85 @0.2 @Near-Para @0 @0
+
+@kb @T-34-85 No. 215 @.55 @Diag @0 @0
+@k @M18 @.88 @Near-Perp @7 @0
+
+@k @T-34-85 @.02 @Diag @0 @0
+@kb @IS-1 @.08 @Near-Para @0 @8
+
+2021-07-17
+
+@k @IS-2 @.43 @Diag @0 @0
+@k @T-34-85 @.11 @Diag @31 @0
+@kb @Nashorn @.12 @Diag @0 @0
+
+2021-07-15
+
+@kb @T-34-57 (1943) @~0.04 @Near-Para
+
+@kb @T-34-57 @~.1
+@k @M4A1 FL10 @~.06
 
 2021-06-07
 ====================================
@@ -318,11 +343,6 @@ Note: New overpressure mechanics added.
 @k @KV-85 @.58 @Perpendicular @0 @0
 @k @E.B.R (1954) @.3 @Diagonal @15 @0
 
-@k @PT-76
-@k @ASU-57
-@k @E.B.R.
-@kb @T-34-57
-
 @k @Zis-30 @.04 @Parallel @0 @0
 
 @k @T-34-85 (D-5T) @.28 @Diagonal @0 @0
@@ -358,19 +378,6 @@ Note: New overpressure mechanics added.
 @k M41A1 @.81 @Diagonal @0 @0
 @k @M6A1 @.54 @Parallel @0 @0
 
-@k @FIAT 6614
-@kb @VFW
-
-@k @Nashorn
-@kb @Panzer IV/70
-
-@kb @ISU-122S
-@k @EBR
-@k @M24
-@k @T-34-57
-
-@K @M4A3E2 J2jiggles
-
 2021-02-08
 
 @kb @Panther A
@@ -399,19 +406,9 @@ Note: New overpressure mechanics added.
 
 @kb @T-34-85 @0.12 @Diagonal @Stationary @Retreating
 
-@k @SU-85M
-@k @T-34-57
-
-@k @Panther F
-@k @Tiger 2P
-@k @M41
-
 @k @Pvkv M/43 (1963) @1.85 @Near-Parallel @Stationary @Statioanry @351
 @k @KV-122 @1.69 @Near-Parallel @Stationary @Stationary @351
 @k @T-34-85 (D-5T) @1.26 @Near-Perpendicular @Lateral-Left @Stationary @7
-
-@K @Tiger H
-@k @EBR
 
 2021-02-04
 
@@ -430,31 +427,12 @@ Note: New overpressure mechanics added.
 
 2021-02-01
 
-@kb @Jagdpanther
-
-@kb @M18
-
 @k T-34-57 @.15 @Near-Perpendicular @Stationary @Stationary
 @k @SU-152 @.10 @Perpendicular @Lateral-Left @Staionary
 @kb @Tiger E @.25 @Diagonal @Stationary @Stationary
 
 @k @T-34-85 (D-5T) @.75 @Near-Perpendicular @Lateral-Left @Stationary @187
 @k 75/46 M43 @.51 @Diagonal @Retreating @Stationary @135
-
-@k @Tiger E
-@kb @Tiger E
-
-@k @AMX-13
-@k @BT-5
-@k @Tiger H
-
-@kb @E.B.R. (1954)
-
-@kb @Jagdpanther
-
-@k @T-34-57
-@k @M4 Tipo
-@k @Tiger E
 
 @K @T-34-85 (D-5T) @0.40 @Diagonal @Stationary @Stationary @72
 

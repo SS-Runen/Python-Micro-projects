@@ -2,6 +2,11 @@
 
 Event Vehicle Distance OrientationInSight Speed SelfSpeed
 
+2021-07-21
+
+@k @T-34-85 (D-5T) @.18, .11 @33, -8 @0, 0
+@kb @KV-85 @.26 @Diag @0 @0
+
 2021-03-05
 
 @kb @Panther A @.05 @Diagonal @0 @0

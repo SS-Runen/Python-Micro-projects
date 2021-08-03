@@ -43,20 +43,21 @@ Event - Vehicle - Distance - Orientation - EnemeySpeed - SelfSpeed
 @k @M18 @0.02 @Para @12 @0
 @k @M24 @0.02 @Para @16 @0
 
-@k @IS-1 @~0.02 @Diag
-@k @M4A1 @~.9
-@k @Avenger @~.9
-@k @Pvkv II @~.9
+@k @IS-1 @0.12 @Diag @0 @18
+@k @M4A1 @.92 @Diag @0 @0
+@k @Avenger @.94 @Diag @15 @0
+@k @Pvkv II @.87 @Near-Para @0 @0
 
-@k @Yag-29K @~1
-@k @Pvkv II @~1.8
-@k @M4A3 @~1.2
+@k @Yag-29K @1.08 @Diag @4 @0
+@k @Pvkv II @1.91 @Near-Para @0 @0
+@k @M4A3 (76) W @1.04 @Near-Para @-4 @0
 
 @k @T-34-85 @.49 @Diag @0 @0
 @k @M4A3 (76) W @.68 @Near-Para @0 @0
 @kb @M4A3 @.23 @Diag @-5 @0
 
-@k @IS-1 @~1 @Perp
+@k @IS-1 @1 @Perp @6 @0
+@kb Comet I @1.22 @Diag @0 @0
 
 2021-06-24
 

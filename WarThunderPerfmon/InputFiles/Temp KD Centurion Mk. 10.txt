@@ -31,12 +31,156 @@ Update "Red Skies".
 
 Event - Vehicle - Distance - Orientation - EnemeySpeed - SelfSpeed
 
+2021-08-02
+1/1
+-2
+
+@k @IS-6 @~.01
+@k @IS-6 @.2
+@k @IS-6 @~.1
+@k @T-44-100 @~.06
+
+@kb @T-54 (1947) @~.01 @Near-Para 
+
+@k @T-44-100
+@k @PT-76B
+@kb @T-54 (1949)
+
+@kb @T-54 (1949) @~.9
+
+@k @IS-6 @~2.5 @Perp
+@k @T-54 (1949) @~1.1 @Diag
+@kb @Obj 268 @~1.5 @Para
+
+@k @T-54 (1947) alex368xela @~.2 @Near-Para
+@k @T-54 (1949) @~1 @Diag
+@k @IS-3 @~.1
+@k @Type 63 @~0.02 @Perp
+
+@k @T-44-100 @~.3
+
+2021-07-29
+2/2
+-4
+6/0
+6
+
+@k @T-44-100 @@.33 @Perp @0 @0
+@k @T-54 (1949) @.04 @Diag @0 @0
+@kb @SU-100 @.94 @Diag @0 @0
+
+@k @T-54 (1947) @.95 @Perp @0 @0
+@k @T-54 (1949) @1.13 @Near-Para @0 @0
+@k @T-54 (1949) @1.33 @Perp @0 @0
+@k @PT-76 @.22 @Diag @16 @0
+@k @Type 63 @1.08 @Near-Perp @0 @0
+@k @IS-3 @1.19 @Para @0 @0
+
+@k @T-54 (1949) @~.9 @Near-Para
+@k @T-54 (1949) @~0.03 @Near-Perp
+@kb @T-44-100 @~.3
+
+@k @Type 63 @0.01 @Diag @4 @0
+
+@k @Type 62 @0.2 @Perp
+@k @T-44-100 @~0.03
+@k @Type 63 @~0.1
+
+@kb @T-54 (1947) @.45 @Diag @0 @0
+
+@k @T-54 (1949) @1.18 @Near-Para @0 @0
+@k @ASU-85 @1.22 @Diag @0 @0
+@kb @T-54 (1947) @0.01 @Diag @21 @0
+
+2021-07-27
+
+@k @T-54 =291= VeryErectus @~1.3 @Near-Perp
+@k @T-54 Dranikk @~1.1 @Near-Para
+
+2021-07-21
+0/0
+0
+2/2
+-4
+
+@k @IS-6 @.5 @Diag @0 @0
+@kb @T-54 (1949) @.2 @Diag @0 @0
+
+@kb @T-54 (1949) @.98 @Diag @0 @0
+
+@k @T-54 (1949) @.16 @Near-Para @0 @0
+@k @T-54 (1949) @.13 @Diag @30 @0
+@k @IS-4M @0.1 @Diag @-4 @13
+@kb @IS-4M @.89 @Diag @0 @0
+
+2021-07-17
+5/0
++5
+0/1
+-3
+
+@k T-44-100 @.03 @Diag @0 @0
+@kb @IS-4M @.04 @Diag @0 @0
+
+@k @T-44-100 @.2 @Diag @0 @0
+@k @IS-3 @.6 @Diag @0 @0
+@k @ASU-85 @.05 @Para @0 @0
+@kb @IS-3 @.03 @Diag @0 @0
+
+@k @T-44-100 @1.52 @Diag @0 @0
+@kb @IS-4M @.97 @Near-Perp @0 @0
+
+@Kb T-44-100 @.47 @Near-Para @0 @0
+
+@kb @T-44-100 @.93 @Diag @0 @0
+@k @T-54 (1947) @.77 @Diag @6 @0
+
+@k @T-54 (1947) @.23 @Para @0 @0
+@k @T-44-100 @.24 @Perp @0 @0
+@kb @T-54 (1949) @.97 @Near-Para @0 @0
+
+@k @T-54 (1947) @.92, .92 @Perp, Perp @44, 23 @0, 0
+@k @T-54 (1947) @.38 @Near-Perp @28 @33
+
+@k @T-54 (1947) @.65 @Diag @0 @0
+@kb @IS-4M @.08 @Diag @0 @-4
+
+2021-07-13
+3/0
++3
+2/0
++2
+
+@k @IS-3 @.74 @Diag @19 @-12
+@k @IS-3 @.74 @Diag @0 @-4
+
+@k @T-54 (1949) @1.12 @Diag @0 @0
+@k @T-54 (1947) @1.28 @Para @0 @0
+@k @IS-3 @.36 @Para @0 @0
+
+@kb @IS-4M @.1 @Diag @15 @0
+
+@k @T-54 (1947) @1.59 @Diag @9 @0
+@k @Type 62 @1.12 @Diag @0 @0
+
+@kb @SU-100P @.1 @Diag @20 @0
+
+@kb @PT-76B @.4 @Diag @0 @0
+
+@k @IS-4M @1.19 @Diag @0 @0
+@k @T-54 (1947) @.56 @Diag @1 @0
+
+@k @T-54 (1949) @1.06 @Diag @29 @0
+
+@kb @IS-4M @.2 @Diag @0 @0
+
 2021-07-09
+3/0
++3
+2/0
++2
 
 @k @T-54 (1947) @.59 @Near-Perp @0 @0
-
-@k @T-44-100 @~1.2 @Diag
-@k @T-44-100 @~1.2 @Diag
 
 @k @T-54 (1947) @1.17 @Diag @0 @0
 @k @T-44-100 @.85 @Diag @38 @0
@@ -44,7 +188,7 @@ Event - Vehicle - Distance - Orientation - EnemeySpeed - SelfSpeed
 @k @T-54 (1949) @Near-Para @1.10 @Diag @0 @0
 @k @T-44 @1.51 @Near-Perp @0 @0
 
-@kb @IS-4M @~.6 @Diag 
+@kb @IS-4M @.42 @Diag @0 @0
 
 @k @T-54 (1947) @.08 @Diag @15 @0
 @k @T-54 (1949) @.9 @Diag @4 @0
@@ -52,6 +196,8 @@ Event - Vehicle - Distance - Orientation - EnemeySpeed - SelfSpeed
 @kb @IS-3 @0.04 @Diag @0 @0
 
 2021-07-07
+0/0
+0/0
 
 @k @T-54 (1951) @.15 @Diag @0 @0
 @k @ASU-85 @.82 @Near-Perp @0 @0
@@ -61,6 +207,10 @@ Event - Vehicle - Distance - Orientation - EnemeySpeed - SelfSpeed
 @kb @ZSU-57-2 @0.04 @Diag @0 @0
 
 2021-07-05
+3/1
+0
+5/0
++5
 
 @k @T-54 (1949) @.95 @Near-Para @0 @0
 @k @Obj 268 @.9 @Diag @0 @0
@@ -144,11 +294,8 @@ Second Battle of El Alamein 7:48:31
 
 @kb @T-54 (1949) @.05 @Diag @0 @0
 
-Seversk-13
-@kb @IS-4M @~.6
-
-@k @IS-6 Fesquez @~.8
-@k @IS-6 Fesquez @~1.1
+@k @IS-6 @.73 @Diag @0 @0
+@k @IS-6 @.82 @Para @0 @0
 
 @kb @T-54 (1949) @1.13 @Near-Perp @0 @25
 
@@ -159,6 +306,9 @@ Seversk-13
 @k @T-54 (1949) @.93 @Perp @15 @0
 @k @T-54 (1949) @.97 @Diag @0 @0
 @k @T-54 (1949) @.93 @Para @0 @0
+
+@k @T-44-100 @1.18 @Diag @26 @0
+@k @T-44-100 @1.33 @Diag @0 @0
 
 2021-06-15
 0/3
