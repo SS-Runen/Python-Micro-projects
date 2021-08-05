@@ -32,6 +32,27 @@ Update "Red Skies".
 Event - Vehicle - Distance - Orientation - EnemeySpeed - SelfSpeed
 
 2021-08-02
+0/1
+-2
+
+@k @T-44-100 @1.1 @Diag @28 @0
+@k @SU-100P @.7 @Para @0 @0
+@K @T-34-100 @.96 @Diag @0 @0
+
+@k @T-34-100 @.36 @Perp @12 @0
+
+@k @T-44 @2.24 @Para @0 @0
+@K @T-54 (1947) @2.28 @Diag @17 @0
+@k @SU-100P @2.37 @Diag @-4 @0
+
+@k @T-54 (1949) @.98 @Near-Para @0 @0
+@k @ASU-85 @.51 @Para @0 @0
+@kb @T-54 (1947) @.43 @Diag @0 @0
+
+@k Obj 268
+@kb @T-54 (1949) @~.6
+
+2021-08-02
 1/1
 -2
 
@@ -40,24 +61,35 @@ Event - Vehicle - Distance - Orientation - EnemeySpeed - SelfSpeed
 @k @IS-6 @~.1
 @k @T-44-100 @~.06
 
-@kb @T-54 (1947) @~.01 @Near-Para 
+@k @T-54 (1949) @.58 @Diag @0 @0
+@K @Type 63 @.33 @Perp @18 @0
+@K @ASU-85 @.19 @Para @0 @0
 
-@k @T-44-100
-@k @PT-76B
-@kb @T-54 (1949)
+@k @Type 62 @.16 @Perp @18 @0
+@k @Type 62 @.19 @Diag @0 @0
+@kb @T-54 (1949) @.1 @Perp @0 @15
 
-@kb @T-54 (1949) @~.9
+@kb @T-54 (1947) @.01 @Near-Para @5 @0
 
-@k @IS-6 @~2.5 @Perp
-@k @T-54 (1949) @~1.1 @Diag
-@kb @Obj 268 @~1.5 @Para
+@kb @T-54 (1949) @.97 @Diag @0 @14
 
-@k @T-54 (1947) alex368xela @~.2 @Near-Para
-@k @T-54 (1949) @~1 @Diag
-@k @IS-3 @~.1
-@k @Type 63 @~0.02 @Perp
+@k @IS-6 @2.53 @Diag @0 @0
+@k @T-54 (1949) @1.27 @Diag @0 @0
+@kb @Obj 268 @1.32 @Diag @0 @0
+
+@k @T-54 (1947) @.23 @Para @0 @0
+@k @IS-3 @.26 @Near-Para @0 @0
+@k @Type 63 @.04 @Perp @0 @0
+@k @Type 62 @1.02 @Diag @0 @0
+
+@k @Obj 268 @.62 @Diag @0 @0
+@kb @T-54 (1949) @.55 @Near-Para @0 @-11
 
 @k @T-44-100 @~.3
+
+@k @T-44-100 @.11 @Diag @0 @0
+@k @PT-76B @.15 @Diag @0 @0
+@kb @T-54 (1949) @.02 @Diag @21 @0
 
 2021-07-29
 2/2
@@ -76,9 +108,9 @@ Event - Vehicle - Distance - Orientation - EnemeySpeed - SelfSpeed
 @k @Type 63 @1.08 @Near-Perp @0 @0
 @k @IS-3 @1.19 @Para @0 @0
 
-@k @T-54 (1949) @~.9 @Near-Para
-@k @T-54 (1949) @~0.03 @Near-Perp
-@kb @T-44-100 @~.3
+@k @T-54 (1949) @.82 @Para @31 @34
+@k @T-54 (1949) @.26 @Diag @0 @-4
+@kb @T-44-100 @.27 @Diag @4 @0
 
 @k @Type 63 @0.01 @Diag @4 @0
 
@@ -93,9 +125,13 @@ Event - Vehicle - Distance - Orientation - EnemeySpeed - SelfSpeed
 @kb @T-54 (1947) @0.01 @Diag @21 @0
 
 2021-07-27
+1/0
++1
+0/0
+0
 
-@k @T-54 =291= VeryErectus @~1.3 @Near-Perp
-@k @T-54 Dranikk @~1.1 @Near-Para
+@k @T-54 (1947) @1.28 @Near-Perp @46 @0
+@k @T-54 (1951) @1.09 @Para @-5 @0
 
 2021-07-21
 0/0

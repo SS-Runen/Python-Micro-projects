@@ -18,11 +18,18 @@ versus the direction of the enemy shell, not enemy hull.
 - If the uncleared area is large, have something to cover you from a large portion of it and clear what is left.
 - If you cannot reliably clear an area and there is no safe route past it (e.g. a large town in open field) do not expose yourself to it.
 - When leading close-range targets, make sure that the shell will hit the target whether or not it continues moving. Impossible to do at long range.
-- When firing, "bracket" the target: have as much of the target within the upper and lower "spread". Despite slight range errors, round will hit.
+- When firing, "bracket" the target: have as much of the target within the upper and lower "spread".
+Despite slight range errors, round will hit.
 - When scanning for targets, always keep most of the tank hidden. The most exposure should be from a hull-down position.
 - Always watch for shell "splash" or hits before losing sight of a target.
 
 Event - Vehicle - Distance - Orientation - EnemeySpeed - SelfSpeed
+
+2021-08-04
+
+@k @KV-2 (Zis-6) @.09 @Near-Perp @0 @0
+@k @T-34-85 @.19 @Diag @0 @0
+@Kb @M4A4 (SA50) @.11 @Diag @0 @0
 
 2021-06-06
 

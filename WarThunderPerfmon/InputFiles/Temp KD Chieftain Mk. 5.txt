@@ -21,13 +21,13 @@ Event - Vehicle - Distance - Orientation - EnemeySpeed - SelfSpeed
 
 2021-07-28
 
-@k @T-62M-1 AQ55 @~.1 @Near-Perp
-@k @T-55A @~1.8 @Perp
+@k @T-62M-1 @.43 @Near-Perp @0 @0
+@k @T-55A @1.77 @Diag @0 @0
 
 @k @T-62M-1 @~.2
 @kb @T-62M-1 @0.01 @Diag @0 @0
 
-@k @T-55AM-1 @~1 @Diag @0 @0
+@k @T-55AM-1 @1.17 @Diag @0 @0
 
 2021-07-16
 
