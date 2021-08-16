@@ -33,6 +33,16 @@ June 04, 2021. Update "Red Skies".
 
 Event - Vehicle - Distance - Orientation - EnemeySpeed - SelfSpeed
 
+2021-08-17
+
+@k @M18 @.08 @Diag @0 @0
+@k @T-34-85 @.62 @Diag @15 @0 @0
+@K @T-20 @.06 @Diag @6 @0
+@k @T-34-85 (D-5T) @.37 @Near-Para @0 @0
+@k @M4A2 (76) W @.26 @Para @-5 @0
+@k @KV-2 @.08 @Diag @0 @0
+@k @M4A1 @.09 @Diag @0 @0
+
 2021-06-30
 
 @k @KV-85 @0.01 @Diag @0 @0

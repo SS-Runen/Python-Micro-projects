@@ -25,6 +25,13 @@ versus the direction of the enemy shell, not enemy hull.
 Event - Vehicle - Distance - Orientation - EnemeySpeed - SelfSpeed
 
 * For SVD, deviation at close range is 600-800.
+
+2021-08-17
+
+@k @IS-1 @.1 @Near-Para @0 @0
+
+@kb @KV-85 @.08 @Diag @0 @0
+
 2021-08-05
 
 @k @M4A3E2 @1.02 @Para @0 @0
