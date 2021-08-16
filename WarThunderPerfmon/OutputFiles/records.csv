@@ -1,4 +1,50 @@
 DateRecorded,VehicleUsed,Event,EnemyVehicle,Distance,OrientationInSight,EnemySpeed,SelfSpeed
+2021-08-14, Centurion Mk. 10,k,T-54 (1949),.89,Para,0,0
+2021-08-14, Centurion Mk. 10,k,IS-3,.37,Diag,0,0
+2021-08-14, Centurion Mk. 10,k,ASU-85,.4,Near-Perp,16,0
+2021-08-14, Centurion Mk. 10,k,IS-3,.97,Near-Perp,0,0
+2021-08-14, Centurion Mk. 10,k,T-44-100,.77,Near-Perp,31,0
+2021-08-14, Centurion Mk. 10,k,IS-3,1.03,Para,0,0
+2021-08-14, Centurion Mk. 10,k,T-54 (1949),.42,Diag,19,0
+2021-08-14, Centurion Mk. 10,K,T-54 (1949),.51,Perp,17,0
+2021-08-14, Centurion Mk. 10,K,T-54 (1949),.49,Perp,27,0
+2021-08-14, Centurion Mk. 10,k,PT-76B,.05,Near-Para,8,0
+2021-08-14, Centurion Mk. 10,kb,T-44-122,.51,Perp,8,0
+2021-08-14, Centurion Mk. 10,kb,T-54 (1949),.02,Diag,0,0
+2021-08-14, Centurion Mk. 10,k,T-44-100,.8,Near-Perp,14,0
+2021-08-14, Centurion Mk. 10,k,SU-100P,.97,Para,0,0
+2021-08-14, Centurion Mk. 10,k,T-54 (1947),1.64,Near-Perp,28,0
+2021-08-14, Centurion Mk. 10,k,T-54 (1949),.86,Near-Perp,9,0
+2021-08-14, Centurion Mk. 10,k,IS-6,.14,Para,0,0
+2021-08-14, Centurion Mk. 10,k,ASU-85,.2,Near-Para,0,0
+2021-08-14, Centurion Mk. 10,kb,IS-6,1.2,Diag,0,0
+2021-08-10, Centurion Mk. 10,k,IS-6,.38,Near-Para,0,0
+2021-08-10, Centurion Mk. 10,kb,T-54 (1949),1.84,Near-Perp,0,0
+2021-08-10, Centurion Mk. 10,k,T-54 (1947),.74,Diag,21,0
+2021-08-10, Centurion Mk. 10,k,IS-6,.67,Diag,0,0
+2021-08-10, Centurion Mk. 10,k,IS-6,.1,Diag,0,0
+2021-08-10, Centurion Mk. 10,k,T-54 (1947),Diag,1.32,Diag,37
+2021-08-10, Centurion Mk. 10,k,T-44-100,1.41,Diag,0,0
+2021-08-10, Centurion Mk. 10,k,IS-4M,1.77,Diag,0,0
+2021-08-10, Centurion Mk. 10,k,T-54 (1949),.29,Diag,-7,0
+2021-08-10, Centurion Mk. 10,k,T-54 (1949),.3,Perp,27,0
+2021-08-10, Centurion Mk. 10,k,T-54 (1949),.67,Perp,0,0
+2021-08-06, Centurion Mk. 10,k,PT-76B,.46,Diag,-2,0
+2021-08-06, Centurion Mk. 10,k,IS-6,.42,Diag,-4,0
+2021-08-06, Centurion Mk. 10,k,ASU-85,.08,Para,3,0
+2021-08-06, Centurion Mk. 10,K,T-44-100,.58,Perp,21,0
+2021-08-06, Centurion Mk. 10,k,IS-6,.8,Diag,14,0
+2021-08-06, Centurion Mk. 10,k,T-54 (1947),.58,DIag,0,0
+2021-08-06, Centurion Mk. 10,kb,T-54 (1947),.05,Near-Para,0,0
+2021-08-06, Centurion Mk. 10,kb,IS-6,.01,Para,-10,0
+2021-08-06, Centurion Mk. 10,k,Type 63,1.79,Diag,-3,0
+2021-08-06, Centurion Mk. 10,k,IS-3,1.66,Perp,17,0
+2021-08-06, Centurion Mk. 10,kb,IS-6,0.02,Diag,0,0
+2021-08-06, Centurion Mk. 10,k,T-44,.37,Near-Para,0,0
+2021-08-06, Centurion Mk. 10,k,IS-3,.16,Pata,5,24
+2021-08-06, Centurion Mk. 10,k,IS-3,.13,Diag,19,0
+2021-08-06, Centurion Mk. 10,k,T-54 (1949),.55,Diag,44,0
+2021-08-06, Centurion Mk. 10,k,PT-76B,.17,Para,3,0
 2021-08-02, Centurion Mk. 10,k,T-44-100,1.1,Diag,28,0
 2021-08-02, Centurion Mk. 10,k,SU-100P,.7,Para,0,0
 2021-08-02, Centurion Mk. 10,K,T-34-100,.96,Diag,0,0
@@ -9,12 +55,10 @@ DateRecorded,VehicleUsed,Event,EnemyVehicle,Distance,OrientationInSight,EnemySpe
 2021-08-02, Centurion Mk. 10,k,T-54 (1949),.98,Near-Para,0,0
 2021-08-02, Centurion Mk. 10,k,ASU-85,.51,Para,0,0
 2021-08-02, Centurion Mk. 10,kb,T-54 (1947),.43,Diag,0,0
-2021-08-02, Centurion Mk. 10,k Obj 268
-2021-08-02, Centurion Mk. 10,kb,T-54 (1949),~.6
-2021-08-02, Centurion Mk. 10,k,IS-6,~.01
-2021-08-02, Centurion Mk. 10,k,IS-6,.2
-2021-08-02, Centurion Mk. 10,k,IS-6,~.1
-2021-08-02, Centurion Mk. 10,k,T-44-100,~.06
+2021-08-02, Centurion Mk. 10,k,IS-6,.14,Near-Perp,-17,0
+2021-08-02, Centurion Mk. 10,k,IS-6,.25,Near-Para,13,0
+2021-08-02, Centurion Mk. 10,k,IS-6,.04,Diag,-11,0
+2021-08-02, Centurion Mk. 10,k,T-44-100,.18,Diag,14,0
 2021-08-02, Centurion Mk. 10,k,T-54 (1949),.58,Diag,0,0
 2021-08-02, Centurion Mk. 10,K,Type 63,.33,Perp,18,0
 2021-08-02, Centurion Mk. 10,K,ASU-85,.19,Para,0,0
@@ -1184,6 +1228,8 @@ DateRecorded,VehicleUsed,Event,EnemyVehicle,Distance,OrientationInSight,EnemySpe
 2021-06-06, Sherman IC Tipo,kb,IS-1,0.01,Perp,0,0
 2021-06-06, Sherman IC Tipo,k,M18,1.38,Perp,0,0
 2021-06-06, Sherman IC Tipo,k,IS-1,.04,Near-Perp,0,14
+2021-08-17, Sherman Vc,k,IS-1,.1,Near-Para,0,0
+2021-08-17, Sherman Vc,kb,KV-85,.08,Diag,0,0
 2021-08-05, Sherman Vc,k,M4A3E2,1.02,Para,0,0
 2021-08-05, Sherman Vc,k,Comet I,1.11,Perp,10,0
 2021-08-05, Sherman Vc,k,ARL-44,.47,Perp,0,0
@@ -1226,6 +1272,13 @@ DateRecorded,VehicleUsed,Event,EnemyVehicle,Distance,OrientationInSight,EnemySpe
 2021-06-06, Sherman Vc,kb,T-34-85 (D-5T),.02,Diag,0,0
 2021-06-06, Sherman Vc,kb,KV-85,.72,Diag,0,0
 2021-06-06, Sherman Vc,k,T-34-85 (D-5T),1.16,5,0
+2021-08-17, Tiger E,k,M18,.08,Diag,0,0
+2021-08-17, Tiger E,k,T-34-85,.62,Diag,15,0
+2021-08-17, Tiger E,K,T-20,.06,Diag,6,0
+2021-08-17, Tiger E,k,T-34-85 (D-5T),.37,Near-Para,0,0
+2021-08-17, Tiger E,k,M4A2 (76) W,.26,Para,-5,0
+2021-08-17, Tiger E,k,KV-2,.08,Diag,0,0
+2021-08-17, Tiger E,k,M4A1,.09,Diag,0,0
 2021-06-30, Tiger E,k,KV-85,0.01,Diag,0,0
 2021-06-30, Tiger E,k,M18,.05,Diag,10,0
 2021-06-30, Tiger E,k,M4A2 (76) W,0.02,Near-Para,6,0
