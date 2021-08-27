@@ -26,7 +26,23 @@ Event - Vehicle - Distance - Orientation - EnemeySpeed - SelfSpeed
 
 * For SVD, deviation at close range is 600-800.
 
+2021-08-23
+
+Running KD:
+5/1
+2
+3/2
+-3
+
+@k @T-34-85 @.3 @Near-Para @-3 @0
+
+Fields of Normandy, no local replay
+@k @T-34-85 (D-5T) @.03 @Near-Para @0 @0
+
 2021-08-17
+
+@k @Comet I @.6 @Para @12 @0
+@kb @M4A3E2 (76) W @.55 @Diag @0 @0
 
 @k @IS-1 @.1 @Near-Para @0 @0
 
@@ -57,12 +73,12 @@ Event - Vehicle - Distance - Orientation - EnemeySpeed - SelfSpeed
 @k @KV-85 @.8 @Diag @0 @0
 @k @SU-85 @.9 @Near-Para @0 @0
 
-@k @M4A3E2 @~1.2
-@k @IS-1 @~1.2
+@k @M4A3E2 @1.2 @Diag @0 @0
+@k @IS-1 @1.2 @Diag @0 @0
 
 2021-07-24
 
-@k @SU-85 @~.1
+@k @SU-85 @.1 @Diag @0 @0
 
 @k @T-34-85 @1.54 @Diag @0 @0
 @k @Yag-10 (29K) @1.53 @Diag @0 @0
@@ -73,16 +89,16 @@ Event - Vehicle - Distance - Orientation - EnemeySpeed - SelfSpeed
 @k @SU-152 @1 @Diag @6 @0
 @k @T-34-57 @1 @Near-Para @0 @0
 
-@k @ASU-57 @~.01
-@k @ZUT-37
-@k @Sherman Vc @~1
+@k @ASU-57 @.01 @Near-Para @0 @0
+@k @ZUT-37 @.01 @Diag @5 @0
+@k @Sherman Vc @1 @Diag @0 @0
 
 @k @KV-1S @.34 @Diag @-15 @0
 
 @k @T-34-85 @.67 @Near-Para @0 @0
 
-@k @SU-152 @~.4
-@kb @IS-1 @.04
+@k @SU-152 @.4 @Near-Para @4 @0
+@kb @IS-1 @.04 @Near-Para @0 @0
 
 @kb @T-34-85 @.42 @Diag @0 @0
 @k @E.B.R (1954) @.4 @Near-Perp @24 @0

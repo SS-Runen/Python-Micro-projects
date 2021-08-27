@@ -33,7 +33,29 @@ June 04, 2021. Update "Red Skies".
 
 Event - Vehicle - Distance - Orientation - EnemeySpeed - SelfSpeed
 
+2021-08-23
+
+Running KD:
+18/6
+-12
+20/2
++10
+
+1/0
+1
+0/0
+0
+
+@k @T-34-85 @.02 @Para @0 @0
+@k @KV-85 @.52 @Near-Perp @0 @0
+@k @M6A1 @.54 @Para @0 @0
+
 2021-08-17
+1/0
+1
+1/0
+1
+
 
 @k @M18 @.08 @Diag @0 @0
 @k @T-34-85 @.62 @Diag @15 @0 @0
@@ -44,6 +66,10 @@ Event - Vehicle - Distance - Orientation - EnemeySpeed - SelfSpeed
 @k @M4A1 @.09 @Diag @0 @0
 
 2021-06-30
+1/0
+1
+0/0
+0
 
 @k @KV-85 @0.01 @Diag @0 @0
 
@@ -70,6 +96,10 @@ Event - Vehicle - Distance - Orientation - EnemeySpeed - SelfSpeed
 @kb Comet I @1.22 @Diag @0 @0
 
 2021-06-24
+0/2
+-10
+0/0
+0
 
 @kb @T-34-85 @.53 @Diag @0 @10
 
@@ -80,15 +110,13 @@ Event - Vehicle - Distance - Orientation - EnemeySpeed - SelfSpeed
 @k @T-34-85 @.79 @Para @0 @0
 @k @IS-6 @.86 @Diag @0 @0
 
-@k @M4 @~.8 @
-
-@k @KV-2
-@k @Churchill VII
-@k @M4A2
-
 @kb @T-20 @.66 @Near-Para @0 @0
 
 2021-06-18
+1/0
+1
+1/0
+1
 
 @k @T-34-85 (D-5T) @.23 @Near-Para @5 @0
 
