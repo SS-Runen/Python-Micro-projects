@@ -7,9 +7,6 @@ On 2021-03-31 records with no speed listed were removed before starting the new 
 Old vs. T-54 (1949) 41/11 3.727
 Old vs. T-54 (1947) 42/14 3
 
-vs. T-54 (1949) 55/21 (2.62)
-vs. T-54 (1947) 46/22 (2.09)
-
 - Always use sight over 3rd-person against ground targets.
 - When moving past uncleared areas, move slow enough to clear thoroughly and to be able to fire accurately.
 - When scanning for targets, always stay hull down or have most of the tank hidden.
@@ -32,33 +29,37 @@ Update "Red Skies".
 Event - Vehicle - Distance - Orientation - EnemeySpeed - SelfSpeed
 
 2021-08-30
+3/1
+0
+1/0
+1
 
 Base Def Eastern Europe
-@k @T-54 (1947) ASTAF888 @~1.3
-@k @IS-3 @~.02 @Near-Para
+@k @T-54 (1947) @1.06 @Diag @0 @0
+@k @IS-3 @.12 @Near-Para @-14 @0
 
 American Desert
-@k @IS-3 @~.7
-@kb @IS-3 @~.6
+@k @IS-3 @.59 @Near-Perp @6 @0
+@kb @IS-3 @.49 @Diag @0 @0
 
 Domination Eastern Europe
-@k @IS-6 Kraivin @~1.2 @Near-Para
+@k @IS-6 @1.23 @NPara @33 @0
 
 Base Def Second Battle of El Alamein
-@k @T-54 (1949) KongBrig_PKKA @~1
-@k @IS-3 @~1
-@k @T-54 (1947) KongBrig_PKKA @~.02
+@k @T-54 (1949) @1, 1 @Para, Para @28, 0 @0, 0
+@k @IS-3 @.95 @Para  @17 @0
+@k @T-54 (1947) @.14 @Para @-7 @33
 
 Base Def Fields of Poland
-@k @T-54 =SOOS= LUNATIC-DarkHunt @~1.4
+@k @T-54 @1.57 @Diag @0 @0
 
 Base Def Berlin
-@k @T-54 (1947)? Keegn @~.6
-@k @T-44-100 @~.2 @Perp
-@kb @IS-4M @~.2
+@k @T-54 (1947) @.46 @Diag @0 @0
+@k @T-44-100 @.27 @Near-Perp @0 @0
+@kb @IS-4M @.22 @Perp @0 @0
 
 Base Def Eastern Europe
-@kb @T-54 (1947) alex368xela @~.1
+@kb @T-54 (1947) @.46 @Perp @0 @0
 
 2021-08-29
 1/0
