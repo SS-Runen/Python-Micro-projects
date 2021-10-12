@@ -19,13 +19,34 @@ vs. T-62M-1 5/4
 
 Event - Vehicle - Distance - Orientation - EnemeySpeed - SelfSpeed
 
+2021-09-06
+
+@kb @BMD-4 @0.03 @Diag @0 @0
+
+@k @Obj 906 @.05 @Diag @0 @0
+
+2021-08-25
+
+@kb @BMP-1 @.8 @Diag @0 @-8
+
+2021-08-09
+
+@k @T-64A (1971) @.07 @Diag @9 @0
+@k @ZSU-57-2 @1.26 @Diag @0 @0
+@kb @IT-1 @1.75 @Diag @0 @0
+
+@kb @WMA 301 @.1 @Para @0 @0
+
+@k @ZTZ59D1 @1.07 @Perp @28 @0
+
 2021-07-28
 
 @k @T-62M-1 @.43 @Near-Perp @0 @0
 @k @T-55A @1.77 @Diag @0 @0
 
-@k @T-62M-1 @~.2
-@kb @T-62M-1 @0.01 @Diag @0 @0
+@k @T-62M-1 @.29 @Near-Perp @18 @0
+@k @ZSU-57-2 @.52 @Diag @16 @0
+@kb @T-62M-1 @0.02 @Diag @0 @0
 
 @k @T-55AM-1 @1.17 @Diag @0 @0
 
@@ -77,7 +98,7 @@ Event - Vehicle - Distance - Orientation - EnemeySpeed - SelfSpeed
 @k @T-55AM-1 @1.49 @Diag @7 @0
 @kb @T-62M-1 @1.4 @Diag @0 @0
 
-@kb @WMA301 @~1.2
+@kb @WMA301 @1.2 @Diag @0 @0
 
 @k @BMP-3 @.7 @Diag @0 @0
 @k @BMP-3 @.24 @Diag @24 @18
@@ -92,19 +113,21 @@ Event - Vehicle - Distance - Orientation - EnemeySpeed - SelfSpeed
 
 2021-06-22
 
-@kb @BMP-2 @~.7 @Diag
-@k @WMA301 @~1.1
-@k @BMP-1 @~1.2
+@k @T-69 II G @1.2 @Near-Para @0 @-10
 
-@k @IT-1 @~1 @Diag
-@k @BMP-3 @~1 @Diag
+@kb @BMP-2 @.7 @Diag @0 @0
+@k @WMA301 @1.1 @Diag @0 @0
+@k @BMP-1 @1.2 @Diag @0 @0
 
-@kb @WMA301 @~.8 @Near-Para
+@k @IT-1 @.65 @Diag @0 @0
+@k @BMP-3 @.86 @Diag @0 @4
+
+@kb @WMA301 @.8 @Near-Para @0 @0
 
 @k @T-55AM-1 @.46 @Near-Para @7 @0
 @kb @WMA301 @0.01 @Near-Para @0 @0
 
-@k @Type 59 @~1 @Perp
+@k @Type 59 @1 @Perp @0 @0
 
 2021-06-10
 ===============================================
@@ -151,7 +174,7 @@ Event - Vehicle - Distance - Orientation - EnemeySpeed - SelfSpeed
 @k @T-64A (1971) @1.23, 1.23 @Diag, Diag @14, 0 @0, 0
 @kb @ZSU-57-2 @.19 @Near-Perp @0 @0
 
-@k @Type 69 II G @0.2 @Near-Perp @-4 @8
+@k @T-69 II G @0.2 @Near-Perp @-4 @8
 
 @kb @BMP-2 @0.02 @Diag @0 @0
 
@@ -164,7 +187,7 @@ Event - Vehicle - Distance - Orientation - EnemeySpeed - SelfSpeed
 
 @kb @T-55AM-1 @.18 @0 @0
 
-@k @Type 69 II G @.6 @Near-Para @0 @0
+@k @T-69 II G @.6 @Near-Para @0 @0
 
 @kb @T-55A @.03 @Diag @0 @0
 

@@ -25,6 +25,10 @@ Despite slight range errors, round will hit.
 
 Event - Vehicle - Distance - Orientation - EnemeySpeed - SelfSpeed
 
+2021-09-28
+
+@k @T-23-100 @.2 @Near-Para @0 @0
+
 2021-08-04
 
 @k @KV-2 (Zis-6) @.09 @Near-Perp @0 @0
