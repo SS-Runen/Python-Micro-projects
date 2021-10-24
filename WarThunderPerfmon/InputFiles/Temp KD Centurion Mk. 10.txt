@@ -33,15 +33,145 @@ to check effect of multiple spawns], T-34-85 series) spawn again.
 
 Event - Vehicle - Distance - Orientation - EnemeySpeed - SelfSpeed
 
+2021-10-25
+
+@kb @SU-122-54 @.5 @Diag @0 @-6
+
+@k @M48 @.7 @Diag @0 @0
+@k @ZSU-57-2 @.02 @Diag @0 @0
+@kb @Obj 268 @.02 @Diag @0 @0
+
+2021-10-23
+
+Maginot Line
+@k @IS-4M @~1 @Diag
+@kb @SU-100P @~.65 @Near-Para
+
+Fulda
+@kb @T-54 (1947) @.02 @0 @26
+
+European Province
+@k @T-54 (1949)? Allegedly got "Sniper" on burnout. @~1.1 @Perp
+@kb @T-44 @~.04 @Diag @0 @0
+
+Seversk-13
+@k @T-54 (1949) @~.2 @Diag
+@k @T-54 (1949) @~.04 @Diag @0 @0
+@k @PT-76B @~.1 @Para
+
+Campania
+@k T-54(1947) @~.02 @Diag @
+@k @T-44-100 @~.05 @Near-Perp @0 @0
+@k @T-54 (1949) @~1 @Perp
+@k @T-44 @~1 @Diag
+@k @PT-76B @~.8
+@kb @ASU-85 @~.2 @Near-Perp
+
+Middle East
+@k @T-54 (1949) @~.5 @Near-Perp @0 @0
+@k @BTR-152 @~0.03 @Para @0 @0
+@k @T-54 (1947) Oberlord @~.3 @Diag @0 @0
+
+Normandy
+@k @T-54 (1949) @~.02 @Diag @0 @0
+@k @T-54 (1949) @~.2 @Diag @0 @0
+@k @Obj 268 @~.2 @Diag @~20 @0
+
+Base Def Poland
+@k @T-44-100 @~.8 @Para @0 @0
+@k @PT-76B @~1.1 @Para
+@kb @T-54 (1947) @~.5
+
+Advance to the Rhine
+@k @T-54 (1947) @.03 @Diag @0 @0
+@kb @T-54 (1947) @.03 @Diag @0 @0
+
+2021-10-19
+
+@Poland
+@k @T-54 (1947) @.12 @Perp @0 @0
+@k @Type 62 @.14, .14 @Diag, DIag @30, 0 @33, 0
+@k @IS-4M @1.35 @Diag @27 @0
+@kb @Type 62 @.06 @Diag @0 @-7
+
+Finland
+@k @Type 63 @.8 @Diag @0 @0
+
+Maginot Line
+@k @T-54 (1947) @.73 @Diag @1 @0
+@k @T-54 (1947) @.93 @@Diag @0 @0
+@k @T-44-100 @1.17 @Para @0 @0
+
+@American Desert
+@k @T-54 (1947) @.3 @Perp @6 @0
+@k @T-54 (1947) @.62 @Near-Para @0 @0
+@k @T-54 (1947) @.49 @Perp @17 @0
+
+Cargo Port
+@kb @T-54 (1949) @0.05 @Diag @0 @0
+
+Cargo Port
+@kb @IS-4M @.7 @Diag @0 @0
+
+Vietnam
+@kb @IS-3 @0.02 @Para @8 @0
+
+Seversk 13
+@k @T-54 (1949) @.05 @Diag @17 @0
+@k @BTR-152 @.07 @Near-Perp @0 @0
+@kb @T-54 (1947) @.04 @Diag @0 @0
+
+European Province
+@k @IS-3 @~1.3 @Near-Para @0 @0
+
+Poland
+@kb @T-54 (1947) @.02 @Near-Para @22 @17
+
+2021-10-15
+
+Poland
+@k @T-44-100 @.37 @Diag @0 @0
+@k @IS-6 @.41 @Perp @5 @0
+@k @T-54 (1949) @.79 @Para @0 @0
+@k @T-44-100 @.32 @Diag @0 @0
+@K @T-54 (1949) @.24 @Near-Perp @-9 @0
+
+@Finland
+@k @IS-4M @.2 @Diag @0 @0
+@kb @T-44-100 @.05 @Diag @0 @0
+
+Seversk 13
+@K @T-54 (1949) @.36 @Perp @18 @0
+@k @T-44-100 @.06 @Diag @0 @0
+@kb @T-54 (1949) @.26 @Near-Para @0 @0
+
+Maginot Line
+@k @T-54 (1947) @.17 @Perp @28 @0
+@k @IS-4M @.93 @Para @0 @0
+
+Mozdok
+@k @T-54 (1947) @.81 @Diag @29 @0
+@k @T-54 (1947) @.56 @Diag @12 @0
+@k @T-54 (1949) @.72 @Para @44 @0
+@kb @IS-4M @.06 @Diag @0 @0
+
+@kb @T-54 (1949) @.46 @Diag @0 @-4
+
+@kb @T-44-100 @.43 @Diag @0 @0
+
 2021-10-13
 
-@k @T-54 (1947) 
+Hurtgen Forest
+@k @T-54 (1947) @.81 @Near-Para @0 @0
+@k @SU-122-54 @1.2 @Para @0 @0
+
+@k @T-54 (1947) .57, .55 @Near-Perp, Diag @9, 25 @0, 0
 
 2021-10-11
 
 Second Battle of El Alamein
-@k @T-44-100 @~.1
-@kb @T-54 (1949) @~.3 @Diag @0 @0
+@k @T-44-100 @.43 @Para @20 @0
+@kb @T-54 (1949) @.77 @Diag @0 @0
 
 Middle East
 @k @T-54 (1949) @1.01 @Diag @0 @0
@@ -100,9 +230,9 @@ Mozdok
 2021-10-03
 
 Berlin
-@k @T-54 (1949)?51 @~.5
-@k @T-54 (1949)?51 @~.2
-@kb @M48 @~.7 @Near-Para
+@k @T-54 (1949) @.5 @Diag @0 @0
+@k @T-54 (1949) @.2 @Diag @0 @0
+@kb @M48 @.7 @Near-Para @0 @0
 
 2021-09-30
 
@@ -118,11 +248,11 @@ Base Def Hurtgen Forest
 @K @T-54 (1951) @.71 @Perp @0 @0
 
 Hurtgen Forest
-@k @IS-6 @~.3 @Diag
-@k @ZSU-57-2 @~.1
-@k @ZSU-57-2 @~.05
-@k @ZSU-57-2 @~.08
-@kb @T-54 (1947) @~.06
+@k @IS-6 @.3 @Diag @0 @0
+@k @ZSU-57-2 @.1 @Para @0 @0
+@k @ZSU-57-2 @.05 @Diag @6 @0
+@k @ZSU-57-2 @.08 @Diag @0 @0
+@kb @T-54 (1947) @.06 @Near-Para @0 @0
 
 Middle East
 @k @T-54 (1951) @.53 @Diag @0 @0
