@@ -19,6 +19,30 @@ vs. T-62M-1 5/4
 
 Event - Vehicle - Distance - Orientation - EnemeySpeed - SelfSpeed
 
+2021-11-03
+
+@k @T-69-II G @.48 @Perp @16 @0
+@k @M60A3 TTS @.31 @Para @-8 @5
+@kb @T-62M-1 @0.12 @Diag @0 @-10
+
+2021-10-13
+
+@k @T-64A (1971) @.8 @Near-Perp @0 @0
+
+2021-10-05
+
+Spaceport
+@k @T-64A (1971) @1.05 @Near-Para @0 @0
+@k @T-10A @.56 @Para @22 @0
+@k @BMP-3 @.89 @Para @24 @0
+
+Berlin
+@k @T-64A (1971) @.8 @Near-Para @0 @0
+@kb @T-62M-1 @.1 @Near-Para @0 @0
+
+@k @T-64A (1971) @.06 @Diag @0 @0
+@kb @2S25 @.02 @Diag @10 @0
+
 2021-09-06
 
 @kb @BMD-4 @0.03 @Diag @0 @0

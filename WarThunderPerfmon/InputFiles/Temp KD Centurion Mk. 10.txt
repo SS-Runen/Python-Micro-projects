@@ -32,6 +32,12 @@ October 04, 2021
 to check effect of multiple spawns], T-34-85 series) spawn again. 
 
 Event - Vehicle - Distance - Orientation - EnemeySpeed - SelfSpeed
+
+2021-11-02
+
+@k @T-54 (1947) @.26 @Perp @26 @0
+@K @T-54 (1949) @.19 @Para @13 @0
+
 2021-10-27
 
 Space Port
