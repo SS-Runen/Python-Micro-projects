@@ -19,9 +19,37 @@ vs. T-62M-1 5/4
 
 Event - Vehicle - Distance - Orientation - EnemeySpeed - SelfSpeed
 
+2021-11-11
+
+European Province
+@k @WMA-301 @~.9 @Perp
+@k @BMP-3 @.04 @Diag @15 @10
+
+@Fire Arc
+@k @WMA-301 @~2.1 @Para @0 @0
+
+Berlin
+@K @BMP-2 @.5 @Diag @0 @0
+@k @T-69 II G @.03 @Near-Perp @20 @0
+@kb @BMP-3 @.1 @Near-Para @0 @0
+
+Seversk 13
+@kb @WMA-301 @.3 @Diag @0 @18
+
+Cargo Port
+@k @BMP-2 @.3 @Diag @20 @0
+@kb @T-62M-1 @.04 @Near-Para @0 @8
+
+Seversk 13
+@kb @2S25 @.02 @Diag @0 @0
+
+El Alamein
+@k @ZSU-57-2 @.5 @Near-Para
+@k @T-69 II G @~1.2 @Para @0 @0
+
 2021-11-03
 
-@k @T-69-II G @.48 @Perp @16 @0
+@k @T-69 II G @.48 @Perp @16 @0
 @k @M60A3 TTS @.31 @Para @-8 @5
 @kb @T-62M-1 @0.12 @Diag @0 @-10
 

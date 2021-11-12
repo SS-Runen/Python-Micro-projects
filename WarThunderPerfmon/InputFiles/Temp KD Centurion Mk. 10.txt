@@ -1,23 +1,29 @@
 
 http://warthunder.com/en/registration?r=userinvite_28552741
 
-Event Vehicle Distance OrientationInSigh RelativeMovement SelfMovement RelativeAzimuth
-
 On 2021-03-31 records with no speed listed were removed before starting the new count.
 Old vs. T-54 (1949) 41/11 3.727
 Old vs. T-54 (1947) 42/14 3
 
-- Always use sight over 3rd-person against ground targets.
-- When moving past uncleared areas, move slow enough to clear thoroughly and to be able to fire accurately.
-- When scanning for targets, always stay hull down or have most of the tank hidden.
-- If the uncleared area is large, have something to cover you from a large portion of it and clear what is left.
-- If you cannot reliably clear an area and there is no safe route past it (e.g. a large town in open field)
-do not expose yourself to it.
+## Gunnery
+- Always use sight and machine gun over 3rd-person against ground targets when firing.
 - When leading close-range targets, make sure that the shell will hit the target whether or not it continues moving.
-- When firing, "bracket" the target: have as much of the target within the upper and lower "spread". Despite slight range errors, round will hit.
-- When scanning for targets, always keep most of the tank hidden. The most exposure should be from a hull-down position.
+- When firing, "bracket" the target: have as much of the target within the upper and lower "spread".
+Despite slight range errors, round will hit.
 - Always watch for shell "splash" or hits before losing sight of a target.
 - When a target is showing a significant part of its side, APDS is usually safer to use than HESH.
+
+## Scannning and Searching
+- When scanning for targets, always stay hull down or have most of the tank hidden.
+- If the uncleared area is large, have something to cover you from a large portion of it and clear what is left.
+- Use third-person (3rd person view from turret top) when scanning extremely close areas.
+Switch to high-zoom if an area stands out, e.g. it is far but in line of sight.
+- When scanning for targets, always keep most of the tank hidden. The most exposure should be from a hull-down position.
+
+## Positioning and Movement
+- When moving past uncleared areas, move slow enough to clear thoroughly and to be able to fire accurately.
+- If you cannot reliably clear an area and there is no safe route past it (e.g. a large town in open field)
+do not expose yourself to it.
 - Always keep as much of the vehicle hidden as possible whether moving or waiting.
 
 June 04, 2021
@@ -28,13 +34,145 @@ Update "Red Skies".
 - Modifications to armor calculation where thinnest plate is selected when shell hits a join/joint of armor.
 
 October 04, 2021
-- New rule for respawns. If killed by non-prioirity (i.e. T-54 1949/1947 [T-54 1951 will be used as baseline "control"
-to check effect of multiple spawns], T-34-85 series) spawn again. 
+- New rule for respawns. If killed by non-prioirity (i.e. NOT T-54 1949/1947, T-34-85 series) spawn again. T-54 1951
+will be used as baseline "control" to check effect of multiple spawns.
+
+November 12, 2019
+First use of Centurion Mk. 10 semi-historical sight with range setting display.
 
 Event - Vehicle - Distance - Orientation - EnemeySpeed - SelfSpeed
 
+2021-11-12
+
+@k @Obj 268 @.41 @Perp @0 @0
+@k @IS-4M @.4 @Para @0 @0
+@k @T-44 @.38 @Near-Perp @0 @0
+
+@Sweden
+@k @T-44-100 @.2 @Diag @0 @0
+@kb @T-44-100 @.2 @Diag @0 @0
+
+Ground Zero
+@k @T-44-122 @.4 @Near-Perp
+@k @T-54 (1947) @.3 @Diag @8 @0
+@kb @T-54 (1949) @.1 @Para @13
+
+Fields of Normandy
+@k @T-44-100 @.2 @Near-Perp @0 @0
+
+Fields of Normandy
+@k @IS-4M @.2 @Perp
+@k @IS-4M @1 @Diag
+@k @SU-100P @.2 @Para
+@k @ZSU-37 @.22 @Diag
+
+Hurtgen Forest
+@k @BTR-152A @.85 @Perp @30 @0
+
+Fire Arc
+@k @T-54 (1949) @2.29 @Near-Para @28 @0
+@k @T-54 (1949) @1.32 @Diag @8 @0
+@k @T-54 (1947) @1.64 @Diag
+
+Berlin
+@k @T-54 (1949) @.25 @Perp
+@kb @T-34-100 @.3 @Diag @0 @0
+
+Middle East
+@k @IS-4M @1.17 @Near-Perp @7 @0
+@k @T-44 @1.23 @Para @0 @0
+@kb @T-54 (1947) @1.1 @Diag @0 @-11
+
+2021-11-09
+
+Sweden
+@k @ZSU-57-2 @.03 @Near-Perp @15 @0
+
+Second Battle of El Alamein
+@k @T-54 (1949) @2.09 @Near-Para @0 @0
+@k @ASU-85 @2.09 @Diag @6 @0
+
+Maginot Line
+@k @Type 63-I @.04 @Near-perp @0 @0
+@kb @T-54 (1949) @.03 @Diag @0 @0
+
+Poland 5:58:00
+@k @ASU-85 @.69 @Para @0 @0
+@k @T-54 (1949) @.24 @Diag @23 @0
+@k @T-54 (1949) @.34 @Near-Para @0 @-11
+@k @T-54 (1947) VeryErectus @.6 @Diag @9 @0
+
+2021-11-08
+
+Ground Zero
+@k @PT-76B @.7 @Perp @0 @0
+@k @T-34-100 @.5 @Perp @0 @0
+@k @SU-100P @.5 @Near-Para @-11 @0
+@kb @T-54 (1949) @.04 @Near-para @0 @0
+
+American Desert
+@k @Obj 268 @.1 @Diag @0 @0
+@kb @T-44-100 @.09 @Diag @0 @14
+
+Advance to the Rhine
+@k @IS-4M @.7 @Near-perp
+@k @Type 62 @.6 @Near-Para @0 @
+
+Poland
+@k @Obj 268 @1.08 @Para @0 @0
+@kb @IS-4M @.08 @Diag @0 @0
+
+@k @PT-76B @.28 @Near-Para @20 @0
+@k @PT-76B @.06 @Diag @0 @0
+@kb @PT-76B @.19 @Near-Para @0 @16
+
+Hurtgen Forest
+@k @SU-100P @.9 @Perp @13 @0
+
+Maginot Line [Base Def]
+@k @T-54 (1949) @1.3, 1.28 @Diag, Diag @33, 0 @0, 0
+@k @T-44-100 @1.69 @Near-Perp @22 @0
+@k @T-44-100 @.55 @Near-Perp @0 @0
+@k @IS-3 @.65 @Diag @0 @8
+@kb @T-54 (1947) @.26 @Near-Perp @21 @0
+
+Cargo Port
+@kb @T-54 (1949) @.2 @Near-Para @0 @0
+
+2021-11-04
+
+Campania
+@kb T-34-100 @.57 @Near-Perp @0 @0
+@k @BTR-152A @.4 @Diag @0 @0
+
+Sweden
+@kb @IS-4M @.04 @Near-Para @0 @0
+
+Poland
+@k @Obj 268 @1.04 @Para @-2 @0
+
+Hurtgen Forest
+@k @T-44-100 @1.08 @Near-Perp @0 @0
+@k @T-54 (1949) @.38, .35 @Diag @15, 2 @3, 12
+
+Fulda
+@k @T-44-100 @.16 @Diag @14 @0
+@k @T-54 (1949) @.81 @Diag  @13 @0
+@k @T-54 (1949) @1.33 @Diag @0 @0
+@k @IS-4M @.46 @Diag @0 @0
+@k @BTR-152A @.9 @Diag @0 @0
+@kb @IS-4M @.47 @Diag @0 @0
+
+2021-11-06
+
+Vietnam
+@k @T-54 (1947) @.19 @Perp @26 @0
+@K @T-54 (1949) @.17 @Para @13 @0
+@k @PT-76B @.17 @Perp @0 @0
+
 2021-11-02
 
+Campania
 @k @T-54 (1947) @.26 @Perp @26 @0
 @K @T-54 (1949) @.19 @Para @13 @0
 
