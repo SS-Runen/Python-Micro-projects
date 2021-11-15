@@ -42,6 +42,38 @@ First use of Centurion Mk. 10 semi-historical sight with range setting display.
 
 Event - Vehicle - Distance - Orientation - EnemeySpeed - SelfSpeed
 
+2021-11-16
+
+American Desert [Battle]
+@k @T-54 (1947) @~.3 @Near-Perp
+@k @IS-3 @~.3 @Near-Perp
+@k @T-54 (1949) @~.2 @Near-Perp
+@k @T-54 (1949) @~.1 @Diag
+
+Fields of Normandy [Battle]
+@k @T-54 (1947) @~.04 @Diag @0 @0
+@k @Obj 268 @~.2
+@k @T-54 (1949) @~.3 @Diag @0 @0
+@kb @PT-76B @~.03 @Near-Perp
+
+Fields of Normandy
+@k @T-54 (1949) @~.02
+@k @T-54 (1947) @~.03
+@kb @T-54 (1947) @~.3
+
+Second Battle of El Alamein [Battle]
+@k @SU-100P @~1.6 @Near-Perp
+@k @T-54 (1949) @~.04
+@k @T-54 (1947) @~.08
+
+Vietnam [Battle]
+@k @T-54 (1949) @~.03 @Diag
+@k @T-54 (1947) @~.05 @Diag @0 @0
+@k @T-54 (1947) @~.2 @Near-Para @0 @0
+@k @T-44-100 @~0.03 @Diag
+@k @PT-76B @0.03 @Diag
+@kb @T-44-100 @.01 @Near-Para @0 @-11
+
 2021-11-12
 
 @k @Obj 268 @.41 @Perp @0 @0
