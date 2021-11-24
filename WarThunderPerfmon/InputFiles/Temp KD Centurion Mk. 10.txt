@@ -42,6 +42,51 @@ First use of Centurion Mk. 10 semi-historical sight with range setting display.
 
 Event - Vehicle - Distance - Orientation - EnemeySpeed - SelfSpeed
 
+2021-11-24
+
+Poland [Battle]
+@K @T-54 (1949) @.04 @Perp
+@k @SU-100P @~7 @Diag
+
+Maginot
+@k @T-54 (1949) @~.1 @Diag @0 @0
+@kb @T-54 (1949) @~1.1 @Diag @0 @-11
+
+Campania
+@kb @T-54 (1949) @.2 @Diag @0 @0
+
+Aral Sea
+@kb @T-54 (1949) @.2 @Diag @0 @16
+
+Poland
+@k @T-54 (1947) @~.1 @Near-perp
+@k @T-54 (1949)
+@k @T-44-100
+@k @ASU-85
+
+2021-11-20
+
+Maginot Line [Battle]
+@k @T-54 (1947) @1.2 @Near-Perp @0 @0
+@k @Type 63 @1.2 @Diag @0 @0
+@kb @T-44-100 @1.2 @Diag @0 @0
+
+Vietnam
+@k @T-54 (1947) @.03 @Diag @14 @0
+@kb @T-54 (1949) @.04 @Diag @0 @0
+
+Eastern Europe
+@k @T-44-100 @.05 @Diag @0 @0
+@k @T-44 @.03 @Near-Para @6 @0
+
+Eastern Europe
+@k @T-54 (1947) @.97 @Diag @0 @0
+@kb @T-44 @.81 @Diag @0 @0
+
+Sweden
+@k @IS-4M @.07 @Near-perp @11 @0
+@k @T-54 (1949) @.08 @Diag @14 @0
+
 2021-11-16
 
 American Desert [Battle]
