@@ -42,15 +42,77 @@ First use of Centurion Mk. 10 semi-historical sight with range setting display.
 
 Event - Vehicle - Distance - Orientation - EnemeySpeed - SelfSpeed
 
+2021-12-02
+
+Ground Zero
+@k @ASU-85 @.1 @Near-perp @14 @0
+
+Middle East
+@k @PT-76-57 @.75 @Near-para @20 @0
+@k @PT-76-57 @.9 @Diag @10 @0
+
+Advance to the Rhine
+@kb @T-54 (1949) @.03 @Diag @0 @0
+
+Berlin
+@kb @PT-76-57 @.85 @Near-perp @0 @0
+@kb @PT-76-57 @.73 @Near-perp @0 @14
+
+Berlin
+@k @T-54 (1947) @.38 @Near-para @0 @0
+@kb @IS-4M @.3 @Near-para @0 @0
+
+Berlin
+@kb @IS-4M @.08 @Diag @9 @0
+
+American Desert
+@k @T-54 (1947) @.26 @Diag @26 @0
+@kb @T-54 (1949) @.16 @Near-para @0 @0
+
+Red Desert
+@k @T-54 (1949) @.58 @Diag @21 @0
+@k @T-54 (1947) @.25 @Near-perp @31 @15
+@k @T-54 (1949) @.98 @Near-Perp @28 @0
+
+Berlin
+@k @T-54 (1947) @.6 @Para @17 @0
+@k @IS-4M @.78 @Near-Para @0 @0
+@kb @IS-6 @.03 @Near-para @0 @7
+
+Vietnam
+@kb @PT-76B @.15 @Diag @0 @0
+
+Spaceport
+@k @SU-100 @.71 @Perp @7 @0
+@k @T-54 (1949) @.84 @Near-perp @30 @0
+@kb @Obj 268 @.55 @Near-para @0 @0
+
+Finland
+@k @IS-3 @.15 @Near-Para @0 @0
+
+2021-11-30
+
+@k @T-54 (1949) @.06 @Near-para @0 @0
+@k @ASU-85 @.08 @Near-perp @11 @0
+@k @ZSU-57-2 @.03 @Diag @14 @0
+@k @M48 @.1 @Diag @0 @0
+
+@k @WZ305 @.2 @Perp @0 @0
+@kb @ZTZ59 @.1 @Diag @0 @0
+
 2021-11-24
 
+Abandoned Factory
+@k @ASU-8 @.52 @Near-para @20 @0
+@kb @IS-3 @.23 @Diag @0 @-11
+
 Poland [Battle]
-@K @T-54 (1949) @.04 @Perp
-@k @SU-100P @~7 @Diag
+@K @T-54 (1949) @.19 @Perp @21 @16
+@k @SU-100P @7 @Diag @12 @3
 
 Maginot
-@k @T-54 (1949) @~.1 @Diag @0 @0
-@kb @T-54 (1949) @~1.1 @Diag @0 @-11
+@k @T-54 (1949) @.26 @Nea-perp @3 @0
+@kb @T-54 (1949) @1.19 @Diag @0 @-8
 
 Campania
 @kb @T-54 (1949) @.2 @Diag @0 @0
@@ -59,10 +121,12 @@ Aral Sea
 @kb @T-54 (1949) @.2 @Diag @0 @16
 
 Poland
-@k @T-54 (1947) @~.1 @Near-perp
-@k @T-54 (1949)
-@k @T-44-100
-@k @ASU-85
+@k @SU-100P @.54 @Diag @9 @0
+@k @T-54 (1947) @.45 @Near-perp @0 @6
+@k @T-54 (1949) @.45 @Near-perp @16 @0
+@k @T-54 (1949) @.05 @Diag @-7 @2
+@k @T-44-100 @.08 @Near-Perp @4 @31
+@k @ASU-85 @.08 @Diag @11 @3
 
 2021-11-20
 
