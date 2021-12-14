@@ -42,6 +42,40 @@ First use of Centurion Mk. 10 semi-historical sight with range setting display.
 
 Event - Vehicle - Distance - Orientation - EnemeySpeed - SelfSpeed
 
+2021-12-08
+
+Aral Sea
+@k @Type 62 @.79 @Diag @0 @0
+@k @T-54 (1949) @.51 @Diag @0 @0
+
+Eastern Europe
+@kb @T-54 (1951) @.04 @Diag @0 @-11
+
+2021-12-06
+
+Cargo Port
+@k @T-54 (1949) @.87 @Diag @23 @0
+@k @Obj 268 @.18 @Near-para @0 @0
+@K @PT-76-57 @.47 @Para @0 @-11
+@kb @SU-100P @.32 @Diag @0 @0
+
+Fulda
+@K @T-54 (1949) @.65 @Diag @16 @0
+@k @PT-76B @1.35 @Para @0 @0
+
+Red Desert
+@k @T-54 (1947) @.68 @Near-para @8 @0
+
+Battle of Hurtgen Forest
+@k @T-44 @.7 @Diag @6 @0
+@k @T-34-100 @.69 @Diag @0 @0
+@kb @T-54 (1947) @.61 @Diag @0 @0
+
+Second Battle of El Alamein
+@k @T-54 (1947) @2.75 @Diag @0 @0
+@k @T-54 (1947) @1.73 @Para @0 @0
+@kb @T-54 (1949) @1.82 @Near-para @0 @-7
+
 2021-12-02
 
 Ground Zero
@@ -246,7 +280,7 @@ Poland 5:58:00
 @k @ASU-85 @.69 @Para @0 @0
 @k @T-54 (1949) @.24 @Diag @23 @0
 @k @T-54 (1949) @.34 @Near-Para @0 @-11
-@k @T-54 (1947) VeryErectus @.6 @Diag @9 @0
+@k @T-54 (1947) @.6 @Diag @9 @0
 
 2021-11-08
 
@@ -402,7 +436,7 @@ Seversk-13
 @k @PT-76B @.21 @Para @26 @0
 
 Wallonia
-@k T-54(1947) @.18 @Diag @30 @0
+@k T-54 (1947) @.18 @Diag @30 @0
 @k @T-44-100 @.19 @Diag @-2 @0
 @k @T-54 (1949) @.89 @Perp @22 @0
 @k @T-44 @1.05 @Diag @25 @0
@@ -1997,7 +2031,7 @@ Note: Make sure to note the range listing of APDS before switching to HESH. Swit
 
 @k @T-54 (1947) @.25 @Near-Perpendicular @0 @0
 
-@kb @T-54(1949) @.21 @Diagonal @0 @0
+@kb @T-54 (1949) @.21 @Diagonal @0 @0
 
 @k @IS-3 @.65 @Diagonal @0 @0
 

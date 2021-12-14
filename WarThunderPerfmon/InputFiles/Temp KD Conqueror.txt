@@ -33,7 +33,30 @@ October 04, 2021
 - New rule for respawns. If killed by non-prioirity (i.e. NOT T-54 1949/1947, T-34-85 series) spawn again. T-54 1951
 will be used as baseline "control" to check effect of multiple spawns.
 
-2021-12-04
+2021-12-10
+
+Sweden
+@k @SU-100P @~.03 @Near-perp
+
+2021-12-08
+
+Second Battle of El Alamein
+@k @T-54 (1947) @.91 @Diag @0 @0
+
+2021-12-06
+
+Second Battle of El Alamein
+@k @ZSU-37 @1.69 @Perp @19 @0
+@k @T-54 (1947) @1.6 @Near-perp @0 @0
+
+Second Battle of El Alamein
+@k @ZSU-57-2 @1.55 @Diag @0 @0
+@kb @Type 62 @.66 @Diag @0 @0
+
+Campania
+@kb @IS-3 @.1 @Near-perp @0 @-7
+
+2021-12-02
 
 Berlin
 @k @IS-6 @.12 @Near-para @-7 @18
