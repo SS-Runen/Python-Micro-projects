@@ -33,6 +33,43 @@ June 04, 2021. Update "Red Skies".
 
 Event - Vehicle - Distance - Orientation - EnemeySpeed - SelfSpeed
 
+2021-12-16
+
+Campania
+@k @T-34-85 (D-5T) @.59 @Para @0 @0
+@kb @M18 @.35 @Near-para @0 @0
+
+Seversk 13
+@kb @Concept 3 @Para @0 @0
+
+Stalingrad
+@k @Comet I @.2 @Para @0 @0
+@k @M-51 @.03 @Diag @8 @0
+@k @M4A1 (76) W @.08 @Near-para @0 @0
+@kb @M-51 @.1 @Diag @0 @0
+
+Advance to the Rhine
+@k @M4A3E2 @.5 @Near-para @-4 @0
+
+Japan
+@k @SU-85 @.04 @Near-perp @-3 @0
+
+Hurtgen Forest
+@k @T-34-85 @.78 @Near-para @-8 @0
+@kb @M-51 @.78 @Diag @0 @-7
+
+Maginot
+@k @Avenger @.94 @Diag @15 @0
+@k @T55E1 @.88 @Para @0 @0
+@k @KV-2 @1.16 @Diag @0 @0
+@K @M4A3E2 @.52 @Near-perp @0 @0
+@k @M4A3E2 @.51 @Diag @-4 @0
+@kb @SU-85M @.59 @Near-para @0 @0
+
+38th Parallel
+@k @M18 @.01 @Diag @0 @6
+@kb @M4A3E2 @.04 @Near-para @8 @0
+
 2021-10-16
 
 @k @T-34-85 @1.85 @Near-Perp  @0 @0

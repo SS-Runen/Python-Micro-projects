@@ -25,6 +25,15 @@ Despite slight range errors, round will hit.
 
 Event - Vehicle - Distance - Orientation - EnemeySpeed - SelfSpeed
 
+2021-12-16
+
+Eastern Europe [Battle]
+@K @M18 @.69 @Near-para @0 @0
+@kb @Comet I @1.06 @Diag @0 @0
+
+Finland
+@kb @M4A3E2 @.03 @Near-perp @0 @0
+
 2021-09-28
 
 @k @T-23-100 @.2 @Near-Para @0 @0

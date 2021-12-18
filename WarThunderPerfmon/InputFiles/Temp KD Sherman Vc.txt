@@ -26,6 +26,11 @@ Event - Vehicle - Distance - Orientation - EnemeySpeed - SelfSpeed
 
 * For SVD, deviation at close range is 600-800.
 
+2021-12-16
+
+Eastern Europe [Battle]
+@k @T-34-85 (D-5T) @.07 @Near-perp @-8 @0
+
 2021-09-28
 
 @kb @M4A3E2 (76) W @.9 @Para @0 @0
