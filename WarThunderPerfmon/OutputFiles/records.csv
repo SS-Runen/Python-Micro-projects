@@ -1,4 +1,17 @@
 DateRecorded,VehicleUsed,Event,EnemyVehicle,Distance,OrientationInSight,EnemySpeed,SelfSpeed
+2021-12-18, Centurion Mk. 10,kb,SU-100P,.43,Near-perp,0,32
+2021-12-18, Centurion Mk. 10,kb,T-54 (1947),.37,Diag,30,0
+2021-12-18, Centurion Mk. 10,k,T-54 (1949),1.19,Near-para,-4,0
+2021-12-18, Centurion Mk. 10,k,T-54 (1949),0.475,Diag,15.5,3.0
+2021-12-18, Centurion Mk. 10,k,T-44-100,0.37,Perp,26.5,0.0
+2021-12-18, Centurion Mk. 10,kb,T-54 (1949),.25,Diag,0,32
+2021-12-18, Centurion Mk. 10,k,T-54 (1949),.98,Diag,-3,0
+2021-12-18, Centurion Mk. 10,k,T-54 (1947),.94,Para,9.333333333333334,0.0
+2021-12-18, Centurion Mk. 10,k,T-54 (1949),.22,Para,-3,0
+2021-12-18, Centurion Mk. 10,k,T-54 (1949),.8,Near-para,0,0
+2021-12-18, Centurion Mk. 10,k,T-54 (1947),1.21,Near-para,0,0
+2021-12-18, Centurion Mk. 10,k,T-44,.59,Diag,38,0
+2021-12-18, Centurion Mk. 10,k,T-54 (1947),1.34,Near-para,0,0
 2021-12-08, Centurion Mk. 10,k,Type 62,.79,Diag,0,0
 2021-12-08, Centurion Mk. 10,k,T-54 (1949),.51,Diag,0,0
 2021-12-08, Centurion Mk. 10,kb,T-54 (1951),.04,Diag,0,-11
@@ -1676,6 +1689,13 @@ DateRecorded,VehicleUsed,Event,EnemyVehicle,Distance,OrientationInSight,EnemySpe
 2021-02-20, Panther A,k,E.B.R.,.6,Diagonal,-2,0
 2021-02-20, Panther A,k,M4A3E2 (76) W,Near-Parallel,1,0,0
 2021-02-17, Panther A,k,AMX-M4,.9,Diagonal,0,0
+2021-12-16, Panther D,k,IS-1,.8,Near-para,0,-3
+2021-12-16, Panther D,kb,M-51,.02,Diag,0,0
+2021-12-16, Panther D,kb,M4A1,.1,Near-perp,0,0
+2021-12-16, Panther D,k,M18 Black Cat,.17,Diag,-23,0
+2021-12-16, Panther D,k,M-51,.75,Para,0,0
+2021-12-16, Panther D,kb,M-51,.19,Diag,0,0
+2021-12-16, Panther D,kb,M-51,1.17,Near-perp,0,0
 2021-06-30, Panther D,kb,T-34-85,.38,Near-Para,0,0
 2021-06-30, Panther D,k,IS-1,.76,Near-Perp,14,0
 2021-06-30, Panther D,k,IS-1,.77,Diag,5,0
@@ -1733,6 +1753,9 @@ DateRecorded,VehicleUsed,Event,EnemyVehicle,Distance,OrientationInSight,EnemySpe
 2021-03-05, Panzer IV-70,k,M4A2,1.12 Near-Perpendicular,0,0
 2021-03-05, Panzer IV-70,k,T-34-85 1.21,Diagonal,0,0
 2021-03-05, Panzer IV-70,kb,M4A2 (76W),.01,Diagonal,0,0
+2021-12-16, Sherman IC Tipo,K,M18,.69,Near-para,0,0
+2021-12-16, Sherman IC Tipo,kb,Comet I,1.06,Diag,0,0
+2021-12-16, Sherman IC Tipo,kb,M4A3E2,.03,Near-perp,0,0
 2021-09-28, Sherman IC Tipo,k,T-23-100,.2,Near-Para,0,0
 2021-08-04, Sherman IC Tipo,k,KV-2 (Zis-6),.09,Near-Perp,0,0
 2021-08-04, Sherman IC Tipo,k,T-34-85,.19,Diag,0,0
@@ -1741,6 +1764,7 @@ DateRecorded,VehicleUsed,Event,EnemyVehicle,Distance,OrientationInSight,EnemySpe
 2021-06-06, Sherman IC Tipo,kb,IS-1,0.01,Perp,0,0
 2021-06-06, Sherman IC Tipo,k,M18,1.38,Perp,0,0
 2021-06-06, Sherman IC Tipo,k,IS-1,.04,Near-Perp,0,14
+2021-12-16, Sherman Vc,k,T-34-85 (D-5T),.07,Near-perp,-8,0
 2021-09-28, Sherman Vc,kb,M4A3E2 (76) W,.9,Para,0,0
 2021-08-23, Sherman Vc,k,T-34-85,.3,Near-Para,-3,0
 2021-08-23, Sherman Vc,k,T-34-85 (D-5T),.03,Near-Para,0,0
@@ -1790,6 +1814,25 @@ DateRecorded,VehicleUsed,Event,EnemyVehicle,Distance,OrientationInSight,EnemySpe
 2021-06-06, Sherman Vc,kb,T-34-85 (D-5T),.02,Diag,0,0
 2021-06-06, Sherman Vc,kb,KV-85,.72,Diag,0,0
 2021-06-06, Sherman Vc,k,T-34-85 (D-5T),1.16,5,0
+2021-12-16, Tiger E,k,T-34-85 (D-5T),.59,Para,0,0
+2021-12-16, Tiger E,kb,M18,.35,Near-para,0,0
+2021-12-16, Tiger E,kb,Concept 3,Para,0,0
+2021-12-16, Tiger E,k,Comet I,.2,Para,0,0
+2021-12-16, Tiger E,k,M-51,.03,Diag,8,0
+2021-12-16, Tiger E,k,M4A1 (76) W,.08,Near-para,0,0
+2021-12-16, Tiger E,kb,M-51,.1,Diag,0,0
+2021-12-16, Tiger E,k,M4A3E2,.5,Near-para,-4,0
+2021-12-16, Tiger E,k,SU-85,.04,Near-perp,-3,0
+2021-12-16, Tiger E,k,T-34-85,.78,Near-para,-8,0
+2021-12-16, Tiger E,kb,M-51,.78,Diag,0,-7
+2021-12-16, Tiger E,k,Avenger,.94,Diag,15,0
+2021-12-16, Tiger E,k,T55E1,.88,Para,0,0
+2021-12-16, Tiger E,k,KV-2,1.16,Diag,0,0
+2021-12-16, Tiger E,K,M4A3E2,.52,Near-perp,0,0
+2021-12-16, Tiger E,k,M4A3E2,.51,Diag,-4,0
+2021-12-16, Tiger E,kb,SU-85M,.59,Near-para,0,0
+2021-12-16, Tiger E,k,M18,.01,Diag,0,6
+2021-12-16, Tiger E,kb,M4A3E2,.04,Near-para,8,0
 2021-10-16, Tiger E,k,T-34-85,1.85,Near-Perp,0,0
 2021-10-16, Tiger E,k,SU-85,2.12,Diag,0,0
 2021-10-16, Tiger E,k,M4A4 (SA50),2.14,Near-Para,0,0
