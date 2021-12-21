@@ -1,0 +1,33 @@
+
+Defer to gun view's (6) distance in replays when unable to get player's view.
+
+vs. T-64A (1971) 14/15
+vs. T-55AM-1 9/2
+vs. T-62M-1 5/4
+
+- Always use sight over 3rd-person against ground targets.
+- When moving past uncleared areas, move slow enough to clear thoroughly and to be able to fire accurately.
+- When scanning for targets, always stay hull down or have most of the tank hidden.
+- If the uncleared area is large, have something to cover you from a large portion of it and clear what is left.
+- If you cannot reliably clear an area and there is no safe route past it (e.g. a large town in open field) do not expose yourself to it.
+- When leading close-range targets, make sure that the shell will hit the target whether or not it continues moving. Impossible to do at long range.
+- When firing, "bracket" the target: have as much of the target within the upper and lower "spread". Despite slight range errors, round will hit.
+- When scanning for targets, always keep most of the tank hidden. The most exposure should be from a hull-down position.
+- Always watch for shell "splash" or hits before losing sight of a target.
+- When a target is showing a significant part of its side, APDS is usually a safer shell to use than HESH.
+- When shell splash appears behind target, check if shell went past its turret. If so, adjust range by half a mark (100 meters).
+
+Event - Vehicle - Distance - Orientation - EnemeySpeed - SelfSpeed
+
+2021-12-21
+
+Mozdok [Battle]
+@k @T-55A @.63 @Diag @32 @11
+
+Ground Zero
+@k @T-62M-1 @.58 @Diag @17 @0
+@kb @BMP-3 @.58 @Diag @0 @0
+
+Aral Sea
+@kb @BMD-4 @.6 Diag @0 @0
+@kb @T-64A (1971) @.2 @Diag @0 @0

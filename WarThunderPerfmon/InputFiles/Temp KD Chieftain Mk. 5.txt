@@ -19,6 +19,32 @@ vs. T-62M-1 5/4
 
 Event - Vehicle - Distance - Orientation - EnemeySpeed - SelfSpeed
 
+2021-12-21
+
+Mozdok [Battle]
+@k @BMP-2 @.68 @Para @0 @0
+@k @PTL02 @.51, .51 @Perp, Perp @-3, 0 @9, 0
+@k @T-10A @.05 @Near-para @24 @0
+@k @BMP-2 @.17 @Diag @25 @0
+@k @T-64A (1971) @.46 @Diag @20 @0
+@kb @T-5A @.58 @Diag @0 @0
+
+Hurtgen Forest
+@k @BMP-3 @.86 @Near-para @2 @0
+
+Eastern Europe
+@k @BMP-3 @1.01 @Perp @42 @-3
+@K @T-55A @.83 @Para @0 @28
+@k @T-64A (1971) @.2 @Diag @22 @10
+
+Aral Sea
+@kb @BMP-3 @.3 @Para @30 @0
+
+Eastern Europe
+@k @T-64A @~.1
+@k @BMP-3 @~.9
+@k @T-55A @~.8
+
 2021-11-19
 
 Seversk-13
