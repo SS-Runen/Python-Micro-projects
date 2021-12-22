@@ -18,6 +18,18 @@ vs. T-34-85* 0/1
 - When a target is showing a significant part of its side, APDS is usually a safer shell to use than HESH.
 - Always keep as much of the vehicle hidden as possible whether moving or waiting.
 
+2021-12-05
+
+Poland
+@k @ISU-122 @1.14 @Para @0 @0
+@kb @M4A2 (76) W @.3 @Near-perp @0 @0
+
+Middle East
+@k @M41A1 @1.21 @Perp @9 @0
+@k @M4A3E2 @.6 @Near-para @36 @0
+@kb SU-100P @1.23 @Near-para @0 @0
+@kb @IS-3 @.09 @Near-perp @0 @0
+
 2021-06-02
 
 @k @T-34-85 @.29 @Para @0 @0
