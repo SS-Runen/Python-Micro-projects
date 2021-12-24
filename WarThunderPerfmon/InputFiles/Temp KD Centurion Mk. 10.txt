@@ -42,7 +42,50 @@ First use of Centurion Mk. 10 semi-historical sight with range setting display.
 
 Event - Vehicle - Distance - Orientation - EnemeySpeed - SelfSpeed
 
+2021-12-23
+
+Sweden
+@k @T-54 (1951) @.04 @Diag @15 @0
+
+Mozdok
+@k @T-54 (1951) @.91 @Para @35 @6
+@k @2S23M @1.01 @Near-para @3 @0
+
+American Desert
+@k @Type 59 @.2 @Para @20 @0
+@kb @T-54 (1951) @.06 @Near-para @0 @0
+
+Ground Zero
+@k @ZSU-57-2 @.02 @Diag @0 @0
+
+Spaceport
+@k @Type 59 @.55 @Diag @33 @0
+@k @T-54 (1947) @.03 @Near-para @0 @-8
+@kb @M48 Chinese @.02 @Diag @0 @0
+
+Spaceport
+@k @T-54 (1949) @.1 @Para @0 @0
+
+Sweden
+@k @ZSU-57-2 @.02 @Near-para @10 @0
+
+Hurtgen Forest
+@k @IS-6 @.85 @Diag @-3 @0
+@k @T-54 (1949) @.89 @Diag @0 @0
+
+Second Battle of El Alamein [Battle]
+@kb @2S23M @1.9 @Diag @0 @0
+@kb @T-54 (1949) @.3 @Near-perp @7 @0
+
 2021-12-22
+
+Ground Zero
+@k @T-54 (1947) @.55 @Diag @24 @0
+@k @Type 63 @.25 @Diag @4 @0
+
+Mozdok [Battle]
+@k @T-54 (1949) @.95 @Diag @0 @0
+@k @T-54 (1949) @1.36 @Near-para @42 @0
 
 Aral Sea
 @kb @T-54 (1949) @.03 @Diag @0 @0
