@@ -69,6 +69,10 @@ Spaceport
 Sweden
 @k @ZSU-57-2 @.02 @Near-para @10 @0
 
+Fulda
+@k @IS-6 @1.31 @Near-perp @41 @0
+@k @2S3M @1.02 @Near-para @0 @0
+
 Hurtgen Forest
 @k @IS-6 @.85 @Diag @-3 @0
 @k @T-54 (1949) @.89 @Diag @0 @0

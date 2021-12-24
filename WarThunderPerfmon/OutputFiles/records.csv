@@ -1,4 +1,46 @@
 DateRecorded,VehicleUsed,Event,EnemyVehicle,Distance,OrientationInSight,EnemySpeed,SelfSpeed
+2021-12-05, 8,8 cm Flak 37 Sfzl,k,T-34 (1942),1.24,Diag,0,0
+2021-12-05, 8,8 cm Flak 37 Sfzl,k,T-34 China,1.16,Near-para,0,0
+2021-12-23, Centurion Mk. 10,k,T-54 (1951),.04,Diag,15,0
+2021-12-23, Centurion Mk. 10,k,T-54 (1951),.91,Para,35,6
+2021-12-23, Centurion Mk. 10,k,2S23M,1.01,Near-para,3,0
+2021-12-23, Centurion Mk. 10,k,Type 59,.2,Para,20,0
+2021-12-23, Centurion Mk. 10,kb,T-54 (1951),.06,Near-para,0,0
+2021-12-23, Centurion Mk. 10,k,ZSU-57-2,.02,Diag,0,0
+2021-12-23, Centurion Mk. 10,k,Type 59,.55,Diag,33,0
+2021-12-23, Centurion Mk. 10,k,T-54 (1947),.03,Near-para,0,-8
+2021-12-23, Centurion Mk. 10,kb,M48 Chinese,.02,Diag,0,0
+2021-12-23, Centurion Mk. 10,k,T-54 (1949),.1,Para,0,0
+2021-12-23, Centurion Mk. 10,k,ZSU-57-2,.02,Near-para,10,0
+2021-12-23, Centurion Mk. 10,k,IS-6,1.31,Near-perp,41,0
+2021-12-23, Centurion Mk. 10,k,2S3M,1.02,Near-para,0,0
+2021-12-23, Centurion Mk. 10,k,IS-6,.85,Diag,-3,0
+2021-12-23, Centurion Mk. 10,k,T-54 (1949),.89,Diag,0,0
+2021-12-23, Centurion Mk. 10,kb,2S23M,1.9,Diag,0,0
+2021-12-23, Centurion Mk. 10,kb,T-54 (1949),.3,Near-perp,7,0
+2021-12-22, Centurion Mk. 10,k,T-54 (1947),.55,Diag,24,0
+2021-12-22, Centurion Mk. 10,k,Type 63,.25,Diag,4,0
+2021-12-22, Centurion Mk. 10,k,T-54 (1949),.95,Diag,0,0
+2021-12-22, Centurion Mk. 10,k,T-54 (1949),1.36,Near-para,42,0
+2021-12-22, Centurion Mk. 10,kb,T-54 (1949),.03,Diag,0,0
+2021-12-22, Centurion Mk. 10,k,PT-76B,.1,Diag,0,0
+2021-12-22, Centurion Mk. 10,k,SU-100P,.03,Diag,0,0
+2021-12-22, Centurion Mk. 10,kb,T-54 (1947),.9,Perp,0,0
+2021-12-22, Centurion Mk. 10,K,T-54 (1949),1.92,Diag,0,0
+2021-12-22, Centurion Mk. 10,kb,T-54 (1947),1.33,Diag,0,0
+2021-12-22, Centurion Mk. 10,kb,IS-3,.3,Near-para,0,0
+2021-12-22, Centurion Mk. 10,k,PT-76B,.3,Diag,15,0
+2021-12-22, Centurion Mk. 10,k,T-54 (1949),.15,Diag,-3,0
+2021-12-22, Centurion Mk. 10,k,IS-4M,.71,Para,1,0
+2021-12-22, Centurion Mk. 10,k,IS-3,1.03,Para,0,0
+2021-12-22, Centurion Mk. 10,kb,T-54 (1949),.47,Diag,0,0
+2021-12-22, Centurion Mk. 10,k,ZSU-37,.01,Para,0,0
+2021-12-22, Centurion Mk. 10,K,T-54 (1949),.11,Para,-7,14
+2021-12-22, Centurion Mk. 10,k,T-54 (1949),.3,Para,-7,0
+2021-12-22, Centurion Mk. 10,k,T-54 (1949),1.38,Diag,0,0
+2021-12-22, Centurion Mk. 10,k,T-34-100,1.45,Diag,4,0
+2021-12-22, Centurion Mk. 10,k,PT-76B,1.25,Perp,10,0
+2021-12-22, Centurion Mk. 10,kb,T-54 (1949),.5,Near-para,0,30
 2021-12-18, Centurion Mk. 10,kb,SU-100P,.43,Near-perp,0,32
 2021-12-18, Centurion Mk. 10,kb,T-54 (1947),.37,Diag,30,0
 2021-12-18, Centurion Mk. 10,k,T-54 (1949),1.19,Near-para,-4,0
@@ -1028,146 +1070,36 @@ DateRecorded,VehicleUsed,Event,EnemyVehicle,Distance,OrientationInSight,EnemySpe
 2021-01-10, Centurion Mk. 10,k,T-54 (1949),0.8,Perpendicular,0,0
 2021-01-10, Centurion Mk. 10,k,T-54 (1947),0.95,Perpendicular,0,0
 2021-01-10, Centurion Mk. 10,k,T-54 (1949),0.08,Diagonal,0,0
+2021-12-19, Challenger 2 (2F),k,T-80BVM,1.39,Near-perp,-10,0
+2021-12-19, Challenger 2 (2F),k,BMP-2M,.18,Diag,14,0
+2021-12-19, Challenger 2 (2F),k,BMP-2M,.34,Diag,-6,0
+2021-12-19, Challenger 2 (2F),k,T-72AV (TURMS-T),.36,Para,0,17
+2021-12-19, Challenger 2 (2F),kb,ZTZ99-II,.75,Para,0,0
 2021-12-13, Challenger,k,T-38-85E,.2,Near-para,0,0
 2021-12-13, Challenger,k,M4A3E2 (76) W,1,Near-para,0,0
 2021-12-13, Challenger,k,M4A3E2,.1,Diag,0,0
 2021-07-21, Challenger,k,T-34-85 (D-5T),0.145,12.5,0.0
 2021-07-21, Challenger,kb,KV-85,.26,Diag,0,0
 2021-03-05, Challenger,kb,Panther A,.05,Diagonal,0,0
-2021-07-08, Cheiftain Mk. 5,kb,T-64A (1971),.68,Diag,0,0
-2021-07-08, Cheiftain Mk. 5,k,BMP-3,.32,Diag,0,0
-2021-07-08, Cheiftain Mk. 5,k,BMP-2,.43,Diag,0,0
-2021-07-08, Cheiftain Mk. 5,k,T-64A (1971),.39,Perp,0,0
-2021-07-08, Cheiftain Mk. 5,kb,T-55AM-1,.48,Diag,0,0
-2021-07-08, Cheiftain Mk. 5,kb,T-64A (1971),0.02,Diag,0,0
-2021-07-08, Cheiftain Mk. 5,kb,T-62M-1,0.03,Diag,10,0
-2021-07-08, Cheiftain Mk. 5,kb,T-62M-1,1,Near-Para,0,4
-2021-07-08, Cheiftain Mk. 5,k,T-10A,.69,Near-Perp,0,0
-2021-07-08, Cheiftain Mk. 5,k,T-69 II G,1.09,Near-Para,0,0
-2021-07-08, Cheiftain Mk. 5,kb,T-64A (1971),0.01,Diag,0,8
-2021-07-08, Cheiftain Mk. 5,k,BMP-3,~.2,Diag
-2021-07-08, Cheiftain Mk. 5,k,T-64A (1971),.93,Perp,0,0
-2021-07-08, Cheiftain Mk. 5,k,T-62M-1,.07,Near-Para,0,21
-2021-07-08, Cheiftain Mk. 5,k,T-64A (1971),.06,Near-Perp,0,11
-2021-07-08, Cheiftain Mk. 5,kb,T-64A (1971),.06,Near-Para,0,0
-2021-07-08, Cheiftain Mk. 5,kb,WMA301,~1.9,Near-Para,0,0
-2021-06-26, Cheiftain Mk. 5,kb,T-62 No.545,.1,Diag,0,0
-2021-06-26, Cheiftain Mk. 5,k,T-62M-1,.02,Near-Perp,0,0
-2021-06-26, Cheiftain Mk. 5,k,T-55A,0.01,Diag,5,0
-2021-06-26, Cheiftain Mk. 5,kb,IT-1,1.52,Ner-Para,0,0
-2021-06-26, Cheiftain Mk. 5,k,T-55AM-1,.58,Near-Para,0,0
-2021-06-26, Cheiftain Mk. 5,k,BMP-3,.76,Diag,37,0
-2021-06-26, Cheiftain Mk. 5,k,T-55AM-1,1.49,Diag,7,0
-2021-06-26, Cheiftain Mk. 5,kb,T-62M-1,1.4,Diag,0,0
-2021-06-26, Cheiftain Mk. 5,kb,WMA301,~1.2
-2021-06-26, Cheiftain Mk. 5,k,BMP-3,.7,Diag,0,0
-2021-06-26, Cheiftain Mk. 5,k,BMP-3,.24,Diag,24,18
-2021-06-26, Cheiftain Mk. 5,k,T-10M,.26,Para,0,6
-2021-06-26, Cheiftain Mk. 5,k,IT-1,.06,Diag,0,0
-2021-06-26, Cheiftain Mk. 5,k,T-55AM-1,.08,Diag,15,0
-2021-06-26, Cheiftain Mk. 5,kb,Obj 685,0.01,Diag,0,-9
-2021-06-26, Cheiftain Mk. 5,k,T-55A,1.6,Perp,20,0
-2021-06-26, Cheiftain Mk. 5,k,T-10M,0.02,Diag,-10,0
-2021-06-22, Cheiftain Mk. 5,kb,BMP-2,~.7,Diag
-2021-06-22, Cheiftain Mk. 5,k,WMA301,~1.1
-2021-06-22, Cheiftain Mk. 5,k,BMP-1,~1.2
-2021-06-22, Cheiftain Mk. 5,k,IT-1,~1,Diag
-2021-06-22, Cheiftain Mk. 5,k,BMP-3,~1,Diag
-2021-06-22, Cheiftain Mk. 5,kb,WMA301,~.8,Near-Para
-2021-06-22, Cheiftain Mk. 5,k,T-55AM-1,.46,Near-Para,7,0
-2021-06-22, Cheiftain Mk. 5,kb,WMA301,0.01,Near-Para,0,0
-2021-06-22, Cheiftain Mk. 5,k,Type 59,~1,Perp
-2021-06-10, Cheiftain Mk. 5,kb,Obj 120,1.2,Diag,0,0
-2021-06-10, Cheiftain Mk. 5,k,IT-1,.06,Near-Para,0,0
-2021-06-10, Cheiftain Mk. 5,kb,T-64A (1971),.02,Near-Perp,0,0
-2021-06-02, Cheiftain Mk. 5,k,BMP-3,.5,Diag,20,0
-2021-06-02, Cheiftain Mk. 5,kb,BMP-3,1.2,Diag,0,0
-2021-04-27, Cheiftain Mk. 5,k,ZSU-57-2,.16,Diag,0,0
-2021-04-27, Cheiftain Mk. 5,k,T-64A (1971),1.04,Para,31,0
-2021-04-23, Cheiftain Mk. 5,k,BMP-3,.29,Diag,0,0
-2021-04-23, Cheiftain Mk. 5,k,T-62M-1,.32,Para,0,0
-2021-04-23, Cheiftain Mk. 5,k,T-55AM-1,1.4,Diag,0,0
-2021-04-23, Cheiftain Mk. 5,k,Obj 279,0.895,Diag,10.0,0.0
-2021-04-23, Cheiftain Mk. 5,k,BMP-3,.71,Diag,12,0
-2021-04-23, Cheiftain Mk. 5,k,T-62,.4,Diag,0,0
-2021-04-23, Cheiftain Mk. 5,k,T-62M-1,1.23,Diag,0,0
-2021-04-23, Cheiftain Mk. 5,k,Obj 906,1.32,Perp,14,0
-2021-04-19, Cheiftain Mk. 5,k,T-64A (1971),.67,Diag,0,0
-2021-04-19, Cheiftain Mk. 5,k,T-62M-1,0.52,Diag,23.5,0.0
-2021-04-19, Cheiftain Mk. 5,k,T-64A (1971),.73,Near-Para,8,0
-2021-04-19, Cheiftain Mk. 5,k,T-55AM-1,0.965,Diag,23.5,0.0
-2021-04-19, Cheiftain Mk. 5,k,T-55A,1.19,Diag,5,0
-2021-04-19, Cheiftain Mk. 5,k,T-64A (1971),1.23,Diag,7.0,0.0
-2021-04-19, Cheiftain Mk. 5,kb,ZSU-57-2,.19,Near-Perp,0,0
-2021-04-19, Cheiftain Mk. 5,k,Type 69 II G,0.2,Near-Perp,-4,8
-2021-04-19, Cheiftain Mk. 5,kb,BMP-2,0.02,Diag,0,0
-2021-04-19, Cheiftain Mk. 5,kb,Type 69 II G,.8,Diag,0,0
-2021-04-07, Cheiftain Mk. 5,k,T-64A (1971),.49,Near-Para,1,3
-2021-04-07, Cheiftain Mk. 5,kb,T-10A,.33,Diag,8,0
-2021-04-07, Cheiftain Mk. 5,kb,T-55AM-1,.18,0,0
-2021-04-07, Cheiftain Mk. 5,k,Type 69 II G,.6,Near-Para,0,0
-2021-04-07, Cheiftain Mk. 5,kb,T-55A,.03,Diag,0,0
-2021-04-03, Cheiftain Mk. 5,k,T-62M-1,1.01,Diag,0.0,0.0
-2021-04-03, Cheiftain Mk. 5,k,T-55AM-1,.31,Diag,10,10
-2021-04-03, Cheiftain Mk. 5,k,T-10M,1.02,Diag,-6,-12
-2021-04-03, Cheiftain Mk. 5,k,T-10M,.13,Near-Para,0,0
-2021-04-03, Cheiftain Mk. 5,k,ZSU-57-2,.38,Diag,0,0
-2021-04-03, Cheiftain Mk. 5,k,ZSU-23-4,.11,Diag,0,0
-2021-04-03, Cheiftain Mk. 5,kb,T-62 No. 545,0.05,Diag,0,10
-2021-03-30, Cheiftain Mk. 5,kb,T-64A,.9,Perp,0,0
-2021-03-30, Cheiftain Mk. 5,kb,T-64A,.11,Diag,23,5
-2021-03-30, Cheiftain Mk. 5,k,T-55A,0.25,Diag,9.0,0.0
-2021-03-30, Cheiftain Mk. 5,kb,T-64A (1971),.3,Diag,0,0
-2021-03-30, Cheiftain Mk. 5,k,T-64A (1971),1.04,Diag,15.0,0.0
-2021-03-30, Cheiftain Mk. 5,k,T-64A (1971),.6,Para,-2,0
-2021-03-30, Cheiftain Mk. 5,k,IT-1,1.05,Para,0,0
-2021-03-30, Cheiftain Mk. 5,k,T-62,.66,Perp,11,0
-2021-03-30, Cheiftain Mk. 5,kb,T-62M-1,0.02,Near-Perp,0,0
-2021-03-26, Cheiftain Mk. 5,k,T-62,.39,Diag,28,0
-2021-03-26, Cheiftain Mk. 5,k,T-55A,0.07,Diag,9.5,0.0
-2021-03-26, Cheiftain Mk. 5,k,T-62,.50,Diag,-7,0
-2021-03-22, Cheiftain Mk. 5,k,T-64A (1971),.48,Near-Parallel,0,0
-2021-03-22, Cheiftain Mk. 5,kb,BMP-3,.66,Diagonal,0,-7
-2021-03-22, Cheiftain Mk. 5,k,T-62M-1,.36,Diagonal,37,0
-2021-03-22, Cheiftain Mk. 5,kb,Obj 279,1.35,Diagonal,0,0
-2021-03-18, Cheiftain Mk. 5,k,T-69 II G,.5,Diagonal,0,0
-2021-03-18, Cheiftain Mk. 5,k,T-10M,.43,Diagonal,7,0
-2021-03-18, Cheiftain Mk. 5,kb,ZTZ59D1,.64,Diaognal,0,0
-2021-03-18, Cheiftain Mk. 5,k,BMP-1,.28,Perpendicular,31,0
-2021-03-18, Cheiftain Mk. 5,k,ZSU-23-4,.03,Diagonal,0,0
-2021-03-10, Cheiftain Mk. 5,K,T-10A,.06,Near-Perpendicular,10,0
-2021-03-06, Cheiftain Mk. 5,k,T-62,.4,Near-Parallel,0,0
-2021-03-06, Cheiftain Mk. 5,kb,BMP-2,.1,Diaognal,0,0
-2021-03-06, Cheiftain Mk. 5,k,BMP-3,0.1,Near-Perpendicular,15,0
-2021-03-02, Cheiftain Mk. 5,k,ZTZT59D1,.02,Diagonal,0,0
-2021-03-02, Cheiftain Mk. 5,k,T-55AM-1,.02,Near-Perpendcular,0,0
-2021-02-22, Cheiftain Mk. 5,k,IT-1,0.04,Diagonal,0,0
-2021-02-22, Cheiftain Mk. 5,k,Obj 685,1.75,Near-Perpendicular,25,0
-2021-02-22, Cheiftain Mk. 5,k,BMP-3,0.07,Near-Perpendicular,0,0
-2021-02-22, Cheiftain Mk. 5,kb,T-64A (1971),Diagonal,.4,0,20
-2021-02-22, Cheiftain Mk. 5,kb,T-64A (1971),1.4,Diagonal,0,0
-2021-02-14, Cheiftain Mk. 5,k,WZ305,.8,Diagonal,0,0
-2021-02-14, Cheiftain Mk. 5,k,BMP-3,.43,Diagonal,0,0
-2021-02-14, Cheiftain Mk. 5,k,Obj 906,.58,Diagonal,-22,0
-2021-02-14, Cheiftain Mk. 5,k,T-55AM-1,.08,Diagonal,-5,10
-2021-02-14, Cheiftain Mk. 5,kb,BMP-1,.17,Diagonal,0,-10
-2021-02-14, Cheiftain Mk. 5,k,T-55AM-1,0.49,Diagonal,0.0,6.0
-2021-02-14, Cheiftain Mk. 5,k,BMP-3,.3,Near-Perpendicular,16,0
-2021-02-14, Cheiftain Mk. 5,kb,T-64A (1971),1.16,Diagonal,0,20
-2021-02-14, Cheiftain Mk. 5,k,T-64A (1971),.02,Diagonal,27,10
-2021-02-14, Cheiftain Mk. 5,k,T-62M-1,.13,Near-Perpendicular,0,0
-2021-02-14, Cheiftain Mk. 5,k,Object 685,1.18,Near-Perpendicular,17.5,0.0
-2021-02-14, Cheiftain Mk. 5,k,ZTZ59D1,0.79,Near-Perpendicular,-2.5,0.0
-2021-02-10, Cheiftain Mk. 5,kb,BMP-3,1.1,Diagonal,Stationary,Lateral-Left
-2021-02-10, Cheiftain Mk. 5,k,ZSU-57-2,.7,Diagonal,Stationary,Stationary
-2021-02-10, Cheiftain Mk. 5,k,T-55AM-1,0.6499999999999999,Diagonal,Approaching,Stationary
-2021-02-10, Cheiftain Mk. 5,k,BMP-2,.8,Near-Parallel,Approaching,0
-2021-02-10, Cheiftain Mk. 5,kb,T-64A (1971),.4,Diagonal,Approaching,0
-2021-02-10, Cheiftain Mk. 5,kb,T-64A (1971),.10,Diagonal,0,5
-2021-02-10, Cheiftain Mk. 5,kb,T-64A (1971),.36,Diagonal,0,0
-2021-02-10, Cheiftain Mk. 5,kb,T-55AM-1,.20,Diagonal,5,0
-2021-02-10, Cheiftain Mk. 5,k,T-10A,.13,Perpendicular,0,0
-2021-02-10, Cheiftain Mk. 5,k,T-64A (1971),.09,Diagonal,0,4
+2021-12-21, Chieftain Mk. 3,k,T-55A,.63,Diag,32,11
+2021-12-21, Chieftain Mk. 3,k,T-62M-1,.58,Diag,17,0
+2021-12-21, Chieftain Mk. 3,kb,BMP-3,.58,Diag,0,0
+2021-12-21, Chieftain Mk. 3,kb,BMD-4,.6 Diag,0,0
+2021-12-21, Chieftain Mk. 3,kb,T-64A (1971),.2,Diag,0,0
+2021-12-21, Chieftain Mk. 5,k,BMP-2,.68,Para,0,0
+2021-12-21, Chieftain Mk. 5,k,PTL02,0.51,Perp,-1.5,4.5
+2021-12-21, Chieftain Mk. 5,k,T-10A,.05,Near-para,24,0
+2021-12-21, Chieftain Mk. 5,k,BMP-2,.17,Diag,25,0
+2021-12-21, Chieftain Mk. 5,k,T-64A (1971),.46,Diag,20,0
+2021-12-21, Chieftain Mk. 5,kb,T-5A,.58,Diag,0,0
+2021-12-21, Chieftain Mk. 5,k,BMP-3,.86,Near-para,2,0
+2021-12-21, Chieftain Mk. 5,k,BMP-3,1.01,Perp,42,-3
+2021-12-21, Chieftain Mk. 5,K,T-55A,.83,Para,0,28
+2021-12-21, Chieftain Mk. 5,k,T-64A (1971),.2,Diag,22,10
+2021-12-21, Chieftain Mk. 5,kb,BMP-3,.3,Para,30,0
+2021-12-21, Chieftain Mk. 5,k,T-64A,~.1
+2021-12-21, Chieftain Mk. 5,k,BMP-3,~.9
+2021-12-21, Chieftain Mk. 5,k,T-55A,~.8
 2021-11-19, Chieftain Mk. 5,kb,BMP-3,.02,Diag,0,0
 2021-11-19, Chieftain Mk. 5,kb,BMD-4,0.03,Near-Perp,0,0
 2021-11-19, Chieftain Mk. 5,k,T-55AM-1,.93,Diag,5,3
@@ -1627,6 +1559,32 @@ DateRecorded,VehicleUsed,Event,EnemyVehicle,Distance,OrientationInSight,EnemySpe
 2021-03-21, Leopard 1,k,T-54 (1949),.4,Diagonal,0,0
 2021-03-21, Leopard 1,k,Type 59,0.03,Perpendicular,0,0
 2021-03-21, Leopard 1,k,T-54 (1947),0.03,Near-Parallel,5,0
+2021-12-24, Panther A,k,BT-7A (F-32) .83,Perp,19,0
+2021-12-24, Panther A,k,T-34-57,1.37,Perp,0,0
+2021-12-24, Panther A,k,T-34-57,.49,Para,0,0
+2021-12-24, Panther A,k,T-34-85,.21,Near-perp,6,0
+2021-12-24, Panther A,k,IS-1,~.03,Para
+2021-12-24, Panther A,kb,IS-2,.04,Near-para,0,0
+2021-12-24, Panther A,k,M24,.19,Para,0,0
+2021-12-24, Panther A,k,2S3M,.45,Perp,4,0
+2021-12-24, Panther A,k,T-34-85 Gai,.67,near-para,-8,0
+2021-12-24, Panther A,kb,IS-2 (1944),.56,Near-perp,0,0
+2021-12-24, Panther A,k,T-34-85,.3,Near-perp,0,0
+2021-12-24, Panther A,k,T-34-85,.24,Para,0,0
+2021-12-24, Panther A,k,M22,.22,Diag,0,0
+2021-12-24, Panther A,kb,M4A2 (76) W,.36,Diag,0,0
+2021-12-24, Panther A,k,T-34-85,0.63,Diag,6.0,0.0
+2021-12-24, Panther A,k,IS-1,.71,Para,-1,0
+2021-12-24, Panther A,k,Zis-12 (94-KM),.31,Perp,16,0
+2021-12-24, Panther A,K,IS-1,.67,Para,0,0
+2021-12-24, Panther A,kb,T-44-122,.62,Diag,0,0
+2021-12-24, Panther A,kb,T-34-85 (S-53),1.44,Diag,0,0
+2021-12-05, Panther A,k,ISU-122,1.14,Para,0,0
+2021-12-05, Panther A,kb,M4A2 (76) W,.3,Near-perp,0,0
+2021-12-05, Panther A,k,M41A1,1.21,Perp,9,0
+2021-12-05, Panther A,k,M4A3E2,.6,Near-para,36,0
+2021-12-05, Panther A,kb SU-100P,1.23,Near-para,0,0
+2021-12-05, Panther A,kb,IS-3,.09,Near-perp,0,0
 2021-06-02, Panther A,k,T-34-85,.29,Para,0,0
 2021-06-02, Panther A,k,M4A1,.29,Para,0,0
 2021-06-02, Panther A,kb,M6A1,.2,Near-Perp,0,0
