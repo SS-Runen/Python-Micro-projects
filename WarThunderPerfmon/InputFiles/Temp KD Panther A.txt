@@ -21,16 +21,12 @@ vs. T-34-85* 0/1
 2021-12-24
 
 Maginot
-@k @BT-7A (F-32) .83 @Perp @19 @0
+@k @BT-7A (F-32) @.83 @Perp @19 @0
 @k @T-34-57 @1.37 @Perp @0 @0
 @k @T-34-57 @.49 @Para @0 @0
 
 Frozen Pass
 @k @T-34-85 @.21 @Near-perp @6 @0
-
-Kuban
-@k @IS-1 @~.03 @Para
-@kb @IS-2 @.04 @Near-para @0 @0
 
 Japan
 @k @M24 @.19 @Para @0 @0

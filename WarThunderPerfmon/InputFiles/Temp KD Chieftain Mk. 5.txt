@@ -19,6 +19,25 @@ vs. T-62M-1 5/4
 
 Event - Vehicle - Distance - Orientation - EnemeySpeed - SelfSpeed
 
+2021-12-25
+
+Cargo Port
+@k @Type 69-II G @~1.2
+@k @T-55AM-1 @~.03 @Para
+@k @PZG
+
+Hurtgen Forest
+@k @BMP-2 @~.1
+@k @WMA-301 @~.7
+@k @BMP-2 @~.04
+@kb @IT-1 @~.05
+
+Cargo Port
+@kb @T-64A (1971) @~1 @Perp
+
+Berlin
+@k @BMD-4 @.5 @Diag @0 @0
+
 2021-12-21
 
 Mozdok [Battle]

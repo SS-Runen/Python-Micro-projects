@@ -1,6 +1,6 @@
 DateRecorded,VehicleUsed,Event,EnemyVehicle,Distance,OrientationInSight,EnemySpeed,SelfSpeed
-2021-12-05, 8,8 cm Flak 37 Sfzl,k,T-34 (1942),1.24,Diag,0,0
-2021-12-05, 8,8 cm Flak 37 Sfzl,k,T-34 China,1.16,Near-para,0,0
+2021-12-05, 8.8 cm Flak 37 Sfzl,k,T-34 (1942),1.24,Diag,0,0
+2021-12-05, 8.8 cm Flak 37 Sfzl,k,T-34 China,1.16,Near-para,0,0
 2021-12-23, Centurion Mk. 10,k,T-54 (1951),.04,Diag,15,0
 2021-12-23, Centurion Mk. 10,k,T-54 (1951),.91,Para,35,6
 2021-12-23, Centurion Mk. 10,k,2S23M,1.01,Near-para,3,0
@@ -1559,12 +1559,10 @@ DateRecorded,VehicleUsed,Event,EnemyVehicle,Distance,OrientationInSight,EnemySpe
 2021-03-21, Leopard 1,k,T-54 (1949),.4,Diagonal,0,0
 2021-03-21, Leopard 1,k,Type 59,0.03,Perpendicular,0,0
 2021-03-21, Leopard 1,k,T-54 (1947),0.03,Near-Parallel,5,0
-2021-12-24, Panther A,k,BT-7A (F-32) .83,Perp,19,0
+2021-12-24, Panther A,k,BT-7A (F-32),.83,Perp,19,0
 2021-12-24, Panther A,k,T-34-57,1.37,Perp,0,0
 2021-12-24, Panther A,k,T-34-57,.49,Para,0,0
 2021-12-24, Panther A,k,T-34-85,.21,Near-perp,6,0
-2021-12-24, Panther A,k,IS-1,~.03,Para
-2021-12-24, Panther A,kb,IS-2,.04,Near-para,0,0
 2021-12-24, Panther A,k,M24,.19,Para,0,0
 2021-12-24, Panther A,k,2S3M,.45,Perp,4,0
 2021-12-24, Panther A,k,T-34-85 Gai,.67,near-para,-8,0
