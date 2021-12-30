@@ -33,6 +33,16 @@ October 04, 2021
 - New rule for respawns. If killed by non-prioirity (i.e. NOT T-54 1949/1947, T-34-85 series) spawn again. T-54 1951
 will be used as baseline "control" to check effect of multiple spawns.
 
+2021-1226
+
+Maginot
+@k @IS-4M @.94 @Perp @4 @0
+@kb @ZSU-85 @1.03 @Perp @0 @0
+
+Vietnam
+@k @2S23M @~.04 @Near-para @0 @0
+@kb @T-44-100 @~.05 @Near-perp
+
 2021-12-10
 
 Sweden

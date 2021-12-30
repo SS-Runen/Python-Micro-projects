@@ -31,7 +31,7 @@ Update "Red Skies".
 - Sound mod.
 - Commander sight mechanics in addition to binocular mode and duplicate commander gun controls.
 - Option for FPE use on squadmates or by light tanks.
-- Modifications to armor calculation where thinnest plate is selected when shell hits a join/joint of armor.
+- Modifications to armor calculation. Thinnest plate is selected when shell hits a join/joint of armor.
 
 October 04, 2021
 - New rule for respawns. If killed by non-prioirity (i.e. NOT T-54 1949/1947, T-34-85 series) spawn again. T-54 1951
@@ -41,6 +41,158 @@ November 12, 2020
 First use of Centurion Mk. 10 semi-historical sight with range setting display.
 
 Event - Vehicle - Distance - Orientation - EnemeySpeed - SelfSpeed
+
+2021-12-30
+
+Alaska
+@k @PT-76 @.68 @Diag @0 @0
+@k @T-54 (1949) @.72 @Diag @0 @0
+
+Space Port
+@k @IS-4M @~.3
+@k @PT-76 @~.02 @Near-para
+@k @IS-6 @~.2 @Near-perp @0 @0
+
+Berlin
+@k @T-44-100 @.02 @Diag @0 @0
+@kb @2S23M @.05 @Perp @0 @0
+
+European Province
+@k @IS-6 @~1.3 @Diag
+@k @SU-100 @~1
+@k @Type 63 @~1.3 @Near-para 
+
+Advance to the Rhine
+@kb @T-54 (1949) @.03 @Perp @0 @0
+
+Fields of Normandy
+@kb @T-54 (1947) @.2 @Para @0 @0
+
+Seversk-13
+@k @PT-76-57 @.05 @Para @12 @10
+@kb @Type 62 @.04 @Para @0 @8
+
+Alaska
+@k @T-54 (1949) @.47 @Perp @0 @0
+@kb @SU-100P @.34 Near-perp @0 @0
+
+Space Port
+@kb @Type 62 @.02 @Para @0 @0
+
+Eastern Europe
+@k @T-54 (1949) @~.8
+@k @IS-3 @~.1
+
+Aral Sea
+@k @PT-76B @.6 @Diag @16 @0
+
+Fields of Normandy
+@kb @T-44-122 @.2 @Para @0 @0
+
+Eastern Europe
+@kb @T-54 (1947) @1.2 @Diag @0 @0
+
+Fields of Poland
+@K @T-54 (1949) @~.02
+@k @IS-6 @~.9 @Near-para @0 @0
+
+Finalnd
+@k @PT-76-57 @.4 @Perp @0 @0
+@kb @-44-100 @.7 @para @0 @0
+
+Vietnam
+@k @ASU-85 @~.08 @Para @0
+
+Fields of Poland
+@k @T-54 (1947) @.3 @Diag @3 @0
+@kb @T-44-100 @.34 @Diag @0 @0
+
+Advane to the Rhine
+@k @T-54 (1949) @~.6
+@k @T-44 @~.2
+@kb @IS-3 @~.05
+
+Alaska
+@kb @SU-100P @~.3 @Near-para @0 @0
+
+Abandoned Factory
+@k @T-54 (1949) @~.8
+@k @T-44 @~.3 @Diag
+@k @IS-3 @~.8 @Perp
+@k @ASU-85 @~.1
+
+Middle East
+@k @T-54 (1947) @1.05 @Para @0 @0
+@k @T-54 (1947) @.99 @Near-Perp @13 @0
+@kb @IS-6 @.11 @Para @0 @0
+
+Fields of Poland
+@K @IS-6 @~1.9 @Perp
+@kb @T-54 (1949) @~.07 @Near-perp @0 @0
+
+European Province
+@k @T-54 (1949) @~1.3 @Perp
+@k @IS-3 @~1.2 @Perp
+@k @IS-6 @~.5 @Perp
+@k @T-54 (1949) @~1.1
+@kb @T-54 (1949) @~1.3
+
+Abandoned Factory
+@kb @T-44-122 @.06 @Perp @25 @0
+
+Second Battle of El Alamein
+@k @T-54 (1949) @1.39 @Near-para @0 @0
+@kb @T-54 (1947) @2.85 @Near-perp @0 @0
+
+Mozdok [Battle]
+@k @2S23M @~1.3 @Para @0 @0
+@kb @T-44-100 @~1.2 @Diag @0 @0
+
+Maginot
+@k @PT-76-57 @1.28 @Near-perp @0 @0
+@kb @T-44-100 @.08 @Perp @0 @0
+@Kb @T-54 (1947) @.48 @Diag @0 @0
+
+Mozdok
+@k @PT-76-57 @.78 @Perp @15 @0
+@k @T-54 (1947) @1.69 @Ner-perp @21 @-11
+
+Alaska
+@K @IS-6 @.43 @Perp @0 @0
+@kb @T-54 (1947) @.68 @Diag @0 @-6
+
+Eastern Europe
+@k @T-54 (1947) @.83 @Perp @0 @0
+@k @T-54 (1949) @.86 @Diag @0 @0
+@k @PT-76B @.3 @Perp @0 @0
+@k @M42 @.43 @Perp @0 @0
+@k @ASU-85 @.62 @Diag @0 @0
+
+Advance to the Rhine
+@K @T-54 (1949) @~.4
+@k @IS-4M @~.2
+@k @T-54 (1949) @~.05
+@k @T-44-100 @~.03
+@k @Obj 268 @~.04
+
+2021-12-26
+
+Sweden
+@kb @PT-76-57 @.05 @Diag @0 @0
+
+Maginot
+@k @T-54 (1947) @1.64,  @Near-perp, Para @3, 0 @0, 0
+@k @SU-100P @1.08 @Diag @22 @0
+@k @Obj 268 @.57 @Near-perp @34 @0
+@kb @IS-4M @.6 @Para @0 @-8
+
+Vietnam
+@k @T-54 (1947) @.04 @Near-para @0 @0
+@kb @PT-76-57 @.05 @Near-perp
+
+Vietnam
+@k @T-54 (1949) @~.1 @Perp
+@kb @T-54 (1947) @~.03 @Perp @0 @0
 
 2021-12-23
 

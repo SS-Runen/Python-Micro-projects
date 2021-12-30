@@ -26,6 +26,46 @@ Event - Vehicle - Distance - Orientation - EnemeySpeed - SelfSpeed
 
 * For SVD, deviation at close range is 600-800.
 
+2021-12-28
+
+Sands of Sinai
+@kb @M18 @Para @.07 @0 @0
+
+Ground Zero
+@k @M18 @.1 @Diag @0 @0
+@k @Avenger @.06 @Perp @0 @0
+@kb @Comet I @.02 @Near-para @0 @0
+
+Port Novorosissysk
+@k @M4A3 (76) W @.04 @Perp @5 @0
+
+Ash River
+@kb @T-34-85 ? @.05 @Near-para @0 @0
+
+Ash River
+@k @M4A3E2 @.2 @Perp @0 @0
+@k @A.C. IV @.6 @Para @0 @0
+
+Maginot
+@k @T20 @~1.3 @Near-perp @0 @0
+@k @SU-85M @~1.2 @Para @0 @0
+@kb @M18 @.03 @Near-perp @0 @7
+
+Tunisia
+@kb @M18 @~.8 @Perp @0 @0
+
+Sands of Sinai
+@k @M18 @.05 @Diag @0 @0
+
+Wallonia
+@k @E.B.R. (1954) @.03 @Near-para @12 @0
+
+38th Parallel
+@kb @M18 @.5 @Near-para @0 @0
+
+White Rock Fortress
+@kb @Yag-29 K @1.01 @Diag @0 @0
+
 2021-12-16
 
 Eastern Europe [Battle]
