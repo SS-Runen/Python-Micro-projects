@@ -44,23 +44,28 @@ Event - Vehicle - Distance - Orientation - EnemeySpeed - SelfSpeed
 
 2021-12-30
 
+American Desert
+@k @IS-3 @.67 @Para @8 @0
+@k @IS-4M @.67 @Perp @0 @0
+
 Alaska
 @k @PT-76 @.68 @Diag @0 @0
 @k @T-54 (1949) @.72 @Diag @0 @0
 
 Space Port
-@k @IS-4M @~.3
-@k @PT-76 @~.02 @Near-para
-@k @IS-6 @~.2 @Near-perp @0 @0
+@k @IS-4M @.50 @Perp @10 @0
+@k @PT-76 @.09 @Near-para @28 @0
+@k @IS-6 @.49 @Near-para @4 @0
 
 Berlin
 @k @T-44-100 @.02 @Diag @0 @0
 @kb @2S23M @.05 @Perp @0 @0
 
-European Province
-@k @IS-6 @~1.3 @Diag
-@k @SU-100 @~1
-@k @Type 63 @~1.3 @Near-para 
+Eastern Europe
+@k @PT-76B @1.2 @Near-para @0 @0
+@k @IS-6 @1.68 @Diag @0 @0
+@k @SU-100 @.99 @Para @0 @0
+@k @Type 63 @1.69 @Near-para @0 @0
 
 Advance to the Rhine
 @kb @T-54 (1949) @.03 @Perp @0 @0
@@ -80,8 +85,8 @@ Space Port
 @kb @Type 62 @.02 @Para @0 @0
 
 Eastern Europe
-@k @T-54 (1949) @~.8
-@k @IS-3 @~.1
+@k @T-54 (1949) @.6 @Perp @-7 @0
+@k @IS-3 @.32 @NEar-perp @0 @0
 
 Aral Sea
 @k @PT-76B @.6 @Diag @16 @0
@@ -93,33 +98,35 @@ Eastern Europe
 @kb @T-54 (1947) @1.2 @Diag @0 @0
 
 Fields of Poland
-@K @T-54 (1949) @~.02
-@k @IS-6 @~.9 @Near-para @0 @0
+@K @T-54 (1949) @.05 @Diag @0 @18
+@k @IS-6 @.86 @Para @0 @0
 
 Finalnd
 @k @PT-76-57 @.4 @Perp @0 @0
 @kb @-44-100 @.7 @para @0 @0
 
 Vietnam
-@k @ASU-85 @~.08 @Para @0
+@k @ASU-85 @.08 @Para @0
 
 Fields of Poland
 @k @T-54 (1947) @.3 @Diag @3 @0
 @kb @T-44-100 @.34 @Diag @0 @0
 
 Advane to the Rhine
-@k @T-54 (1949) @~.6
-@k @T-44 @~.2
-@kb @IS-3 @~.05
+@k @T-54 (1949) @.44 @Near-para @0 @0
+@k @T-44 @.3 @Diag @0 @0
+@kb @IS-3 @.29 @Diag @0 @0
 
 Alaska
-@kb @SU-100P @~.3 @Near-para @0 @0
+@kb @SU-100P @.3 @Near-para @0 @0
 
 Abandoned Factory
-@k @T-54 (1949) @~.8
-@k @T-44 @~.3 @Diag
-@k @IS-3 @~.8 @Perp
-@k @ASU-85 @~.1
+@k @ZSU-37 @.4 @Diag @0 @0
+@k @2S23M @1.01 @Diag @0 @0
+@k @T-44 @.75 @Diag @8 @0
+@k @IS-3 @.69 @Diag @0 @0
+@k @T-44 @1.06 @Near-perp @0 @0
+@k @ASU-85 @.36 @Diag @17 @0
 
 Middle East
 @k @T-54 (1947) @1.05 @Para @0 @0
@@ -127,15 +134,16 @@ Middle East
 @kb @IS-6 @.11 @Para @0 @0
 
 Fields of Poland
-@K @IS-6 @~1.9 @Perp
-@kb @T-54 (1949) @~.07 @Near-perp @0 @0
+@K @IS-6 @2.1 @Near-perp @0 @0
+@kb @T-44-100 @.12 @Diag @0 @0
+@kb @T-54 (1949) @.15 @Near-perp @0 @0
 
 European Province
-@k @T-54 (1949) @~1.3 @Perp
-@k @IS-3 @~1.2 @Perp
-@k @IS-6 @~.5 @Perp
-@k @T-54 (1949) @~1.1
-@kb @T-54 (1949) @~1.3
+@k @T-54 (1949) @1.74 @@Para @0 @0
+@k @T-44-100 @.83 @Para @-8 @0
+@k @IS-3 @1.05 @Perp @0 @0
+@k @IS-6 @.49 @Near-Perp @0 @0
+@kb @T-54 (1949) @1.12 @Near-para @0 @0
 
 Abandoned Factory
 @kb @T-44-122 @.06 @Perp @25 @0
@@ -145,8 +153,8 @@ Second Battle of El Alamein
 @kb @T-54 (1947) @2.85 @Near-perp @0 @0
 
 Mozdok [Battle]
-@k @2S23M @~1.3 @Para @0 @0
-@kb @T-44-100 @~1.2 @Diag @0 @0
+@k @2S23M @1.26 @Para @0 @0
+@kb @T-44-100 @1.17 @Diag @0 @0
 
 Maginot
 @k @PT-76-57 @1.28 @Near-perp @0 @0
@@ -169,11 +177,13 @@ Eastern Europe
 @k @ASU-85 @.62 @Diag @0 @0
 
 Advance to the Rhine
-@K @T-54 (1949) @~.4
-@k @IS-4M @~.2
-@k @T-54 (1949) @~.05
-@k @T-44-100 @~.03
-@k @Obj 268 @~.04
+@K @T-54 (1949) @.48 @Near-para @0 @0
+@k @IS-4M @.33 @Near-para @0 @0
+@k @T-54 (1949) @.14 @Diag @25 @0
+@k @T-44-100 @.1 @Para @0 @0
+@k @Obj 268 @.12 @Diag @4 @0
+@k @ZSU-37 @.1 @Near-para @0 @0
+@k @PT-76B @.09 @Para @0 @0
 
 2021-12-26
 
@@ -191,8 +201,8 @@ Vietnam
 @kb @PT-76-57 @.05 @Near-perp
 
 Vietnam
-@k @T-54 (1949) @~.1 @Perp
-@kb @T-54 (1947) @~.03 @Perp @0 @0
+@k @T-54 (1949) @.41 @Perp @0 @0
+@kb @T-54 (1947) @.05 @Perp @0 @0
 
 2021-12-23
 
@@ -788,7 +798,7 @@ Poland
 @k @T-44-100 @.32 @Diag @0 @0
 @K @T-54 (1949) @.24 @Near-Perp @-9 @0
 
-@Finland
+Finland
 @k @IS-4M @.2 @Diag @0 @0
 @kb @T-44-100 @.05 @Diag @0 @0
 
@@ -1214,19 +1224,7 @@ Eastern Europe bombed twice
 @kb @T-54 (1947) @1.02 @Para @0 @0
 @k @T-54 (1947) @.43 @Para @0 @0
 
-========================================
 2021-08-22
-
-Running Total:
-73/33
-~2.212...
-100/39
-~2.564
-
-0/0
-0
-1/0
-1
 
 @k @PT-76B @.8 @Diag @0 @0
 
