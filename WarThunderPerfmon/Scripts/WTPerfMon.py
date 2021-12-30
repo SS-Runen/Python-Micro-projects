@@ -86,7 +86,7 @@ def txt_to_csv(
     fileobj = None
     if (outfolder_path / outfile_name).exists and (overwrite_outfiles is False):
         outfile_name = str_timestamp + outfile_name
-        fileobj = open(file=(outfolder_path / outfile_name), mode='x')
+        fileobj = open(file=(outfolder_path / outfile_name), mode='a')
     else:
         fileobj = open(file=(outfolder_path / outfile_name), mode='w')
                 
