@@ -41,30 +41,3 @@ Wallonia
 
 38th Parallel
 @kb @Comet I @.3 @Near-para @0 @8
-
-2021-12-16
-
-Eastern Europe [Battle]
-@K @M18 @.69 @Near-para @0 @0
-@kb @Comet I @1.06 @Diag @0 @0
-
-Finland
-@kb @M4A3E2 @.03 @Near-perp @0 @0
-
-2021-09-28
-
-@k @T-34-100 @.2 @Near-Para @0 @0
-
-2021-08-04
-
-@k @KV-2 (Zis-6) @.09 @Near-Perp @0 @0
-@k @T-34-85 @.19 @Diag @0 @0
-@Kb @M4A4 (SA50) @.11 @Diag @0 @0
-
-2021-06-06
-
-@k @T-34-85 (D-5T) @.4 @Diag @0 @0
-@kb @IS-1 @0.01 @Perp @0 @0
-
-@k @M18 @1.38 @Perp @0 @0
-@k @IS-1 @.04 @Near-Perp @0 @14

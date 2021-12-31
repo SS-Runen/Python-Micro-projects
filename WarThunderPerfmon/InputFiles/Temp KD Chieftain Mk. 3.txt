@@ -33,16 +33,3 @@ Red Desert
 
 Cargo Port
 @k @T-64A (1971) @~1 @Diag @0 @0
-
-2021-12-21
-
-Mozdok [Battle]
-@k @T-55A @.63 @Diag @32 @11
-
-Ground Zero
-@k @T-62M-1 @.58 @Diag @17 @0
-@kb @BMP-3 @.58 @Diag @0 @0
-
-Aral Sea
-@kb @BMD-4 @.6 Diag @0 @0
-@kb @T-64A (1971) @.2 @Diag @0 @0

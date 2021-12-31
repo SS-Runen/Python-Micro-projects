@@ -1,6 +1,3 @@
-Event, Vehicle, Distance, OrientationInSight, Movement, SelfMovement, TargetAzimuth
-
-
 
 ======================================
 Following records are after New Power.
