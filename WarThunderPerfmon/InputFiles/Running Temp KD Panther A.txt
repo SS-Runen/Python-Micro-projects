@@ -96,9 +96,6 @@ Middle East
 
 2021-04-22
 
-@k @M41A1 @~1.4 @Diag
-@k @IS-2 Moridan42 @~1 @Near-Para
-
 @k @T-34-85 @.67 @Near-Perp @0 @0
 @kb @M10 @.43 @Diag @0 @0
 

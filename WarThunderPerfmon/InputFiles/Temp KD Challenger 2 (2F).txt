@@ -1,0 +1,42 @@
+2021-12-31
+
+Aral Sea
+@K @T-80 BVM @~.03
+@k @T-72AV
+@k @T-80BVM @~.8
+
+Mozdok
+@k @T-80? @~1.6
+@kb @T-90A @~
+
+Red Desert
+@kb @BMP-3 @~.2
+
+Wallonia
+@k @T-72B3 @~.9 @Perp @0 @0
+@k @2S25 @~.9 @Perp
+@k @BMP-2M @~.8 @Diag
+
+Middle East
+@k @T-90A @~.6 @Diag
+
+Alaska
+@k @CM-11 @~1 @Near-perp
+
+Sweden
+@kb Type 69 II G @~.05
+
+Hurtgen Forest
+@kb @T-80BVM @~.06 @Near-para
+
+Hurtgen Forest
+@kb @T-80BVM @.02 @Perp
+
+Alaska
+@k @2S26 @1.05 @Perp @10 @0
+
+Eastern Europe
+@kb @T-72BV @~1.2 @Perp @0 @0
+
+Advance to the Rhine
+@kb @T-80? @.02 @Diag @0 @0
