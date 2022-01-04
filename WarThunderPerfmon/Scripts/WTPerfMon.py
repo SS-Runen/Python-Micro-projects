@@ -85,7 +85,7 @@ def txt_to_csv(
     str_timestamp = str(dt.datetime.now()).replace(':', '.') + ' '
     fileobj = None
     if (outfolder_path / outfile_name).exists and (overwrite_outfiles is False):
-        outfile_name = str_timestamp + outfile_name
+        # outfile_name = str_timestamp + outfile_name
         fileobj = open(file=(outfolder_path / outfile_name), mode='a')
     else:
         fileobj = open(file=(outfolder_path / outfile_name), mode='w')
@@ -121,11 +121,8 @@ def txt_to_csv(
 
 
 def main():
-    txt_to_csv(overwrite_outfiles=True)
-    # txt_to_csv(
-    #     filename_prefix="Temp KD Centurion Mk. 10",
-    #     outfile_name="records_centmk10.csv"
-    # )
+    # txt_to_csv(overwrite_outfiles=True)
+    txt_to_csv(overwrite_outfiles=False)
     return None
 
 
