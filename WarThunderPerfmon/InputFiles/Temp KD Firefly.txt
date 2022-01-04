@@ -1,0 +1,9 @@
+
+2022-01-02
+
+Port Novorosissysk
+@kb @T-34-85 (D-5T) @.03 @Near-para @0 @0
+
+White Rock Fortress
+@k @T-34-85 @.31 @Diag @0 @0
+@kb @T-34-85 @.31 @Near-perp @0 @-5

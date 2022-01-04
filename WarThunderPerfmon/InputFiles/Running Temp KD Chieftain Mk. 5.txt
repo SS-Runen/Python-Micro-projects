@@ -27,7 +27,6 @@ Mozdok [Battle]
 @k @T-10A @.05 @Near-para @24 @0
 @k @BMP-2 @.17 @Diag @25 @0
 @k @T-64A (1971) @.46 @Diag @20 @0
-@kb @T-5A @.58 @Diag @0 @0
 
 Hurtgen Forest
 @k @BMP-3 @.86 @Near-para @2 @0
@@ -39,11 +38,6 @@ Eastern Europe
 
 Aral Sea
 @kb @BMP-3 @.3 @Para @30 @0
-
-Eastern Europe
-@k @T-64A @~.1
-@k @BMP-3 @~.9
-@k @T-55A @~.8
 
 2021-11-19
 
@@ -177,14 +171,10 @@ Berlin
 
 @kb @T-64A (1971) @0.01 @Diag @0 @8
 
-@k @BMP-3 @~.2 @Diag
-
 @k @T-64A (1971) @.93 @Perp @0 @0
 @k @T-62M-1 @.07 @Near-Para @0 @21
 @k @T-64A (1971) @.06 @Near-Perp @0 @11
 @kb @T-64A (1971) @.06 @Near-Para @0 @0
-
-@kb @WMA301 @~1.9 @Near-Para @0 @0
 
 2021-06-26
 

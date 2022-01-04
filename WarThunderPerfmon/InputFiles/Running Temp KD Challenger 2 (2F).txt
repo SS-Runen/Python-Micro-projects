@@ -1,6 +1,13 @@
 2021-04-05
 Note: Opening Multi-function Menu(y) -> Weaponry -> Select Machine Gun will allow you to use NVD from a perspective similar to commander's view.
 
+2022-01-02
+
+Wallonia
+@k @T-72B3 @.98 @Perp @0 @0
+@k @2S25 @.99 @Perp @0 @0
+@k @BMP-2M @1.03 @Diag @12 @0
+
 2021-12-19
 
 Sands of Sinai [Battle]
