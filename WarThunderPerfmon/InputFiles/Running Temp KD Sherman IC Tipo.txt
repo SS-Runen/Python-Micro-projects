@@ -1,5 +1,16 @@
 2021-12-28
 
+Tunisia
+@k @A.C. IV @2.3 @Perp @0 @0
+@kb @IS-1 @1.92 @Diag @0 @0
+
+Sands of Sinai
+@k @IS-1 @.7 @Para @0 @0
+@k @M24 @.3 @Perp @0 @0
+@kb @IS-1 @.04 @Diag @0 @0
+
+2021-12-28
+
 Wallonia
 @k @E.B.R. (1954) @.5 @Near-para @-10 @0
 

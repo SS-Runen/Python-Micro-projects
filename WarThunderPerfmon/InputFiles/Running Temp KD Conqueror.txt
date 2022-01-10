@@ -33,8 +33,35 @@ October 04, 2021
 - New rule for respawns. If killed by non-prioirity (i.e. NOT T-54 1949/1947, T-34-85 series) spawn again. T-54 1951
 will be used as baseline "control" to check effect of multiple spawns.
 
-2021-12-26
+2022-01-07, Conqueror,k,SU-100P,.95,near-perp,-5,0
+2022-01-07, Conqueror,kb,PT-76-57,1.17,Near-perp,0,0
+2022-01-07, Conqueror,k,Type 62,1.11,Para,0,0
+2022-01-07, Conqueror,kb,T-54 (1949),.67,Diag,0,1
 
-Maginot
-@k @IS-4M @.94 @Perp @4 @0
-@kb @ZSU-85 @1.03 @Perp @0 @0
+2021-12-10, Conqueror,k,SU-100P,~.03,Near-perp
+2021-12-08, Conqueror,k,T-54 (1947),.91,Diag,0,0
+2021-12-06, Conqueror,k,ZSU-37,1.69,Perp,19,0
+2021-12-06, Conqueror,k,T-54 (1947),1.6,Near-perp,0,0
+2021-12-06, Conqueror,k,ZSU-57-2,1.55,Diag,0,0
+2021-12-06, Conqueror,kb,Type 62,.66,Diag,0,0
+2021-12-06, Conqueror,kb,IS-3,.1,Near-perp,0,-7
+2021-12-02, Conqueror,k,IS-6,.12,Near-para,-7,18
+2021-12-02, Conqueror,k,T-44,.73,Diag,0,0
+2021-12-02, Conqueror,k,IS-4M,.2,Para,0,0
+2021-12-02, Conqueror,k,IS-3,.45,Near-para,7,0
+2021-12-02, Conqueror,k,T-54 (1949),.29,Near-para,-7,0
+2021-12-02, Conqueror,kb,IS-4M,.29,Near-para,0,-8
+2021-12-02, Conqueror,kb,T-44-100,.03,Near-Para,0,0
+2021-12-02, Conqueror,k,Obj 268,.53,Para,0,0
+
+
+2021-11-30, Conqueror,k,T-54 (1947),.1,Diag,7,0
+2021-11-24, Conqueror,k,T-54 (1949),.55,Diag,0,0
+2021-11-24, Conqueror,k,IS-3,.7,Para,26,0
+2021-11-24, Conqueror,k,IS-4M,.2,Para,0,0
+2021-11-24, Conqueror,kb,IS-4M,.27,Diag,0,0
+
+0001-01-01, Conqueror,k,IS-4M,.94,Perp,4,0
+0001-01-01, Conqueror,kb,ZSU-85,1.03,Perp,0,0
+0001-01-01, Conqueror,k,2S3M,~.04,Near-para,0,0
+0001-01-01, Conqueror,kb,T-44-100,~.05,Near-perp

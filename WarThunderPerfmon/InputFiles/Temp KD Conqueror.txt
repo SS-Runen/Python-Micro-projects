@@ -1,34 +1,16 @@
+SKIP:
+Sweden
+American Desert wrong side.
+Abandoned Factory
+Advnace to the Rhine
 
-http://warthunder.com/en/registration?r=userinvite_28552741
+2022-01-11
 
-## Gunnery
-- Always use sight and machine gun over 3rd-person against ground targets when firing.
-- When leading close-range targets, make sure that the shell will hit the target whether or not it continues moving.
-- When firing, "bracket" the target: have as much of the target within the upper and lower "spread".
-Despite slight range errors, round will hit.
-- Always watch for shell "splash" or hits before losing sight of a target.
-- When a target is showing a significant part of its side, APDS is usually safer to use than HESH.
+Poland
+@k @T-54 ? @~1.1 @Diag
 
-## Scannning and Searching
-- When scanning for targets, always stay hull down or have most of the tank hidden.
-- If the uncleared area is large, have something to cover you from a large portion of it and clear what is left.
-- Use third-person (3rd person view from turret top) when scanning extremely close areas.
-Switch to high-zoom if an area stands out, e.g. it is far but in line of sight.
-- When scanning for targets, always keep most of the tank hidden. The most exposure should be from a hull-down position.
+Red Desert
+@k @T-54 (1949) @~1
 
-## Positioning and Movement
-- When moving past uncleared areas, move slow enough to clear thoroughly and to be able to fire accurately.
-- If you cannot reliably clear an area and there is no safe route past it (e.g. a large town in open field)
-do not expose yourself to it.
-- Always keep as much of the vehicle hidden as possible whether moving or waiting.
-
-June 04, 2021
-Update "Red Skies".
-- Sound mod.
-- Commander sight mechanics in addition to binocular mode and duplicate commander gun controls.
-- Option for FPE use on squadmates or by light tanks.
-- Modifications to armor calculation where thinnest plate is selected when shell hits a join/joint of armor.
-
-October 04, 2021
-- New rule for respawns. If killed by non-prioirity (i.e. NOT T-54 1949/1947, T-34-85 series) spawn again. T-54 1951
-will be used as baseline "control" to check effect of multiple spawns.
+Advance to the Rhine
+@kb @PT-76-57 @.06 @Perp @0 @0

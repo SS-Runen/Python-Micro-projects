@@ -28,6 +28,26 @@ Event - Vehicle - Distance - Orientation - EnemeySpeed - SelfSpeed
 
 2021-12-28
 
+Second Battle of El Alamein
+@k @ARL-44 @2.53 @Diag @31 @0
+@k @M4A4 (SA50) @2.91 @Near-para @0 @0
+@kb @M18 @.75 @Diag @0 @0
+
+Ash River
+@k @IS-1 @.52 @Para @-12 @0
+@k @SU-85 @.63 @Para @0 @0
+@kb @T-34-85 @.16 @Near-para @0 @4
+
+Maginot
+@k @T20 @1.12 @Diag @0 @0
+@k @SU-85M @1.16 @Para @0 @0
+@kb @M18 @.08 @Near-perp @0 @-4
+
+Tunisia
+@kb @M18 @.8 @Perp @0 @0
+
+2021-12-28
+
 Sands of Sinai
 @kb @M18 @Para @.07 @0 @0
 

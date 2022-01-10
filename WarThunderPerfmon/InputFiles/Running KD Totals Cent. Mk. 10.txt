@@ -40,7 +40,109 @@ will be used as baseline "control" to check effect of multiple spawns.
 November 12, 2020
 First use of Centurion Mk. 10 semi-historical sight with range setting display.
 
+January 01, 2022
+Some bad maps are now skipped.
+Sweden
+American Desert wrong side.
+Abandoned Factory
+Advance to the Rhine
+
 Event - Vehicle - Distance - Orientation - EnemeySpeed - SelfSpeed
+2022-01-07
+4/0 +4
+7/2 +1
+Second Battle of El Alamein [Battle]
+@k @Type 63 @1.29 @Diag @0 @0
+@k @PT-76B @1.53 @Para @32 @0
+
+Abandoned Factory
+@kb @PT-76-57 @.56 @Diag @20 @0
+
+Seversk-13
+@k @2S3M @.14, .14 @Perp @13, 0 @3, 0
+@k @T-44 @.12 @Near-perp @0 @0
+@k @PT-76B @.21 @Para @0 @0
+@k @Type 62 @.16 @Diag @0 @0
+@k @SU-100P @.08 @Perp @23 @0
+
+Alaska
+@k @IS-6 @.58 @Near-para @0 @0
+@k @IS-4M @.39 @near-perp @13 @0
+@k @IS-3 @.63 @Near-perp @30 @0
+@k @T-44-100 @.48 @Diag @0 @0
+
+Poland
+@k @2S3M @1.38 @Diag @0 @0
+
+Eastern Europe [Battle]
+@kb @IS-4M @.3 @Diag @0 @0
+
+Normandy
+@k @IS-4M @.04 @Near-perp @0 @0
+@k @T-54 (1949) @.38 @Perp @37 @0
+
+Hurtgen Forest
+@k @M42 @1.3 @Diag @0 @0
+@k @T-54 (1947) @.83 @Diag @0 @0
+@k @T-54 (1947) @.09 @Near-perp @16 @0
+
+Sands of Sinai [Battle]
+@k @T-54 (1947) @.73 @Near-para @-3 @0
+@K @T-54 (1949) @.68 @Diag @0 @0
+
+Mozdok [Battle]
+@K @2S23M @1.07 @Perp @0 @0
+@k @ZSU-37 @.55 @Diag @4 @0
+
+Sands of Sinai
+@k @T-54 (1949) @.43 @Para @29 @0 
+@k @T-54 (1949) @1.23 @Near-Para @0 @0
+@k @2S3M @.24 @Diag @0 @0
+@kb @Type 62 @.58 @Near-para @0 @0
+@k @Type 62 @.12 @Diag @0 @0
+
+Berlin
+@k @SU-100P @.48 @Near-para @0 @-2
+@k @IS-4M @.08 @Near-perp @8 @0
+@k @T-54 (1947) @.63 @Perp @3 @0
+@k @Obj. 268 @.63 @perp @18 @0
+@k @T-54 (1949) @.6 @Diag @6 @0
+@k @PT-76B @.44 @Near-para @26 @0
+@K @2S3M @.44 @Perp @0 @0
+
+Seversk-13
+@k @IS-6 @.12 @Diag @18 @5
+@k @Obj 268 @.33 @perp @0 @0
+
+Mozdok
+@k @T-54 (1949) @1.04 @Diag @0 @0
+@kb @T-54 (1949) @.41 @Near-para @0 @-2
+
+Cargo Port
+@kb @PT-76-57 @.03 @Near-perp @0 @0
+@k @T-54 (1949) @.05 @Diag @0 @0
+
+Seversk-13
+@k @T-44-100 @.6 @Diag @0 @0
+@kb @T-54 (1949) @.02 @Diag @0 @0
+
+2022-01-03
+
+Poland
+@k @T-44-100 @1.59 @Perp @0 @0
+@k @ASU-85 @1.6 @Near-perp @0 @0
+
+Mozdok [Battle]
+@k @ASU-85 @1.67 @Diag @31 @0
+@k @T-54 (1947) @.62 @Diag @0 @0
+@k @T-54 (1949) @.68 @Near-para @0 @0
+@k @T-44 @.61 @Near-perp @-8 @0
+
+American Desert
+@k @T-54 (1949) @1.07 @Diag @0 @0
+@k @Type 63 @.01 @Near-para @0 @0
+@K @T-44-100 @.22 @Near-perp @15 @0
+@k @SU-100P @.04 @Near-para @0 @22
 
 2021-12-30
 

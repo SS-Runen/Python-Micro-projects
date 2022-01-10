@@ -1,17 +1,44 @@
-2022-01-03
+SKIP:
+Seversk-13
+Sweden
+American Desert wrong side.
+Abandoned Factory
+Advnace to the Rhine
+Space Port
 
-Poland
-@k @T-44-100 @1.59 @Perp @0 @0
-@k @ASU-85 @1.6 @Near-perp @0 @0
+2022-01-11
 
-Mozdok [Battle]
-@k @ASU-85 @1.67 @Diag @31 @0
-@k @T-54 (1947) @.62 @Diag @0 @0
-@k @T-54 (1949) @.68 @Near-para @0 @0
-@k @T-44 @.61 @Near-perp @-8 @0
+Poland [Battle]
+@kb @T-54 (1949) @~.08 @Near-perp @0 @0
+
+Space Port
+@k @PT-76B @~.6 @Para @0 @0
 
 American Desert
-@k @T-54 (1949) @1.07 @Diag @0 @0
-@k @Type 63 @.01 @Near-para @0 @0
-@K @T-44-100 @.22 @Near-perp @15 @0
-@k @SU-100P @.04 @Near-para @0 @22
+@K @T-54 (1947) @~.6 @Near-para @0 @0
+@k @T-54 (1949) @~.6 @Diag
+
+Alaska
+@k @Type 62 @.55 @Diag @0 @0
+@k @T-54 (1947) @~.6 @Para @0 @0
+
+Poland
+@k @T-54 (1947)? @~1 @Perp
+@k @PT-76-57 @~.4 @Perp
+
+Advance to the Rhine
+@kb @T-54 (1949) @.4 @Diag @0 @0
+
+Red Desert
+@k @IS-3 @.09 @Perp @0 @0
+@k @T-54 (1949) @~.6 @Diag @0 @0
+@kb @IS-4M @~.55 @Near-para
+
+Seversk-13
+@k @T-54 (1949) @~.03 @Diag
+@k @T-44-100 @~.1 @Diag
+@k @SU-100P @~.01 @Near-para
+@kb @SU-100P @~.04 Near-para
+
+Second Battle of El Alamein [Battle]
+@k @T-54 (1947) @~1 @Diag @0 @0

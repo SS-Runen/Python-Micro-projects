@@ -18,6 +18,18 @@ vs. T-62M-1 5/4
 - When shell splash appears behind target, check if shell went past its turret. If so, adjust range by half a mark (100 meters).
 
 Event - Vehicle - Distance - Orientation - EnemeySpeed - SelfSpeed
+2022-01-06
+
+Eastern Europe
+@k @T-69 II G @.73 @Diag @0 @0
+@kb @IT-1 @2 @Para  @0 @0
+
+Poland
+@k @T-69 II G @.46 @Perp @5 @0
+@k @T-69 II G @.91 @Near-para @14 @0
+@k @T-10A @.82 @Diag @8 @0
+@k @Obj 120 @.52 @Perp @0 @0
+@kb @WMA301 @.42 @Diag @0 @0
 
 2021-12-21
 
