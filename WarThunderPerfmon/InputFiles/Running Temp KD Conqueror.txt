@@ -33,6 +33,18 @@ October 04, 2021
 - New rule for respawns. If killed by non-prioirity (i.e. NOT T-54 1949/1947, T-34-85 series) spawn again. T-54 1951
 will be used as baseline "control" to check effect of multiple spawns.
 
+
+2022-01-11
+
+Poland
+@k @T-54 (1949) @1.28 @Diag @34 @0
+
+Red Desert
+@k @T-54 (1949) @.82 @Diag @0 @0
+
+Advance to the Rhine
+@kb @PT-76-57 @.06 @Perp @0 @0
+
 2022-01-07, Conqueror,k,SU-100P,.95,near-perp,-5,0
 2022-01-07, Conqueror,kb,PT-76-57,1.17,Near-perp,0,0
 2022-01-07, Conqueror,k,Type 62,1.11,Para,0,0

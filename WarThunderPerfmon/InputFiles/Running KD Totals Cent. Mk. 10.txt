@@ -48,6 +48,47 @@ Abandoned Factory
 Advance to the Rhine
 
 Event - Vehicle - Distance - Orientation - EnemeySpeed - SelfSpeed
+
+2022-01-11
+
+Wallonia
+@k @T-54 (1949) @.98 @Near-perp @18 @0
+
+Poland [Battle]
+@kb @T-54 (1949) @.2 @Diag @0 @0
+
+Space Port
+@k @PT-76B @.59 @Near-para @0 @0
+
+American Desert
+@K @T-54 (1947) @.53 @Para @0 @0
+@k @T-54 (1949) @.63 @Diag @0 @0
+
+Alaska
+@k @Type 62 @.56 @Diag @0 @0
+@k @T-54 (1947) @.65 @Para @0 @0
+
+Poland
+@k @T-54 (1947) @1.04 @Diag @35 @0
+@k @PT-76-57 @.61 @Perp @11 @0
+
+Advance to the Rhine
+@kb @T-54 (1949) @.4 @Diag @0 @0
+
+Red Desert
+@k @IS-3 @.29 @Perp @0 @0
+@k @T-54 (1949) @.64 @Diag @0 @0
+@kb @IS-4M @.23 @Near-para @0 @4
+
+Seversk-13
+@k @T-54 (1949) @.12 @Diag @8 @0
+@k @T-44-100 @.34 @Diag @0 @0
+@k @SU-100P @.05 @Diag @20 @0
+@kb @SU-100P @.2 @Diag @0 @10
+
+Second Battle of El Alamein [Battle]
+@k @T-54 (1947) @1.01 @Diag @0 @0
+
 2022-01-07
 4/0 +4
 7/2 +1

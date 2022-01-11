@@ -2309,3 +2309,25 @@ DateRecorded,VehicleUsed,Event,EnemyVehicle,Distance,OrientationInSight,EnemySpe
 2022-01-07, Conqueror,kb,PT-76-57,1.17,Near-perp,0,0
 2022-01-07, Conqueror,k,Type 62,1.11,Para,0,0
 2022-01-07, Conqueror,kb,T-54 (1949),.67,Diag,0,1
+DateRecorded,VehicleUsed,Event,EnemyVehicle,Distance,OrientationInSight,EnemySpeed,SelfSpeed
+2022-01-11, Centurion Mk. 10,k,T-54 (1949),.98,Near-perp,18,0
+2022-01-11, Centurion Mk. 10,kb,T-54 (1949),.2,Diag,0,0
+2022-01-11, Centurion Mk. 10,k,PT-76B,.59,Near-para,0,0
+2022-01-11, Centurion Mk. 10,K,T-54 (1947),.53,Para,0,0
+2022-01-11, Centurion Mk. 10,k,T-54 (1949),.63,Diag,0,0
+2022-01-11, Centurion Mk. 10,k,Type 62,.56,Diag,0,0
+2022-01-11, Centurion Mk. 10,k,T-54 (1947),.65,Para,0,0
+2022-01-11, Centurion Mk. 10,k,T-54 (1947),1.04,Diag,35,0
+2022-01-11, Centurion Mk. 10,k,PT-76-57,.61,Perp,11,0
+2022-01-11, Centurion Mk. 10,kb,T-54 (1949),.4,Diag,0,0
+2022-01-11, Centurion Mk. 10,k,IS-3,.29,Perp,0,0
+2022-01-11, Centurion Mk. 10,k,T-54 (1949),.64,Diag,0,0
+2022-01-11, Centurion Mk. 10,kb,IS-4M,.23,Near-para,0,4
+2022-01-11, Centurion Mk. 10,k,T-54 (1949),.12,Diag,8,0
+2022-01-11, Centurion Mk. 10,k,T-44-100,.34,Diag,0,0
+2022-01-11, Centurion Mk. 10,k,SU-100P,.05,Diag,20,0
+2022-01-11, Centurion Mk. 10,kb,SU-100P,.2,Diag,0,10
+2022-01-11, Centurion Mk. 10,k,T-54 (1947),1.01,Diag,0,0
+2022-01-11, Conqueror,k,T-54 (1949),1.28,Diag,34,0
+2022-01-11, Conqueror,k,T-54 (1949),.82,Diag,0,0
+2022-01-11, Conqueror,kb,PT-76-57,.06,Perp,0,0
