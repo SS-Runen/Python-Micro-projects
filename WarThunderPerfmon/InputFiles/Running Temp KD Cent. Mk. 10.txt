@@ -51,6 +51,9 @@ Event - Vehicle - Distance - Orientation - EnemeySpeed - SelfSpeed
 
 2022-01-11
 
+4/0 +4
+4/2 -2
+
 Wallonia
 @k @T-54 (1949) @.98 @Near-perp @18 @0
 
