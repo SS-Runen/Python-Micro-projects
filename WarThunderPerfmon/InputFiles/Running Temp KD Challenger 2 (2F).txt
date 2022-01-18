@@ -1,6 +1,23 @@
 2021-04-05
 Note: Opening Multi-function Menu(y) -> Weaponry -> Select Machine Gun will allow you to use NVD from a perspective similar to commander's view.
 
+2022-01-16
+
+Seversk-13
+@k @T-90A @.02 @Para @9 @0
+@k @T-80BVM @.05 @Perp @3 @17
+@k @T-90A @.6 @Near-perp @0 @0
+@k @T-80BVM @.67 @Diag @0 @0
+@K @T-80U @.16 @Para @15 @8
+
+Hurtgen Forest
+@k @T-72AV (TURMS-T) @.24 @Diag @0 @0
+@k @T-72AV (TURMS-T) @.28 @Near-perp @0 @0
+@k @T-80BVM @.57 @Near-para @9 @0
+@K @T-90A @1.62 @Para @0 @0
+@k @T-80BVM @1.68 @Para @0 @0
+@kb @T-72B3 @.77 @Near-para @0 @9
+
 2022-01-02
 
 Wallonia

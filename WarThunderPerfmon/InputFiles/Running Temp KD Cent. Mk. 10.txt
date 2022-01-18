@@ -49,6 +49,23 @@ Advance to the Rhine
 
 Event - Vehicle - Distance - Orientation - EnemeySpeed - SelfSpeed
 
+2022-01-15
+
+Eastern Europe
+@k @ASU-85 @.8 @Diag @0 @0
+@k @ZSU-57-2 @.73 @Near-perp @0 @0
+
+Middle East
+@K @IS-4M @.88 @Near-para @0 @0
+@k @T-44-100 @1.16 @Near-para @0 @0
+@K @PT-76B @.48 @Near-perp @0 @0
+@k @PT-76B @.1 @Near-para @11 @0
+@kb @ASU-85 @.03 @Diag @13 @0
+
+Fulda
+@k @IS-3 @.18 @Near-Perp @15 @0
+@k @T-54 (1947) @1.41, 1.40 @Near-Para @-4, 0 @5, 3
+
 2022-01-11
 
 4/0 +4
