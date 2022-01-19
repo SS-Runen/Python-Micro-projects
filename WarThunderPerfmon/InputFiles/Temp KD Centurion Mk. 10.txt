@@ -6,5 +6,40 @@ Abandoned Factory
 Advnace to the Rhine
 Space Port
 
+2022-01-19
+
+Middle East
+@kb @T-54 (1947) @~1 @Near-para @0 @0
+
+Poland
+@k @T-54 (1947) @~.2
+@kb @2S3M @.2 @Near-perp
+@kb @2S3M @.1 @Near-para
+
+Sands of Sinai
+@k @T-54 (1949) @~2.2 @Perp
+@k @T-54 (1947) @~1.2 @Perp @0 @0
+@k @T-54 (1949) @~.1 @Diag
+
+Campania
+@k @T-54 (949) @~.2 @Para @0 @0
+
+Red Desert
+@k @T-54 (1949) @~.6
+@k @PT-76-57 @~.8 @Diag @0 @0
+@kb @T-54 (1949) @~.1
+
+Fields of Normandy
+@k @T-54 (1949) @~.1 @Near-perp @0 @0
+@k @T-44-100 @~.12 @Diag
+@k @T-54 (1949) @~.9 @Perp @0 @0
+@k @PT-76-57 @~1
+
+Fire Arc [Battle]
+@k @T-54 (1949) @~.7 @Diag
+@k @Type 59/T-54 (1949) @~1.2 @Diag @0 @0
+@k @BTR-152A @.03 @Para @0 @0
+@k @T-54 (1947) @~.85 @Para @0 @0
+@k @Type 62 @~1.1 @Near-perp
 
 
