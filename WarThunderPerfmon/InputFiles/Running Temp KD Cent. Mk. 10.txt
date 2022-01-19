@@ -49,6 +49,55 @@ Advance to the Rhine
 
 Event - Vehicle - Distance - Orientation - EnemeySpeed - SelfSpeed
 
+2022-01-19
+
+Hurtgen Forest [Battle]
+@K @T-54 (1949) @.1, .06 @Diag, Diag @15, 0 @16, 18
+@k @T-54 (1949) @.54 @Near-para @0 @0
+
+Middle East
+@kb @T-54 (1947) @1.07 @para @0 @0
+
+Poland
+@k @T-54 (1947) @.46 @Diag @15 @0
+@kb @2S3M @.46 @Diag @0 @0
+@kb @2S3M @.5 @Near-para @-11 @0
+
+Sands of Sinai
+@k @T-54 (1949) @2.33 @Near-Perp @37 @0
+@k @T-54 (1947) @1.32 @Near-perp @0 @0
+@k @T-54 (1949) @.26 @Diag @5 @0
+
+Campania
+@k @T-54 (949) @.41 @Para @0 @0
+@kb @PT-76-57 @.28 @Diag @-5 @15
+
+Red Desert
+@k @T-54 (1949) @.41 @Near-para @1 @3
+@k @PT-76-57 @.77 @Diag @0 @-5
+@kb @T-54 (1949) @.18 @Para @0 @15
+
+Finland [Battle]
+@k @T-54 (1949) @.21 @Near-para @0 @12
+@K @SU-100P @1.06 @Para @0 @0
+
+Hurtgen Forest
+@k @PT-76-57 @.54 @Diag @32 @14
+
+Fields of Normandy
+@k @T-54 (1949) @.34 @Diag @0 @0
+@k @T-44-100 @.4 @Diag @27 @0
+@k @T-54 (1949) @.9 @Perp @0 @0
+@k @PT-76-57 @1.04 @Diag @0 @0
+
+Fire Arc [Battle]
+@k @T-54 (1949) @.67 @Near-para @0 @14
+@k @Type 62 @1.49 @Diag @0 @0
+@k @BTR-152A @.07 @Para @0 @0
+@k @T-54 (1947) @.92 @Para @0 @0
+@k @Type 62 @1.29 @Near-perp @31 @0
+@kb @2S3M @1.29 @Near-para @0 @0
+
 2022-01-15
 
 Eastern Europe
