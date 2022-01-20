@@ -1,0 +1,18 @@
+2022-01-20
+
+Middle East
+@k @T-80 @.8
+@k @BMD-4 @~1 @Para
+
+Fire Arc
+@Kb @T-90A @.03 @Diag @0 @0
+
+Sands of Sinai
+@k @T-80B @.04 @Near-para @0 @0
+@kb @T-80BVM @.02 @Diag @0 @0
+
+Fulda
+@k @CM25 @~1.4 @Near-para @0 @0
+
+Poland
+@k @T-72 TURMS @~1
