@@ -1,0 +1,34 @@
+Volokolamsk
+Sweden
+Advance to the Rhine
+Stalingrad
+
+
+2022-01-21
+
+Wallonia
+@K @T-34-85
+@kb @M4A3 (76) W
+
+Volokolamsk
+@k @E.B.R. (1954) @.09 @Near-para @0 @0
+@k @E.B.R. (1954) @.08 @Diag @0 @0
+@k @Yag-10 (29K) @.02 @Diag @0 @10
+@k @T-34-85 (D-5T) @.09 @Diag @15 @0
+@k @T-34-58 (D-5T) @.69 @Near-para @0 @0
+
+Campania
+@k @T-34-85 @~.9
+@k @M4A3E2 @~.3
+@k @T-34-85 @~.8 @Perp
+
+2022-01-20
+
+Seversk-13
+@K @ARL-44 @.3 @Para @0 @0
+@kb @T-34-85 @.12 @Near-para @0 @0
+
+Wallonia
+@k @M18 @~.1
+@k @SU-85M @~.8
+@kb @Comet I

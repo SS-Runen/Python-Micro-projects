@@ -33,17 +33,6 @@ June 04, 2021. Update "Red Skies".
 
 Event - Vehicle - Distance - Orientation - EnemeySpeed - SelfSpeed
 
-2022-01-20
-
-Seversk-13
-@K @ARL-44 @.3 @Para @0 @0
-@kb @T-34-85 @.12 @Near-para @0 @0
-
-Wallonia
-@k @M18 @~.1
-@k @SU-85M @~.8
-@kb @Comet I
-
 2021-12-16
 
 Campania
