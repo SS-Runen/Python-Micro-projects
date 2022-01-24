@@ -2399,3 +2399,78 @@ DateRecorded,VehicleUsed,Event,EnemyVehicle,Distance,OrientationInSight,EnemySpe
 2022-01-19, Centurion Mk. 10,k,T-54 (1947),.92,Para,0,0
 2022-01-19, Centurion Mk. 10,k,Type 62,1.29,Near-perp,31,0
 2022-01-19, Centurion Mk. 10,kb,2S3M,1.29,Near-para,0,0
+DateRecorded,VehicleUsed,Event,EnemyVehicle,Distance,OrientationInSight,EnemySpeed,SelfSpeed
+0001-01-01, Centurion Mk. 10,k,PT-76-57,0.45,Diag,16.0,0.0
+0001-01-01, Centurion Mk. 10,k,T-54 (1949),.48,Diag,0,0
+0001-01-01, Centurion Mk. 10,K,2S3M,.52,Near-para,0,0
+0001-01-01, Centurion Mk. 10,K,2S3M,..66,Diag,0,0
+2022-01-20, Challenger 2 (2F),k,T-72B,0.905,Diag,17.5,0.0
+2022-01-20, Challenger 2 (2F),k,BMD-4,1.05,Para,0,0
+2022-01-20, Challenger 2 (2F),Kb,T-90A,.03,Diag,0,0
+2022-01-20, Challenger 2 (2F),k,T-80B,.04,Near-para,0,0
+2022-01-20, Challenger 2 (2F),kb,T-80BVM,.02,Diag,0,0
+2022-01-20, Challenger 2 (2F),k,CM25,~1.4,Near-para,0,0
+2022-01-20, Challenger 2 (2F),k,T-72 TURMS,1.35,Diag,29,-26
+2022-01-22, Chieftain Mk. 3,k,BMD-4,.32,Near-para,40,0
+2022-01-22, Chieftain Mk. 3,Kb,BMP-1,.1,Diag,0,0
+2022-01-22, Chieftain Mk. 3,k,BMD-4,.94,Near-perp,0,0
+2022-01-22, Chieftain Mk. 3,kb,BMD-4,.09,Near-para,24,0
+2022-01-22, Chieftain Mk. 3,kb,T-55AM-1,.63,Near-para,0,0
+2022-01-22, Chieftain Mk. 3,k,T-55A,.51,Para,17,0
+2022-01-22, Chieftain Mk. 3,kb,ZBD86,.62,Para,0,0
+2022-01-22, Chieftain Mk. 3,kb,IT-1,.03,Diag,0,0
+2022-01-22, Chieftain Mk. 3,k,T-64A (1971),.03,Para,0,0
+2022-01-22, Chieftain Mk. 5,k,T-64A (1971),.35,Diag,0,-5
+2022-01-22, Chieftain Mk. 5,k,T-62,.39,Diag,27,22
+2022-01-22, Chieftain Mk. 5,k,T-55A,.15,Near-para,0,22
+2022-01-22, Chieftain Mk. 5,k,WMA301,Near-perp,Near-perp,6,-6
+2022-01-22, Chieftain Mk. 5,kb,T-64A (1971),.2,Near-para,0,0
+2022-01-20, Panther D,k,Comet I,.55,Near-perp,-2,0
+2022-01-20, Panther D,k,M10,.86,Perp,12,0
+2022-01-20, Panther D,k,SU-152,.25,Diag,8,0
+2022-01-20, Panther D,k,T-34-85 (S-53),.48,Para,0,-3
+2022-01-20, Panther D,k,AMX-13 (FL11),.01,Diag,0,0
+2022-01-20, Panther D,k,IS-1,.03,Para,0,16
+2022-01-21, Tiger E,k,M4A3E2,1.05,Perp,0,0
+2022-01-21, Tiger E,k,KV-1S,.39,Near-perp,0,0
+2022-01-21, Tiger E,k,ARL-44,.23,Near-Para,0,0
+2022-01-21, Tiger E,K,SU-100Y,.02,Near-para,0,0
+2022-01-21, Tiger E,k,M6A1,.25,Diag,0,0
+2022-01-21, Tiger E,K,M16,.04,Diag,0,0
+2022-01-21, Tiger E,k,IS-1,.26,Perp,0,0
+2022-01-21, Tiger E,k,Avenger,1.02,Diag,0,0
+2022-01-21, Tiger E,K,M4A3 (76) W,.03,Diag,0,0
+2022-01-21, Tiger E,k,SU-85M,.16,Diag,2,0
+2022-01-21, Tiger E,kb,Sherman Vc,.03,Near-perp,0,0
+2022-01-21, Tiger E,kb,M4A3E2,.02,Perp,0,0
+2022-01-21, Tiger E,k,M6A1,.98,Diag,0,0
+2022-01-21, Tiger E,k,T-34-85,.14,Near-perp,2,0
+2022-01-21, Tiger E,k,T-34-85 (D-5T),.14,perp,22,12
+2022-01-21, Tiger E,k,M18,.05,Near-para,0,0
+2022-01-21, Tiger E,K,Avenger,.26,Para,10,0
+2022-01-21, Tiger E,k,M18,.12,Para,0,-8
+2022-01-21, Tiger E,k,Crusader AA Mk II,.05,Para,8,0
+2022-01-21, Tiger E,k,M18,.52,Para,20,0
+2022-01-21, Tiger E,k,SU-85M,.72,Diag,18,0
+2022-01-21, Tiger E,kb,Comet I,.26,Diag,0,0
+2022-01-21, Tiger E,K,T-34-85
+2022-01-21, Tiger E,K,M4A3E2,.68,Perp,0,0
+2022-01-21, Tiger E,K,M18,.83,Diag,0,0
+2022-01-21, Tiger E,k,T-34-85 (D-5T),0.49,Perp,13.0,0.0
+2022-01-21, Tiger E,kb,M4A3 (76) W,.27,Diag,0,0
+2022-01-21, Tiger E,k,E.B.R. (1954),.09,Near-para,0,0
+2022-01-21, Tiger E,k,E.B.R. (1954),.08,Diag,0,0
+2022-01-21, Tiger E,k,Yag-10 (29K),.02,Diag,0,10
+2022-01-21, Tiger E,k,T-34-85 (D-5T),.09,Diag,15,0
+2022-01-21, Tiger E,k,T-34-58 (D-5T),.69,Near-para,0,0
+2022-01-21, Tiger E,K,Avenger,.14,Perp,0,0
+2022-01-21, Tiger E,K,Ystervark,.13,Diag,0,0
+2022-01-21, Tiger E,K,SU-85M,.78,Near-para,0,0
+2022-01-21, Tiger E,k,T-34-85 (D-5T),.42,Perp,-8,-7
+2022-01-21, Tiger E,k,T-34-85 (D-5T),.93,Diag,0,0
+2022-01-21, Tiger E,K,M4A3 (76) W,1.24,Near-para,0,0
+2022-01-21, Tiger E,k,M4A3E2,.49,Perp,5,0
+2022-01-21, Tiger E,k,M18,.58,Para,-14,0
+2022-01-21, Tiger E,k,T-34-85,.69,0.69,Near-Perp,15
+2022-01-20, Tiger E,K,ARL-44,.3,Para,0,0
+2022-01-20, Tiger E,kb,T-34-85,.12,Near-para,0,0

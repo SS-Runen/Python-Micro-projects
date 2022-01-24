@@ -33,6 +33,76 @@ June 04, 2021. Update "Red Skies".
 
 Event - Vehicle - Distance - Orientation - EnemeySpeed - SelfSpeed
 
+
+2022-01-21
+
+Eastern Europe
+@k @M4A3E2 @1.05 @Perp @0 @0
+@k @KV-1S @.39 @Near-perp @0 @0
+@k @ARL-44 @.23 @Near-Para @0 @0
+
+38th Parallel
+@K @SU-100Y @.02 @Near-para @0 @0
+@k @M6A1 @.25 @Diag @0 @0
+@K @M16 @.04 @Diag @0 @0
+@k @IS-1 @.26 @Perp @0 @0
+
+White Rock Fortress
+@k @Avenger @1.02 @Diag @0 @0
+@K @M4A3 (76) W @.03 @Diag @0 @0
+@k @SU-85M @.16 @Diag @2 @0
+@kb @Sherman Vc @.03 @Near-perp @0 @0
+
+Normandy
+@kb @M4A3E2 @.02 @Perp @0 @0
+
+Normandy
+@k @M6A1 @.98 @Diag @0 @0
+@k @T-34-85 @.14 @Near-perp @2 @0
+@k @T-34-85 (D-5T) @.14 @perp @22 @12
+@k @M18 @.05 @Near-para @0 @0
+@K @Avenger @.26 @Para @10 @0
+@k @M18 @.12 @Para @0 @-8
+@k @Crusader AA Mk II @.05 @Para @8 @0
+
+Wallonia
+@k @M18 @.52 @Para @20 @0
+@k @SU-85M @.72 @Diag @18 @0
+@kb @Comet I @.26 @Diag @0 @0
+
+Ardennes
+@K @T-34-85
+@K @M4A3E2 @.68 @Perp @0 @0
+@K @M18 @.83 @Diag @0 @0
+@k @T-34-85 (D-5T) @.49, .49 @Perp, Perp @26, 0 @0, 0
+@kb @M4A3 (76) W @.27 @Diag @0 @0
+
+Volokolamsk
+@k @E.B.R. (1954) @.09 @Near-para @0 @0
+@k @E.B.R. (1954) @.08 @Diag @0 @0
+@k @Yag-10 (29K) @.02 @Diag @0 @10
+@k @T-34-85 (D-5T) @.09 @Diag @15 @0
+@k @T-34-58 (D-5T) @.69 @Near-para @0 @0
+
+Carpathians
+@K @Avenger @.14 @Perp @0 @0
+@K @Ystervark @.13 @Diag @0 @0
+@K @SU-85M @.78 @Near-para @0 @0
+@k @T-34-85 (D-5T) @.42 @Perp @-8 @-7
+
+Campania
+@k @T-34-85 (D-5T) @.93 @Diag @0 @0
+@K @M4A3 (76) W @1.24 @Near-para @0 @0
+@k @M4A3E2 @.49 @Perp @5 @0
+@k @M18 @.58 @Para @-14 @0
+@k @T-34-85 @.69, @.69 @Near-Perp, Near-perp @15, @0 @0, @0
+
+2022-01-20
+
+Seversk-13
+@K @ARL-44 @.3 @Para @0 @0
+@kb @T-34-85 @.12 @Near-para @0 @0
+
 2021-12-16
 
 Campania

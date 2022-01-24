@@ -49,6 +49,14 @@ Advance to the Rhine
 
 Event - Vehicle - Distance - Orientation - EnemeySpeed - SelfSpeed
 
+2022-01-23
+
+American Desert
+@k @PT-76-57 @.45, .45 @Diag @32, 0 @0, 0
+@k @T-54 (1949) @.48 @Diag @0 @0
+@K @2S3M @.52 @Near-para @0 @0
+@K @2S3M @..66 @Diag @0 @0
+
 2022-01-19
 
 Hurtgen Forest [Battle]

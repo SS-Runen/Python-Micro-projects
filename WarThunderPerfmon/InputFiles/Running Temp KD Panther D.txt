@@ -9,6 +9,18 @@ Event, Vehicle, Distance, OrientationInSight, Speed, SelfSpeed
 vs. T-34-85 (D-5T) 1/3
 vs. T-34-85* 5/3
 
+2022-01-20
+
+Poland
+@k @Comet I @.55 @Near-perp @-2 @0
+@k @M10 @.86 @Perp @12 @0
+@k @SU-152 @.25 @Diag @8 @0
+@k @T-34-85 (S-53) @.48 @Para @0 @-3
+
+Seversk-13
+@k @AMX-13 (FL11) @.01 @Diag @0 @0
+@k @IS-1 @.03 @Para @0 @16
+
 2021-12-16
 
 Campania

@@ -19,6 +19,19 @@ vs. T-62M-1 5/4
 
 Event - Vehicle - Distance - Orientation - EnemeySpeed - SelfSpeed
 
+2022-01-22
+
+Red Desert
+@k @T-64A (1971) @.35 @Diag @0 @-5
+@k @T-62 @.39 @Diag @27 @22
+
+Hurtgen Forest
+@k @T-55A @.15 @Near-para @0 @22
+@k @WMA301 @Near-perp @Near-perp @6 @-6
+
+Alaska
+@kb @T-64A (1971) @.2 @Near-para @0 @0
+
 2022-01-18
 
 Middle East

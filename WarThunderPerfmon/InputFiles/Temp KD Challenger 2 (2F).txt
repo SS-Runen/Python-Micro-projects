@@ -1,8 +1,8 @@
 2022-01-20
 
 Middle East
-@k @T-80 @.8
-@k @BMD-4 @~1 @Para
+@k @T-72B @.91, .9 @Diag, Near-perp @35, 0 @0, 0
+@k @BMD-4 @1.05 @Para @0 @0
 
 Fire Arc
 @Kb @T-90A @.03 @Diag @0 @0
@@ -15,4 +15,4 @@ Fulda
 @k @CM25 @~1.4 @Near-para @0 @0
 
 Poland
-@k @T-72 TURMS @~1
+@k @T-72 TURMS @1.35 @Diag @29 @-26
