@@ -2409,7 +2409,6 @@ DateRecorded,VehicleUsed,Event,EnemyVehicle,Distance,OrientationInSight,EnemySpe
 2022-01-20, Challenger 2 (2F),Kb,T-90A,.03,Diag,0,0
 2022-01-20, Challenger 2 (2F),k,T-80B,.04,Near-para,0,0
 2022-01-20, Challenger 2 (2F),kb,T-80BVM,.02,Diag,0,0
-2022-01-20, Challenger 2 (2F),k,CM25,~1.4,Near-para,0,0
 2022-01-20, Challenger 2 (2F),k,T-72 TURMS,1.35,Diag,29,-26
 2022-01-22, Chieftain Mk. 3,k,BMD-4,.32,Near-para,40,0
 2022-01-22, Chieftain Mk. 3,Kb,BMP-1,.1,Diag,0,0
@@ -2474,3 +2473,8 @@ DateRecorded,VehicleUsed,Event,EnemyVehicle,Distance,OrientationInSight,EnemySpe
 2022-01-21, Tiger E,k,T-34-85,.69,0.69,Near-Perp,15
 2022-01-20, Tiger E,K,ARL-44,.3,Para,0,0
 2022-01-20, Tiger E,kb,T-34-85,.12,Near-para,0,0
+DateRecorded,VehicleUsed,Event,EnemyVehicle,Distance,OrientationInSight,EnemySpeed,SelfSpeed
+2022-01-25, Panther A,kb,2S3M,.55,Diag,0,0
+2022-01-25, Panther A,k,M18,.56,Near-para,0,0
+2022-01-25, Panther A,k,T-34-85 (D-5T),1.88,Near-Para,0,0
+2022-01-25, Panther A,kb,PT-76B,.95,Diag,0,0
