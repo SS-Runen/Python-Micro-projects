@@ -1,0 +1,15 @@
+2022-02-26
+
+Red Desert
+@k @WMA301 @~.5 @Perp
+
+Maginot
+@k @PTL02 @~.2 @Diag
+
+Maginot
+@k @T-55A @~1.2 @Diag
+
+European Province
+@k @M41D @1.42, 1.41 @Diag @36, 0 @0, 0
+@k @BMP-3 @.12 @Near-para @39 @0
+@kb @BMP-3 @.04 @Near-perp @39 @0

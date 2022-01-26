@@ -71,7 +71,6 @@ Wallonia
 @kb @Comet I @.26 @Diag @0 @0
 
 Ardennes
-@K @T-34-85
 @K @M4A3E2 @.68 @Perp @0 @0
 @K @M18 @.83 @Diag @0 @0
 @k @T-34-85 (D-5T) @.49, .49 @Perp, Perp @26, 0 @0, 0
