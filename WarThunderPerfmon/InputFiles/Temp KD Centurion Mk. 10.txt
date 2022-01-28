@@ -5,4 +5,68 @@ American Desert wrong side.
 Abandoned Factory
 Advnace to the Rhine
 Space Port
+Campania
 
+2022-01-27
+
+Middle East
+@k @BTR-152A @1.1 @Near-perp @0 @0
+@kb @PT-76-57 @1.32 @Diag @0 @0
+@kb @PT-76-57 @.11 @Near-perp @0 @0
+
+European Province
+@k @2S3M @.06 @Diag @0 @0
+@k @PT-76-57 @.53 @Diag @20 @0
+@k @T-54 (1947) @1.18 @Perp @0 @0
+@K @Obj 268 @1.12 @Para @23 @0
+@kb @PT-76-57 @.05 @Perp @20 @0
+@kb @PT-76-57 @.12 @Diag @26 @0
+
+Middle East
+@k @T-54 (1949) @.6 @Near-para
+@k @ASU-85 @Perp
+
+Fulda
+@k T-44-100 @1.12 @Near-perp @0 @0
+@kb @T-54 (1947) @.95 @Perp @0 @-8
+
+Maginot
+@k @PT-76-57 @.83 @Near-para @0 @0
+@k @T-54 (1947) @.59 @Near-para @31 @0
+
+Fire Arc
+@k @PT-76-57 @1.39, 1.38  @Diag, Near-perp @30, 0 @0, 0
+@k @PT-76-57 @1.17 @Near-Perp @0 @0
+@k @T-54 (1949) @2.19 @Diag @0 @0
+
+Mozdok [Battle]
+@k @PT-76B @1.12, 1.12 @Diag, Diag @41, 0 @0, 0
+@k @T-54 (1949) @1.07 @Diag @29 @-3
+@kb @PT-76-57 @.75 @Diag @0 @0
+
+Fulda
+@K @T-54 (1947) @.36 @Para @0 @-11
+@k @T-54 (1949) @.48 @Near-Perp @0 @0
+@k @T-44 @.06 @Near-perp @13 @0
+
+Second Battle of EL Alamein
+@k @IS-4M @1.92 @Near-para @12 @0
+
+Wallonia
+@k @PT-76-57 @.94 @perp @0 @0
+@K @T-44 @.96 @Near-perp @10 @0
+@k @2S3M @.81, .81 @Diag, Diag @21, 0 @0, 0
+
+Second Battle of El Alamein
+@k @T-54 (1947) @.89, .89 @Diag, Diag @17, 0 @6, 0
+@k @Obj 268 @.96 @Near-perp @18 @0
+@k @IS-6 @1.15 @Diag @0 @0
+
+Poland
+@k @IS-4M @.42 @Near-perp @0 @0
+
+Wallonia
+@K @PT-76-57 @.98 @Near-para @0 @0
+@k @PT-76B @.98 @Near-perp @0 @0
+@K @IS-4M @.98 @Diag @0 @0
+@K @T-54 (1949) @.8 @Diag @0 @0
