@@ -6,3 +6,44 @@ Abandoned Factory
 Advnace to the Rhine
 Space Port
 Campania
+
+2022-01-31
+
+Fields of Normandy [Battle]
+@k @IS-6 @.2 @Para @-10 @3
+@k @T-54 (1947) @.46 @Near-perp @21 @0
+@K @T-44-100 @.51, .51 @near-perp, diag @0, 0 @3, 0
+@k @T-54 (1949) @.1 @Near-perp @21 @5
+@k @T-44-100 @.39 @Near-para @0 @0
+@k @PT-76B @.4 @Perp @28 @1
+
+Fields of Normandy [Battle]
+@kb @PT-76-57 @~.2
+@kb @PT-76-57 @~.1
+
+Berlin
+@K @ASU-85 @.83 @Para @0 @0
+@k @2S3M @.09 @near-Perp @0 @0
+@k @PT-76B @.06 @Para @2 @6
+@k @Type 62 @.08 @Diag @0 0
+@k @Type 62 @.23 @Diag @0 0
+@kb @2S3M @.27 @Para @0 @0
+@kb @Type 63-I @.12 @Near-perp @0 @3
+
+Advance to the Rhine
+@kb Type 63-I @.03 @Diag @0 @0
+
+Poland
+@k @PT-76-57 @.23 @Near-para @0 @0
+@kb @T-44-100 @.21 @Diag @0 @0
+
+Berlin
+@K @T-54 (1949) @.5 @Diag @14 @0
+@k @T-54 (1947) @.73, .73 @Near-perp, Near-perp @21, 0 @0, 0
+@k @T-54 (1947) @.4 @Near-para @0 @0
+@k @T-34-100 @.62 @Para @0 @0
+
+Alaska
+@k @T-54 (1947) @.89 @Near-perp @11 @0
+@k @PT-76-57 @.5 @Near-perp @32 @0
+@k @T-54 (1949) @.51 @Diag @0 @0
