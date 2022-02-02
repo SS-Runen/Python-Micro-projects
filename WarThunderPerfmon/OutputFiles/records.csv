@@ -2547,3 +2547,80 @@ DateRecorded,VehicleUsed,Event,EnemyVehicle,Distance,OrientationInSight,EnemySpe
 2022-02-26, Chieftain Mk. 3,kb,BMP-3,.04,Near-perp,39,0
 2022-01-26, Chieftain Mk. 5,k,T-55AM-1,1.26,Diag,0,0
 2022-01-26, Chieftain Mk. 5,k,T-62M-1,1.11,Near-para,0,0
+DateRecorded,VehicleUsed,Event,EnemyVehicle,Distance,OrientationInSight,EnemySpeed,SelfSpeed
+2022-01-31, Centurion Mk. 10,kb,PT-76-57,.66,Diag,0,0
+2022-01-31, Centurion Mk. 10,kb,PT-76-57,.61,Diag,0,0
+2022-01-31, Centurion Mk. 10,k,ZSU-37,.09,Diag,0,6
+2022-01-31, Centurion Mk. 10,k,T-44-100,.48,DIag,0,0
+2022-01-31, Centurion Mk. 10,k,ASU-85,.47,Para,0,0
+2022-01-31, Centurion Mk. 10,K,T-44-100,.41,Diag,34,0
+2022-01-31, Centurion Mk. 10,k,IS-6,.2,Para,-10,3
+2022-01-31, Centurion Mk. 10,k,T-54 (1947),.46,Near-perp,21,0
+2022-01-31, Centurion Mk. 10,K,T-44-100,0.51,near-perp,0.0,1.5
+2022-01-31, Centurion Mk. 10,k,T-54 (1949),.1,Near-perp,21,5
+2022-01-31, Centurion Mk. 10,k,T-44-100,.39,Near-para,0,0
+2022-01-31, Centurion Mk. 10,k,PT-76B,.4,Perp,28,1
+2022-01-31, Centurion Mk. 10,K,ASU-85,.83,Para,0,0
+2022-01-31, Centurion Mk. 10,k,2S3M,.09,near-Perp,0,0
+2022-01-31, Centurion Mk. 10,k,PT-76B,.06,Para,2,6
+2022-01-31, Centurion Mk. 10,k,Type 62,.08,Diag,0 0
+2022-01-31, Centurion Mk. 10,k,Type 62,.23,Diag,0 0
+2022-01-31, Centurion Mk. 10,kb,2S3M,.27,Para,0,0
+2022-01-31, Centurion Mk. 10,kb,Type 63-I,.12,Near-perp,0,3
+2022-01-31, Centurion Mk. 10,kb Type 63-I,.03,Diag,0,0
+2022-01-31, Centurion Mk. 10,k,PT-76-57,.23,Near-para,0,0
+2022-01-31, Centurion Mk. 10,kb,T-44-100,.21,Diag,0,0
+2022-01-31, Centurion Mk. 10,K,T-54 (1949),.5,Diag,14,0
+2022-01-31, Centurion Mk. 10,k,T-54 (1947),0.73,Near-perp,10.5,0.0
+2022-01-31, Centurion Mk. 10,k,T-54 (1947),.4,Near-para,0,0
+2022-01-31, Centurion Mk. 10,k,T-34-100,.62,Para,0,0
+2022-01-31, Centurion Mk. 10,k,T-54 (1947),.89,Near-perp,11,0
+2022-01-31, Centurion Mk. 10,k,PT-76-57,.5,Near-perp,32,0
+2022-01-31, Centurion Mk. 10,k,T-54 (1949),.51,Diag,0,0
+2022-01-30, Chieftain Mk. 3,kb,BMD-4,.67,Near-para,0,0
+2022-01-30, Chieftain Mk. 3,k,T-55A,.88,Diag,46,0
+2022-01-30, Chieftain Mk. 3,k,BMP-3,1.18,Near-Perp,0,0
+2022-01-30, Chieftain Mk. 3,k,BMP-3,.67,Near-para,0,0
+2022-01-30, Chieftain Mk. 3,k,BMP-3,.79,Near-perp,22,0
+2022-01-30, Chieftain Mk. 3,kb,BMP-3,.01,Diag,34,0
+2022-01-30, Chieftain Mk. 3,kb,BMP-3,.65,Near-para,0,0
+2022-01-30, Chieftain Mk. 5,kb,BMD-4,.25,Near-para,0,0
+2022-01-30, Chieftain Mk. 5,kb,BMP-3,1.11,Near-para,0,-3
+2022-01-31, Conqueror,kb,SU-100,.05,Diag,0,10
+2022-01-31, Conqueror,kb,T-44-100,.93,Para,0,0
+2022-02-02, Sherman IC Tipo,kb,T-34-85,.62,Near-para,0,0
+2022-02-02, Sherman IC Tipo,kb,IS-1,1.31,Near-para,0,-4
+2022-02-02, Sherman IC Tipo,kb,T-34-85,.59,Para,0,0
+2022-02-02, Sherman Vc,K,M4A3E2,1.01,Perp,0,0
+2022-02-02, Sherman Vc,k,ZSU-57,.17,Near-perp,0,0
+2022-02-02, Sherman Vc,k,M4A2 (76) W,.25,DIag,0,0
+2022-02-02, Sherman Vc,k,SU-85M,.21,Diag,12,0
+2022-02-02, Sherman Vc,k,T-34-85 Gai,1.25,Diag,0,0
+2022-02-02, Sherman Vc,k,T-34-85 Gai,1.09,Diag,-5.5,-2.0
+2022-02-02, Sherman Vc,k,T-34-85 (D-5T),.74,Near-perp,0,0
+2022-02-02, Sherman Vc,k,M18,0.71,Diag,7.5,0.0
+2022-02-02, Sherman Vc,kb,KV-220,.92,Near-para,0,0
+2022-02-02, Sherman Vc,k,T-34-85,.9,Para,0,0
+2022-02-02, Sherman Vc,k,Sherman IC Trzyniec,1.01,Para,0,0
+2022-02-02, Sherman Vc,k,IS-1,.81,Near-para,0,0
+2022-02-02, Sherman Vc,k,T-20,.81,Para,0,0
+2022-02-02, Sherman Vc,k,Strv m/42 DT,.42,Para,0,0
+2022-02-02, Sherman Vc,K,T-34-85 (S-53),0.195,Near-para,-4.0,0.0
+2022-02-02, Sherman Vc,K,Comet I,.52,diag,0,0
+2022-02-02, Sherman Vc,K,M18,.2,Diag,11,0
+2022-02-02, Sherman Vc,kb,T-34-85,.85,Near-para,0,-3
+2022-02-02, Sherman Vc,k,M18,.46,Near-perp,0,0
+2022-02-02, Sherman Vc,k,T-34 Chinese,0.08,Diag,14.5,0.0
+2022-02-02, Sherman Vc,k,IS-1,.31,Near-para,0,0
+2022-02-02, Sherman Vc,k,M18,.84,near-perp,0,0
+2022-02-02, Sherman Vc,k,Zis-12 (94-KM),.41,Diag,0,0
+2022-02-02, Sherman Vc,K,T-34-85,0.62,Diag,9.5,0.0
+2022-02-02, Sherman Vc,k,Zis-12 (94-KM),.13,Near-para,0,0
+2022-02-02, Sherman Vc,k,T-34-85,0.37,Near-perp,12.0,0.0
+2022-02-02, Sherman Vc,k,M4A2 (76) W,.82,Near-para,0,0
+2022-02-02, Sherman Vc,k,M4A3 (76) W,.55,Near-para,-4,0
+2022-02-02, Sherman Vc,K,M4A3E2,.71,Diag,-4,0
+2022-02-02, Sherman Vc,k,M18,.58,Diag,0,0
+2022-02-02, Sherman Vc,kb,T-34-85 Gai,.28,Near-para,0,4
+2022-02-02, Sherman Vc,k,IS-1,0.22,Diag,10.0,0.0
+2022-02-02, Sherman Vc,kb,T-34-85 (D-5T),1.28 Near-para,0,0

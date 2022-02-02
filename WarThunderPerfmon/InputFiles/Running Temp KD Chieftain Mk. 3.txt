@@ -19,6 +19,21 @@ vs. T-62M-1 5/4
 
 Event - Vehicle - Distance - Orientation - EnemeySpeed - SelfSpeed
 
+2022-01-30
+
+Poland
+@kb @BMD-4 @.67 @Near-para @0 @0
+
+Fulda
+@k @T-55A @.88 @Diag @46 @0
+@k @BMP-3 @1.18 @Near-Perp @0 @0
+
+Fields of Poland
+@k @BMP-3 @.67 @Near-para @0 @0
+@k @BMP-3 @.79 @Near-perp @22 @0
+@kb @BMP-3 @.01 @Diag @34 @0
+@kb @BMP-3 @.65 @Near-para @0 @0
+
 2022-02-26
 
 Red Desert

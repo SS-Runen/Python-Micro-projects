@@ -1,8 +1,0 @@
-2022-01-30
-
-Poland
-@kb @BMD-4 @.02
-
-Fields of Poland
-@k @BMD-4 @~.6 @Diag @0 @0
-@kb @BMP-3 @~.02 @Near-perp @0 @0
