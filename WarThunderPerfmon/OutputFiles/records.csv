@@ -2624,3 +2624,36 @@ DateRecorded,VehicleUsed,Event,EnemyVehicle,Distance,OrientationInSight,EnemySpe
 2022-02-02, Sherman Vc,kb,T-34-85 Gai,.28,Near-para,0,4
 2022-02-02, Sherman Vc,k,IS-1,0.22,Diag,10.0,0.0
 2022-02-02, Sherman Vc,kb,T-34-85 (D-5T),1.28 Near-para,0,0
+DateRecorded,VehicleUsed,Event,EnemyVehicle,Distance,OrientationInSight,EnemySpeed,SelfSpeed
+2022-02-04, Centurion Mk. 10,k,T-54 (1947),.37,Para,-3,0
+2022-02-04, Centurion Mk. 10,k,T-54 (1949),2.51,Near-perp,0,0
+2022-02-04, Centurion Mk. 10,k,T-54 (1949),.15,Para,2,0
+2022-02-04, Centurion Mk. 10,kb,T-54 (1947),.12,Diag,0,0
+2022-02-04, Centurion Mk. 10,k,IS-4M,1.06,Near-Perp,12.5,0.0
+2022-02-04, Centurion Mk. 10,k,T-54 (1947),1.12,Diag,-2,-11
+2022-02-04, Centurion Mk. 10,k,T-54 (1949),1.75,Para,0,0
+2022-02-04, Centurion Mk. 10,k,T-54 (1947),.07,Para,0,19
+2022-02-04, Centurion Mk. 10,k,T-54 (1949),.11,Near-para,18,13
+2022-02-04, Centurion Mk. 10,k,IS-3,.39,Near-para,17,0
+2022-02-04, Centurion Mk. 10,k,Type 62,1,Diag,16,0
+2022-02-04, Centurion Mk. 10,k,T-54 (1947),1.0950000000000002,Para,0.5,0.0
+2022-02-04, Centurion Mk. 10,k,T-54 (1949),1.04,Diag,0,0
+2022-02-04, Centurion Mk. 10,k,BTR-512A,.43,Diag,31,0
+2022-02-03, Chieftain Mk. 3,K,WZ305,2.18,Diag,15.0,0.0
+2022-02-03, Chieftain Mk. 3,k,WZ305,1.78,Perp,0,0
+2022-02-03, Chieftain Mk. 3,k,T-69 II G,.15,Diag,0,13
+2022-02-03, Chieftain Mk. 3,kb,BMP-2,.03,Near-para,0,0
+2022-02-03, Chieftain Mk. 3,kb,BMP-3,2.11,Near-perp,0,0
+2022-02-03, Chieftain Mk. 3,kb,WMA301,1.6,Diag,0,15
+2022-02-03, Chieftain Mk. 3,k,BMP-3,.21,Para,23,0
+2022-02-03, Chieftain Mk. 3,k,T-55AM-1,.06,Near-para,19,0
+2022-02-03, Chieftain Mk. 3,K,BMP-1,.20,Near-para,8,10
+2022-02-03, Chieftain Mk. 3,k,ZSU-37-2,.57,Near-para,36,0
+2022-02-03, Chieftain Mk. 3,K,WMA301,.34,Diag,35,0
+2022-02-03, Chieftain Mk. 3,K,BMP-3,.36,near-para,0,0
+2022-02-03, Chieftain Mk. 3,kb,BMP-3,.6,Near-para,0,0
+2022-02-03, Chieftain Mk. 5,kb,WMA301,2.2,Diag,0,0
+2022-02-03, Chieftain Mk. 5,k,T-62M-1,1.09,Diag,3,0
+2022-02-04, Conqueror,k,T-54 (1947),.17,Near-perp,20,0
+2022-02-04, Conqueror,k,IS-4M,1.29,Near-para,0,0
+2022-02-04, Conqueror,kb,T-54 (1949),.99,Diag,0,0

@@ -19,6 +19,35 @@ vs. T-62M-1 5/4
 
 Event - Vehicle - Distance - Orientation - EnemeySpeed - SelfSpeed
 
+2022-02-03
+
+Second Battle of El Alamein
+@K @WZ305 @2.18, 2.18 @Diag, Near-para @30, 0 @0, 0
+
+Sands of Sinai
+@k @WZ305 @1.78 @Perp @0 @0
+
+Sands of Sinai [Battle]
+@k @T-69 II G @.15 @Diag @0 @13
+@kb @BMP-2 @.03 @Near-para @0 @0
+
+Mozdok
+@kb @BMP-3 @2.11 @Near-perp @0 @0
+@kb @WMA301 @1.6 @Diag @0 @15
+
+Finland
+@k @BMP-3 @.21 @Para @23 @0
+
+Sands of Sinai
+@k @T-55AM-1 @.06 @Near-para @19 @0
+@K @BMP-1 @.20 @Near-para @8 @10
+@k @ZSU-37-2 @.57 @Near-para @36 @0
+
+Alaska
+@K @WMA301 @.34 @Diag @35 @0
+@K @BMP-3 @.36 @near-para @0 @0
+@kb @BMP-3 @.6 @Near-para @0 @0
+
 2022-01-30
 
 Poland

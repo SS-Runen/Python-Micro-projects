@@ -33,6 +33,13 @@ October 04, 2021
 - New rule for respawns. If killed by non-prioirity (i.e. NOT T-54 1949/1947, T-34-85 series) spawn again. T-54 1951
 will be used as baseline "control" to check effect of multiple spawns.
 
+2022-02-04
+
+Sands of Sinai [Battle]
+@k @T-54 (1947) @.17 @Near-perp @20 @0
+@k @IS-4M @1.29 @Near-para @0 @0
+@kb @T-54 (1949) @.99 @Diag @0 @0
+
 2022-01-31
 
 Advane to the Rhine
