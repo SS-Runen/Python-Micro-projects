@@ -7,3 +7,9 @@ Advnace to the Rhine
 Space Port
 Campania
 
+2022-02-06
+
+@k @T-54 (1949) @.2, .19 @Near-perp, Near-perp @5, -7 @0, 0
+@K @ZSU-57-2 @.51 @Diag @43 @21
+@K @T-54 (1951) @.17 @Near-perp @30 @0
+@k @T-54 (1949) @.22 @Diag @42 @4
