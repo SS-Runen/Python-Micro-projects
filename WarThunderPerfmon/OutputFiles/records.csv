@@ -2657,3 +2657,71 @@ DateRecorded,VehicleUsed,Event,EnemyVehicle,Distance,OrientationInSight,EnemySpe
 2022-02-04, Conqueror,k,T-54 (1947),.17,Near-perp,20,0
 2022-02-04, Conqueror,k,IS-4M,1.29,Near-para,0,0
 2022-02-04, Conqueror,kb,T-54 (1949),.99,Diag,0,0
+DateRecorded,VehicleUsed,Event,EnemyVehicle,Distance,OrientationInSight,EnemySpeed,SelfSpeed
+2022-02-16, Centurion Mk. 10,k,IS-4M,0.42,Near-para,0.0,-5.5
+2022-02-16, Centurion Mk. 10,k,T-44-100,.34,Perp,0,0
+2022-02-16, Centurion Mk. 10,k,T-34-100,.4,DIag,1,0
+2022-02-16, Centurion Mk. 10,kb,IS-4M,.34,Near-para,0,-1
+2022-02-12, Centurion Mk. 10,k,IS-4M,.73,Near-para,-10,0
+2022-02-12, Centurion Mk. 10,k,T-54 (1947),0.97,Diag,17.0,0.0
+2022-02-12, Centurion Mk. 10,k,IS-6,1.2349999999999999,Diag,14.0,0.0
+2022-02-12, Centurion Mk. 10,k,IS-4M,1.42,Diag,-6,0
+2022-02-12, Centurion Mk. 10,k,T-54 (1947),1.39,Diag,6,0
+2022-02-12, Centurion Mk. 10,k,T-44-100,.38,Near-perp,31,0
+2022-02-12, Centurion Mk. 10,kb,IS-3,.5,para,0,0
+2022-02-12, Centurion Mk. 10,k,T-54 (1949),1.1,Diag,16.5,0.0
+2022-02-08, Centurion Mk. 10,k,T-54 (1949),1.87,Diag,-7,0
+2022-02-08, Centurion Mk. 10,k,T-54 (1947),.47,Diag,16,0
+2022-02-08, Centurion Mk. 10,k,T-54 (1949),.4,Diag,11,0
+2022-02-08, Centurion Mk. 10,k,IS-4M,1.16,Near-para,0,0
+2022-02-08, Centurion Mk. 10,k,T-54 (1947),1.22,Near-perp,6.5,0.0
+2022-02-08, Centurion Mk. 10,k,T-44-100,0.07,Near-para,13.5,-5.5
+2022-02-08, Centurion Mk. 10,k,IS-6,0.32,Perp,4.5,0.0
+2022-02-08, Centurion Mk. 10,kb,T-54 (1949),.05,Near-para,0,0
+2022-02-08, Centurion Mk. 10,k,T-44-100,.21,Near-para,0,0
+2022-02-08, Centurion Mk. 10,k,ZSU-37,.34,Para,0,0
+2022-02-08, Centurion Mk. 10,k,PT-76-57,1.29,Diag,0,0
+2022-02-08, Centurion Mk. 10,k,T-54 (1949),.68,Diag,14,0
+2022-02-08, Centurion Mk. 10,k,T-54 (1949),.22,Near-perp,0,0
+2022-02-08, Centurion Mk. 10,kb,2S3M,1.3,Near-perp,0,0
+2022-02-08, Centurion Mk. 10,k,T-54 (1949),.27,Near-para,-3,0
+2022-02-08, Centurion Mk. 10,k,T-44,1.5350000000000001,Diag,18.0,0.0
+2022-02-08, Centurion Mk. 10,k,IS-4M,.34,Near-para,0,2
+2022-02-08, Centurion Mk. 10,k,PT-76B,.36,Near-para,0,0
+2022-02-08, Centurion Mk. 10,k,T-54 (1947),1.335,Near-perp,8.0,0.0
+2022-02-08, Centurion Mk. 10,k,IS-3,.02,Near-Perp,0,0
+2022-02-08, Centurion Mk. 10,k,T-54 (1949),.39,Perp,0,0
+2022-02-08, Centurion Mk. 10,k,T-44,.46,Diag,0,0
+2022-02-08, Centurion Mk. 10,k,IS-4M,.43,Diag,0,0
+2022-02-08, Centurion Mk. 10,kb,T-54 (1947),.15,Near-perp,0,33
+2022-02-08, Centurion Mk. 10,k,PT-76-57,1.27,Diag,0,0
+2022-02-08, Centurion Mk. 10,k,PT-76-57,.31,Diag,0,0
+2022-02-08, Centurion Mk. 10,k,IS-6,1.26,Near-para,0,0
+2022-02-08, Centurion Mk. 10,kb,T-44-100,1.13,Para,0,0
+2022-02-08, Centurion Mk. 10,k,T-54 (1949),0.73,Perp,24.0,0.0
+2022-02-08, Centurion Mk. 10,k,BTR-152A,.27,Diag,28,0
+2022-02-08, Centurion Mk. 10,kb,IS-6,.04,Para,0,8
+2022-02-06, Centurion Mk. 10,k,T-54 (1949),0.195,Near-perp,-1.0,0.0
+2022-02-06, Centurion Mk. 10,K,ZSU-57-2,.51,Diag,43,21
+2022-02-06, Centurion Mk. 10,K,T-54 (1951),.17,Near-perp,30,0
+2022-02-06, Centurion Mk. 10,k,T-54 (1949),.22,Diag,42,4
+2022-02-08, Conqueror,k,T-54 (1949),.76,Diag,-18,0
+2022-02-08, Conqueror,k,T-44-100,0.455,Diag,4.0,0.0
+2022-02-14, Panther D,k,T-34-85,.48,Near-para,0,0
+2022-02-14, Sherman IC Tipo,kb,T-34-85 Gai,.04,Diag,0,0
+2022-02-14, Sherman IC Tipo,k,T-34-85,.83,Diag,0,0
+2022-02-14, Sherman IC Tipo,k,M4A2 (76) W,.17,Diag,0,0
+2022-02-14, Sherman IC Tipo,k,T-34-85 (D-5T),1.04,Diag,13.5,0.0
+2022-02-14, Sherman IC Tipo,K,Comet I,1.15,Near-para,-2,0
+2022-02-14, Sherman Vc,K,Sherman Vc,1.65,Diag,11,0
+2022-02-14, Sherman Vc,k,T-34-85 Gai,0.92,Near-para,-1.5,0.0
+2022-02-14, Sherman Vc,kb,M18,.8,Diag,0,0
+2022-02-14, Sherman Vc,kb,ARL-44,1.36,DIag,0,0
+2022-02-14, Sherman Vc,kb,T-34-85,.83,Near-perp,0,0
+2022-02-14, Tiger E,k,Comet I,.42,Diag,-3,0
+2022-02-14, Tiger E,k,T-34-85 (D-5T),.49,Diag,11,0
+2022-02-14, Tiger E,K,SU-152,.59,Diag,5,0
+2022-02-14, Tiger E,k,Sherman IC Trzyniec,.81,Near-perp,0,0
+2022-02-14, Tiger E,k,T-34-85 (D-5T),.57,Diag,0,0
+2022-02-14, Tiger E,k,T-34-85 (D-5T),.41,Near-para,0,0
+2022-02-14, Tiger E,Kb,Comet I,.54,Diag,0,0

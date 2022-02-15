@@ -1,0 +1,10 @@
+2022-02-14
+
+Mozdok
+@K @Sherman Vc @1.65 @Diag @11 @0
+@k @T-34-85 Gai @.93, .91 @Near-para, Para @-3, 0 @0, 0
+@kb @M18 @.8 @Diag @0 @0
+
+Fir Arc
+@kb @ARL-44 @1.36 @DIag @0 @0
+@kb @T-34-85 @.83 @Near-perp @0 @0
