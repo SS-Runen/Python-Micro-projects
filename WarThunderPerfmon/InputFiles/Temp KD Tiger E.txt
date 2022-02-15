@@ -2,14 +2,3 @@ Volokolamsk
 Sweden
 Advance to the Rhine
 Stalingrad
-
-2022-02-14
-
-Berlin
-@k @Comet I @.42 @Diag @-3 @0
-@k @T-34-85 (D-5T) @.49 @Diag @11 @0
-@K @SU-152 @.59 @Diag @5 @0
-@k @Sherman IC Trzyniec @.81 @Near-perp @0 @0
-@k @T-34-85 (D-5T) @.57 @Diag @0 @0
-@k @T-34-85 (D-5T) @.41 @Near-para @0 @0
-@Kb @Comet I @.54 @Diag @0 @0

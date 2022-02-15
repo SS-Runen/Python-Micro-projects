@@ -1,3 +1,23 @@
+- Always use sight over 3rd-person against ground targets.
+- When moving past uncleared areas, move slow enough to clear thoroughly and to be able to fire accurately.
+- When scanning for targets, always stay hull down or have most of the tank hidden.
+- If the uncleared area is large, have something to cover you from a large portion of it and clear what is left.
+- If you cannot reliably clear an area and there is no safe route past it (e.g. a large town in open field) do not expose yourself to it.
+- When leading close-range targets, make sure that the shell will hit the target whether or not it continues moving. Impossible to do at long range.
+- When firing, "bracket" the target: have as much of the target within the upper and lower "spread". Despite slight range errors, round will hit.
+- When scanning for targets, always keep most of the tank hidden. The most exposure should be from a hull-down position.
+- Always watch for shell "splash" or hits before losing sight of a target.
+
+2022-02-14
+
+Mozdok
+@kb @T-34-85 Gai @.04 @Diag @0 @0
+
+Fire Arc
+@k @T-34-85 @.83 @Diag @0 @0
+@k @M4A2 (76) W @.17 @Diag @0 @0
+@k @T-34-85 (D-5T) @1.06, 1.02 @Diag, Para @27, 0 @0, 0
+@K @Comet I @1.15 @Near-para @-2 @0
 
 2022-02-02
 
