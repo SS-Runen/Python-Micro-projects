@@ -8,3 +8,5 @@ Space Port
 Campania
 Finland [Battle]
 Mozdok [Battle] wrong side
+Alaska wrong side
+Ground Zero wrong side

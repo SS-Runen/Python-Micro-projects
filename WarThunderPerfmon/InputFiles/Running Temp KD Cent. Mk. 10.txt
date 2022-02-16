@@ -51,6 +51,83 @@ Event - Vehicle - Distance - Orientation - EnemeySpeed - SelfSpeed
 
 2022-02-16
 
+Poland [Battle]
+@k @T-44 @.42 @Diag @0 @0
+@k @T-54 (1949) @.79 @Near-para @0 @-11
+
+Second Battle of El Alamein
+@k @T-54 (1949) @2.22 @Para @0 @0
+@k @T-44-100 @2.21 @Para @-8 @0
+@k @T-54 (1947) @1.89 @Para @0 @0
+
+Second Battle of El Alamein
+@k @PT-76B @1.3, 1.3 @para @-3, 0 @0, 0
+@k @T-54 (1947) @.96 @Near-Perp @0 @0
+@k @IS-4M @1.25 @Near-para @-8 @0
+@k @T-44-100 @1.24 @Para @8 @0
+
+Wallonia
+@kb @T-54 (1947) @1.06 @near-perp @0 @0
+
+Alaska
+@kb @IS-4M @.1 @Perp @20 @0
+
+Eastern Europe
+@k @T-54 (1949) @1.59 @Diag @0 @0
+@k @PT-76-57 @1.57 @Diag @-31 @0
+@k @ZSU-37 @1.09 @Para @0 @0
+
+American Desert
+@k @T-54 (1949) @.67 @Diag @33 @0
+
+Poland
+@k @SU-100P @.39 @Diag @0 @0
+@k @T-44-100 @.44 @Perp @20 @0
+@kb @T-54 (1947) @.4 @Diag @0 @0
+
+Hurtgen Forest
+@k @T-44-100 @.47 @Perp @34 @0
+@k @T-44-100 @.63 @Para @0 @9
+@k @T-54 (1949) @1.56, 1.56 @Near-perp, near-perp @20, 0 @0, 0
+
+Alaska
+@k @T-54 (1947) @.71 @Near-perp @0 @0
+@k @SU-100P @.39 @Diag @0 @0
+
+Campania
+@k @ASU-85 @.9 @para @0 @0
+@kb @PT-76-57 @Para @0 @-8
+
+Poland
+@k @PT-76-57 @1.04 @Perp @42 @29
+@kb @T-54 (1947) @.77 @Diag @0 @0
+
+Eastern Europe
+@kb @T-44-100 @.03 @Near-perp @0 @0
+
+Poland [Battle]
+@k @PT-76-57 @1.03 @Near-para @0 @0
+@k @T-54 (1949) @.39 @Diag @0 @0
+
+Sands of Sinai
+@kb @T-54 (1947) @.1 @Diag @0 @0
+
+Hurtgen Forest
+@k @T-54 (1949) @.56 @Near-perp @19 @0
+@k @ASU-85 @.52 @Near-perp @0 @0
+@k @SU-100P @1.27 @Near-para @0 @0
+@k @ZSU-37 @1.23 @Perp @0 @0
+@k @Phong kong T-34 @.53 @Diag @0 @0
+
+Hurtgen Forest
+@K @PT-76-57 @.07 @Near-para @12 @0
+@k @T-44-100 @.85 @Near-perp @0 @12
+@k @T-54 (1949) @1.08 @Near-perp @-7 @0
+@k @T-54 (1949) @.33 @Near-para @0 @0
+@k @PT-76-57 @.86 @Near-perp @0 @0
+@k @PT-76B @1.11 @Near-perp @0 @0
+@kb @PT-76-57 @.04 @Near-perp @42 @0
+
 @k @IS-4M @.42, .42 @Near-para, Near-para @0, 0 @-11, 0
 @k @T-44-100 @.34 @Perp @0 @0
 @k @T-34-100 @.4 @DIag @1 @0
