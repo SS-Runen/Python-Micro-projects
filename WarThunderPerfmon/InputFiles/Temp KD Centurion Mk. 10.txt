@@ -1,12 +1,81 @@
 SKIP:
 Seversk-13
 Sweden
-American Desert wrong side.
+American Desert wrong side
 Abandoned Factory
 Advnace to the Rhine
+Aral Sea
 Space Port
 Campania
+Cargo Port wrong side
 Finland [Battle]
 Mozdok [Battle] wrong side
 Alaska wrong side
 Ground Zero wrong side
+Carpathians
+Frozen Pass wrong side
+White Rock Fortress
+Stalingrad
+Sinai [Battle]
+Jungle
+Stalingrad
+
+2022-02-24
+
+European Province
+@k @PT-76-57 @1.7 @Near-perp @0 @0
+@K @T-54 (1947) @1.17 @Para @10 @0
+@k @SU-100P @2.11, 2.11 @Diag, Diag @33, 0 @0, 0
+@k @T-54 (1949) @1.12 @Near-para @6 @0
+
+Maginot
+@k @PT-76B @.03 @Near-para @0 @0
+
+Hurtgen Forest
+@k @T-54 (1947) @1.11 @Near-para @0 @0
+
+Fire Arc
+@k @T-54 (1947) @.85 @Diag @0 @0
+@k @T-44 @1.34 @Near-perp @0 @0
+@k @T-54 (1949) @1.27, 1.28 @Para, Near-perp @11, 0 @0, 0
+@kb @T-34-100 @1.31 @Near-para @0 @0
+
+Hurtgen Forest
+@k @T-44 @~.9 @Near-para
+@k @T-54 (1949) @~1
+
+Mozdok
+@k @T-54 (1949) @.76 @Near-perp @11 @0
+@k @T-44-100 @1.77 @DIag @0 @0
+
+Eastern Europe
+@kb @T-54 (1947) @.33 @Diag @0 @8
+
+2022-02-18
+
+Karelia
+@kb @WZ305 @.6 @Diag @0 @0
+
+Stalingrad
+@K @T-44-100 @~.2 @Perp @0 @0
+@k @PT-76-57 @.3 @Para
+@kb @T-54 (1949) @~.1 @Diag @0 @0
+
+Poland
+@k @T-55A @~1.1 @Near-para
+@k @WZ 305 @~.6 @Diag
+
+Alaska
+@K @PTL02 @~.5 @Perp
+
+Carpathians
+@kb @BMP-3 @~1.2
+
+Frozen Pass
+@k @T-55AM-1 @~.6 @Perp @0 @0
+@k @IT-1 @~.3 @Diag
+@kb @BMP-2M @~.6
+
+Fulda
+@k @T-54 (1947) @.86 @para @-4 @0
+@k @IS-3 @.47 @Para @0 @0
