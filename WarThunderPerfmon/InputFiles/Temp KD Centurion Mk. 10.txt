@@ -41,8 +41,11 @@ Fire Arc
 @kb @T-34-100 @1.31 @Near-para @0 @0
 
 Hurtgen Forest
-@k @T-44 @~.9 @Near-para
-@k @T-54 (1949) @~1
+@k @ASU-85 @1.23 @Diag @0 @0
+@k @T-44 @1.28 @Near-para @0 @0
+@k @T-44-100 @.96 @Near-para @41 @0
+@k @PT-76B @1.25 @Near-perp @0 @0
+@k @T-54 (1949) @1.35 @Near-perp @0 @0
 
 Mozdok
 @k @T-54 (1949) @.76 @Near-perp @11 @0
@@ -57,24 +60,23 @@ Karelia
 @kb @WZ305 @.6 @Diag @0 @0
 
 Stalingrad
-@K @T-44-100 @~.2 @Perp @0 @0
+@K @T-44-100 @.2 @Perp @0 @0
 @k @PT-76-57 @.3 @Para
-@kb @T-54 (1949) @~.1 @Diag @0 @0
+@kb @T-54 (1949) @.1 @Diag @0 @0
 
 Poland
-@k @T-55A @~1.1 @Near-para
-@k @WZ 305 @~.6 @Diag
+@k @T-55A @1.17 @Near-para @-7 @0
+@k @WZ305 @.73 @Diag @11 @0
 
-Alaska
-@K @PTL02 @~.5 @Perp
+Japan
+@k @T-54 (1949) @.61 @Near-para @0 @0
+@k @T-54 (1949) @.46 @Near-para @4 @0
+@k @BMP-1 @.8 @Near-para @0 @0
+@k @ZSU-57-2 @.09 @Diag @0 @0
 
-Carpathians
-@kb @BMP-3 @~1.2
-
-Frozen Pass
-@k @T-55AM-1 @~.6 @Perp @0 @0
-@k @IT-1 @~.3 @Diag
-@kb @BMP-2M @~.6
+Ash River
+@K @T-54 (1949) @.36 @Diag @0 @0
+@kb @T-44 @.52 @Near-Para @0 @9
 
 Fulda
 @k @T-54 (1947) @.86 @para @-4 @0
