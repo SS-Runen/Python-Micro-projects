@@ -20,6 +20,38 @@ Sinai [Battle]
 Jungle
 Stalingrad
 
+2022-02-28
+
+Eastern Europe
+@k @T-54 (1947) @.34, .34 @Near-perp, Para @8, 0 @0, 0
+
+Poland
+@K @T-54 (1947) @.39 @Diag @27 @-1
+@k @IS-4M @.44 @Diag @0 @0
+
+Fire Arc
+@k @T-54 (1949) @~.9
+@k @PT-76-57 @~.9 @Perp @0 @0
+
+Fire Arc
+@kb @IS-6 @.08 @Near-para @0 @11
+
+Berlin
+@K @T-54 (1949) @~.8 @Near-perp
+@k @IS-6 @~.8 @Perp
+@k @T-44-122 @~.8
+@kb @IS-6 @~.8
+
+Fulda
+@k @IS-4M @~1.3 @Perp
+@k @T-44 @~1.4 @Near-perp
+@k @ZSU-37 @~.9 @Para @0 @0
+
+Space Port [Battle]
+@k @T-54 (1947) @.92 @Diag @23 @0
+@k @BTR-152A @.67 @Near-perp @28 @0
+@kb @PT-76B @.35 @Near-perp @0 @32
+
 2022-02-24
 
 European Province
