@@ -20,6 +20,130 @@ Sinai [Battle]
 Jungle
 Stalingrad
 
+2022-03-08
+
+Wallonia
+@k @T-54 (1947) @.94, .93 @Near-perp, Near-perp  @27, 0 @0, 0
+@k @ASU-85 @.98, .98 @Diag, Diag @12, 0 @0, 0
+
+Fields of Poland
+@kb @IS-4M @.1 @Near-para @20 @0
+
+Berlin
+@K @T-44-100 @.6 @Diag @27 @0
+@k @T-54 (1947) @.43 @Diag @5 @0
+@K @PT-76-57 @.4 @Near-perp @0 @0
+@k @T-54 (1947) @.1 @Diag @0 @0
+@k @T-44-100 @.11 @Para @0 @0
+@K @IS-4M @.16 @Diag @10 @0
+
+Middle East
+@k @IS-6 @.4 @Perp @23 @0
+@k @T-54 (1949) @.79 @Para @-4 @0
+
+Mozdok [Battle]
+@k @T-54 (1949) @1.07 @Diag @17 @0
+@k @T-44 @1.27, 1.26 @Diag, Near-perp @22, 0 @0, 0
+@k @ZSU-37 @1.32 @Diag @0 @0
+@k @T-54 (1947) @.96 @Diag @0 @0
+
+FIelds of Poland
+@k @PT-76-57 @.05 @Diag @8 @0
+@kb @T-54 (1947) @.1 @Diag @15 @0
+
+Second Battle of El Alamein [Battle]
+@k @T-54 (1949) @.98 @Near-para @43 @0
+@k @2S3M @1.7 @Near-para @0 @0
+@kb @T-54 (1949) @.05 @Diag @0 @0
+
+Second Battle of El Alamein
+@k @T-44-122 @.97 @Perp @16 @0
+@k @T-44-100 @1.99 @Near-Para @0 @0
+@k @SU-100P @1.41 @Diag @4 @0
+@K @T-44 @1.16 @Near-perp @5 @0
+@k @IS-4M @1.27 @perp @0 @0
+@k @T-54 (1949) @.13 @Para @0 @-3
+@k @T-54 (1949) @1.87 @Diag @17 @0
+
+Mozdok
+@K @T-54 (1947) @1.03 @Near-para @-5 @0
+@k @T-54 (1949) @1.54 @Near-perp @0 @0
+@k @T-54 (1949) @1.68 @Near-para @19 @0
+
+Hurtgen Forest
+@k @IS-4M @.49 @Near-perp @10 @0
+@k @Type 62 @1.03, 1.02 @Near-Para, near-Perp @33, 0 @0, 0
+@kb @T-54 (1947) @.08 @Near-perp @0 @0
+
+Berlin
+@kb @IS-4M @.2 @Near-para @0 @0
+@kb @T-44-100 @.3 @Diag @0 @0
+
+Second Battle of El Alamein
+@k @T-54 (1949) @3.17 @Near-perp @0 @0
+@k @T-44-100 @1.35 @Diag @0 @0
+@K @IS-4M @1.8 @Near-perp @4 @0
+@k @T-54 (1947) @2.72 @Near-perp @0 @0
+@k @PT-76 @2.04 @Near-perp @0 @0
+
+American Desert
+@k @T-44-100 @.52 @Diag @0 @0
+@k @SU-100P @.48, .49 @Diag, Diag @33, 0 @0, 0
+@k @T-54 (1949) @.5 @Diag @4 @0
+
+
+Hurtgen Forest
+@k @PT-76-57 @.34 @DIag @31 @0
+@k @M42 @1.05, 1.04 @Near-perp, near-perp @9, 0 @0, 0
+@k @2S3M @.66 @Para @0 @0
+@k @Type 62 @1.12 @Near-para @0 @0
+@k @2S3M @.17 @Para @0 @15
+
+2022-03-04
+
+Fire Arc
+@k @PT-76-57 @1.72 @Near-perp @31 @0
+@K @ASU-85 @2.37 @Para @20 @0
+@k @T-54 (1947) @2.32 @Near-para @0 @0
+@k @T-44-100 @1.34, 1.34 @Perp, Perp @12, 0 @0, 0
+
+Ground Zero
+@k @T-54 (1949) @.51 @Diag @0 @0
+@k @T-44-122 @.57, .57 @Perp, Perp @28, 0 @0, 0
+@kb @PT-76-57 @.2 @Diag @10 @0
+@kb @T-54 (1947) @.22 @Diag @0 @0
+
+Second Battle of El Alamein
+@kb @PT-76-57 @.02 @Diag @10 @0
+
+Hurtgen Forest
+@k @T-44 @1.02, 1.01 @Diag, Diag @23, 0 @0, 0
+@k @T-34-100 @.99 @Perp @0 @0
+@k @T-54 (1947) @.99, .99 @Perp, Diag @0, 0 @0, 0
+
+Poland
+@k @T-54 (1947) @.74 @Diag @14 @16
+@k @IS-3 @.8 @Near-para @0 @0
+
+Mozdok
+@k @T-34-100 @1.4 @Diag @0 @0
+@K @IS-6 @1.47 @near-perp @0 @0
+@k @IS-4M @.6 @Para @0 @0
+
+Eastern Europe
+@k @IS-6 @.87 @perp @0 @0
+@k @IS-4M @1.92 @Near-perp @0 @0
+@K @T-44-100 @1.74 @Near-perp @11 @0
+@k @T-44-100 @.96 @Diag @0 @0
+@k @SU-100P @.87 @Diag @0 @0
+@k @SU-100P @.93 @Near-para @0 @0
+@K @ASU-85 @.37 @Para @0 @0
+
+Poland
+@k @IS-3 @.43 @Near-perp @12 @0
+@k @SU-100P @.76 @Diag @0 @0
+@K @SU-100 @.23 @Near-para @0 @0
+
 2022-02-28
 
 Eastern Europe
@@ -30,27 +154,35 @@ Poland
 @k @IS-4M @.44 @Diag @0 @0
 
 Fire Arc
-@k @T-54 (1949) @~.9
-@k @PT-76-57 @~.9 @Perp @0 @0
+@k @T-54 (1949) @.85 @Diag @0 @0
+@k @PT-76-57 @.82 @Perp @0 @0
 
 Fire Arc
 @kb @IS-6 @.08 @Near-para @0 @11
 
 Berlin
-@K @T-54 (1949) @~.8 @Near-perp
-@k @IS-6 @~.8 @Perp
-@k @T-44-122 @~.8
-@kb @IS-6 @~.8
+@K @T-54 (1949) @.75 @Near-perp @14 @0
+@k @IS-6 @.61, .62  @Near-Perp, near-perp @6, 0 @0, 0
+@k @T-44-122 @.81 @near-perp @21 @0
+@kb @IS-6 @.72 @para @0 @0
 
 Fulda
-@k @IS-4M @~1.3 @Perp
-@k @T-44 @~1.4 @Near-perp
-@k @ZSU-37 @~.9 @Para @0 @0
+@k @IS-4M @1.4 @Perp @11 @0
+@k @T-44 @1.5 @Diag @20 @0
+@k @ZSU-37 @.99 @Para @0 @0
 
 Space Port [Battle]
 @k @T-54 (1947) @.92 @Diag @23 @0
 @k @BTR-152A @.67 @Near-perp @28 @0
 @kb @PT-76B @.35 @Near-perp @0 @32
+
+Mozdok
+@k @SU-100P @.99, 1 @Para, Para @0, 0 @8, 0
+@k @PT-76-57 @1.09, 1.09 @Diag, Diag @18, 0 @0, 0
+@k @IS-3 @.59 @Near-perp @0 @0
+@K @T-34-100 @1.61 @Para @0 @0
+@k @ZSU-85 @2.16 @Para @0 @0
+@k @T-44-100 @.08 @Near-perp @0 @0
 
 2022-02-24
 
@@ -113,3 +245,11 @@ Ash River
 Fulda
 @k @T-54 (1947) @.86 @para @-4 @0
 @k @IS-3 @.47 @Para @0 @0
+
+Mozdok
+@k @PT-76B @1 @Diag @25 @0
+@K @T-44-100 @.88 @Perp @0 @0
+@k @IS-4M @1.31  @perp @0 @0
+@k @PT-76-57 @1.24 @Near-para @0 @0
+@k @IS-4M @.71 @Near-para @0 @0
+@k @PT-76-57 @1 @Near-para @0 @0
