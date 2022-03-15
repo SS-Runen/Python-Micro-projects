@@ -20,6 +20,37 @@ Sinai [Battle]
 Jungle
 Stalingrad
 
+xxxxxxxx
+
+2022-03-12
+
+Berlin
+@k @PT-76B @~.8 @Diag @0 @0
+@k @IS-4M @~.3 @Diag
+
+Middle East
+@k @IS-4M @~.9 @Perp @0 @0
+@k @Obj 268 @~1.1
+
+Wallonia
+@k @PT-76-57 @~1 @Perp
+@k @IS-4M @~.9 @Perp, Perp
+
+Fields of Poland [Battle]
+@k @Type 62 @~.9 @Para
+@k @T-44-100 @~.03 @Near-para
+@k @IS-3 @~.6 @Near-para @0 @0
+@k @PT-76-57 @~.2 @Near-perp
+
+Berlin
+@K @IS-3 @.8 @Near-para @0 @0
+@K @IS-3 @.9 @Diag @0 @0
+@kb @IS-6 @.05 @Near-para @0 @0
+@kb @IS-6 @.05 @Near-para @0 @0
+
+Poland
+@k @T-44-100 @~.6 @Near-perp
+
 2022-03-08
 
 Wallonia
