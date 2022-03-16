@@ -20,7 +20,33 @@ Sinai [Battle]
 Jungle
 Stalingrad
 
-xxxxxxxx
+xxxxxxxxx
+
+2022-03-16
+
+American Desert
+@kb @T-54 (1947) @.65 @Diag @0 @-11
+
+Fulda [Battle]
+@k @ASU-85 @.1 @Near-perp @0 @0
+
+Second Battle of El Alamein [Battle]
+@kb @2S3M 
+
+Second Battle of El Alamein
+@k @IS-6 @.97 @Near-para @0 @0
+
+Poland
+@k @T-44-100 @.92 @Near-perp @21 @0
+@k @Type 62 @.94 @Diag @47 @0
+@K @T-54 (1949) @1 @Para @26 @0
+@k @Type 63 @.41 @Near-perp @0 @0
+
+Hurtgen Forest
+@k @IS-4M @~1.1 @Perp
+
+Alaska
+@k @IS-6 @~.6 @Diag
 
 2022-03-12
 
