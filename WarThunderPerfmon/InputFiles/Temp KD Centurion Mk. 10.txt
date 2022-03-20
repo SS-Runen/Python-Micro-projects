@@ -20,7 +20,31 @@ Sinai [Battle]
 Jungle
 Stalingrad
 
-xxxxxxxxx
+2022-03-20
+
+Berlin
+@k @T-54 (1947) @.77 @near-Perp @0 @0
+@k @T-44-100 @.42, .42 @Near-para, near-para @-8, 0 @0, 0
+@k @PT-76B @.52 @Para @0 @0
+@k @T-54 (1947) @.35, .35  @Diag, Diag @0, 0 @-10, 0
+@k @T-44-100 @.21 @Para @-1 @0
+@k @T-44-100 @.24 @para @13 @0
+
+Fulda
+@k @Type 62 @~1 @perp
+
+Second Battle of El Alamein [Battle]
+@kb @IS-3 @1.2 @Near-para @0 @0
+@k @T-54 (1949) @.6 @Diag @0 @0
+
+Fire Arc
+@k @T-54 (1947) @1.28 @Diag @17 @0
+
+Fields of Poland
+@k @T-54 (1949) @~.6 @Diag
+
+European Province
+@k @T-34-100 @~1 @Perp
 
 2022-03-16
 
