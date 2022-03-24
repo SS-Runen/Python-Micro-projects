@@ -20,6 +20,27 @@ Sinai [Battle]
 Jungle
 Stalingrad
 
+xxxxx
+
+2022-03-24
+
+Fields of Poland [Battle]
+@K @T-54 (1947) @1.25 @Diag @0 @0
+@kb @ASU-85 @.77 @Near-perp @0 @0
+
+Eastern Europe
+@k @T-44
+@k @T-44-100 @~1.3 @Diag
+
+Fields of Normandy
+@k @T-44-100 @~.1 @Near-para @0 @0
+@k @IS-4M @~1.3 @Para
+
+Alaska
+@k @PT-76-57 @~.3
+@k @PT-76-57 @~.32
+@k @IS-6 @~.3 @Near-perp
+
 2022-03-20
 
 Berlin
