@@ -20,7 +20,19 @@ Sinai [Battle]
 Jungle
 Stalingrad
 
-xxxxx
+xxxxxxxx
+
+2022-03-28
+
+Second Battle of El Alamei [Battle]
+@k @PT-76-57 @1 @Near-perp @0 @0
+@k @IS-3 @1.18 @Near-para @14 @0
+@k @T-54 (1949) @1.17 @Diag @0 @0
+@k @T-54 (1947) @.17 @near-perp @0 @0
+@kb @IS-4M @.17 @Diag @0 @0
+
+Middle East [Battle]
+@k @T-44 @.02 @Diag @6 @0
 
 2022-03-24
 
