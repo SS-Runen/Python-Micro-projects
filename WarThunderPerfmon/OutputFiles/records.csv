@@ -2769,3 +2769,195 @@ DateRecorded,VehicleUsed,Event,EnemyVehicle,Distance,OrientationInSight,EnemySpe
 2022-02-16, Centurion Mk. 10,k,PT-76-57,.86,Near-perp,0,0
 2022-02-16, Centurion Mk. 10,k,PT-76B,1.11,Near-perp,0,0
 2022-02-16, Centurion Mk. 10,kb,PT-76-57,.04,Near-perp,42,0
+DateRecorded,VehicleUsed,Event,EnemyVehicle,Distance,OrientationInSight,EnemySpeed,SelfSpeed
+2022-03-28, Centurion Mk. 10,k,PT-76-57,1,Near-perp,0,0
+2022-03-28, Centurion Mk. 10,k,IS-3,1.18,Near-para,14,0
+2022-03-28, Centurion Mk. 10,k,T-54 (1949),1.17,Diag,0,0
+2022-03-28, Centurion Mk. 10,k,T-54 (1947),.17,near-perp,0,0
+2022-03-28, Centurion Mk. 10,kb,IS-4M,.17,Diag,0,0
+2022-03-28, Centurion Mk. 10,k,T-54 (1949),.96,Diag,-7,0
+2022-03-28, Centurion Mk. 10,k,IS-4M,.97,Near-perp,0,0
+2022-03-28, Centurion Mk. 10,K,T-44,.56,Near-para,0,0
+2022-03-28, Centurion Mk. 10,k,T-44,.02,Diag,6,0
+2022-03-24, Centurion Mk. 10,K,T-54 (1947),1.25,Diag,0,0
+2022-03-24, Centurion Mk. 10,kb,ASU-85,.77,Near-perp,0,0
+2022-03-24, Centurion Mk. 10,k,T-44-100,.1,Near-para,0,0
+2022-03-24, Centurion Mk. 10,k,IS-6,.3,Near-perp,0,0
+2022-03-20, Centurion Mk. 10,k,T-54 (1947),.77,near-Perp,0,0
+2022-03-20, Centurion Mk. 10,k,T-44-100,0.42,Near-para,-4.0,0.0
+2022-03-20, Centurion Mk. 10,k,PT-76B,.52,Para,0,0
+2022-03-20, Centurion Mk. 10,k,T-54 (1947),0.35,Diag,0.0,-5.0
+2022-03-20, Centurion Mk. 10,k,T-44-100,.21,Para,-1,0
+2022-03-20, Centurion Mk. 10,k,T-44-100,.24,para,13,0
+2022-03-20, Centurion Mk. 10,kb,IS-3,1.2,Near-para,0,0
+2022-03-20, Centurion Mk. 10,k,T-54 (1949),.6,Diag,0,0
+2022-03-20, Centurion Mk. 10,k,T-54 (1947),1.28,Diag,17,0
+2022-03-16, Centurion Mk. 10,kb,T-54 (1947),.65,Diag,0,-11
+2022-03-16, Centurion Mk. 10,k,ASU-85,.1,Near-perp,0,0
+2022-03-16, Centurion Mk. 10,kb,2S3M
+2022-03-16, Centurion Mk. 10,k,IS-6,.97,Near-para,0,0
+2022-03-16, Centurion Mk. 10,k,T-44-100,.92,Near-perp,21,0
+2022-03-16, Centurion Mk. 10,k,Type 62,.94,Diag,47,0
+2022-03-16, Centurion Mk. 10,K,T-54 (1949),1,Para,26,0
+2022-03-16, Centurion Mk. 10,k,Type 63,.41,Near-perp,0,0
+2022-03-12, Centurion Mk. 10,k,IS-4M,.3,Diag,0,0
+2022-03-12, Centurion Mk. 10,k,T-44-100,.03,Near-para,0,0
+2022-03-12, Centurion Mk. 10,k,PT-76-57,.2,Near-perp,0,0
+2022-03-12, Centurion Mk. 10,K,IS-3,.8,Near-para,0,0
+2022-03-12, Centurion Mk. 10,K,IS-3,.9,Diag,0,0
+2022-03-12, Centurion Mk. 10,kb,IS-6,.05,Near-para,0,0
+2022-03-12, Centurion Mk. 10,kb,IS-6,.05,Near-para,0,0
+2022-03-08, Centurion Mk. 10,k,T-54 (1947),0.935,Near-perp,13.5,0.0
+2022-03-08, Centurion Mk. 10,k,ASU-85,0.98,Diag,6.0,0.0
+2022-03-08, Centurion Mk. 10,kb,IS-4M,.1,Near-para,20,0
+2022-03-08, Centurion Mk. 10,K,T-44-100,.6,Diag,27,0
+2022-03-08, Centurion Mk. 10,k,T-54 (1947),.43,Diag,5,0
+2022-03-08, Centurion Mk. 10,K,PT-76-57,.4,Near-perp,0,0
+2022-03-08, Centurion Mk. 10,k,T-54 (1947),.1,Diag,0,0
+2022-03-08, Centurion Mk. 10,k,T-44-100,.11,Para,0,0
+2022-03-08, Centurion Mk. 10,K,IS-4M,.16,Diag,10,0
+2022-03-08, Centurion Mk. 10,k,IS-6,.4,Perp,23,0
+2022-03-08, Centurion Mk. 10,k,T-54 (1949),.79,Para,-4,0
+2022-03-08, Centurion Mk. 10,k,T-54 (1949),1.07,Diag,17,0
+2022-03-08, Centurion Mk. 10,k,T-44,1.2650000000000001,Diag,11.0,0.0
+2022-03-08, Centurion Mk. 10,k,ZSU-37,1.32,Diag,0,0
+2022-03-08, Centurion Mk. 10,k,T-54 (1947),.96,Diag,0,0
+2022-03-08, Centurion Mk. 10,k,PT-76-57,.05,Diag,8,0
+2022-03-08, Centurion Mk. 10,kb,T-54 (1947),.1,Diag,15,0
+2022-03-08, Centurion Mk. 10,k,T-54 (1949),.98,Near-para,43,0
+2022-03-08, Centurion Mk. 10,k,2S3M,1.7,Near-para,0,0
+2022-03-08, Centurion Mk. 10,kb,T-54 (1949),.05,Diag,0,0
+2022-03-08, Centurion Mk. 10,k,T-44-122,.97,Perp,16,0
+2022-03-08, Centurion Mk. 10,k,T-44-100,1.99,Near-Para,0,0
+2022-03-08, Centurion Mk. 10,k,SU-100P,1.41,Diag,4,0
+2022-03-08, Centurion Mk. 10,K,T-44,1.16,Near-perp,5,0
+2022-03-08, Centurion Mk. 10,k,IS-4M,1.27,perp,0,0
+2022-03-08, Centurion Mk. 10,k,T-54 (1949),.13,Para,0,-3
+2022-03-08, Centurion Mk. 10,k,T-54 (1949),1.87,Diag,17,0
+2022-03-08, Centurion Mk. 10,K,T-54 (1947),1.03,Near-para,-5,0
+2022-03-08, Centurion Mk. 10,k,T-54 (1949),1.54,Near-perp,0,0
+2022-03-08, Centurion Mk. 10,k,T-54 (1949),1.68,Near-para,19,0
+2022-03-08, Centurion Mk. 10,k,IS-4M,.49,Near-perp,10,0
+2022-03-08, Centurion Mk. 10,k,Type 62,1.025,Near-Para,16.5,0.0
+2022-03-08, Centurion Mk. 10,kb,T-54 (1947),.08,Near-perp,0,0
+2022-03-08, Centurion Mk. 10,kb,IS-4M,.2,Near-para,0,0
+2022-03-08, Centurion Mk. 10,kb,T-44-100,.3,Diag,0,0
+2022-03-08, Centurion Mk. 10,k,T-54 (1949),3.17,Near-perp,0,0
+2022-03-08, Centurion Mk. 10,k,T-44-100,1.35,Diag,0,0
+2022-03-08, Centurion Mk. 10,K,IS-4M,1.8,Near-perp,4,0
+2022-03-08, Centurion Mk. 10,k,T-54 (1947),2.72,Near-perp,0,0
+2022-03-08, Centurion Mk. 10,k,PT-76,2.04,Near-perp,0,0
+2022-03-08, Centurion Mk. 10,k,T-44-100,.52,Diag,0,0
+2022-03-08, Centurion Mk. 10,k,SU-100P,0.485,Diag,16.5,0.0
+2022-03-08, Centurion Mk. 10,k,T-54 (1949),.5,Diag,4,0
+2022-03-08, Centurion Mk. 10,k,PT-76-57,.34,DIag,31,0
+2022-03-08, Centurion Mk. 10,k,M42,1.045,Near-perp,4.5,0.0
+2022-03-08, Centurion Mk. 10,k,2S3M,.66,Para,0,0
+2022-03-08, Centurion Mk. 10,k,Type 62,1.12,Near-para,0,0
+2022-03-08, Centurion Mk. 10,k,2S3M,.17,Para,0,15
+2022-03-04, Centurion Mk. 10,k,PT-76-57,1.72,Near-perp,31,0
+2022-03-04, Centurion Mk. 10,K,ASU-85,2.37,Para,20,0
+2022-03-04, Centurion Mk. 10,k,T-54 (1947),2.32,Near-para,0,0
+2022-03-04, Centurion Mk. 10,k,T-44-100,1.34,Perp,6.0,0.0
+2022-03-04, Centurion Mk. 10,k,T-54 (1949),.51,Diag,0,0
+2022-03-04, Centurion Mk. 10,k,T-44-122,0.57,Perp,14.0,0.0
+2022-03-04, Centurion Mk. 10,kb,PT-76-57,.2,Diag,10,0
+2022-03-04, Centurion Mk. 10,kb,T-54 (1947),.22,Diag,0,0
+2022-03-04, Centurion Mk. 10,kb,PT-76-57,.02,Diag,10,0
+2022-03-04, Centurion Mk. 10,k,T-44,1.0150000000000001,Diag,11.5,0.0
+2022-03-04, Centurion Mk. 10,k,T-34-100,.99,Perp,0,0
+2022-03-04, Centurion Mk. 10,k,T-54 (1947),0.99,Perp,0.0,0.0
+2022-03-04, Centurion Mk. 10,k,T-54 (1947),.74,Diag,14,16
+2022-03-04, Centurion Mk. 10,k,IS-3,.8,Near-para,0,0
+2022-03-04, Centurion Mk. 10,k,T-34-100,1.4,Diag,0,0
+2022-03-04, Centurion Mk. 10,K,IS-6,1.47,near-perp,0,0
+2022-03-04, Centurion Mk. 10,k,IS-4M,.6,Para,0,0
+2022-03-04, Centurion Mk. 10,k,IS-6,.87,perp,0,0
+2022-03-04, Centurion Mk. 10,k,IS-4M,1.92,Near-perp,0,0
+2022-03-04, Centurion Mk. 10,K,T-44-100,1.74,Near-perp,11,0
+2022-03-04, Centurion Mk. 10,k,T-44-100,.96,Diag,0,0
+2022-03-04, Centurion Mk. 10,k,SU-100P,.87,Diag,0,0
+2022-03-04, Centurion Mk. 10,k,SU-100P,.93,Near-para,0,0
+2022-03-04, Centurion Mk. 10,K,ASU-85,.37,Para,0,0
+2022-03-04, Centurion Mk. 10,k,IS-3,.43,Near-perp,12,0
+2022-03-04, Centurion Mk. 10,k,SU-100P,.76,Diag,0,0
+2022-03-04, Centurion Mk. 10,K,SU-100,.23,Near-para,0,0
+2022-02-28, Centurion Mk. 10,k,T-54 (1947),0.34,Near-perp,4.0,0.0
+2022-02-28, Centurion Mk. 10,K,T-54 (1947),.39,Diag,27,-1
+2022-02-28, Centurion Mk. 10,k,IS-4M,.44,Diag,0,0
+2022-02-28, Centurion Mk. 10,k,T-54 (1949),.85,Diag,0,0
+2022-02-28, Centurion Mk. 10,k,PT-76-57,.82,Perp,0,0
+2022-02-28, Centurion Mk. 10,kb,IS-6,.08,Near-para,0,11
+2022-02-28, Centurion Mk. 10,K,T-54 (1949),.75,Near-perp,14,0
+2022-02-28, Centurion Mk. 10,k,IS-6,0.615,Near-Perp,3.0,0.0
+2022-02-28, Centurion Mk. 10,k,T-44-122,.81,near-perp,21,0
+2022-02-28, Centurion Mk. 10,kb,IS-6,.72,para,0,0
+2022-02-28, Centurion Mk. 10,k,IS-4M,1.4,Perp,11,0
+2022-02-28, Centurion Mk. 10,k,T-44,1.5,Diag,20,0
+2022-02-28, Centurion Mk. 10,k,ZSU-37,.99,Para,0,0
+2022-02-28, Centurion Mk. 10,k,T-54 (1947),.92,Diag,23,0
+2022-02-28, Centurion Mk. 10,k,BTR-152A,.67,Near-perp,28,0
+2022-02-28, Centurion Mk. 10,kb,PT-76B,.35,Near-perp,0,32
+2022-02-28, Centurion Mk. 10,k,SU-100P,0.995,Para,0.0,4.0
+2022-02-28, Centurion Mk. 10,k,PT-76-57,1.09,Diag,9.0,0.0
+2022-02-28, Centurion Mk. 10,k,IS-3,.59,Near-perp,0,0
+2022-02-28, Centurion Mk. 10,K,T-34-100,1.61,Para,0,0
+2022-02-28, Centurion Mk. 10,k,ZSU-85,2.16,Para,0,0
+2022-02-28, Centurion Mk. 10,k,T-44-100,.08,Near-perp,0,0
+2022-02-24, Centurion Mk. 10,k,PT-76-57,1.7,Near-perp,0,0
+2022-02-24, Centurion Mk. 10,K,T-54 (1947),1.17,Para,10,0
+2022-02-24, Centurion Mk. 10,k,SU-100P,2.11,Diag,16.5,0.0
+2022-02-24, Centurion Mk. 10,k,T-54 (1949),1.12,Near-para,6,0
+2022-02-24, Centurion Mk. 10,k,PT-76B,.03,Near-para,0,0
+2022-02-24, Centurion Mk. 10,k,T-54 (1947),1.11,Near-para,0,0
+2022-02-24, Centurion Mk. 10,k,T-54 (1947),.85,Diag,0,0
+2022-02-24, Centurion Mk. 10,k,T-44,1.34,Near-perp,0,0
+2022-02-24, Centurion Mk. 10,k,T-54 (1949),1.275,Para,5.5,0.0
+2022-02-24, Centurion Mk. 10,kb,T-34-100,1.31,Near-para,0,0
+2022-02-24, Centurion Mk. 10,k,ASU-85,1.23,Diag,0,0
+2022-02-24, Centurion Mk. 10,k,T-44,1.28,Near-para,0,0
+2022-02-24, Centurion Mk. 10,k,T-44-100,.96,Near-para,41,0
+2022-02-24, Centurion Mk. 10,k,PT-76B,1.25,Near-perp,0,0
+2022-02-24, Centurion Mk. 10,k,T-54 (1949),1.35,Near-perp,0,0
+2022-02-24, Centurion Mk. 10,k,T-54 (1949),.76,Near-perp,11,0
+2022-02-24, Centurion Mk. 10,k,T-44-100,1.77,DIag,0,0
+2022-02-24, Centurion Mk. 10,kb,T-54 (1947),.33,Diag,0,8
+2022-02-18, Centurion Mk. 10,kb,WZ305,.6,Diag,0,0
+2022-02-18, Centurion Mk. 10,K,T-44-100,.2,Perp,0,0
+2022-02-18, Centurion Mk. 10,k,PT-76-57,.3,Para
+2022-02-18, Centurion Mk. 10,kb,T-54 (1949),.1,Diag,0,0
+2022-02-18, Centurion Mk. 10,k,T-55A,1.17,Near-para,-7,0
+2022-02-18, Centurion Mk. 10,k,WZ305,.73,Diag,11,0
+2022-02-18, Centurion Mk. 10,k,T-54 (1949),.61,Near-para,0,0
+2022-02-18, Centurion Mk. 10,k,T-54 (1949),.46,Near-para,4,0
+2022-02-18, Centurion Mk. 10,k,BMP-1,.8,Near-para,0,0
+2022-02-18, Centurion Mk. 10,k,ZSU-57-2,.09,Diag,0,0
+2022-02-18, Centurion Mk. 10,K,T-54 (1949),.36,Diag,0,0
+2022-02-18, Centurion Mk. 10,kb,T-44,.52,Near-Para,0,9
+2022-02-18, Centurion Mk. 10,k,T-54 (1947),.86,para,-4,0
+2022-02-18, Centurion Mk. 10,k,IS-3,.47,Para,0,0
+2022-02-18, Centurion Mk. 10,k,PT-76B,1,Diag,25,0
+2022-02-18, Centurion Mk. 10,K,T-44-100,.88,Perp,0,0
+2022-02-18, Centurion Mk. 10,k,IS-4M,1.31,perp,0,0
+2022-02-18, Centurion Mk. 10,k,PT-76-57,1.24,Near-para,0,0
+2022-02-18, Centurion Mk. 10,k,IS-4M,.71,Near-para,0,0
+2022-02-18, Centurion Mk. 10,k,PT-76-57,1,Near-para,0,0
+2022-02-17, Challenger 2 (2F),k,T-72B3,.43,Para,-1,5
+2022-02-17, Challenger 2 (2F),kb,T-80U,.37,Diag,-10,0
+2022-03-03, Chieftain Mk. 3,k,T-62M-1,1.65,Diag,0,0
+2022-03-03, Chieftain Mk. 3,kb,2S25,1.22,Diag,6,3
+2022-03-03, Chieftain Mk. 3,k,WMA301,1.47,Diag,0,0
+2022-03-03, Chieftain Mk. 3,k,T-62,.03,Near-perp,0,0
+2022-03-03, Chieftain Mk. 3,kb,2S25,1,Near-para,0,0
+2022-03-03, Chieftain Mk. 3,k,T-64A (1971),.13,Para,0,0
+2022-03-03, Chieftain Mk. 3,k,T-55AM-1,1.46,Near-perp,0,0
+2022-03-03, Chieftain Mk. 5,k,T-62M-1,0.71,Near-perp,16.5,0.0
+2022-03-03, Chieftain Mk. 5,K,T-64A (1971),1.74,Diag,14.5,0.0
+2022-03-03, Chieftain Mk. 5,k,T-55AM-1,1.65,Diag,0,0
+2022-03-03, Chieftain Mk. 5,K,BMP-3,1.455,Diag,30.0,0.0
+2022-03-03, Chieftain Mk. 5,k,T-64A (1971),1.24,Near-perp,-3,-10
+2022-03-03, Chieftain Mk. 5,kb,T-64A (1971),1.14,Diag,0,0
+0001-01-01, Conqueror,kb,IS-3,.81,Para,0,0
+2022-02-18, Waffentrager,k,T-34-85 (D-5T),.81,Near-para,0,0
+2022-02-18, Waffentrager,k,IS-2,.36,Para,20,0
+2022-02-18, Waffentrager,k,IS-2,0.67,Perp,4.5,0.0
