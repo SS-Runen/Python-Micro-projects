@@ -1,6 +1,11 @@
 2021-04-05
 Note: Opening Multi-function Menu(y) -> Weaponry -> Select Machine Gun will allow you to use NVD from a perspective similar to commander's view.
 
+2022-02-17
+
+@k @T-72B3 @.43 @Para @-1 @5
+@kb @T-80U @.37 @Diag @-10 @0
+
 2022-01-20
 
 Middle East

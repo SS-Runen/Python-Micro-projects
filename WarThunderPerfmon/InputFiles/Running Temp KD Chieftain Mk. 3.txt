@@ -19,6 +19,23 @@ vs. T-62M-1 5/4
 
 Event - Vehicle - Distance - Orientation - EnemeySpeed - SelfSpeed
 
+2022-03-03
+
+Mozdok
+@k @T-62M-1 @1.65 @Diag @0 @0
+@kb @2S25 @1.22 @Diag @6 @3
+
+Second Battle of El Alamein
+@k @WMA301 @1.47 @Diag @0 @0
+
+Poland
+@k @T-62 @.03 @Near-perp @0 @0
+@kb @2S25 @1 @Near-para @0 @0
+
+Second Battle of El Alamein
+@k @T-64A (1971) @.13 @Para @0 @0
+@k @T-55AM-1 @1.46 @Near-perp @0 @0
+
 2022-02-03
 
 Second Battle of El Alamein

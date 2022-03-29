@@ -1,6 +1,0 @@
-2022-02-18
-
-El Alamein
-@k @T-34-85 (D-5T) @.81 @Near-para @0 @0
-@k @IS-2 @.36 @Para @20 @0
-@k @IS-2 @.67 @Perp, Near-Perp @9, 0 @0, 0
