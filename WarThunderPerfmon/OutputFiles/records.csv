@@ -2961,3 +2961,16 @@ DateRecorded,VehicleUsed,Event,EnemyVehicle,Distance,OrientationInSight,EnemySpe
 2022-02-18, Waffentrager,k,T-34-85 (D-5T),.81,Near-para,0,0
 2022-02-18, Waffentrager,k,IS-2,.36,Para,20,0
 2022-02-18, Waffentrager,k,IS-2,0.67,Perp,4.5,0.0
+DateRecorded,VehicleUsed,Event,EnemyVehicle,Distance,OrientationInSight,EnemySpeed,SelfSpeed
+2022-04-01, Centurion Mk. 10,k,PT-76-57,1.01,Near-para,0,0
+2022-04-01, Centurion Mk. 10,k,T-54 (1947),.8,Para,0,0
+2022-04-01, Centurion Mk. 10,k,T-54 (1947),1.38,Diag,3.0,0.0
+2022-04-01, Centurion Mk. 10,k,T-54 (1947),0.44,Diag,14.0,0.0
+2022-04-01, Centurion Mk. 10,k,BTR-152A,.74,Near-para,0,0
+2022-04-01, Centurion Mk. 10,K,T-54 (1947),.22,Near-perp,0,1
+2022-04-01, Centurion Mk. 10,k,IS-4M,.3,Near-perp,0,0
+2022-04-01, Centurion Mk. 10,k,IS-4M,0.34,Perp,3.0,0.0
+2022-04-01, Centurion Mk. 10,kb,PT-76-57,.3,Near-perp,0,0
+2022-04-01, Centurion Mk. 10,k,T-34-100,1,Near-para,0,0
+2022-04-01, Centurion Mk. 10,K,T-54 (1949),.43,Diag,-3,0
+2022-04-01, Centurion Mk. 10,k,T-54 (1947),.3,Near-perp,0,0

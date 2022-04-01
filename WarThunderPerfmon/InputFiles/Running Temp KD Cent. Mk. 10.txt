@@ -49,6 +49,28 @@ Advance to the Rhine
 
 Event - Vehicle - Distance - Orientation - EnemeySpeed - SelfSpeed
 
+2022-04-01
+
+Poland
+@k @PT-76-57 @1.01 @Near-para @0 @0
+@k @T-54 (1947) @.8 @Para @0 @0
+@k @T-54 (1947) @1.38, 1.38 @Diag, Near-perp @6, 0 @0, 0
+@k @T-54 (1947) @.44, .44 @Diag, Diag @28, 0 @0, 0
+
+Poland
+@k @BTR-152A @.74 @Near-para @0 @0
+@K @T-54 (1947) @.22 @Near-perp @0 @1
+@k @IS-4M @.3 @Near-perp @0 @0
+@k @IS-4M @.34, .34 @Perp, perp @6, 0 @0, 0
+
+Maginot
+@kb @PT-76-57 @.3 @Near-perp @0 @0
+@k @T-34-100 @1 @Near-para @0 @0
+
+Alaska
+@K @T-54 (1949) @.43 @Diag @-3 @0
+@k @T-54 (1947) @.3 @Near-perp @0 @0
+
 2022-03-28
 
 Second Battle of El Alamein [Battle]
