@@ -1,0 +1,17 @@
++++++++++++++
+Miscellaneuos
+
+@@@@@
+Setup
+
+- Install latest version of Python. Ubuntu version usually lags behind latest stable version. Download, unzip, and process latest tar file.
+Source:
+https://phoenixnap.com/kb/how-to-install-python-3-ubuntu
+
+- Create a virtual environment. Do not do anything past creating an environment.
+https://www.digitalocean.com/community/tutorials/how-to-install-python-3-and-set-up-a-local-programming-environment-on-ubuntu-20-04
+
+
+- Install helper modules, especially pip.
+
+
