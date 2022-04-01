@@ -1,3 +1,37 @@
+++++
+Data
+
+Continuous data: Data for which the granularity of the measurement can be changed. These values could have an infinite range of granularity.
+Categorical data: Values are set and there are no "in-between" data values/ranges.
+
+Levels of Data Measurement:
+Nominal - Categorical and cannot be ordered/sorted.
+Ordinal - Categorical and can be ordered/sorted. Cannot provide scale, i.e. 1 vs. 2 vs. 6.
+Interval - Provides scale and lacks a zero point/floor. Degrees Celsius/Fahrenheit have no "true zero point" or floor. Kelvins have a true zero point since Kelvin does not measure temperature with negative values.
+Ratio - Provide scale, can be ordered (just like interval levels of measure) and have a true zero point. E.g. age, population.
+
+Population - All members of a certain group.
+Sample - A subset of a specific group.
+
+++++++++++++++++++++++++++++
+Measures of Central Tendency
+
+Mean - The sum of values divided by the count of values. It can be influenced significantly by outliers.
+Median - The middle value or the average of the two middle values of an ordered set.
+Mode - The most frequent value in a set.
+
+++++++++++++++++++++++
+Measures of Dispersion
+
+Range - Difference between maximum and minimum value of a set.
+Variance - The average of the squared distances from the mean of all data points. The sum of squared distances from each point to the mean divided by either sample size less one or population size. Sample variance requires the use of (n - 1) as denominator instead of  population variance' n. Here, n is the number of data points/elements in the sample or population.
+Standard Deviation - The square root of a sets variance.
+
+*Bessel's Correction:
+- The use of (n - 1) as a denominator to reduce bias due to finite sample size.
+
+Inter-quartile Range - A basis for calculating a fence for marking outliers. The fence is often arbitrarily set to 1.5 times the inter-quartile range (IQR). IQR is the distance between the lower limit in quartile 1 and the upper limit in quartile 3. Outliers are either higher by 1.5 times the IQR compared to the lower limit of the 3rd quartile or lower by 1.5 times the IQR compared to the lower limit of the 1st quartile.
+
 +++++++++++++
 Miscellaneuos
 
@@ -13,5 +47,4 @@ https://www.digitalocean.com/community/tutorials/how-to-install-python-3-and-set
 
 
 - Install helper modules, especially pip.
-
 
