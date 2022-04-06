@@ -19,14 +19,3 @@ Stalingrad
 Sinai [Battle]
 Jungle
 Stalingrad
-
-xxxxxxx
-
-2022-04-05
-
-Mozdok
-@k @T-54 (1947) @2.21, 2.21 @Diag, Near-perp @15, 0 @0, 0
-@k @Obj 268 @1.92 @Perp @0 @0
-
-Fields of Normandy
-@kb @T-54 (1949) @.15 @Near-para @0 @0
