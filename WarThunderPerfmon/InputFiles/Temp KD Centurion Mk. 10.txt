@@ -20,4 +20,26 @@ Sinai [Battle]
 Jungle
 Stalingrad
 
+xxxx
+
+2022-04-09
+
+Wallonia
+@k @PT-76B @.99 @Perp @0 @0
+@k @BTR-152A @1.14, 1.14 @Perp @19, 0 @0, 0
+@k @T-54 (1949) @.87 @Near-perp @26 @0
+
+Fields of Poland [Battle]
+@k @T-54 (1949) @.78 @Perp @0 @0
+@k @T-34-100 @.65 @Perp @0 @0
+@k @T-34-100 @.12 @Para @-8 @0
+@k @Obj 268 @1.08 @Diag @35 @0
+@k @T-54 (1947) @.62, .5 @Diag, para @13, 42 @0, 0
+@k @ZSU-37 @1.39 @Near-Para @0 @0
+
+Poland
+@k @IS-6 @.36 @near-Perp @0 @0
+@k @T-54 (1949) @.68 @Para @11 @0
+@k @T-44-100 @.41 @Para @0 @0
+@kb @PT-76-57 @.28 @Diag @0 @0
 
