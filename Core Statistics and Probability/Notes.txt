@@ -41,6 +41,13 @@ Standard Deviation - The square root of a sets variance.
 
 Inter-quartile Range - A basis for calculating a fence for marking outliers. The fence is often arbitrarily set to 1.5 times the inter-quartile range (IQR). IQR is the distance between the lower limit in quartile 1 and the upper limit in quartile 3. Outliers are either higher by 1.5 times the IQR compared to the lower limit of the 3rd quartile or lower by 1.5 times the IQR compared to the lower limit of the 1st quartile.
 
++++++++++++
+Probability
+
+Addition Rule for Probabilities - The probability of A or B, P(A U B), is given by: P(A U B) = P(A) + P(B) - P(A & B), where '&' is a standin for the inverted U or intersection. For mutually exclusive events, ommit `P(A & B)`.
+
+Multiplication Rule for Dependent Events - P(A & B) = P(A) * P(B<-A)
+
 +++++++++++++
 Miscellaneuos
 
