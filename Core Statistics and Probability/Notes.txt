@@ -46,7 +46,7 @@ Probability
 
 Addition Rule for Probabilities - The probability of A or B, P(A U B), is given by: P(A U B) = P(A) + P(B) - P(A & B), where '&' is a standin for the inverted U or intersection. For mutually exclusive events, ommit `P(A & B)`.
 
-Multiplication Rule for Dependent Events - P(A & B) = P(A) * P(B<-A)
+Multiplication Rule for Dependent Events - P(A|B) = P(A) * P(B|A)
 
 +++++++++++++
 Miscellaneuos
