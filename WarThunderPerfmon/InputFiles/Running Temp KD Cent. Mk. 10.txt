@@ -52,7 +52,7 @@ Event - Vehicle - Distance - Orientation - EnemeySpeed - SelfSpeed
 2022-04-17
 
 Mozdok
-@k @T-54 (1947) @1.73, 1.72 @Diag, Diag @36, 0
+@k @T-54 (1947) @1.73, 1.72 @Diag, Diag @36, 0, @0, 0
 @k @T-44-100 @.67 @Near-perp @22 @0
 
 Poland

@@ -2979,7 +2979,7 @@ DateRecorded,VehicleUsed,Event,EnemyVehicle,Distance,OrientationInSight,EnemySpe
 2022-04-05, Centurion Mk. 10,k,Obj 268,1.92,Perp,0,0
 2022-04-05, Centurion Mk. 10,kb,T-54 (1949),.15,Near-para,0,0
 DateRecorded,VehicleUsed,Event,EnemyVehicle,Distance,OrientationInSight,EnemySpeed,SelfSpeed
-2022-04-17, Centurion Mk. 10,k,T-54 (1947),1.725,Diag,18.0
+2022-04-17, Centurion Mk. 10,k,T-54 (1947),1.725,Diag,18.0, 0
 2022-04-17, Centurion Mk. 10,k,T-44-100,.67,Near-perp,22,0
 2022-04-17, Centurion Mk. 10,kb,T-54 (1949),.2,Near-para,0,0
 2022-04-13, Centurion Mk. 10,kb,T-54 (1949),1.25,Diag,0,0
