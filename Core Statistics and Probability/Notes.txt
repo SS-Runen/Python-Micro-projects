@@ -49,6 +49,11 @@ Addition Rule for Probabilities - The probability of A or B, P(A U B), is given 
 Multiplication Rule for Dependent Events - P(A|B) = P(A) * P(B|A)
 
 +++++++++++++
+Distributions
+
+Binomial Distribution Mass Function - Describes the probability of observing x successes in total after performing n trials. The term (n x) denotes a combination of n taken x at a time.
+
++++++++++++++
 Miscellaneuos
 
 @@@@@
@@ -63,4 +68,8 @@ https://www.digitalocean.com/community/tutorials/how-to-install-python-3-and-set
 
 
 - Install helper modules, especially pip.
+
+- To use an environment, navigate to the environments folder and enter this command:
+source ./bin/activate
+
 
