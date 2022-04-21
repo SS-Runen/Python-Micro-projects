@@ -51,7 +51,9 @@ Multiplication Rule for Dependent Events - P(A|B) = P(A) * P(B|A)
 +++++++++++++
 Distributions
 
-Binomial Distribution Mass Function - Describes the probability of observing x successes in total after performing n trials. The term (n x) denotes a combination of n taken x at a time.
+Binomial Distribution Probability Mass Function - Describes the probability of observing x successes in total after performing n trials. The term (n x) denotes a combination of n taken x at a time.
+
+Poission Disribution (Probability Mass and Cumulative Mass) Function - Probability of getting x successes per some continuous unit, e.g. time or distance. To get the probability of x or less/more successes, simply sum the poisson distributions of x and below or x and above. The poisson distribution assumes uniformity of the intervals between success. If there is a reason for events or successes to occur with varying intervals - e.g. at a the end of 5 PM and during the first minutes of 8 AM - the poisson distribution cannot be used effectively.
 
 +++++++++++++
 Miscellaneuos
