@@ -62,6 +62,25 @@ Normal/Guassian/Bell-curve distribution/probability density function - Maps prob
 
 Standard normal distribution - A normal distribution with a mean of 0 and standard deviation of 1.
 
+Exercise
+1. A distribution is a range of probabilities mapped to a value. They display the probability of getting a result (y-axis) equal to a certain value (x-axis).
+5. x=2, n=5, p=0.5
+10. 0.9961696194324102
+
+++++++++
+Sampling
+
+- An aribtrary minimum sample count is >30.
+
+Selection Bias - Bias toward selecting samples more likely to react or respond to polls, surverys, and other data gathering requests or sampling techniques. Examples: Undercoverage Bias: omitting a segment of the population. Self-selection bias: A bias caused by differences between people who volunteer themselves as samples compared to those who don't volutneer. Healthy-user bias.
+
+Survivorship Bias - Skewed resutls samples that are inferior, damaged, or unobservable "leaving" the sample pool or not being included or removed from the sample pool.
+
+Random Sampling - All population members have an equal chance of being selected.
+Staratifed Sampling - A population is sorted into segments based on certain characteristics. Members cannot belong to two or more groups. From each group, take a sample. The sample size from each group must have the same ratio to the total sample size as the group's ratio to the total population.
+
+Clustering - The population is broken into groups and samples are taken from a random selection of groups. The group sample size ratio to total sample size must be the same as group size ratio to population size.
+
 +++++++++++++
 Miscellaneuos
 
