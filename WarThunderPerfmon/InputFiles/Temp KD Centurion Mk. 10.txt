@@ -20,5 +20,64 @@ Sinai [Battle]
 Jungle
 Stalingrad
 
+xxxxx
+
+2022-04-29
+
+Second Battle of El Alamein
+@k @T-54 (1947) @~1 @Near-perp
+@k @T-44 @~.1 @Perp
+
+Cargo Port
+@k @IS-4M @~.6 @Diag @0 @0
+
+Maginot Line
+@kb @T-54 (1949) @.05 @Near-para @-11 @0
+
+Berlin
+@k @PT-76-57 @~.8 @Perp
+@k @2S3M @~.8 @Perp
+@k @T-54 (1947) @~.8 @Perp
+@k @ASU-85 @1.1 @Near-perp
+
+Red Desert
+@k @T-44-100 @~.1 @Diag @0 @0
+
+FIelds of Poland [Battle]
+@k @T-54 (1949) @~1.1 @Diag
+@k @Type 63 @~.7 @Near-perp @0 @0
+@k @PT-76 @~1.4 @Near-para @0 @0
+
+2022-04-21
+
+Maginot Line
+@k @PT-76-57 @.68 @Para @61 @6
+@k @2S3M @.2 @Para @0 @0
+@K @T-44-100 @.86 @Near-perp @0 @0
+@k @T-44-100 @1.18 @Diag @41 @0
+@k @IS-4M @1.36 @Near-para @0 @0
+@k @T-34-100 @1.28 @Diag @0 @0
+@kb @2S3M @1.01 @Near-perp @0 @0
+
+Mozdok
+@k @T-44 @1.72 @Near-perp @30 @0
+@k @2S3M @1.08 @Near-para @0 @0
+@k @T-44-100 @1.1 @Near-perp @0 @0
+@k @IS-3 @1.76 @Diag @0 @0
+
+Poland [Battle]
+@k @T-54 (1949) @.42 @Near-para @0 @0
+@k @T-54 (1947) @.19 @Near-para @17 @0
+@k @T-54 (1949) @.52 @Para @0 @-11
+
+Middle East
+@k @2S3M @.72 @Para @0 @0
+@kb @IS-3 @.35 @Diag @0 @0
+@kb @IS-6 @1.07 @Near-para @0 @0
+
+Middle East
+@k @PT-76-57 @.01 @Diag @0 @0
+@k @BTR-152A @.1 @Near-perp @15 @0
+@kb @PT-76-57 @.1 @Near-perp @0 @0
 
 

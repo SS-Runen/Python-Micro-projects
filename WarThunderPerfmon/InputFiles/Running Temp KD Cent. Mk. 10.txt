@@ -26,6 +26,9 @@ Switch to high-zoom if an area stands out, e.g. it is far but in line of sight.
 do not expose yourself to it.
 - Always keep as much of the vehicle hidden as possible whether moving or waiting.
 
+-10,000
++50,000
+
 June 04, 2021
 Update "Red Skies".
 - Sound mod.
