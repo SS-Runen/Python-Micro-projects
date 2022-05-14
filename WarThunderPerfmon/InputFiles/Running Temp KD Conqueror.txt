@@ -34,6 +34,11 @@ October 04, 2021
 will be used as baseline "control" to check effect of multiple spawns.
 
 
+2022-05-03
+
+Berlin [Battle]
+@kb @T-34-100 @.04 @Near-para @0 @5
+
 Second Battle of El Alamein [Battle]
 @kb @IS-3 @.81 @Para @0 @0
 
