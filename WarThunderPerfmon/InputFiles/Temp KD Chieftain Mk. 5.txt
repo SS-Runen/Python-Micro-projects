@@ -1,6 +1,9 @@
 
 2022-05-14
 
+Poland
+@k @T-55AM-1 @.77, .77 @near-Perp, near-Perp @41, 0 @0, 0
+
 Hurtgen Forest
 @k @ZSU-57-2 @.02 @Diag @20 @0
 @k @T-64A (1971) @.01 @Diag @0 @0

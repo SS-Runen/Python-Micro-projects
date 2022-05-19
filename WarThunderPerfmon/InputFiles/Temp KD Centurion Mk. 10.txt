@@ -20,4 +20,13 @@ Sinai [Battle]
 Jungle
 Stalingrad
 
+2022-05-19
 
+Poland [Battle]
+@k @T-54 (1947) @.71 @Para @0 @0
+@k @T-54 (1949) @1.2 @Perp @0 @0
+
+Hurtgen Forest
+@K @T-54 (1947) @.5 @Near-Perp @17 @0
+@k @T-44-100 @.64, .64 @Perp, Perp @18, 0 @0, 0
+@kb @PT-76B @.03 @Near-para @0 @0
