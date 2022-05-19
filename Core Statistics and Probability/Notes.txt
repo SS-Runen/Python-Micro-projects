@@ -21,6 +21,22 @@ Pearson Correlation Coefficient - Measures the strength of the association or re
 https://www.statisticshowto.com/probability-and-statistics/correlation-coefficient-formula/
 https://www.statisticssolutions.com/free-resources/directory-of-statistical-analyses/pearsons-correlation-coefficient/
 
+++++++++++++++++++++++++
+Properties of Factorials
+
+Negative numbers do not have a factorial.
+
+The value of 0! is set at 1.
+
+n! = (n-1)! * n
+
+(n + 1)! = n! * n
+
+(n + k)! = n! * (n + 1) * ...(n + k)
+
+(n - k)! = n! / ((n - k + 1) * (n - k + 2) * ...(n - k + k)) or n! / ((n - k + 1) * (n - k + 2) * ...n)
+
+Assuming n > k, n! / k! = (k + 1) * (k + 2) * ...n
 
 ++++++++++++++++++++++++++++
 Measures of Central Tendency
@@ -33,7 +49,7 @@ Mode - The most frequent value in a set.
 Measures of Dispersion
 
 Range - Difference between maximum and minimum value of a set.
-Variance - The average of the squared distances from the mean of all data points. The sum of squared distances from each point to the mean divided by either sample size less one or population size. Sample variance requires the use of (n - 1) as denominator instead of  population variance' n. Here, n is the number of data points/elements in the sample or population.
+Variance - The average of the squared distances from the mean of all data points. The sum of squared distances from each point to the mean divided by either sample size less one (n - 1) or population size. Sample variance requires the use of (n - 1) as denominator. Population variance uses population count n. I.e., n is the number of data points/elements in the sample or population.
 Standard Deviation - The square root of a sets variance.
 
 *Bessel's Correction:
@@ -44,21 +60,27 @@ Inter-quartile Range - A basis for calculating a fence for marking outliers. The
 +++++++++++
 Probability
 
-Addition Rule for Probabilities - The probability of A or B, P(A U B), is given by: P(A U B) = P(A) + P(B) - P(A & B), where '&' is a standin for the inverted U or intersection. For mutually exclusive events, ommit `P(A & B)`.
+Union - The probability of either A or B occuring.
+
+Intersection - The probability that two events/results A and B both occur, i.e. both hypotheses are simultaneously true. For events, multiply prbability of A with that of B to get the probabilities. 
+
+Addition Rule for Probabilities - The probability of A or B occuring, P(A U B), is given by: P(A U B) = P(A) + P(B) - P(A ∩ B). For mutually exclusive events, ommit `P(A ∩ B)`. P(A U B) = P(A) + P(B).
 
 Multiplication Rule for Dependent Events - P(A|B) = P(A) * P(B|A)
+
+Expected Outcome = The expected numerical result E of an experiment for an event A. Denoted as E(A). For categorical results, E(A) = P(A) * n, where n is the number of trials performed.
 
 ++++++++++++++++++++++
 Discrete Distributions
 
 Binomial Distribution Probability Mass Function - Describes the probability of observing x successes in total after performing n trials. The term (n x) denotes a combination of n taken x at a time.
 
-Poisson Disribution (Probability Mass and Cumulative Mass) Function - Probability of getting x successes per some continuous unit, e.g. time or distance. To get the probability of x or less/more successes, simply sum the poisson distributions of x and below or x and above. The poisson distribution assumes uniformity of the intervals between success. If there is a reason for events or successes to occur with varying intervals - e.g. at a the end of 5 PM and during the first minutes of 8 AM - the poisson distribution cannot be used effectively.
+Poisson Disribution Probability Mass and Cumulative Mass Function - Probability of getting x successes per some continuous unit, e.g. time or distance. To get the probability of x or less/more successes, simply sum the poisson distributions of x and below or x and above. The poisson distribution assumes uniformity of the intervals between success. If there is a reason for events or successes to occur with varying intervals - e.g. at a the end of 5 PM and during the first minutes of 8 AM - the poisson distribution cannot be used effectively.
 
 ++++++++++++++++++++++++
 Continuous Distributions
 
-Normal/Guassian/Bell-curve distribution/probability density function - Maps probabilities to an area x. Probabilities cannot be mapped to a single specific outcome and have to be mapped to a range or interval instead. In a continuous normal distribution, the mean, median and mode are equal. Regardless of what the mean, median, or mode are, all normal distributions are centered and symmetric around the mean.
+Normal/Guassian/Bell-curve distribution - Maps probabilities to an area x. Probabilities cannot be mapped to a single specific outcome and have to be mapped to a range or interval instead. In a continuous normal distribution, the mean, median and mode are equal. Regardless of what the mean, median, or mode are, all normal distributions are centered and symmetric around the mean.
 
 Standard normal distribution - A normal distribution with a mean of 0 and standard deviation of 1.
 
