@@ -45,35 +45,55 @@ Variation with Repetition/Replacement - Assumes a set with n number of elements 
 
 Variations without Repetition - Denoted by v = n! / (n-p)! where n is the number of usable elements and p is the number of positions to fill. Synonymous to "permutations of n number of elements taken p at a time without replacement." Note that n! denotes the total permutations of all usable elements. (n - p)! denotes permutations of elements that are not going to be used to fill in positions. This implies that a variation without replacement is the number of times the permutation of unused elements can be subtracted from the permutation of all elements.
 
+Combinations - To get the number of unique sets/combinations (C) for a number of elements (n) taken (p) at a time, nCp = n! / (p! * (n-p)!).
+
+Symmetry of Combinations - n C r = c C (n - p). E.g. 10C7 = 10C3.
+
 ++++++++++++++++++++++++++++
 Measures of Central Tendency
 
-Mean - The sum of values divided by the count of values. It can be influenced significantly by outliers.
+Mean/Arithmetic Mean - The sum of values in a set divided by the count of values. It can be influenced significantly by outliers. Population mean is usually denoted by μ and sample mean by x or x-bar.
+
+Geometric mean - The product of all values in a set raised to the (1/n)th power, with n being the number of values in the set. μ = (n1 * n2 * ...n)^(1/n) or μ = n√(n1 * n2 * ...n). The term 1/n denotes the nth root, e.g. 1/2 denotes the square root. This mean is often used to calculate growth over time. It can be referred to as the time-weighted rate of return. Unlike the arithmetic mean, the geometric mean can be used to measure compounding. E.g. for [2, 18], geometric μ = (2*18)^1/2. For [2, 18, 20, 25], geometric μ = (2*18*20*25)^(1/4).
+
 Median - The middle value or the average of the two middle values of an ordered set.
+
 Mode - The most frequent value in a set.
+
+The mean is usually more affected by outliers with a high absolute value.
+
+Percentile - A value which a certain percentage of values in a set are less than. I.e. the 10th percentile denotes a value compared to which 10% of all values in the set are lower.
+
+Quartile - Usually arbitrarily set at the 25th, 50th, and 75th percentiles.
 
 ++++++++++++++++++++++
 Measures of Dispersion
 
 Range - Difference between maximum and minimum value of a set.
-Variance - The average of the squared distances from the mean of all data points. The sum of squared distances from each point to the mean divided by either sample size less one (n - 1) or population size. Sample variance requires the use of (n - 1) as denominator. Population variance uses population count n. I.e., n is the number of data points/elements in the sample or population.
-Standard Deviation - The square root of a sets variance.
+
+Variance - The average of the squared distances from the mean of all data points. The sum of squared distance from the mean of each point divided by either sample size less one (n - 1) or population size. Sample variance s^2 requires the use of (n - 1) as denominator. Population variance σ^2 uses population count n. I.e., n is the number of data points/elements in the sample or population.
+
+Standard Deviation - The square root of a sets variance. The set may be a sample s or population σ.
 
 *Bessel's Correction:
 - The use of (n - 1) as a denominator to reduce bias due to finite sample size.
 
 Inter-quartile Range - A basis for calculating a fence for marking outliers. The fence is often arbitrarily set to 1.5 times the inter-quartile range (IQR). IQR is the distance between the lower limit in quartile 1 and the upper limit in quartile 3. Outliers are either higher by 1.5 times the IQR compared to the lower limit of the 3rd quartile or lower by 1.5 times the IQR compared to the lower limit of the 1st quartile.
 
+Z-score - The number of standard deviations from the mean to a certain value.
+
+Coefficient of Variation - This is an indicator of how much "spread" your data has. Standard deviation divided by mean and multiplied by 100%. C = (standard_deviation / mean) * 100%.
+
 +++++++++++
 Probability
 
-Union - The probability of either A or B occuring.
+Union - The probability of either A or B occuring. Calculated using the formula for the Addition Rule for Probabilities.
 
-Intersection - The probability that two events/results A and B both occur, i.e. both hypotheses are simultaneously true. For events, multiply prbability of A with that of B to get the probabilities. 
+Intersection - The probability that two events/results A and B both occur, i.e. both hypotheses are simultaneously true. For events, multiply prbability of A with that of B to get the probabilities. P(A ∩ B) = P(A) * P(B).
 
 Addition Rule for Probabilities - The probability of A or B occuring, P(A U B), is given by: P(A U B) = P(A) + P(B) - P(A ∩ B). For mutually exclusive events, ommit `P(A ∩ B)`. P(A U B) = P(A) + P(B).
 
-Multiplication Rule for Dependent Events - P(A|B) = P(A) * P(B|A)
+Multiplication Rule for Dependent Events - Where A -> B, P(A|B) = P(A) * P(B|A)
 
 Expected Outcome = The expected numerical result E of an experiment for an event A. Denoted as E(A). For categorical results, E(A) = P(A) * n, where n is the number of trials performed.
 
