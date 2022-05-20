@@ -38,6 +38,13 @@ n! = (n-1)! * n
 
 Assuming n > k, n! / k! = (k + 1) * (k + 2) * ...n
 
++++++++++++++
+Combinatorics
+
+Variation with Repetition/Replacement - Assumes a set with n number of elements permuted p at a time but each element is replaced/may be used repeatedly. In other words, filling a number of "slots" or "positions" with elements from a certain set while allowing repeated use of any element. v = n^p where n is the number of available elements and p is the number of positions to fill.
+
+Variations without Repetition - Denoted by v = n! / (n-p)! where n is the number of usable elements and p is the number of positions to fill. Synonymous to "permutations of n number of elements taken p at a time without replacement." Note that n! denotes the total permutations of all usable elements. (n - p)! denotes permutations of elements that are not going to be used to fill in positions. This implies that a variation without replacement is the number of times the permutation of unused elements can be subtracted from the permutation of all elements.
+
 ++++++++++++++++++++++++++++
 Measures of Central Tendency
 
@@ -92,7 +99,7 @@ Exercise
 ++++++++
 Sampling
 
-- An aribtrary minimum sample count is >30.
+- An aribtrary minimum sample count is > 30.
 
 Selection Bias - Bias toward selecting samples more likely to react or respond to polls, surverys, and other data gathering requests or sampling techniques. Examples: Undercoverage Bias: omitting a segment of the population. Self-selection bias: A bias caused by differences between people who volunteer themselves as samples compared to those who don't volutneer. Healthy-user bias.
 
