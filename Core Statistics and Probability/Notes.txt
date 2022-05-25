@@ -47,7 +47,7 @@ Variations without Repetition - Denoted by v = n! / (n-p)! where n is the number
 
 Combinations - To get the number of unique sets/combinations (C) for a number of elements (n) taken (p) at a time, nCp = n! / (p! * (n-p)!).
 
-Symmetry of Combinations - n C r = c C (n - p). E.g. 10C7 = 10C3.
+Symmetry of Combinations - n C r = n C (n - r). E.g. 10C7 = 10C3.
 
 ++++++++++++++++++++++++++++
 Measures of Central Tendency
@@ -71,7 +71,7 @@ Measures of Dispersion
 
 Range - Difference between maximum and minimum value of a set.
 
-Variance - The average of the squared distances from the mean of all data points. The sum of squared distance from the mean of each point divided by either sample size less one (n - 1) or population size. Sample variance s^2 requires the use of (n - 1) as denominator. Population variance σ^2 uses population count n. I.e., n is the number of data points/elements in the sample or population.
+Variance - The average of the squared distances from the mean of all data points. The sum of squared distance from the mean of each point divided by either sample size less one (n - 1) or population size. Sample variance s^2 requires the use of (n - 1) as denominator. Population variance σ^2 uses population count n. Here, n is the number of data points/elements in the sample or population.
 
 Standard Deviation - The square root of a sets variance. The set may be a sample s or population σ.
 
@@ -93,7 +93,9 @@ Intersection - The probability that two events/results A and B both occur, i.e. 
 
 Addition Rule for Probabilities - The probability of A or B occuring, P(A U B), is given by: P(A U B) = P(A) + P(B) - P(A ∩ B). For mutually exclusive events, ommit `P(A ∩ B)`. P(A U B) = P(A) + P(B).
 
-Multiplication Rule for Dependent Events - Where A -> B, P(A|B) = P(A) * P(B|A)
+Multiplication Rule for Independent Events - If A and B are independent, P (A ∩ B) = P(A) * P(B)
+
+Multiplication Rule for Dependent Events - Where event A is dependent on B, i.e. B -> A, P(A|B) = P(A) * P(B|A). This may be rephrased as the probability of A given that B has occured. The formula is equivalent to: P (A|B) = P(A ∩ B) / P(B).
 
 Expected Outcome = The expected numerical result E of an experiment for an event A. Denoted as E(A). For categorical results, E(A) = P(A) * n, where n is the number of trials performed.
 
