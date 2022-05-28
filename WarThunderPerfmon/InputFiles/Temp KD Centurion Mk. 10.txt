@@ -20,6 +20,40 @@ Sinai [Battle]
 Jungle
 Stalingrad
 
+
+
+2022-05-27
+
+Eastern Europe
+@k @T-54 (1949) @.86 @Diag @0 @0
+@k @T-54 (1949) @1.14 @Near-para @0 @0
+@kb @SU-100 @1.15 @Near-perp @0 @2
+
+Alaska
+@k @T-44 @.62 @perp @9 @10
+@k @SU-100P @.65 @Perp @33 @8
+@k @T-54 (1949) @.62 @Perp @0 @0
+@k @IS-3 @.64 @Near-perp @14 @0
+
+2022-05-23
+
+Finland
+@K @IS-6 @.22 @Perp @20 @0
+
+El Alamein [Battle]
+@k @T-54 (1947) @.14 @Near-para @0 @0
+@k @T-54 (1947) @.73, .67  @Diag, Para @18, 14 @0, 0
+
+Poland
+@k @PT-76B @.69 @Para @40 @0
+@k @SU-100P @.76 @near-Perp, near-Perp @41, 0 @0, 0
+@K @PT-76B @.78 @Diag @28 @0
+@k @T-54 (1949) @.21 @Diag @5 @20
+@k @T-44-100 @.3 @Near-para @0 @0
+@k @T-54 (1949) @.66 @Diag @0 @0
+@k @ASU-85 @.3 @Diag @0 @0
+@kb @T-44-100 @.18 @Near-para @0 @14
+
 2022-05-19
 
 Poland [Battle]
