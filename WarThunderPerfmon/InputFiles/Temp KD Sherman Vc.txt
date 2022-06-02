@@ -1,0 +1,12 @@
+2022-06-02
+
+Berlin
+@k @T-34-85 @.62 @Para @-3 @0
+@kb @T-34-85 @.62 @near-para @0 @0
+
+Mozdok
+@k @M4A3E2 @1.95, 1.92 @Near-perp, Diag @32, 0 @0, 0
+@kb @M4A3 (76) W @1.79 @Near-para @0 @0
+
+Berlin [Battle]
+@k @T-34-85 .8 @Diag @0 @0

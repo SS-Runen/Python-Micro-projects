@@ -2,3 +2,22 @@ Volokolamsk
 Sweden
 Advance to the Rhine
 Stalingrad
+
+2022-06-02
+
+Second Battle of El Alamein
+@k @T-34-85 @.27 @para @34 @0
+@K @A.C. IV @1.25 @Para @0 @0
+@k @M4A3 (76) W @2.07 @near-Para @0 @0
+
+Eastern Europe
+@K @IS-1 @.47 @Para @-17 @0
+@kb @M18 @.34 @Near-perp @0 @0
+
+Japan
+@k @ARL-44 @.59 @Near-perp @0 @0
+@k @T-34-85 (D-5T) @.53 @Diag @-5 @0
+
+Berlin [Battle]
+@K @Comet I @.8 @Near-para @0 @0
+@kb @T-34-85 (D-5T) @.79 @Near-para @0 @0

@@ -20,7 +20,12 @@ Sinai [Battle]
 Jungle
 Stalingrad
 
+2022-05-29
 
+Fulda
+@k @T-54 (1949) @1.5 @Diag @-7 @0
+@K @IS-6 @1.34 @Near-perp @19 @0
+@kb @ZSU-57 @.28 @Near-para @0 @5
 
 2022-05-27
 
