@@ -20,6 +20,32 @@ Sinai [Battle]
 Jungle
 Stalingrad
 
+2022-06-04
+
+Mozdok
+@k @T-54 (1947) @1.78 @para @0 @0
+@k @T-54 (1947) @.02, .01 @Near-perp, near-perp @10, -3 @0, 0
+
+Hurtgen Forest
+@k @Obj. 268 @.5 @Perp @18 @0
+@k @T-54 (1949) @.23, .22  @near-para, Diag @0, 8 @4, 0
+@k @T-54 (1949) @.28 @para @0 @0
+@k @T-54 (1947) @.27, .28  @Para, Para @0, -9 @0, 0
+
+Hurtgen Forest
+@k @T-54 (1947) @.21 @Para @20 @0
+
+Mozdok
+@k @PT-76B @1.12 @near-Perp @10 @0
+@k @T-44-100 @1.65 @perp @0 @0
+
+Maginot
+@K @T-44-100 @1.65 @Para @0 @0
+@kb @T-44-100 @1.08 @Perp @0 @0
+
+Eastern Europe
+@kb @T-44-100 @.03 @Diag @0 @0
+
 2022-05-29
 
 Fulda
