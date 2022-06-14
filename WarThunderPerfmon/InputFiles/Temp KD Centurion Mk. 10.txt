@@ -20,11 +20,13 @@ Sinai [Battle]
 Jungle
 Stalingrad
 
-xxxx
+xxx
 
-2022-06-08
+2022-06-12
 
-
+@kb @Typ 63 @.67 @Near-perp @0 @0
+@k @T-54 (1947) @.09 @Diag @0 @0
+@k @T-54 (1949) @.03 @Near-para @21 @0
 
 2022-06-04
 
