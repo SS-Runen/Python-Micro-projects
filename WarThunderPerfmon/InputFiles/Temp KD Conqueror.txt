@@ -5,3 +5,13 @@ Abandoned Factory
 Advnace to the Rhine
 Campania
 Finland [Battle]
+
+xxxx
+
+Second Battle of El Alamein
+@k @T-54 (1949) @.4 @Diag @0 @10
+@k @IS-6 @.11 @Diag @8 @0
+
+Second Battle of El Alamein
+@k @T-54 (1949) @~.6 @Near-perp
+@k @IS-6 @~.06 @Near-perp
