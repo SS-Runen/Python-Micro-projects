@@ -60,6 +60,15 @@ Sands of Sinai
 Fulda
 @kb @IS-6 @.02 @Diag @0 @-10
 
+Fields of Poland
+@k @T-54 (1949) @.67 @Diag @0 @0
+@k @PT-76-57 @1.18, 1.18 @Perp, Perp @9, 0 @0, 0
+
+American Desert
+@k @T-54 (1949) @.71 @Near-para @0 @0
+@k @IS-4M @.36 @Near-perp @0 @0
+@k @Type 62 @.56 @Near-para @0 @0
+
 2022-06-12
 
 @kb @Typ 63 @.67 @Near-perp @0 @0
