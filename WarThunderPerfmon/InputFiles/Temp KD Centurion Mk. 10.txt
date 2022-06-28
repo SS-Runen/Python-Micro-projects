@@ -26,13 +26,16 @@ Maginot [Mini]
 
 2022-06-28
 
+Eastern Europe
+@k @T-44-100 @.03 @Near-para @4 @0
+
 Normandy
 @k @T-54 (1949) @~.2 @Near-para @0 @0
 @k @T-54 (1947) @~.2 @Near-peerp
 @k @T-54 (1947 @~.3 @Near-perp @0 @0
 
 Ground Zero
-@k @T-54 (1947) @~.9 @Near-perp @0 @0
+@k @T-54 (1947) @.73, .72  @Near-perp, Near-perp @-6, 0 @0, 0
 
 2022-06-24
 
