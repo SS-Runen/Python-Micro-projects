@@ -7,22 +7,36 @@ Advnace to the Rhine
 Aral Sea
 Space Port
 Campania
-Cargo Port wrong side
+Cargo Port no hole
 Finland [Battle]
-Mozdok [Battle] wrong side
-Alaska wrong side
-Ground Zero wrong side
+Mozdok [Battle] no flank
+Alaska/Ground Zero no right base flank
 Carpathians
-Frozen Pass wrong side
-White Rock Fortress
+Frozen Pass no castle camp
 Stalingrad
-Sinai [Battle]
+Sinai no flank rocks
 Jungle
 Stalingrad
-Fulda
-Maginot [Mini]
+Fulda mini
+Maginot mini
+European Province/Eastern Europe no windmill hill
+Abandoned Town
 
+xxxx
 
+2022-07-02
+
+Poland
+@kb @PT-76-57 @~.9 @Near-perp @0 @0
+@k @IS-4M @~.8 @Near-para @
+@k @PT-76-57 @~1 @Diag
+@k @PT-76B @~.6 @Near-para
+
+Normandy
+@k @T-44-100 @.04 @Near-perp @0 @0
+
+European Province
+@kb @ASU-85 @.01 @Near-perp @0 @0
 
 2022-06-28
 
@@ -30,8 +44,10 @@ Eastern Europe
 @k @T-44-100 @.03 @Near-para @4 @0
 
 Normandy
-@k @T-54 (1949) @~.2 @Near-para @0 @0
-@k @T-54 (1947) @~.2 @Near-peerp
+@k @T-54 (1949) @.28 @Near-para @0 @0
+@K @IS-3 @.37 @Para @0 @0
+@k @2S3M @.5 @Near-para @11 @0
+@k @T-54 (1947) @.39 @Near-perp @24 @12
 @k @T-54 (1947 @~.3 @Near-perp @0 @0
 
 Ground Zero
