@@ -1,7 +1,26 @@
 
 2022-06-24
 
+Kuban
+@k @KV-85 @.55 @Diag @11 @0
+@k @Comet I @.41 @Para @11 @0
+@kb @Chi-to Late @.07 @Diag @0 @0
+
+Middle East
+@k @M4A2 (76) W @.95 @Diag @21 @0
+@k @M4A2 (76) W @1.02 @Diag @0 @0
+@k @T-34-95 (D-5T) @1.10 @Near-perp @19 @0
+
+Sinai
+@k @T-34-85 @near-perp, near-perp @.37, .37 @6, 0 @0, 0
+@k @T-44 @.49 @Diag @-3 @0
+@kb @Ratel 90 @.14 @Near-perp @0 @0
+
+Mozdok
+@k @T-34-85 @.88, .88 @Diag, Diag @36, 0 @0, 0
+@k @ISU-122 @.99 @Diag @0 @0
+
 El Alamein
-@K @IS-1 @~1 @Near-para
-@k @Type 53 @~.6 @Diag @0 @0
-@k @KV-85 @~.9 @Near-para 
+@K @PT-76B @1.06 @DIag @0 @0
+@k @PT-76B @.56 @Near-perp @0 @0
+@K @IS-1 @1.16 @Near-para @29 @0

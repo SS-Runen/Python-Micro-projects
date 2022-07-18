@@ -1,0 +1,4 @@
+Missed kills due to HEAT:
+xx
+
+Event, Vehicle, Distance, Orientation, Speed, SlefSpeed
