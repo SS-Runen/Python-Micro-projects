@@ -95,9 +95,28 @@ Addition Rule for Probabilities - The probability of A or B occuring, P(A U B), 
 
 Multiplication Rule for Independent Events - If A and B are independent, P (A ∩ B) = P(A) * P(B)
 
-Multiplication Rule for Dependent Events - Where event A is dependent on B, i.e. B -> A, P(A|B) = P(A) * P(B|A). This may be rephrased as the probability of A given that B has occured. The formula is equivalent to: P (A|B) = P(A ∩ B) / P(B).
+Multiplication Rule for Dependent Events - Where event A is dependent on B, i.e. B -> A, P(A|B) = P(A) * P(B|A). This may be rephrased as the probability of A given that B has occured. The formula is equivalent to: P(A|B) = P(A ∩ B) / P(B).
 
 Expected Outcome = The expected numerical result E of an experiment for an event A. Denoted as E(A). For categorical results, E(A) = P(A) * n, where n is the number of trials performed.
+
+- Conditional Probability
+
+-- For dependent events A and B
+
+The probability of B given A, i.e. P(B) if A has happened:
+P(B|A) = P(B ∩ A) / P(A)
+~ The probability of B given A is equal to the probability of B intersection A divided by the probability of A.
+
+The probability of A given B, i.e. P(B) happening if A has happened/will happen:
+P(A|B) = P(B ∩ A) / P(B)
+~ The probability of A given B is equal to the probability of A intersection B divided by the probability of B.
+
+* The probability of the event "taken for granted" or assumed to happen will be the denominator of the probability of A intersection B.
+
+-- For two events A and B, if the probability of A is the same as the probability of A given B, the events are independent.
+P(A) = P(A|B) ~ independent
+P(B) = P(B|A) ~ independent
+P(A) != P(A|B) ~ dependent
 
 ++++++++++++++++++++++
 Discrete Distributions
