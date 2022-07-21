@@ -22,9 +22,35 @@ Maginot mini
 European Province/Eastern Europe no windmill hill
 Abandoned Town
 
+xxx
 
+2022-07-22
+
+Cargo Port
+@k @IS-3 @.96, .96 @near-para, near-para @12, 0 @0, 0
+@kb @T-54 (1949) @.38 @Near-para @0 @-5
+
+Berlin [Battle]
+@k @T-54 (1947) @.33 @near-para @13 @0
+
+2022-07-14
+
+Second Battle of El Alamein
+@K @T-54 (1947) @1.27 @Diag @0 @0
+@k @PT-76-57 @1.48 @Diag @17 @0
+@k @2S3M @1.99, 1.98 @Near-perp, diag @0,0 @0,0
+
+Eastern Europe
+@k @T-44 @1.13 @Diag @9 @0
+@kb @T-54 (1949) @.02 @Near-perp @0 @0
+
+Campania
+@k @Type 62 @~1 @Near-perp
 
 2022-07-06
+
+Hurtgen Forest
+@k @ASU-85 @1.09, 1.09 @Near-perp, Near-perp @14, 0 @8, 0
 
 Hurtgen Forest
 @kb @T-54 (1947) @.59 @Diag @0 @0

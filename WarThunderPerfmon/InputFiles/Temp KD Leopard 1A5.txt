@@ -1,4 +1,5 @@
-Missed kills due to HEAT:
+Event, Vehicle, Distance, Orientation, Speed, SlefSpeed
+
 xx
 
-Event, Vehicle, Distance, Orientation, Speed, SlefSpeed
+2022-07-12
