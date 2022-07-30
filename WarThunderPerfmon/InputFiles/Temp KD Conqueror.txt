@@ -7,11 +7,20 @@ Campania
 Finland [Battle]
 
 xxxx
+2022-07-30
+
+Cargo Port
+@k @PT-76-57 @1.13, 1.13 @Near-perp, near-perp @24, 0 @33, 0
+@k @T-54 (1949) @.99 @Diag @10 @0
+@k @T-54 (1949) @.48 @Para @-3 @0
+
+Ground Zero
+@kb @T-54 (1949) @.58 @Para @0 @-5
+
+Poland
+@k @T-54 (1949) @.86 @Diag @0 @0
+@k @BTR-ZD @.7, .7 @Diag, diag @19, 0 @0, 0
 
 Second Battle of El Alamein
 @k @T-54 (1949) @.4 @Diag @0 @10
 @k @IS-6 @.11 @Diag @8 @0
-
-Second Battle of El Alamein
-@k @T-54 (1949) @~.6 @Near-perp
-@k @IS-6 @~.06 @Near-perp
