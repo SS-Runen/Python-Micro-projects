@@ -1,5 +1,2 @@
 Event, Vehicle, Distance, Orientation, Speed, SlefSpeed
 
-xx
-
-2022-07-12
