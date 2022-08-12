@@ -10,6 +10,28 @@ xxxx
 Bounce off T-54 1949 breech
 https://warthunder.com/en/tournament/replay/101048060647432710
 
+Bounce off T-54 1947 turret side
+https://warthunder.com/en/tournament/replay/105462990673333873
+
+Bounce at T-44 turret rear joint.
+
+
+2022-08-11
+
+Mozdok
+@k @T-34-100 @.02 @Near-para @0 @0
+
+Middle East
+@kb @T-54 (1949) @.52 @Near-para @0 @0
+
+Hurtgen Forest
+@k @T-54 (1947) @.12 @Para @0 @0
+@kb @T-54 (1947) @.06 @Near-para @0 @6
+
+Berlin
+@kb @T-54 (1947) @.41 @Diag @0 @0
+@k @ASU-85 @.24 @Para @0 @0
+
 2022-07-30
 
 Cargo Port

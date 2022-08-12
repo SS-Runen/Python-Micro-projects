@@ -78,7 +78,6 @@ Advance to the Rhine
 2022-01-07, Conqueror,k,Type 62,1.11,Para,0,0
 2022-01-07, Conqueror,kb,T-54 (1949),.67,Diag,0,1
 
-2021-12-10, Conqueror,k,SU-100P,~.03,Near-perp
 2021-12-08, Conqueror,k,T-54 (1947),.91,Diag,0,0
 2021-12-06, Conqueror,k,ZSU-37,1.69,Perp,19,0
 2021-12-06, Conqueror,k,T-54 (1947),1.6,Near-perp,0,0

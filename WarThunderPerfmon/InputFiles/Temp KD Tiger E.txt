@@ -3,6 +3,13 @@ Sweden
 Advance to the Rhine
 Stalingrad
 
+2022-07-21
+
+Cargo Port
+@k @IS-1 @1.07 @Diag @0 @0
+@k @M4A3 (76) W @.79 @Diag @0 @0
+@K @KV-2 @1.03 @Para @0 @0
+
 2022-06-02
 
 Second Battle of El Alamein
