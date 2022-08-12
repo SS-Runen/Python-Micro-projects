@@ -52,7 +52,7 @@ Variation with Repetition/Replacement - Assumes a set with n number of elements 
 
 Variations without Repetition - Denoted by v = n! / (n-p)! where n is the number of usable elements and p is the number of positions to fill. Synonymous to "permutations of n number of elements taken p at a time without replacement." Note that n! denotes the total permutations of all usable elements. (n - p)! denotes permutations of elements that are not going to be used to fill in positions. This implies that a variation without replacement is the number of times the permutation of unused elements can be subtracted from the permutation of all elements.
 
-Combinations - To get the number of unique sets/combinations (C) for a number of elements (n) taken (p) at a time, nCp = n! / (p! * (n-p)!).
+Combinations - To get the number of unique sets/combinations (C) for a number of elements (n) taken (p) at a time, nCp = n! / (p! * (n-p)!). Similar to permutations, the (n-p)! in the denominator removes the permutations of elements that will not be used. The additional p! * ... removes the permutations of the different elements from the result set.
 
 Symmetry of Combinations - n C r = n C (n - r). E.g. 10C7 = 10C3.
 
@@ -127,6 +127,9 @@ P(A) != P(A|B) ~ dependent
 
 -- Because independent events do not affect each others probability, the intersection of independent events A and B should equal the probability of A multiplied to the probability of B.
 P (A ∩ B) = P(A) * P(B) ~ independent
+
+- Baye's Theorem
+P(B|A) = P(A|B)*P(B) / P(A)
 
 ++++++++++++++++++++++
 Discrete Distributions
