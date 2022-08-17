@@ -60,8 +60,9 @@ Berlin
 @kb @ASU-85 @.23 @Near-para @0 @0
 
 Second Battle of El Alamein
-@k @T-54 (1947) @~2.1
-@k @M42
+@k @T-54 (1947) @2.21, 2.21 @Near-perp, near-perp @25, 0 @0, 0
+@k @2S3M @1.15 @Near-perp @0 @0
+@k @M42 @2.32, 2.31 @near-perp, near-para @52, 0 @0, 0
 
 Poland
 @k @T-44-100 @1.02 @Para @0 @0
