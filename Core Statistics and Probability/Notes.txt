@@ -96,7 +96,7 @@ Probability
 
 Union - The probability of either A or B occuring. Calculated using the formula for the Addition Rule for Probabilities.
 
-Intersection - The probability that two events/results A and B both occur, i.e. both hypotheses are simultaneously true. For events, multiply prbability of A with that of B to get the probabilities. P(A ∩ B) = P(A) * P(B).
+Intersection - The probability that two events/results A and B both occur, i.e. both hypotheses are simultaneously true. For independent events, multiply prbability of A with that of B to get the probabilities. P(A ∩ B) = P(A) * P(B).
 
 Addition Rule for Probabilities - The probability of A or B occuring, P(A U B), is given by: P(A U B) = P(A) + P(B) - P(A ∩ B). For mutually exclusive events, ommit `P(A ∩ B)`. P(A U B) = P(A) + P(B).
 
