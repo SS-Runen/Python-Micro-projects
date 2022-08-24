@@ -98,11 +98,13 @@ Union - The probability of either A or B occuring. Calculated using the formula 
 
 Intersection - The probability that two events/results A and B both occur, i.e. both hypotheses are simultaneously true. For independent events, multiply prbability of A with that of B to get the probabilities. P(A ∩ B) = P(A) * P(B).
 
-Addition Rule for Probabilities - The probability of A or B occuring, P(A U B), is given by: P(A U B) = P(A) + P(B) - P(A ∩ B). For mutually exclusive events, ommit `P(A ∩ B)`. P(A U B) = P(A) + P(B).
+Addition/Additive Rule for Probabilities - The probability of A or B occuring, P(A U B), is given by: P(A U B) = P(A) + P(B) - P(A ∩ B). For mutually exclusive events, ommit `P(A ∩ B)`. P(A U B) = P(A) + P(B).
 
 Multiplication Rule for Independent Events - If A and B are independent, P (A ∩ B) = P(A) * P(B)
 
-Multiplication Rule for Dependent Events - Where event A is dependent on B, i.e. B -> A, P(A|B) = P(A) * P(B|A). This may be rephrased as the probability of A given that B has occured. The formula is equivalent to: P(A|B) = P(A ∩ B) / P(B).
+Multiplication Rule for Dependent Events - Where event A is dependent on B, i.e. B -> A, P(A|B) = P(A) * P(B|A). This may be rephrased as the probability of A given that B has occured. The formula is equivalent to: P(A|B) = P(A ∩ B) / P(B). From that formula, P(A ∩ B) = P(A|B) * P(B).
+
+Law of Total Probability - If A is the union of a finite number of events (B1 U B2 U Bn...), P(A) = (P(A|B1) * P(B)) + (P(A|B2) * P(B2)) +...
 
 Expected Outcome = The expected numerical result E of an experiment for an event A. Denoted as E(A). For categorical results, E(A) = P(A) * n, where n is the number of trials performed.
 
