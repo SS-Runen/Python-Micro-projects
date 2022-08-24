@@ -18,7 +18,7 @@ Bounce at T-44 turret rear joint.
 2022-08-23
 
 Normandy
-@kb @T-54 (1947) @.6 @Near-para @0 @0
+@kb @T-54 (1947) @.72 @Near-para @0 @0
 
 2022-08-19
 

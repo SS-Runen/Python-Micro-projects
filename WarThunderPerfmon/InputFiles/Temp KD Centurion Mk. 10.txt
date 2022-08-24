@@ -24,16 +24,33 @@ Abandoned Town
 
 2022-08-23
 
+Fire Arc
+@k @ASU-85 @Near-para, near-para @1.63, 1.62 @near-para, near-para @25, 0 @0, 0
+@K @IS-4M @2.25 @Para @0 @0
+
 Mozdok
-@k @T-54 (1949) @~1.7 @Diag @
+@k @T-54 (1949) @1.73 @Diag @0 @0
 
 Normandy
-@kb @IS-4M @~.2 @Near-perp
+@K @PT-76-57 @0.25 @Diag @27 @0
+@kb @IS-4M @.16 @Near-perp @23 @-6
+
+Sands of Sinai
+@kb @PT-76-57 @.15 @Diag @0 @0
+
+Second Battle of El Alamein
+@k @PT-76-57 @1.64 @Para @0 @0
 
 Berlin
-@k @T-54 (1947) @~.7 @Para @0 @0
-@k @IS-4M @~.4 near-para
-@k @T-54 (1949) @~.8 @near-perp
+@k @T-54 (1947) @.6 @Para @0 @0
+@k @T-44-122 @.56 @Para @0 @0
+@K @Type 62 @.6 @Near-para @0 @0
+@k @T-54 (1949) @.6 @near-perp @0 @0
+
+Wallonia
+@K @PT-76-57 @1 @Para @0 @0
+@k @PT-76B @.9 @Diag @0 @0
+@kb @IS-6 @.13 @Near-para @0 @12
 
 2022-08-19
 
@@ -43,7 +60,7 @@ Poland [Battle]
 2022-08-11
 
 Mozdok
-@k @IS-6 @1.7 @Near-para
+@k @IS-6 @1.7 @Near-para @0 @0
 
 Mozdok
 @k @T-54 (1947) @1.11 @Near-perp @0 @0
