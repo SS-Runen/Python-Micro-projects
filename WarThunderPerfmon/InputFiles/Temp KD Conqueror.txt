@@ -6,7 +6,6 @@ Advnace to the Rhine
 Campania
 Finland [Battle]
 
-xxxx
 Bounce off T-54 1949 breech
 https://warthunder.com/en/tournament/replay/101048060647432710
 
@@ -14,6 +13,17 @@ Bounce off T-54 1947 turret side
 https://warthunder.com/en/tournament/replay/105462990673333873
 
 Bounce at T-44 turret rear joint.
+
+xxxxx
+
+2022-08-27
+
+Cargo Port
+@kb @T-54 (1947) @.35 @DIag @0 @0
+
+Ground Zero
+@k @IS-6 @.46 @Diag @11 @0
+@k @T-54 (1949) @.24 @Diag @0 @0
 
 2022-08-23
 

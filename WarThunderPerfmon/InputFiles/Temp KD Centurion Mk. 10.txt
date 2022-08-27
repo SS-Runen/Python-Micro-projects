@@ -22,6 +22,23 @@ Maginot mini
 European Province/Eastern Europe no windmill hill
 Abandoned Town
 
+xxxxxx
+
+2022-08-27
+
+Eastern Europe
+@k @ASU-85 @1.21 @Para @0 @0
+@k @T-54 (1949) @1.23, 1.22  @near-para, near-para @19, 0 @0, 0
+@k @PT-76-57 @1.13 @Para @0 @0
+@K @T-54 (1947) @1.14 @DIag @0 @0
+
+Cargo port
+@kb @IS-4M @.59 @Near-para @0 @11
+
+Ground Zero
+@k @IS-4M @.7 @near-Para @0 @0
+@kb @IS-6 @.12 @Diag @2 @10
+
 2022-08-23
 
 Fire Arc
