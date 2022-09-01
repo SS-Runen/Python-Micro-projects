@@ -1,2 +1,2 @@
 # Python-Micro-projects
-Random assortment of projects that can be done in one day or less.
+Random assortment of mini-projects and side-projects.
