@@ -1,0 +1,4 @@
+Guidelines:
+
+Check minion waves when deciding on ganks, objectives, and pathing.
+
