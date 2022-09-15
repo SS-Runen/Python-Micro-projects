@@ -22,7 +22,20 @@ Maginot mini
 European Province/Eastern Europe no windmill hill
 Abandoned Town
 
-xxxxxx
+xxxxxxxx
+
+2022-09-12
+
+Normandy
+@k @IS-6 @~.6 @para
+@k @T-54 (1949) @~.2 @Diag @0 @0
+@k @2S3M @~.2
+@k @T-54 (1949) @~.4
+@k @T-54 (1949) @~.3
+@k @ASU-85 @~.2
+@k @T-54 (1947) @~1.4
+@k @su-100 @~.3
+@k @BTR-ZD @~.2
 
 2022-08-27
 
