@@ -17,9 +17,7 @@ Bounce at T-44 turret rear joint.
 2022-09-14
 
 Finland
-@k @M48 @~1 @Diag
-@k @T-54 @~.6
-@k @T-54 @~1
+@k @M48 @1 @Diag @0 @0
 
 2022-09-02
 
