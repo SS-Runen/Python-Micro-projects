@@ -22,7 +22,32 @@ Maginot mini
 European Province/Eastern Europe no windmill hill
 Abandoned Town
 
-xxxxx
+xxx
+
+2022-09-24
+
+Second Battle of El Alamein [Battle]
+@k @ASU-85 @1.42 @diag @12 @0
+@k @IS-6 @.96, .95 @Near-para, para @33, 0 @0, 0
+@k @T-54 (1949) @1.28 @diag @0 @0
+@k @T-54 (1949) @1.27 @Diag @0 @0
+
+Normandy
+@k @T-54 (1949) @.98 @Perp @6, 0 @0, 0
+@k @IS-4M @.97 @near-para @0 @0
+@k @PT-76-57 @near-perp, near-perp @.45 @44, 0 @0, 0
+@k @T-44 @.49 @Diag @33 @0
+@kb @PT-76-57 @.15 @diag @0 @0
+
+2022-09-20
+
+Second Battle of El Alamein [Battle]
+@k @T-44 @.04 @Diag @0 @0
+@k @ZSU-37 @.6 @diag @10 @0
+
+Fire Arc
+@k @T-44-100 @1.82 @para @0 @0
+@k @ZSU-37 @2.52 @Perp @13 @0
 
 2022-09-16
 
