@@ -22,7 +22,33 @@ Maginot mini
 European Province/Eastern Europe no windmill hill
 Abandoned Town
 
-xxx
+xxxx
+
+2022-09-28
+
+Cargo Port
+@k @2S3M @1.1 @near-para @0 @0
+@k @Obj 268 @1.4 @para @0 @0
+@k @T-54 (1949) @1.13 @near-para @0 @0
+@k @ASU-85 @1.02 @near-para @0 @0
+
+Eastern Europe
+@k @2S3M @1.33 @near-perp @0 @0
+@k @T-54 (1947) @1.15 @near-para @-7 @0
+@k @SU-100P @.97 @Diag @0 @0
+@k @IS-6 @.24 @diag @18 @0
+
+Eastern Europe
+@k @Type 63 @.93 @Diag @0 @0
+@k @T-54 (1949) @1.14 @near-perp @0 @0
+@kb @IS-4M @1.15 @Near-perp @0 @0
+
+Ardennes
+@kb @T-54 (1947) @.46 @Diag @0 @11
+
+Cargo Port [Battle]
+@k @T-44-100 @~.2 @Diag @0 @0
+@k @ASU-85 @~.1 @Near-para @0 @0
 
 2022-09-24
 
