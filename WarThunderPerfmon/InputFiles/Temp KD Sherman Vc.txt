@@ -1,4 +1,20 @@
+
+xxxx
+
 2022-09-29
+
+Ardennes
+@k @T-34-85 (D-5T) @.67 @near-perp @0 @0
+@k @SU-100Y @.47 @Diag @0 @0
+@K @M15 @.4 @Perp @0 @0
+
+Finland
+@kb @Avenger @~1 @Diag @0 @0
+
+Mozdok
+@k @M4A2 @1.37 @Diag @0 @0
+@kb @T-34-85 (D-5T) @.52 @Near-para @0 @0
+@kb @M18 @1.08 @Diag @0 @0
 
 @k @E.B.R. @~1.5 
 
