@@ -141,7 +141,21 @@ P(B|A) = P(A|B)*P(B) / P(A)
 ++++++++++++++++++++++
 Discrete Distributions
 
-Binomial Distribution Probability Mass Function - Describes the probability of observing x successes in total after performing n trials. The term (n x) denotes a combination of n taken x at a time.
+Binomial Distribution Probability Mass Function - Describes the probability of observing x successes in total after performing n trials. The term (n x) denotes a combination of n taken x at a time. (n x) = n! / x!(n−x)!
+
+P(x) = (n! / (x! * (n-x)!)) * P^x * (1-P)^(n-x)
+Here,
+P(x): probability of x occuring given that it is a binomial distribution.
+P^x: probability of x occuring during one trial.
+n: number of trials.
+x: desired count of outcomes.
+
+This formula can be accessed in Excel or Google sheets using =BINOM.DIST.RANGE().
+
+Variance/Standard Deviation for Binomial Distribution: σ2 = n * P * (1-P). σ = n * P * (1-P)
+Expected Value: n * P
+
+Binomial Probability Distribution Table - This table lists the intersections between the number of trials, P, and x. It is a cumulative probability distribution. To get the probability for a specific x, take its cumulative probability and subtract the undesired outcomes. I.e, subtract the cumulative probability of the opposite "undesirable" condition. E.g.: if you need the probability of getting x >= 5, subtract the probability of getting x <= 4 from 1. If you need the probability of a specific x, say x = 5, subtract the probability of x <= 4 from the probability of x <= 5.
 
 Poisson Disribution Probability Mass and Cumulative Mass Function - Probability of getting x successes per some continuous unit, e.g. time or distance. To get the probability of x or less/more successes, simply sum the poisson distributions of x and below or x and above. The poisson distribution assumes uniformity of the intervals between success. If there is a reason for events or successes to occur with varying intervals - e.g. at a the end of 5 PM and during the first minutes of 8 AM - the poisson distribution cannot be used effectively.
 
