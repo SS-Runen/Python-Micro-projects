@@ -22,6 +22,26 @@ Maginot mini
 European Province/Eastern Europe no windmill hill
 Abandoned Town
 
+
+2022-10-14
+
+Fire Arc
+@k @T-44 @1.05 @Para, para @18, 0 @0, 0
+@k @IS-6 @1.3 @near-Perp @0 @0
+@k @T-44 @2.35 @near-para @0 @0
+@k @ASU-85 @1.38, 1.38 @Diag, diag @0, 0 @0, 0
+
+Poland [Battle]
+@kb @T-44-100 @.1 @Para @0 @9
+@k @T-44-100 @.76, .72 @perp, para @39, 11 @0, 0
+
+Pradesh
+@k @BTR-ZD @1700 @Near-perp @0 @0
+@k @T-44-100 @1.75 @near-para @0 @0
+
+Poland
+@k @IS-4M @.3 @near-perp @0 @0
+
 2022-10-06
 
 Needs Review: Possible over-exposure
