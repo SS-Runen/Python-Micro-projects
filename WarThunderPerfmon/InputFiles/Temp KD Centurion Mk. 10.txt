@@ -22,6 +22,20 @@ Maginot mini
 European Province/Eastern Europe no windmill hill
 Abandoned Town
 
+xx
+
+2022-10-21
+
+Pradesh
+@k @T-54 (1949) @1.88 @near-Perp @30 @0
+@k @PT-76-57 @1, .61 @Para, Diag @39, 0 @0, 0
+@k @T-54 (1947) @1.85 @Diag @0 @0
+@k @SU-100P @1.88 @Near-para @0 @0
+@kb @ASU-85 @1.51 @Para @0 @0
+
+Mozdok
+@k @ASU-85 @1.11 @Para @0 @0
+@K @PT-76B @2.11 @Near-para @0 @0
 
 2022-10-14
 
