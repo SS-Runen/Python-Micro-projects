@@ -138,6 +138,10 @@ P (A ∩ B) = P(A) * P(B) ~ independent
 - Baye's Theorem
 P(B|A) = P(A|B)*P(B) / P(A)
 
+- Functions of Random Variables
+Given that the function expected value (μ) = b * X + a where a is a constant, X is the average value of the variable, and a is a constant, μ is a linear equation. The equation standard deviation can be calculated by multiplying the absolute value of the equation's slope and the SD of X:
+SD = |b| * SD(X)
+
 ++++++++++++++++++++++
 Discrete Distributions
 
