@@ -14,7 +14,13 @@ https://warthunder.com/en/tournament/replay/105462990673333873
 
 Bounce at T-44 turret rear joint.
 
-x
+2022-10-24
+
+Fire Arc
+@k @T-54 (1949) @1.37 @near-perp @12 @0
+@k @SU-122-54 @1.37 @Para @0 @0
+@k @2S3M @1.66 @diag @16 @0
+@k @T-54 (1947) @1.16 @Perp @25 @0
 
 2022-10-03
 
