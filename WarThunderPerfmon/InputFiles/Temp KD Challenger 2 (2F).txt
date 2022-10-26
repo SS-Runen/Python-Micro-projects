@@ -7,11 +7,6 @@
 @K @ZTZ-96A (P) @1.17, 1.17 @Perp, perp @26 ,0 @0, 0
 @kb @T-72M2 @1.51 @near-perp, near-perp @0, 0 @9, 0
 
-2022-07-11
-
-Sands of Sinai
-@k @Obj 685 ~1.2 @Near-para @0 @0
-
 2022-06-16
 
 Sands of Sinai

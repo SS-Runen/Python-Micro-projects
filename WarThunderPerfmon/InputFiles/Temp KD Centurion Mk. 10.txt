@@ -22,8 +22,6 @@ Maginot mini
 European Province/Eastern Europe no windmill hill
 Abandoned Town
 
-xx
-
 2022-10-21
 
 Pradesh
@@ -36,6 +34,11 @@ Pradesh
 Mozdok
 @k @ASU-85 @1.11 @Para @0 @0
 @K @PT-76B @2.11 @Near-para @0 @0
+
+Poland
+@K @T-54 (1949) @.62 @Diag @25 @0
+@k @IS-3 @.21 @Diag @0 @0
+@kb @IS-3 @.35 @Near-perp @0 @0
 
 2022-10-14
 
@@ -88,10 +91,6 @@ Eastern Europe
 
 Ardennes
 @kb @T-54 (1947) @.46 @Diag @0 @11
-
-Cargo Port [Battle]
-@k @T-44-100 @~.2 @Diag @0 @0
-@k @ASU-85 @~.1 @Near-para @0 @0
 
 2022-09-24
 
