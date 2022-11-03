@@ -14,6 +14,50 @@ https://warthunder.com/en/tournament/replay/105462990673333873
 
 Bounce at T-44 turret rear joint.
 
+2022-11-02
+
+Pradesh
+@k @T-54 (1947) @.79 @0 @0
+@k @IS-3 @.59 @Diag @21 @0
+
+Pradesh
+@k @T-44-100 @1.24 @Diag @0 @0
+@k @IS-3 @1.89 @Diag @0 @0
+
+2022-10-31
+
+Ground Zero
+@k @T-54 @~.6
+@k @T-54 @~.05
+
+Red Desert
+@k @IS-6 @~.2
+@k @T-54 ? @.04
+@k @T-54 ? @
+@kb @ZSU-57-2 @
+
+Middle East
+@kb @Type 59 @.17 @near-perp @0 @0
+@k @Type 59 @.18 @Para @0 @0
+@k @T-54 (1951) @.56 @Perp @0 @0
+
+2022-10-28
+
+https://warthunder.com/en/tournament/replay/134565066300814111
+Eastern Europe
+@k @T-54 (1951) @1.18, @Near-perp, near-perp @26, 0 @0, 0
+@k @T-54 (1949) @1.24 @Near-para @-7 @0
+@k @T-54 (1949) @1.85 @Near-perp @0 @0
+
+Hurtgen Forest
+@kb @T-54 (1949) @0.01 @Diag @0 @0
+
+Normandy
+@kb @T-54 (1947) @.6 @Perp @0 @0
+
+Middle East
+@kb @ZTZ-59A @.23 @Diag @0 @0
+
 2022-10-24
 
 Fire Arc

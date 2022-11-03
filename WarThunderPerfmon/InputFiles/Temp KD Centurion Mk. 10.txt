@@ -22,6 +22,46 @@ Maginot mini
 European Province/Eastern Europe no windmill hill
 Abandoned Town
 
+2022-11-03
+
+Red Desert
+@k @PT-76-57 @.25 @Near-para @19 @0
+@k @T-54 (1949) @.78 @Diag @0 @0
+@k @IS-6 @.38 @Diag @-6 @0
+
+Poland
+@k @T-54 (1949) @.52 @0 @0
+@k @T-44-100 @.62 @para @0 @0
+@kb @IS-4M @.81 @Near-para @0 @0
+
+Poland
+@kb @T-54 (1947) @.03 @near-Perp @0 @11
+
+2022-11-02
+
+Pradesh
+@k @T-54 (1949) @.58 @near-para @0 @0
+@k @T-54 (1947) @1.22 @Diag @14 @0
+@kb @T-54 (1949) @.23 @Para @0 @0
+
+Pradesh
+@k @T-54 (1949) @1.1 @near-para @0 @0
+@k @PT-76-57 @1.7 @DIag @0 @0
+@k @PT-76B @1.69 @Diag @0 @0
+@kb @T-54 (1947) @.8 @Near-para @0 @0
+
+Pradesh
+@k @T-44-100 @1.71, 1.71  @para, Near-para @0, 0 @0, 0
+@k @ZSU-37 @1.66 @diag @3 @0
+
+Berlin
+@kb @T-54 (1947) @.86 @Near-perp @0 @0
+@k @T-44-100 @.8 @near-Perp @0 @0
+
+@k @T-54 (1947) @.28 @Near-perp @0 @0
+@k @Type 62 @.48 @Diag @0 @0
+@K @T-44 @.05 @near-para @10 @5
+
 2022-10-21
 
 Pradesh
