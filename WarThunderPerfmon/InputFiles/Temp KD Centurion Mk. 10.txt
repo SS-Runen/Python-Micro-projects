@@ -24,6 +24,9 @@ Abandoned Town
 
 2022-11-03
 
+Poland
+@kb @IS-6 @.05 @Diag @0 @0
+
 Red Desert
 @k @PT-76-57 @.25 @Near-para @19 @0
 @k @T-54 (1949) @.78 @Diag @0 @0
