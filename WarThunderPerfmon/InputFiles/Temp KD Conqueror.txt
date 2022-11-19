@@ -14,6 +14,11 @@ https://warthunder.com/en/tournament/replay/105462990673333873
 
 Bounce at T-44 turret rear joint.
 
+2022-11-11
+
+Fields of Normandy
+@k @T-44-100 @0.08 @Diag @0 @0
+
 2022-11-03
 
 Poland
@@ -34,10 +39,10 @@ Ground Zero
 @k @T-54 @~.05
 
 Red Desert
-@k @IS-6 @~.2
-@k @T-54 ? @.04
-@k @T-54 ? @
-@kb @ZSU-57-2 @
+@k @IS-6 @.57 @Perp @14 @0
+@k @ZTZ-59A @.04 @Diag @0 @0
+@k @T-54 (1949) @.13, 0.08 @para, para @-4, 0 @24, 0
+@kb @ZSU-57-2 @.49 @Para @24 @0
 
 Middle East
 @kb @Type 59 @.17 @near-perp @0 @0

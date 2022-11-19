@@ -23,6 +23,61 @@ European Province/Eastern Europe no windmill hill
 Abandoned Town
 American Desert [Domination]
 
+2022-11-19
+
+Red Desert
+@k @IS-4M @~.8 @Near-para, diag @ @
+@k @T-34-100 @~.8 @Near-perp @0 @0
+
+2022-11-15
+
+Poland [Battle]
+@k @IS-6 @.1 @Diag @0 @0
+@k @PT-76B @~1
+@k @IS-3 @1.8 @
+
+Ardennes
+@k @T-54 (1949) @Diag @0 @0
+@k @BTR-152
+
+Middle East
+@k @T-44 @.68, .68 @Near-para, near-para @6 @0
+@k @PT-76B @.7 @Para @0 @0
+@k @T-54 (1947) @.65, .63 @near-Perp, near-perp @16, 0 @0, 0
+
+2022-11-11
+
+Fields of Normandy
+@k @T-54 (1947) @.23 @Para @0 @0
+@k @ASU-85 @0.06 @Near-para @0 @0
+@kb @IS-4M @0.03 @Near-para @0 @0
+
+Sands of Sinai
+@k @ASU-85 @.29 @Near-para @0 @15
+@k @2S3M @.06 @Near-perp @0 @27
+@k @SU-100P @.64 @Para @-14 @-7
+@k @PT-76B @.06 @Diag @16 @0
+@k @BTR-ZD @.67 @Para @0 @0
+@k @T-54 (1947) @.54 @Diag @0 @0
+@K @T-54 (1947) @.38 @Diag @0 @0
+
+Second Battle of El Alamein
+@k @T-44-100 @1.82 @Diag, diag @5, 0 @0, 0
+@k @SU-100P @2.1 @para @0 @0
+
+Poland
+@k @T-54 (1947) @1.12, 1.12 @Perp, Perp @35, 0 @0, 0
+
+Red Desert
+@k @IS-6 @~.1 @Diag @ @
+
+2022-11-07
+
+Pradesh
+@k @Type 63 @~1.7 @Near-para
+@k @PT-76-57 @~1.4 @Near-para
+@k @T-54 ? @~1.6 @Near-perp @0 @0
+
 2022-11-06
 
 Pradesh
