@@ -139,7 +139,7 @@ P (A ∩ B) = P(A) * P(B) ~ independent
 P(B|A) = P(A|B)*P(B) / P(A)
 
 - Functions of Random Variables
-Given that the function expected value (μ) = b * X + a where a is a constant, X is the average value of the variable, and a is a constant, μ is a linear equation. The equation standard deviation can be calculated by multiplying the absolute value of the equation's slope and the SD of X:
+Given that the function expected value (μ) = b * X + a where a is a constant, and X is the average value of the variable, μ is a linear equation. The equation standard deviation can be calculated by multiplying the absolute value of the equation's slope and the SD of X:
 SD = |b| * SD(X)
 
 ++++++++++++++++++++++
