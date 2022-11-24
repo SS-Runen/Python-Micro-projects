@@ -35,8 +35,8 @@ Pradesh
 2022-10-31
 
 Ground Zero
-@k @T-54 @~.6
-@k @T-54 @~.05
+@k @T-54 (1951) @.62 @Near-perp @13 @0
+@k @T-54 (1949) @.17 @Perp @6 @0
 
 Red Desert
 @k @IS-6 @.57 @Perp @14 @0
