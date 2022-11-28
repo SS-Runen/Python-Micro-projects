@@ -14,6 +14,16 @@ https://warthunder.com/en/tournament/replay/105462990673333873
 
 Bounce at T-44 turret rear joint.
 
+2022-11-24
+
+I remember aiming to the left of the targets after missing but the local replay shows me aiming to the right.
+There is a discrepancy in the replay listed range and the range my gun is set to. My gun went above despite being set too low.
+Pradesh
+https://warthunder.com/en/tournament/replay/5567991308738414
+@k @T-54 (1947) @1.68 @Near-para @0 @0
+@k @IS-6 @1.7 @Para @0 @0
+@k @T-54 (1951) @1.75 @near-para @0 @0
+
 2022-11-11
 
 Fields of Normandy
@@ -35,8 +45,8 @@ Pradesh
 2022-10-31
 
 Ground Zero
-@k @T-54 @~.6
-@k @T-54 @~.05
+@k @T-54 (1951) @.62 @Near-perp @13 @0
+@k @T-54 (1949) @.17 @Perp @6 @0
 
 Red Desert
 @k @IS-6 @.57 @Perp @14 @0

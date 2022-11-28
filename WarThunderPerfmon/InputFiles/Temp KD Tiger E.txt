@@ -3,6 +3,18 @@ Sweden
 Advance to the Rhine
 Stalingrad
 
+2022-11-06
+
+Sands of Sinai [Battle]
+@k @M18 @.15 @Near-perp @0 @0
+@k @T-34-85 (D-5T) @.19 @Diag @31 @0
+@k @T-34-85 @.7 @Near-perp @17 @0
+@k @ASU-57 @.1 @Diag @0 @0
+@K @T-34-85 @1.78 @Perp @0 @0
+@k @T-34-85 @.08 @Diag @-6 @0
+@K @ZiS-12 (95-KM) @.67 @Diag @0 @0
+@kb @T-34-85 @.99 @Near-perp @0 @0
+
 2022-07-21
 
 Cargo Port

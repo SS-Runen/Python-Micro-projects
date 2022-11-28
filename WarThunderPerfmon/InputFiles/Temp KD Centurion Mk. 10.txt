@@ -23,6 +23,15 @@ European Province/Eastern Europe no windmill hill
 Abandoned Town
 American Desert [Domination]
 
+2022-11-23
+
+2022-11-
+
+Sands of Sinai
+@k @Type 63 @1.38 @near-Para @0 @0
+@k @T-54 (1949) @1.96, 1.96 @Perp, near-para @37, 0 @0, 0
+@kb @T-54 (1949) @.37 @DIag @0 @0
+
 2022-11-19
 
 Red Desert
@@ -74,9 +83,9 @@ Red Desert
 2022-11-07
 
 Pradesh
-@k @Type 63 @~1.7 @Near-para
-@k @PT-76-57 @~1.4 @Near-para
-@k @T-54 ? @~1.6 @Near-perp @0 @0
+@k @Type 63 @1.81 @Near-para @-19 @0
+@k @PT-76-57 @1.13 @Near-para @0 @0
+@k @T-54 (1949) @1.74, 1.74 @diag, diag @0, 0 @0, 0
 
 2022-11-06
 
