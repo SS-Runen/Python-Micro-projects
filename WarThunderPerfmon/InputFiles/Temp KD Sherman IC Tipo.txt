@@ -1,4 +1,26 @@
 
+2022-11-28
+
+Mozdok
+@kb @SU-85 @.84 @Para @0 @0
+@k @SU-85 @.84 @Para @0 @0
+
+Fire Arc
+@k @T-34-85 @1.16 @Para @0 @0
+@kb @ARL-44 @1.29 @diag @0 @0
+
+Fields of Normandy
+@kb @T-34-85 (D-5T) @.05 @Diag @0 @0
+
+Hurtgen Forest
+@kb @T-34-85 (D-5T) @~.7 @Perp 
+
+Ardennes
+@k @T-34-85 @~.5 @Diag @0 @0
+
+Kuban
+@kb @IS-1 @~.04
+
 2022-11-24
 
 American Desert

@@ -1,5 +1,75 @@
+SKIP:
+Seversk-13
+Sweden
+American Desert wrong side
+Abandoned Factory
+Advnace to the Rhine
+Aral Sea
+Space Port
+Campania
+Cargo Port no hole
+Finland [Battle]
+Mozdok [Battle] no flank
+Alaska/Ground Zero no right base flank
+Carpathians
+Frozen Pass no castle camp
+Stalingrad
+Sinai no flank rocks
+Jungle
+Fulda mini
+Maginot mini
+European Province/Eastern Europe no windmill hill
+Abandoned Town
+American Desert [Domination]
+Eastern Europe (Points all in central town)
+Berlin [Domination]
 
-2022-
+AM 2
+PM 1.5
+
+2022-11-29
+
+Mozdok
+@kb @T-34-85 @.82 @Diag @0 @-5
+@kb @KV-220 @.26 @Diag @0 @0
+
+Fire Arc
+@k @M4A3E2 @1.6 @Diag @0 @0
+@kb @Sherman VC @1.44 @Near-perp @0 @0
+
+Berlin
+@kb @T-34-85 @~.6 @Perp @0 @0
+@k @T-34-57 @~.9 @Perp
+
+Fields of Normandy
+@k @T-34-85 @.36 @Diag @13 @0
+@k @T-34-85 (S-53) @0.07 @diag @2 @20
+@k @T-34-85 (D-5T) @1.62 @diag @0 @0
+@kb @T-34-85 Gai @0.15 @Para @0 @0
+
+Red Desert
+@k @T-34 (Chinese) @.7 @Diag @0 @0
+
+Ardennes
+@kb @T-34-85 @~1 @Near-perp
+
+Red Desert
+@k @IS-1 @~.6 @Diag
+
+Ardennes
+@k @T-34-85 ? @~.7 @perp @0 @0
+
+Fields of Normandy
+@k @IS-1 @~1 @Diag @0 @0
+@k @Churchill VII @~.7 @DIag @0 @0
+
+Kuban
+@k @KV-122 @.1 @Diag, Diag,
+@k @M4A2
+@kb @IS-1 @~.1
+@kb @IS-1 @~.06
+
+2022-11-27
 
 American Desert
 @kb @T-34-85 @.13 @Near-perp @5 @0
