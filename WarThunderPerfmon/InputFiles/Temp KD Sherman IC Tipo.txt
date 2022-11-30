@@ -13,10 +13,10 @@ Fields of Normandy
 @kb @T-34-85 (D-5T) @.05 @Diag @0 @0
 
 Hurtgen Forest
-@kb @T-34-85 (D-5T) @~.7 @Perp 
+@kb @T-34-85 (D-5T) @.68, .68 @Perp, perp @0, 0 @10, 0
 
 Ardennes
-@k @T-34-85 @~.5 @Diag @0 @0
+@k @T-34-85 @.5 @Diag @0 @0
 
 Kuban
 @kb @IS-1 @~.04
