@@ -24,8 +24,8 @@ American Desert [Domination]
 Eastern Europe (Points all in central town)
 Berlin [Domination]
 
-AM 3
-PM 
+AM 
+PM 0.5
 
 2022-12-01
 
@@ -40,8 +40,8 @@ Fields of Normandy
 @k @T-44-100 @~.2
 
 Red Desert
-@k @2S3M @.03, .01, Diag, Diag, @0, 0 @0, 0
-@k @T-54 (1949) @~1.8 @Near-para @0 @0
+@k @2S3M @.05, .01, @Diag, Diag, @-12, 0 @32, 0
+@k @T-54 (1949) @1.87, 1.87 @Diag, diag @0, 0 @0, 0
 
 2022-11-23
 
