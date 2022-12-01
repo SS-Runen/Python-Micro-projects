@@ -24,6 +24,25 @@ American Desert [Domination]
 Eastern Europe (Points all in central town)
 Berlin [Domination]
 
+AM 3
+PM 
+
+2022-12-01
+
+Poland [Domination]
+@k @IS-6 @~.6 @Para @0 @0
+@k @T-44 @~.2 @Perp
+@kb @T-54 (1949) @~.1 @Diag @0 @0
+
+Fields of Normandy
+@k @IS-4M @~.7 @Para
+@k @T-54 (1949) @~.5 @
+@k @T-44-100 @~.2
+
+Red Desert
+@k @2S3M @.03, .01, Diag, Diag, @0, 0 @0, 0
+@k @T-54 (1949) @~1.8 @Near-para @0 @0
+
 2022-11-23
 
 Sands of Sinai
