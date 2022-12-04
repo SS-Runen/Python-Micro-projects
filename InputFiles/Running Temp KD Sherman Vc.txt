@@ -1,0 +1,258 @@
+Referral Link:
+http://warthunder.com/en/registration?r=userinvite_28552741
+
+vs. T-34-85 (D-5T)
+vs. T-34-85* 
+	T-34-85 
+	T-34-85 Gai 
+	T-34-85E 
+	T-34-85 
+	
+Note:
+As of February 25, 2021 (02-25-2021) when a "kb" is listed, "RelativeOrientation" is
+versus the direction of the enemy shell, not enemy hull.
+
+- Always use sight over 3rd-person against ground targets.
+- When moving past uncleared areas, move slow enough to clear thoroughly and to be able to fire accurately.
+- When scanning for targets, always stay hull down or have most of the tank hidden.
+- If the uncleared area is large, have something to cover you from a large portion of it and clear what is left.
+- If you cannot reliably clear an area and there is no safe route past it (e.g. a large town in open field) do not expose yourself to it.
+- When leading close-range targets, make sure that the shell will hit the target whether or not it continues moving. Impossible to do at long range.
+- When firing, "bracket" the target: have as much of the target within the upper and lower "spread". Despite slight range errors, round will hit.
+- When scanning for targets, always keep most of the tank hidden. The most exposure should be from a hull-down position.
+- Always watch for shell "splash" or hits before losing sight of a target.
+
+Event - Vehicle - Distance - Orientation - EnemeySpeed - SelfSpeed
+
+* For SVD, deviation at close range is 600-800.
+
+2022-02-14
+
+Mozdok
+@K @Sherman Vc @1.65 @Diag @11 @0
+@k @T-34-85 Gai @.93, .91 @Near-para, Para @-3, 0 @0, 0
+@kb @M18 @.8 @Diag @0 @0
+
+Fir Arc
+@kb @ARL-44 @1.36 @DIag @0 @0
+@kb @T-34-85 @.83 @Near-perp @0 @0
+
+2022-02-02
+
+Hurtgen Forest
+@K @M4A3E2 @1.01 @Perp @0 @0
+@k @ZSU-57 @.17 @Near-perp @0 @0
+
+Frozen Pass
+@k @M4A2 (76) W @.25 @DIag @0 @0
+@k @SU-85M @.21 @Diag @12 @0
+
+Fields of Normandy
+@k @T-34-85 Gai @1.25 @Diag @0 @0
+@k @T-34-85 Gai @1.09, 1.09 @Diag, Near-para @-11, 0 @-4, 0
+
+Wallonia
+@k @T-34-85 (D-5T) @.74 @Near-perp @0 @0
+@k @M18 @.71, .71 @Diag, Near-perp @15, 0 @0, 0
+
+Poland
+@kb @KV-220 @.92 @Near-para @0 @0
+
+Maginot
+@k @T-34-85 @.9 @Para @0 @0
+@k @Sherman IC Trzyniec @1.01 @Para @0 @0
+@k @IS-1 @.81 @Near-para @0 @0
+@k @T-20 @.81 @Para @0 @0
+
+Mozdok
+@k @Strv m/42 DT @.42 @Para @0 @0
+@K @T-34-85 (S-53) @.19, .20 @Near-para, Diag @0, -8 @0, 0
+@K @Comet I @.52 @diag @0 @0
+@K @M18 @.2 @Diag @11 @0
+
+Berlin
+@kb @T-34-85 @.85 @Near-para @0 @-3
+
+Carpathians
+@k @M18 @.46 @Near-perp @0 @0
+@k @T-34 Chinese @.08, .08 @Diag, Diag @29, 0 @0, 0
+@k @IS-1 @.31 @Near-para @0 @0
+@k @M18 @.84 @near-perp @0 @0
+@k @Zis-12 (94-KM) @.41 @Diag @0 @0
+@K @T-34-85 @.62, .62  @Diag, Diag @19, 0 @0, 0
+@k @Zis-12 (94-KM) @.13 @Near-para @0 @0
+
+Japan
+@k @T-34-85 @.37, .37 @Near-perp, Near-perp @24, 0 @0, 0
+@k @M4A2 (76) W @.82 @Near-para @0 @0
+@k @M4A3 (76) W @.55 @Near-para @-4 @0
+@K @M4A3E2 @.71 @Diag @-4 @0
+@k @M18 @.58 @Diag @0 @0
+
+Sands of Sinai
+@kb @T-34-85 Gai @.28 @Near-para @0 @4
+
+Eastern Europe
+@k @IS-1 @.22, .22 @Diag, Near-para @20, 0 @0, 0
+@kb @T-34-85 (D-5T) @1.28 Near-para @0 @0
+
+2021-12-28
+
+Second Battle of El Alamein
+@k @ARL-44 @2.53 @Diag @31 @0
+@k @M4A4 (SA50) @2.91 @Near-para @0 @0
+@kb @M18 @.75 @Diag @0 @0
+
+Ash River
+@k @IS-1 @.52 @Para @-12 @0
+@k @SU-85 @.63 @Para @0 @0
+@kb @T-34-85 @.16 @Near-para @0 @4
+
+Maginot
+@k @T20 @1.12 @Diag @0 @0
+@k @SU-85M @1.16 @Para @0 @0
+@kb @M18 @.08 @Near-perp @0 @-4
+
+Tunisia
+@kb @M18 @.8 @Perp @0 @0
+
+2021-12-28
+
+Sands of Sinai
+@kb @M18 @Para @.07 @0 @0
+
+Ground Zero
+@k @M18 @.1 @Diag @0 @0
+@k @Avenger @.06 @Perp @0 @0
+@kb @Comet I @.02 @Near-para @0 @0
+
+Port Novorosissysk
+@k @M4A3 (76) W @.04 @Perp @5 @0
+
+Ash River
+@k @M4A3E2 @.2 @Perp @0 @0
+@k @A.C. IV @.6 @Para @0 @0
+
+Sands of Sinai
+@k @M18 @.05 @Diag @0 @0
+
+Wallonia
+@k @E.B.R. (1954) @.03 @Near-para @12 @0
+
+38th Parallel
+@kb @M18 @.5 @Near-para @0 @0
+
+White Rock Fortress
+@kb @Yag-29 K @1.01 @Diag @0 @0
+
+2021-12-16
+
+Eastern Europe [Battle]
+@k @T-34-85 (D-5T) @.07 @Near-perp @-8 @0
+
+2021-09-28
+
+@kb @M4A3E2 (76) W @.9 @Para @0 @0
+
+2021-08-23
+
+Running KD:
+5/1
+2
+3/2
+-3
+
+@k @T-34-85 @.3 @Near-Para @-3 @0
+
+@k @T-34-85 (D-5T) @.03 @Near-Para @0 @0
+
+2021-08-17
+
+@k @Comet I @.6 @Para @12 @0
+@kb @M4A3E2 (76) W @.55 @Diag @0 @0
+
+@k @IS-1 @.1 @Near-Para @0 @0
+
+@kb @KV-85 @.08 @Diag @0 @0
+
+2021-08-05
+
+@k @M4A3E2 @1.02 @Para @0 @0
+@k @Comet I @1.11 @Perp @10 @0
+@k @ARL-44 @.47 @Perp @0 @0
+
+@kb @ARL-44 @.01 @Near-Para @3 @0
+
+@k @T-34-85 (D-5T) @.58 @Diag @22 @0
+@k @T-34-85 @.57 @Perp @0 @0
+@kb @KV-85 @.61 @Near-Perp @0 @0
+
+@kb @KV-85 @.8 @Para @0 @0
+
+@k @IS-1 @.2 @Near-Para @3 @0
+
+@kb @IS-1 @.12 @Diag @0 @0
+
+@kb @T-34-85 (D-5T) @.08 @Diag @0 @0
+
+2021-07-30
+
+@k @KV-85 @.8 @Diag @0 @0
+@k @SU-85 @.9 @Near-Para @0 @0
+
+@k @M4A3E2 @1.2 @Diag @0 @0
+@k @IS-1 @1.2 @Diag @0 @0
+
+2021-07-24
+
+@k @SU-85 @.1 @Diag @0 @0
+
+@k @T-34-85 @1.54 @Diag @0 @0
+@k @Yag-10 (29K) @1.53 @Diag @0 @0
+
+@k @T-34-85 @1.04 @Near-Para @21 @0
+@k @M4A1 (76) W @.81 @Near-Para @22 @-5
+
+@k @SU-152 @1 @Diag @6 @0
+@k @T-34-57 @1 @Near-Para @0 @0
+
+@k @ASU-57 @.01 @Near-Para @0 @0
+@k @ZUT-37 @.01 @Diag @5 @0
+@k @Sherman Vc @1 @Diag @0 @0
+
+@k @KV-1S @.34 @Diag @-15 @0
+
+@k @T-34-85 @.67 @Near-Para @0 @0
+
+@k @SU-152 @.4 @Near-Para @4 @0
+@kb @IS-1 @.04 @Near-Para @0 @0
+
+@kb @T-34-85 @.42 @Diag @0 @0
+@k @E.B.R (1954) @.4 @Near-Perp @24 @0
+
+2021-07-12
+1/0
+1
+1/0
+1
+
+@k @T-34-85 (D-5T) @.61 @Near-Para @0 @0
+@k @T-34-85 @1.18 @Near-Para @0 @0
+
+@k @IS-1 @.37 @Diag @0 @0
+@k @M18 @.11 @Diag @0 @22
+@k @M4A3E2 @.4 @Diag @11 @0
+@K @M18 @.04 @Diag @0 @0
+@k @KV-85 @.16 @Near-Perp @0 @0
+
+2021-06-06
+0/0
+0
+1/1
+-5
+
+@k @M4A3E2 @.8 @Diag @0 @0
+@kb @T-34-85 (D-5T) @.02 @Diag @0 @0
+
+@kb @KV-85 @.72 @Diag @0 @0
+@k @T-34-85 (D-5T) @1.16 @5 @0

@@ -1,0 +1,106 @@
+
+http://warthunder.com/en/registration?r=userinvite_28552741
+
+## Gunnery
+- Always use sight and machine gun over 3rd-person against ground targets when firing.
+- When leading close-range targets, make sure that the shell will hit the target whether or not it continues moving.
+- When firing, "bracket" the target: have as much of the target within the upper and lower "spread".
+Despite slight range errors, round will hit.
+- Always watch for shell "splash" or hits before losing sight of a target.
+- When a target is showing a significant part of its side, APDS is usually safer to use than HESH.
+
+## Scannning and Searching
+- When scanning for targets, always stay hull down or have most of the tank hidden.
+- If the uncleared area is large, have something to cover you from a large portion of it and clear what is left.
+- Use third-person (3rd person view from turret top) when scanning extremely close areas.
+Switch to high-zoom if an area stands out, e.g. it is far but in line of sight.
+- When scanning for targets, always keep most of the tank hidden. The most exposure should be from a hull-down position.
+
+## Positioning and Movement
+- When moving past uncleared areas, move slow enough to clear thoroughly and to be able to fire accurately.
+- If you cannot reliably clear an area and there is no safe route past it (e.g. a large town in open field)
+do not expose yourself to it.
+- Always keep as much of the vehicle hidden as possible whether moving or waiting.
+
+June 04, 2021
+Update "Red Skies".
+- Sound mod.
+- Commander sight mechanics in addition to binocular mode and duplicate commander gun controls.
+- Option for FPE use on squadmates or by light tanks.
+- Modifications to armor calculation where thinnest plate is selected when shell hits a join/joint of armor.
+
+October 04, 2021
+- New rule for respawns. If killed by non-prioirity (i.e. NOT T-54 1949/1947, T-34-85 series) spawn again. T-54 1951
+will be used as baseline "control" to check effect of multiple spawns.
+
+
+2022-05-03
+
+Berlin [Battle]
+@kb @T-34-100 @.04 @Near-para @0 @5
+
+Second Battle of El Alamein [Battle]
+@kb @IS-3 @.81 @Para @0 @0
+
+2022-02-08
+
+@k @T-54 (1949) @.76 @Diag @-18 @0
+@k @T-44-100 @.46, .45 @
+
+2022-02-04
+
+Sands of Sinai [Battle]
+@k @T-54 (1947) @.17 @Near-perp @20 @0
+@k @IS-4M @1.29 @Near-para @0 @0
+@kb @T-54 (1949) @.99 @Diag @0 @0
+
+2022-01-31
+
+Advane to the Rhine
+@kb @SU-100 @.05 @Diag @0 @10
+
+Poland
+@kb @T-44-100 @.93 @Para @0 @0
+
+2022-01-11
+
+Poland
+@k @T-54 (1949) @1.28 @Diag @34 @0
+
+Red Desert
+@k @T-54 (1949) @.82 @Diag @0 @0
+
+Advance to the Rhine
+@kb @PT-76-57 @.06 @Perp @0 @0
+
+2022-01-07, Conqueror,k,SU-100P,.95,near-perp,-5,0
+2022-01-07, Conqueror,kb,PT-76-57,1.17,Near-perp,0,0
+2022-01-07, Conqueror,k,Type 62,1.11,Para,0,0
+2022-01-07, Conqueror,kb,T-54 (1949),.67,Diag,0,1
+
+2021-12-08, Conqueror,k,T-54 (1947),.91,Diag,0,0
+2021-12-06, Conqueror,k,ZSU-37,1.69,Perp,19,0
+2021-12-06, Conqueror,k,T-54 (1947),1.6,Near-perp,0,0
+2021-12-06, Conqueror,k,ZSU-57-2,1.55,Diag,0,0
+2021-12-06, Conqueror,kb,Type 62,.66,Diag,0,0
+2021-12-06, Conqueror,kb,IS-3,.1,Near-perp,0,-7
+2021-12-02, Conqueror,k,IS-6,.12,Near-para,-7,18
+2021-12-02, Conqueror,k,T-44,.73,Diag,0,0
+2021-12-02, Conqueror,k,IS-4M,.2,Para,0,0
+2021-12-02, Conqueror,k,IS-3,.45,Near-para,7,0
+2021-12-02, Conqueror,k,T-54 (1949),.29,Near-para,-7,0
+2021-12-02, Conqueror,kb,IS-4M,.29,Near-para,0,-8
+2021-12-02, Conqueror,kb,T-44-100,.03,Near-Para,0,0
+2021-12-02, Conqueror,k,Obj 268,.53,Para,0,0
+
+
+2021-11-30, Conqueror,k,T-54 (1947),.1,Diag,7,0
+2021-11-24, Conqueror,k,T-54 (1949),.55,Diag,0,0
+2021-11-24, Conqueror,k,IS-3,.7,Para,26,0
+2021-11-24, Conqueror,k,IS-4M,.2,Para,0,0
+2021-11-24, Conqueror,kb,IS-4M,.27,Diag,0,0
+
+0001-01-01, Conqueror,k,IS-4M,.94,Perp,4,0
+0001-01-01, Conqueror,kb,ZSU-85,1.03,Perp,0,0
+0001-01-01, Conqueror,k,2S3M,~.04,Near-para,0,0
+0001-01-01, Conqueror,kb,T-44-100,~.05,Near-perp

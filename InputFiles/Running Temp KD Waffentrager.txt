@@ -1,0 +1,14 @@
+Event, Vehicle, Distance, OrientationInSight, Speed, SelfSpeed
+
+@k @T-34-85 @.8 @Near-Para @0 @0
+
+======================================
+Following records are after New Power and Ixwa Strike.
+======================================
+
+2022-02-18
+
+El Alamein
+@k @T-34-85 (D-5T) @.81 @Near-para @0 @0
+@k @IS-2 @.36 @Para @20 @0
+@k @IS-2 @.67 @Perp, Near-Perp @9, 0 @0, 0

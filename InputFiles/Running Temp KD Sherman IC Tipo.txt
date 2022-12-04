@@ -1,0 +1,77 @@
+- Always use sight over 3rd-person against ground targets.
+- When moving past uncleared areas, move slow enough to clear thoroughly and to be able to fire accurately.
+- When scanning for targets, always stay hull down or have most of the tank hidden.
+- If the uncleared area is large, have something to cover you from a large portion of it and clear what is left.
+- If you cannot reliably clear an area and there is no safe route past it (e.g. a large town in open field) do not expose yourself to it.
+- When leading close-range targets, make sure that the shell will hit the target whether or not it continues moving. Impossible to do at long range.
+- When firing, "bracket" the target: have as much of the target within the upper and lower "spread". Despite slight range errors, round will hit.
+- When scanning for targets, always keep most of the tank hidden. The most exposure should be from a hull-down position.
+- Always watch for shell "splash" or hits before losing sight of a target.
+
+2022-02-14
+
+Mozdok
+@kb @T-34-85 Gai @.04 @Diag @0 @0
+
+Fire Arc
+@k @T-34-85 @.83 @Diag @0 @0
+@k @M4A2 (76) W @.17 @Diag @0 @0
+@k @T-34-85 (D-5T) @1.06, 1.02 @Diag, Para @27, 0 @0, 0
+@K @Comet I @1.15 @Near-para @-2 @0
+
+2022-02-02
+
+Poland
+@kb @T-34-85 @.62 @Near-para @0 @0
+
+Mozdok
+@kb @IS-1 @1.31 @Near-para @0 @-4
+
+Berlin
+@kb @T-34-85 @.59 @Para @0 @0
+
+2021-12-28
+
+Tunisia
+@k @A.C. IV @2.3 @Perp @0 @0
+@kb @IS-1 @1.92 @Diag @0 @0
+
+Sands of Sinai
+@k @IS-1 @.7 @Para @0 @0
+@k @M24 @.3 @Perp @0 @0
+@kb @IS-1 @.04 @Diag @0 @0
+
+2021-12-28
+
+Wallonia
+@k @E.B.R. (1954) @.5 @Near-para @-10 @0
+
+38th Parallel
+@kb @Comet I @.3 @Near-para @0 @8
+
+2021-12-16
+
+Eastern Europe [Battle]
+@K @M18 @.69 @Near-para @0 @0
+@kb @Comet I @1.06 @Diag @0 @0
+
+Finland
+@kb @M4A3E2 @.03 @Near-perp @0 @0
+
+2021-09-28
+
+@k @T-34-100 @.2 @Near-Para @0 @0
+
+2021-08-04
+
+@k @KV-2 (Zis-6) @.09 @Near-Perp @0 @0
+@k @T-34-85 @.19 @Diag @0 @0
+@Kb @M4A4 (SA50) @.11 @Diag @0 @0
+
+2021-06-06
+
+@k @T-34-85 (D-5T) @.4 @Diag @0 @0
+@kb @IS-1 @0.01 @Perp @0 @0
+
+@k @M18 @1.38 @Perp @0 @0
+@k @IS-1 @.04 @Near-Perp @0 @14

@@ -1,0 +1,11 @@
+
+http://warthunder.com/en/registration?r=userinvite_28552741
+
+Event Vehicle Distance OrientationInSigh RelativeMovement SelfMovement RelativeAzimuth 
+
+2021-03-21
+
+@k @PT-76B @.02 @Diagonal @5 @0
+@k @T-54 (1949) @.4 @Diagonal @0 @0
+@k @Type 59 @0.03 @Perpendicular @0 @0
+@k @T-54 (1947) @0.03 @Near-Parallel @5 @0

@@ -1,0 +1,26 @@
+2022-10-23
+
+@k @T-72AV (TURMS-T) @1.17 @Diag @0 @0
+@k @ZTZ-99III @1.77, 1.78 @23, 0 @0, 0
+@k @T-72AV (TURMS-T) @1.77 @Diag @0 @0
+@k @T-72M2 @.85, .84 @Para, para  @0, 0 @0, 0
+@K @ZTZ-96A (P) @1.17, 1.17 @Perp, perp @26 ,0 @0, 0
+@kb @T-72M2 @1.51 @near-perp, near-perp @0, 0 @9, 0
+
+2022-06-16
+
+Sands of Sinai
+@kb @BMP-2M @.02 @Near-perp @0 @20
+
+2022-06-13
+
+Second Battle of El Alamein [Battle]
+@kb @T-72B3 @.02 @Near-para @0 @10
+
+Fire Arc
+@k @T-80BVM @2.05, 1.95 @Perp, Near-para @51, 0 @0, 0
+@k @Shturm-S @1.47 @Diag @10 @0
+@k @BMP-2M @2.1 @Near-para @0 @0
+
+2022-05-28
+@k @BMP-2 @.66 @Diag @0 @0

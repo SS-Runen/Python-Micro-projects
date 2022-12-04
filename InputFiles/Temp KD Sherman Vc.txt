@@ -1,0 +1,108 @@
+SKIP:
+Seversk-13
+Sweden
+American Desert wrong side
+Abandoned Factory
+Advnace to the Rhine
+Aral Sea
+Space Port
+Campania
+Cargo Port no hole
+Finland [Battle]
+Mozdok [Battle] no flank
+Alaska/Ground Zero no right base flank
+Carpathians
+Frozen Pass no castle camp
+Stalingrad
+Sinai no flank rocks
+Jungle
+Fulda mini
+Maginot mini
+European Province/Eastern Europe no windmill hill
+Abandoned Town
+American Desert [Domination]
+Eastern Europe (Points all in central town)
+Berlin [Domination]
+
+AM 3.5
+PM 1.5
+
+2022-11-29
+
+Mozdok
+@kb @T-34-85 @.82 @Diag @0 @-5
+@kb @KV-220 @.26 @Diag @0 @0
+
+Fire Arc
+@k @M4A3E2 @1.6 @Diag @0 @0
+@kb @Sherman VC @1.44 @Near-perp @0 @0
+
+Fields of Normandy
+@k @T-34-85 @.36 @Diag @13 @0
+@k @T-34-85 (S-53) @0.07 @diag @2 @20
+@k @T-34-85 (D-5T) @1.62 @diag @0 @0
+@kb @T-34-85 Gai @0.15 @Para @0 @0
+
+Red Desert
+@k @T-34 (Chinese) @.7 @Diag @0 @0
+
+Ardennes
+@kb @T-34-85 @1 @Near-perp @0 @0
+
+Red Desert
+@k @KV-85 @.62 @Diag @-8 @0
+@k @KV-2 @.71 @Perp @-8 @0
+@kb @Sherman VC @.38 @Para @0 @-4
+@kb @M18 @.57 @Near-para @0 @0
+
+Ardennes
+@k @T-34-85 @.69 @perp @0 @0
+
+Fields of Normandy
+@k @IS-1 @1.04 @Diag @11 @0
+@k @Churchill VII @.84 @DIag @0 @0
+
+Kuban
+@k @Pvkv m/43 (1963) @.75 @Near-perp @0 @0
+@k @M4A2 (76) W @.38 @Diag @33 @0
+@k @KV-122 @.25 @Diag @0 @0
+@kb @IS-1 @.24 @Near-perp @0 @0
+@kb @IS-1 @.18 @Near-para @0 @0
+
+Sands of Sinai
+@k @Comet I @1.29 @Diag @0 @0
+@kb @T-34-85 @.35 @Near-para @0 @0
+
+Second Battle of El Alamein [Battle]
+@kb @T-34-85 Gai @.61 @Near-perp @0 @0
+@k @T-34-85 Gai @.24 @diag @17 @0
+
+2022-11-27
+
+American Desert
+@kb @T-34-85 @.13 @Near-perp @5 @0
+
+2022-09-29
+
+Ardennes
+@k @T-34-85 (D-5T) @.67 @near-perp @0 @0
+@k @SU-100Y @.47 @Diag @0 @0
+@K @M15 @.4 @Perp @0 @0
+
+Mozdok
+@k @M4A2 @1.37 @Diag @0 @0
+@kb @T-34-85 (D-5T) @.52 @Near-para @0 @0
+@kb @M18 @1.08 @Diag @0 @0
+
+2022-06-02
+
+Berlin
+@k @T-34-85 @.62 @Para @-3 @0
+@kb @T-34-85 @.62 @near-para @0 @0
+
+Mozdok
+@k @M4A3E2 @1.95, 1.92 @Near-perp, Diag @32, 0 @0, 0
+@kb @M4A3 (76) W @1.79 @Near-para @0 @0
+
+Berlin [Battle]
+@k @T-34-85 .8 @Diag @0 @0

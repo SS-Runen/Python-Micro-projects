@@ -1,0 +1,44 @@
+2021-04-05
+Note: Opening Multi-function Menu(y) -> Weaponry -> Select Machine Gun will allow you to use NVD from a perspective similar to commander's view.
+
+2022-05-08
+
+Wallonia
+@k @T-72AV (TURMS-T) @.92 @Diag @34 @0
+@k @T-72AV (TURMS-T) @1.16 @near-Perp @26 @0
+
+Normandy
+@k @BMD-4 @.45 @Near-para @30 @0
+@k @Khrizantema-S @.15 @Diag @-9 @20
+@K @ZTZ96 @.39 @Near-perp @15 @0
+
+Eastern Europe
+@k @T-64A (1971) @.1 @Near-para @0 @0
+
+Middle East
+@k @Krizantyema @1.12 @Diag @11 @0
+@k @BMP-2M @.8 @Near-para @0 @0
+
+Hurtgen Forest
+@kb @T-72AV (TURMS-T) @.03 @Near-para @0 @11
+
+2022-02-17
+
+@k @T-72B3 @.43 @Para @-1 @5
+@kb @T-80U @.37 @Diag @-10 @0
+
+2022-01-20
+
+Middle East
+@k @T-72B @.91, .9 @Diag, Near-perp @35, 0 @0, 0
+@k @BMD-4 @1.05 @Para @0 @0
+
+Fire Arc
+@Kb @T-90A @.03 @Diag @0 @0
+
+Sands of Sinai
+@k @T-80B @.04 @Near-para @0 @0
+@kb @T-80BVM @.02 @Diag @0 @0
+
+Poland
+@k @T-72 TURMS @1.35 @Diag @29 @-26
