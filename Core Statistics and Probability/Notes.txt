@@ -171,15 +171,20 @@ Continuous Distributions
 
 - Normal/Guassian/Bell-curve distribution - Maps probabilities to an area x. Probabilities cannot be mapped to a single specific outcome and have to be mapped to a range or interval instead. In a continuous normal distribution, the mean, median and mode are equal. Regardless of what the mean, median, or mode are, all normal distributions are centered and symmetric around the mean.
 
+Standard Normal Distribution - A normal distribution with a mean of 0 and standard deviation of 1.
+
 The area under the curve of a normal probability distribution is always equal to one. This applies to distributions where probabilities are used as the values.
 Around 68% of values within one standard deviation - i.e. one multiplied by the value of the standard dviation - less and more than the mean.
 About 95% of values fall within two standard deviations from the mean in either direction/magnitude.
 
 -- Z-score
-A z-score is the number of standard deviations from the mean. If a data point has a z-score of 0.3, it is (0.3 * s) or (0.3 * σ) away from the mean.
+A z-score is the number of standard deviations from the mean for values in a normal distribution. If a data point has a z-score of 0.3, it is (0.3 * s) or (0.3 * σ) away from the mean. A z-score can be used to approximate your percentile.
 Z-scores have "direction". They can be negative.
+Z = (x - μ) / σ
+or
+Z = (x - μ) / s
 
-Standard Normal Distribution - A normal distribution with a mean of 0 and standard deviation of 1.
+Z-table - This table shows the percentage of values in a normal distribution that fall to the left of a score of the specified Z-value. I.e. a z-table shows the percentage of scores in a normal distribution less than the value with a specified z-score.
 
 ++++++++
 Sampling
