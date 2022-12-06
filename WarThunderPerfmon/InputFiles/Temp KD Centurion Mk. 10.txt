@@ -25,7 +25,15 @@ Eastern Europe (Points all in central town)
 Berlin [Domination]
 
 AM 
-PM 0.5
+PM 
+
+2022-12-01
+
+Eastern Europe
+@k @T-54 (1947) @1.13, 1.13  @Diag, Diag @0, 0 @0, 0
+@k @T-54 (1947) @1.13, 1.13 @Diag, diag @0, 0 @0, 0
+@k @SU-122-54 @1.09, 1.09 @near-para, diag  @9, 0 @0, 0
+@k @ZSU-57 @1.29, 1.29 @Near-perp, near-para @30, 0 @0, 0
 
 2022-12-01
 
