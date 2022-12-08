@@ -14,6 +14,9 @@ https://warthunder.com/en/tournament/replay/105462990673333873
 
 Bounce at T-44 turret rear joint.
 
+AM 2
+PM 0
+
 2022-11-24
 
 I remember aiming to the left of the targets after missing but the local replay shows me aiming to the right.
