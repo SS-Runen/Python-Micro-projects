@@ -15,7 +15,14 @@ https://warthunder.com/en/tournament/replay/105462990673333873
 Bounce at T-44 turret rear joint.
 
 AM 2
-PM 0
+PM 3
+
+2022-12-13
+
+Hurtgen Forest [Battle]
+@k @T-54 (1949) @1.23 @near-Perp @14 @0
+@k @T-54 (1947) @.85 @Diag @0 @0
+@k @T-54 (1949) @1.23 @Diag @0 @0
 
 2022-11-24
 
