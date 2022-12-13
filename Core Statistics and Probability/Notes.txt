@@ -184,12 +184,12 @@ Z = (x - μ) / σ
 or
 Z = (x - μ) / s
 
-Z-table - This table shows the percentage of values in a normal distribution that fall to the left of a score of the specified Z-value. I.e. a z-table shows the percentage of scores in a normal distribution less than the value with a specified z-score.
+Z-table - This table shows the percentage of values in a normal distribution that fall to the left of a score of the specified Z-value. I.e. a z-table shows the percentage of scores in a normal distribution that are lower than the value at a specified z-score.
 
 ++++++++
 Sampling
 
-- An aribtrary minimum sample count is > 30.
+- An arbitrary minimum sample count is > 30.
 
 Selection Bias - Bias toward selecting samples more likely to react or respond to polls, surverys, and other data gathering requests or sampling techniques. Examples: Undercoverage Bias: omitting a segment of the population. Self-selection bias: A bias caused by differences between people who volunteer themselves as samples compared to those who don't volutneer.
 
