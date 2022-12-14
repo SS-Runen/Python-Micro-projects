@@ -29,7 +29,7 @@ Covariance - The "direction" of the relationship between two variables, i.e. a v
 https://www.statisticshowto.com/probability-and-statistics/statistics-definitions/covariance/
 https://www.investopedia.com/terms/c/covariance.asp#:~:text=Covariance%20measures%20the%20direction%20of%20the%20relationship%20between%20two%20variables,other%20tends%20to%20be%20low.
 
-Pearson Correlation Coefficient - Measures the strength of the association or relation of two variables. It gives the magnitude and direction of a correlation. Refer to Excercise01-Data-ANSERS or:
+Pearson Correlation Coefficient - Measures the strength of the association or relation of two variables. It gives the magnitude and direction of a correlation. Refer to:
 https://www.statisticshowto.com/probability-and-statistics/correlation-coefficient-formula/
 https://www.statisticssolutions.com/free-resources/directory-of-statistical-analyses/pearsons-correlation-coefficient/
 
@@ -184,7 +184,14 @@ Z = (x - μ) / σ
 or
 Z = (x - μ) / s
 
-Z-table - This table shows the percentage of values in a normal distribution that fall to the left of a score of the specified Z-value. I.e. a z-table shows the percentage of scores in a normal distribution that are lower than the value at a specified z-score.
+Z-table - This table shows the percentage of values in a normal distribution that fall to the left of a score of the specified Z-value. I.e., a z-table shows the percentage of scores in a normal distribution that are lower than the value at a specified z-score. In other words, a z-table shows the percentile of a score based on the z-value.
+
+++++++++++++++++++++++
+Joint Random Variables
+
+Confidence Interval - A confidence interval is a range of values with a certain probability to include an unknown parameter. E.g. a confidence interval of 10 - 20 meters with a confidence level of 90% means that a result from a certain population or sample is 90% likely to fall within 10 to 20 meters.
+
+Alpha value - The alpha value is the probability of rejecting the null hypothesis when the null hypothesis is true. In relation to a confidence interval, the alpha value can be defined as the probability that an unknown value will not be included in the confidence interval. There are equations for setting the alpha value and some arbitrary guidelines. It may be expressed as 1 - Confidence. If the confidence for a certain interval is 50%, the probability of a value outside the interval is also 50%. The interval is usually set as the alternate hypothesis. The alpha indicates the probability of rejecting the null hypothesis despite the null hypothesis being true.
 
 ++++++++
 Sampling
