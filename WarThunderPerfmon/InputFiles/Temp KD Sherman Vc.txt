@@ -23,9 +23,23 @@ Abandoned Town
 American Desert [Domination]
 Eastern Europe (Points all in central town)
 Berlin [Domination]
+Normandy [Battle] wrong side
 
-AM 2
-PM 1.5
+AM 3.5
+PM 0
+
+2022-12-11
+
+Mozdok [Battle]
+@k @T-34-85 @~1.1
+@k @M4A2
+
+Normandy
+@k @M18 @~.7
+@k @T-34-85 @~.7 @Diag
+
+Normandy [Battle]
+@kb @T-34-85 Gai @~.5 @Near-perp @0 @0
 
 2022-11-29
 
