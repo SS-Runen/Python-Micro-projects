@@ -25,14 +25,35 @@ Eastern Europe (Points all in central town)
 Berlin [Domination]
 Normandy [Battle] wrong side
 
-AM 3.5
-PM 0
+AM 4
+PM 4
 
 2022-12-11
 
+Cargo Port
+@k @T-54 (1947) @.35 @Diag @0 @0
+
+Fields of Normandy [Battle]
+@k @M18 @.1, .1 @para, near-perp  @23, 0 @11, 0
+@k @M18 @.16 @Perp @28 @0
+@k @KV-85 @.55,  @Diag, Diag @5, 0 @0, 0
+@kb @T-34-85 Gai @.69 @Diag @0 @0
+
+Fields of Normandy [Domination]
+@k @M18 @.7, .7 @Para, Para @-1, 0 @0, 0
+@k @T-34-85 (D-5T) @.74 @near-para @-8 @0
+
+Poland [Domination]
+@k @T-34-85 Chinese @.57 @near-para @21 @0
+@K @ASU-57 @.78 @Para @0 @0
+@k @Phong kong T-34 @.27 @Perp @41 @0
+@k @SU-85 @.65 @Diag @0 @0
+@k @T-34-85 @.5, .5 @Diag, diag @15, 0 @0, 0
+@kb @ARL-44 @.65 @Near-para @0 @0
+
 Mozdok [Battle]
-@k @T-34-85 @~1.1
-@k @M4A2
+@k @M18 @.68, .68 @Perp, para @21, 0 @0, -5
+@k @T-34-85 (D-5T) @1.2, 1.2 @Diag, diag @-8, 0 @0, 0
 
 Normandy
 @k @M18 @~.7
