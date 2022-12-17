@@ -28,6 +28,31 @@ Normandy [Battle] wrong side
 AM 4
 PM 3
 
+2022-12-17
+
+Hurtgen Forest [Domination]
+@k @T-54 (1949) @~.65 @Para @0 @0
+@k @IS-4M @~.4 @Perp @0 @0
+@k @T-54 (1949) @~.2 @Diag
+
+https://warthunder.com/en/tournament/replay/13915135693720463
+Fields of Normandy [Domination]
+*For review. Point blank shot had no effect.
+@kb @T-54 (1947) @~0.03 @Diag @0 @0
+
+Berlin [Battle]
+@kb @T-54 (1949) @~.8
+@k @IS-4M @~.8 @Perp
+@k @IS-6 @~.6 @Perp
+
+Pradesh
+@k @PT-76-57 @~1.6 @Perp @0 @0
+@k @T-54 ? @~1.6 @Diag @0 @0
+
+Middle East [Battle]
+@k @T-54 (1949) @~1.1 @Diag @0 @0
+@k @IS-3 @~1.1 @Diag @0 @0
+
 2022-12-13
 
 Cargo Port [Domination]
