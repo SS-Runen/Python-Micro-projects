@@ -10,6 +10,8 @@ General Procedures
 - Run a simulation of worded problems and match the formula and values with steps or actions where possible.
 - Review your work.
 
+-- Before a break, check the new notes made using GitHub Desktop while reviewing the video or activity.
+
 ++++
 Data
 
@@ -264,6 +266,8 @@ Random Sampling - All population members have an equal chance of being selected.
 Staratifed Sampling - A population is sorted into segments based on certain characteristics. Members cannot belong to two or more groups. From each group, take a sample. The sample size from each group must have the same ratio to the total sample size as the group's ratio to the total population.
 
 Clustering - The population is broken into groups and samples are taken from a random selection of groups. The group sample size ratio to total sample size must be the same as group size ratio to population size.
+
+Central Limit Theorem - The probability distribution of the mean of the sample is normal around the mean of the population. This is proposed to be true no matter the probability distribution of the population.
 
 +++++++++++++
 Miscellaneuos
