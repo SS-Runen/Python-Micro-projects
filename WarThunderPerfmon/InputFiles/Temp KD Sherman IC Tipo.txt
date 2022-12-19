@@ -1,8 +1,14 @@
 
-AM 3
-PM 0
+AM 
+PM 
 
 2022-12-11
+
+Fields of Normandy [Battle]
+@k @T-34-85 Gai @.58 @Diag @17 @0
+
+Mozdok [Battle]
+@k @M4A3 (76) W @.65 @Near-para @-8 @0
 
 Normandy [Battle]
 @k @T-34-85 Gai @.5 @Near-para, Near-perp @0, @0, 0

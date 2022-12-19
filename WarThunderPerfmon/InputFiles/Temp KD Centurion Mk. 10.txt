@@ -25,10 +25,38 @@ Eastern Europe (Points all in central town)
 Berlin [Domination]
 Normandy [Battle] wrong side
 
-AM 2
+AM 4
 PM 3
 
+2022-12-17
+
+Hurtgen Forest [Domination]
+@k @T-54 (1949) @~.65 @Para @0 @0
+@k @IS-4M @~.4 @Perp @0 @0
+@k @T-54 (1949) @~.2 @Diag
+
+https://warthunder.com/en/tournament/replay/13915135693720463
+Fields of Normandy [Domination]
+*For review. Point blank shot had no effect.
+@kb @T-54 (1947) @~0.03 @Diag @0 @0
+
+Berlin [Battle]
+@kb @T-54 (1949) @~.8
+@k @IS-4M @~.8 @Perp
+@k @IS-6 @~.6 @Perp
+
+Pradesh
+@k @PT-76-57 @1.47 @Perp @0 @0
+@k @T-54 (1949) @1.72 @Diag @0 @0
+
+Middle East [Battle]
+@k @T-54 (1949) @~1.1 @Diag @0 @0
+@k @IS-3 @~1.1 @Diag @0 @0
+
 2022-12-13
+
+Cargo Port [Domination]
+@k @T-54 (1947) @.35 @diag @0 @0
 
 Hurtgen Forest [Battle]
 @k @T-54 (1949) @.24 @near-para @0 @0
@@ -38,11 +66,23 @@ Pradesh
 @kb @T-44-100 @~.8 @Perp @0 @0
 @kb @T-44-100 @~.05 @Perp @0 @0
 
+Middle East
+@k @IS-6 @1.02 @diag @18 @0
+@k @T-54 (1949) @1.1 @Para @0 @0
+@k @Type 63 @.75 @Para @0 @0
+@k @PT-76 @1.1 @Diag @22 @0
+
 Fire Arc
-@k @ASU-85 @~2.1 @Perp
-@k @IS-3 @~1.7 @Para @0 @0
-@k @IS-4M @~1.6 @Perp
-@kb @PT-76B @~1.5 @Perp @0 @0
+@k @ASU-85 @2.33 @Perp @15, 0 @0, 0
+@k @IS-3 @1.84 @Diag @0 @0
+@k @IS-4M @1.27 @near-Perp @23 @0
+@kb @PT-76B @1.57 @Perp @0 @0
+
+Sands of Sinai
+@k @T-54 (1947) @.47 @Para @29 @0
+@k @IS-6 @.33 @Diag @28 @-4
+@k @T-54 (1947) @.06 @para @0 @0
+@kb @T-54 (1949) @.42 @Diag @0 @0
 
 2022-12-09
 
