@@ -46,8 +46,8 @@ Berlin [Battle]
 @k @IS-6 @~.6 @Perp
 
 Pradesh
-@k @PT-76-57 @~1.6 @Perp @0 @0
-@k @T-54 ? @~1.6 @Diag @0 @0
+@k @PT-76-57 @1.47 @Perp @0 @0
+@k @T-54 (1949) @1.72 @Diag @0 @0
 
 Middle East [Battle]
 @k @T-54 (1949) @~1.1 @Diag @0 @0
@@ -57,7 +57,6 @@ Middle East [Battle]
 
 Cargo Port [Domination]
 @k @T-54 (1947) @.35 @diag @0 @0
-
 
 Hurtgen Forest [Battle]
 @k @T-54 (1949) @.24 @near-para @0 @0
