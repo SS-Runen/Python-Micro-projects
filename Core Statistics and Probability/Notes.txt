@@ -193,6 +193,64 @@ Confidence Interval - A confidence interval is a range of values with a certain 
 
 Alpha value - The alpha value is the probability of rejecting the null hypothesis when the null hypothesis is true. In relation to a confidence interval, the alpha value can be defined as the probability that an unknown value will not be included in the confidence interval. There are equations for setting the alpha value and some arbitrary guidelines. It may be expressed as 1 - Confidence. If the confidence for a certain interval is 50%, the probability of a value outside the interval is also 50%. The interval is usually set as the alternate hypothesis. The alpha indicates the probability of rejecting the null hypothesis despite the null hypothesis being true.
 
+The universe probabilities for two sets of random variables X and Y refers to all combinations of values for X and Y.
+
+Correlation - Correlation measures the relation between two variables. A correlation of positive or negative one indicates a perfect positive or negative linear correlation between two variables. E.g. the radius of a circle and the circumference of a circle, temperature in Fahrenheit and temperature in Celsius, amount of charitable donations and tax exemption amount. A correlation of zero means two variables are independent.
+
+Covariance Equation:
+
+Cov(X,Y) = Σ E((X – μ) E(Y – ν)) / n-1
+Here:
+X - random variable
+E(X) is the expected value (the mean) of the random variable X and
+E(Y) is the expected value (the mean) of the random variable Y
+n - number of items in the data set.
+
+Alternative Covariance Equation:
+Cov(X, Y) = E[XY] - μx * μy
+Here:
+E[XY] - Expected value/average of X * Y
+μx - Mean of X
+μy - Mean of Y
+
+Correlation Equation:
+Corr(X, Y) = Cov(X, Y) /  (σx σy)
+Here:
+σx or sx - standard deviation (SD) of X.
+σy or sy - SD of Y.
+
+Related Equations:
+
+Expected Value of X + Y:
+E[X + Y] = μx + μy
+
+Expected Value of X - Y:
+E[X - Y] = μx - μy
+
+Weighted Expected Values of the sum/difference of X and Y:
+E[aX + bY] = a*μx + b*μy
+E[aX - bY] = a*μx + b*μy
+
+Variance of X + Y:
+Var(X + Y) = σx^2 + σy^2 + 2Cov(X, Y)
+
+Variance of X - Y:
+σ^2 = σx^2 + σy^2 - 2Cov(X, Y)
+
+In the last two equations:
+σx - SD of x
+σy - SD of y
+
+Weighted Variance of the sum of X and Y:
+σ^2(aX + bY) = (a^2 * σx^2) + (b^2 * σy^2) + 2*a*b*Cov(X, Y)
+or
+Variance(aX + bY) = (a^2 * σx^2) + (b^2 * σy^2) + 2*a*b*Corr(X, Y)*σx*σy
+Here:
+a, b - weights.
+σx - standard deviation (SD) of x.
+σy - SD of y.
+
+
 ++++++++
 Sampling
 
