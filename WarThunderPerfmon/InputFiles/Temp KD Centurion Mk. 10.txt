@@ -38,7 +38,6 @@ Hurtgen Forest [Domination]
 https://warthunder.com/en/tournament/replay/13915135693720463
 Fields of Normandy [Domination]
 *For review. Point blank shot had no effect.
-@kb @T-54 (1947) @~0.03 @Diag @0 @0
 
 Berlin [Battle]
 @kb @T-54 (1949) @~.8
@@ -50,8 +49,12 @@ Pradesh
 @k @T-54 (1949) @1.72 @Diag @0 @0
 
 Middle East [Battle]
-@k @T-54 (1949) @~1.1 @Diag @0 @0
-@k @IS-3 @~1.1 @Diag @0 @0
+@k @T-54 (1949) @1.12 @Diag @0 @0
+@k @IS-3 @1.12 @Diag @0 @0
+
+Second Battle of El Alamein [Domination]
+@k @IS-4M @1.48, 1.48 @Near-para, near-para @14, 0 @0, 0
+@k @2S3M @2.24 @Diag @0 @0
 
 2022-12-13
 
@@ -94,11 +97,11 @@ Sinai
 @k @2S3M @~2.2 @Near-perp @0 @0
 
 European Province
-@k @PT-76B @~1.5 @
-@k @IS-4M @~1.4 @Near-para @0 @0
-@k @T-44
-@k @PT-76B
-@k @ASU-85
+@k @PT-76B @1.69 @Para @0 @0
+@k @IS-4M @1.65 @Near-para @0 @0
+@k @T-44 @1.33, 1.33 @Diag, diag @30, 0 @0, 0
+@k @PT-76B @1.55 @near-para @16 @0
+@k @ASU-85 @.67 @Diag @0 @0
 
 Fire Arc
 @k @PT-76B @~1.5 @Near-perp
