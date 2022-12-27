@@ -231,7 +231,7 @@ E[X - Y] = μx - μy
 
 Weighted Expected Values of the sum/difference of X and Y:
 E[aX + bY] = a*μx + b*μy
-E[aX - bY] = a*μx + b*μy
+E[aX - bY] = a*μx - b*μy
 
 Variance of X + Y:
 Var(X + Y) = σx^2 + σy^2 + 2Cov(X, Y)
