@@ -32,18 +32,12 @@ Hurtgen Forest
 Ardennes
 @k @T-34-85 @.5 @Diag @0 @0
 
-Kuban
-@kb @IS-1 @~.04
-
 2022-11-24
 
 American Desert
 @kb @T-34-85 @.21 @Near-perp @0 @0
 
 2022-09-29
-
-Mozdok
-@kb @M4A1 FL-10 @~.9
 
 Mozdok
 @kb @T-34-85 (D-5T) @.98 @Near-para @0 @-2

@@ -32,10 +32,12 @@ PM 3
 2022-12-21
 
 Fields of Poalnd
-@kb @T-54 (1949) @.1 @Near-para @0 @11
+@kb @T-54 (1949) @.52 @Near-para @0 @11
 
 Pradesh
-@kb @T-54 (1947) @~.9 @Para
+@k @BTR-ZD @1.44 @Near-para @16 @0
+@k @T-54 (1949) @.53 @Near-para @0 @0
+@kb @T-54 (1947) @1.12 @Para @0 @6
 
 Fire Arc
 @k @T-44-100 @~1.1 @Diag @0 @0

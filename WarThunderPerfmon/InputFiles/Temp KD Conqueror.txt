@@ -20,9 +20,11 @@ PM 3
 2022-12-21
 
 Pradesh
-@k @T-54 (1947) @~.7 @Para
+@k @T-54 (1947) @.7 @Para @0 @0
 
-
+Fields of Poland [Battle]
+@k @T-54 (1947) @.44 @Near-para @0 @0
+@k @ASU-85 @1.3 @Near-para @0 @0
 
 2022-12-13
 

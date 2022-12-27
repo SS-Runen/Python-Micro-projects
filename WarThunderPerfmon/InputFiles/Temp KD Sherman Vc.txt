@@ -28,10 +28,9 @@ Normandy [Battle] wrong side
 AM 4
 PM 4
 
-2022-12-11
+2022-12-23
 
-Cargo Port
-@k @T-54 (1947) @.35 @Diag @0 @0
+2022-12-11
 
 Fields of Normandy [Battle]
 @k @M18 @.1, .1 @para, near-perp  @23, 0 @11, 0
@@ -54,13 +53,6 @@ Poland [Domination]
 Mozdok [Battle]
 @k @M18 @.68, .68 @Perp, para @21, 0 @0, -5
 @k @T-34-85 (D-5T) @1.2, 1.2 @Diag, diag @-8, 0 @0, 0
-
-Normandy
-@k @M18 @~.7
-@k @T-34-85 @~.7 @Diag
-
-Normandy [Battle]
-@kb @T-34-85 Gai @~.5 @Near-perp @0 @0
 
 2022-11-29
 
