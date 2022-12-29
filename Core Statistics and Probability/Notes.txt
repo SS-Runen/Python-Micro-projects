@@ -96,7 +96,8 @@ Inter-quartile Range - A basis for calculating a fence for marking outliers. The
 
 Z-score - The number of standard deviations from the mean to a certain value.
 
-Coefficient of Variation - This is an indicator of how much "spread" your data has. Standard deviation divided by mean and multiplied by 100%. C = (standard_deviation / mean) * 100%.
+Coefficient of Variation - This is an indicator of how much "spread" your data has. Standard deviation divided by mean and multiplied by 100%.
+C = (standard_deviation / mean) * 100%.
 
 +++++++++++
 Probability
@@ -268,6 +269,18 @@ Staratifed Sampling - A population is sorted into segments based on certain char
 Clustering - The population is broken into groups and samples are taken from a random selection of groups. The group sample size ratio to total sample size must be the same as group size ratio to population size.
 
 Central Limit Theorem - The probability distribution of the mean of the sample is normal around the mean of the population. This is proposed to be true no matter the probability distribution of the population.
+
+The expected value of a sample mean is also equal to the mean/expected value of the population.
+The standard deviation (SD) of an individual observation in the population is equal to the population standard deviation.
+The standard deviation of a sample mean is equal to the population SD divided by the square root of the sample size.
+
+s(μx) = σ / sqrt(n)
+here:
+n is the sample size.
+s(μx) is the standard deviation of the sample mean.
+
+The larger the sample size, the lower the sample mean's deviation around the population mean.
+
 
 +++++++++++++
 Miscellaneuos
