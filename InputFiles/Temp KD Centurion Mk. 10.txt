@@ -24,6 +24,10 @@ American Desert [Domination]
 Eastern Europe (Points all in central town)
 Berlin [Domination]
 
+AM 64
+PM 63
+
+
 AM 
 PM 
 
