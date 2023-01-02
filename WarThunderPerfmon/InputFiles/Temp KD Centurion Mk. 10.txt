@@ -26,12 +26,32 @@ Berlin [Domination]
 Normandy [Battle] wrong side
 Fields of Poland [Battle] wrong side
 
-AM 3
-PM 4
+AM 2.5
+PM 0
+
+2023-01-02
+
+Pradesh
+@k @IS-4M
+
+Pradesh
+@k @T-54 (1949) @~1.6 @Diag
+@k @Type 63 @Diag @0 @0
+
+Red Desert [Domination]
+@k @T-54 (1949) @~.5 @Diag @0 @0
+@kb @PT-76-57 @~1.8 @Perp
+@k @PT-76-57 @~1.8 @Diag
+@k @T-54 (1949) @~.5 @Diag @0 @0
+@k @T-54 (1949) @~.2 @Diag, diag, @
+
+Fields of Normandy [Battle]
+@kb @T-54 (1947) @~.7 @daig @0 @0
+
+Mozdok [Battle]
+@kb @2S3M @1 @Perp @
 
 2022-12-29
-
-
 
 Hurtgen Forest [Domination]
 @k @PT-76-57 @.6 @Diag
