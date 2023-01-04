@@ -272,10 +272,10 @@ Central Limit Theorem - The probability distribution of the mean of the sample i
 
 The expected value of a sample mean is also equal to the mean/expected value of the population.
 The standard deviation (SD) of an individual observation in the population is equal to the population standard deviation.
-The standard deviation of a sample mean is equal to the population SD divided by the square root of the sample size.
+The standard deviation of a sample mean from the population mean is equal to the population SD divided by the square root of the sample size.
 
 s(μx) = σ / sqrt(n)
-here:
+Here:
 n is the sample size.
 s(μx) is the standard deviation of the sample mean.
 
@@ -296,11 +296,11 @@ s - Proportion standard deviation.
 - T-Distributions
 These are more "conservative" estimates of probability for normal distributions. One purpose of this table is using the sample SD as a stand-in for the population SD.
 
-Z-score of a sample:
+Z-score of a sample, i.e. Z-score for the standard error of the sample mean:
 Z = (x - μ) / (σ / sqrt(n))
 Here:
-x - A value in the sample.
-μ - Sample mean.
+x - Sample mean.
+μ - Population mean.
 σ - Population SD.
 n - sample size.
 
@@ -315,8 +315,8 @@ CI - A pair of values defining a range. You will get the upper and lower values 
 T-score of a sample:
 T = (x - μ) / (s / sqrt(n))
 Here:
-x - A value in the sample.
-μ - Sample mean.
+x - Sample mean.
+μ - Population mean.
 s - Sample SD.
 n - sample size.
 
