@@ -26,7 +26,7 @@ Berlin [Domination]
 Normandy [Battle] wrong side
 Fields of Poland [Battle] wrong side
 
-AM 2.5
+AM 0
 PM 0
 
 2023-01-02
