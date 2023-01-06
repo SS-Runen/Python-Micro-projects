@@ -289,8 +289,8 @@ P - expected value, hypothesis
 A proportion can be given a Z score.
 Z(prop) = (Prop - P) / s
 Here:
-Prop - Proportion you are testing, desired proportion.
-P - Expected value.
+Prop - Proportion in sample, results of experiment.
+P - Expected value, hypothesis, target or proposed proportion.
 s - Proportion standard deviation.
 
 - T-Distributions
