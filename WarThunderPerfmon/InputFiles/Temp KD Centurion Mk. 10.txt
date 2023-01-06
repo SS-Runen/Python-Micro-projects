@@ -29,14 +29,28 @@ Fields of Poland [Battle] wrong side
 AM 0
 PM 0
 
+2023-01-06
+
+Eastern Europe
+@k @Type 62 @~1.2 @Perp, Perp @0, 0
+@k @T-44-100 @~1.2 @Diag @0 @0
+@k @Type 62 @~1.1 @Perp @0 @0
+@k @ASU-85 @~.6 @Near-para
+@kb @ASU-85 @~.8 @Perp @0 @0
+
+Pradesh
+@k @Type 62 @~1.2 @Diag, diag
+@k @T-54 ? @~1.6 @Perp
+@k @ASU-85 @1.6 @Near-para @0 @0
+
 2023-01-02
 
 Pradesh
 @k @IS-4M
 
 Pradesh
-@k @T-54 (1949) @~1.6 @Diag
-@k @Type 63 @Diag @0 @0
+@k @T-54 (1949) @1.55, 1.55 @Diag, diag @0, 0 @0, 0
+@k @Type 63-I @Diag @1.5 @0 @0
 
 Red Desert [Domination]
 @k @T-54 (1949) @~.5 @Diag @0 @0
@@ -89,11 +103,15 @@ Second Battle of El Alamein [Domination]
 @k @T-54 (1949) @~1.4 @Diag @0 @0
 
 Pradesh
-@k @T-54 (1949) @~1.7 @Near-para @0 @0
-@k @T-54 (1949) @~1.2 @perp
-@k @PT-76-57 @~1.6 @ @0 @0
-@k @PT-76-57 @~1.6 @Perp
-@k @T-54 (1947) @~.9 @para @0 @0
+@k @T-54 (1949) @1.76 @Near-para @0 @0
+@k @T-54 (1949) @1.57, 1.57 @perp, perp @10, 0 @0, 0
+@k @IS-4M @1.12 @Para @0 @0
+@k @T-54 (1947) @.91 @Para @0 @0
+@k @PT-76-57 @1.68 @para @0 @0
+@k @ASU-85 @1.49 @Para @0 @0
+@k @PT-76-57 @1.77 @Perp @0 @0
+@k @Obj 268 @1.65 @para @0 @0
+@k @BTR-ZD @1.25 @Diag @10 @0
 
 2022-12-17
 
