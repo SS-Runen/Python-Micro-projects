@@ -39,9 +39,9 @@ Eastern Europe
 @kb @ASU-85 @~.8 @Perp @0 @0
 
 Pradesh
-@k @Type 62 @~1.2 @Diag, diag
-@k @T-54 ? @~1.6 @Perp
-@k @ASU-85 @1.6 @Near-para @0 @0
+@k @Type 62 @1.13 @Diag @0 @0
+@k @T-54 (1949) @1.59 @Perp @16 @0
+@k @ASU-85 @1.8 @Near-para @0 @0
 
 2023-01-02
 
