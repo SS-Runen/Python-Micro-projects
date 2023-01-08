@@ -26,6 +26,10 @@ Berlin [Domination]
 Normandy [Battle] wrong side
 Fields of Poland [Battle] wrong side
 
+Running Total Debt
+AM 63
+PM 60
+
 AM 0
 PM 0
 
