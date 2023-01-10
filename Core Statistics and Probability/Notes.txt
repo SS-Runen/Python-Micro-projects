@@ -268,23 +268,21 @@ Staratifed Sampling - A population is sorted into segments based on certain char
 
 Clustering - The population is broken into groups and samples are taken from a random selection of groups. The group sample size ratio to total sample size must be the same as group size ratio to population size.
 
-Central Limit Theorem - The probability distribution of the mean of the sample is normal around the mean of the population. This is proposed to be true no matter the probability distribution of the population.
-
-The expected value of a sample mean is also equal to the mean/expected value of the population.
-The standard deviation (SD) of an individual observation in the population is equal to the population standard deviation.
+Central Limit Theorem - The mean of a sample is normally distributed around the mean of the source population. This is proposed to be true no matter the probability distribution of the population.
 The standard deviation of a sample mean from the population mean is equal to the population SD divided by the square root of the sample size.
-
 s(x) = σ / sqrt(n)
 Here:
+σ is the population standard deviation.
 n is the sample size.
-s(x) is the standard deviation of the sample mean.
+s(x) is the standard deviation of the sample mean from the population mean.
 
 The larger the sample size, the lower the sample mean's deviation around the population mean.
 
 The standard deviation of a sample proportion is calculated using:
 s(proportion) = sqrt((P * (1 - P)) / n)
 Here:
-P - expected value, hypothesis
+P - proportion that meet target value or hypothesis, i.e. proportion of sample that contains target characteristics.
+When calculating the s of a sample, use the population percentage when you can.
 
 A proportion can be given a Z score.
 Z(prop) = (Prop - P) / s
@@ -326,10 +324,29 @@ d = n - 1
 CI using T-score:
 CI = μ +/- Ta * s / sqrt(n)
 Here:
+CI - A pair of values defining a range. You will get the upper and lower values (x1 and x2) for the CI.
 Ta - T-score of alpha value divided by two. For a CI for 95%, take the T-score for 0.025 ((1-CI) / 2).
 n - Sample size.
-s- Sample SD.
-CI - A pair of values defining a range. You will get the upper and lower values (x1 and x2) for the CI.
+s- Sample SD from true/population mean.
+
+Possible T-value calculation for those not in table:
+https://www.ttable.org/
+
+Formula for Margin based on formula for CI:
+Margin = +/- ((Za * s) / sqrt(n))
+Here:
+Za - Z-score of alpha. May be replaced with T-score of alpha.
+s - Sample standard deviation
+n - sample size
+
+This is confirmed by a Lumen Learning course:
+EBP = Z(a/2) * sqrt(pq/n)
+Here:
+Z(a/2) - Z-score of alpha/2.
+p - the estimated proportion of successes.
+q - 1-p.
+n - sample size.
+https://courses.lumenlearning.com/introstats1/chapter/a-population-proportion/
 
 +++++++++++++
 Miscellaneuos
