@@ -275,8 +275,8 @@ Here:
 σ is the population standard deviation.
 n is the sample size.
 s(x) is the standard deviation of the sample mean from the population mean.
-
 The larger the sample size, the lower the sample mean's deviation around the population mean.
+In some cases, the sample standard deviation can be used as a stand-in for the population mean. It's accuracy depends heavily on the situation, especially on factors like sample size, accuracy of measuring instruments, and the precision with which what you are measuring is created.
 
 The standard deviation of a sample proportion is calculated using:
 s(proportion) = sqrt((P * (1 - P)) / n)
@@ -333,18 +333,24 @@ Possible T-value calculation for those not in table:
 https://www.ttable.org/
 
 Formula for Margin based on formula for CI:
-Margin = +/- ((Za * s) / sqrt(n))
+Margin = +/- (Za * s) / sqrt(n)
 Here:
-Za - Z-score of alpha. May be replaced with T-score of alpha.
+Za - Z-score of (alpha / 2). May be replaced with T-score of (alpha / 2).
 s - Sample standard deviation
 n - sample size
+
+For sample proportions, n = 1.
+Margin = +/- (Za * s)
+or
+Margin = +/- (Za * sqrt((P*(1-P)) / n)
+P - sample proportion with desired characteristic, i.e. target proportion.
 
 This is confirmed by a Lumen Learning course:
 EBP = Z(a/2) * sqrt(pq/n)
 Here:
 Z(a/2) - Z-score of alpha/2.
 p - the estimated proportion of successes.
-q - 1-p.
+q - 1-p where p is a sample proportion.
 n - sample size.
 https://courses.lumenlearning.com/introstats1/chapter/a-population-proportion/
 
