@@ -24,12 +24,11 @@ American Desert [Domination]
 Eastern Europe (Points all in central town)
 Berlin [Domination]
 
-AM 64
-PM 63
+AM 63
+PM 59
 
-
-AM 
-PM 
+AM 4
+PM 4
 
 2022-12-05
 

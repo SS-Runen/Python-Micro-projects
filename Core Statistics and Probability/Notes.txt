@@ -292,7 +292,7 @@ P - Expected value, hypothesis, target or proposed proportion.
 s - Proportion standard deviation.
 
 - T-Distributions
-These are more "conservative" estimates of probability for normal distributions. One purpose of this table is using the sample SD as a stand-in for the population SD.
+These are more "conservative" estimates of probability for normal distributions. One purpose of this table is using the sample SD as a stand-in for the population SD. A t-table shows the number of standard deviations from the mean at the intersection of a significance level and degree of freedom. It may also be used with a confidence level since alpha/significance = 1-Confidence.
 
 Z-score of a sample, i.e. Z-score for the sample mean assuming it is distributed normally around the population mean:
 Z = (x - μ) / (σ / sqrt(n))
@@ -310,7 +310,7 @@ n - Sample size.
 s- Sample SD.
 CI - A pair of values defining a range. You will get the upper and lower values (x1 and x2) for the CI.
 
-T-score of a sample mean/expected value:
+T-score of a sample mean/expected value, i.e. T-score for the average value of each sample member, also called the sample mean:
 T = (x - μ) / (s / sqrt(n))
 Here:
 x - Sample mean.
@@ -353,6 +353,17 @@ p - the estimated proportion of successes.
 q - 1-p where p is a sample proportion.
 n - sample size.
 https://courses.lumenlearning.com/introstats1/chapter/a-population-proportion/
+
+++++++++++++++++++
+Hypothesis Testing
+
+Null Hypothesis - Default hypothesis. Assumed hypothesis. It often assumes no significant change or difference between experiment groups. Technically, it states that no statistical relationship and significance exists in a set of given, single, observed variables between two sets of observed data and measured phenomena.
+
+Alternate Hypothesis - It's probability is the complement of the null hypothesis. This hypothesis is the theory that needs to be proven.
+
+Type I Error - Rejecting the H0 when H0 is true. The probability of a type one error is referred to as the "level of significance" or "alpha."
+
+Type II Error - Failing to reject the H0 when H0 is false.
 
 +++++++++++++
 Miscellaneuos
