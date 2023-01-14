@@ -43,25 +43,36 @@ Hurtgen Forest [Domination]
 @k @T-54 (1947) @~.2 @ner-perp, diag @0,
 @k @PT-76-57 @.2 @Perp
 
+Mozdok [Battle]
+@k @T-54 (1947) @.79 @Near-perp @28 @0
+@k @T-54 (1947) @1.22 @Near-perp @0 @0
+@k @IS-6 @.57 @Near-perp @0 @0
+
+Cargo Port
+@k @ZSU-37 @1.09 @Near-para @0 @0
+@k @T-54 (1949) @1.16, 1.11 @near-perp, Diag @31, 0 @0, 0
+@k @T-44-100 @1.04 @Near-perp @0 @0
+@k @2S3M @1.01 @Near-para @0 @0
+
 2023-01-10
 
 Pradesh [Domination]
-@k @IS-4M @~1.1 @Near-para @0 @0
-@k @T-54 @1.3 @Near-para @0 @0
+@k @IS-4M @1.29 @Near-para @0 @0
+@k @T-54 (1947) @1.07 @Near-para @0 @0
 
 Pradesh [Domination]
-@k @T-54 @1.7 @Para @0 @0
-@k @T-54 @.8
-@kb @T-54 (1949) @.02 @Near-perp
+@k @T-54 (1947) @1.87 @Para @0 @0
+@k @T-54 (1947) @.57 @Para @14 @0
+@kb @T-54 (1949) @.02 @daig @0 @0
 
 2023-01-06
 
 Eastern Europe
-@k @Type 62 @~1.2 @Perp, Perp @0, 0
-@k @T-44-100 @~1.2 @Diag @0 @0
-@k @Type 62 @~1.1 @Perp @0 @0
-@k @ASU-85 @~.6 @Near-para
-@kb @ASU-85 @~.8 @Perp @0 @0
+@k @Type 62 @1.22 @near-Perp @0 @0
+@k @T-44-100 @1.24 @Diag @0 @0
+@k @Type 62 @1.04 @diag @0 @0
+@k @ASU-85 @.4 @Near-para @0 @0
+@kb @ASU-85 @.59 @near-Perp @0 @0
 
 Pradesh
 @k @Type 62 @1.13 @Diag @0 @0
@@ -78,14 +89,14 @@ Pradesh
 @k @Type 63-I @Diag @1.5 @0 @0
 
 Red Desert [Domination]
-@k @T-54 (1949) @~.5 @Diag @0 @0
-@kb @PT-76-57 @~1.8 @Perp
-@k @PT-76-57 @~1.8 @Diag
-@k @T-54 (1949) @~.5 @Diag @0 @0
-@k @T-54 (1949) @~.2 @Diag, diag, @
+@k @T-54 (1949) @.36 @Diag @0 @0
+@k @PT-76-57 @1.96 @Diag @1 @0
+@k @T-54 (1949) @.35 @Diag @0 @0
+@k @T-54 (1949) @.34, .34 @Diag, diag, @34, 0 @5, 0
+@kb @PT-76-57 @1.92 @Perp @0 @0
 
 Fields of Normandy [Battle]
-@kb @T-54 (1947) @~.7 @daig @0 @0
+@k @T-54 (1947) @.22 @perp @0 @0
 
 Mozdok [Battle]
 @kb @2S3M @1 @Perp @
@@ -93,8 +104,8 @@ Mozdok [Battle]
 2022-12-29
 
 Hurtgen Forest [Domination]
-@k @PT-76-57 @.6 @Diag
-@kb @T-54 (1947) @~.7 @Near-para @0 @0
+@k @PT-76-57 @.58 @Diag @39 @0
+@kb @T-54 (1947) @1.1 @Near-para @0 @0
 
 Fields of Normandy [Battle]
 @k @T-54 (1949) @~.9 @Perp @0 @0
@@ -121,11 +132,6 @@ Pradesh
 
 Fire Arc
 @k @T-44-100 @~1.1 @Diag @0 @0
-
-Second Battle of El Alamein [Domination]
-@k @T-54 (1949) @~2 @Diag @0 @0
-@k @T-44 @~1.6
-@k @T-54 (1949) @~1.4 @Diag @0 @0
 
 Pradesh
 @k @T-54 (1949) @1.76 @Near-para @0 @0

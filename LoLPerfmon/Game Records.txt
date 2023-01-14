@@ -6,3 +6,9 @@ Karthus@Senna, Twitch@Pyke, 1, BotCarry, L
 Karthus@Ashe, Miss Fortune@Seraphine, 0, BotCarry, L
 Kindred, Diana, 0, Jungle, L
 Karthus, Jarvan IV, 1, Jungle, L
+Quinn, Yasuo, 0, Top, L
+Quinn, Irelia, 1, Top, L
+Anivia, Aurelion Sol, 0, Mid, W
+Anivia, Lux, 1, Mid, L
+Vladimir, Yasuo, 0, Mid, L
+Nami@Kai'Sa, Jhin@Lux, 1, Support, W

@@ -17,10 +17,10 @@ Bounce at T-44 turret rear joint.
 AM 1
 PM 3
 
-2023-01-10
+2023-01-14
 
 Pradesh
-@kb @T-54 (1949) @~.05 @Diag @0 @0
+@kb @T-54 (1949) @.09 @Diag @0 @0
 
 2023-01-08
 
