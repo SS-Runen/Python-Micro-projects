@@ -30,8 +30,18 @@ Running Total Debt
 AM 63
 PM 60
 
-AM 0
-PM 0
+AM 1
+PM 4
+
+2023-01-14
+
+Pradesh [Domination]
+@k @IS-6 @~.8
+@kb @IS-6 @~.6
+
+Hurtgen Forest [Domination]
+@k @T-54 (1947) @~.2 @ner-perp, diag @0,
+@k @PT-76-57 @.2 @Perp
 
 2023-01-10
 
