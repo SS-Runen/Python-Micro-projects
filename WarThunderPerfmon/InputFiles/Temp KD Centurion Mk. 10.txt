@@ -30,7 +30,7 @@ Running Total Debt
 AM 63
 PM 60
 
-AM 1
+AM 2
 PM 4
 
 2023-01-14
