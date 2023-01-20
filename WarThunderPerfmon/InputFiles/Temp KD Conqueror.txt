@@ -17,6 +17,20 @@ Bounce at T-44 turret rear joint.
 AM 1
 PM 3
 
+2023-01-20
+
+Vision Bug: Tank Invisible to Conqueror Commander Turret
+https://warthunder.com/en/tournament/replay/26671678190350720
+Fire Arc
+@k @T-54 ? @1.4 @ @0, 0 @0, 0
+@k @Type 59 @1.2 @Near-perp @
+@k @ZSU
+
+2023-01-18
+
+Ardennes
+@kb @T-44-100 @~.04 @Diag @0 @0
+
 2023-01-14
 
 Pradesh

@@ -6,9 +6,12 @@ Karthus@Ashe, Miss Fortune@Seraphine, 0, BotCarry, L
 Karthus@Lux, Caitlyn@Swain, 1, BotCarry, L
 Kindred, Diana, 0, Jungle, L
 Karthus, Jarvan IV, 1, Jungle, L
+karthus, Viego, 1, Jungle, L
+Karthus, Viego, 1, Jungle, L
 Karthus, Graves, 0, Jungle, W
 Karthus, Kayn, 1, Jungle, W
 Karthus, Aatrox, 1, Jungle, W
+Karthus, Brand, 1, Jungle, W
 Quinn, Yasuo, 0, Top, L
 Quinn, Irelia, 1, Top, L
 Quinn, Lillia, 1, Top, W
