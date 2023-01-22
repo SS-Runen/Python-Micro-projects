@@ -8,10 +8,19 @@ Kindred, Diana, 0, Jungle, L
 Karthus, Jarvan IV, 1, Jungle, L
 karthus, Viego, 1, Jungle, L
 Karthus, Viego, 1, Jungle, L
+Karthus, Viego ,1, Jungle, L
+Karthus, Shaco, 1, Jungle, L
 Karthus, Graves, 0, Jungle, W
 Karthus, Kayn, 1, Jungle, W
 Karthus, Aatrox, 1, Jungle, W
 Karthus, Brand, 1, Jungle, W
+karthus, Kayn, 1, Jungle, W
+Karthus, Xin Zhao, 1, Jungle, W
+Karthus, Sett@Vi, 0, Jungle, W
+Karthus, Jarvan IV, 0, Jungle, W
+Karthus, Nocturne, 1, Jungle, W
+Karthus, Lillia, 1, Jungle, W
+Karthus, Kha'Zix, 1, Jungle, W
 Quinn, Yasuo, 0, Top, L
 Quinn, Irelia, 1, Top, L
 Quinn, Lillia, 1, Top, W
