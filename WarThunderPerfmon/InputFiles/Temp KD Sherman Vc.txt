@@ -31,8 +31,6 @@ Normandy [Battle] wrong side
 
 2022-12-23
 
-2022-12-11
-
 Fields of Normandy [Battle]
 @k @M18 @.1, .1 @para, near-perp  @23, 0 @11, 0
 @k @M18 @.16 @Perp @28 @0

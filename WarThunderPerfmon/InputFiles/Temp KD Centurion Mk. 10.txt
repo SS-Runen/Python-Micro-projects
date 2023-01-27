@@ -26,6 +26,20 @@ Berlin [Domination]
 Normandy [Battle] wrong side
 Fields of Poland [Battle] wrong side
 
+2023-01-26
+
+Eastern Europe
+@k @PT-76-57 @~1
+@k @PT-76-57 @~1
+@kb @PT-76-57 @~1
+
+Poland
+@kb @Type 62 @~.2 @Diag
+@kb @T-54 (1949) @~.1
+
+Pradesh
+@k @SU-100P @~1
+
 2023-01-18
 
 Mozdok
