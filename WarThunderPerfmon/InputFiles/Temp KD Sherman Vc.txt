@@ -25,9 +25,19 @@ Eastern Europe (Points all in central town)
 Berlin [Domination]
 Normandy [Battle] wrong side
 
-2023-01-09
+2023-01-28
 
-2022-12-29
+Finland
+@k @T-34-85 @~.6 @diag
+@k @T-34-85 @.6 @Near-para
+
+Fields of Normandy
+@k @T-34-85 @~.2 @Perp
+
+Red Desert
+@kb @T-34-85 @.6 @Near-perp @0 @0
+@kb @T-34-85 @.1 @diag @0 @0
+@k @T-34-85 (D-5T) @~.9 @Near-perp @0 @0
 
 2022-12-23
 
