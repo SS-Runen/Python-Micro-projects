@@ -365,6 +365,18 @@ Type I Error - Rejecting the H0 when H0 is true. The probability of a type one e
 
 Type II Error - Failing to reject the H0 when H0 is false.
 
+++++++++++++++++++++++++
+Simple Linear Regression
+
+- A line made to fit a data set with a linear relationship always follows this equation:
+y = b + mx + c
+b: Y-intercept. A point of the line that crosses the y-axis of the graph. The value of y when x = 0.
+m: Slope or rise. Change in Y per change in x, Δy / Δx.
+c: A constant added in to adjust for error. Error coefficient.
+
+Residual - This refers to the difference between the predicted value (y) of an input (x) versus the actual result of x (y1).
+R - This symbol represents the proportion of change or variation in y (dependent variable) explained by the variable x (independent/driving variable). In other words, R is the correlation between the two variables.
+
 +++++++++++++
 Miscellaneuos
 
