@@ -377,6 +377,25 @@ c: A constant added in to adjust for error. Error coefficient.
 Residual - This refers to the difference between the predicted value (y) of an input (x) versus the actual result of x (y1).
 R - This symbol represents the proportion of change or variation in y (dependent variable) explained by the variable x (independent/driving variable). In other words, R is the correlation between the two variables.
 
+Standard Error - This is the amount by which a sample mean will deviate around the source population mean. If the population mean is not provided, the sample mean may be used as a stand in but confidence and alpha must be calculated using a T-table.
+
+When using linear regression to do a "point estimate" or estimate on one sample instance, make sure your data point is within the maximum and minimum of the training set. I.e, make sure your dependent variable value is within the range of the reference data set.
+
+- Confidence Intervals for Predicted Changes
+CI = Δy +|- T * Δx * (SE)
+y: Predicted value/output of the equation.
+T: T-stat. The number of standard errors from zero to the coefficient/slope.
+Δx: The amount of change to x from an arbitrary reference value.
+Δy: Coefficient * x, i.e. slope * x.
+SE: Standard error. s/sqrt(n) or σ/sqrt(n)
+
+- Standardized Coefficients/Beta Weights
+The amount of standard deviations the dependent variable will change due to one standard deviation of change in the predictor variable. Each variable's respective standard deviation is used as a measure. According to StatisticsHowTo, it isn’t actually the coefficients that get standardized, but the variables. Betas are calculated by subtracting the mean from the variable and dividing by its standard deviation. This results in standardized variables having a mean of zero and a standard deviation of 1.
+https://www.statisticshowto.com/standardized-beta-coefficient/
+
+- F-statistic
+An f-statistic tells the predictive value the equation predictors have on the result. It is the joint significance to the result for a group of variables. The "significance of f" is similar to the p-value. The significance F is the probability that the null hypothesis in our regression model cannot be rejected. I.e., it indicates the probability that all the coefficients in our regression output are actually zero.
+
 +++++++++++++
 Miscellaneuos
 
