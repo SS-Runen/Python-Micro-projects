@@ -365,6 +365,72 @@ Type I Error - Rejecting the H0 when H0 is true. The probability of a type one e
 
 Type II Error - Failing to reject the H0 when H0 is false.
 
+++++++++++++++++++++++++
+Simple Linear Regression
+
+- A line made to fit a data set with a linear relationship always follows this equation:
+y = b + mx + c
+b: Y-intercept. A point of the line that crosses the y-axis of the graph. The value of y when x = 0.
+m: Slope or rise. Change in Y per change in x, Δy / Δx.
+c: A constant added in to adjust for error. Error coefficient.
+
+Residual - This refers to the difference between the predicted value (y) of an input (x) versus the actual result of x (y1).
+R - This symbol represents the proportion of change or variation in y (dependent variable) explained by the variable x (independent/driving variable). In other words, R is the correlation between the two variables.
+
+Standard Error - This is the amount by which a sample mean will deviate around the source population mean. If the population mean is not provided, the sample mean may be used as a stand in but confidence and alpha must be calculated using a T-table.
+
+When using linear regression to do a "point estimate" or estimate on one sample instance, make sure your data point is within the maximum and minimum of the training set. I.e, make sure your dependent variable value is within the range of the reference data set.
+
+- Confidence Intervals for Predicted Changes
+CI = y +|- T * Δx * (SE)
+y: Predicted value/output of the equation.
+T: T-stat. The number of standard errors from zero to the coefficient/slope.
+Δx: The amount of change to x from an arbitrary reference value.
+y: Predicted value for input x.
+SE: Standard error. s/sqrt(n) or σ/sqrt(n)
+
+- Standardized Coefficients/Beta Weights
+The amount of standard deviations the dependent variable will change due to one standard deviation of change in the predictor variable. Each variable's respective standard deviation is used as a measure. According to StatisticsHowTo, it isn’t actually the coefficients that get standardized, but the variables. Betas are calculated by subtracting the mean from the variable and dividing by its standard deviation. This results in standardized variables having a mean of zero and a standard deviation of 1.
+https://www.statisticshowto.com/standardized-beta-coefficient/
+
+- F-statistic
+An f-statistic tells the predictive value the equation predictors have on the result. It is the joint significance to the result for a group of variables. The "significance of f" is similar to the p-value. The significance F is the probability that the null hypothesis in our regression model cannot be rejected. I.e., it indicates the probability that all the coefficients in our regression output are actually zero.
+
+- Standard Error for the Prediction of a Single Observation (Y)
+SE = Si * sqrt(1 + (1/n) + ((x - x̄)² / (s² * (n - 1))))
+SE = Si * sqrt(1 + (1/n) + ((x - x̄)^2 / (s^2 * (n - 1))))
+Si: Standard error of the equation.
+n: Sample size, number of data points.
+x: Value of the predictor variable used in calculating the output y.
+x̄: Sample mean for the predictor variable x.
+s: Sample standard deviation for the predictor variable.
+
+- Confidence Interval Around a Prediction of a Single Observation(Y):
+CI = y +|- Ta * SE
+
+The value of T is set by your degrees of freedom (n - # of coefficients) and alpha. An experiment with ten items and required confidence of 99% would require a T for 0.005 (for one tailed tests where a lower or upper limit is in the accepted range/excluded from alpha) or T for 0.01 given eight degrees of freedom.
+
+The confidence interval assumes the prediction as the most likely value. It is the value around which the true measurable results of the predictor variable are normally distributed. If graphed, the prediction would be the center of the normal distribution "bell." Around it, on the x-axis, would be other potential values. Their probabilities would form the dumbbell curve or shape.
+
+The T-value or count of standard deviations is the multiplier for the standard error. Assuming the prediction is correct and given a standard error observed between the equation predictions and actual results, T * SE would give the amount of deviation around the prediction. The T-value also represents confidence or the proportion of possible values for y that your confidence interval includes.
+
+- Standard Error for the Expected Value of Y at X:
+SE = Si * sqrt((1/n) + ((x - x̄)² / (s² * (n - 1))))
+SE = Si * sqrt((1/n) + ((x - x̄)^2 / (s^2 * (n - 1))))
+
+The expected value of Y is synonymous to "mean of Y" in this case. E(Y) is the average value of Y given a certain value of X.
+
+@@@
+Assumptions of Linear Regression
+
+Linearity - There is a somewhat directly proportional and continuous relationship between the input and output variables.
+
+Independence of Errors - The error between the predicted and actual values (residuals) should be independent. If the residual changes reliably based on previous residuals or at predictable intervals, the regression will be less accurate.
+
+Homoscedasticity - There is no trend in the size/magnitude of the residuals. One way to test this is to take the square of the residuals. If they increase in a mostly linear way, then there is a trend in the residuals and the data is NOT homoscedastic.
+
+Normality of Error Distribution - The actual values of the observations should be clustered around the best-fit line. Residuals with very high absolute values should be rare.
+
 +++++++++++++
 Miscellaneuos
 
