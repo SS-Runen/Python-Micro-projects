@@ -12,7 +12,7 @@ Finland [Battle]
 Mozdok [Battle] no flank
 Alaska/Ground Zero no right base flank
 Carpathians
-Frozen Pass no castle camp
+Frozen Pass
 Stalingrad
 Sinai no flank rocks
 Jungle
@@ -24,20 +24,26 @@ American Desert [Domination]
 Eastern Europe (Points all in central town)
 Berlin [Domination]
 Normandy [Battle] wrong side
+Ardennes Domination
+
+2023-02-03
+
+Mozdok
+@k @M64 @1.59, 1.59 @near-perp, diag @16, 0 @0, 0
+
+Sands of Sinai
+@k @M18 @1.27, 1.27 @perp, diag @0, 0 @0, 0
 
 2023-01-28
 
 Finland
-@k @T-34-85 @~.6 @diag
-@k @T-34-85 @.6 @Near-para
-
-Fields of Normandy
-@k @T-34-85 @~.2 @Perp
+@k @T-34-85 @.57 @diag @0 @0
+@k @T-34-85 @.53 @Near-para @0 @0
 
 Red Desert
-@kb @T-34-85 @.6 @Near-perp @0 @0
-@kb @T-34-85 @.1 @diag @0 @0
-@k @T-34-85 (D-5T) @~.9 @Near-perp @0 @0
+@kb @T-34-85 @.39 @Near-perp @0 @0
+@kb @T-34-85 (D-5T) @.15 @diag @0 @0
+@k @T-34-85 (D-5T) @.84 @Near-perp @0 @0
 
 2022-12-23
 
@@ -73,10 +79,6 @@ Fire Arc
 @k @M4A3E2 @1.6 @Diag @0 @0
 @kb @Sherman VC @1.44 @Near-perp @0 @0
 
-Berlin
-@kb @T-34-85 @~.6 @Perp @0 @0
-@k @T-34-57 @~.9 @Perp
-
 Fields of Normandy
 @k @T-34-85 @.36 @Diag @13 @0
 @k @T-34-85 (S-53) @0.07 @diag @2 @20
@@ -85,25 +87,6 @@ Fields of Normandy
 
 Red Desert
 @k @T-34 (Chinese) @.7 @Diag @0 @0
-
-Ardennes
-@kb @T-34-85 @1 @Near-perp @0 @0
-
-Red Desert
-@k @IS-1 @~.6 @Diag
-
-Ardennes
-@k @T-34-85 ? @~.7 @perp @0 @0
-
-Fields of Normandy
-@k @IS-1 @~1 @Diag @0 @0
-@k @Churchill VII @~.7 @DIag @0 @0
-
-Kuban
-@k @KV-122 @.1 @Diag, Diag,
-@k @M4A2
-@kb @IS-1 @~.1
-@kb @IS-1 @~.06
 
 2022-11-27
 
@@ -117,15 +100,10 @@ Ardennes
 @k @SU-100Y @.47 @Diag @0 @0
 @K @M15 @.4 @Perp @0 @0
 
-Finland
-@kb @Avenger @~1 @Diag @0 @0
-
 Mozdok
 @k @M4A2 @1.37 @Diag @0 @0
 @kb @T-34-85 (D-5T) @.52 @Near-para @0 @0
-@kb @M18 @1.08 @Diag @0 @0
-
-@k @E.B.R. @~1.5 
+@kb @M18 @1.08 @Diag @0 @0 
 
 2022-06-02
 

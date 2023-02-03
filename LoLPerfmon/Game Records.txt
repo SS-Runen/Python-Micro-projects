@@ -10,6 +10,7 @@ Karthus, Viego, 1, Jungle, L
 Karthus, Viego ,1, Jungle, L
 Karthus, Shaco, 1, Jungle, L
 Karthus, Warwick, 0, Jungle, L
+Karthus, Udyr, 0, Jungle, L
 Karthus, Graves, 0, Jungle, W
 Karthus, Kayn, 1, Jungle, W
 Karthus, Aatrox, 1, Jungle, W
@@ -23,12 +24,15 @@ Karthus, Lillia, 1, Jungle, W
 Karthus, Kha'Zix, 1, Jungle, W
 Karthus, Taliyah, 0, Jungle, W
 Karthus, Warwick, 1, Jungle, W
+Karthus, Nunu & Willump, Jungle, 0, W
 Quinn, Yasuo, 0, Top, L
 Quinn, Irelia, 1, Top, L
 Quinn, Lillia, 1, Top, W
-Anivia, Aurelion Sol, 0, Mid, W
-Anivia, Irelia, 1, Mid, W
 Anivia, Lux, 1, Mid, L
 Vladimir, Yasuo, 0, Mid, L
+Anivia, Aurelion Sol, 0, Mid, W
+Anivia, Irelia, 1, Mid, W
 Anivia, Yone, 0, Mid, W
+Anivia, Le Blanc, 1, Mid, W
+Anivia, Yasuo, 0, Mid, W
 Nami@Kai'Sa, Jhin@Lux, 1, Support, W

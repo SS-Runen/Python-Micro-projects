@@ -6,30 +6,23 @@ Advnace to the Rhine
 Campania
 Finland [Battle]
 
-Bounce off T-54 1949 breech
-https://warthunder.com/en/tournament/replay/101048060647432710
-
-Bounce off T-54 1947 turret side
-https://warthunder.com/en/tournament/replay/105462990673333873
-
 Bounce at T-44 turret rear joint.
-
-AM 1
-PM 3
 
 2023-01-20
 
 Vision Bug: Tank Invisible to Conqueror Commander Turret
 https://warthunder.com/en/tournament/replay/26671678190350720
 Fire Arc
-@k @T-54 ? @1.4 @ @0, 0 @0, 0
-@k @Type 59 @1.2 @Near-perp @
-@k @ZSU
+@k @T-54 (1949) @1.49, 1.49 @near-para, near-para @0, 0 @0, 0
+@k @Type 59 @1.49 @diag @27 @0
+@k @WZ305 @.38 @Diag @0 @0
+@kb @ZSU-57-2 @.05 @Near-para @0 @0
 
-2023-01-18
-
-Ardennes
-@kb @T-44-100 @~.04 @Diag @0 @0
+Mozdok [Battle]
+@k @IS-3 @.44 @Diag @0 @0
+@k @T-44-100 @1.03 @Near-para @0 @0
+@k @T-34-100 @0.01 @Diag @0 @0
+@k @T-44-100 @.48 @Para @38 @0
 
 2023-01-14
 

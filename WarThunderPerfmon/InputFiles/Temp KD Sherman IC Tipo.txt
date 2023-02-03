@@ -1,7 +1,9 @@
 
 2023-01-28
 
-@kb @T-34-85 (D-5T) @~.6 @Perp
+Red Desert
+@k @Comet 1 @.72 @Near-para @0 @0
+@kb @T-34-85 (D-5T) @.49 @diag @0 @0
 
 2022-12-11
 
