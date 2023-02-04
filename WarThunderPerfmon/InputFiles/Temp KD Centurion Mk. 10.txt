@@ -27,20 +27,20 @@ Normandy [Battle] wrong side
 Fields of Poland [Battle] wrong side
 Ardennes Domination
 
-xx
+
 
 2023-02-03
 
 Hurtgen Forest
-@k @T-44-100 @~1.2 @Near-perp
-@k @BTR-ZD @0.1 @Diag @0 @0
-@kb @T-54 (1947) @~.03
+@k @T-44-100 @.95 @Near-perp @27 @0
+@k @BTR-ZD @0.48 @Diag @0 @0
+@kb @T-54 (1947) @.06, .06 @Diag, near-para @0, 0 @0, 0
 
 Fields of Poland [Battle]
-@k @PT-76-57 @.01 @Para @0 @0
-@k @T-54 (1949) @.1 @Perp @0 @0
-@kb @T-54 (1949) @.1 @Para @0 @0
-@kb @T-54 (1949) @~.04 @Near-para
+@k @PT-76-57 @.09 @Para @0 @6
+@k @T-54 (1949) @.16 @Perp @0 @0
+@kb @T-54 (1949) @.09 @Para @0 @0
+@kb @T-54 (1949) @.15 @Near-para @0 @29
 
 2023-01-30
 
@@ -55,9 +55,9 @@ Cargo Port
 @kb @IS-4M @.24 @Para @0 @0
 
 Normandy
-@k @2S3M @~1.3 @Near-perp
-@k @T-34-100 @.2
-@k @T-54 (1949) @~.3 @Near-perp @0 @0
+@k @2S3M @1.4, 1.39 @Diag, diag @7, 0 @0, 0
+@k @T-34-100 @.33, .33 @Diag, diag @20, 0 @0, 5
+@k @T-54 (1949) @.74 @Near-perp @0 @0
 
 Fields of Poland Winter
 @k @2S3M @.93 @Para @0 @0
@@ -72,28 +72,25 @@ Hurtgen Forest
 @k @IS-4M @.44 @Diag @0 @0
 @k @T-54 (1949) @.81 @Near-perp @0 @0
 
-Pradesh
-@k @IS-6 @~.7 @near-para @0 @0
-@k @PT-76-57 @~.1 @Diag
-
 Mozdok [Battle]
 @k @PT-76-57 @1.48 @Near-para @0 @0
 @k @T-44-100 @1.04 @near-perp @0 @0
 @kb @IS-3 @1 @Para @0 @0
 
+Eastern Europe
+@k @T-54 (1947) @1.22, 1.22 @Diag, Diag @0, 0 @0, 0
+@Kb @T-54 (1949) @.68 @Near-perp @0 @0
+
 2023-01-26
 
 Eastern Europe
-@k @PT-76-57 @~1
-@k @PT-76-57 @~1
-@kb @PT-76-57 @~1
+@k @PT-76-57 @1.07 @Perp @0 @0
+@k @PT-76-57 @1.15 @diag @0 @0
+@kb @PT-76-57 @1.05 @near-perp @0 @0
 
 Poland
-@kb @Type 62 @~.2 @Diag
-@kb @T-54 (1949) @~.1
-
-Pradesh
-@k @SU-100P @~1
+@kb @Type 62 @.04, .03 @Diag, near-perp @21, 0 @12, 13
+@kb @T-54 (1949) @.15 @Diag @0 @0
 
 2023-01-18
 
@@ -107,12 +104,14 @@ Mozdok
 2023-01-14
 
 Pradesh [Domination]
-@k @IS-6 @~.8
-@kb @IS-6 @~.6
+@k @IS-6 @.8 @Para @0 @0
+@kb @IS-6 @.6 @near-perp @0 @0
 
-Hurtgen Forest [Domination]
-@k @T-54 (1947) @~.2 @ner-perp, diag @0,
-@k @PT-76-57 @.2 @Perp
+Hurtgen Forest
+@k @T-54 (1947) @.32 @ner-perp, diag @0, 12 @0, 0
+@k @PT-76-57 @.47 @Perp @0 @0
+@k @ZSU-37 @.92 @DIag @0 @0
+@kb @SU-100P @.96 @Diag @0 @0
 
 Mozdok [Battle]
 @k @T-54 (1947) @.79 @Near-perp @28 @0
@@ -175,18 +174,13 @@ Hurtgen Forest [Domination]
 @k @PT-76-57 @.58 @Diag @39 @0
 @kb @T-54 (1947) @1.1 @Near-para @0 @0
 
-Fields of Normandy [Battle]
-@k @T-54 (1949) @~.9 @Perp @0 @0
-@K @T-54 (1949) @~.2
-@k @IS-4M @~.7
-
 Fields of Normandy
-@k @2S3M @~.04 @Near-perp, para
-@k @T-54 (1949) @~.02 @Diag
-@k @T-54 (1949) @~.2
-@k @T-44-100 @~.2
-@k @T-54 (1947) @~.2
-@k @T-54 (1947) @~.2, .2 @Diag, diag
+@k @2S3M @.03, .05 @Near-perp, para, @0, -6 @0, 0
+@k @T-54 (1949) @.05 @Diag @0 @0
+@k @T-54 (1949) @.46 @Diag @0 @0
+@k @T-44-100 @.47 @near-para @0 @0
+@k @T-54 (1947) @.4 @Diag @7 @0
+@k @T-54 (1947) @.42, .41 @Diag, diag @24, 0 @0, 0
 
 2022-12-21
 
@@ -199,7 +193,7 @@ Pradesh
 @kb @T-54 (1947) @1.12 @Para @0 @6
 
 Fire Arc
-@k @T-44-100 @~1.1 @Diag @0 @0
+@k @T-44-100 @1.1 @Diag @0 @0
 
 Pradesh
 @k @T-54 (1949) @1.76 @Near-para @0 @0
@@ -215,9 +209,9 @@ Pradesh
 2022-12-17
 
 Hurtgen Forest [Domination]
-@k @T-54 (1949) @~.65 @Para @0 @0
-@k @IS-4M @~.4 @Perp @0 @0
-@k @T-54 (1949) @~.2 @Diag
+@k @T-54 (1949) @.65 @Para @0 @0
+@k @IS-4M @.4 @Perp @0 @0
+@k @T-54 (1949) @.2 @Diag @0 @0
 
 Pradesh
 @k @PT-76-57 @1.47 @Perp @0 @0
@@ -262,10 +256,6 @@ Sands of Sinai
 
 Cargo Port
 @k @T-54 (1947) @.2 @Near-perp @0 @0
-
-Sinai
-@k @IS-4M @1.3 @Diag
-@k @2S3M @~2.2 @Near-perp @0 @0
 
 European Province
 @k @PT-76B @1.69 @Para @0 @0
