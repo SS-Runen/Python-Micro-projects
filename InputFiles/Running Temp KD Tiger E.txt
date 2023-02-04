@@ -33,6 +33,45 @@ June 04, 2021. Update "Red Skies".
 
 Event - Vehicle - Distance - Orientation - EnemeySpeed - SelfSpeed
 
+
+2022-11-06
+
+Sands of Sinai [Battle]
+@k @M18 @.15 @Near-perp @0 @0
+@k @T-34-85 (D-5T) @.19 @Diag @31 @0
+@k @T-34-85 @.7 @Near-perp @17 @0
+@k @ASU-57 @.1 @Diag @0 @0
+@K @T-34-85 @1.78 @Perp @0 @0
+@k @T-34-85 @.08 @Diag @-6 @0
+@K @ZiS-12 (95-KM) @.67 @Diag @0 @0
+@kb @T-34-85 @.99 @Near-perp @0 @0
+
+2022-07-21
+
+Cargo Port
+@k @IS-1 @1.07 @Diag @0 @0
+@k @M4A3 (76) W @.79 @Diag @0 @0
+@K @KV-2 @1.03 @Para @0 @0
+
+2022-06-02
+
+Second Battle of El Alamein
+@k @T-34-85 @.27 @para @34 @0
+@K @A.C. IV @1.25 @Para @0 @0
+@k @M4A3 (76) W @2.07 @near-Para @0 @0
+
+Eastern Europe
+@K @IS-1 @.47 @Para @-17 @0
+@kb @M18 @.34 @Near-perp @0 @0
+
+Japan
+@k @ARL-44 @.59 @Near-perp @0 @0
+@k @T-34-85 (D-5T) @.53 @Diag @-5 @0
+
+Berlin [Battle]
+@K @Comet I @.8 @Near-para @0 @0
+@kb @T-34-85 (D-5T) @.79 @Near-para @0 @0
+
 2022-02-14
 
 Berlin

@@ -34,6 +34,153 @@ October 04, 2021
 will be used as baseline "control" to check effect of multiple spawns.
 
 
+2022-11-24
+
+I remember aiming to the left of the targets after missing but the local replay shows me aiming to the right.
+There is a discrepancy in the replay listed range and the range my gun is set to. My gun went above despite being set too low.
+Pradesh
+https://warthunder.com/en/tournament/replay/5567991308738414
+@k @T-54 (1947) @1.68 @Near-para @0 @0
+@k @IS-6 @1.7 @Para @0 @0
+@k @T-54 (1951) @1.75 @near-para @0 @0
+
+2022-11-11
+
+Fields of Normandy
+@k @T-44-100 @0.08 @Diag @0 @0
+
+2022-11-03
+
+Poland
+@k @IS-4M @0.05 @Perp @6 @0
+
+Pradesh
+@k @T-54 (1947) @.79 @0 @0
+@k @IS-3 @.59 @Diag @21 @0
+
+Pradesh
+@k @T-44-100 @1.24 @Diag @0 @0
+@k @IS-3 @1.89 @Diag @0 @0
+
+2022-10-31
+
+Ground Zero
+@k @T-54 (1951) @.62 @Near-perp @13 @0
+@k @T-54 (1949) @.17 @Perp @6 @0
+
+Red Desert
+@k @IS-6 @.57 @Perp @14 @0
+@k @ZTZ-59A @.04 @Diag @0 @0
+@k @T-54 (1949) @.13, 0.08 @para, para @-4, 0 @24, 0
+@kb @ZSU-57-2 @.49 @Para @24 @0
+
+Middle East
+@kb @Type 59 @.17 @near-perp @0 @0
+@k @Type 59 @.18 @Para @0 @0
+@k @T-54 (1951) @.56 @Perp @0 @0
+
+2022-10-28
+
+https://warthunder.com/en/tournament/replay/134565066300814111
+Eastern Europe
+@k @T-54 (1951) @1.18, @Near-perp, near-perp @26, 0 @0, 0
+@k @T-54 (1949) @1.24 @Near-para @-7 @0
+@k @T-54 (1949) @1.85 @Near-perp @0 @0
+
+Hurtgen Forest
+@kb @T-54 (1949) @0.01 @Diag @0 @0
+
+Normandy
+@kb @T-54 (1947) @.6 @Perp @0 @0
+
+Middle East
+@kb @ZTZ-59A @.23 @Diag @0 @0
+
+2022-10-24
+
+Fire Arc
+@k @T-54 (1949) @1.37 @near-perp @12 @0
+@k @SU-122-54 @1.37 @Para @0 @0
+@k @2S3M @1.66 @diag @16 @0
+@k @T-54 (1947) @1.16 @Perp @25 @0
+
+2022-10-03
+
+Fire Arc
+@k @T-54 (1951) @1.16 @Para @0 @0
+@k @WZ305 @1.09 @Diag @0 @0
+
+2022-09-14
+
+Finland
+@k @M48 @1 @Diag @0 @0
+
+2022-09-02
+
+Mozdok
+@k @T-54 (1949) @1.06 @Near-perp @24 @0
+@k @ASU-85 @.02, .02 @Para, para @0, 0 @0, 0
+
+2022-08-27
+
+Cargo Port
+@kb @T-54 (1947) @.35 @DIag @0 @0
+
+Ground Zero
+@k @IS-6 @.46 @Diag @11 @0
+@k @T-54 (1949) @.24 @Diag @0 @0
+
+2022-08-23
+
+Normandy
+@kb @T-54 (1947) @.72 @Near-para @0 @0
+
+2022-08-19
+
+Poland
+@k @T-54 (1949) @1.2 @Near-perp @32 @0
+@k @IS-4M @.91 @Diag @0 @0
+@k @BTR-ZD @.42 @Diag @0 @0
+
+2022-08-17
+
+Campania
+@k @T-54 (1947) @.59, .54 @Perp, perp @10, 0 @0, 0
+
+2022-08-11
+
+Mozdok
+@k @T-34-100 @.02 @Near-para @0 @0
+
+Middle East
+@kb @T-54 (1949) @.52 @Near-para @0 @0
+
+Hurtgen Forest
+@k @T-54 (1947) @.12 @Para @0 @0
+@kb @T-54 (1947) @.06 @Near-para @0 @6
+
+Berlin
+@kb @T-54 (1947) @.41 @Diag @0 @0
+@k @ASU-85 @.24 @Para @0 @0
+
+2022-07-30
+
+Cargo Port
+@k @PT-76-57 @1.13, 1.13 @Near-perp, near-perp @24, 0 @33, 0
+@k @T-54 (1949) @.99 @Diag @10 @0
+@k @T-54 (1949) @.48 @Para @-3 @0
+
+Ground Zero
+@kb @T-54 (1949) @.58 @Para @0 @-5
+
+Poland
+@k @T-54 (1949) @.86 @Diag @0 @0
+@k @BTR-ZD @.7, .7 @Diag, diag @19, 0 @0, 0
+
+Second Battle of El Alamein
+@k @T-54 (1949) @.4 @Diag @0 @10
+@k @IS-6 @.11 @Diag @8 @0
+
 2022-05-03
 
 Berlin [Battle]

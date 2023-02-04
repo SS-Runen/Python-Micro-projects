@@ -48,6 +48,666 @@ Abandoned Factory
 Advance to the Rhine
 
 Event - Vehicle - Distance - Orientation - EnemeySpeed - SelfSpeed
+2022-12-05
+
+Cargo Port
+@k @BTR-ZD @.38, .4 @Diag, near-perp @37, 0 @0, 0
+@k @T-54 (1947) @.38 @Near-para @0 @0
+@k @T-54 (1947) @.46, .45 @Perp, near-Perp @12, 0 @0, 5
+
+2022-12-01
+
+Red Desert
+@k @2S3M @.05, .01, @Diag, Diag, @-12, 0 @32, 0
+@k @T-54 (1949) @1.87, 1.87 @Diag, diag @0, 0 @0, 0
+
+Kuban
+@kb @IS-1 @.10 @Near-para @16 @0
+
+2022-11-23
+
+Sands of Sinai
+@k @Type 63 @1.38 @near-Para @0 @0
+@k @T-54 (1949) @1.96, 1.96 @Perp, near-para @37, 0 @0, 0
+@kb @T-54 (1949) @.37 @DIag @0 @0
+
+2022-11-15
+
+Middle East
+@k @T-44 @.68, .68 @Near-para, near-para @6 @0
+@k @PT-76B @.7 @Para @0 @0
+@k @T-54 (1947) @.65, .63 @near-Perp, near-perp @16, 0 @0, 0
+
+2022-11-11
+
+Fields of Normandy
+@k @T-54 (1947) @.23 @Para @0 @0
+@k @ASU-85 @0.06 @Near-para @0 @0
+@kb @IS-4M @0.03 @Near-para @0 @0
+
+Sands of Sinai
+@k @ASU-85 @.29 @Near-para @0 @15
+@k @2S3M @.06 @Near-perp @0 @27
+@k @SU-100P @.64 @Para @-14 @-7
+@k @PT-76B @.06 @Diag @16 @0
+@k @BTR-ZD @.67 @Para @0 @0
+@k @T-54 (1947) @.54 @Diag @0 @0
+@K @T-54 (1947) @.38 @Diag @0 @0
+
+Second Battle of El Alamein
+@k @T-44-100 @1.82 @Diag, diag @5, 0 @0, 0
+@k @SU-100P @2.1 @para @0 @0
+
+Poland
+@k @T-54 (1947) @1.12, 1.12 @Perp, Perp @35, 0 @0, 0
+
+2022-11-07
+
+Pradesh
+@k @Type 63 @1.81 @Near-para @-19 @0
+@k @PT-76-57 @1.13 @Near-para @0 @0
+@k @T-54 (1949) @1.74, 1.74 @diag, diag @0, 0 @0, 0
+
+2022-11-06
+
+Pradesh
+@k @T-44-100 @.71 @Diag @34 @0
+@k @SU-100P @.02 @Near-para @0 @0
+
+2022-11-03
+
+Poland
+@kb @IS-6 @.05 @Diag @0 @0
+
+Red Desert
+@k @PT-76-57 @.25 @Near-para @19 @0
+@k @T-54 (1949) @.78 @Diag @0 @0
+@k @IS-6 @.38 @Diag @-6 @0
+
+Poland
+@k @T-54 (1949) @.52 @0 @0
+@k @T-44-100 @.62 @para @0 @0
+@kb @IS-4M @.81 @Near-para @0 @0
+
+Poland
+@kb @T-54 (1947) @.03 @near-Perp @0 @11
+
+2022-11-02
+
+Pradesh
+@k @T-54 (1949) @.58 @near-para @0 @0
+@k @T-54 (1947) @1.22 @Diag @14 @0
+@kb @T-54 (1949) @.23 @Para @0 @0
+
+Pradesh
+@k @T-54 (1949) @1.1 @near-para @0 @0
+@k @PT-76-57 @1.7 @DIag @0 @0
+@k @PT-76B @1.69 @Diag @0 @0
+@kb @T-54 (1947) @.8 @Near-para @0 @0
+
+Pradesh
+@k @T-44-100 @1.71, 1.71  @para, Near-para @0, 0 @0, 0
+@k @ZSU-37 @1.66 @diag @3 @0
+
+Berlin
+@kb @T-54 (1947) @.86 @Near-perp @0 @0
+@k @T-44-100 @.8 @near-Perp @0 @0
+
+@k @T-54 (1947) @.28 @Near-perp @0 @0
+@k @Type 62 @.48 @Diag @0 @0
+@K @T-44 @.05 @near-para @10 @5
+
+2022-10-21
+
+Pradesh
+@k @T-54 (1949) @1.88 @near-Perp @30 @0
+@k @PT-76-57 @1, .61 @Para, Diag @39, 0 @0, 0
+@k @T-54 (1947) @1.85 @Diag @0 @0
+@k @SU-100P @1.88 @Near-para @0 @0
+@kb @ASU-85 @1.51 @Para @0 @0
+
+Mozdok
+@k @ASU-85 @1.11 @Para @0 @0
+@K @PT-76B @2.11 @Near-para @0 @0
+
+Poland
+@K @T-54 (1949) @.62 @Diag @25 @0
+@k @IS-3 @.21 @Diag @0 @0
+@kb @IS-3 @.35 @Near-perp @0 @0
+
+2022-10-14
+
+Fire Arc
+@k @T-44 @1.05 @Para, para @18, 0 @0, 0
+@k @IS-6 @1.3 @near-Perp @0 @0
+@k @T-44 @2.35 @near-para @0 @0
+@k @ASU-85 @1.38, 1.38 @Diag, diag @0, 0 @0, 0
+
+Poland [Battle]
+@kb @T-44-100 @.1 @Para @0 @9
+@k @T-44-100 @.76, .72 @perp, para @39, 11 @0, 0
+
+Pradesh
+@k @BTR-ZD @1700 @Near-perp @0 @0
+@k @T-44-100 @1.75 @near-para @0 @0
+
+Poland
+@k @IS-4M @.3 @near-perp @0 @0
+
+2022-10-06
+
+Needs Review: Possible over-exposure
+https://warthunder.com/en/tournament/replay/126249880769856549
+Middle East
+@k @ASU-85 @1.14 @Perp @22 @0
+@k @T-44 @.87, .87 @Diag, Diag @0,0 @0,0
+@k @PT-76B @1.14 @Diag @19 @0
+@k @ASU-85 @1.13 @Para @0 @0
+@k @T-54 (1947) @.83, .82, .82 @Near-para, Diag, Para @27, 0, 0 @0, 0, 0
+
+2022-09-28
+
+Cargo Port
+@k @2S3M @1.1 @near-para @0 @0
+@k @Obj 268 @1.4 @para @0 @0
+@k @T-54 (1949) @1.13 @near-para @0 @0
+@k @ASU-85 @1.02 @near-para @0 @0
+
+Eastern Europe
+@k @2S3M @1.33 @near-perp @0 @0
+@k @T-54 (1947) @1.15 @near-para @-7 @0
+@k @SU-100P @.97 @Diag @0 @0
+@k @IS-6 @.24 @diag @18 @0
+
+Eastern Europe
+@k @Type 63 @.93 @Diag @0 @0
+@k @T-54 (1949) @1.14 @near-perp @0 @0
+@kb @IS-4M @1.15 @Near-perp @0 @0
+
+Ardennes
+@kb @T-54 (1947) @.46 @Diag @0 @11
+
+2022-09-24
+
+Second Battle of El Alamein [Battle]
+@k @ASU-85 @1.42 @diag @12 @0
+@k @IS-6 @.96, .95 @Near-para, para @33, 0 @0, 0
+@k @T-54 (1949) @1.28 @diag @0 @0
+@k @T-54 (1949) @1.27 @Diag @0 @0
+
+Normandy
+@k @T-54 (1949) @.98 @Perp @6, 0 @0, 0
+@k @IS-4M @.97 @near-para @0 @0
+@k @PT-76-57 @near-perp, near-perp @.45 @44, 0 @0, 0
+@k @T-44 @.49 @Diag @33 @0
+@kb @PT-76-57 @.15 @diag @0 @0
+
+2022-09-20
+
+Second Battle of El Alamein [Battle]
+@k @T-44 @.04 @Diag @0 @0
+@k @ZSU-37 @.6 @diag @10 @0
+
+Fire Arc
+@k @T-44-100 @1.82 @para @0 @0
+@k @ZSU-37 @2.52 @Perp @13 @0
+
+2022-09-16
+
+Finland
+@k @IS-4M @.52 @Diag @0 @0
+@k @IS-3 @.92 @near-Perp @0 @0
+
+Poland
+@k @T-54 (1949) @1.44 @Perp @17 @0
+
+2022-08-27
+
+Eastern Europe
+@k @ASU-85 @1.21 @Para @0 @0
+@k @T-54 (1949) @1.23, 1.22  @near-para, near-para @19, 0 @0, 0
+@k @PT-76-57 @1.13 @Para @0 @0
+@K @T-54 (1947) @1.14 @DIag @0 @0
+
+Cargo port
+@kb @IS-4M @.59 @Near-para @0 @11
+
+Ground Zero
+@k @IS-4M @.7 @near-Para @0 @0
+@kb @IS-6 @.12 @Diag @2 @10
+
+2022-08-23
+
+Fire Arc
+@k @ASU-85 @Near-para, near-para @1.63, 1.62 @near-para, near-para @25, 0 @0, 0
+@K @IS-4M @2.25 @Para @0 @0
+
+Mozdok
+@k @T-54 (1949) @1.73 @Diag @0 @0
+
+Normandy
+@K @PT-76-57 @0.25 @Diag @27 @0
+@kb @IS-4M @.16 @Near-perp @23 @-6
+
+Sands of Sinai
+@kb @PT-76-57 @.15 @Diag @0 @0
+
+Second Battle of El Alamein
+@k @PT-76-57 @1.64 @Para @0 @0
+
+Berlin
+@k @T-54 (1947) @.6 @Para @0 @0
+@k @T-44-122 @.56 @Para @0 @0
+@K @Type 62 @.6 @Near-para @0 @0
+@k @T-54 (1949) @.6 @near-perp @0 @0
+
+Wallonia
+@K @PT-76-57 @1 @Para @0 @0
+@k @PT-76B @.9 @Diag @0 @0
+@kb @IS-6 @.13 @Near-para @0 @12
+
+2022-08-19
+
+Poland [Battle]
+@kb @T-54 (1949) @.02 @Diag @0 @6
+
+2022-08-11
+
+Mozdok
+@k @IS-6 @1.7 @Near-para @0 @0
+
+Mozdok
+@k @T-54 (1947) @1.11 @Near-perp @0 @0
+@k @T-54 (1949) @.96 @Diag @-7 @0
+@k @PT-76-57 @2.35 @Diag @0 @0
+@k @T-34-100 @1.84 @Diag @0 @0
+@k @T-44 @.96 @Near-para @0 @0
+@k @BTR-ZD @.19 @Near-para @0 @0
+
+Hurtgen Forest
+@k @T-54 (1949) @1.61 @Diag @0 @0
+@k @T-54 (1947) @1.64 @Diag @20 @0
+@k @T-54 (1949) @.99 @Diag @0 @0
+@k @IS-4M @1.08 @Near-para @33 @0
+
+Mozdok
+@k @IS-3 @.9 @para @0 @0
+@kb @T-34-100 @.04 @para @0 @0
+
+Mozdok
+@k @PT-76B @1.03 @Near-perp @0 @0
+@k @IS-6 @1.76 @Diag @0 @0
+
+Middle East
+@k @T-54 (1949) @.72 @para @0 @0
+@k @IS-4M @.73 @Para @0 @0
+@k @IS-3 @.8 @Para @0 @0
+@k @Obj 268 @.67 @Diag @0 @0
+
+Middle East
+@kb @PT-76-57 @.6 @Near-perp @0 @0
+
+Middle East
+@k @PT-76-57 @.55 @Para @15 @0
+@k @T-44-100 @.81 @Para @30 @0
+
+Hurgen Forest
+@k @BTR-ZD @1.05 @near-perp @35 @0
+@kb @T-54 (1947) @.96 @Para @0 @0
+
+Berlin
+@k @T-54 (1947) @.61 @Near-para @0 @0
+@K @T-54 (1949) @.05 @near-para @0 @0
+@kb @ASU-85 @.23 @Near-para @0 @0
+
+Second Battle of El Alamein
+@k @T-54 (1947) @2.21, 2.21 @Near-perp, near-perp @25, 0 @0, 0
+@k @2S3M @1.15 @Near-perp @0 @0
+@k @M42 @2.32, 2.31 @near-perp, near-para @52, 0 @0, 0
+
+Poland
+@k @T-44-100 @1.02 @Para @0 @0
+@k @T-54 (1947) @1.3, 1.3 @Diag, near-para @15, 0 @0, 0
+
+2022-08-03
+
+Middle East
+@k @T-54 (1949) @.9 @Near-para @0 @0
+@K @T-44-100 @1.05 @Near-para @0 @0
+@k @SU-100P @.99 @Para @0 @0
+@K @T-44-100 @.79 @Near-perp @0 @0
+@k @T-54 (1949) @.3 @Diag @30 @0
+@k @Obj 268 @1.1 @Diag @20 @0
+@K @2S3M @.25 @Para @0 @0
+@k @IS-6 @1.09 @Diag @0 @0
+
+Second Battle of El Alamein
+@k @PT-76B @1.24 @Perp @0 @0
+@k @T-54 (1947) @1.04 @Diag @15 @0
+@K @T-54 (1949) @1.25 @Para @30 @0
+
+Cargo Port
+@k @T-54 (1947) @.42 @Near-perp, ,near-perp @12, -3 @0, 0
+@k @T-54 (1947) @1.38 @Perp, Perp @11, 0 @0, 0
+@k @T-54 (1949) @.52 @Near-para @0 @0
+@k @IS-4M @.5 @Diag @0 @1
+@k @T-44-100 @1.42 @Diag @0 @0
+@k @IS-4M @.22 @Near-para @0 @0
+
+2022-07-30
+
+Mozdok
+@k @IS-3 @1.49, 1.49 @Near-perp, near-perp @27, 0 @0, 0
+@k @T-44-100 @1.09 @Diag @0 @0
+@k @Obj 268 @2.05 @Diag @0 @0
+@K @PT-76-57 @.5 @near-para @36 @0
+@k @T-54 (1949) @1.42 @Diag,diag @5, 0 @0, 0
+
+Eastern Europe
+@k @IS-6 @1.05, 1.05 @para, para @-5, 0 @0, 0
+@k @IS-6 @1.02 @Near-para @0 @0
+@k @PT-76B @1.76 @Near-perp @0 @0
+
+Ground Zero
+@k @IS-3 @.67, .67 @DIag, Diag @18, 0 @0, 0
+@kb @IS-4M @.47 @Near-perp @0 @0
+
+Poland
+@K @IS-6 @.98 @Para @0 @0
+@K @T-54 (1949) @.83 @Near-perp @0 @0
+@kb @T-54 (1949) @.16 @Diag @0 @0
+
+Poland
+@K @PT-76B @1.21 @Para @8 @0
+@k @T-54 (1947) @.67 @Perp @28 @0
+@k @BTR-ZD @.46 @Perp @43 @0
+@kb @ASU-85 @.35 @Near-perp @0 @0
+
+Second Battle of El Alamein
+@kb @T-54 (1949) @.81 @Near-para @0 @0
+
+American Desert
+@k @T-54 (1949) @.6 @Diag @26 @0
+@K @PT-76-57 @.42 @Near-para @19 @0
+@k @T-54 (1947) @.69 @Near-perp @0 @0
+
+Berlin
+@k @ASU-85 @.75 @Diag @23 @0
+@k @T-54 (1949) @.37 @Near-perp @5 @0
+
+Second Battle of El Alamein
+@K @ASU-85 @2.24 @Diag @0 @0
+@K @2S3M @2.64 @Near-para @0 @0
+@K @PT-76B @1.12 @Near-para @0 @0
+@K @ASU-85 @2.05 @Near-para @0 @0
+
+2022-07-22
+
+Cargo Port
+@k @IS-3 @.96, .96 @near-para, near-para @12, 0 @0, 0
+@kb @T-54 (1949) @.38 @Near-para @0 @-5
+
+Berlin [Battle]
+@k @T-54 (1947) @.33 @near-para @13 @0
+
+2022-07-14
+
+Second Battle of El Alamein
+@K @T-54 (1947) @1.27 @Diag @0 @0
+@k @PT-76-57 @1.48 @Diag @17 @0
+@k @2S3M @1.99, 1.98 @Near-perp, diag @0,0 @0,0
+
+Eastern Europe
+@k @T-44 @1.13 @Diag @9 @0
+@kb @T-54 (1949) @.02 @Near-perp @0 @0
+
+Poland
+@k @Type 63-I @1.34, 1.34 @Perp, perp @30, 0 @0, 0
+@k @T-44-100 @.55, .55 @Diag, near-para @21, 0 @0, 0
+@k @IS-6 @1.13, 1.13 @Para, para @0,0 @0,0
+@k @T-44 @.86, .86 @Diag, diag @33, 0 @0,0
+
+2022-07-06
+
+Hurtgen Forest
+@k @ASU-85 @1.09, 1.09 @Near-perp, Near-perp @14, 0 @8, 0
+
+Hurtgen Forest
+@kb @T-54 (1947) @.59 @Diag @0 @0
+@k @T-54 (1947) @.88 @Diag @0 @0
+@k @T-54 (1947) @.14, .11 @Near-para, near-para @0, 0 @-7, 8
+@k @T-44-100 @.99 @Para @6 @0
+
+Middle East
+@k @ASU-85 @.95 @Near-para @0 @0
+@k @T-54 (1949) @.85 @Diag @0 @0
+@K @T-34-100 @.53, .53 @Near-perp, near-perp @-3, 0 @0, 0
+@k @ASU-85 @.03, .01 @Near-para, Para @42, -5 @-10, -10
+
+Normandy
+@k @T-54 (1949) @.44 @Diag @0 @30
+
+Finland
+@k @2S3M @1.08 @Para @5 @0
+
+Second Battle of El Alamein
+@k @PT-76B @2.21 @Near-perp @-6 @0
+
+2022-07-02
+
+American Desert
+@kb @IS-6 @.56 @Perp @0 @0
+@kb @T-54 (1949) @.61 @Near-perp @0 @0
+@k @T-54 (1949) @.48 @Near-para @0 @0
+@k @IS-6 @.33 @Diag @0 @0
+
+Middle East
+@k @IS-3 @.99 @Near-para @20 @0
+
+Eastern Europe
+@k @2S3M @.99 @Near-para @-4 @0
+@k @PT-76-57 @.99 @Near-perp @33 @0
+@K @2S3M @1.02 @Diag @0 @0
+@k @T-54 (1947) @.25 @Diag @0 @0
+
+Poland
+@kb @PT-76-57 @1.2 @Near-perp @0 @0
+@k @IS-4M @.8 @Near-para @0 @0
+@k @PT-76-57 @1.06 @daig @0 @0
+@k @PT-76 @.6 @Near-para @0 @0
+
+Normandy
+@k @T-44-100 @.04 @Near-perp @0 @0
+
+European Province
+@kb @ASU-85 @.01 @Near-perp @0 @0
+
+Fire Arc
+@kb @PT-76-57 @.85 @Near-perp @0 @0
+@k @PT-76-57 @1.04 @Near-para @0 @0
+@k @IS-6 @2.29, 2.29 @Near-perp, Near-para @11, -10 @0, 0
+@K @PT-76B @2.25 @Diag @0 @0
+
+2022-06-28
+
+Eastern Europe
+@k @T-44-100 @.03 @Near-para @4 @0
+
+Normandy
+@k @T-54 (1949) @.28 @Near-para @0 @0
+@K @IS-3 @.37 @Para @0 @0
+@k @2S3M @.5 @Near-para @11 @0
+@k @T-54 (1947) @.39 @Near-perp @24 @12
+@k @T-54 (1947) @.32 @Diag @0 @0
+
+Ground Zero
+@k @T-54 (1947) @.73, .72  @Near-perp, Near-perp @-6, 0 @0, 0
+
+2022-06-24
+
+Second Battle of El Alamein
+@k @T-54 (1947) @2.25 @Para @0 @0
+@K @IS-4M @2.7 @Para @0 @0
+
+Poland
+@k @T-54 (1947) @1.17 @Near-para @0 @0
+@kb @PT-76B @.07 @Diag @0 @18
+
+Second Battle of El Alamein [Battle]
+@k @SU-100P @1.31 @near-Perp @11 @0
+@k @IS-4M @1.3 @Diag @0 @0
+@kb @T-54 (1947) @.66 @Near-para @0 @20
+
+Finland
+@kb @T-54 (1947) @1.05 @Diag @0 @-5
+
+Mozdok
+@kb @PT-76-57 @.03 @Diag @26 @0
+@kb @T-44 @1.46 @Near-para @0 @0
+
+Berlin [Battle]
+@k @T-44-122 @.42 @Diag @26 @0
+@kb @T-54 (1949) @.01 @Near-perp @0 @0
+
+2022-06-22
+
+Eastern Europe
+@k @IS-3 @1.32 @DIag @0 @0
+
+Normandy [Battle]
+@k @PT-76B @.59 @Near-para @0 @9
+@k @T-54 (1947) @.61, .6 @Near-perp, perp @23, 0 @0, 0
+@k @BTR-ZD @.04 @Diag @11 @3
+@k @2S3M @.11 @Diag @3 @0
+@k @ASU-85 @.14, .14 @Diag, Diag @18, 0 @0, 0
+@k @T-54 (1951) @.44 @Para @10 @0
+@kb @PT-76B @.05 @Near-perp @0 @0
+@kb @2S3M @.62 @Near-para @0 @0
+
+Normandy
+@kb @T-54 (1949) @1.39 @Para @0 @0
+
+Ground Zero
+@k @T-54 (1949) @.59 @Near-para @0 @0
+
+Berlin [Battle]
+@k @IS-6 @.62 @Near-para @16 @0
+@k @IS-3 @.72 @Near-para @-3 @0
+@K @T-44-100 @.02 @Diag @0 @7
+@k @IS-4M @.06 @Near-para @0 @12
+@k @PT-76B @.19 @Para @0 @0
+
+2022-06-20
+
+Mozdok
+@k @T-54 (1949) @1.96, 1.96 @Near-perp, Diag  @6, 0 @0, 0
+@k @T-54 (1949) @.91, .91 @Diag, Near-para @18, 0 @0, 0
+
+Fire Arc
+@k @PT-76-57 @1.36 @Perp @0 @0
+@k @T-54 (1947) @1.23 @Perp  @0 @0
+
+2022-06-16
+
+Sands of Sinai
+@K @IS-6 @.86 @Diag @0 @0
+@k @ZSU-37 @1.33, 1.33 @near-perp, near-perp @18, 0 @0, 0
+@k @SU-100P @.66 @Diag @0 @0
+@k @ASU-85 @.65 @Para @0 @0
+
+Fulda
+@kb @IS-6 @.02 @Diag @0 @-10
+
+Fields of Poland
+@k @T-54 (1949) @.67 @Diag @0 @0
+@k @PT-76-57 @1.18, 1.18 @Perp, Perp @9, 0 @0, 0
+
+American Desert
+@k @T-54 (1949) @.71 @Near-para @0 @0
+@k @IS-4M @.36 @Near-perp @0 @0
+@k @Type 62 @.56 @Near-para @0 @0
+
+2022-06-12
+
+@kb @Typ 63 @.67 @Near-perp @0 @0
+@k @T-54 (1947) @.09 @Diag @0 @0
+@k @T-54 (1949) @.03 @Near-para @21 @0
+
+2022-06-04
+
+Mozdok
+@k @T-54 (1947) @1.78 @para @0 @0
+@k @T-54 (1947) @.02, .01 @Near-perp, near-perp @10, -3 @0, 0
+
+Hurtgen Forest
+@k @Obj. 268 @.5 @Perp @18 @0
+@k @T-54 (1949) @.23, .22  @near-para, Diag @0, 8 @4, 0
+@k @T-54 (1949) @.28 @para @0 @0
+@k @T-54 (1947) @.27, .28  @Para, Para @0, -9 @0, 0
+
+Hurtgen Forest
+@k @T-54 (1947) @.21 @Para @20 @0
+
+Mozdok
+@k @PT-76B @1.12 @near-Perp @10 @0
+@k @T-44-100 @1.65 @perp @0 @0
+
+Maginot
+@K @T-44-100 @1.65 @Para @0 @0
+@kb @T-44-100 @1.08 @Perp @0 @0
+
+Eastern Europe
+@kb @T-44-100 @.03 @Diag @0 @0
+
+2022-05-29
+
+Fulda
+@k @T-54 (1949) @1.5 @Diag @-7 @0
+@K @IS-6 @1.34 @Near-perp @19 @0
+@kb @ZSU-57 @.28 @Near-para @0 @5
+
+2022-05-27
+
+Eastern Europe
+@k @T-54 (1949) @.86 @Diag @0 @0
+@k @T-54 (1949) @1.14 @Near-para @0 @0
+@kb @SU-100 @1.15 @Near-perp @0 @2
+
+Alaska
+@k @T-44 @.62 @perp @9 @10
+@k @SU-100P @.65 @Perp @33 @8
+@k @T-54 (1949) @.62 @Perp @0 @0
+@k @IS-3 @.64 @Near-perp @14 @0
+
+2022-05-23
+
+Finland
+@K @IS-6 @.22 @Perp @20 @0
+
+El Alamein [Battle]
+@k @T-54 (1947) @.14 @Near-para @0 @0
+@k @T-54 (1947) @.73, .67  @Diag, Para @18, 14 @0, 0
+
+Poland
+@k @PT-76B @.69 @Para @40 @0
+@k @SU-100P @.76 @near-Perp, near-Perp @41, 0 @0, 0
+@K @PT-76B @.78 @Diag @28 @0
+@k @T-54 (1949) @.21 @Diag @5 @20
+@k @T-44-100 @.3 @Near-para @0 @0
+@k @T-54 (1949) @.66 @Diag @0 @0
+@k @ASU-85 @.3 @Diag @0 @0
+@kb @T-44-100 @.18 @Near-para @0 @14
+
+2022-05-19
+
+Poland [Battle]
+@k @T-54 (1947) @.71 @Para @0 @0
+@k @T-54 (1949) @1.2 @Perp @0 @0
+
+Hurtgen Forest
+@K @T-54 (1947) @.5 @Near-Perp @17 @0
+@k @T-44-100 @.64, .64 @Perp, Perp @18, 0 @0, 0
+@kb @PT-76B @.03 @Near-para @0 @0
 
 2022-05-07
 
