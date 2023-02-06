@@ -27,7 +27,12 @@ Normandy [Battle] wrong side
 Fields of Poland [Battle] wrong side
 Ardennes Domination
 
+2023-07-03
 
+Pradesh 1
+@k @T-54 @~1.6, 1.6 @Near-perp, near-perp 
+@k @Type 62 @~1.2 @Diag, diag
+@kb @PT-76-57 @~.1 @Diag @0 @0
 
 2023-02-03
 
