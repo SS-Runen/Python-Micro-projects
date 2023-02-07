@@ -48,10 +48,6 @@ Sands of Sinai [Battle]
 @k @PT-76B @1.2
 
 Fields of Poland (winter)
-@k @T-54 (1949) @~.1 @Near-para @0 @0
-@kb @T-54 (1947) @~.8 @Para @0 @0
-
-Fields of Poland (winter)
 @k @T-54 (1949) @~1.2, 1.2 @perp, Diag
 @k @PT-76B @~1.3 @Near-perp
 @k @PT-76B @~.7 @Perp

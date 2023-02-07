@@ -47,16 +47,6 @@ Red Desert
 
 2022-12-23
 
-Fields of Normandy [Battle]
-@k @M18 @.1, .1 @para, near-perp  @23, 0 @11, 0
-@k @M18 @.16 @Perp @28 @0
-@k @KV-85 @.55,  @Diag, Diag @5, 0 @0, 0
-@kb @T-34-85 Gai @.69 @Diag @0 @0
-
-Fields of Normandy [Domination]
-@k @M18 @.7, .7 @Para, Para @-1, 0 @0, 0
-@k @T-34-85 (D-5T) @.74 @near-para @-8 @0
-
 Poland [Domination]
 @k @T-34-85 Chinese @.57 @near-para @21 @0
 @K @ASU-57 @.78 @Para @0 @0
@@ -85,20 +75,7 @@ Fields of Normandy
 @k @T-34-85 (D-5T) @1.62 @diag @0 @0
 @kb @T-34-85 Gai @0.15 @Para @0 @0
 
-Red Desert
-@k @T-34 (Chinese) @.7 @Diag @0 @0
-
-2022-11-27
-
-American Desert
-@kb @T-34-85 @.13 @Near-perp @5 @0
-
 2022-09-29
-
-Ardennes
-@k @T-34-85 (D-5T) @.67 @near-perp @0 @0
-@k @SU-100Y @.47 @Diag @0 @0
-@K @M15 @.4 @Perp @0 @0
 
 Mozdok
 @k @M4A2 @1.37 @Diag @0 @0
@@ -107,13 +84,6 @@ Mozdok
 
 2022-06-02
 
-Berlin
-@k @T-34-85 @.62 @Para @-3 @0
-@kb @T-34-85 @.62 @near-para @0 @0
-
 Mozdok
 @k @M4A3E2 @1.95, 1.92 @Near-perp, Diag @32, 0 @0, 0
 @kb @M4A3 (76) W @1.79 @Near-para @0 @0
-
-Berlin [Battle]
-@k @T-34-85 .8 @Diag @0 @0
