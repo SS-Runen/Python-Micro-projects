@@ -8,6 +8,11 @@ Finland [Battle]
 
 Bounce at T-44 turret rear joint.
 
+2023-02-11
+
+Poland (winter)
+@k @T-54 (1949) @0.16 @Diag @0 @22
+
 2023-01-20
 
 Vision Bug: Tank Invisible to Conqueror Commander Turret

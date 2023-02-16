@@ -14,10 +14,11 @@ Alaska/Ground Zero no right base flank
 Carpathians
 Frozen Pass
 Stalingrad
-Sinai no flank rocks
+Red Desert
 Jungle
 Fulda mini
 Maginot mini
+Sinai no flank rocks
 European Province/Eastern Europe no windmill hill
 Abandoned Town
 American Desert [Domination]
@@ -25,6 +26,27 @@ Eastern Europe (Points all in central town)
 Berlin [Domination]
 Normandy [Battle] wrong side
 Ardennes Domination
+Finland [Battle]
+
+2023-02-15
+
+Sands of Sinai
+@k @Pvkv II @~1.8 @Para
+@kb @IS-1 @~1.6 Near-para @0 @0
+
+2023-02-09
+
+Mozdok
+@k @E.B.R. (1954) @.94 @Perp @0 @0
+@k @IS-1 @.71 @Near-perp @0 @0
+@k @Sherman VC @.36 @Near-perp @17 @0
+
+Hurtgen Forest [Battle]
+@k @IS-1 @1.01, 1.01 @near-Perp, near-perp @9, 0 @0, 0
+@k @T-34-85 @1.14, 1.14 @diag, diag @0, 0 @0, 0
+
+Mozdok [Battle]
+@k @T-34-85 @.92 @Near-para @-9 @0
 
 2023-02-03
 

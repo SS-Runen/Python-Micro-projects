@@ -14,6 +14,13 @@ Karthus, Udyr, 0, Jungle, L
 Karthus, Maokai, 0, Jungle, L
 Karthus, Evelyn, Jungle, 1, L
 Karthus, Nocturne, Jungle, 1, L
+Karthus, Shen, 1, Jungle, L
+Karthus, Lee Sin, 0, Jungle, L
+Karthus, Volibear, 1, Jungle, L
+Karthus, Viego, Jungle, 1, L
+Karthus, Skarner, Jungle, 1, L
+Karthus, Zac, Jungle, 1, L
+Karthus, Shaco, 0, Jungle, W
 Karthus, Graves, 0, Jungle, W
 Karthus, Kayn, 1, Jungle, W
 Karthus, Aatrox, 1, Jungle, W
@@ -31,15 +38,21 @@ Karthus, Nunu & Willump, Jungle, 0, W
 Karthus, Warwick, Jungle, 0, W
 Karthus, Zac, Jungle, 1, W
 Karthus, Amumu, Jungle, 0, W
+Karthus, Graves, Jungle, 1, W
 Quinn, Yasuo, 0, Top, L
 Quinn, Irelia, 1, Top, L
 Quinn, Lillia, 1, Top, W
 Anivia, Lux, 1, Mid, L
 Vladimir, Yasuo, 0, Mid, L
+Anivia, Ahri, 1, Mid, L
+Anivia, Aurelion Sol, 0, Mid, L
 Anivia, Aurelion Sol, 0, Mid, W
 Anivia, Irelia, 1, Mid, W
 Anivia, Yone, 0, Mid, W
 Anivia, Le Blanc, 1, Mid, W
 Anivia, Yasuo, 0, Mid, W
+Anivia, Irelia, 0, Mid, W
+Anivia, Gangplank, 0, Mid, W
+Anivia, Aurelion Sol, 0, Mid, W
 Lux@Zeri, Vel'Koz@Caitlyn, 0, Support, L
 Nami@Kai'Sa, Jhin@Lux, 1, Support, W

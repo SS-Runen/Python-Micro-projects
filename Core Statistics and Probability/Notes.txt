@@ -379,15 +379,18 @@ R - This symbol represents the proportion of change or variation in y (dependent
 
 Standard Error - This is the amount by which a sample mean will deviate around the source population mean. If the population mean is not provided, the sample mean may be used as a stand in but confidence and alpha must be calculated using a T-table.
 
+T-stat - The T-stat is the ratio of the coefficient to the standard error of the equation when the coefficient is used as the only predictor.
+
 When using linear regression to do a "point estimate" or estimate on one sample instance, make sure your data point is within the maximum and minimum of the training set. I.e, make sure your dependent variable value is within the range of the reference data set.
 
-- Confidence Intervals for Predicted Changes
+- Confidence Intervals for Predicted Changes in Y
+This is the confidence interval for a range of possible changes in Y compared to a certain reference value of a predictor.
+
 CI = y +|- T * Δx * (SE)
-y: Predicted value/output of the equation.
+y: Predicted value/output of the equation given x.
 T: T-stat. The number of standard errors from zero to the coefficient/slope.
 Δx: The amount of change to x from an arbitrary reference value.
-y: Predicted value for input x.
-SE: Standard error. s/sqrt(n) or σ/sqrt(n)
+SE: Standard error of the predictor variable.
 
 - Standardized Coefficients/Beta Weights
 The amount of standard deviations the dependent variable will change due to one standard deviation of change in the predictor variable. Each variable's respective standard deviation is used as a measure. According to StatisticsHowTo, it isn’t actually the coefficients that get standardized, but the variables. Betas are calculated by subtracting the mean from the variable and dividing by its standard deviation. This results in standardized variables having a mean of zero and a standard deviation of 1.
@@ -399,16 +402,16 @@ An f-statistic tells the predictive value the equation predictors have on the re
 - Standard Error for the Prediction of a Single Observation (Y)
 SE = Si * sqrt(1 + (1/n) + ((x - x̄)² / (s² * (n - 1))))
 SE = Si * sqrt(1 + (1/n) + ((x - x̄)^2 / (s^2 * (n - 1))))
-Si: Standard error of the equation.
+Si: Standard error of the equation. This is also s/sqrt(n) or σ/sqrt(n).
 n: Sample size, number of data points.
 x: Value of the predictor variable used in calculating the output y.
 x̄: Sample mean for the predictor variable x.
 s: Sample standard deviation for the predictor variable.
 
 - Confidence Interval Around a Prediction of a Single Observation(Y):
-CI = y +|- Ta * SE
+CI = y +|- T * SE
 
-The value of T is set by your degrees of freedom (n - # of coefficients) and alpha. An experiment with ten items and required confidence of 99% would require a T for 0.005 (for one tailed tests where a lower or upper limit is in the accepted range/excluded from alpha) or T for 0.01 given eight degrees of freedom.
+The value of T is set by your degrees of freedom (n - # of coefficients) and alpha. An experiment with ten items and required confidence of 99% would require a T for 0.005 (for two-tailed tests) or T for 0.01 (for one tailed tests where a lower or upper limit is in the accepted range/excluded from alpha) given eight degrees of freedom.
 
 The confidence interval assumes the prediction as the most likely value. It is the value around which the true measurable results of the predictor variable are normally distributed. If graphed, the prediction would be the center of the normal distribution "bell." Around it, on the x-axis, would be other potential values. Their probabilities would form the dumbbell curve or shape.
 

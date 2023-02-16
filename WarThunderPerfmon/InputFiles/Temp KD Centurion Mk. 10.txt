@@ -23,35 +23,91 @@ American Desert [Domination]
 Eastern Europe (Points all in central town)
 Normandy [Battle] friendly zone in town
 Fields of Poland [Battle] capture zones in town
-Fields of Poland (winter) no foxhole
 Fields of Poland no foxhole
 Fulda mini
 Maginot mini
-Red Desert no B coverage from platform
+Red Desert
+Fields of Poland (winter)
 American Desert no hill platform/domination
 Sinai no elevated flank rocks platform
+Battle of Hurtgen Forest [Battle] zones in town
+Finland
 
-2023-07-03
+2023-02-15
+
+Sands of Sinai
+@k @T-44-100 @~1.9 @Perp @0 @0
+@k @T-34-100 @~1 @Diag
+@k @T-44-100 @~1 @Perp @0 @0
+@k @T-34-100 @~1.8 @Perp
+
+Fields of Normandy [Battle]
+@k @IS-4M @~1.1 @Para @0 @0
+@k @T-54 (1949) @~.3 @Perp @0 @0
+
+Hurtgen Forest
+@k @PT-76-57 @~.2
+@k @T-54 (1949) @~1 @0 @0
+@k @PT-76B @~.03 @Para
+
+Battle of Hurtgen Forest [Battle]
+@kb @IS-4M @~1.6 @Near-perp @0 @0
+@k @IS-4M @~.6 @Para @0 @0
+@k @2S3M @~.8 @Para @0 @0
+@k @IS-3 @~1.3 @Near-para
+
+Mozdok
+@k @IS-4M @~.8 @Near-para @0 @0
+@k @T-44-100 @.9 @Para @0 @0
+@k @PT-76B @~2.1 @Near-para @0 @0
+
+2023-02-11
+
+Poland (winter)
+@k @PT-76B @1.57 @para @0 @0
+@k @T-54 (1947) @.39, .21 @Near-para, near-para @27, 21 @0, 0
+
+Fields of Poland
+@kb @IS-4M @.28 @Diag @0 @0
+
+Poland (winter)
+@k @Obj 258 @1.24 @Diag @0 @0
+@kb @T-54 (1949) @0.1 @Near-para @0 @0
+
+Pradesh
+@k @T-54 (1947) @1.87, 1.87 @Near-perp, near-perp @0, 0 @0, 0
+@k @BTR-152A @1.64 @Diag @0 @0
+
+Pradesh
+@k @T-54 (1949) @1.75 @Diag @0 @0
+
+Pradesh
+@k @PT-76B @1.51 @Diag @0 @0
+@kb @T-54 (1949) @1.36 @Diag @0 @0
+
+Sands of Sinai
+@k @2S3M @1.67 @Diag @0 @0
+@k @PT-76B @2.07, 2.07 @Near-perp, near-perp @35, 0 @0, 0
+
+Second Battle of El Alamein
+@k @SU-100P @1.27 @Near-perp @0 @0
+@k @IS-3 @1.71 @Near-para @0 @0
+
+2023-02-07
 
 Middle East
-@k T-54 (1949) @~.8 @Near-para
-@k @IS-6 @~.2 @Diag @0 @0
-@kb @IS-6 @~.2 @Diag
-@kb @PT-76-57 @~.05 @Near-perp
+@k T-54 (1949) @.89 @Near-para @29, 0
+@k @IS-6 @.4 @Diag @0 @14
+@kb @IS-6 @.53 @Diag @0 @10
+@kb @PT-76-57 @.15 @diag @13 @0
 
 Eastern Europe
-@kb @IS-4M @~1
-@kb @Obj 268 @~.8
+@kb @IS-4M @1.03 @Near-para @-6 @0
+@kb @Obj 268 @.68 @Near-para @0 @0
 
 Sands of Sinai [Battle]
-@k @Type 62 @.8
-@k @PT-76B @1.2
-
-Fields of Poland (winter)
-@k @T-54 (1949) @~1.2, 1.2 @perp, Diag
-@k @PT-76B @~1.3 @Near-perp
-@k @PT-76B @~.7 @Perp
-@k @T-54 (1947) @~.8 @Perp, diag
+@k @Type 62 @.85 @Diag @27 @0
+@k @PT-76B @1.32 @para @0 @0
 
 Second Battle of El Alamein
 @k @T-34-100 @1.64, 1.64 @near-Perp, near-perp @0, 0 @0, 0
@@ -184,9 +240,6 @@ Pradesh
 @k @ASU-85 @1.8 @Near-para @0 @0
 
 2023-01-02
-
-Pradesh
-@k @IS-4M
 
 Pradesh
 @k @T-54 (1949) @1.55, 1.55 @Diag, diag @0, 0 @0, 0
