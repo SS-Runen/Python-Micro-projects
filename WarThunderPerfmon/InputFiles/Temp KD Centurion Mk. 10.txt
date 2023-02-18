@@ -50,11 +50,17 @@ Hurtgen Forest
 @k @T-54 (1949) @~1 @0 @0
 @k @PT-76B @~.03 @Para
 
+BUG: Building destruction not displayed
+https://warthunder.com/en/tournament/replay/36135368042739973
+21:30
+Third from last replay buffer.
 Battle of Hurtgen Forest [Battle]
-@kb @IS-4M @~1.6 @Near-perp @0 @0
-@k @IS-4M @~.6 @Para @0 @0
-@k @2S3M @~.8 @Para @0 @0
-@k @IS-3 @~1.3 @Near-para
+@kb @IS-4M @1.71 @Near-perp @0 @-5
+@k @IS-4M @.57 @Para @-3 @0
+@k @2S3M @.7 @Para @0 @0
+@k @IS-3 @1.3 @Near-para @10 @0
+@k @PT-76-57 @1.41, 1.41 @Perp, Para @17, 0 @0, 0
+@k @IS-6 @.42 @near-para @11 @0
 
 Mozdok
 @k @IS-4M @~.8 @Near-para @0 @0

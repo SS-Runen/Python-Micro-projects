@@ -5,8 +5,28 @@ Abandoned Factory
 Advnace to the Rhine
 Campania
 Finland [Battle]
+Second Battle of El Alamein [Battle] no sniper mountain
 
 Bounce at T-44 turret rear joint.
+
+2022-02-17
+
+Finland
+@k @T-54 @~.9
+@k @SU-122-54 @~1
+
+Pradesh
+@k @T-54 (1951) @1.77, 1.77 @Diag, diag @-7, 0 @0, 0
+
+Sands of Sinai
+@k @T-54 (1949) @.91 @diag @0 @0
+
+European Province
+@k @Type 59 @1.2 @Perp @0 @0
+
+Hurtgen Forest
+@kb @T-54 (19451) @~.1
+@k @T-54 (1951) @~.03
 
 2023-02-11
 
