@@ -25,8 +25,18 @@ American Desert [Domination]
 Eastern Europe (Points all in central town)
 Berlin [Domination]
 Normandy [Battle] wrong side
+Poland (winter)
 Ardennes Domination
 Finland [Battle]
+Hurtgen Forest (clear view of C/right-side hills)
+Tunisia
+Kuban
+
+2023-02-21
+
+Poland (winter)
+@k @SU-152 @.82, .82 @Para, diag @0, 13 @0, 0
+@k @SU-152 @.74, .74 @near-Para, near-para @9, 0 @0, 0
 
 2023-02-15
 
