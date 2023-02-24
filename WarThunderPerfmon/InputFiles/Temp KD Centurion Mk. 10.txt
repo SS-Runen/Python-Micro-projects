@@ -33,13 +33,23 @@ Sinai no elevated flank rocks platform
 Battle of Hurtgen Forest [Battle] zones in town
 Finland
 
+2023-02-23
+
+Middle East
+@kb @Type 62 @1.13 @Perp @0 @32
+@k @T-54 (1949) @1.06 @diag @0 @0
+@k @BTR-152A @.72 @Perp @0 @0
+
+Fire Arc
+@k @T-54 (1947) @2.33 @near-para @0 @0
+
 2023-02-15
 
 Sands of Sinai
-@k @T-44-100 @~1.9 @Perp @0 @0
-@k @T-34-100 @~1 @Diag
-@k @T-44-100 @~1 @Perp @0 @0
-@k @T-34-100 @~1.8 @Perp
+@k @T-44-100 @2 @diag @0 @0
+@k @T-44-100 @.98, .98 @ner-perp, near-perp, 2, 0 @0, 0
+@k @T-34-100 @1.18 @near-para @24, 0 @0, 0
+@k @T-34-100 @1.99, 1.99  @Perp, near-perp @43, 0 @0, 0
 
 Fields of Normandy [Battle]
 @k @IS-4M @~1.1 @Para @0 @0

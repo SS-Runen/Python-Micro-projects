@@ -3,12 +3,12 @@ Karthus@Senna, Twitch@Pyke, 1, BotCarry, L
 Karthus@Ashe, Miss Fortune@Seraphine, 0, BotCarry, L
 Karthus@Lux, Caitlyn@Swain, 1, BotCarry, L
 Caitlyn@Lux, Lucian@Sona, 1, BotCarry, L
+Xayah@Karma, Vayne@Seraphine, 0, BotCarry, L
 Tristana@Lulu, Ezreal@Pyke, 0, BotCarry, W
 Karthus@Morgana, Ezreal@Blitzcrank, 1, BotCarry, W
-Xayah@Karma, Vayne@Seraphine, 0, BotCarry, L
 Kindred, Diana, 0, Jungle, L
 Karthus, Jarvan IV, 1, Jungle, L
-karthus, Viego, 1, Jungle, L
+Karthus, Viego, 1, Jungle, L
 Karthus, Viego, 1, Jungle, L
 Karthus, Viego ,1, Jungle, L
 Karthus, Shaco, 1, Jungle, L
@@ -20,20 +20,21 @@ Karthus, Nocturne, Jungle, 1, L
 Karthus, Shen, 1, Jungle, L
 Karthus, Lee Sin, 0, Jungle, L
 Karthus, Volibear, 1, Jungle, L
-Karthus, Viego, Jungle, 1, L
-Karthus, Skarner, Jungle, 1, L
-Karthus, Zac, Jungle, 1, L
+Karthus, Viego, 1, Jungle, L
+Karthus, Skarner, 1, Jungle, L
+Karthus, Zac, 1, Jungle, L
 Karthus, Trundle, Jungle, 1, L
-Karthus, Kayne, Jungle, 1, L
-Karthus, Jarvan IV, Jungle, 1, L
-Karthus, Kayne, Jungle, 1, L
-Karthus, Kayne, Jungle, 1, W
+Karthus, Kayne, 1, Jungle, L
+Karthus, Jarvan IV, 1, Jungle, L
+Karthus, Kayne, 1, Jungle, L
+Karthus, Viego, 0, Jungle, L
+Karthus, Kayne, 1, Jungle, W
 Karthus, Shaco, 0, Jungle, W
 Karthus, Graves, 0, Jungle, W
 Karthus, Kayn, 1, Jungle, W
 Karthus, Aatrox, 1, Jungle, W
 Karthus, Brand, 1, Jungle, W
-karthus, Kayn, 1, Jungle, W
+Karthus, Kayn, 1, Jungle, W
 Karthus, Xin Zhao, 1, Jungle, W
 Karthus, Sett@Vi, 0, Jungle, W
 Karthus, Jarvan IV, 0, Jungle, W
@@ -42,22 +43,26 @@ Karthus, Lillia, 1, Jungle, W
 Karthus, Kha'Zix, 1, Jungle, W
 Karthus, Taliyah, 0, Jungle, W
 Karthus, Warwick, 1, Jungle, W
-Karthus, Nunu & Willump, Jungle, 0, W
-Karthus, Warwick, Jungle, 0, W
-Karthus, Zac, Jungle, 1, W
-Karthus, Amumu, Jungle, 0, W
-Karthus, Graves, Jungle, 1, W
-Karthus, Shaco, Jungle, 0, W
-Karthus, Maokai, Jungle, 1, W
-Karthus, Lee Sin, Jungle, 0, W
+Karthus, Nunu & Willump, 0, Jungle, W
+Karthus, Warwick, 0, Jungle, W
+Karthus, Zac, 1, Jungle, W
+Karthus, Amumu, 0, Jungle, W
+Karthus, Graves, 1, Jungle, W
+Karthus, Shaco, 0, Jungle, W
+Karthus, Maokai, 1, Jungle, W
+Karthus, Lee Sin, 0, Jungle, W
+Karthus, Mordekaiser, 0, Jungle, W
+Karthus, Viego, 0, Jungle, W
 Quinn, Yasuo, 0, Top, L
 Quinn, Irelia, 1, Top, L
 Quinn, Aatrox, 1, Top, L
 Quinn, Teemo, 1, Top, L
+Quinn, Gnar, 1, Top, L
 Quinn, Lillia, 1, Top, W
 Quinn, Warwick, 1, Top, W
 Quinn, Graves, 1, Top, W
 Quinn, Irelia, 1, Top, W
+Quinn, Riven, 1, Top, W
 Anivia, Lux, 1, Mid, L
 Vladimir, Yasuo, 0, Mid, L
 Anivia, Ahri, 1, Mid, L
@@ -66,7 +71,9 @@ Lux, Anivia, 0, Mid, L
 Anivia, Syndra, 0, Mid, L
 Anivia, Gangplank, 1, Mid, L
 Annie, Irelia, 0, Mid, L
-Karthus, Brand, Mid, 0, L
+Karthus, Brand, 0, Mid, L
+Anivia, Oriana, 1, Mid, L
+Anivia, Zed, 1, Mid, L
 Anivia, Aurelion Sol, 0, Mid, W
 Anivia, Irelia, 1, Mid, W
 Anivia, Yone, 0, Mid, W
@@ -75,7 +82,8 @@ Anivia, Yasuo, 0, Mid, W
 Anivia, Irelia, 0, Mid, W
 Anivia, Gangplank, 0, Mid, W
 Anivia, Aurelion Sol, 0, Mid, W
-Anivia, Zed, 0, 1, W
+Anivia, Sylas, 1, Mid, W
+Anivia, Zed, 1, Mid, W
 Lux@Zeri, Vel'Koz@Caitlyn, 0, Support, L
 Nami@Kai'Sa, Jhin@Lux, 1, Support, W
 Samira@Sona, Kai'Sa@Soraka, 0, Support, L

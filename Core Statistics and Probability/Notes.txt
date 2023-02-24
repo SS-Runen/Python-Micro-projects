@@ -240,9 +240,9 @@ Var(X + Y) = σx^2 + σy^2 + 2Cov(X, Y)
 Variance of X - Y:
 σ^2 = σx^2 + σy^2 - 2Cov(X, Y)
 
-In the last two equations:
-σx - SD of x
-σy - SD of y
+For the variance of X +/- Y:
+σx: SD of x
+σy: SD of y
 
 Weighted Variance of the sum of X and Y:
 σ^2(aX + bY) = (a^2 * σx^2) + (b^2 * σy^2) + 2*a*b*Cov(X, Y)
@@ -386,8 +386,8 @@ When using linear regression to do a "point estimate" or estimate on one sample 
 - Confidence Intervals for Predicted Changes in Y
 This is the confidence interval for a range of possible changes in Y compared to a certain reference value of a predictor.
 
-CI = y +|- T * Δx * (SE)
-y: Predicted value/output of the equation given x.
+CI = Δy +|- T * Δx * (SE)
+Δy: Predicted change in value/output of the equation given Δx from x.
 T: T-stat. The number of standard errors from zero to the coefficient/slope.
 Δx: The amount of change to x from an arbitrary reference value.
 SE: Standard error of the predictor variable.
@@ -452,5 +452,4 @@ https://www.digitalocean.com/community/tutorials/how-to-install-python-3-and-set
 
 - To use an environment, navigate to the environments folder and enter this command:
 source ./bin/activate
-
 

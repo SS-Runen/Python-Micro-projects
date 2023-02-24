@@ -12,8 +12,8 @@ Bounce at T-44 turret rear joint.
 2022-02-17
 
 Finland
-@k @T-54 @~.9
-@k @SU-122-54 @~1
+@k @T-54 @.96 @Near-para @0 @0
+@k @SU-122-54 @1.11 @Diag @21 @0
 
 Pradesh
 @k @T-54 (1951) @1.77, 1.77 @Diag, diag @-7, 0 @0, 0
@@ -60,8 +60,6 @@ Second Battle of El Alamein [Domination]
 @k @WZ305 @1.45 @Near-para @0 @0
 @k @T-54 (1947) @2.57 @Diag @0 @0
 @k @T-54 (1947) @1.68 @Para @5 @0
-
-2022-12-27
 
 2022-12-21
 
