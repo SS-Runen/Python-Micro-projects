@@ -52,13 +52,8 @@ Sands of Sinai
 @k @T-34-100 @1.99, 1.99  @Perp, near-perp @43, 0 @0, 0
 
 Fields of Normandy [Battle]
-@k @IS-4M @~1.1 @Para @0 @0
-@k @T-54 (1949) @~.3 @Perp @0 @0
-
-Hurtgen Forest
-@k @PT-76-57 @~.2
-@k @T-54 (1949) @~1 @0 @0
-@k @PT-76B @~.03 @Para
+@k @IS-4M @1.28 @Para @0 @0
+@k @T-54 (1949) @.61 @Perp @0 @0
 
 BUG: Building destruction not displayed
 https://warthunder.com/en/tournament/replay/36135368042739973
@@ -73,9 +68,9 @@ Battle of Hurtgen Forest [Battle]
 @k @IS-6 @.42 @near-para @11 @0
 
 Mozdok
-@k @IS-4M @~.8 @Near-para @0 @0
-@k @T-44-100 @.9 @Para @0 @0
-@k @PT-76B @~2.1 @Near-para @0 @0
+@k @IS-4M @.67 @Near-para @0 @0
+@k @T-44-100 @.83, .84  @Para, para @-11, 0 @0, 0
+@k @PT-76B @2.15 @diag @0 @0
 
 2023-02-11
 

@@ -8,9 +8,6 @@ Sinai [Battle]
 
 2022-11-22
 
-Ardennes
-@k @BMP-3 @~.8 @Perp @0 @0
-
 Normandy
 @kb @2S25 @.03 @Diag @0 @0
 @kb @T-55AMD-1 @.07 @Near-para @0 @0

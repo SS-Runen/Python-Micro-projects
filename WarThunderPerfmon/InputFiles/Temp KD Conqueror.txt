@@ -7,9 +7,23 @@ Campania
 Finland [Battle]
 Second Battle of El Alamein [Battle] no sniper mountain
 
-Bounce at T-44 turret rear joint.
+2023-02-25
 
-2022-02-17
+Pradesh
+@k @WZ305 @~1.6 @Near-para @
+
+Conqueror Vision Bug Repeat
+https://warthunder.com/en/tournament/replay/39846181133024979
+10:08
+Second Battle of El Alamein
+@k @ZTZ59A @1.11 @Diag @38 @0
+@k @SU-122-54 @1.76, 1.76 @diag, diag @0, 0 @0, 0
+@k @T-54 (1949) @1.42 @diag @0 @0
+@k @T-54 (1951) @1.22 @Diag @22 @0
+@k @T-54 (1947) @1.23, 1.24 @Diag, diag @6, 0 @0, 0
+@k @2S3M @1.44, 1.43 @diag, para @37, 0 @0, 0
+
+2023-02-17
 
 Finland
 @k @T-54 @.96 @Near-para @0 @0
@@ -25,8 +39,8 @@ European Province
 @k @Type 59 @1.2 @Perp @0 @0
 
 Hurtgen Forest
-@kb @T-54 (19451) @~.1
-@k @T-54 (1951) @~.03
+@kb @T-54 (19451) @.1 @Para @0 @0
+@k @T-54 (1951) @.03 @Near-perp @0 @0
 
 2023-02-11
 
