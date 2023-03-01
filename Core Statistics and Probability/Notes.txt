@@ -434,6 +434,36 @@ Homoscedasticity - There is no trend in the size/magnitude of the residuals. One
 
 Normality of Error Distribution - The actual values of the observations should be clustered around the best-fit line. Residuals with very high absolute values should be rare.
 
++++++++++++++++++++
+Multiple Regression
+
+Dummy Variables
+????????????????
+I have questions about how the coefficient of each dummy variable is calculated and about multicollinearity.
+To begin, I'll use the restaurant problem from the single linear regression problem set.
+It is given that prediction values (y) using the entree coefficient (x) deviate by 0.111 (standard error, SE) on average from the correct value.
+It's also given that the coefficient or optimized multiplier of the entree value is 0.625. This is the multiplier with the lowest equation SE.
+This are my assumptions:
+If the true coefficient of entree price is zero, the calculated coefficient will deviate around zero by the same amount as the equation SE.
+If entree price has no effect on alcohol sales, i.e. entree price' true coefficient is zero, its coefficient should be less than or equal to the SE.
+I assume that if x' true coefficient were zero, optimizing the coefficient of x would bring its coefficient close to the SE.
+There will always be unexplained or random errors in prediction values. Samples are imperfect. There could be hidden variables.
+An insignificant variable could get a coefficient close to the standard error since unexplained deviations are "blamed" or attributed to it.
+
+1. When using dummy values to represent a nominal variable, wouldn't the excluded encoding "transfer" its value to the included variables?
+Won't the effect of the missing dummy value be attributed to the value that happens to be encoded as 1?
+I'll use the example categories of customer referral source. Let's say the referrals by a friend have the highest positive effect on spending.
+Removing referrals from a friend would decrease consumer spending (y).
+Wouldn't regression mistakenly assign higher values to the encoded dummy value to compensate?
+
+2. I don't understand how to get the effect of the dummy variable relative to the ommitted variable.
+Is the regression equation done behind the scenes using the ommitted value?
+
+3. How does making a dummy value for all categorical values cause multicollinearity?
+How come omitting one value from the "encoding" avoids it?
+
+Time-lagged Variables
+
 +++++++++++++
 Miscellaneuos
 
