@@ -415,6 +415,8 @@ s: Sample standard deviation for the predictor variable.
 - Confidence Interval Around a Prediction of a Single Observation(Y):
 CI = y +|- T * SE
 
+The standard error of a single observation should be higher than the standard error of the equation.
+
 The value of T is set by your degrees of freedom (n - # of coefficients) and alpha. An experiment with ten items and required confidence of 99% would require a T for 0.005 (for two-tailed tests) or T for 0.01 (for one tailed tests where a lower or upper limit is in the accepted range/excluded from alpha) given eight degrees of freedom.
 
 The confidence interval assumes the prediction as the most likely value. It is the value around which the true measurable results of the predictor variable are normally distributed. If graphed, the prediction would be the center of the normal distribution "bell." Around it, on the x-axis, would be other potential values. Their probabilities would form the dumbbell curve or shape.
