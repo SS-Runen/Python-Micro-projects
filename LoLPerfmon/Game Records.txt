@@ -102,6 +102,7 @@ Anivia, Zed, 1, Mid, W
 Anivia, Zed, 0, Mid, W
 Anivia, Aurelion Sol, 0, Mid, W
 Anivia, Aurelion Sol, 0, Mid, W
+Cassiopoeia, Katarina, 0, Mid, W
 Lux@Zeri, Vel'Koz@Caitlyn, 0, Support, L
 Nami@Kai'Sa, Jhin@Lux, 1, Support, W
 Samira@Sona, Kai'Sa@Soraka, 0, Support, L
