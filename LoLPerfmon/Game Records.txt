@@ -5,6 +5,7 @@ Karthus@Lux, Caitlyn@Swain, 1, BotCarry, L
 Caitlyn@Lux, Lucian@Sona, 1, BotCarry, L
 Tristana@Maokai, Vayne@Ashe, 1, BotCarry, L
 Xayah@Karma, Vayne@Seraphine, 0, BotCarry, L
+Karthus@Zeri, Kai' Sa@Blitzcrank, 1, BotCarry, L
 Tristana@Lulu, Ezreal@Pyke, 0, BotCarry, W
 Karthus@Morgana, Ezreal@Blitzcrank, 1, BotCarry, W
 Xayah@Seraphine, Lucian@Zyray, 0, BotCarry, W
@@ -92,6 +93,9 @@ Anivia, Zed, 1, Mid, L
 Anivia, Fiddlesticks, 1, Mid, L
 Anivia, Vladimir, 1, Mid, L
 Anivia, Zed, 0, Mid, L
+Aurelion Sol, 1, Mid, L
+Anivia, Pantheon, 0, Mid, L
+Anivia, Sylas, 0, Mid, L
 Anivia, Aurelion Sol, 0, Mid, W
 Anivia, Irelia, 1, Mid, W
 Anivia, Yone, 0, Mid, W
@@ -107,7 +111,6 @@ Anivia, Aurelion Sol, 0, Mid, W
 Anivia, Aurelion Sol, 0, Mid, W
 Cassiopoeia, Katarina, 0, Mid, W
 Anivia, Brand, 0, Mid, W
-Anivia, Pantheon, 0, Mid,
 Lux@Zeri, Vel'Koz@Caitlyn, 0, Support, L
 Nami@Kai'Sa, Jhin@Lux, 1, Support, W
 Samira@Sona, Kai'Sa@Soraka, 0, Support, L
