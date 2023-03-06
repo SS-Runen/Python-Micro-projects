@@ -32,6 +32,13 @@ Hurtgen Forest (clear view of C/right-side hills)
 Tunisia
 Kuban
 
+2023-03-05
+
+Fields of Normandy
+@k @IS-1 @1.16 @diag @0 @0
+@kb @M4A1 Chinese @.62 @near-perp @0 @0
+@kb @M4A1 Chinese @.24 @near-perp @0 @0
+
 2023-02-21
 
 Poland (winter)

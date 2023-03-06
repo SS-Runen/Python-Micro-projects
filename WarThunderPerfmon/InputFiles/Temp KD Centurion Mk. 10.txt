@@ -32,8 +32,16 @@ American Desert no hill platform/domination
 Sinai no elevated flank rocks platform
 Battle of Hurtgen Forest [Battle] zones in town
 Finland
+Poland two points in town
 
 2023-03-03
+
+Poland
+@k @T-54 (1949) @~1.3 @Diag
+@kb @T-54 (1949) @~1.3 @near-perp
+
+Mozdok
+@k @T-54 (1949) @~1.9 @diag @0 @0
 
 European Province
 @k @SU-100P @~.8 @near-para

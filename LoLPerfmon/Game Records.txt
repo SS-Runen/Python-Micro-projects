@@ -7,6 +7,7 @@ Tristana@Maokai, Vayne@Ashe, 1, BotCarry, L
 Xayah@Karma, Vayne@Seraphine, 0, BotCarry, L
 Tristana@Lulu, Ezreal@Pyke, 0, BotCarry, W
 Karthus@Morgana, Ezreal@Blitzcrank, 1, BotCarry, W
+Xayah@Seraphine, Lucian@Zyray, 0, BotCarry, W
 Kindred, Diana, 0, Jungle, L
 Karthus, Jarvan IV, 1, Jungle, L
 Karthus, Viego, 1, Jungle, L
@@ -34,6 +35,7 @@ Karthus, Shaco, 0, Jungle, L
 Karthus, Warwick, 0, Jungle, L
 Karthus, Kayn, 1, Jungle, L
 Karthus, Kayn, 0, Jungle, L
+Karthus, Lee Sin, 0, Jungle, L
 Karthus, Kayne, 1, Jungle, W
 Karthus, Shaco, 0, Jungle, W
 Karthus, Graves, 0, Jungle, W
@@ -89,6 +91,7 @@ Anivia, Oriana, 1, Mid, L
 Anivia, Zed, 1, Mid, L
 Anivia, Fiddlesticks, 1, Mid, L
 Anivia, Vladimir, 1, Mid, L
+Anivia, Zed, 0, Mid, L
 Anivia, Aurelion Sol, 0, Mid, W
 Anivia, Irelia, 1, Mid, W
 Anivia, Yone, 0, Mid, W
@@ -103,6 +106,8 @@ Anivia, Zed, 0, Mid, W
 Anivia, Aurelion Sol, 0, Mid, W
 Anivia, Aurelion Sol, 0, Mid, W
 Cassiopoeia, Katarina, 0, Mid, W
+Anivia, Brand, 0, Mid, W
+Anivia, Pantheon, 0, Mid,
 Lux@Zeri, Vel'Koz@Caitlyn, 0, Support, L
 Nami@Kai'Sa, Jhin@Lux, 1, Support, W
 Samira@Sona, Kai'Sa@Soraka, 0, Support, L
