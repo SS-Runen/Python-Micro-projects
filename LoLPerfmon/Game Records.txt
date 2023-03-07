@@ -37,6 +37,7 @@ Karthus, Warwick, 0, Jungle, L
 Karthus, Kayn, 1, Jungle, L
 Karthus, Kayn, 0, Jungle, L
 Karthus, Lee Sin, 0, Jungle, L
+Karthus, Kai Sa, 0, Jungle, L
 Karthus, Kayne, 1, Jungle, W
 Karthus, Shaco, 0, Jungle, W
 Karthus, Graves, 0, Jungle, W
