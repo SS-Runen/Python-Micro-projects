@@ -1,3 +1,16 @@
+Jungle
+xx
+oo
+
+Support
+o
+
+ADC
+xx
+
+Mid
+xx
+
 Champion, OpponentChampion, OpponentCouldCounterpick, Role, Result
 Karthus@Senna, Twitch@Pyke, 1, BotCarry, L
 Karthus@Ashe, Miss Fortune@Seraphine, 0, BotCarry, L
@@ -69,6 +82,7 @@ Karthus, Trundle, 1, Jungle, W
 Karthus, Sejuani, 0, Jungle, W
 Karthus, Lee Sin, 1, Jungle, W
 Karthus, Nunu & Willump, 0, Jungle, W
+Karthus, Kayn, 0, Jungle, W
 Quinn, Yasuo, 0, Top, L
 Quinn, Irelia, 1, Top, L
 Quinn, Aatrox, 1, Top, L
@@ -113,6 +127,7 @@ Anivia, Aurelion Sol, 0, Mid, W
 Cassiopoeia, Katarina, 0, Mid, W
 Anivia, Brand, 0, Mid, W
 Lux@Zeri, Vel'Koz@Caitlyn, 0, Support, L
-Nami@Kai'Sa, Jhin@Lux, 1, Support, W
 Samira@Sona, Kai'Sa@Soraka, 0, Support, L
+Nami@Kai'Sa, Jhin@Lux, 1, Support, W
+Senna@Caitlyn, Kalista@Swain, 1, Support, W
 

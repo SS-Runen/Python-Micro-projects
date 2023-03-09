@@ -401,7 +401,7 @@ https://www.statisticshowto.com/standardized-beta-coefficient/
 P-value - A variables p-value is a decimal number expressing the chance of observing such a result assuming the null hypothesis is true, i.e. assuming that the variable is not statistically significant. In linear regression, the p-value is the chance that the variable coefficient is non-zero due to random chance. The variable does not have predictive power and has a true coefficient of zero. If your p-value is greater than your alpha or "critical value", the data does not pass your confidence level for the specific variable coefficient.
 
 - F-statistic
-An f-statistic tells the predictive value the equation predictors have on the result. It is the joint significance to the result for a group of variables. The "significance of f" is similar to the p-value. The significance F is the probability that the null hypothesis in our regression model cannot be rejected. I.e., it indicates the probability that all the coefficients in our regression output are actually zero.
+An f-statistic tells the predictive value the equation predictors have on the result. It is the joint significance to the result for a group of variables. The "significance of f" is similar to the p-value. The significance F is the probability that the null hypothesis in our regression model cannot be rejected, i.e., it indicates the probability that all the coefficients in our regression output are actually zero.
 
 - Standard Error for the Prediction of a Single Observation (Y)
 SE = Si * sqrt(1 + (1/n) + ((x - x̄)² / (s² * (n - 1))))
@@ -482,7 +482,6 @@ https://phoenixnap.com/kb/how-to-install-python-3-ubuntu
 
 - Create a virtual environment. Do not do anything past creating an environment.
 https://www.digitalocean.com/community/tutorials/how-to-install-python-3-and-set-up-a-local-programming-environment-on-ubuntu-20-04
-
 
 - Install helper modules, especially pip.
 
