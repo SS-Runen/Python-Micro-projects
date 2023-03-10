@@ -1,15 +1,25 @@
 Jungle
-xx
 oo
+xx
+Last Game:
+GLD-PLYRS
+87397-TSRBS-RpsYB
+
+Mid
+xxx
+o
+
+Top
 
 Support
-o
+
+
+Last Game:
+50554-SeoQS-TCTRR
 
 ADC
 xx
 
-Mid
-xx
 
 Champion, OpponentChampion, OpponentCouldCounterpick, Role, Result
 Karthus@Senna, Twitch@Pyke, 1, BotCarry, L
@@ -51,6 +61,7 @@ Karthus, Kayn, 1, Jungle, L
 Karthus, Kayn, 0, Jungle, L
 Karthus, Lee Sin, 0, Jungle, L
 Karthus, Kai Sa, 0, Jungle, L
+Karthus, Nocturne, 1, Jungle, L
 Karthus, Kayne, 1, Jungle, W
 Karthus, Shaco, 0, Jungle, W
 Karthus, Graves, 0, Jungle, W
@@ -83,6 +94,7 @@ Karthus, Sejuani, 0, Jungle, W
 Karthus, Lee Sin, 1, Jungle, W
 Karthus, Nunu & Willump, 0, Jungle, W
 Karthus, Kayn, 0, Jungle, W
+Karthus, Hecarim, 1, Jungle, W
 Quinn, Yasuo, 0, Top, L
 Quinn, Irelia, 1, Top, L
 Quinn, Aatrox, 1, Top, L
