@@ -34,6 +34,18 @@ Battle of Hurtgen Forest [Battle] zones in town
 Finland
 Poland two points in town
 
+2023-03-11
+
+Battle of Hurtgen Forest
+@k @Type 62 @1.23 @Perp @15 @0
+@k @T-54 (1949) @1.32, 1.32 @Diag, near-para @8, 0 @0, 0
+@k @T-54 (1947) @1.19 @para @0 @0
+@k @Type 63 @.32 @Diag @0 @0
+@k @T-44-100 @.22, .22 @Near-para, para @19, 0 @6, 0
+
+Pradesh 2
+@k @IS-3 @~1.7, 1.6 @Perp, Diag @
+
 2023-03-03
 
 Poland

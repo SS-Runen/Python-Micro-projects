@@ -1,7 +1,7 @@
 Jungle
-oo
-xx
-Last Game:
+x
+
+Bookmark Game:
 GLD-PLYRS
 87397-TSRBS-RpsYB
 
@@ -12,9 +12,9 @@ o
 Top
 
 Support
+o
 
-
-Last Game:
+Bookmark Game:
 50554-SeoQS-TCTRR
 
 ADC
@@ -62,6 +62,7 @@ Karthus, Kayn, 0, Jungle, L
 Karthus, Lee Sin, 0, Jungle, L
 Karthus, Kai Sa, 0, Jungle, L
 Karthus, Nocturne, 1, Jungle, L
+Karthus, Kha' Zix, 1, Jungle, L
 Karthus, Kayne, 1, Jungle, W
 Karthus, Shaco, 0, Jungle, W
 Karthus, Graves, 0, Jungle, W
