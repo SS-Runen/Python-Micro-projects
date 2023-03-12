@@ -1,16 +1,17 @@
 Jungle
 o
-x
-
-Bookmark Game:
-GLD-PLYRS
-87397-TSRBS-RpsYB
+xxx
 
 Mid
 xxx
 o
 
 Top
+
+
+
+Bookmark Game:
+44669-SNCMR-VRYSi
 
 Support
 o
@@ -64,6 +65,7 @@ Karthus, Lee Sin, 0, Jungle, L
 Karthus, Kai Sa, 0, Jungle, L
 Karthus, Nocturne, 1, Jungle, L
 Karthus, Kha' Zix, 1, Jungle, L
+Karthus, Diana, 0, Jungle, L
 Karthus, Kayne, 1, Jungle, W
 Karthus, Shaco, 0, Jungle, W
 Karthus, Graves, 0, Jungle, W
@@ -109,6 +111,7 @@ Quinn, Warwick, 1, Top, W
 Quinn, Graves, 1, Top, W
 Quinn, Irelia, 1, Top, W
 Quinn, Riven, 1, Top, W
+Quinn, Darius, 0, Top, W
 Anivia, Lux, 1, Mid, L
 Vladimir, Yasuo, 0, Mid, L
 Anivia, Ahri, 1, Mid, L
