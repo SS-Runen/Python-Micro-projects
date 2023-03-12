@@ -1,4 +1,5 @@
 Jungle
+o
 x
 
 Bookmark Game:
@@ -96,6 +97,7 @@ Karthus, Lee Sin, 1, Jungle, W
 Karthus, Nunu & Willump, 0, Jungle, W
 Karthus, Kayn, 0, Jungle, W
 Karthus, Hecarim, 1, Jungle, W
+Kindred, Kha' Zix, 0, Jungle, W
 Quinn, Yasuo, 0, Top, L
 Quinn, Irelia, 1, Top, L
 Quinn, Aatrox, 1, Top, L
