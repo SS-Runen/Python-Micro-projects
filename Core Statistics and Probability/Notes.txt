@@ -140,6 +140,9 @@ P (A ∩ B) = P(A) * P(B) ~ independent
 
 - Baye's Theorem
 P(B|A) = P(A|B)*P(B) / P(A)
+The probability of B given A is:
+The probability or proportion of A given B given/out of all B (P(A|B) * P(B)) all over/for every A (.../P(A)).
+In probability, division usually removes the divisor probability from the dividend probability.
 
 - Functions of Random Variables
 Given that the function expected value (μ) = b * X + a where a is a constant, and X is a random variable, μ is a linear equation. The equation standard deviation can be calculated by multiplying the absolute value of the equation's slope and the SD of X:
@@ -167,7 +170,7 @@ Expected Value of a Binomial Probability Distribution: P(x) * n
 
 Binomial Probability Distribution Table - This table lists the intersections between the number of trials, P, and x. It is a cumulative probability distribution. To get the probability for a specific x, take its cumulative probability and subtract the undesired outcomes. I.e, subtract the cumulative probability of the opposite "undesirable" condition. E.g.: if you need the probability of getting x >= 5, subtract the probability of getting x <= 4 from 1. If you need the probability of a specific x, say x = 5, subtract the probability of x <= 4 from the probability of x <= 5.
 
-Poisson Disribution Probability Mass and Cumulative Mass Function - Probability of getting x successes per some continuous unit, e.g. time or distance. To get the probability of x or less/more successes, simply sum the poisson distributions of x and below or x and above. The poisson distribution assumes uniformity of the intervals between success. If there is a reason for events or successes to occur with varying intervals - e.g. at a the end of 5 PM and during the first minutes of 8 AM - the poisson distribution cannot be used effectively.
+Poisson Distribution Probability Mass and Cumulative Mass Function - Probability of getting x successes per some continuous unit, e.g. time or distance. To get the probability of x or less/more successes, simply sum the poisson distributions of x and below or x and above. The poisson distribution assumes uniformity of the intervals between success. If there is a reason for events or successes to occur with varying intervals - e.g. at a the end of 5 PM and during the first minutes of 8 AM - the poisson distribution cannot be used effectively.
 
 ++++++++++++++++++++++++
 Continuous Distributions
