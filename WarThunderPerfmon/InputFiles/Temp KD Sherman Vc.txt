@@ -31,8 +31,13 @@ Finland [Battle]
 Hurtgen Forest (clear view of C/right-side hills)
 Tunisia
 Kuban
+Second Battle of El Alamein [Battle] (no view of own defense zone)
+Second Battle of El Alamein (No platform for gun depression)
 
+2023-03-17
 
+Finland
+@kb @IS-1 @0.73 @Diag @0 @0
 
 2023-03-05
 
