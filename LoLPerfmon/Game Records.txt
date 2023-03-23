@@ -22,6 +22,9 @@ xxx
 Cut Out Until Next Division
 
 ADC
+o
+x
+---
 ooo
 
 Bookmark Gold-Initials:
@@ -35,6 +38,7 @@ Caitlyn@Lux, Lucian@Sona, 1, BotCarry, L
 Tristana@Maokai, Vayne@Ashe, 1, BotCarry, L
 Xayah@Karma, Vayne@Seraphine, 0, BotCarry, L
 Karthus@Zeri, Kai' Sa@Blitzcrank, 1, BotCarry, L
+Xayah@Ashe, Jinx@Senna, 1, BotCarry, L
 Tristana@Lulu, Ezreal@Pyke, 0, BotCarry, W
 Karthus@Morgana, Ezreal@Blitzcrank, 1, BotCarry, W
 Xayah@Seraphine, Lucian@Zyra, 0, BotCarry, W
@@ -42,6 +46,7 @@ Xayah@Zyra, Vayne@Seraphine, 0, BotCarry, W
 Xayah@Swain, Sivir@Yuumi, 1, BotCarry, W
 Jinx@Thresh, Caitlyn@Nami, 0, BotCarry, W
 Xayah@Rakan, Nila@Thresh, 1, BotCarry, W
+Sivir@Zyra, Jinx@Lux, 0, BotCarry, W
 
 Kindred, Diana, 0, Jungle, L
 Karthus, Jarvan IV, 1, Jungle, L
