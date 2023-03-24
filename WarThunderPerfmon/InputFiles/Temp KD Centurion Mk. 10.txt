@@ -41,13 +41,13 @@ American Desert [Battle]
 @k @IS-4M @~.1 @Near-para
 
 Mozdok
-@k @ASU-85 @~1.5 @Perp
-@k @T-54 (1947) @~1.6 @Perp @0 @0
-@kb @SU-100P @~2 @Diag @0 @0
+@k @ASU-85 @1.59 @Perp @26 @0
+@k @T-54 (1947) @1.71 @Diag @0 @0
+@kb @SU-100P @1.83 @Diag @0 @0
 
 Pradesh
-@k @T-44-100 @~1.7 @Near-para @0 @0
-@k @PT-76-57 @~1.1 @near-para @0 @0
+@k @T-44-100 @1.79 @diag @9 @0
+@k @PT-76-57 @1.11 @near-para @0 @0
 
 2023-03-19
 
@@ -75,9 +75,9 @@ Middle East [Battle]
 @kb @T-54 (1949) @.12 @Near-para @0 @0
 
 Fields of Poland (winter) [Battle]
-@k @T-54 (1949) @~.2 @Perp
-@k @T-54 (1947) @~0.03, 0.02 @Perp, Near-perp
-@k @T-54 (1947) @~0.02 @Near-perp @0 @0
+@k @T-54 (1949) @.37 @Perp @8 @0
+@k @T-54 (1947) @0.05, 0.04 @Diag, diag @11, 18 @0, 17
+@k @T-54 (1947) @0.05 @Near-perp @0 @30
 
 2023-03-11
 
@@ -89,7 +89,7 @@ Battle of Hurtgen Forest
 @k @T-44-100 @.22, .22 @Near-para, para @19, 0 @6, 0
 
 Pradesh 2
-@k @IS-3 @~1.7, 1.6 @Perp, Diag @
+@k @IS-3 @1.76, 1.75 @Para, Diag @30, 0 @0, 0
 
 2023-03-03
 

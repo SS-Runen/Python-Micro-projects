@@ -7,8 +7,10 @@ xxx
 o
 
 Top
-oo
-x
+
+---
+ooo
+xx
 ---
 ooo
 xx
@@ -23,7 +25,10 @@ Cut Out Until Next Division
 
 ADC
 o
-x
+
+---
+ooo
+xx
 ---
 ooo
 
@@ -39,6 +44,7 @@ Tristana@Maokai, Vayne@Ashe, 1, BotCarry, L
 Xayah@Karma, Vayne@Seraphine, 0, BotCarry, L
 Karthus@Zeri, Kai' Sa@Blitzcrank, 1, BotCarry, L
 Xayah@Ashe, Jinx@Senna, 1, BotCarry, L
+Xayah@Rakan, Varus@Zyra, 1, BotCarry, L
 Tristana@Lulu, Ezreal@Pyke, 0, BotCarry, W
 Karthus@Morgana, Ezreal@Blitzcrank, 1, BotCarry, W
 Xayah@Seraphine, Lucian@Zyra, 0, BotCarry, W
@@ -47,6 +53,8 @@ Xayah@Swain, Sivir@Yuumi, 1, BotCarry, W
 Jinx@Thresh, Caitlyn@Nami, 0, BotCarry, W
 Xayah@Rakan, Nila@Thresh, 1, BotCarry, W
 Sivir@Zyra, Jinx@Lux, 0, BotCarry, W
+Jinx@Seraphine, Miss Fortune@Heimerdinger, 1, BotCarry W
+Xayah@Karma, Twitch@Lulu, 0, BotCarry, W
 
 Kindred, Diana, 0, Jungle, L
 Karthus, Jarvan IV, 1, Jungle, L
@@ -123,6 +131,8 @@ Quinn, Gnar, 1, Top, L
 Quinn, Yorick, 0, Top, L
 Quinn, Jax, 1, Top, L
 Quinn, Ornn, Top, 0, L
+Quinn, Darius, Top, 0, L
+Quinn, Malzahar, Top, 0, L
 Quinn, Lillia, 1, Top, W
 Quinn, Warwick, 1, Top, W
 Quinn, Graves, 1, Top, W
@@ -132,6 +142,7 @@ Quinn, Darius, 0, Top, W
 Quinn, Yasuo, 1, Top, W
 Quinn, Aatrox, 0, Top, W
 Quinn, Yasuo, 1, Top, W
+Quinn, Sejuani, 1, Top, W
 
 Anivia, Lux, 1, Mid, L
 Vladimir, Yasuo, 0, Mid, L
