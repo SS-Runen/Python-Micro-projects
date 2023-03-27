@@ -1,22 +1,15 @@
 Jungle
-o
-xxx
+
+Gold-Initials
+59146-ASHLP-SMKAv
 
 Mid
 xxx
 o
 
 Top
-
----
-ooo
-xx
----
-ooo
-xx
-
-Bookmark Gold-Initials:
-44669-SNCMR-VRYSi
+o
+xxx
 
 Support
 o
@@ -24,8 +17,8 @@ xxx
 Cut Out Until Next Division
 
 ADC
-o
-
+oo
+x
 ---
 ooo
 xx
@@ -45,6 +38,7 @@ Xayah@Karma, Vayne@Seraphine, 0, BotCarry, L
 Karthus@Zeri, Kai' Sa@Blitzcrank, 1, BotCarry, L
 Xayah@Ashe, Jinx@Senna, 1, BotCarry, L
 Xayah@Rakan, Varus@Zyra, 1, BotCarry, L
+Xayah@Soraka, Aphelios@Milio, 0, BotCarry, L
 Tristana@Lulu, Ezreal@Pyke, 0, BotCarry, W
 Karthus@Morgana, Ezreal@Blitzcrank, 1, BotCarry, W
 Xayah@Seraphine, Lucian@Zyra, 0, BotCarry, W
@@ -130,9 +124,12 @@ Quinn, Teemo, 1, Top, L
 Quinn, Gnar, 1, Top, L
 Quinn, Yorick, 0, Top, L
 Quinn, Jax, 1, Top, L
-Quinn, Ornn, Top, 0, L
-Quinn, Darius, Top, 0, L
-Quinn, Malzahar, Top, 0, L
+Quinn, Ornn, 0, Top, L
+Quinn, Darius, 0, Top, L
+Quinn, Malzahar, 0, Top, L
+Vayne, Olaf, 0, Top, L
+Akshan, Gangplank, 0, Top, L
+Kayle, Gangplank, 0, Top, L
 Quinn, Lillia, 1, Top, W
 Quinn, Warwick, 1, Top, W
 Quinn, Graves, 1, Top, W
@@ -143,6 +140,10 @@ Quinn, Yasuo, 1, Top, W
 Quinn, Aatrox, 0, Top, W
 Quinn, Yasuo, 1, Top, W
 Quinn, Sejuani, 1, Top, W
+Quinn, Malzahar, 1, Top, W
+Quinn, Riven, 1, Top, W
+Quinn, Zoe, 1, Top, W
+Quinn, Renekton, 1, Top, W
 
 Anivia, Lux, 1, Mid, L
 Vladimir, Yasuo, 0, Mid, L
