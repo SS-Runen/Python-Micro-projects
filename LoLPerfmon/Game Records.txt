@@ -1,11 +1,12 @@
 Jungle
-
-Gold-Initials
-59146-ASHLP-SMKAv
+o
+---
+xxx
 
 Mid
-xxx
-o
+
+Gold-Initials
+49896-kCSFM-UDYPD
 
 Top
 o
@@ -81,7 +82,10 @@ Karthus, Lee Sin, 0, Jungle, L
 Karthus, Kai Sa, 0, Jungle, L
 Karthus, Nocturne, 1, Jungle, L
 Karthus, Kha' Zix, 1, Jungle, L
+Karthus, Aurelion Sol, 0, Jungle, L
 Karthus, Diana, 0, Jungle, L
+Karthus, Udyr, 0, Jungle, L
+Karthus, Amumu, 1, Jungle, L
 Karthus, Kayne, 1, Jungle, W
 Karthus, Shaco, 0, Jungle, W
 Karthus, Graves, 0, Jungle, W
@@ -116,6 +120,7 @@ Karthus, Nunu & Willump, 0, Jungle, W
 Karthus, Kayn, 0, Jungle, W
 Karthus, Hecarim, 1, Jungle, W
 Kindred, Kha' Zix, 0, Jungle, W
+Karthus, Renggar, 0, Jungle, 
 
 Quinn, Yasuo, 0, Top, L
 Quinn, Irelia, 1, Top, L
