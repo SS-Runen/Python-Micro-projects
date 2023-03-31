@@ -34,6 +34,15 @@ Battle of Hurtgen Forest [Battle] zones in town
 Finland
 Poland two points in town
 
+2023-03-31
+
+Poland
+@k @T-54 (1949) @1.5, 1.5 @Para, Para @7, 0 @0, 0
+@k @T-54 (1949) @1.6 @near-perp @0 @0
+@k @Obj 268 @1.49, 1.49 @Para, Para @6, 0 @0, 0
+@k @M53/59 @1.61 @near-para @0 @0
+@k @T-54 (1947) @1.27, 1, 0.55 @Near-para, diag, near-perp @0, 26, 0 @0, 0, 0
+
 2023-03-23
 
 American Desert [Battle]

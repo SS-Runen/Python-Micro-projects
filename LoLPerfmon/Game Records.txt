@@ -19,6 +19,8 @@ xxx
 Cut Out Until Next Division
 
 ADC
+o
+xx
 ---
 ooo
 x
@@ -42,6 +44,8 @@ Karthus@Zeri, Kai' Sa@Blitzcrank, 1, BotCarry, L
 Xayah@Ashe, Jinx@Senna, 1, BotCarry, L
 Xayah@Rakan, Varus@Zyra, 1, BotCarry, L
 Xayah@Soraka, Aphelios@Milio, 0, BotCarry, L
+Jinx@Zyra, Kai'Sa@Milio, 1, BotCarry, L
+Jinx@Seraphine, Caitlyn@Zyra, 0, BotCarry, L
 Tristana@Lulu, Ezreal@Pyke, 0, BotCarry, W
 Karthus@Morgana, Ezreal@Blitzcrank, 1, BotCarry, W
 Xayah@Seraphine, Lucian@Zyra, 0, BotCarry, W
@@ -52,6 +56,7 @@ Xayah@Rakan, Nila@Thresh, 1, BotCarry, W
 Sivir@Zyra, Jinx@Lux, 0, BotCarry, W
 Jinx@Seraphine, Miss Fortune@Heimerdinger, 1, BotCarry W
 Xayah@Karma, Twitch@Lulu, 0, BotCarry, W
+Tristana@Blitzcrank, Jhin@Milio, 0, BotCarry, W
 
 Kindred, Diana, 0, Jungle, L
 Karthus, Jarvan IV, 1, Jungle, L
@@ -185,6 +190,7 @@ Anivia, Aurelion Sol, 0, Mid, W
 Cassiopoeia, Katarina, 0, Mid, W
 Anivia, Brand, 0, Mid, W
 Anivia, Akali, 0, Mid, W
+Anivia, Veigar, 0, Mid, W
 
 Lux@Zeri, Vel'Koz@Caitlyn, 0, Support, L
 Samira@Sona, Kai'Sa@Soraka, 0, Support, L
