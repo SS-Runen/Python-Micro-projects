@@ -4,6 +4,7 @@ General Procedures
 -- Procedure When There are Too Many Missing Values
 - Run a simulation that includes a sample size value
 - When operating on percentages without any unit change (e.g. percentage to decimal), keep the unit symbol, as in 20% * 0.05 when getting 5% of 20% and expressing the final answer in percentage (1%).
+- When possible, use 0 (zero) as the replacement or stand-in value for variables you assume to be the same or insignificant. When certain values are not given but are said to be equal, zero should be their default value.
 
 -- Interpreting Questions and Fitting to Formulas
 - Check for "domain knowledge" or other circumstances that could change the values or formulas you need.
