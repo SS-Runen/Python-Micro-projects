@@ -8,26 +8,21 @@ Finland [Battle]
 Second Battle of El Alamein [Battle] no sniper mountain
 Poland two points in town
 
-2023-03-25
+2023-04-02
 
-Second Battle of El Alamein
-@k @T-54 @~1.6 @Diag @0 @0
-@k @T-54 @~1.3 @Diag @0 @0
-@k @T-54 @~.1 @Diag 
-@kb @T-54 @~.1 @perp 
-@kb @T-54 @~1.2 @Perp
+Pradesh
+@k @ZSU-57-2 @1.76 @near-perp @27 @0
 
-Hurtgen Forest
-@k @T-54
-@k @ZSU-37-2 @~.1
-@kb @ZTZ-59 @~.01
+Normandy
+@k @BTR-ZD @.6 @0 @0
+@k @Type 62 @1 @Diag
 
-Fire Arc
-@kb @2S3M @~1.3 @Para @0 @0
-
-Hurtgen Forest
-@kb @ZTZ59 @.01 @Near-perp @0 @0
-@kb @T-54 (1947) @~.8 @Diag @0 @0
+Normandy
+@k @T-54 @~.8 @Diag
+@k @T-54 (1947) @~.3
+@k @T-54 @~0.03
+@k @T-54 @~.2 @Near-perp
+@kb @T-54 (1947) @~.03 @Diag @0 @0
 
 2023-03-19
 
