@@ -1,21 +1,22 @@
 Jungle
-
+o
+xxx
 ---
 ooo
 x
 ---
-Gold-Initials
-60550-oSTCz-ciSAj
+Cut out until Karthus or Kindred are A or higher in low elo tier list.
 
 Mid
 oo
 xxx
 
 Top
-
 ---
 o
 xxx
+GLD-INITS
+41908-SLpUA-nSPEP
 
 Support
 o
@@ -95,6 +96,8 @@ Karthus, Udyr, 0, Jungle, L
 Karthus, Amumu, 1, Jungle, L
 Karthus, Renggar, 0, Jungle, L
 Evelyn, Lee Sin, 1, Jungle, L
+Karthus, Udyr, 1, Jungle, L
+Kindred, Shen, 0, Jungle, L
 Karthus, Kayne, 1, Jungle, W
 Karthus, Shaco, 0, Jungle, W
 Karthus, Graves, 0, Jungle, W
@@ -130,6 +133,7 @@ Karthus, Kayn, 0, Jungle, W
 Karthus, Hecarim, 1, Jungle, W
 Kindred, Kha' Zix, 0, Jungle, W
 Karthus, Wukong, 1, Jungle, W
+Karthus, Lee Sin, 0, Jungle, W
 
 Quinn, Yasuo, 0, Top, L
 Quinn, Irelia, 1, Top, L
