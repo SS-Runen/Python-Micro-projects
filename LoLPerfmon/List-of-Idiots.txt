@@ -75,6 +75,10 @@ AyessaJoy - Despite being Gold IV with 28 wins, this player picked Ashe support 
 
 mhozo004 - This unranked player picked Teemo mid in Gold elo. He disconnected at 10 minutes then reconnected later without helping push, take objectives, or do anything.
 
+RorouniKimchi - This player asked to swap roles out of JNG. He accepted support and picked MF with barrier. They still lost to a Jinx-Amumu. During the last fight, MF stood still to allow the enemy to end.
+
+dako akong o10 - Ekko. This player sold all his items and stood in the Nexus for at least ten minutes so that we would lose. There was still a chance to win since the kills and minions looked even. He was also leading by fifteen kills.
+
 -------------
 Low Priority:
 
@@ -85,3 +89,5 @@ Nice One Love U - As Yasuo, he lost lane to a Kassadin after one visit from the 
 Beyond Rage - This player picked Milio without having any master or hours played on it. He got a 0-9-9 KDA and still blamed us for losing despite the Vayne being fed. The Evelyn and Qiyana got at least one kill each bot lane.
 
 Shawntell - After his support died to our invade and he died in lane around five minutes later, he fed two kills. One was an execute while wasting his heal, the other was by walking up and not attacking.
+
+A Class Lhenel - As Jhin, this player stood still for five to ten minutes just so we would lose our Nexus.

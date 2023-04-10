@@ -12,6 +12,11 @@ oo
 xxx
 
 Top
+
+xx
+---
+xx
+ooo
 ---
 o
 xxx
@@ -148,6 +153,10 @@ Quinn, Malzahar, 0, Top, L
 Vayne, Olaf, 0, Top, L
 Akshan, Gangplank, 0, Top, L
 Kayle, Gangplank, 0, Top, L
+Kayle, Urgot, 0, Top, L
+Quinn, Fiora, 1, Top, L
+Quinn, Gangplank, 0, Top, L
+Quinn, Riven, 1, Top, L
 Quinn, Lillia, 1, Top, W
 Quinn, Warwick, 1, Top, W
 Quinn, Graves, 1, Top, W
@@ -162,6 +171,10 @@ Quinn, Malzahar, 1, Top, W
 Quinn, Riven, 1, Top, W
 Quinn, Zoe, 1, Top, W
 Quinn, Renekton, 1, Top, W
+Quinn, Renekton, 1, Top, W
+Quinn, Yone, 0, Top, W
+Quinn, Kayle, 1, Top, W
+Quinn, Jax, 0, Top, 
 
 Anivia, Lux, 1, Mid, L
 Vladimir, Yasuo, 0, Mid, L
