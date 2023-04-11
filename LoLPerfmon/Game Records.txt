@@ -5,23 +5,22 @@ xxx
 ooo
 x
 ---
-Cut out until Karthus or Kindred are A or higher in low elo tier list.
+Cut out until Karthus or Kindred are A or higher in low elo tier list or JNG is among the top two win rates.
 
 Mid
+
+---
 oo
 xxx
 
 Top
-
-xx
+xxx
 ---
 xx
 ooo
 ---
 o
 xxx
-GLD-INITS
-41908-SLpUA-nSPEP
 
 Support
 o
@@ -30,13 +29,9 @@ Cut Out Until Next Division
 
 ADC
 o
-xxx
----
-ooo
 x
----
-ooo
-xx
+
+56816-JASSJ-TRlVT
 
 Champion, OpponentChampion, OpponentCouldCounterpick, Role, Result
 Karthus@Senna, Twitch@Pyke, 1, BotCarry, L
