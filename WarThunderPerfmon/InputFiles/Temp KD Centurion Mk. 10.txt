@@ -34,6 +34,30 @@ Battle of Hurtgen Forest [Battle] zones in town
 Finland
 Poland two points in town
 
+2023-04-12
+
+Fields of Poland
+@k @2S3M @~1.2 @Perp
+@k @PT-76-57 @~1.2
+@k @PT-76B @~1.2
+@k @Type 62 @~.6 @Near-para
+@kb @2S3M @~1.2 @Para @0 @0
+
+Fields of Poland (winter)
+@k @IS-3 @1.5, 1.5 @near-perp, near-perp @11, 0 @0, 0
+@k @T-54 (1949) @1.1 @diag @0 @0
+@k @IS-3 @.4 @Perp @8 @0
+
+Fields of Normandy
+@k @T-54 (1949) @~.1 @Diag, Near-perp @
+@k @T-54 (1947) @~0.08 @Near-perp @0 @0
+@k @T-54 @~.1 @Near-perp @0 @0
+
+Hurtgen Forest
+@k @T-54 (1947) @.75 @Diag @0 @0
+@k @ZSU-37 @1.34 @near-para @0 @0
+@kb @T-54 (1947) @.01 @para @0 @0
+
 2023-04-04
 
 Pradesh

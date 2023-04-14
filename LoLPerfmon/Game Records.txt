@@ -1,4 +1,6 @@
 Jungle
+o
+xxx
 
 
 Mid
@@ -9,8 +11,6 @@ Support
 Cut Out Until Next Division
 
 ADC
-o
-xxx
 
 Champion, OpponentChampion, OpponentCouldCounterpick, Role, Result
 Karthus@Senna, Twitch@Pyke, 1, BotCarry, L
@@ -80,6 +80,14 @@ Karthus, Renggar, 0, Jungle, L
 Evelyn, Lee Sin, 1, Jungle, L
 Karthus, Udyr, 1, Jungle, L
 Kindred, Shen, 0, Jungle, L
+Karthus, Nocturne, 0, Jungle, L
+Karthus, Gragas, 1, Jungle, L
+Karthus, Viego, 0, Jungle, L
+Karthus, Viego, 1, Jungle, L
+Karthus, Lee Sin, 1, Jungle, L
+Karthus, Nunu&Willump, 1, Jungle, L
+Karthus, Lee Sin, 0, Jungle, L
+Karthus, Evelyn, 1, Jungle, L
 Karthus, Kayne, 1, Jungle, W
 Karthus, Shaco, 0, Jungle, W
 Karthus, Graves, 0, Jungle, W
@@ -95,7 +103,7 @@ Karthus, Lillia, 1, Jungle, W
 Karthus, Kha'Zix, 1, Jungle, W
 Karthus, Taliyah, 0, Jungle, W
 Karthus, Warwick, 1, Jungle, W
-Karthus, Nunu & Willump, 0, Jungle, W
+Karthus, Nunu&Willump, 0, Jungle, W
 Karthus, Warwick, 0, Jungle, W
 Karthus, Zac, 1, Jungle, W
 Karthus, Amumu, 0, Jungle, W
@@ -110,11 +118,13 @@ Karthus, Sejuani, 1, Jungle, W
 Karthus, Trundle, 1, Jungle, W
 Karthus, Sejuani, 0, Jungle, W
 Karthus, Lee Sin, 1, Jungle, W
-Karthus, Nunu & Willump, 0, Jungle, W
+Karthus, Nunu&Willump, 0, Jungle, W
 Karthus, Kayn, 0, Jungle, W
 Karthus, Hecarim, 1, Jungle, W
 Kindred, Kha' Zix, 0, Jungle, W
 Karthus, Wukong, 1, Jungle, W
+Karthus, Lee Sin, 0, Jungle, W
+Karthus, Nocturne, 0, Jungle, W
 Karthus, Lee Sin, 0, Jungle, W
 
 Quinn, Yasuo, 0, Top, L

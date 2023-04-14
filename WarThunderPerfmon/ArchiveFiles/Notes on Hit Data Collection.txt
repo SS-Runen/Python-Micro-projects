@@ -1,0 +1,5 @@
+- An image of the target for each hit should be taken. If there is no significant change between shots, the shots will be assigned the same link. Images should not be associated directly, i.e. use S3 bucket links or Google Drive URLs.
+- The location of the hit may be an important data point. For now, the lower hull, upper hull, and turret will be used as zones.
+- If the location of the hit is too specific, there might be too much noise. Hits on the left or right side of the turret do not always matter. It is situational.
+- There might be a need to record critical hits that caused a dead crew member or critical INTERNAL component such as the gun breech.
+- Hits to easily-destroyed external components such as tracks may be ignored or recorded separately, especially since tracks are more important than components like machine guns.
