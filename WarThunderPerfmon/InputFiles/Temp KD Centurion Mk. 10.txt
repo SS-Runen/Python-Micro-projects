@@ -37,11 +37,11 @@ Poland two points in town
 2023-04-12
 
 Fields of Poland
-@k @2S3M @~1.2 @Perp
-@k @PT-76-57 @~1.2
-@k @PT-76B @~1.2
-@k @Type 62 @~.6 @Near-para
-@kb @2S3M @~1.2 @Para @0 @0
+@k @2S3M @1.24 @Perp @0 @0
+@k @PT-76-57 @1.26 @Para @23 @0
+@k @PT-76B @1.22, 1.22 @Diag, diag @7, 0 @0, 0
+@k @Type 62 @.41 @Near-para @-7 @0
+@kb @2S3M @1.24 @Para @0 @0
 
 Fields of Poland (winter)
 @k @IS-3 @1.5, 1.5 @near-perp, near-perp @11, 0 @0, 0
@@ -49,9 +49,10 @@ Fields of Poland (winter)
 @k @IS-3 @.4 @Perp @8 @0
 
 Fields of Normandy
-@k @T-54 (1949) @~.1 @Diag, Near-perp @
-@k @T-54 (1947) @~0.08 @Near-perp @0 @0
-@k @T-54 @~.1 @Near-perp @0 @0
+@k @T-54 (1949) @.45 @Diag @0 @25
+@k @T-54 (1947) @.1 @Near-perp @0 @20
+@k @M53/59 @.45 @Near-perp @0 @0
+@k @T-54 (1947) @.37 @Near-perp @0 @0
 
 Hurtgen Forest
 @k @T-54 (1947) @.75 @Diag @0 @0
