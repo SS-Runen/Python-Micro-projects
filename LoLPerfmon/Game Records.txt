@@ -1,11 +1,17 @@
 Jungle
 o
-xxx
+xxxx
 
 
 Mid
 
+xx
+41357-GYSTP-CKOUT
+
 Top
+
+x
+67684-SdPEm-ihRHB
 
 Support
 Cut Out Until Next Division
@@ -88,6 +94,7 @@ Karthus, Lee Sin, 1, Jungle, L
 Karthus, Nunu&Willump, 1, Jungle, L
 Karthus, Lee Sin, 0, Jungle, L
 Karthus, Evelyn, 1, Jungle, L
+Karthus, Kayn, 0, Jungle, L
 Karthus, Kayne, 1, Jungle, W
 Karthus, Shaco, 0, Jungle, W
 Karthus, Graves, 0, Jungle, W
@@ -144,6 +151,7 @@ Kayle, Urgot, 0, Top, L
 Quinn, Fiora, 1, Top, L
 Quinn, Gangplank, 0, Top, L
 Quinn, Riven, 1, Top, L
+Quinn, Malphite, 1, Top, L
 Quinn, Lillia, 1, Top, W
 Quinn, Warwick, 1, Top, W
 Quinn, Graves, 1, Top, W
@@ -161,7 +169,6 @@ Quinn, Renekton, 1, Top, W
 Quinn, Renekton, 1, Top, W
 Quinn, Yone, 0, Top, W
 Quinn, Kayle, 1, Top, W
-Quinn, Jax, 0, Top, 
 
 Anivia, Lux, 1, Mid, L
 Vladimir, Yasuo, 0, Mid, L
@@ -181,6 +188,9 @@ Aurelion Sol, 1, Mid, L
 Anivia, Pantheon, 0, Mid, L
 Anivia, Sylas, 0, Mid, L
 Anivia, Tryndamere, 0, Mid, L
+Anivia, Sylas, 1, Mid, L
+Anivia, Zed, 0, Mid, L
+Cassiopoeia, Kennen, 1, Mid, L
 Anivia, Aurelion Sol, 0, Mid, W
 Anivia, Irelia, 1, Mid, W
 Anivia, Yone, 0, Mid, W
@@ -199,6 +209,8 @@ Anivia, Brand, 0, Mid, W
 Anivia, Akali, 0, Mid, W
 Anivia, Veigar, 0, Mid, W
 Anivia, Katarina, 0, Mid, W
+Anivia, Zoe, 1, Mid, W
+Anivia, LeBlanc, 1 Mid, W
 
 Lux@Zeri, Vel'Koz@Caitlyn, 0, Support, L
 Samira@Sona, Kai'Sa@Soraka, 0, Support, L

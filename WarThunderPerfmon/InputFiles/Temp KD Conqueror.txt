@@ -8,6 +8,17 @@ Finland [Battle]
 Second Battle of El Alamein [Battle] no sniper mountain
 Poland two points in town
 
+2023-04-18
+
+Normandy
+@k @Type 63 @~.02
+@k @Obj 268 @~1 @DIag
+@kb @T-54 (1949) @~.9 @Diag @0 @0
+
+Fields of Poland
+@k @2S3M @~1.1 @Near-perp @0 @0
+@k @T-54 @~1.1 @Perp, Diag
+
 2023-04-02
 
 Pradesh
