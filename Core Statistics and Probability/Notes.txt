@@ -12,6 +12,8 @@ General Procedures
 - Review your work.
 
 -- Before a break, check the new notes made using GitHub Desktop while reviewing the video or activity.
+-- Symbols may be searched for and copied from Wumbo.net:
+https://wumbo.net/symbols/
 
 ++++
 Data
@@ -71,7 +73,7 @@ Mean/Arithmetic Mean - The sum of values in a set divided by the count of values
 
 Geometric mean - The product of all values in a set raised to the (1/n)th power, with n being the number of values in the set. μ = (n1 * n2 * ...n)^(1/n) or μ = n√(n1 * n2 * ...n). The term 1/n denotes the nth root, e.g. 1/2 denotes the square root. This mean is often used to calculate growth over time. It can be referred to as the time-weighted rate of return. Unlike the arithmetic mean, the geometric mean can be used to measure compounding. E.g. for [2, 18], geometric μ = (2*18)^1/2. For [2, 18, 20, 25], geometric μ = (2*18*20*25)^(1/4).
 
-Median - The middle value or the average of the two middle values of an ordered set.
+Median - The middle value or the average of the two middle values of an ordered set. A large difference between the mean and median could be a sign that there are outliers with unusually strong effects on the mean.
 
 Mode - The most frequent value in a set.
 
@@ -88,12 +90,15 @@ Range - Difference between maximum and minimum value of a set.
 
 Variance - The average of the squared distances from the mean of all data points. The sum of squared distance from the mean of each point divided by either sample size less one (n - 1) or population size. Sample variance s^2 requires the use of (n - 1) as denominator. Population variance σ^2 uses population count n. Here, n is the number of data points/elements in the sample or population.
 
-Standard Deviation - The square root of a sets variance. The set may be a sample s or population σ.
+Standard Deviation - The square root of a sets variance. The set may be a sample (s) or population (σ) standard deviation.
 
 *Bessel's Correction:
 - The use of (n - 1) as a denominator to reduce bias due to finite sample size.
+σ = (Σ(X-μ)^2) / N
+s = (Σ(x-x̄)^2) / (n -1)
+- Part of the reason for deducting one from the sample size (n) is to increase the value of the variance. The smaller the numerator, the larger the fraction's value. This helps increase the variance for samples to reflect the fact that samples usually vary more widely than their population.
 
-Inter-quartile Range - A basis for calculating a fence for marking outliers. The fence is often arbitrarily set to 1.5 times the inter-quartile range (IQR). IQR is the distance between the lower limit in quartile 1 and the upper limit in quartile 3. Outliers are either higher by 1.5 times the IQR compared to the lower limit of the 3rd quartile or lower by 1.5 times the IQR compared to the lower limit of the 1st quartile.
+Inter-quartile Range - A basis for calculating a fence for marking outliers. The fence is often arbitrarily set to 1.5 times the inter-quartile range (IQR). IQR is the distance between the upper limit for the 25th percentile (also the lower limit in the "first" quartile, the second quartile when graphed) and the upper limit in quartile 3. Outliers are either higher by 1.5 times the IQR compared to the upper limit of the 3rd quartile or lower by 1.5 times the IQR compared to the lower limit of the 1st quartile.
 
 Z-score - The number of standard deviations from the mean to a certain value.
 
@@ -466,8 +471,8 @@ I'll use the example categories of customer referral source. Let's say the refer
 Removing referrals from a friend would decrease consumer spending (y).
 Wouldn't regression mistakenly assign higher values to the encoded dummy value to compensate?
 
-2. I don't understand how to get the effect of the dummy variable relative to the ommitted variable.
-Is the regression equation done behind the scenes using the ommitted value?
+2. I don't understand how to get the effect of the dummy variable relative to the omitted variable.
+Is the regression equation done behind the scenes using the omitted value?
 
 3. How does making a dummy value for all categorical values cause multicollinearity?
 How come omitting one value from the "encoding" avoids it?
