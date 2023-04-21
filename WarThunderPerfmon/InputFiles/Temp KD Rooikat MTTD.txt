@@ -40,8 +40,8 @@ Middle East
 @k @T-64A (1971) @~.6 
 
 Pradesh
-@k @BMP @~1.7 @Perp
-@k @ZSU-37-4 @~1.75 @perp
+@k @BMP-3 @1.74 @diag @0 @0
+@k @Object 120 @2.05 @perp @0 @0
 
 2023-03-10
 

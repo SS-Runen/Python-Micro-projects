@@ -16,8 +16,8 @@ Normandy
 @kb @T-54 (1949) @~.9 @Diag @0 @0
 
 Fields of Poland
-@k @2S3M @~1.1 @Near-perp @0 @0
-@k @T-54 @~1.1 @Perp, Diag
+@k @2S3M @1.33 @diag @0 @0
+@k @T-54 (1949) @1.11, 1.11 @diag, near-para @23, 0 @0, 0
 
 2023-04-02
 
@@ -29,11 +29,11 @@ Normandy
 @k @Type 62 @1 @Diag
 
 Normandy
-@k @T-54 @~.8 @Diag
-@k @T-54 (1947) @~.3
-@k @T-54 @~0.03
-@k @T-54 @~.2 @Near-perp
-@kb @T-54 (1947) @~.03 @Diag @0 @0
+@k @T-54 (1951) @.81 @Diag @14 @0
+@k @T-54 (1947) @.63 @near-perp @8 @0
+@k @T-54 (1951) @.12 @para @0 @0
+@k @T-54 (1949) @.43 @Diag @24 @0
+@kb @T-54 (1947) @.11 @near-para @0 @5
 
 2023-03-19
 
@@ -47,9 +47,6 @@ Middle East
 
 2023-02-25
 
-Conqueror Vision Bug Repeat
-https://warthunder.com/en/tournament/replay/39846181133024979
-10:08
 Second Battle of El Alamein
 @k @ZTZ59A @1.11 @Diag @38 @0
 @k @SU-122-54 @1.76, 1.76 @diag, diag @0, 0 @0, 0
