@@ -35,10 +35,11 @@ Second Battle of El Alamein [Battle] (no view of own defense zone)
 Second Battle of El Alamein (No platform for gun depression)
 Tunisia [Battle] with point in river town with many entries
 
-2023-04-04
+2023-04-22
 
-Second Battle of El Alamein [Battle]
-@k @M18 @~1 @perp, Near-para
+Fields of Normandy
+@k @ASU-57 @~1 @Para @0 @0
+@kb @KV-220 @~.6 @near-perp @0 @0
 
 2023-03-17
 

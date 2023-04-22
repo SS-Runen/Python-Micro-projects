@@ -6,9 +6,13 @@ Tunisia
 Kuban
 Abandoned Town
 
-2023-03-11
+2023-04-22
 
-
+Second Battle of El Alamein [Battle]
+@k @M18 @1.03 @near-para @26 @0
+@k @KV-85 @1.7 @Near-para @0 @0
+@k @T-34-85 @1.75 @Diag @-8 @0
+@k @M4A2 (USSR) @1.7 @Near-para @0 @0
 
 2023-03-05
 
