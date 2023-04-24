@@ -1,4 +1,15 @@
 
+2023-04-23
+
+Second Battle of El Alamein
+@k @WMA301 @.49 @Near-perp @0 @0
+@k @BMP-3 @1.74, 1.74 @Perp, Perp @14, 0 @0, 0
+
+Mozdok
+@k @WMA301 @.82 @near-para @0 @0
+@kb @AFT09 @1.03, .92 @near-perp, near-perp @0, 0 @10, 0
+@kb @AFT09 @1.10 @near-perp @0 @10
+
 2022-12-08
 
 Sinai [Battle]

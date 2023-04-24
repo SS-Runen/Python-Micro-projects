@@ -5,7 +5,7 @@ xxxx
 
 Mid
 oo
-xx
+xxx
 41357-GYSTP-CKOUT
 
 Top
@@ -192,6 +192,7 @@ Anivia, Tryndamere, 0, Mid, L
 Anivia, Sylas, 1, Mid, L
 Anivia, Zed, 0, Mid, L
 Cassiopoeia, Kennen, 1, Mid, L
+Anivia, Akali, 0, Mid, L
 Anivia, Aurelion Sol, 0, Mid, W
 Anivia, Irelia, 1, Mid, W
 Anivia, Yone, 0, Mid, W
@@ -213,7 +214,7 @@ Anivia, Katarina, 0, Mid, W
 Anivia, Zoe, 1, Mid, W
 Anivia, LeBlanc, 1 Mid, W
 Anivia, Irelia, 1, Mid, W
-Anivia, Ahri, 0, Mid, 
+Anivia, Sylas, 0, Mid, W
 
 Lux@Zeri, Vel'Koz@Caitlyn, 0, Support, L
 Samira@Sona, Kai'Sa@Soraka, 0, Support, L

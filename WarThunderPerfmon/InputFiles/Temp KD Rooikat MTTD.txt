@@ -34,6 +34,23 @@ Battle of Hurtgen Forest [Battle] zones in town
 Finland
 Poland two points in town
 
+2023-04-23
+
+Second Battle of El Alamein
+@k @T-55AM-1 @1.45, 1.46, 1.46 @Diag, diag, para @0, -7, 0 @0, 0, 0
+@kb @WMA301 @.13 @Diag @39 @22
+@kb @AFT09 @1.02 @near-para @0 @0
+
+Pradesh
+@k @T-69 II G @1.74 @Diag @0 @0
+
+Mozdok
+@k @T-64A (1971) @1.63, 1.63 @Near-perp, near-perp @6, 0 @0, 0
+@k @BMP-1 @1.74, 1.73 @Perp, perp @38, 0 @0, 0
+@k @WMA301 @2 @Near-para @0 @0
+@k @T-69 II G @0.07 @Near-perp @6 @0
+@kb @WMA301 @.06 @Near-perp @0 @-11
+
 2023-04-02
 
 Middle East

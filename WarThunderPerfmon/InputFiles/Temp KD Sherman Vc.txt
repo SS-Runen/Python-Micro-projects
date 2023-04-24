@@ -38,8 +38,8 @@ Tunisia [Battle] with point in river town with many entries
 2023-04-22
 
 Fields of Normandy
-@k @ASU-57 @~1 @Para @0 @0
-@kb @KV-220 @~.6 @near-perp @0 @0
+@k @ASU-57 @1.37, 1.32  @Para, Para  @0, 0 @0, 0
+@kb @KV-220 @.64 @diag @0 @0
 
 2023-03-17
 
