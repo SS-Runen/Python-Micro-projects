@@ -66,9 +66,17 @@ Combinatorics
 
 Variation with Repetition/Replacement - Assumes a set with n number of elements permuted p at a time but each element is replaced/may be used repeatedly. In other words, filling a number of "slots" or "positions" with elements from a certain set while allowing repeated use of any element. v = n^p where n is the number of available elements and p is the number of positions to fill.
 
-Variations without Repetition - Denoted by v = n! / (n-p)! where n is the number of usable elements and p is the number of positions to fill. Synonymous to "permutations of n number of elements taken p at a time without replacement." Note that n! denotes the total permutations of all usable elements. (n - p)! denotes permutations of elements that are not going to be used to fill in positions. This implies that a variation without replacement is the number of times the permutation of unused elements can be subtracted from the permutation of all elements.
+Permutations - With no subset and no repetition allowed, P = n!. For sets with n members permuted r at a time with no repetition allowed,
+nPr = n! / (n-r)!.
+Count the times that (n-r)! can be removed from n!. If repetition is allowed, nPr = n^r.
 
-Combinations - To get the number of unique sets/combinations (C) for a number of elements (n) taken (p) at a time, nCp = n! / (p! * (n-p)!). Similar to permutations, the (n-p)! in the denominator removes the permutations of elements that will not be used. The additional p! * ... removes the permutations of the different elements from the result set.
+Variations without Repetition - Denoted by v = n! / (n-r)! where n is the number of usable elements and r is the number of positions to fill. Synonymous to "permutations of n number of elements taken p at a time without replacement." The n! denotes the total permutations of all usable elements. (n - r)! denotes permutations of elements that are not going to be used to fill in positions. This implies that a variation without replacement is the number of times the permutation of unused elements can be subtracted from the permutation of all elements.
+
+Combinations - In a combination, order is not significant. To get the number of unique sets/combinations (C) for a number of elements (n) taken (p) at a time without repetition,
+nCr = n! / (r! * (n-r)!).
+Similar to permutations, the (n-r)! in the denominator removes the permutations of elements that will not be used. The additional r! *... removes the permutations of the different elements from the result set.
+For combinations that allow repetition of elements,
+n+r-1Cr = (n + r-1)! / (r! * (n-1))
 
 Symmetry of Combinations - n C r = n C (n - r). E.g. 10C7 = 10C3.
 
