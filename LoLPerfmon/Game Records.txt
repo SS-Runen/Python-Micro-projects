@@ -4,9 +4,6 @@ xxxx
 
 
 Mid
-oo
-xxx
-41357-GYSTP-CKOUT
 
 Top
 
@@ -17,6 +14,9 @@ Support
 Cut Out Until Next Division
 
 ADC
+
+xx
+61670-RJfSS-L4JPc
 
 Champion, OpponentChampion, OpponentCouldCounterpick, Role, Result
 Karthus@Senna, Twitch@Pyke, 1, BotCarry, L
@@ -35,6 +35,8 @@ Sivir@Lux, Jhin@Swain, 1, BotCarry, L
 Jinx@MaoKai, Vayne@Senna, 0, BotCarry, L
 Sivir@Lux, Jinx@Sona, 0, BotCarry, L
 Sivir@Leona, Caitlyn@Lux, 0, BotCarry, L
+Sivir@Senna, Vayne@Janna, 1, BotCarry, L
+Xayah@Seraphine, Ezreal@Lux, 0, BotCarry, L
 Tristana@Lulu, Ezreal@Pyke, 0, BotCarry, W
 Karthus@Morgana, Ezreal@Blitzcrank, 1, BotCarry, W
 Xayah@Seraphine, Lucian@Zyra, 0, BotCarry, W
@@ -193,6 +195,7 @@ Anivia, Sylas, 1, Mid, L
 Anivia, Zed, 0, Mid, L
 Cassiopoeia, Kennen, 1, Mid, L
 Anivia, Akali, 0, Mid, L
+Anivia, Zed, 1, Mid, L
 Anivia, Aurelion Sol, 0, Mid, W
 Anivia, Irelia, 1, Mid, W
 Anivia, Yone, 0, Mid, W
