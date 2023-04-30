@@ -81,6 +81,8 @@ dako akong o10 - Ekko. This player sold all his items and stood in the Nexus for
 
 RIYOTA - As Udyr, this player kept requesting a swap with our Ekko. Ekko was even with the enemy Vex but this player already lost two kills to the Jax. After laning, Udyr kept taking the red buff instead of shoving his lane. In the end he was down ten kills and forty-eight CS.
 
+ArchibaldFast - This player scripted as Xerath. Typically, he tip-toed around skillshots even after dodging them. Xerath landed skillshots without vision.
+
 -------------
 Low Priority:
 

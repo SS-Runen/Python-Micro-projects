@@ -172,6 +172,7 @@ Quinn, Renekton, 1, Top, W
 Quinn, Renekton, 1, Top, W
 Quinn, Yone, 0, Top, W
 Quinn, Kayle, 1, Top, W
+Quinn, Nasus, 1, Top, W
 
 Anivia, Lux, 1, Mid, L
 Vladimir, Yasuo, 0, Mid, L
