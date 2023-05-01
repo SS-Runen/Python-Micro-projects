@@ -122,7 +122,8 @@ C = (standard_deviation / mean) * 100%.
 +++++++++++
 Probability
 
-Union - The probability of either A or B occuring. Calculated using the formula for the Addition Rule for Probabilities.
+Union - The probability of either A or B occuring. The formula for calculating unions is also the Addition Rule for Probabilities.
+P(A ∪ B) = P(A) + P(B) - P(A ∩ B)
 
 Intersection - The probability that two events/results A and B both occur, i.e. both hypotheses are simultaneously true. For independent events, multiply probability of A with that of B to get the probabilities. P(A ∩ B) = P(A) * P(B).
 
@@ -148,7 +149,7 @@ The probability of A given B, i.e. P(B) happening if A has happened/will happen:
 P(A|B) = P(B ∩ A) / P(B)
 ~ The probability of A given B is equal to the probability of A intersection B divided by the probability of B.
 
-* The probability of the event "taken for granted" or assumed to happen will be the denominator of the probability of A intersection B.
+* The probability of the event "taken for granted" or assumed to happen will be the denominator of the probability of A intersection B. To put the equation in words, the probability of A given B is the subset of P(B) where P(A) is also true. Out of the target outcomes P(B), count the number of times where P(A) is true and P(B) is true, hence P(A|B) = P(A ∪ B) / P(B)
 
 -- For two events A and B, if the probability of A is the same as the probability of A given B, the events are independent. This is because dependent events shouldn't affect each others probability.
 P(A) = P(A|B) ~ independent
