@@ -1,3 +1,9 @@
+2023-05-01
+
+Fields of Poland
+@k @BMP-3 @1.18, 1.16 @Diag, diag @32, 0 @0, 0
+@k @T-55AM-1 @.73 @Near-para @0 @2
+
 2023-02-17
 
 Fields of Poland

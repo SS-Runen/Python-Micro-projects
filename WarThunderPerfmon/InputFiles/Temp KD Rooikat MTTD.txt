@@ -36,12 +36,15 @@ Poland two points in town
 
 2023-05-01
 
+Fields of Poland
+@kb @WMA301 @1.73 @Diag @0 @-6
+
 Fields of Poland [Battle]
-@k @T-64A (1971) @~.2 @Diag
-@k @WMA-301 @~.6 @Near-para
+@k @T-64A (1971) @.48, .50 @Diag, near-para @52, 0 @64, 0
+@k @WMA-301 @.75 @Near-para @34 @0
 
 Pradesh
-@k @T-55AMD-1 @~1.7 @Near-para @0 @0
+@k @T-55AMD-1 @1.74 @Near-para @-7 @0
 
 2023-04-23
 
