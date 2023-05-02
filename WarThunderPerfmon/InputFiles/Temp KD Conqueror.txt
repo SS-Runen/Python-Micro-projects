@@ -8,6 +8,14 @@ Finland [Battle]
 Second Battle of El Alamein [Battle] no sniper mountain
 Poland two points in town
 
+2023-05-02
+
+Mozdok [Battle]
+@k @T-54 (1949) @.71, .71 @perp, Diag @0, 0 @0, 0
+
+Mozdok
+@kb @T-54 (1947) @1.35 @Diag @25 @0
+
 2023-04-18
 
 Normandy

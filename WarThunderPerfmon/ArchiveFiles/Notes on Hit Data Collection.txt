@@ -3,3 +3,4 @@
 - If the location of the hit is too specific, there might be too much noise. Hits on the left or right side of the turret do not always matter. It is situational.
 - There might be a need to record critical hits that caused a dead crew member or critical INTERNAL component such as the gun breech.
 - Hits to easily-destroyed external components such as tracks may be ignored or recorded separately, especially since tracks are more important than components like machine guns.
+- Include the squares on the map and the map name in the data. It probably won't be useful for AI, but it could be useful for statistical analysis.
