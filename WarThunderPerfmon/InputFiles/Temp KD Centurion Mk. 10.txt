@@ -48,6 +48,11 @@ Mozdok
 @k @T-44-100 @2.16 @Perp @0 @0
 @k @T-54 (1949) @1.07 @Near-para @0 @0
 
+Poland (winter)
+@k @ASU-85 @.98 @Diag @5 @0
+@k @T-54 (1949) @1.18 @Diag @0 @0
+@kb @T-54 (1949) @.37 @Near-perp @0 @0
+
 2023-04-28
 
 Pradesh 1

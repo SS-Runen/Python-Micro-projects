@@ -83,6 +83,8 @@ RIYOTA - As Udyr, this player kept requesting a swap with our Ekko. Ekko was eve
 
 ArchibaldFast - This player scripted as Xerath. Typically, he tip-toed around skillshots even after dodging them. Xerath landed skillshots without vision.
 
+NH Cyclopes - Zed support. After swapping pick order, the NH Cyclopes locked in Zed. In-game, the player died four times and then left at the ten-minute mark.
+
 -------------
 Low Priority:
 
