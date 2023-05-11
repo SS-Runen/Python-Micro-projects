@@ -34,6 +34,17 @@ Battle of Hurtgen Forest [Battle] zones in town
 Finland
 Poland two points in town
 
+2023-05-06
+
+Sands of Sinai
+@k @PT-76B @~1.7 @Diag, diag
+@k @T-54 (1947) @~1.9 @para, near-perp @0, 0
+@k @T-44-100 @~2 @Perp @0 @0
+
+Fields of Poland
+@k @T-54 (1949) @~.2 @Perp
+@kb @T-54 (1949) @~.6 @Perp
+
 2023-05-02
 
 Mozdok [Battle]

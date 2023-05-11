@@ -1,14 +1,8 @@
 Jungle
-o
-xxxx
-
 
 Mid
 
 Top
-
-x
-67684-SdPEm-ihRHB
 
 Support
 Cut Out Until Next Division
@@ -155,6 +149,11 @@ Quinn, Fiora, 1, Top, L
 Quinn, Gangplank, 0, Top, L
 Quinn, Riven, 1, Top, L
 Quinn, Malphite, 1, Top, L
+Quinn, Yasuo, 0, Top, L
+Quinn, Warwick, 1, Top, L
+Cassiopoeia, Yorick, 1, Top, L
+Quinn, Gnar, 1, Top, L
+Quinn, Camille, 1, Top, L
 Quinn, Lillia, 1, Top, W
 Quinn, Warwick, 1, Top, W
 Quinn, Graves, 1, Top, W
