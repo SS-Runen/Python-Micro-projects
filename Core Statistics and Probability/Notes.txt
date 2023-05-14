@@ -162,8 +162,13 @@ P (A ∩ B) = P(A) * P(B) ~ independent
 - Baye's Theorem
 P(B|A) = P(A|B)*P(B) / P(A)
 The probability of B given A is:
-The probability or proportion of A given B given/out of all B (P(A|B) * P(B)) all over/for every A (.../P(A)).
+The probability of A given B/the subset of B where A P(A|B) multiplied by the probability of B P(B) all over/for every probability of A (.../P(A)).
 In probability, division usually removes the divisor probability from the dividend probability.
+
+-- The order of probabilities in an intersection are interchangeable. P(A ∪ B) = P(B ∪ A). P(B ∪ A) can also be re-written as P(B | A)*P(A). Thus, rewriting the formula for P(A | B) can yield Baye's Theorem.
+P(A | B) = P(A ∪ B) / P(B)
+P(A | B) = P(B ∪ A) / P(B)
+P(A | B) = (P(B | A) * P(A)) / P(B)
 
 - Functions of Random Variables
 Given that the function expected value (μ) = b * X + a where a is a constant, and X is a random variable, μ is a linear equation. The equation standard deviation can be calculated by multiplying the absolute value of the equation's slope and the SD of X:
