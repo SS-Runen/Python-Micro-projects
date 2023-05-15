@@ -14,6 +14,7 @@ General Procedures
 -- Before a break, check the new notes made using GitHub Desktop while reviewing the video or activity.
 -- Symbols may be searched for and copied from Wumbo.net:
 https://wumbo.net/symbols/
+-- To see the function prameters of a Google Sheet formula, click the question mark tooltip. It is usually on the left side of the cell.
 
 ++++
 Data
@@ -151,6 +152,8 @@ P(A|B) = P(B ∩ A) / P(B)
 
 * The probability of the event "taken for granted" or assumed to happen will be the denominator of the probability of A intersection B. To put the equation in words, the probability of A given B is the subset of P(B) where P(A) is also true. Out of the target outcomes P(B), count the number of times where P(A) is true and P(B) is true, hence P(A|B) = P(A ∪ B) / P(B)
 
+* In a Bernoulli Trial, there are only two possible outcomes that are mutually exclusive. It is convention to label them as success and failure.
+
 -- For two events A and B, if the probability of A is the same as the probability of A given B, the events are independent. This is because dependent events shouldn't affect each others probability.
 P(A) = P(A|B) ~ independent
 P(B) = P(B|A) ~ independent
@@ -182,11 +185,11 @@ Binomial Distribution Probability Mass Function - Describes the probability of o
 P(x) = (n! / (x! * (n-x)!)) * P^x * (1-P)^(n-x)
 Here,
 P(x): probability of x occurring given that it is a binomial distribution.
-P: probability of x occurring during one trial, i.e the probability of the preferred outcome/success.
+P: probability of x occurring during one trial, i.e the probability of success/ getting the preferred outcome.
 n: number of trials.
 x: desired count of outcomes.
 
-This formula can be accessed in Excel or Google sheets using =BINOM.DIST.RANGE().
+This formula can be accessed in Excel or Google sheets using =BINOM.DIST.RANGE(). You may also use BINOM.DIST and enter false as the fourth parameter.
 
 For binomial probability distributions, P(x) should be consistent for each trial or member event. The trials should be independent of each other.
 
@@ -196,7 +199,14 @@ Expected Value of a Binomial Probability Distribution: P(x) * n
 
 Binomial Probability Distribution Table - This table lists the intersections between the number of trials, P, and x. It is a cumulative probability distribution. To get the probability for a specific x, take its cumulative probability and subtract the undesired outcomes. I.e, subtract the cumulative probability of the opposite "undesirable" condition. E.g.: if you need the probability of getting x >= 5, subtract the probability of getting x <= 4 from 1. If you need the probability of a specific x, say x = 5, subtract the probability of x <= 4 from the probability of x <= 5.
 
-Poisson Distribution Probability Mass and Cumulative Mass Function - Probability of getting x successes per some continuous unit, e.g. time or distance. To get the probability of x or less/more successes, simply sum the poisson distributions of x and below or x and above. The poisson distribution assumes uniformity of the intervals between success. If there is a reason for events or successes to occur with varying intervals - e.g. at a the end of 5 PM and during the first minutes of 8 AM - the poisson distribution cannot be used effectively.
+Poisson Distribution Probability Mass and Cumulative Mass Function - Probability of getting x successes per some continuous unit, e.g. time or distance. To get the probability of x or less/more successes, simply sum the poisson distributions of x and below or x and above. If you need the poisson cumulative mass function, sum the P(x) of all included discrete probabilties. The poisson distribution assumes uniformity of the intervals between success. If there is a reason for events or successes to occur with varying intervals - e.g. at a the end of 5 PM and during the first minutes of 8 AM - the poisson distribution cannot be used effectively.
+
+P(x) = (λ^x * e^-λ) / x!
+λ = mean or expected occurances per interval. E(X) = μ = λ = occurances / interval.
+e = Euler's number.
+x = Total number of occurances.
+
+* To get the cumulative probability, sum P(x): P(x) + P(x-1) ...P(x-n) until n is zero. If you need the cumulative probability of x or more, use x + n.
 
 ++++++++++++++++++++++++
 Continuous Distributions
