@@ -206,27 +206,38 @@ P(x) = (λ^x * e^-λ) / x!
 e = Euler's number.
 x = Total number of occurances.
 
-* To get the cumulative probability, sum P(x): P(x) + P(x-1) ...P(x-n) until n is zero. If you need the cumulative probability of x or more, use x + n.
+* To get the cumulative probability, sum P(x): P(x) + P(x-1) ...P(x-n) until n is zero. If you need the cumulative probability of x or more, use x + n. By convention, cumulative probability is equivalent to "less or up to the target number of successes" unless otherwise specified.
 
 ++++++++++++++++++++++++
 Continuous Distributions
 
-Normal/Guassian/Bell-curve distribution - Maps probabilities to an area x. Probabilities cannot be mapped to a single specific outcome and have to be mapped to a range or interval instead. In a continuous normal distribution, the mean, median and mode are equal. Regardless of what the mean, median, or mode are, all normal distributions are centered and symmetric around the mean.
+- Normal/Guassian/Bell-curve distribution: Maps probabilities to an area x. Probabilities cannot be mapped to a single specific outcome and have to be mapped to a range or interval instead. In a continuous normal distribution, the mean, median and mode are equal. Regardless of what the mean, median, or mode are, all normal distributions are centered and symmetric around the mean.
 
-Standard Normal Distribution - A normal distribution with a mean of 0 and standard deviation of 1.
+Standard Normal Distribution: A normal distribution with a mean of 0 and standard deviation of 1.
 
 The area under the curve of a normal probability distribution is always equal to one. This applies to distributions where probabilities are used as the values.
 Around 68% of values are within one standard deviation - i.e. one multiplied by the value of the standard deviation - less and more than the mean.
 About 95% of values fall within two standard deviations from the mean in either direction/magnitude.
 
--- Z-score
+-- Normal Distribution Formula
+f(x) = (1/sqrt(2πσ^2) * e^((-(x-μ)^2) / 2σ^2)
+
+Where:
+π = Pi, 3.14159...
+σ = Standard Deviation
+μ = Mean
+e = Euler's number: 2.71828...
+
+- Z-score
 A z-score is the number of standard deviations from the mean for values in a normal distribution. If a data point has a z-score of 0.3, it is (0.3 * s) or (0.3 * σ) away from the mean. A z-score can be used to approximate your percentile.
 Z-scores have "direction". They can be negative.
 Z = (x - μ) / σ
 or
 Z = (x - μ) / s
 
-Z-table - This table shows the percentage of values in a normal distribution that fall to the left of a score of the specified Z-value. I.e., a z-table shows the percentage of scores in a normal distribution that are lower than the value at a specified z-score. In other words, a z-table shows the percentile of a score based on the z-value.
+-- Z-table - This table shows the percentage of values in a normal distribution that fall to the left of a score of the specified Z-value. I.e., a z-table shows the percentage of scores in a normal distribution that are lower than the value at a specified z-score. In other words, a z-table shows the percentile of a score based on the z-value.
+
+A z-table of standard normal probabilities maps a certain z-score to the area under a normal distribution curve and to the left of the score.
 
 ++++++++++++++++++++++
 Joint Random Variables
@@ -298,37 +309,30 @@ Sampling
 
 An arbitrary minimum sample count is > 30.
 
-Selection Bias - Bias toward selecting samples more likely to react or respond to polls, surverys, and other data gathering requests or sampling techniques. Examples: Undercoverage Bias: omitting a segment of the population. Self-selection bias: A bias caused by differences between people who volunteer themselves as samples compared to those who don't volutneer.
+Selection Bias - Bias toward selecting samples more likely to react or respond to polls, surveys, and other data gathering requests or sampling techniques. 
 
-Survivorship Bias - This happends when samples that are inferior, damaged, or unobservable are removed or are not included in the sample pool.
+Undercoverage Bias: omitting a segment of the population. This is usually caused by circumstance, such as phone-polling random numbers during working hours for average income. Many workers could be omitted because they cannot answer.
+
+Self-selection bias: A bias caused by differences between people who volunteer themselves as samples compared to those who don't volunteer.
+
+Survivorship Bias: This happens when samples that are inferior, damaged, or unobservable are removed or are not included in the sample pool.
 
 Random Sampling - All population members have an equal chance of being selected.
-Staratifed Sampling - A population is sorted into segments based on certain characteristics. Members cannot belong to two or more groups. From each group, take a sample. The sample size from each group must have the same ratio to the total sample size as the group's ratio to the total population.
+
+Stratified Sampling - A population is sorted into segments based on certain characteristics. Members cannot belong to two or more groups. From each group, take a proportionate sample. The sample size from each group must have the same ratio to the total sample size as the group's ratio to the total population.
 
 Clustering - The population is broken into groups and samples are taken from a random selection of groups. The group sample size ratio to total sample size must be the same as group size ratio to population size.
 
-Central Limit Theorem - The mean of a sample is normally distributed around the mean of the source population. This is proposed to be true no matter the probability distribution of the population.
-The standard deviation of a sample mean from the population mean is equal to the population SD divided by the square root of the sample size.
+-- Central Limit Theorem - The means of a set of samples are normally distributed around the mean of the source population. This is proposed to be true no matter the probability distribution of the population.
+The standard deviation of a set of sample means from the population mean is equal to the population SD divided by the square root of the sample size.
 s(x) = σ / sqrt(n)
+
 Here:
-σ is the population standard deviation.
-n is the sample size.
-s(x) is the standard deviation of the sample mean from the population mean.
+σ = Population standard deviation.
+n = Sample size.
+s(x) = Standard deviation of the sample means from the population mean.
+
 The larger the sample size, the lower the sample mean's deviation around the population mean.
-In some cases, the sample standard deviation can be used as a stand-in for the population mean. It's accuracy depends heavily on the situation, especially on factors like sample size, accuracy of measuring instruments, and the precision with which what you are measuring is created.
-
-The standard deviation of a sample proportion is calculated using:
-s(proportion) = sqrt((P * (1 - P)) / n)
-Here:
-P - proportion that meet target value or hypothesis, i.e. proportion of sample that contains target characteristics.
-When calculating the s of a sample, use the population percentage when you can.
-
-A proportion can be given a Z score.
-Z(prop) = (Prop - P) / s
-Here:
-Prop - Proportion in sample, results of experiment.
-P - Expected value, hypothesis, target or proposed proportion.
-s - Proportion standard deviation.
 
 - T-Distributions
 These are more "conservative" estimates of probability for normal distributions. One purpose of this table is using the sample SD as a stand-in for the population SD. A t-table shows the number of standard deviations from the mean at the intersection of a significance level and degree of freedom. It may also be used with a confidence level since alpha/significance = 1-Confidence.
@@ -359,6 +363,8 @@ n - sample size.
 
 T-distribution Degrees of Freedom:
 d = n - 1
+
+* In some cases, the sample standard deviation can be used as a stand-in for the population mean. Its accuracy depends heavily on the situation, especially on factors like sample size, accuracy of measuring instruments, and the precision with which what you are measuring is created.
 
 CI using T-score:
 CI = μ +/- Ta * s / sqrt(n)
@@ -392,6 +398,19 @@ p - the estimated proportion of successes.
 q - 1-p where p is a sample proportion.
 n - sample size.
 https://courses.lumenlearning.com/introstats1/chapter/a-population-proportion/
+
+The standard deviation of a sample proportion is calculated using:
+s(proportion) = sqrt((P * (1 - P)) / n)
+Here:
+P - proportion that meet target value or hypothesis, i.e. proportion of sample that contains target characteristics.
+When calculating the standard deviation of a sample proportion, use the population percentage when you can.
+
+A proportion can be given a Z score.
+Z(prop) = (Prop - P) / s
+Here:
+Prop - Proportion in sample, results of experiment.
+P - Expected value, hypothesis, target or proposed proportion.
+s - Proportion standard deviation.
 
 ++++++++++++++++++
 Hypothesis Testing
