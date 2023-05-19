@@ -10,8 +10,9 @@ Support
 Cut Out Until Next Division
 
 ADC
-
-xx
+----
+oooo
+xxx
 61670-RJfSS-L4JPc
 
 Champion, OpponentChampion, OpponentCouldCounterpick, Role, Result
@@ -33,6 +34,7 @@ Sivir@Lux, Jinx@Sona, 0, BotCarry, L
 Sivir@Leona, Caitlyn@Lux, 0, BotCarry, L
 Sivir@Senna, Vayne@Janna, 1, BotCarry, L
 Xayah@Seraphine, Ezreal@Lux, 0, BotCarry, L
+Karthus@Senna, Vladimir@Milio, 1, BotCarry, L
 Tristana@Lulu, Ezreal@Pyke, 0, BotCarry, W
 Karthus@Morgana, Ezreal@Blitzcrank, 1, BotCarry, W
 Xayah@Seraphine, Lucian@Zyra, 0, BotCarry, W
@@ -44,6 +46,9 @@ Sivir@Zyra, Jinx@Lux, 0, BotCarry, W
 Jinx@Seraphine, Miss Fortune@Heimerdinger, 1, BotCarry W
 Xayah@Karma, Twitch@Lulu, 0, BotCarry, W
 Tristana@Blitzcrank, Jhin@Milio, 0, BotCarry, W
+Sivir@Nautilus, MissFortune@Lulu, 0, BotCarry, W
+Karthus@Lux, Tristana@Yuumi, 1, BotCarry, W
+Karthus@Thresh, Jinx@Karma, 1, BotCarry, W
 
 Kindred, Diana, 0, Jungle, L
 Karthus, Jarvan IV, 1, Jungle, L
