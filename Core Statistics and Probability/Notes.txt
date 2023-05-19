@@ -330,7 +330,7 @@ s(x) = σ / sqrt(n)
 Here:
 σ = Population standard deviation.
 n = Sample size.
-s(x) = Standard deviation of the sample means from the population mean.
+s(x) = Standard deviation of the sample means from the population mean. This may be referred to as the sample standard error.
 
 The larger the sample size, the lower the sample mean's deviation around the population mean.
 
@@ -411,6 +411,17 @@ Here:
 Prop - Proportion in sample, results of experiment.
 P - Expected value, hypothesis, target or proposed proportion.
 s - Proportion standard deviation.
+
+- T-test variants
+
+-- T-test for two independent samples with unequal variance. Sample sizes may or may not be equal.
+T-score = abs(x1 - x2) / sqrt((s1^2 / n1) + (s2^2 / n2))
+
+The degrees of freedom for samples with unequal variances:
+df = ((s1^2 / n1) + (s2^2 / n2))^2 / ((1/n1 - 1)*(s1^2 / n1)^2 +  (1/n2 - 1)*(s2^2 / n2)^2)
+
+If the samples have the same standard deviation/variance:
+df = n1 + n2 - 2
 
 ++++++++++++++++++
 Hypothesis Testing
@@ -502,7 +513,7 @@ Normality of Error Distribution - The actual values of the observations should b
 Multiple Regression
 
 Dummy Variables
-????????????????
+Question:
 I have questions about how the coefficient of each dummy variable is calculated and about multicollinearity.
 To begin, I'll use the restaurant problem from the single linear regression problem set.
 It is given that prediction values (y) using the entree coefficient (x) deviate by 0.111 (standard error, SE) on average from the correct value.
