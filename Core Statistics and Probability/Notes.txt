@@ -346,9 +346,9 @@ x - Sample mean.
 n - sample size.
 
 Confidence Interval Fourmula
-CI = μ +/- ((Za * s) / sqrt(n))
+CI = μ +/- ((Zα * s) / sqrt(n))
 Here:
-Za - Z-score of alpha value, i.e. Z-score of percentiles for your alpha. Given a CI for 95%, take the Z-score for the 2.5th and 97.5th percentiles.
+Zα - Z-score of alpha value, i.e. Z-score of percentiles for your alpha. Given a CI for 95%, take the Z-score for the 2.5th and 97.5th percentiles.
 n - Sample size.
 s- Sample SD.
 CI - A pair of values defining a range. You will get the upper and lower values (x1 and x2) for the CI.
@@ -367,10 +367,10 @@ d = n - 1
 * In some cases, the sample standard deviation can be used as a stand-in for the population mean. Its accuracy depends heavily on the situation, especially on factors like sample size, accuracy of measuring instruments, and the precision with which what you are measuring is created.
 
 CI using T-score:
-CI = μ +/- Ta * s / sqrt(n)
+CI = μ +/- Tα * s / sqrt(n)
 Here:
 CI - A pair of values defining a range. You will get the upper and lower values (x1 and x2) for the CI.
-Ta - T-score of alpha value divided by two. For a CI for 95%, take the T-score for 0.025 ((1-CI) / 2).
+Tα - T-score of alpha value divided by two. For a CI for 95%, take the T-score for 0.025 ((1-CI) / 2).
 n - Sample size.
 s- Sample SD from true/population mean.
 
@@ -378,22 +378,22 @@ Possible T-value calculation for those not in table:
 https://www.ttable.org/
 
 Formula for Margin based on formula for CI:
-Margin = +/- (Za * s) / sqrt(n)
+Margin = +/- (Zα * s) / sqrt(n)
 Here:
-Za - Z-score of (alpha / 2). May be replaced with T-score of (alpha / 2).
+Zα - Z-score of (alpha / 2). May be replaced with T-score of (alpha / 2).
 s - Sample standard deviation
 n - sample size
 
 For sample proportions, n = 1.
-Margin = +/- (Za * s)
+Margin = +/- (Zα * s)
 or
-Margin = +/- (Za * sqrt((P*(1-P)) / n)
+Margin = +/- (Zα * sqrt((P*(1-P)) / n)
 P - sample proportion with desired characteristic, i.e. target proportion.
 
 This is confirmed by a Lumen Learning course:
-EBP = Z(a/2) * sqrt(pq/n)
+EBP = Z(α/2) * sqrt(pq/n)
 Here:
-Z(a/2) - Z-score of alpha/2.
+Z(α/2) - Z-score of alpha/2.
 p - the estimated proportion of successes.
 q - 1-p where p is a sample proportion.
 n - sample size.
@@ -433,6 +433,42 @@ Alternate Hypothesis - It's probability is the complement of the null hypothesis
 Type I Error - Rejecting the H0 when H0 is true. The probability of a type one error is referred to as the "level of significance" or "alpha."
 
 Type II Error - Failing to reject the H0 when H0 is false.
+
+Analysis of Variance (ANOVA)
+- Analysis of Variance is used to check if there is a significant difference between two or more samples. ANOVA is used to avoid the increased risk of type I error caused by the stacking alpha probabilities. BINOM.DIST.RANGE(3, 0.5, 1, 3) = 14.263%, i.e. confidence ~ 85.7%. Although applicable when comparing two samples, ANOVA is appropriate for three or more groups since normal significance testing can be used on two samples.
+
+F-value - An F-value is the ratio between the variance among groups/samples relative to the average sample mean to the variance of values within each group/sample. Part of this calculation is Σ(x - x̄)^2, a.k.a sum of squares.
+
+F = (SSg/dfg) / (SSe/dfe)
+Where:
+SSg = Sum of squared differences between the average mean of the groups/samples and each group/sample mean.
+	Take the sum of all samples' variance from the mean sample/group variance. Multiply the sum to the number of values/rows in each group.
+	(Σ(Xg - x̄g)^2) * sampleSzie.
+	Xg is the sample/group mean.
+	x̄ is the mean deviation of each sample/group from the average group/sample mean, i.e. (Xg1 + Xg2 +...)/NumberOfGroups. 
+dfg = Degrees of freedom for the set of samples/groups. Number of groups less one.
+SSe = SS within groups. For each group, take the variance of its values. After calculating each group/sample's variance, sum the variances.
+dfe = Degrees of freedom for the error. (SampleSize - 1) * NumberOfSamples.
+
+* This assumes all groups have the same number of samples.
+
+The group degrees of freedom and error degrees of freedom will be used to find the critical score/F-value for the F-distribution. 
+
+Two-way ANOVA
+- A two-way ANOVA calculates if there is a significant difference among samples if their values are grouped or blocked according to another independent variable. E.g. Travel time per route, and travel time per day of the week. A two-way ANOVA determines if there is a significant difference between travel time samples/groups depending on the day of the week.
+
+F = (SSg/dfg) / (SSe/dfe)
+Where:
+SSg = Sum of squared differences between the average mean of the groups/samples and each group/sample mean. Same as one-way ANOVA.
+dfg = Degrees of freedom for the set of samples/groups. Number of groups less one. Same as one-way ANOVA.
+SSe = Sum of Squares Error. This is calculated differently for two-way ANOVA:
+	SSe = SSt - SSg - SSb
+	Where:
+	SSb = (Σ(Xblock - x̄block)^2) * SamplesOrGroupsPerBlock where x̄block is the mean of the block averages.
+	SSt = Σ(x - x̄block)^2 where x is an individual value in a sample. SSt may also be calculated using Σ(x - x̄group)^2.
+dfe = Calculated using (NumberBlocksOrRows  - 1) * (NumberSamples - 1)
+
+The critical F value/F-critical is calculated separately for groups/samples and blocks.
 
 ++++++++++++++++++++++++
 Simple Linear Regression
@@ -531,11 +567,7 @@ I'll use the example categories of customer referral source. Let's say the refer
 Removing referrals from a friend would decrease consumer spending (y).
 Wouldn't regression mistakenly assign higher values to the encoded dummy value to compensate?
 
-2. I don't understand how to get the effect of the dummy variable relative to the omitted variable.
-Is the regression equation done behind the scenes using the omitted value?
-
-3. How does making a dummy value for all categorical values cause multicollinearity?
-How come omitting one value from the "encoding" avoids it?
+2. How does making a dummy value for all categorical values cause multicolinearity? I didn't get how the equation automatically factors in the value that is not encoded.
 
 Time-lagged Variables
 
