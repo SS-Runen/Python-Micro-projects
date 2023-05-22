@@ -549,7 +549,7 @@ Normality of Error Distribution - The actual values of the observations should b
 Multiple Regression
 
 Dummy Variables
-Question:
+Question and Answer Summary:
 I have questions about how the coefficient of each dummy variable is calculated and about multicollinearity.
 To begin, I'll use the restaurant problem from the single linear regression problem set.
 It is given that prediction values (y) using the entree coefficient (x) deviate by 0.111 (standard error, SE) on average from the correct value.
@@ -561,13 +561,30 @@ I assume that if x' true coefficient were zero, optimizing the coefficient of x 
 There will always be unexplained or random errors in prediction values. Samples are imperfect. There could be hidden variables.
 An insignificant variable could get a coefficient close to the standard error since unexplained deviations are "blamed" or attributed to it.
 
+Ans:
+* The SE in linear regression is basically the standard deviation of the errors in the model.  In other words, a better way to say this might be that, if the coefficient of the predictor variable is zero, then the coefficient is likely to be within ~2 standard errors of zero.
+** An actually insignificant variable could appear significant because of problems with the sample or the selection of variables to run in the regression.  Yes.
+
 1. When using dummy values to represent a nominal variable, wouldn't the excluded encoding "transfer" its value to the included variables?
 Won't the effect of the missing dummy value be attributed to the value that happens to be encoded as 1?
 I'll use the example categories of customer referral source. Let's say the referrals by a friend have the highest positive effect on spending.
 Removing referrals from a friend would decrease consumer spending (y).
 Wouldn't regression mistakenly assign higher values to the encoded dummy value to compensate?
+Those customer data points who were referred by a friend simply have zeros for all four binary variables.
 
-2. How does making a dummy value for all categorical values cause multicolinearity? I didn't get how the equation automatically factors in the value that is not encoded.
+2. I don't understand how to get the effect of the dummy variable relative to the omitted variable.
+Is the regression equation done behind the scenes using the omitted value?
+
+*** [For 1 and 2] No. Every customer data point will be counted. Those customer data points who were referred by a friend simply have zeros for all four binary variables.
+
+3. How does making a dummy value for all categorical values cause multicolinearity? I didn't get how the equation automatically factors in the value that is not encoded.
+
+**** Honestly, I see people make n dummy variables for n categories all the time, so you wouldn't be alone in not using n-1 categories.  The problem with this is that your results will have no point of reference and the additional variable will carry no additional information relative to the others.  This is a common mistake.
+
+Follow-up Questions:
+Where would the effect or coefficient of friend referrals be "attributed" to if "referred by a friend" is the default value? It would not be mistakenly transferred to another referral method since other dummy variables are all zeroed.
+
+Next, is there a way for me to find the effectiveness of friend referrals in contributing to sales if it is the default value? I believe its relative effectiveness is quantified against the encoded referral methods' coefficients. If TV had a 0.2 coefficient, I would've said TV only has 0.2 friend referrals contribution to revenue. Maybe that "relative effectiveness" could even be checked for significance vs other referral methods. How do I quantify the contribution of an individual referral method vs. other variables in the regression, like gender or customer salary?
 
 Time-lagged Variables
 
