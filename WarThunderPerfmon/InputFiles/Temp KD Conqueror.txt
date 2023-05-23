@@ -8,6 +8,16 @@ Finland [Battle]
 Second Battle of El Alamein [Battle] no sniper mountain
 Poland two points in town
 
+2023-05-20
+
+Mozdok
+@k @ZTZ59A @1.58, 1.6 @near-para, near-para @0, 0 @0, 0
+
+Sands of Sinai
+@k @SU-122-54 @1.3 @Diag @32 @0
+@k @T-54 (1949) @1.21 @Diag @-2 @0
+@k @Type 62 @1.7 @Para @35 @0
+
 2023-05-12
 
 Middle East

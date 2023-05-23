@@ -34,6 +34,28 @@ Battle of Hurtgen Forest [Battle] zones in town
 Finland
 Poland two points in town
 
+2023-05-22
+
+Poland (winter) [Battle]
+@k @T-44-100 @.3, .28 @Diag, diag @-5, -3 @0, 0
+@k @T-54 (1947) @1.35, 1.35 @perp, perp @17, 0 @0, 0
+@k @T-54 (1949) @.71 @Para @49 @0
+@K @SU-100P @0.05 @Near-para @0 @0
+@k @Type 62 @.24, .24 @Perp, perp @35, 2 @0, 0
+@k @Type 63 @.92 @para @53 @0
+
+Pradesh
+@k @T-44 @1.57 @near-para @9 @0
+@k @ASU-85 @1.71, 1.71 @Diag @8, 0 @0, 0
+@k @ASU-85 @1.75 @Diag @8 @0
+@k @SU-100P @1.64, 1.64 @Perp, near-Perp @16, 0 @0, 0
+
+Fields of Poland
+@k @T-54 (1949) @1.22, 1.21 @Diag, para @15, 0 @0, 0
+
+Normandy
+@k @IS-4M @.98 @Para @0 @0
+
 2023-05-06
 
 Sands of Sinai

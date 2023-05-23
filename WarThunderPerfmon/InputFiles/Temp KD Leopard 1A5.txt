@@ -1,2 +1,9 @@
 Event, Vehicle, Distance, Orientation, Speed, SlefSpeed
 
+2023-05-23
+
+Pradesh
+@K @ZTZ59D1 @1.78 @Near-para @0 @0
+@k @T-55AM-1 @1.39 @Perp @0 @0
+@k @ZTZ59D1 @1.38 @Perp @0 @0
+
