@@ -435,18 +435,18 @@ Type I Error - Rejecting the H0 when H0 is true. The probability of a type one e
 Type II Error - Failing to reject the H0 when H0 is false.
 
 Analysis of Variance (ANOVA)
-- Analysis of Variance is used to check if there is a significant difference between two or more samples. ANOVA is used to avoid the increased risk of type I error caused by the stacking alpha probabilities. BINOM.DIST.RANGE(3, 0.5, 1, 3) = 14.263%, i.e. confidence ~ 85.7%. Although applicable when comparing two samples, ANOVA is appropriate for three or more groups since normal significance testing can be used on two samples.
+- Analysis of Variance is used to check if there is a significant difference between two or more samples. ANOVA is used to avoid the increased risk of type I error caused by the stacking alpha probabilities. BINOM.DIST.RANGE(3, 0.5, 1, 3) = 14.263%, i.e. confidence ~ 85.7%. Although applicable when comparing two samples, ANOVA is appropriate for three or more groups since normal significance testing can be used on two samples. The F distribution used to set values in ANOVA is skewed to the right. This is probably because ANOVA calculations result in negative differences increasing the F-value or F-score. Both negative and positive differences will increase the F-score. 
 
-F-value - An F-value is the ratio between the variance among groups/samples relative to the average sample mean to the variance of values within each group/sample. Part of this calculation is Σ(x - x̄)^2, a.k.a sum of squares.
+F-value - An F-value is the ratio between the variance among groups relative to the average group mean. Part of this calculation is Σ(x - x̄)^2, a.k.a sum of squares.
 
 F = (SSg/dfg) / (SSe/dfe)
 Where:
-SSg = Sum of squared differences between the average mean of the groups/samples and each group/sample mean.
-	Take the sum of all samples' variance from the mean sample/group variance. Multiply the sum to the number of values/rows in each group.
+SSg = Sum of squared differences between each group mean and the average mean of the groups.
+	Take the sum of all samples' variance from the mean group variance. Multiply the sum to the number of values/rows in each group.
 	(Σ(Xg - x̄g)^2) * sampleSzie.
-	Xg is the sample/group mean.
-	x̄ is the mean deviation of each sample/group from the average group/sample mean, i.e. (Xg1 + Xg2 +...)/NumberOfGroups. 
-dfg = Degrees of freedom for the set of samples/groups. Number of groups less one.
+	Xg is the group mean.
+	x̄ is the mean deviation of each group from the average group mean, i.e. (Xg1 + Xg2 +...)/NumberOfGroups. 
+dfg = Degrees of freedom for the set of groups. Number of groups less one.
 SSe = SS within groups. For each group, take the variance of its values. After calculating each group/sample's variance, sum the variances.
 dfe = Degrees of freedom for the error. (SampleSize - 1) * NumberOfSamples.
 
@@ -459,16 +459,46 @@ Two-way ANOVA
 
 F = (SSg/dfg) / (SSe/dfe)
 Where:
-SSg = Sum of squared differences between the average mean of the groups/samples and each group/sample mean. Same as one-way ANOVA.
+SSg = Sum of squared differences between the average mean of the groups and each group mean. Same as one-way ANOVA.
 dfg = Degrees of freedom for the set of samples/groups. Number of groups less one. Same as one-way ANOVA.
 SSe = Sum of Squares Error. This is calculated differently for two-way ANOVA:
 	SSe = SSt - SSg - SSb
 	Where:
-	SSb = (Σ(Xblock - x̄block)^2) * SamplesOrGroupsPerBlock where x̄block is the mean of the block averages.
-	SSt = Σ(x - x̄block)^2 where x is an individual value in a sample. SSt may also be calculated using Σ(x - x̄group)^2.
+	SSb = (Σ(Xblock - x̄block)^2) * DataPointsPerBlock where x̄block is the mean of the block averages and Xblock is the block average.
+	SSt = Σ(x - x̄block)^2 where x is an individual value in a sample.
 dfe = Calculated using (NumberBlocksOrRows  - 1) * (NumberSamples - 1)
 
-The critical F value/F-critical is calculated separately for groups/samples and blocks.
+The critical F value (F-critical) is calculated separately for groups and blocks.
+
+Two-way ANOVA with Replication
+- Two-way ANOVA with replication is the method used in most real problems. It allows multiple samples within a block, not just multiple blocks within groups.
+
+1. Calculate the mean for each sample and block intersection, i.e. get the mean of data points/rows for each block within each sample. 
+2. Calculate group means, i.e. column means, and block means. Block means include all data points in a block regardless of sample.
+3. Calculate the overall mean. You may get the mean of the samples or get the mean of all data points.
+4. Calculate the block Sum of Squares:
+	SSb = (Σ(Xblock - x̄block)^2) * DataPointsPerBlock
+	Where x̄block is the mean of the block averages and Xblock is the block average.
+5. Get the Sum of Squares for columns.
+	SSg = (Σ(Xgroup - x̄group)^2) * DataPointsPerGroup
+	Where Xgroup is a column/group mean and x̄group is the mean value of group averages.
+6. Get the degrees of freedom for columns:
+	dfg = n - 1, where n is the number of data points per group.
+7. Get the Sum of Squares Interactions. For each group-block-intersection mean, subtract the corresponding block and column means. Add the overall mean and then square the result.
+	SSi = Σ(x̄gb - (x̄b + x̄g) + x̄)^2
+	Where:
+	x̄gb = Mean for a group and block intersection.
+	x̄b = Mean of the group-block intersection's corresponding block.
+	x̄g = Mean of the group-block intersection's corresponding group/sample.
+	x̄ = Overall mean.
+8. Calculate the Sum of Squares for the Total.
+	SSt = Σ(x - x̄)^2, where x is a data point and x̄ is the mean for all data points. 
+9. Get the SSe.
+	SSe = SSt - (SSb + SSg + SSi)
+10. Get the degrees of freedom for error.
+	dfe = NumberOfBlocks * NumberOfGroups * (n - 1), where n is the number of samples for each group and block intersection.
+
+F = (SSg/dfg) / (SSe/dfe)
 
 ++++++++++++++++++++++++
 Simple Linear Regression
@@ -544,6 +574,8 @@ Independence of Errors - The error between the predicted and actual values (resi
 Homoscedasticity - There is no trend in the size/magnitude of the residuals. One way to test this is to take the square of the residuals. If they increase in a mostly linear way, then there is a trend in the residuals and the data is NOT homoscedastic.
 
 Normality of Error Distribution - The actual values of the observations should be clustered around the best-fit line. Residuals with very high absolute values should be rare.
+
+* Visualizing your variables can be used as a shortcut or guide to check if you can perform a valid linear regression.
 
 +++++++++++++++++++
 Multiple Regression
