@@ -500,6 +500,18 @@ Two-way ANOVA with Replication
 
 F = (SSg/dfg) / (SSe/dfe)
 
+Chi-square Test
+- The Chi-square test is used to find "goodness of fit" and to check if observed results are deviating significantly from expected results. It is used to determine the probability of observing a specific frequency of certain events. The Chi-square test assumes that the outcomes and future outcomes are independent and mutually exclusive.
+
+For every possible category to be observed, take the squared difference between the expected outcome and the observed outcome. Divide the squared difference by the expected outcome. Last, get the sum of the per-variable calculations.
+x^2 = Σ((O - E)^2 / E)
+Where:
+E = Expected value or outcome count.
+O = Observed value or outcome count.
+Chi-square degrees of freedom = CountOfPossibleObservationCategories - 1
+
+- Without an explicit or proven expected number of outcomes per event, assume that the probability of each observation is uniformly distributed. For six possible outcomes, the expected value would be the total observations divided by six.
+
 ++++++++++++++++++++++++
 Simple Linear Regression
 
@@ -580,8 +592,8 @@ Normality of Error Distribution - The actual values of the observations should b
 +++++++++++++++++++
 Multiple Regression
 
-Dummy Variables
-Question and Answer Summary:
+- Dummy Variables
+Question:
 I have questions about how the coefficient of each dummy variable is calculated and about multicollinearity.
 To begin, I'll use the restaurant problem from the single linear regression problem set.
 It is given that prediction values (y) using the entree coefficient (x) deviate by 0.111 (standard error, SE) on average from the correct value.
@@ -594,8 +606,7 @@ There will always be unexplained or random errors in prediction values. Samples 
 An insignificant variable could get a coefficient close to the standard error since unexplained deviations are "blamed" or attributed to it.
 
 Ans:
-* The SE in linear regression is basically the standard deviation of the errors in the model.  In other words, a better way to say this might be that, if the coefficient of the predictor variable is zero, then the coefficient is likely to be within ~2 standard errors of zero.
-** An actually insignificant variable could appear significant because of problems with the sample or the selection of variables to run in the regression.  Yes.
+*** The SE in linear regression is basically the standard deviation of the errors in the model.  In other words, a better way to say this might be that, if the coefficient of the predictor variable is zero, then the coefficient is likely to be within ~2 standard errors of zero. An actually insignificant variable could appear significant because of problems with the sample or the selection of variables to run in the regression.  Yes.
 
 1. When using dummy values to represent a nominal variable, wouldn't the excluded encoding "transfer" its value to the included variables?
 Won't the effect of the missing dummy value be attributed to the value that happens to be encoded as 1?
@@ -611,14 +622,19 @@ Is the regression equation done behind the scenes using the omitted value?
 
 3. How does making a dummy value for all categorical values cause multicolinearity? I didn't get how the equation automatically factors in the value that is not encoded.
 
-**** Honestly, I see people make n dummy variables for n categories all the time, so you wouldn't be alone in not using n-1 categories.  The problem with this is that your results will have no point of reference and the additional variable will carry no additional information relative to the others.  This is a common mistake.
+*** Honestly, I see people make n dummy variables for n categories all the time, so you wouldn't be alone in not using n-1 categories.  The problem with this is that your results will have no point of reference and the additional variable will carry no additional information relative to the others.  This is a common mistake.
 
 Follow-up Questions:
 Where would the effect or coefficient of friend referrals be "attributed" to if "referred by a friend" is the default value? It would not be mistakenly transferred to another referral method since other dummy variables are all zeroed.
 
 Next, is there a way for me to find the effectiveness of friend referrals in contributing to sales if it is the default value? I believe its relative effectiveness is quantified against the encoded referral methods' coefficients. If TV had a 0.2 coefficient, I would've said TV only has 0.2 friend referrals contribution to revenue. Maybe that "relative effectiveness" could even be checked for significance vs other referral methods. How do I quantify the contribution of an individual referral method vs. other variables in the regression, like gender or customer salary?
 
-Time-lagged Variables
+*** When you are using dummy variables, the effect of any one of them will always be relative to the other dummy variables that refer to the same attribute. Now, if you are interested in assigning an exact value to the effect of one of those variables relative to all others, you will need to code a binary dummy variable for just that attribute.  I.e. you could code Friend Referral as 1 and all other source types as 0.
+
+Question:
+I want to know how linear regression avoids assigning the coefficient of the default dummy variable to other variables in the regression instead of the encoded dummy variables. My assumption is that assigning the "effect" or coefficient to the wrong variables would raise the error of the regression model. Thru some optimization method, the regression will eventually assign or "attribute" the relative effect of the default value to its corresponding encoded values. The problem with my guess is that the model could simply force-fit the coefficient of the default dummy variable to other non-related variables. Multiplication has the same effect no matter the order, so the coefficient of the default dummy variable could be adjusted and transferred.
+
+- Time-lagged Variables
 
 +++++++++++++
 Miscellaneuos
