@@ -72,8 +72,14 @@ Sands of Sinai
 @k @T-44-100 @2.48 @Perp @0 @0
 
 Fields of Poland
-@k @T-54 (1949) @~.2 @Perp
-@kb @T-54 (1949) @~.6 @Perp
+@k @T-54 (1949) @.37 @Perp @-4 @0
+@kb @T-54 (1949) @.66 @Perp @0 @6
+
+Hurtgen Forest
+@k @2S3M @.61 @Diag @31 @0
+@k @ASU-85 @.33 @Para @0 @0
+@k @BTR-ZD @.03 @Near-para @0 @0
+@kb @T-54 (1949) @.06 @Diag @25 @0
 
 2023-05-02
 
