@@ -139,6 +139,7 @@ Karthus, Wukong, 1, Jungle, W
 Karthus, Lee Sin, 0, Jungle, W
 Karthus, Nocturne, 0, Jungle, W
 Karthus, Lee Sin, 0, Jungle, W
+Karthus, Evelyn, 0, Jungle, W
 
 Quinn, Yasuo, 0, Top, L
 Quinn, Irelia, 1, Top, L
