@@ -1,0 +1,25 @@
+++++++++++++++++
+Gradient Descent
+
+For a cost function J with parameters w and b, J(w, b), continuously update w and b to minimize J.
+w = w - α (∂/∂w)J(w,b)
+and
+b = b - α (∂/∂b)J(w,b)
+Where:
+α = Learning rate. This is usually a decimal value between 0 and 1. It functions as a multiplier to the amount of change.
+(d/dw)J(w,b) = This entire term represents the value of the partial derivative of the function J with parameters w and b. The term "d" indicates to change the value of w when looking for the derivative and to keep other values constant.
+
+* A derivative is the rate of change of a function relative to a variable. A derivative may be noted as f' or as d/dx. A partial derivative may be noted as ∂/∂x or f. The term x can be any variable. Calculating a derivative involves finding the slope of a point in a line using the properties of tangents, limits, and triangle trigonometry.
+* The update operations of w and b have to be done at the same time and in step. When performing the descent, the current/old values should be used as input to J. The updated values will only be used in the next iteration.
+
+@@@
+Gradient Descent with Linear Regression
+
+These are the expanded formulas for a cost function used in single-variable linear regression.
+w = w - α * (1/m) * Σ(f<-w,b(wx^i + b) - y^i) x^i
+b = b - α * (1/m) * Σ(f<-w,b(wx^i + b) - y^i)
+
+* Due to the rules of calculus, the x^i term happens to be removed when calculating the update to b.
+
+- A lucky property of gradient descent cost functions for linear regression is that they do not have multiple local minima. This kind of function is called a convex function, i.e. a function with only one global minimum.
+

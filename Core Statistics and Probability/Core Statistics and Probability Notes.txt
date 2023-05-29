@@ -634,6 +634,9 @@ Next, is there a way for me to find the effectiveness of friend referrals in con
 Question:
 I want to know how linear regression avoids assigning the coefficient of the default dummy variable to other variables in the regression instead of the encoded dummy variables. My assumption is that assigning the "effect" or coefficient to the wrong variables would raise the error of the regression model. Thru some optimization method, the regression will eventually assign or "attribute" the relative effect of the default value to its corresponding encoded values. The problem with my guess is that the model could simply force-fit the coefficient of the default dummy variable to other non-related variables. Multiplication has the same effect no matter the order, so the coefficient of the default dummy variable could be adjusted and transferred.
 
+*** In a multiple regression, every independent variable that you include in the regression will have an effect on every other one,  which is usually the point of including more than one variable. In effect, you want to account for the effect of the variables you really care about in the context of other key factors. In the example you gave where you have variables for customer salary and each of the referral sources, you would be able to measure the effect of referral sources controlling for customer salary.  For instance, this would address the issue of some sources having higher average customer salaries than others.
+To summarize, every variable included in a multiple regression will alter the coefficients of the others in some way unless they are completely independent.  Dummy variables are no different in this way.  And that's definitely a feature of regression, not a bug.
+
 - Time-lagged Variables
 
 +++++++++++++
