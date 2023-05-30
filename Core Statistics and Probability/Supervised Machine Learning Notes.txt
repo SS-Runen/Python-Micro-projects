@@ -23,3 +23,23 @@ b = b - α * (1/m) * Σ(f<-w,b(wx^i + b) - y^i)
 
 - A lucky property of gradient descent cost functions for linear regression is that they do not have multiple local minima. This kind of function is called a convex function, i.e. a function with only one global minimum.
 
+@@@
+Convergence Checking
+- Check if the error or cost function decreases by a certain amount, ε.
+
++++++++++++++++
+Feature Scaling
+
+Z-score normalization - Use the z-scores as x-values.
+x = (x - μ) / σ
+
+Min-max normalization
+x = x / (max(vectorX))
+
+Mean normalization
+x = (x - μ) / (max(vectorX) - min(vectorX))
+
+- If certain features have very large or very small x-values, the gradient descent model may take longer to reach a low-value cost function. The user has low control over the amount of change to a parameter in the early stages of the cost function optimization. Values with an uneven scale may force the model to "bounce" around large ranges and take longer to minimize error.
+
+- When normalizing, it is recommended to have values within a small countable negative and positive range to retain magnitude and direction versus some reference point.
+
