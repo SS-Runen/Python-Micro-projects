@@ -25,6 +25,9 @@ f(w, b) = P(y = 1 | x; w, b)
 Decision Boundary
 - The decision boundary is the value at which the probability between g(z) = 1 or g(z) = 0 is equal or neutral. g(w,x) = w1x1 +...wnxm = 0. The decision boundary may be calculated by substituting values into the input equation and then solving for or simplifying them. 
 
+Logarithm
+- A logarithm is the exponent or power to which a base must be raised to yield a given number. E.g. the logarithm of 8 with base 2 is 3. Two must be raised to the exponent three to yield eight.
+
 +++++++++++++++++++++++++++++++++++++++
 Gradient Descent with Linear Regression
 
