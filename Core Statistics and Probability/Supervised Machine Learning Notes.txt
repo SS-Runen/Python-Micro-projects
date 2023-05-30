@@ -1,5 +1,5 @@
-++++++++++++++++
-Gradient Descent
++++++++++++++++++
+Linear Regression
 
 For a cost function J with parameters w and b, J(w, b), continuously update w and b to minimize J.
 w = w - α (∂/∂w)J(w,b)
@@ -12,7 +12,20 @@ Where:
 * A derivative is the rate of change of a function relative to a variable. A derivative may be noted as f' or as d/dx. A partial derivative may be noted as ∂/∂x or f. The term x can be any variable. Calculating a derivative involves finding the slope of a point in a line using the properties of tangents, limits, and triangle trigonometry.
 * The update operations of w and b have to be done at the same time and in step. When performing the descent, the current/old values should be used as input to J. The updated values will only be used in the next iteration.
 
-@@@
++++++++++++++++++++
+Logistic Regression
+
+Sigmoid Function
+- a.k.a Logistic Function. It outputs values between zero and one given z.
+g(z) = 1 / (1 + e^-z)
+
+- The output of a linear or polynomial regression model can be used as the input (z) to a logistic/sigmoid function. The result of a logistic function is the probability of a positive result, i.e. the sigmoid function gives the probability that the target characteristic is present for the sample/vector x.
+f(w, b) = P(y = 1 | x; w, b)
+
+Decision Boundary
+- The decision boundary is the value at which the probability between g(z) = 1 or g(z) = 0 is equal or neutral. g(w,x) = w1x1 +...wnxm = 0. The decision boundary may be calculated by substituting values into the input equation and then solving for or simplifying them. 
+
++++++++++++++++++++++++++++++++++++++++
 Gradient Descent with Linear Regression
 
 These are the expanded formulas for a cost function used in single-variable linear regression.
@@ -21,11 +34,16 @@ b = b - α * (1/m) * Σ(f<-w,b(wx^i + b) - y^i)
 
 * Due to the rules of calculus, the x^i term happens to be removed when calculating the update to b.
 
-- A lucky property of gradient descent cost functions for linear regression is that they do not have multiple local minima. This kind of function is called a convex function, i.e. a function with only one global minimum.
+- A property of gradient descent cost functions for linear regression is that they do not have multiple local minima. This kind of function is called a convex function, i.e. a function with only one global minimum.
 
-@@@
 Convergence Checking
-- Check if the error or cost function decreases by a certain amount, ε.
+- Check if the error or cost function decreases by a certain amount, ε. Compare the error optimization of different learning rates (α) over a small amount of runs (e.g. 30) and gradually change α.
+
+Feature Engineering for Regression
+- Features may be removed automatically by the model. Another way is to use domain knowledge to transform or combine data into new features and compare their performance to a certain baseline or "control" set of features. You may also compare the effect of new or aggregated features to the separate source features.
+
+Polynomial Regression
+- You may derive a new feature from x by taking its various powers - usually the second or third - or taking x' square root. This may not be applicable to some features with negative values. For negative values, it may be useful to transform the absolute value and then multiply it to a negative value as part of the transformation process.
 
 +++++++++++++++
 Feature Scaling
