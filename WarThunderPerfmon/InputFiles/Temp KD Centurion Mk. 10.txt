@@ -34,6 +34,16 @@ Battle of Hurtgen Forest [Battle] zones in town
 Finland
 Poland two points in town
 
+2023-05-30
+
+Pradesh 2
+@k @PT-76B @1.1 @Near-perp @0 @0
+
+Pradesh
+@k @M53/59 @1.77 @Para @8 @0
+@k @T-54 (1949) @1.78 @near-perp, near-perp @13, 0 @0, 0
+@kb @T-54 (1949) @1.34 @Perp, Perp @0, 0 @0, 0
+
 2023-05-26
 
 Fields of Poland (winter)

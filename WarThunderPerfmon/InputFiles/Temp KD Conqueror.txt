@@ -24,6 +24,9 @@ Middle East
 @k @T-54 (1947) @1.05 @Para @12 @0
 @k @Type 62 @1.1 @Perp @25 @0
 
+Eastern Europe
+@k @IS-6 @.36 @Near-para @12 @0
+
 2023-05-02
 
 Mozdok [Battle]
