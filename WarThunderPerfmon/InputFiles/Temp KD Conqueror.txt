@@ -8,6 +8,27 @@ Finland [Battle]
 Second Battle of El Alamein [Battle] no sniper mountain
 Poland two points in town
 
+2023-01-06
+
+Pland (winter) [Battle]
+@K @T-54 @~1 @Diag, diag
+@k @2S3M @~.1 @Perp
+@k @T-54 (1947) @~1.1 @Perp, Perp
+@kb @T-54 (1947) @~.1
+@kb @Type 59 @~.1 @Para @0 @0
+
+Pradesh 1
+@k @Type 59 @~1.5 @Near-perp @0 @0
+
+Pradesh 1
+@k @SU-122-54 @~1.7 @Near-para @0 @0
+@k Type 59 @~1.3 @Diag @0 @0
+@kb @Type 59 @~1.1 @Perp, Near-para @
+
+Fields of Normandy
+@kb @T-54 (1951) @.08 @Near-para @0 @0
+@kb @T-54 (1951) @.06, 0.06 @Near-para, Near-perp @11, 0 @0, 0
+
 2023-05-20
 
 Mozdok

@@ -8,7 +8,6 @@ Space Port
 Campania
 Cargo Port
 Finland [Battle]
-Mozdok [Battle] flank path exposed
 Alaska/Ground Zero
 Carpathians
 Frozen Pass
@@ -33,6 +32,38 @@ Sinai no elevated flank rocks platform
 Battle of Hurtgen Forest [Battle] zones in town
 Finland
 Poland two points in town
+
+2023-06-03
+
+Mozdok [Battle]
+@k @PT-76-57 @1.18 @diag @0 @0
+@k @T-54 (1947) @1.52, 1.52 @Perp, perp @0, 0 @0, 0
+@k @ASU-85 @1.11 @Para @0 @0
+@k @2S3M @.93 @Diag @15 @0
+@k @T-54 (1949) @1.58 @Perp, para, near-para @0, -8, 0 @0, 0, 0
+@k @ASU-85 @1.48, 1.47 @Para, near-para @3, 0 @0, 0
+
+Pradesh 1
+@k @IS-3 @1.54 @Para @28 @0
+
+Fire Arc
+@k @SU-100 @2.19, 2.18 @diag, diag @24, 0 @0, 0
+@k @SU-100P @1.67, 1.66, 1.66 @Diag, diag, diag @40, 0, 0 @0, 0, 0
+@k @PT-76-57 @1.29 @near-Perp @1 @0
+
+Pradesh 1
+@k @Obj 268 @1.82 @near-Para @0 @0
+@k @T-44-100 @1.12 @Para @0 @0
+@k @T-44-100 @1.05 @Near-perp @21 @0
+
+Pradesh 2
+@k @T-44-100 @Near-para
+@K @T-44-100 @1 @Near-perp
+
+Middle East
+@k @T-54 @~.6 @Para
+@k @T-54 @~.7 @Near-para @0 @0
+@k @Type 62 @~1
 
 2023-05-30
 
