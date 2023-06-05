@@ -11,7 +11,7 @@ w = w - α (∂/∂w)J(w,b)
 and
 b = b - α (∂/∂b)J(w,b)
 Where:
-α = Learning rate. This is usually a decimal value between 0 and 1. It functions as a multiplier to the amount of change.
+α = Learning rate. This is a decimal value between 0 and 1. It functions as a multiplier to the amount of change.
 (d/dw)J(w,b) = This entire term represents the value of the partial derivative of the function J with parameters w and b. The term "d" indicates to change the value of w when looking for the derivative and to keep other values constant.
 
 * A derivative is the rate of change of a function relative to a variable. A derivative may be noted as f' or as d/dx. A partial derivative may be noted as ∂/∂x or f. The term x can be any variable. Calculating a derivative involves finding the slope of a point in a line using the properties of tangents, limits, and triangle trigonometry.
@@ -24,7 +24,7 @@ Sigmoid Function
 - a.k.a Logistic Function. It outputs values between zero and one given z.
 g(z) = 1 / (1 + e^-z)
 
-- The output of a linear or polynomial regression model can be used as the input (z) to a logistic/sigmoid function. The result of a logistic function is the probability of a positive result, i.e. the sigmoid function gives the probability that the target characteristic is present for the sample/vector x.
+- A linear or polynomial function is the input (z) to a logistic/sigmoid function. The result of a logistic function is the probability of a positive result, i.e. the sigmoid function gives the probability that the target characteristic is present for the sample/vector x.
 f(w, b) = P(y = 1 | x; w, b)
 
 Decision Boundary
@@ -96,6 +96,6 @@ The following term may be added to the simplified logistic regression cost funct
 λ/2m * Σ(j=1 n) w[j]^2
 Where:
 n = Number of features.
-j = Row/horizontal vector index.
+j = Index for the row/horizontal vector. Index j points to a feature parameter.
 m = Number of rows/horizontal vectors.
 w = Input or feature value.
