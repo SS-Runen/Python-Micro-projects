@@ -61,9 +61,12 @@ Pradesh 2
 @K @T-44-100 @1 @Near-perp
 
 Middle East
-@k @T-54 @~.6 @Para
-@k @T-54 @~.7 @Near-para @0 @0
-@k @Type 62 @~1
+@k @T-54 (1947) @.55 @Para @24 @0
+@k @T-54 (1949) @.8 @Near-para @0 @0
+@k @Type 62 @.99 @near-para @0 @0
+@k @T-54 (1949) @.78, .78 @Para, para @0, 0 @6, 0
+@k @Obj 268 @.81 @Perp @17, 0 @0, 0
+@k @PT-76B @.92 @Near-para @32 @0
 
 2023-05-30
 
