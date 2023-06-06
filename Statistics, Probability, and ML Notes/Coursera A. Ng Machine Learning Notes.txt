@@ -99,3 +99,19 @@ n = Number of features.
 j = Index for the row/horizontal vector. Index j points to a feature parameter.
 m = Number of rows/horizontal vectors.
 w = Input or feature value.
+
++++++++++++++++++++++++++++++++++++
+Matrix Operations and Vectorization
+
+- The dot product of two vectors x and y is equivalent to the dot product of transpose(x) and y.
+
+- You may only perform a dot product on vectors with the same length.
+
+@@@
+Matrix Multiplication Rules
+
+- To multiply matrices, one must have the same number of rows as the other matrix' columns. E.g. three by two and two by four, twelve by n and m by twelve.
+
+- The result of a matrix dot product will have the same number of rows as the first matrix and the same number of columns as the second.
+
+- In general, matrix multiplication is NOT commutative. The order of the matrices is significant in matrix multiplication. Only certain edge cases result in commutative matrix multiplications.
