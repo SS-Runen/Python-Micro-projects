@@ -34,6 +34,17 @@ Battle of Hurtgen Forest [Battle] zones in town
 Finland
 Poland two points in town
 
+2023-06-06
+
+Mozdok
+@k @QN506 @1.84 @Near-perp @0 @0
+@k @2S25 @1.03 @Diag @0 @0
+@k @ZSU-57-2 @1.78 @para @0 @0
+@kb @T-55AMD-1 @1.57 @Near-perp @0 @44
+
+Middle East
+@kb @AFT09 @.06 @Diag @0 @0
+
 2023-05-01
 
 Fields of Poland
@@ -66,15 +77,10 @@ Mozdok
 2023-04-02
 
 Middle East
-@k @T-64A (1971) @~.6 
+@k @T-64A (1971) @.62 @near-para @30 @0
 
 Pradesh
 @k @BMP-3 @1.74 @diag @0 @0
 @k @Object 120 @2.05 @perp @0 @0
 
-2023-03-10
-
-Second Battle of El Alamein [Battle]
-@k @WMA301 @~1.5 @Para @0 @0
-@k @ZTZ59A @~1.6 @Para, perp @
 
