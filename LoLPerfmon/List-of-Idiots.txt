@@ -90,7 +90,7 @@ ArchibaldFast - This player scripted as Xerath. Typically, he tip-toed around sk
 
 NH Cyclopes - Zed support. After swapping pick order, the NH Cyclopes locked in Zed. In-game, the player died four times and then left at the ten-minute mark.
 
-看看这个 - As Yi, this player refused to trade objectives despite pings and map vision of the enemy team on the opposite side of his map area. The player also took CS from other lanes and went into two fights without backup.
+看看这个 - As Yi, this player refused to trade objectives despite pings and map vision of the enemy team on the opposite side of his map area. The player also took CS from other lanes and went into two fights without backup. 14670206
 
 -------------
 Low Priority:

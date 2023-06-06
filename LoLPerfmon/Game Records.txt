@@ -12,12 +12,10 @@ Cut Out Until Next Division
 
 ADC
 o
-x
+xx
 ----
 oooo
 xxx
-2023-06-06
-29-21
 61670-RJfSS-L4JPc
 
 Champion, OpponentChampion, OpponentCouldCounterpick, Role, Result
