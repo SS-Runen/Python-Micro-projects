@@ -3,6 +3,15 @@ General Guidelines
 
 - When testing a formula or procedure, try the process using some input. For equations, try to find a trend in the results relative to the input. For ML algorithms, run limited tests on groups or sets with at least thirty samples. Depending on the situation, a control may be needed or the same data has to be used for different processes.
 
+- To start Spyder in Ubuntu Linux:
+conda activate spyder-env
+spyder
+
+Here, "spyder-env" is the name of your Conda environment. This is the default name and it may be changed.
+
+- A plugin is needed to open and edit notebooks in Spyder:
+conda install spyder-notebook -c conda-forge
+
 +++++++++++++++++
 Linear Regression
 
@@ -110,7 +119,7 @@ Matrix Operations and Vectorization
 @@@
 Matrix Multiplication Rules
 
-- To multiply matrices, one must have the same number of rows as the other matrix' columns. E.g. three by two and two by four, twelve by n and m by twelve.
+- To multiply matrices, the first matrix must have the same number of columns (vertical vectors) as the other matrix' rows. E.g. three by two and two by four. To multiply a twelve by n and m by twelve matrix, the m by twelve matrix has to be the first input of the operation. This is a side-effect of the dot-product rule for multiplying vectors.
 
 - The result of a matrix dot product will have the same number of rows as the first matrix and the same number of columns as the second.
 
