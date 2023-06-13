@@ -92,6 +92,8 @@ NH Cyclopes - Zed support. After swapping pick order, the NH Cyclopes locked in 
 
 看看这个 - As Yi, this player refused to trade objectives despite pings and map vision of the enemy team on the opposite side of his map area. The player also took CS from other lanes and went into two fights without backup. 14670206
 
+OUTCAST 1219 - Assigned support. Picked Neeko and gave nine free deaths. Kept pushing and taking CS despite my pings and chat. One game later, he was on the enemy team and gave two kills up to our mid. Later, the player swapped with their top and our Zoe got even more fed. The Vayne was also losing to our Teemo.
+
 -------------
 Low Priority:
 
