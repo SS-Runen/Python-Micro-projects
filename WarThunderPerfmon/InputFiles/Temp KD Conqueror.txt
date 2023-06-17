@@ -8,6 +8,26 @@ Finland [Battle]
 Second Battle of El Alamein [Battle] no sniper mountain
 Poland two points in town
 
+Unlike the Centurion MK. 10 custom sight, the Conqueror sight does not have any difference between HESH and APDS.
+For the Centurion Mk. 10, an increase of one hundred meters for HESH rounds is needed.
+
+2023-06-17
+
+Mozdok [Battle]
+@k @T-54 (1949) @1.45 @para @-7 @0
+@k @2S3M @.96 @Diag @0 @0
+@k @T-54 (1947) @.8 @Para @-6 @0
+@k @T-54 (1949) @1.04 @Para @0 @0
+@kb @T-54 (1947) @0.03 @Near-perp @4 @-1
+
+Mozdok
+@kb @T-54 (1949) @1.76, 1.76 @diag, near-para @0, 0 @20, 0
+@k @ZTZ56D1 @.82, .41 @Para, @Near-perp @28, 0 @0, 0
+
+Fire Arc
+@k @T-54 (1949) @2.17 @near-para @40 @0
+@k @T-54 (1947) @2.4 @Near-perp @0 @0
+
 2023-01-06
 
 Pland (winter) [Battle]
@@ -63,11 +83,6 @@ Mozdok
 @kb @T-54 (1947) @1.35 @Diag @25 @0
 
 2023-04-18
-
-Normandy
-@k @Type 63 @~.02
-@k @Obj 268 @~1 @DIag
-@kb @T-54 (1949) @~.9 @Diag @0 @0
 
 Fields of Poland
 @k @2S3M @1.33 @diag @0 @0

@@ -83,4 +83,7 @@ Pradesh
 @k @BMP-3 @1.74 @diag @0 @0
 @k @Object 120 @2.05 @perp @0 @0
 
+Eastern Europe
+@k @ZTZ59D1 @1.97, 1.97 @near-perp, diag @7, 6 @0, 0
+@k @WMA301 @1.2 @Diag @0 @0
 
