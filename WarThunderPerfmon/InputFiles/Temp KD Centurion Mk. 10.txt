@@ -46,15 +46,15 @@ Mozdok
 
 2023-06-15
 
-FIelds of Normandy
-@k @T-54 (1949) @~.6 @Near-perp
-@k @T-44-100 @~1.2 @Para
-@kb @T-54 (1947) @~.2 @Perp
+Fields of Normandy
+@k @T-54 (1949) @0.84 @diag @0 @0
+@k @T-44-100 @1.41, 1.41 @Para, para @0,0 @0,0
+@kb @T-54 (1947) @0.34 @near-Perp @0 @6
 
 Poland (winter)
-@k @IS-6 @~.9 @Diag
-@kb @T-54 (1949) @~.04 @Near-perp @0 @0
-@kb @IS-6 @~.04 @Diag
+@k @IS-6 @1.18 @Diag @0 @0
+@kb @T-54 (1949) @.26 @Near-perp @0 @11
+@kb @IS-6 @0.09 @Diag @0 @9
 
 2023-06-03
 
