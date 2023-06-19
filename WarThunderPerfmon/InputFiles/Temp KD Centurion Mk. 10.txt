@@ -33,6 +33,17 @@ Battle of Hurtgen Forest [Battle] zones in town
 Finland
 Poland two points in town
 
+2023-06-19
+
+Pradesh #2
+@k @BTR-ZD @1.27 @Diag @0 @0
+@k @T-54 (1949) @1.21, 1.21 @Near-para, para @4, 0 @0, 0
+@k @IS-6 @1.21 @Near-para @0 @0
+
+Mozdok
+@K @T-44-100 @1.75 @Near-perp @24 @0
+@k @IS-3 @2.24 @Near-perp @0 @0
+
 2023-06-15
 
 FIelds of Normandy

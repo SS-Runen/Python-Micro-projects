@@ -22,6 +22,7 @@ Mozdok [Battle]
 
 Mozdok
 @kb @T-54 (1949) @1.76, 1.76 @diag, near-para @0, 0 @20, 0
+@kb @M48 @.88 @Diag @0 @-8
 @k @ZTZ56D1 @.82, .41 @Para, @Near-perp @28, 0 @0, 0
 
 Fire Arc
