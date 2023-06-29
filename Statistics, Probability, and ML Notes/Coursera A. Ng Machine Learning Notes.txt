@@ -65,6 +65,9 @@ Feature Engineering for Regression
 Polynomial Regression
 - You may derive a new feature from x by taking its various powers - usually the second or third - or taking x' square root. This may not be applicable to some features with negative values. For negative values, it may be useful to transform the absolute value and then multiply it to a negative value as part of the transformation process.
 
+Loss Functions and Cost Functions
+A loss function is calculated per set of parameters and input. This is equivalent to calculating using the data of one row. A cost function uses the principles of derivatives and polynomials to find the slope of the entire data set. The cost function uses the average of all results in the data set to determine the general direction parameters need to be shifted.
+
 +++++++++++++++
 Feature Scaling
 
