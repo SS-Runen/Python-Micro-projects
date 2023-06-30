@@ -33,6 +33,70 @@ Battle of Hurtgen Forest [Battle] zones in town
 Finland
 Poland two points in town
 
+2023-07-01
+
+Pradesh #1
+@k @ASU-85 @1.64 @diag, diag @0, 0 @0, 0
+@k @T-54 (1947) @1.79, 1.79 @Para, diag @7, 0 @0, 0
+@k @PT-76-57 @1.7 @Diag @1 @0
+@k @Obj 268 @1.79 @Para @27 @0
+@k @T-54 (1949) @1.07, 1.07 @Perp, near-perp @35, 0 @0, 0
+@k @T-44-100 @1.44, 1.43 @Diag, diag @21, 0 @0, 0
+
+Pradesh #1
+@k @T-54 (1949) @1.79 @near-Para @0 @0
+@k @T-54 (1949) @1.3 @Diag @16 @0
+@k @IS-4M @1.83 @Para @0 @0
+@k @ASU-85 @1.66 @Para, perp @0, 0 @0, 0
+@kb @2S3M @1.98 @Near-para @0 @-7
+
+Pradesh #2
+@k @M53/59 @1.19 @perp @20 @0
+@k @IS-3 @1.67 @diag @0 @0
+@k @IS-6 @1.74 @para @0 @0
+
+Pradesh #2
+@k @T-44-100 @1.19 @perp @6 @0
+@k @T-44-100 @1.2 @Diag @9 @0
+@k @T-44-100 @.69 @Perp @0 @0
+
+Pradesh #1
+@k @PT-76-57 @.82 @Perp @14 @0
+@k @T-54 (1949) @.86 @diag, diag @20, 0 @0, 0
+@k @Type 62 @.89 @Para @0 @0
+@kb @T-54 (1947) @.66 @Para @0 @0
+
+2023-06-27
+
+Eastern Europe
+@k @T-54 (1949) @0.87 @Para @0 @0
+@k @T-54 (1949) @1.12 @Para @22 @0
+
+Mozdok
+@k @T-54 (1949) @1.26 @near-Perp, near-perp @48, 0 @0, 0
+@k @T-54 (1947) @1.34, 1.33 @Near-perp, Diag @3, 0 @0, 0
+@k @T-54 (1949) @1.22 @Near-para @0 @0
+@kb @ASU-85 @1.25 @Near-para @0 @0
+
+Middle East
+@k @PT-76B @1.05 @Para @12 @0
+@k @IS-4M @1.12 @near-Para @0 @0
+@k @IS-4M @.59 @Near-para @0 @0
+@k @T-54 (1947) @.99 @Perp @21 @0
+@k @T-44 @.9 @Near-perp @0 @0
+
+Pradesh #1
+@k @ASU-85 @1.79 @diag @0 @0
+@k @ASU-85 @1.79, 1.77, 1.77 @para, diag, Para @0, 0, 0 @0, 0, 0
+@k @2S3M @1.74 @Near-para @-4 @0
+@k @T-44 @1.69 @Near-para @-2 @0
+
+Pradesh #1
+@k @IS-6 @.71 @Perp @7 @0
+@k @PT-76B @1.49, 1.49 @Diag, perp @17, 0 @0, 0
+@k @2S3M @.65 @Near-perp @0 @0
+@kb @T-54 (1949) @1.96 @near-para @0 @0
+
 2023-06-19
 
 Pradesh #2
