@@ -37,7 +37,7 @@ g(z) = 1 / (1 + e^-z)
 f(w, b) = P(y = 1 | x; w, b)
 
 Decision Boundary
-- The decision boundary is the value at which the probability between g(z) = 1 or g(z) = 0 is equal or neutral. g(w,x) = w1x1 +...wnxm = 0. The decision boundary may be calculated by substituting values into the input equation and then solving for or simplifying them. 
+- The decision boundary is the value at which the probability between g(z) = 1 and g(z) = 0 is equal or neutral. g(w,x) = w1x1 +...wnxm = 0. The decision boundary may be calculated by substituting values into the input equation and then solving for or simplifying them. 
 
 Logarithm
 - A logarithm is the exponent or power to which a base must be raised to yield a given number. E.g. the logarithm of 8 with base 2 is 3. Two must be raised to the exponent three to yield eight.
@@ -127,3 +127,26 @@ Matrix Multiplication Rules
 - The result of a matrix dot product will have the same number of rows as the first matrix and the same number of columns as the second.
 
 - In general, matrix multiplication is NOT commutative. The order of the matrices is significant in matrix multiplication. Only certain edge cases result in commutative matrix multiplications.
+
+++++++++++++++++++++++++++++++++
+Basic Artificial Neural Networks
+
+@@@
+Activation Functions
+
+- For binary classification problems, the sigmoid function is usually best for the final or "output" layer. The network will predict the probability of y = 1 or 0. The decision boundary (values where P(y=0) = P(y=1)) or an arbitrary probability may be used as a threshold for activation.
+
+- Problems that fit the criteria of linear regression often need the linear activation function for the output layer. It is recommended to avoid using the linear activation function for hidden layers. If a linear or sigmoid function is used at the output layer, the results will be similar to ordinary linear or logistic regression.
+
+- If the ground truth or source of truth (y) should only have positive values, use the Rectified Linear Unit (ReLU) function for the output layer.
+
+*Note: The activation function of the output layer is not always the same as the hidden layer/s. The most common hidden layer activation function is the ReLU.
+
+ReLU - g(z) = max(0, z). This function is slightly faster to compute than the sigmoid function. More important for speed, the sigmoid function has two areas where the output is flat when graphed. When using gradient descent, the computations for those values will change slowly. The ReLU only has one area where it is flat. If done properly, the ReLU will be computed faster without losing accuracy.
+
+Soft Max Loss Function
+Loss = -log a(j) if y = j
+
+???
+Question:
+How are the initial parameters of each ANN unit set? I assume that each unit is meant to have different parameters to increase the number of gradient descent local minima factored into the final output.
