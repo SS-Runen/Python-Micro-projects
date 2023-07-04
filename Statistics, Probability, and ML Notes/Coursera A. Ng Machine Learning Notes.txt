@@ -144,8 +144,16 @@ Activation Functions
 
 ReLU - g(z) = max(0, z). This function is slightly faster to compute than the sigmoid function. More important for speed, the sigmoid function has two areas where the output is flat when graphed. When using gradient descent, the computations for those values will change slowly. The ReLU only has one area where it is flat. If done properly, the ReLU will be computed faster without losing accuracy.
 
-Soft Max Loss Function
-Loss = -log a(j) if y = j
+- SoftMax
+Soft Max Loss Function = -log a(j) if y = j
+
+The Softmax activation function computes the probability of each label versus the cumulative probability of all labels. For each output layer neuron or unit output a, the Softmax function g is calculated using the probabilities of each class label.
+a1 = g(z1,z2,...zn)
+
+Thus:
+g(z1) = (e^z1) / (e^z1) + (e^z2) +...(e^zn)
+...
+g(zn) = (e^zn) / (e^z1) +...(e^zn)
 
 ???
 Question:
