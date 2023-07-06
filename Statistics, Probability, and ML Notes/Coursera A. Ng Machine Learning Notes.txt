@@ -48,7 +48,7 @@ Simplified Cost Function for Logistic Regression
 +++++++++++++++++++++++++++++++++++++++
 Gradient Descent with Linear Regression
 
-These are the expanded formulas for a cost function used in single-variable linear regression.
+These are the expanded formulas for a cost function used in single-variable linear regression. Here, the function f with parameters w and b - f(w,b) - is a linear function.
 w = w - α * (1/m) * Σ(f<-w,b(wx^i + b) - y^i) x^i
 b = b - α * (1/m) * Σ(f<-w,b(wx^i + b) - y^i)
 
@@ -155,6 +155,13 @@ g(z1) = (e^z1) / (e^z1) + (e^z2) +...(e^zn)
 ...
 g(zn) = (e^zn) / (e^z1) +...(e^zn)
 
-???
-Question:
-How are the initial parameters of each ANN unit set? I assume that each unit is meant to have different parameters to increase the number of gradient descent local minima factored into the final output.
+@@@
+Convolutional Neural Network
+- A Convolutional Nueral Network (CNN) has units or neurons that only process part of the previous layer's output. These units will only process a section of the input data. It can compute results faster and reduce overfitting. The data or input for each neuron may overlap with other neurons. For images, it could mean overlapping coverage of an area. For time-series data, the time boundaries of the neurons may overlap. There, the next neuron has some idea of earlier or later data.
+
++++++++++++++++++++++++++++++++++
+Basics of Optimization Algorithms
+
+ADAM
+- Adaptive Moment Estimation changes the learning rate for each parameter. It also adjusts the learning rate based on the direction and amount of change in the computed adjustment. As of July 06, 2023, A. Ng. described ADAM as the defacto optimization algorithm for neural networks.
+
