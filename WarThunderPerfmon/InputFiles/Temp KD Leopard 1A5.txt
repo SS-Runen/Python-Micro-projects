@@ -1,5 +1,17 @@
 Event, Vehicle, Distance, Orientation, Speed, SlefSpeed
 
+2023-07-08
+
+Mozdok
+@k @PTL02 @2.15 @Perp @38 @0
+@k @M113 (Chinese) @2.21 @Near-para @0 @0
+@k @Type 69 @2.23 @Near-perp @0 @0
+
+Fire Arc
+@k @T-10M @2.32 @Para @0 @0
+@k @BMP-1 @2.56 @para @0 @0
+@k @BMP-3 @2.49 @Perp @0 @0
+
 2023-05-23
 
 Pradesh

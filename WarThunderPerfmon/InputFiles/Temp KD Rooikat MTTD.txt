@@ -34,6 +34,29 @@ Battle of Hurtgen Forest [Battle] zones in town
 Finland
 Poland two points in town
 
+2023-07-08
+
+Pradesh #2
+@k @WMA301 @1.51, 1.5 @Diag, diag @0, 0 @0, 0
+@k @QN506 @1.81 @Diag @2 @0
+@k @T-55A @0.6 @Near-para @0 @0
+@k @AFT09 @1.36 @near-perp @0 @0
+@k @T-55A @1.26 @Diag @0 @0
+@k @QN506 @1.21 @Diag @0 @0
+@kb @QN506 @1.21 @Diag @0 @0
+@kb @WMA301 @1.4 @Perp @0 @0
+
+Pradesh #2
+@k @Object 122 MT "MC"  @2.07, 2.07 @perp, para @1, 0 @0, 0
+@k @Obj 120 @1.78, 1.78 @diag, diag @-5, 0 @0, 0
+@k @BMP-1 @1.13 @para @-3 @0
+
+Poland
+@k @WMA301 @1.35 @Near-para @0 @0
+@k @T-55A @1.46, 1.48 @Para, para @34, 0 @0, 0
+@k @WMA301 @.78 @Diag @21 @0
+@kb @WMA301 @1.16, 1.16 @Diag @33, 0 @0, 0
+
 2023-06-14
 
 Pradesh #2
