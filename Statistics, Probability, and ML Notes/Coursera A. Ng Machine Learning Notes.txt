@@ -159,9 +159,14 @@ g(zn) = (e^zn) / (e^z1) +...(e^zn)
 Convolutional Neural Network
 - A Convolutional Nueral Network (CNN) has units or neurons that only process part of the previous layer's output. These units will only process a section of the input data. It can compute results faster and reduce overfitting. The data or input for each neuron may overlap with other neurons. For images, it could mean overlapping coverage of an area. For time-series data, the time boundaries of the neurons may overlap. There, the next neuron has some idea of earlier or later data.
 
-+++++++++++++++++++++++++++++++++
-Basics of Optimization Algorithms
-
 ADAM
 - Adaptive Moment Estimation changes the learning rate for each parameter. It also adjusts the learning rate based on the direction and amount of change in the computed adjustment. As of July 06, 2023, A. Ng. described ADAM as the defacto optimization algorithm for neural networks.
 
+- Back-propagation and Forward-propagation
+Back-propagation using a computational graph takes N(nodes) + P(parameters) resources versus N * P during forward prop.
+My understanding is that instead of calculating the derivative of J with respect to each parameter, the derivative is calculated at the end for one parameter. That derivative is used to calculate the derivative of other parameters without substituting all other parameters and x-values.
+
+++++++++++++++++
+Model Evalutaion
+
+- Divide your training data into two representative sets. One will be used to train and the other will stand in for unknown test data. The convention is to divide train and test sets seventy to thirty. Extreme differences between the model error during training and the model error processing the test function is a sign of overfitting.
