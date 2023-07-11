@@ -170,3 +170,16 @@ My understanding is that instead of calculating the derivative of J with respect
 Model Evalutaion
 
 - Divide your training data into two representative sets. One will be used to train and the other will stand in for unknown test data. The convention is to divide train and test sets seventy to thirty. Extreme differences between the model error during training and the model error processing the test function is a sign of overfitting.
+
+- The lowest test set error is not always a sign of the best parameters for a machine learning algorithm. Even if a test set error is low, it is still possible that the model happened to overfit to the test set. One solution is to add a third set to measure accuracy and pick a model before evaluating using the test set. The convention is 60-20-20. The cross-validation set is also called the development set.
+
+@@@
+Performance Baselines, Bias, and Variance
+
+- If possible, benchmark model performance against human performance.
+
+- Competing or standard algorithms may also be used as a baseline for performance, variance, and bias. The same training, cross-validation, and test data must be used for all models. To get the average train-test or train-cross-validation error difference, several different splits of data will have to be used. Process the average error difference.
+
+- The training error is expected to increase as more data is used, eventually resembling a straight line. The cross-validation error is expected to decrease as training data increases. The graph of the cross-validation error will also straigten out as it approaches zero. Steadily increasing the train data with different sizes of subsets is usually too resource-intensive to be practical.
+
+- Large neural networks are usually low-bias machines. Increasing the number of layers or units both reduce bias. For certain reasons, regularization can prevent large neural networks getting high variance.
