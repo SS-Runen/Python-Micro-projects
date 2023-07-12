@@ -84,6 +84,9 @@ x = (x - μ) / (max(vectorX) - min(vectorX))
 
 - When normalizing, it is recommended to have values within a small countable negative and positive range to retain magnitude and direction versus some reference point.
 
+???
+If your input Z-score, min-max, and mean change constantly, what are the proper scaling or normalization techniques? For stock data, the average and min-max change week to week. Is it good to pick an arbitrary mean, min-max, or other reference point for all data?
+
 ++++++++++++++++++++++++++++
 Overfitting and Underfitting
 
@@ -183,3 +186,29 @@ Performance Baselines, Bias, and Variance
 - The training error is expected to increase as more data is used, eventually resembling a straight line. The cross-validation error is expected to decrease as training data increases. The graph of the cross-validation error will also straigten out as it approaches zero. Steadily increasing the train data with different sizes of subsets is usually too resource-intensive to be practical.
 
 - Large neural networks are usually low-bias machines. Increasing the number of layers or units both reduce bias. For certain reasons, regularization can prevent large neural networks getting high variance.
+
+Error Analysis
+- In some cases, manually analyzing the inputs where the model gave the wrong answer is a good technique. Classify and describe possible patterns or markers.
+
+Adding Data
+- You may add more data similar to input that the model usually gets wrong.
+- Certain cases benefit from data augmentation. Modifying or transforming data has to be consistent with the real-life input and use of the model. Rotating letters and adding background noise to speech audio are good examples.
+
+Transfer Learning
+- Transfer Learning refers to using an existing model used in a similar problem to train on your current data. The model input types should be the same. The idea is that certain generalized parameters could be learned and maintained. For example, image classification tasks with very different data might both require parameters to ignore empty space. The given example is image recognition of animals and people vs. digit recognition. If data for one problem is scarce, take the model with larger data. Either keep its hidden layer parameters and change the input and output layers or just its output layer to match your problem.
+
+@@@
+Skewed Data Sets
+- For data sets with isolated but important cases, plain accuracy is not a good metric. For example, rare medical conditions have be diagnosed accurately even if their input values are outliers. For continuous output, the input data where the model has a high error metric should be analyzed, whether thru categorization or statistical analysis.
+
+- Precision: Precision refers to the ratio of correct positive predictions to total positive predictions. True positives vs. predicted positives.
+Precision = ( true_positives / (true_positive_predictions + false_positive_predictions)).
+
+- Recall: Recall is the ratio of correctly predicted positives and actual positives. True positives vs. actual positives.
+Recall = true_positives / true_positives + false_negatives.
+
+- F1 Score. This calculation takes a weighted average where the smaller value's effect is increased. This is better at measuring precision vs. recall since if either one is high, it can "hide" defects. The F1 score equation may be referred to as the "harmonic mean of precision and recall (P and R)."
+F1 = 1 / (0.5 * ((1/Precision) + (1/Recall)))
+Alternative:
+F1 = 2 * ((P*R) / (P+R)) 
+
