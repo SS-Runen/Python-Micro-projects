@@ -229,7 +229,7 @@ The logarithm has a base of two so that the output is always between zero and on
 - To calculate the information gain/entropy reduction for decision nodes (nodes beyond the root node), find the difference between the entropy of the root node and the entropy of the decision node. Information gain may be a better metric for split quality than plain entropy.
 
 Information gain from a node:
-IGr = H(p1r) - (wl H(p1l) + wr H(p1r))
+IG = H(p1r) - (wl * H(p1l) + wr * H(p1r))
 where:
 
 H(p1r) = Entropy of input before splitting at the node. The input here is the proportion of positively labelled data.
@@ -250,11 +250,35 @@ H(p1r) = Entropy of right split.
 
 - A single tree is very sensitive to changes in data, whether the input is categorical or continuous. Decision trees are best used together as decision tree ensembles. Different splits may be created based on multiple samplings with replacement. The conventional number of decision trees in an ensemble is around one hundred.
 
-- Randomizing the subset of features to be used as candidates for split criteria increases accuracy. With n features, choose a split feature out of k. The value of k should be less than n. This forces the exploration of different possible variations in the data.
+- Randomizing the subset of features to be used as candidates for split criteria increases accuracy. Out of n features, choose a set of k features as candidates for split criteria. The value of k should be less than n. This forces the exploration of different possible variations in the data.
 
 XGBoost
 - Part of XGBoost is a mechanism to increase the likelihood that misclassified samples will be picked during input sampling. XGBoost (Extreme Gradient Boosting) also has built-in regularization, though input may still need to be normalized.
 
 - In general, decision trees work well with tabular data. The input data and prediction values may be categorical or continuous. Decision trees perform poorly on unstructured data such as text, images, and audio. Decision trees are usually faster to train compared to neural networks with similar performance. Small sections of decision trees might be human-readable.
 
-* Neural networks may also do well with both structured, unstructured, and mixed data. Transfer learning is not applicable to decision trees. As of 2023, neural networks are easier to string together than decision trees.
+* Neural networks may also do well with structured, unstructured, and mixed data. Transfer learning is not applicable to decision trees. As of 2023, neural networks are easier to string together than decision trees.
+
+++++++++++
+Clustering
+
+@@@
+K-means Clustering
+- K-means clustering initializes k clusters and assigns data points based on their distance or "difference" compared to the cluster. Next, k-means will assign the centroid values to the average of each parameter using the current members of the cluster. K-means will minimize the distance or "distortion" within clusters by adjusting the centroid.
+
+K-means Cost Function, a.k.a Distortion Function:
+J(c1...cm, μ1...,μk) = (1/m)*(Σ||xi - μ(c^i)||^2
+
+where:
+c1...cm = Clusters 1 to m.
+μ1...,μk = Centroids 1 to k corresponding to clusters 1 to m.
+xi = Input data x at index i.
+μ(c^i) = Notation for cluster centroid to which xi is assigned.
+
+Initializing K-means
+- Picking one random data point as the value for each data point may help avoid empty clusters. Points may also be selected by sorting the data and selecting data points at certain intervals.
+
+- Running multiple trials of K-means is a viable option. If there are multiple results, pick the one with the lowest cost function J(c1...cm, μ1...,μk).
+
+- Choosing k-clusters to minimize J does not give the best number of clusters. It usually gives the highest possible number of clusters without increasing J, not necessarily the most appropriate cluster. Minimizing J does not guarantee a truly significant or important difference between clusters. Manual data analysis and domain knowledge have to be included in the process to pick the number of clusters.
+
