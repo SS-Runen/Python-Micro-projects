@@ -280,5 +280,40 @@ Initializing K-means
 
 - Running multiple trials of K-means is a viable option. If there are multiple results, pick the one with the lowest cost function J(c1...cm, μ1...,μk).
 
-- Choosing k-clusters to minimize J does not give the best number of clusters. It usually gives the highest possible number of clusters without increasing J, not necessarily the most appropriate cluster. Minimizing J does not guarantee a truly significant or important difference between clusters. Manual data analysis and domain knowledge have to be included in the process to pick the number of clusters.
+- Choosing k-clusters to minimize J does not give the best number of clusters. It usually gives the highest possible number of clusters without increasing J, not necessarily the most appropriate number of clusters. Minimizing J does not guarantee a truly significant or important difference between clusters. Manual data analysis and domain knowledge have to be included in the process to pick the number of clusters.
+
+@@@
+Anomaly Detection
+
+Density Estimation
+- One step of density estimation is to estimate the probability of certain outputs. The input and output may be vectors.
+
+Gaussian/Normal Distribution
+- The area of probabilities under the curve of a normal distribution is always equal to one.
+
+p(x) = 1/sqrt(2πσ) * e^(-(x-μ)^2/2σ^2)
+p(vector(x)) = p(x1;μ1,σ1^2) *...p(xn;μn,σn^2)
+or
+p(vector(x)) = j=1Πn p(xj;μj,σj^2)  
+
+The assumption here is that the features are independent of each other.
+
+- F1 scores, precision and recall may also be used to evaluate model performance. The training, cross-validation and test sets should be representative of real data. Precision = ( true_positives / (true_positive_predictions + false_positive_predictions)). Recall = true_positives / true_positives + false_negatives. In anomaly detection, it is safer to only use a test set and training set, instead of a training, cross-validation, and test set. This should only be done if there is not enough data for a cross-validation and test set. Based on the results, adjust the cut-off parameter ε.
+
+@@@
+Unsupervised vs. Supervised Anomaly Detection
+
+- It is complicated to choose between unsupervised anomaly detection and supervised machine learning for anomaly detection. If there is a very small amount of positive or anomalous samples, anomaly detection may be a better candidate.
+
+- If there are several classes or significant diversity among a small sample of positive or negative samples, anomaly detection is more appropriate. This helps to guard against overfiting or failures to detect new kinds of anomalies. When future anomalies are likely to be significantly different from past samples, unsupervised anomaly detection is more effective.
+
+@@@
+Feature Selection for Anomaly Detection
+
+- Make sure your features are normally distributed or "Gaussian." Features may also be transformed or engineered into Gaussian features. E.g. computing the logarithm of a skewed feature to make it more similar to the normal distribution. You may use log(x) or log(x + c) where c is an arbitrary constant. Plotting a histogram of the data is a valid check for normal distribution. In case of zeroes in x, add an extremely small decimal to x before getting the logarithm.
+
+- Statistical analysis and other measures of normality may be used. Examples:
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6350423/
+
+- Make sure that any transformations done to the training set is also done to the cross-validation and testing sets. If the p(x) for a known anomaly is high above the threshold, a new feature, engineered feature, or transformation may be needed. Sometimes, the threshold ε has to be adjusted.
 
