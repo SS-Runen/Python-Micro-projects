@@ -1,5 +1,16 @@
 Event, Vehicle, Distance, Orientation, Speed, SlefSpeed
 
+2023-07-13
+
+Second Battle of El Alamein [Battle]
+@k @T-64A (1971) @.31 @Near-perp @10 @0
+@k @QN506 @1.15 @Para @0 @0
+@k @ZTZ59D1 @1.01, 1.01 @Para, Diag @10, 0 @0, 0
+
+Pradesh
+@k @Type 69 II G @1.69 @Para @0 @0
+@kb @BMP-3 @1.75 @Near-perp @0 @0
+
 2023-07-08
 
 Mozdok

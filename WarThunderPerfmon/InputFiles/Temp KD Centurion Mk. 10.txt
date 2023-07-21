@@ -36,20 +36,17 @@ Poland two points in town
 2023-07-13
 
 Fields of Normandy
-@k @T-44-100 @~.8 @Perp
+@k @T-44-100 @.95, .95 @Perp, Perp @24, 0 @0, 0
 
 Mozdok
-@k @T-54 (1949) @~1.4 @Perp, Perp
-@k @T-54 @~1.5 @Para @0 @0
-@k @T-54 (1947) @~.2 @Near-perp
-@k @PT-76B @~.2 @Perp @0 @0
+@k @T-54 (1949) @1.27, 1.26 @Perp, Perp @29, 0 @0, 0
+@k @T-54 (1949) @1.53 @Para @0 @0
+@k @T-54 (1947) @.36 @Near-perp @38 @0
+@k @PT-76B @.36 @near-Perp @0 @0
 
 Hurgen Forest
-@k @T-54 @1.1 @Perp
-@k @2S3M @~1.1 @Perp
-
-Pradesh #1
-@k @Obj 268 @~1.6 @Near-para
+@k @T-54 (1947) @0.93, 0.93 @Perp, diag @18, 0 @0, 0
+@k @2S3M @1.09 @Diag @0 @0
 
 2023-07-01
 
