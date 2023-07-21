@@ -365,5 +365,5 @@ This function is also written as:
 Content-based Filtering
 - Content-based filtering matches the features of an item to the features of a user. The vectors describing the user and the item or product may be different lengths. Content-based filtering involves operations on these two vectors. Collaborative filtering finds parameters for user data to predict a product characteristic vector. Afterward, the model can be used to predict or learn parameters for product characteristics to find a good match.
 
-- The final vectors for content-based filtering have to be processed so that they are the same length.
+- The final vectors for content-based filtering have to be processed so that they are the same length. After solving for the parameters of a certain user or product, matches can be made by calculating the distance between reference products or users and the corresponding input vector.
 
