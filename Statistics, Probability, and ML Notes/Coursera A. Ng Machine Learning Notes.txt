@@ -367,3 +367,15 @@ Content-based Filtering
 
 - The final vectors for content-based filtering have to be processed so that they are the same length. After solving for the parameters of a certain user or product, matches can be made by calculating the distance between reference products or users and the corresponding input vector.
 
+- To get around the computation costs, it is better to perform an infrequent and slow retrieval step where large numbers of items or users are matched. Afterward, they are ranked based on closeness to the reference user or product.
+
+@@@
+Principal Component Analysis
+- Principal Component Analysis (PCA) is an unsupervised algorithm used to reduce the number of input features for a machine learning model. PCA may also reduce the number of features by detecting a new axes or engineered feature to represent two other features without losing information.
+
+- To perform PCA, the features have to be normalized to have a mean of zero. The features should also be scaled to avoid differences in value due to measurement scales. Usually, z-score normalization is used to prepare data for PCA.
+
+- PCA attempts to preserve as much of the original variance among the features to be "projected" onto the axis.
+
+- In certain cases, especially when doing PCA on two features, visualizing the result thru PCA is a viable tactic. In rare cases, PCA may compress your data and reduce the raw amount of data transferred or processed. PCA may still reduce the accuracy of a model. 
+
