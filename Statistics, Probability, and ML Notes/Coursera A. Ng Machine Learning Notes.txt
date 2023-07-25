@@ -425,9 +425,12 @@ https://stats.stackexchange.com/questions/337781/can-someone-please-explain-the-
 This article from Purdue University suggested building a Q-table and then looking up the reward:
 https://engineering.purdue.edu/DeepLearn/pdf-kak/Reinforcement.pdf
 
-@@@
 Epsilon-greedy Policy
 - While the algorithm is still running and is not at the end or terminal state, pick the action that maximizes Q(s', a') with near-one probability, e.g. 0.98. Pick a random action with the inverse probability ε, e.g. 0.02 times. Taking the random action ε percentage of times is also referred to as an exploration step. The greedy or exploitation step is the step that maximizes Q(s, a).
 
 - In some cases, starting with a high ε and gradually reducing it may help the neural network explore many alternatives earlier and then maximize Q(s, a) later.
+
+- Training can be sped up by performing gradient descent on different subsets or batches of data.
+
+- To prevent random and sudden changes to the parameters, soft updates can be used instead of Q = Q(new). To perform a soft update, a large proportion of the new value will be taken from the old values. The inverse proportion will be taken from the new parameter values. Soft updates usually induce faster convergence thru gradient descent.
 
