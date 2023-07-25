@@ -379,3 +379,55 @@ Principal Component Analysis
 
 - In certain cases, especially when doing PCA on two features, visualizing the result thru PCA is a viable tactic. In rare cases, PCA may compress your data and reduce the raw amount of data transferred or processed. PCA may still reduce the accuracy of a model. 
 
+++++++++++++++++++++++
+Reinforcement Learning
+
+@@@
+Bellman Equation
+Q(s, a) = R(s) + γ max(Q(s', a'))
+where:
+
+Q = Reward for current state after executing a once.
+a = Current action.
+s = Current state.
+s' = State after current action.
+a' = Action for future state.
+γ = Gamma symbol denoting "discount" or weight.
+
+- To summarize, this equation finds the action that gives the maximum current reward R(s) plus reward (Q(s', a')) for the state after executing a once, assuming that the "agent" behaves optimally after the current action (a).
+
+- To add the possibility of a "misstep" into an unintended state may be accounted for. Use the average or expected value for the next state (Q(s', a')).
+
+Q(s, a) = R(s) + γE[max(Q(s', a'))]
+where:
+E[...] = Expected or average value.
+
+@@@
+Continuous State Spaces
+- A neural network may be trained to give the correct state and optimal action. Target values have to be generated to teach the correct Q(s, a). Since the Q(s', a') is uncertain, it may be set to a random value in the training set. The output of the neural network would be the probability or weight for each possible action.
+
+Training Process Summary:
+1. Take random actions and record the state. Even the Q(s', a') is random.
+2. Generate training examples using all or a portion of the experiment. The convention is to use a certain number of the most recent examples as the replay buffer.
+3. Train the network on these experiments.
+4. Prepare to repeat the process. Set the Q(s, a) to the newly calculated values. The next round will not be randomly initialized.
+
+???
+Question
+I am not sure if the Q(s', a') should be set to one value for all training examples during the first run. It may be calculated backward after reaching the terminal state. Then, the estimates of each sample Q(s', a') may be changed before starting a new cycle of generating new training examples. Maybe it is a bet that the rewards will eventually cover up the randomness of the Q(s', a').
+
+A Stack Exchange article suggested taking the aggregated value of all rewards including the terminal state. That can be used to set Q(s', a').
+https://stats.stackexchange.com/questions/416661/reward-attribution-in-deep-q-learning-and-texas-holdem-poker/416681#416681
+
+Another article suggested to set all Q(s', a') to zero or -1.
+https://stats.stackexchange.com/questions/337781/can-someone-please-explain-the-target-update-for-deep-q-learning/337790#337790
+
+This article from Purdue University suggested building a Q-table and then looking up the reward:
+https://engineering.purdue.edu/DeepLearn/pdf-kak/Reinforcement.pdf
+
+@@@
+Epsilon-greedy Policy
+- While the algorithm is still running and is not at the end or terminal state, pick the action that maximizes Q(s', a') with near-one probability, e.g. 0.98. Pick a random action with the inverse probability ε, e.g. 0.02 times. Taking the random action ε percentage of times is also referred to as an exploration step. The greedy or exploitation step is the step that maximizes Q(s, a).
+
+- In some cases, starting with a high ε and gradually reducing it may help the neural network explore many alternatives earlier and then maximize Q(s, a) later.
+
