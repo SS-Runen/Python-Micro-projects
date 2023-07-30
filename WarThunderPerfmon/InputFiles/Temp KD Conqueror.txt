@@ -11,6 +11,13 @@ Poland two points in town
 Unlike the Centurion MK. 10 custom sight, the Conqueror sight does not have any difference between HESH and APDS.
 For the Centurion Mk. 10, an increase of one hundred meters for HESH rounds is needed.
 
+2023-07-23
+
+Second Battle of El Alamein
+@k @T-54 @~1 @Para @0 @0
+@k @T-54 @~1 @Near-para @0 @0
+@k @T-54 @~.7 @Perp
+
 2023-07-01
 
 Pradesh #1
