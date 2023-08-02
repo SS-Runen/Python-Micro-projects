@@ -180,7 +180,7 @@ SD = |b| * SD(X)
 ++++++++++++++++++++++
 Discrete Distributions
 
-Binomial Distribution Probability Mass Function - Describes the probability of observing x successes in total after performing n trials. The term (n x) denotes a combination of n taken x at a time. Note that n! / (x! * (n-x)!) is also the formula for calculating combinations. Specifically, it is the formula for n elements combined x at a time: nCx.
+Binomial Distribution Probability Mass Function - Describes the probability of observing x successes in total after performing n trials. The term with a vertical (n x) denotes a combination of n taken x at a time, as in here: P(x;p,n)=(n x)(p)^x(1−p)(n−x). Note that n! / (x! * (n-x)!) is also the formula for calculating combinations. Specifically, it is the formula for n elements combined x at a time: nCx.
 
 P(x) = (n! / (x! * (n-x)!)) * P^x * (1-P)^(n-x)
 Here,

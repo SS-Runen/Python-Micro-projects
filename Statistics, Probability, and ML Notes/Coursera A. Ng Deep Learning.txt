@@ -3,17 +3,16 @@ General Guidelines
 
 - When testing a formula or procedure, try the process using some input. For equations, try to find a trend in the results relative to the input. For ML algorithms, run limited tests on groups or sets with at least thirty samples. Depending on the situation, a control may be needed or the same data has to be used for different processes.
 
-- To start Spyder in Ubuntu Linux:
-conda activate spyder-env
-spyder
-
-Here, "spyder-env" is the name of your Conda environment. This is the default name and it may be changed.
-
-- A plugin is needed to open and edit notebooks in Spyder:
-conda install spyder-notebook -c conda-forge
-
 +++++++++++++++++++++
 Neural Network Basics
+
+References for Derivative Rules:
+https://www.mathsisfun.com/calculus/derivatives-rules.html
+https://www.ncl.ac.uk/webtemplate/ask-assets/external/maths-resources/economics/differentiation-and-integration/rules-of-differentiation.html
+https://www.math.ucdavis.edu/~kouba/Math17BHWDIRECTORY/Derivatives.pdf
+
+Reference with some proof examples:
+https://www.sfu.ca/math-coursenotes/Math%20157%20Course%20Notes/sec_DerivativeRules.html
 
 
 
