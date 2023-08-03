@@ -14,5 +14,7 @@ https://www.math.ucdavis.edu/~kouba/Math17BHWDIRECTORY/Derivatives.pdf
 Reference with some proof examples:
 https://www.sfu.ca/math-coursenotes/Math%20157%20Course%20Notes/sec_DerivativeRules.html
 
+- The derivative of the cumulative cost function J(vector(w), vector(x)) takes the average loss for the training set. Because of that, the derivative of the cumulative cost function with respect to a parameter w is the average of derivatives for the per-item loss function L(p̂ - p) where p̂ is the prediction and p is the correct value or label.
+
 
 
