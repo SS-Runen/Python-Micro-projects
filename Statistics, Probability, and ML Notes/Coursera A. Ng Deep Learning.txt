@@ -3,6 +3,10 @@ General Guidelines
 
 - When testing a formula or procedure, try the process using some input. For equations, try to find a trend in the results relative to the input. For ML algorithms, run limited tests on groups or sets with at least thirty samples. Depending on the situation, a control may be needed or the same data has to be used for different processes.
 
+- Numpy arrays and Pandas data frames list row count and "column" count in their shape like so: (n_rows, n_cols). Technically these are just nested arrays with two dimensions. Flattening them would show n_rows as elements. Each element holds n_cols sub-elements.
+
+- To test if values meet conditions in Python, use the assert() method. E.g. assert(Z.shape[0] == w.shape
+
 +++++++++++++++++++++
 Neural Network Basics
 
@@ -16,5 +20,10 @@ https://www.sfu.ca/math-coursenotes/Math%20157%20Course%20Notes/sec_DerivativeRu
 
 - The derivative of the cumulative cost function J(vector(w), vector(x)) takes the average loss for the training set. Because of that, the derivative of the cumulative cost function with respect to a parameter w is the average of derivatives for the per-item loss function L(p̂ - p) where p̂ is the prediction and p is the correct value or label.
 
+@@@
+Working with Numpy Arrays
 
+- When working with Numpy ND-arrays, it is common to place each example or sample as a visual "column" with each row or item in the column holding a feature value. Each "row" holds different samples' values for one feature X. Assume X is an n_rows x m_columns matrix with n rows corresponding to n samples and m columns for m features. Numpy and Pandas present that in the correct visual way by default. When multiplying an (n_example,m_feature) matrix X to a parameter array W with m parameters corresponding to m features, W has to be transposed into a single-column vector for the numpy.dot() function to work. This is consistent with the rules of matrices in mathematics. In mathematics, you take the dot-product by multiplying each row of the first matrix - in this case X - element-wise to the corresponding column of the second.
+
+- When using Numpy, it is common to use an n_rows by m_column matrix X with each row corresponding to one feature, not one sample. Each column holds multiple features for a single sample. Assume a parameter array W holds n_rows elements. Use W as the first matrix. Take the first and only row of W and multiply each element w to the corresponding column, i.e. feature value. Repeat the process for each column of X. Also, matrix multiplication is not commutative. In this case, Numpy and matrix multiplication rules require that X be transposed if it is the first matrix.
 
