@@ -18,12 +18,23 @@ https://www.math.ucdavis.edu/~kouba/Math17BHWDIRECTORY/Derivatives.pdf
 Reference with some proof examples:
 https://www.sfu.ca/math-coursenotes/Math%20157%20Course%20Notes/sec_DerivativeRules.html
 
-- The derivative of the cumulative cost function J(vector(w), vector(x)) takes the average loss for the training set. Because of that, the derivative of the cumulative cost function with respect to a parameter w is the average of derivatives for the per-item loss function L(p̂ - p) where p̂ is the prediction and p is the correct value or label.
+- The derivative of the cumulative cost function J(vector(w), vector(x)) is the average loss for the training set. Because of that, the derivative of the cumulative cost function with respect to a parameter w is the average of derivatives for the per-item loss function L(p̂ - p) where p̂ is the prediction and p is the correct value or label.
+
+- The Sigmoid and TanH (Hyperbolic Tangent) functions have a slope that is close to zero whenever Z (the resulting value of the parameter and input value polynomial) is very large or very small. This means gradient descent proceeds slowly for very large or very small values. The TanH function is a shifted version of the Sigmoid function that allows values between -1 and 1. The ReLU function performs just as well or better than Sigmoid or TanH functions in hidden and non-output layers, but is significantly faster to calculate. It is common to have the final output layer use the Sigmoid function for binary or multi-class functions and another activation function for the heady layers. The ReLU function (max(0, z)) does have the disadvantage of losing some information due to treating negative Z values as zero. This problem is solved by the leaky ReLU function: max(c, z) where c is an arbitrary constant that sets the lower limit of what is treated as zero, e.g 0.001 * z.
 
 @@@
 Working with Numpy Arrays
 
 - When working with Numpy ND-arrays, it is common to place each example or sample as a visual "column" with each row or item in the column holding a feature value. Each "row" holds different samples' values for one feature X. Assume X is an n_rows x m_columns matrix with n rows corresponding to n samples and m columns for m features. Numpy and Pandas present that in the correct visual way by default. When multiplying an (n_example,m_feature) matrix X to a parameter array W with m parameters corresponding to m features, W has to be transposed into a single-column vector for the numpy.dot() function to work. This is consistent with the rules of matrices in mathematics. In mathematics, you take the dot-product by multiplying each row of the first matrix - in this case X - element-wise to the corresponding column of the second.
 
+* In Numpy, a (1, ) matrix is sometimes treated as if it could be both a (, 1) or (1,) matrix. Thus it is recommended by this course to use a (1,n) or (n, 1) matrix, avoiding all matrices with an undefined rank.
+
 - When using Numpy, it is common to use an n_rows by m_column matrix X with each row corresponding to one feature, not one sample. Each column holds multiple features for a single sample. Assume a parameter array W holds n_rows elements. Use W as the first matrix. Take the first and only row of W and multiply each element w to the corresponding column, i.e. feature value. Repeat the process for each column of X. Also, matrix multiplication is not commutative. In this case, Numpy and matrix multiplication rules require that X be transposed if it is the first matrix.
+
+- Multiplying an (n1_row, m1_column) matrix by (n2_row, m2_column) matrix should yield a matrix with (n1_row, m2_column) rows and columns. In matrix multiplication, first process matrix one row one. Take the dot product of matrix one, row one with each column of row two. Place each number corresponding to a dot_product(row1, column_m) result in a new column. Move on to row two. Place the dot product results for row two on the next row of the result matrix. References:
+https://www.mathsisfun.com/algebra/matrix-multiplying.html
+https://www.khanacademy.org/math/precalculus/x9e81a4f98389efdf:matrices/x9e81a4f98389efdf:multiplying-matrices-by-matrices/a/multiplying-matrices
+
+
+
 
