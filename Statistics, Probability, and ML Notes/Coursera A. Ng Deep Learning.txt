@@ -1,7 +1,7 @@
 ++++++++++++++++++
 General Guidelines
 
-- When testing a formula or procedure, try the process using some input. For equations, try to find a trend in the results relative to the input. For ML algorithms, run limited tests on groups or sets with at least thirty samples. Depending on the situation, a control may be needed or the same data has to be used for different processes.
+- When testing a formula or procedure, try the process using sample input. For equations, try to find a trend in the results relative to the input. For ML algorithms, run limited tests on groups or sets with at least thirty samples. Depending on the situation, a control may be needed or the same data has to be used for different processes.
 
 - Numpy arrays and Pandas data frames list row count and "column" count in their shape like so: (n_rows, n_cols). Technically these are just nested arrays with two dimensions. Flattening them would show n_rows as elements. Each element holds n_cols sub-elements.
 
@@ -20,7 +20,31 @@ https://www.sfu.ca/math-coursenotes/Math%20157%20Course%20Notes/sec_DerivativeRu
 
 - The derivative of the cumulative cost function J(vector(w), vector(x)) is the average loss for the training set. Because of that, the derivative of the cumulative cost function with respect to a parameter w is the average of derivatives for the per-item loss function L(p̂ - p) where p̂ is the prediction and p is the correct value or label.
 
-- The Sigmoid and TanH (Hyperbolic Tangent) functions have a slope that is close to zero whenever Z (the resulting value of the parameter and input value polynomial) is very large or very small. This means gradient descent proceeds slowly for very large or very small values. The TanH function is a shifted version of the Sigmoid function that allows values between -1 and 1. The ReLU function performs just as well or better than Sigmoid or TanH functions in hidden and non-output layers, but is significantly faster to calculate. It is common to have the final output layer use the Sigmoid function for binary or multi-class functions and another activation function for the heady layers. The ReLU function (max(0, z)) does have the disadvantage of losing some information due to treating negative Z values as zero. This problem is solved by the leaky ReLU function: max(c, z) where c is an arbitrary constant that sets the lower limit of what is treated as zero, e.g 0.001 * z.
+- The Sigmoid and TanH (Hyperbolic Tangent) functions have a slope that is close to zero whenever Z (the resulting value of the parameter and input value polynomial) is very large or very small. This means gradient descent proceeds slowly for very large or very small values. The TanH function is a shifted version of the Sigmoid function that allows values between -1 and 1. The ReLU function performs just as well or better than Sigmoid or TanH functions in hidden and non-output layers, but is significantly faster to calculate. It is common to have the final output layer use the Sigmoid function for binary or multi-class functions and another activation function for the heady layers. The ReLU function (max(0, z)) does have the disadvantage of losing some information due to treating negative Z values as zero. This problem is solved by the leaky ReLU function: max(c*z, z) where c is an arbitrary constant that uses a proportion of z as the lower limit, e.g 0.001 * z. If z is negative, a small negative proportion of z is the maximum and thus the output of Leaky ReLU.
+
+- Linear or identity activation functions would make adding neural network layers pointless. The composition of a series or sequence of functions is no different from ordinary non-neural-net linear regression. Linear and identity functions are typically only used at the output layer.
+
+@@@
+Derivatives of TanH, Sigmoid, ReLU, and Leaky ReLU Activations
+
+Sigmoid:
+g(z) = 1 / (1+e^-z)
+g'(z) = g(z) * (1 - g(z))
+g'(z) = a * (1 - a) where a is the output of the activation function g(z) and z is the result of W * X.
+
+TanH:
+g(z) = (e^z - e^-z) / (e^z + e^-z)
+g'(z) = 1 - (tanh(z))^2
+g'(z) = 1 = a^2
+
+ReLU
+g(z) = max(0, z)
+g'(z) = 0 if z < 0, 1 if z >= 0
+*Mathematically, g'(z) if z = 0 is undefined, but it may be treated as zero for neural networks.
+
+Leaky ReLU
+g(z) = max(c*z, z)
+g'(z) = c if z < 0, 1 if z >= 0
 
 @@@
 Working with Numpy Arrays

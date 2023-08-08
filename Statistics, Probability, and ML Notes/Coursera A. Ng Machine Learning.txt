@@ -23,8 +23,8 @@ Where:
 α = Learning rate. This is a decimal value between 0 and 1. It functions as a multiplier to the amount of change.
 (d/dw)J(w,b) = This entire term represents the value of the partial derivative of the function J with parameters w and b. The term "d" indicates to change the value of w when looking for the derivative and to keep other values constant.
 
-* A derivative is the rate of change of a function relative to each unit change of a variable. If a function derivative at x is 3, an increase in x - Δx or (x - increase) - will change the function output by 3, i.e. Δx * d(f)/dx where d(f)/dx = 3.
-A derivative may be noted as f' or as d/dx. A partial derivative of a function may be noted as ∂/∂x or f. The term x can be any variable. Calculating a derivative involves finding the slope of a point in a line using the properties of tangents, limits, and triangle trigonometry.
+* A derivative is the ratio of change in a function's output to each unit change of a variable. In other words, it is the slope or rate of change to a function's output at a certain point. If a function derivative at x is 3, an increase in x (Δx) will change the function output by Δx * 3, i.e. Δx * d(f)/dx where d(f)/dx = 3 and Δx is (new_x - x).
+* A derivative may be noted as f' or as d/dx. A partial derivative of a function may be noted as ∂/∂x or f. The term x can be any variable. Calculating a derivative involves finding the slope of a point in a line using the properties of tangents, limits, and triangle trigonometry.
 * The update operations of w and b have to be done at the same time and in step. When performing the descent, the current/old values should be used as input to J. The updated values will only be used in the next iteration.
 
 +++++++++++++++++++
