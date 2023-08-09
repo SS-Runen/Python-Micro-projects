@@ -6,6 +6,19 @@ Tunisia
 Kuban
 Abandoned Town
 
+2023-08-08
+
+Fire Arc
+@k @M4A3 (76) W @1.49, 1.48, 1.49 @Diag, diag, near-para @0, -4, 0 @0, 0, 0
+@kb @KV-122 @1.38 @Diag @0 @0
+
+Fields of Normandy
+@k @IS-1 @1.08 @Para @-14 @0
+@k @IS-1 @.83 @diag @23 @0
+@k @M18 @1.18 @Para @0 @0
+@K @Concept 3 @1.04 @para @34 @0
+@kb @ARL-44 @.83 @Diag @0 @0
+
 2023-05-28
 
 Fields of Normandy

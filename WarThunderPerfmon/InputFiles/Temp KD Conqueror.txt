@@ -14,9 +14,10 @@ For the Centurion Mk. 10, an increase of one hundred meters for HESH rounds is n
 2023-07-23
 
 Second Battle of El Alamein
-@k @T-54 @~1 @Para @0 @0
-@k @T-54 @~1 @Near-para @0 @0
-@k @T-54 @~.7 @Perp
+@k @T-54 (1947) @.94 @Para @0 @0
+@k @T-54 (1949) @.93 @diag @0 @0
+@k @T-54 @.64 @Perp, near-perp @20, 0 @0, 0
+@kb @M48 @.59 @Diag @0 @0
 
 2023-07-01
 

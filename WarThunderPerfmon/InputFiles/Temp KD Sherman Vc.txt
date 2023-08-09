@@ -47,23 +47,12 @@ Fields of Normandy
 @k @ASU-57 @1.37, 1.32  @Para, Para  @0, 0 @0, 0
 @kb @KV-220 @.64 @diag @0 @0
 
-2023-03-17
-
-Finland
-@kb @IS-1 @0.73 @Diag @0 @0
-
 2023-03-05
 
 Fields of Normandy
 @k @IS-1 @1.16 @diag @0 @0
 @kb @M4A1 Chinese @.62 @near-perp @0 @0
 @kb @M4A1 Chinese @.24 @near-perp @0 @0
-
-2023-02-21
-
-Poland (winter)
-@k @SU-152 @.82, .82 @Para, diag @0, 13 @0, 0
-@k @SU-152 @.74, .74 @near-Para, near-para @9, 0 @0, 0
 
 2023-02-15
 
@@ -92,17 +81,6 @@ Mozdok
 
 Sands of Sinai
 @k @M18 @1.27, 1.27 @perp, diag @0, 0 @0, 0
-
-2023-01-28
-
-Finland
-@k @T-34-85 @.57 @diag @0 @0
-@k @T-34-85 @.53 @Near-para @0 @0
-
-Red Desert
-@kb @T-34-85 @.39 @Near-perp @0 @0
-@kb @T-34-85 (D-5T) @.15 @diag @0 @0
-@k @T-34-85 (D-5T) @.84 @Near-perp @0 @0
 
 2022-12-23
 
