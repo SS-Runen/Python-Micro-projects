@@ -24,6 +24,12 @@ https://www.sfu.ca/math-coursenotes/Math%20157%20Course%20Notes/sec_DerivativeRu
 
 - Linear or identity activation functions would make adding neural network layers pointless. The composition of a series or sequence of functions is no different from ordinary non-neural-net linear regression. Linear and identity functions are typically only used at the output layer.
 
+- The parameters of each neural network unit or neuron have to be randomized and diverse to avoid identical outputs. Setting the bias to zero or only one value is fine, but the hidden units or neurons should have significantly different initial parameter values.
+
+- The weights should be less than one and are typically very small, e.g. 0.01. This is done to avoid extreme variations and to prevent very small derivatives. Many activation functions have very small derivatives given large negative or positive output. There are certain cases where large weights are good or acceptable.
+
+- There are some neural network functions or formulas that take exponentially more hidden units to compute compared to less hidden units organized into more layers. That is one reason deep neural networks are used in place of shallow networks with many hidden units. This is related to Circuit Theory and the principles of convolutional neural networks.
+
 @@@
 Derivatives of TanH, Sigmoid, ReLU, and Leaky ReLU Activations
 
