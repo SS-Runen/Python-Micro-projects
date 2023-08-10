@@ -65,6 +65,35 @@ Working with Numpy Arrays
 https://www.mathsisfun.com/algebra/matrix-multiplying.html
 https://www.khanacademy.org/math/precalculus/x9e81a4f98389efdf:matrices/x9e81a4f98389efdf:multiplying-matrices-by-matrices/a/multiplying-matrices
 
+@@@
+Regularization
 
+Logistic Regression
+- When applying the calculations to find the derivative of a parameter, the regularization term will be removed from the update amount. The regularization term here reduces the effect of very large negative or positive polynomial/parameter-input/z values. It penalizes large parameters and input values, whether they are input data or activation function results. For certain activation functions like the TanH and Sigmoid, smaller values are also better than large negative or positive values. Gradient descent is executed faster for some activation functions if the activation values are lower.
 
+- For the logistic regression cost function, this is the regularization term:
+λ/2m * Σ(j=1 n) w[j]^2
+Where:
+n = Number of features.
+j = Index for the row/horizontal vector. Index j points to a feature parameter.
+m = Number of rows/horizontal vectors.
+w = Input or feature value.
+* This is taken from notes on logistic regression.
+This regularization is also referred to as L2 regularization and, in matrix mathematics, is also equivalent to w.transpose() * w.
+
+- For logistic regression using neural networks, this is the regularization term: 
++ λ/2m * ||w||^2
+or, expanding ||w||^2:
++ λ/2m * Σ(i=1 n_layer)Σ(j=1 n_layer-1)(w(i,j l)^2
+where:
+n_layer denotes w of the current layer.
+n_layer-1 denotes a parameter or variable of the previous layer.
+j = Number of neurons in the previous layer.
+i = Number of neurons in the current layer.
+* The matrix norm of a neural network is called the Frobenius norm.
+
+- The bias (b) may also be regularized, but its effect is negligible in practice if there are many different values for the parameter array w.
+
+- If L1 regularization is used instead, w will be a sparse vector, i.e. it will have many zeroes. Replacing 2m with m makes the regularization value higher and more likely to cancel out some values.
++ λ/m * ||w||
 

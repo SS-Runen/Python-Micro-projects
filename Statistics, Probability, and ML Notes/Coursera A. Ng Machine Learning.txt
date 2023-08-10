@@ -105,7 +105,7 @@ Avoiding or Solving Overfitting
 
 - Remove some features. A disadvantage of reducing features is that some nuance may be removed. Testing and other kinds of analysis are needed to remove features properly.
 
-- Regularization. Reduce certain or all feature values to lessen their effect on the chosen parameters. The reduction calculation has to be the same for all features. A regularization parameter (λ) has to be chosen.
+- Regularization. Reduce all feature values to lessen their comparative effect on the chosen parameters. The reduction calculation has to be the same for all features. A regularization parameter (λ) has to be chosen. Taking an average of the parameters (w) ensures that if there are outlying parameter values, the magnitude and direction of the amount added or subtracted to the equation reduces their effect. The square of large negative or positive numbers, the regularization value will get the same direction and magnitude of change, i.e. it will still be a positive number no matter the sign the input to the regularization function. A large regularization value will have greater effect on low-value output than high-value output.
 The following term may be added to the simplified logistic regression cost function to regularize the input.
 
 λ/2m * Σ(j=1 n) w[j]^2
