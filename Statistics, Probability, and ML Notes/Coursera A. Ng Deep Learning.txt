@@ -69,7 +69,7 @@ https://www.khanacademy.org/math/precalculus/x9e81a4f98389efdf:matrices/x9e81a4f
 Regularization
 
 Logistic Regression
-- When applying the calculations to find the derivative of a parameter, the regularization term will be removed from the update amount. The regularization term here reduces the effect of very large negative or positive polynomial/parameter-input/z values. It penalizes large parameters and input values, whether they are input data or activation function results. For certain activation functions like the TanH and Sigmoid, smaller values are also better than large negative or positive values. Gradient descent is executed faster for some activation functions if the activation values are lower.
+- When applying the calculations to find the derivative of a parameter, the regularization term will be removed from the update amount. The regularization term here reduces the effect of very large negative or positive polynomial/parameter-input product/z values. It penalizes large parameters and input values. For certain activation functions like the TanH and Sigmoid, smaller values are also better than large negative or positive values. Gradient descent is executed faster for some activation functions if the activation values are lower.
 
 - For the logistic regression cost function, this is the regularization term:
 λ/2m * Σ(j=1 n) w[j]^2
@@ -95,5 +95,13 @@ i = Number of neurons in the current layer.
 - The bias (b) may also be regularized, but its effect is negligible in practice if there are many different values for the parameter array w.
 
 - If L1 regularization is used instead, w will be a sparse vector, i.e. it will have many zeroes. Replacing 2m with m makes the regularization value higher and more likely to cancel out some values.
-+ λ/m * ||w||
++ λ/m * ||w||^2
+
+Dropout Regularization
+- Give each unit or neuron a certain chance to be eliminated. If a neuron is selected for elimination, set its activation output to zero. Later, divide each activation value by the probability of keeping a unit. This keeps the scale of the activation values consistent and keeps the expected value of A constant. When running a prediction or test, do NOT implement dropout. The keep probability can vary per layer. In practice though, zeroing out feature input values is rarely done.
+
+- Dropout regularization forces the network to adjust weights based on a more diverse set of parameters and activation values. Since certain values are randomly zeroed, the network will eventually accumulate adjustments based on certain features while ignoring others. This reduces overfitting/high variance. Dropout regularization shrinks the weights.
+
+- A disadvantage of dropout regularization is that the cost function is not well-defined and difficult to track. Due to the randomness of changes, the changes in J could be random and hard to plot. This can be solved by turning off dropout for debugging or descent checking.
+
 
