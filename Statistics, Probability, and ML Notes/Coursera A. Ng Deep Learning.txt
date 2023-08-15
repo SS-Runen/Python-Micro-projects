@@ -5,7 +5,7 @@ General Guidelines
 
 - Numpy arrays and Pandas data frames list row count and "column" count in their shape like so: (n_rows, n_cols). Technically these are just nested arrays with two dimensions. Flattening them would show n_rows as elements. Each element holds n_cols sub-elements.
 
-- To test if values meet conditions in Python, use the assert() method. E.g. assert(Z.shape[0] == w.shape
+- To test if values meet conditions in Python, use the assert() method. E.g. assert(Z.shape[0] == w.shape) or assert Z.shape[1] == W.T.shape[1], "Z column count mismatch with W.transpose column count."
 
 +++++++++++++++++++++
 Neural Network Basics
@@ -41,7 +41,7 @@ g'(z) = a * (1 - a) where a is the output of the activation function g(z) and z 
 TanH:
 g(z) = (e^z - e^-z) / (e^z + e^-z)
 g'(z) = 1 - (tanh(z))^2
-g'(z) = 1 = a^2
+g'(z) = 1 - a^2
 
 ReLU
 g(z) = max(0, z)
@@ -91,6 +91,7 @@ n_layer-1 denotes a parameter or variable of the previous layer.
 j = Number of neurons in the previous layer.
 i = Number of neurons in the current layer.
 * The matrix norm of a neural network is called the Frobenius norm.
+* The L2 norm of a vector is also referred to as its Euclidean Distance.
 
 - The bias (b) may also be regularized, but its effect is negligible in practice if there are many different values for the parameter array w.
 
@@ -109,7 +110,6 @@ Early Stopping
 - When there is a large divergence between the training and development or cross-validation set, stop the network and start the next iteration. This requires periodically monitoring the performance of the model on the development/cross-validation set at certain intervals. Early stopping might increase development time due to the interactions of the methods used to reduce overfit and to reduce training error.
 
 Normalizing Inputs
-
 - When you normalize, make sure to use the same statistical values for your cross-validation and test set. E.g. use the mean and variance of the training data to normalize the cross-validation/development and test data. It is necessary that your data is a representative sample of production or real-world data.
 
 Derivatives as a Limit
@@ -117,4 +117,41 @@ Derivatives as a Limit
 References:
 https://math.hmc.edu/calculus/hmc-mathematics-calculus-online-tutorials/single-variable-calculus/limit-definition-of-the-derivative/#top
 https://www.berkeleycitycollege.edu/wjeh/files/2012/08/calculus_note_intro_derivative.pdf
+
+Gradient Checking
+- Turn the various derivatives of each parameter and bias (W, b) into a vector. Each node parameter and bias has to be included in this reshaped vector. Next, reshape the corresponding parameter and bias values. Calculate the derivative of the parameters and biases using a separate process or code section. Compare the separately calculated array of derivatives to the derivatives of your model.
+
+- Include the regularization term in your calculations. Gradient Checking does not work with dropout regularization. A workaround is to turn dropout off to do gradient checking. Run gradient checking at different intervals of training. The implementation might only be correct during a certain stage or at certain values. Periodic gradient checking is sometimes necessary.
+
+- Compute the difference between the approximated or separately calculated derivatives and the derivatives calculated by your model or algorithm. This is strictly a debugging step since it is computationally expensive or slow.
+
+- If there is a large difference between the approximated and model derivatives, try to identify an outlying derivative from a layer, parameter, or unit.
+
++++++++++++++++++++++++
+Optimization Algorithms
+
+Mini-batch Gradient Descent
+- Perform estimation only using a part of your input data. Each epoch will use a subset of the data but will update all parameters as usual. Each epoch will update the parameters using a different batch. One epoch is one pass of forward propagation and backpropagation to adjust parameters and biases.
+
+- Usually, mini-batch sizes run faster if they are an exponent of two.
+
+Exponentially Weighted Averages
+- In statistics, this calculation is referred to as the exponentially weighted moving average.
+V_t = β*V_t-1 + (1-β)*θt
+Beta (β) is a developer-specified parameter between zero and one.
+
+- The larger the parameter, the larger the influence of previous values. A larger β has a similar effect to including the average of more previous examples in the current value V_t. A lower β is equivalent to taking the average of fewer previous examples into account when calculating V_t.
+
+- The multipliers in this equation correspond to an exponentially decaying function. Taking the element-wise product of the input and these weights and then summing them up will also yield the exponentially weighted average. These coefficients will add up to one or very close to one.
+
+- Using the standard V_t equation will result in very low initial values. To correct this bias, correct each V_t using V_t = V_t / (1 - β^t). This has to be done per item so that the term (1 - β^t) is higher in the initial phase and approaches zero the more examples are processed. This is NOT equivalent to V_t = (β*V_t-1 + (1-β)*θt) / (1 - β^t).
+
+RMS prop
+- Root mean square propagation uses the exponentially weighted derivatives to update the parameters and biases. To prevent dividing by zero and causing a run-time error, add an extremely small positive value. Here it is denoted as epsilon (ε).
+S_dW = β*S_dW + (1 - β)*(dW ** 2)
+W = W - α*(dW / (sqrt(S_dw) + ε))
+
+- RMS propagation will minimize the effect of larger biases or parameters. The intent is to damp out oscillations of the gradient descent or loss function reduction. RMS prop and EWA reduce the effect of large values. One reason they work is that the initial values of parameters and biases are very far from the correct values. Minimizing their effect in the early stages of estimation reduces random and erroneous changes.
+
+- RMS prop and similar weighted averaging algorithms allow a higher learning rate.
 
