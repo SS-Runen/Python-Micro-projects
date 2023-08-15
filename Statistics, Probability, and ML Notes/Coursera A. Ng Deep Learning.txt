@@ -103,5 +103,18 @@ Dropout Regularization
 - Dropout regularization forces the network to adjust weights based on a more diverse set of parameters and activation values. Since certain values are randomly zeroed, the network will eventually accumulate adjustments based on certain features while ignoring others. This reduces overfitting/high variance. Dropout regularization shrinks the weights.
 
 - A disadvantage of dropout regularization is that the cost function is not well-defined and difficult to track. Due to the randomness of changes, the changes in J could be random and hard to plot. This can be solved by turning off dropout for debugging or descent checking.
+@@@
 
+Early Stopping
+- When there is a large divergence between the training and development or cross-validation set, stop the network and start the next iteration. This requires periodically monitoring the performance of the model on the development/cross-validation set at certain intervals. Early stopping might increase development time due to the interactions of the methods used to reduce overfit and to reduce training error.
+
+Normalizing Inputs
+
+- When you normalize, make sure to use the same statistical values for your cross-validation and test set. E.g. use the mean and variance of the training data to normalize the cross-validation/development and test data. It is necessary that your data is a representative sample of production or real-world data.
+
+Derivatives as a Limit
+- Estimating the derivative ε based on the ratio of change in x (Δx) from x-ε to x+ε is more accurate. Visually, this is taking the combined height and width of two triangles (one from x to the higher Δx +- ε, another to the lower coordinate pair). It may also be visualized as one large triangle from the lowest to the highest point/coordinate pair. 
+References:
+https://math.hmc.edu/calculus/hmc-mathematics-calculus-online-tutorials/single-variable-calculus/limit-definition-of-the-derivative/#top
+https://www.berkeleycitycollege.edu/wjeh/files/2012/08/calculus_note_intro_derivative.pdf
 

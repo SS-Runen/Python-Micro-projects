@@ -81,11 +81,13 @@ x = x / (max(vectorX))
 Mean normalization
 x = (x - μ) / (max(vectorX) - min(vectorX))
 
-- If certain features have very large or very small x-values, the gradient descent model may take longer to reach a low-value cost function. The user has low control over the amount of change to a parameter in the early stages of the cost function optimization. Values with an uneven scale may force the model to "bounce" around large ranges and take longer to minimize error.
+- If certain features have very large or very small x-values, the gradient descent model may take longer to reach a low-value cost function. The developer has low control over the amount of change to a parameter in the early stages of the cost function optimization. Values with an uneven scale may force the model to "bounce" around large ranges and take longer to minimize error.
 
 - When normalizing, it is recommended to have values within a small countable negative and positive range to retain magnitude and direction versus some reference point.
 
-The input Z-score, min-max, and mean rely on having a proper representative sample. Normalization relative to any statistic will not work if your sample does not represent your true target data.
+- The input Z-score, min-max, and mean rely on having a proper representative sample. Normalization relative to any statistic will not work if your sample does not represent your target data.
+
+- When you normalize your training set, make sure to use the same statistical values for your cross-validation and test set. E.g. use the mean and variance of the training data to normalize the cross-validation/development and test data.
 
 ++++++++++++++++++++++++++++
 Overfitting and Underfitting
@@ -192,7 +194,7 @@ Error Analysis
 
 Adding Data
 - You may add more data similar to input that the model usually gets wrong.
-- Certain cases benefit from data augmentation. Modifying or transforming data has to be consistent with the real-life input and use of the model. Rotating letters and adding background noise to speech audio are good examples.
+- Certain cases benefit from data augmentation. Modifying or transforming data has to be consistent with the real-life input and use of the model. Rotating letters and adding background noise to speech audio are good examples. Synthesizing data is an acceptable practice.
 
 Transfer Learning
 - Transfer Learning refers to using an existing model used in a similar problem to train on your current data. The model input types should be the same. The idea is that certain generalized parameters could be learned and maintained. For example, image classification tasks with very different data might both require parameters to ignore empty space. The given example is image recognition of animals and people vs. digit recognition. If data for one problem is scarce, take the model with larger data. Either keep its hidden layer parameters and change the input and output layers or just its output layer to match your problem.
@@ -336,10 +338,10 @@ Collaborative Filtering
 
 - Mean normalization may be used to prevent erroneous predictions for products or users without any data. For a user who has not interacted with any product, the prediction will be zero or undefined without mean normalization. To perform mean normalization, subtract the mean of a feature from each feature input value. After predicting a value, add the mean back. The mean will be used in place of zero or undefined predictions. 
 
-- Strictly speaking, "normalization" means to recenter and re-scale our data such that is between 0 and 1 or -1 and 1 (Machine Learning Mastery). Normalized data can have multiple meanings. In most cases, when you normalize data you eliminate the units of measurement, enabling you to more easily compare data from different places (Normalized Function, Normalized Data and Normalization, Glen). This kind of normalization also happens to reduce computation time.
+- Strictly speaking, "normalization" means to recenter and re-scale our data such that is between 0 and 1 or -1 and 1 (Machine Learning Mastery). Normalized data can have multiple meanings. In most cases, when you normalize data you eliminate the units of measurement, enabling you to more easily compare data from different places (Normalized Function, Normalized Data and Normalization, Glen). This kind of normalization also reduces computation time.
 * References:
-https://machinelearningmastery.com/using-normalization-layers-to-improve-deep-learning-models/
-Stephanie Glen. "Normalized Function, Normalized Data and Normalization" From StatisticsHowTo.com: Elementary Statistics for the rest of us! https://www.statisticshowto.com/types-of-functions/normalized-function-data-normalization/
+Jason Brownlee. "How to Perform Feature Selection with Categorical Data" from https://machinelearningmastery.com/using-normalization-layers-to-improve-deep-learning-models/
+Stephanie Glen. "Normalized Function, Normalized Data and Normalization" from StatisticsHowTo.com, https://www.statisticshowto.com/types-of-functions/normalized-function-data-normalization/
 
 - The squared distance may be used to measure item similarity provided that their features have the same length.
 SD = Σ(l=1, n) (xk - xi)^2
