@@ -144,14 +144,63 @@ Beta (β) is a developer-specified parameter between zero and one.
 
 - The multipliers in this equation correspond to an exponentially decaying function. Taking the element-wise product of the input and these weights and then summing them up will also yield the exponentially weighted average. These coefficients will add up to one or very close to one.
 
-- Using the standard V_t equation will result in very low initial values. To correct this bias, correct each V_t using V_t = V_t / (1 - β^t). This has to be done per item so that the term (1 - β^t) is higher in the initial phase and approaches zero the more examples are processed. This is NOT equivalent to V_t = (β*V_t-1 + (1-β)*θt) / (1 - β^t).
+- Using the standard V_t equation will result in very low initial values. To correct this bias, correct each V_t using V_t = V_t / (1 - β^t). This has to be done per item so that the term (1 - β^t) is higher in the initial phase and approaches zero the more examples are processed. This is NOT equivalent to V_t = (β*V_t-1 + (1-β)*θt) / (1 - β^t). Bias correction is done every batch or epoch.
 
 RMS prop
 - Root mean square propagation uses the exponentially weighted derivatives to update the parameters and biases. To prevent dividing by zero and causing a run-time error, add an extremely small positive value. Here it is denoted as epsilon (ε).
-S_dW = β*S_dW + (1 - β)*(dW ** 2)
+S_dW = β*S_dW + (1 - β)*dW^2
 W = W - α*(dW / (sqrt(S_dw) + ε))
 
 - RMS propagation will minimize the effect of larger biases or parameters. The intent is to damp out oscillations of the gradient descent or loss function reduction. RMS prop and EWA reduce the effect of large values. One reason they work is that the initial values of parameters and biases are very far from the correct values. Minimizing their effect in the early stages of estimation reduces random and erroneous changes.
 
 - RMS prop and similar weighted averaging algorithms allow a higher learning rate.
+
+Adam Optimization
+- Adam Optimization combines RMS prop with exponentially weighted averages to speed up gradient descent. It updates based on the exponentially averaged derivative with respect to w (V_dw) divided by the square root of the squared sum according to RMS prop (S_dW).
+For each mini-batch:
+V_dw = β_1 * V_dw + (1 - β_1)*dw
+S_dw = β_2 * S_dw + (1 - β_2)*dw^2
+
+Correct the value biases:
+V_dw = V_dw/(1 - β_1)
+S_dw = S_dw/(1 - β_2)
+
+Update the parameter/matrix W:
+W = W - α * (V_dw / (sqrt(S_dw) + ε))
+*Use the same equations for db (derivative of the cost function with respect to the bias b)
+*For RMS prop, moving averages, and Adam, the recommended β_1 is 0.9. For the squared sums, β_2 is recommended to be 0.99. The ε, according to the authors of Adam, is recommended to be 10^-8. These parameters are rarely tuned, unlike the learning rate.
+
+Learning Rate Decay
+- Learning rate decay reduces the learning rate over time. The assumption is that when the estimation is close to the minimum, a smaller learning rate is needed to avoid deviating too much due to data noise or chance.
+α = (α / (1 + decayRate * epochNumber))*α_0
+
+- Other formulas for the decay rate may be used. For example, the decay rate can be reduced by some discrete value after a certain number of epochs. Others use a constant k divided by the square root of the epoch count. The result is multiplied to α.
+
+Local Optima
+- For high-dimensional data, local optima are very rare. It is more common to have a set of parameters where the derivative is zero and changes to certain sets of parameters may guide the estimation to an acceptable or optimal minimum. It is rare to have a common convergence point where the derivative is zero and it would take excessive shifts that increase error to the levels of random initialization just to find the optimum gradient. A larger number of significant data inputs reduces the likelihood of a local minimum where the error of estimation cannot be reduced by ordinary parameter updates.
+
+- Plateaus are still a problem with high-dimensional data since the derivative may stay at near-zero or zero for a long time despite the parameters being far from optimal. They can make gradient descent slow or give the illusion that it is safe to stop learning.
+
+@@@
+Hyper-parameter Tuning
+- Sample values at random or using a coarse-to-fine process. Do not use a table or grid. It is hard to make a comprehensive grid of random values without sampling an impractical number of combinations. Sampling coarse-to-fine means sampling at random then gradually limiting your search to the combinations with the best performance.
+
+- Make sure to sample using a scale that matches the possible hyper-parameter values. For values that may range from near-zero to one, use an exponential or logarithmic scale. Find your minimum and maximum values. Take the base ten logarithm of the start and end points then make a uniformly distributed random sample. The number of samples to make is arbitrary. E.g. for a value that may range from 0.0001 to 1, take the base-10 logarithm of equidistant values. Here, log_10 0.0001 = -4 and log_10 1 = 0. If you need to take five samples, use exponents ranging from -4, -3.2, -2.4...0.2, 1.
+
+- Developers are free to determine the minimum and maximum values of some hyper-parameters such as the number of layers and the beta values of Adam.
+
+@@@
+Batch Normalization
+- Batch normalization increases robustness versus hyper-parameter changes. Batch norm normalizes the input layer and even the out z or activation a of each layer. After normalizing the layer z or a values, change Z or A using gamma γ and beta β: z = γZ_norm + β. Gamma and beta are learnable parameters. Z is usually normalized using Z-score normalization. The normalized Z is often referred to as Z̃.
+Z = Z - μ / sqrt(σ^2)
+or 
+Z = (Z - μ) / σ
+
+- When using batch normalization, you may omit the bias term. This term will have no effect on the result of z. The bias b is a constant added to all W * X products and batch norm uses Z-scores to normalize.
+
+- Setting gamma (γ) and beta (β) to cancel out the mean and standard deviation will practically turn off batch norm. β may also be used as a replacement for the bias. These hyper-parameters have to be updated based on their derivatives similar to parameters W.
+
+- Batch norm reduces random or noisy changes to the estimates by normalizing Z. It also makes weights deeper inside the neural network less affected by the weights in the much earlier layers. If the early layers have large shifts or incorrect weights, the effect of those weights is minimized. Especially during epochs close to initialization, changes have less effect on the weights of deeper layers. Since deeper layers are adjusting with some respect to the standard deviation and mean of previous layers activation values, mere changes in value do not always force a large change to the parameters of deeper layers. 
+
+- One of the side-effects of batch-norm is a form of regularization when done with mini-batches. The mean and variance changes based on the batch used. Since the estimates of the mean and standard deviation are noisy themselves, downstream layers are slightly less likely to fit too much based on certain parameters or neuron activation values. This effect is similar to drop-out regularization, but it is NOT a good replacement for methods explicitly used for regularization.
 
