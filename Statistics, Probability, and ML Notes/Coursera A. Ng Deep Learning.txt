@@ -191,9 +191,9 @@ Hyper-parameter Tuning
 
 @@@
 Batch Normalization
-- Batch normalization increases robustness versus hyper-parameter changes. Batch norm normalizes the input layer and even the out z or activation a of each layer. After normalizing the layer z or a values, change Z or A using gamma γ and beta β: z = γZ_norm + β. Gamma and beta are learnable parameters. Z is usually normalized using Z-score normalization. The normalized Z is often referred to as Z̃.
-Z = Z - μ / sqrt(σ^2)
-or 
+- Batch normalization increases robustness versus hyper-parameter changes. Batch norm normalizes the input layer and even the out z or activation a of each layer. After normalizing the layer z or a values, change Z or A using gamma γ and beta β: z = γ*Z_norm + β. Gamma and beta are learnable parameters. Z is usually normalized using Z-score normalization. The normalized Z is often referred to as Z̃.
+Z = Z - μ / sqrt(σ^2 + ε)
+or
 Z = (Z - μ) / σ
 
 - When using batch normalization, you may omit the bias term. This term will have no effect on the result of z. The bias b is a constant added to all W * X products and batch norm uses Z-scores to normalize.
@@ -203,4 +203,28 @@ Z = (Z - μ) / σ
 - Batch norm reduces random or noisy changes to the estimates by normalizing Z. It also makes weights deeper inside the neural network less affected by the weights in the much earlier layers. If the early layers have large shifts or incorrect weights, the effect of those weights is minimized. Especially during epochs close to initialization, changes have less effect on the weights of deeper layers. Since deeper layers are adjusting with some respect to the standard deviation and mean of previous layers activation values, mere changes in value do not always force a large change to the parameters of deeper layers. 
 
 - One of the side-effects of batch-norm is a form of regularization when done with mini-batches. The mean and variance changes based on the batch used. Since the estimates of the mean and standard deviation are noisy themselves, downstream layers are slightly less likely to fit too much based on certain parameters or neuron activation values. This effect is similar to drop-out regularization, but it is NOT a good replacement for methods explicitly used for regularization.
+
+- During testing, do not compute a new mean and variance for each batch. For the test set, use an exponential moving average that processes and accumulates the mean for all batches. The exponential moving average should be used to calculate z̃. This is because the testing phase usually requires each example to be fed into the model one at a time. As usual, this process will apply to all layers.
+
+@@@
+Multi-class Classification
+
+Soft-max
+a[L] = (e^Z[L]) / Σ(i = 1, n_layers)t_i
+- Here, t_i is a vector containing the probabilities of each class, i.e. t_i = [e^Z|C_1, e^Z|C_2, e^Z|C_3...] where C_n denotes class n.
+The output a[L] is a vector since Z is also a vector. Each activation value from the second-last layer will be treated as a value for which a parameter array W must be assigned. The parameters should be set so that e^Z / Σ(i = 1, n_layers)t_i is equivalent to the probabilities that the input data X[m] is a member of each one of the possible classes. 
+
+Soft-max Loss
+L(ŷ, y) = -Σ(j = 1, C)(y log_e(ŷ_j))
+- Here, the loss function zeroes out all values except the correct value. If the prediction y-hat(ŷ) for the correct value y (1) is equal or close to one, the loss is low. log_e(1) = 0, 1 * 0 = -+0, loss is zero. Next, log_e(0.98) = -0.02020207... The lower ŷ is when y = 1, the larger the loss. log_e(0.1) = -2.3, loss is 2.3. This method is based on the maximum likelihood estimation process in statistics.
+
+- Thus, the cost function for soft-max is:
+J(W, b) = (1/m_examples) Σ(i = 1, m)L(ŷ, y)
+J(W, b) = (1/m_examples) Σ(i = 1, m)(-Σ(j = 1, C)(y log_e(ŷ_j)))
+
+Back-prop:
+- Here, delta is used to denote a partial derivative.
+δJ/δz = ŷ - y
+or
+J'(z(W, b)) = ŷ - y 
 
