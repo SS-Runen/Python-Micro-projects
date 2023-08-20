@@ -100,6 +100,8 @@ Lord Theodore - Two games in a row, lost lane by picking complicated champions (
 
 Yenii - This player went AFK in time for a consecutive enemy baron and dragon.
 
+The KungFu Tai - This player shoed bot-like behaviour: firing very quick W's with no lead at all but having very quick Q and auto combos. Fed at least five kills early game by going into a Gwen. Kept splitting away from objectives without TP or picking fights without numbers advantage.
+
 -------------
 Low Priority:
 
@@ -112,3 +114,5 @@ Beyond Rage - This player picked Milio without having any master or hours played
 Shawntell - After his support died to our invade and he died in lane around five minutes later, he fed two kills. One was an execute while wasting his heal, the other was by walking up and not attacking.
 
 A Class Lhenel - As Jhin, this player stood still for five to ten minutes just so we would lose our Nexus.
+
+RIZZ GOD GERD - This player has 160 thousand mastery points on Yasuo ang 100 thousand points on two others. After losing lane, this player left the game. GERD went 0-3-0 against an Aatrox despite supposedly reaching tier three in the Bilgewater cup. This is either a smurf used for testing or is boosted.

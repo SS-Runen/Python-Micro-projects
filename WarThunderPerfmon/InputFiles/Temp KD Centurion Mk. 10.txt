@@ -33,6 +33,22 @@ Battle of Hurtgen Forest [Battle] zones in town
 Finland
 Poland two points in town
 
+KD records for maps on the avoidance list will be removed. This was implemented on Aug. 14, 2023, and applies to all vehicles.
+
+2023-08-18
+
+Pradesh #2
+@k @T-44-100 @2, 1.99 @Diag, diag @4, 0 @0, 0
+@k @2S3M @1.51 @Para @0 @0
+@k @T-44-100 @1.77, 1.78 @Near-para, near-para @12, 0 @0, 0
+
+2023-08-14
+
+Mozdok
+@k @T-54 (1949) @1.54, 1.54 @near-para, Perp @0, 0 @0, 0
+@k @T-54 (1949) @1.05, 1.07 @Near-para, near-para @0, -7 @0, 0
+@kb @T-54 (1947) @.27 @Para @0 @0
+
 2023-08-10
 
 Hurtgen Forest

@@ -11,6 +11,24 @@ Poland two points in town
 Unlike the Centurion MK. 10 custom sight, the Conqueror sight does not have any difference between HESH and APDS.
 For the Centurion Mk. 10, an increase of one hundred meters for HESH rounds is needed.
 
+KD records for maps on the avoidance list will be removed. This was implemented on Aug. 14, 2023, and applies to all vehicles.
+
+2023-08-14
+
+Mozdok
+@kb @T-54 (1947) @.24 @Para @0 @24
+
+2023-08-12
+
+Fields of Normandy
+@k @T-54 (1949) @.35 @diag @-8 @0
+@k @T-54 (1949) @.55 @Diag @0 @0
+@k @T-54 (1947) @.94 @near-Perp @16 @0
+
+Mozdok
+@k @Obj 268 @.96, .97 @Para, para @0, 0 @0, 0
+@k @2S3M @1.07, 1 @diag, diag @0, 0 @0, 0
+
 2023-08-10
 
 Fields of Poland
@@ -51,7 +69,7 @@ Fire Arc
 
 2023-01-06
 
-Pland (winter) [Battle]
+Poland (winter) [Battle]
 @K @T-54 (1949) @.92 @near-perp @0 @0
 @k @2S3M @.36 @Perp @32 @0
 @k @T-54 (1947) @1.13, 1.13 @diag, diag @0, 0 @0, 0
@@ -161,7 +179,7 @@ European Province
 @k @Type 59 @1.2 @Perp @0 @0
 
 Hurtgen Forest
-@kb @T-54 (19451) @.1 @Para @0 @0
+@kb @T-54 (1951) @.1 @Para @0 @0
 @k @T-54 (1951) @.03 @Near-perp @0 @0
 
 2023-02-11
@@ -289,25 +307,11 @@ Fire Arc
 @k @T-54 (1951) @1.16 @Para @0 @0
 @k @WZ305 @1.09 @Diag @0 @0
 
-2022-09-14
-
-Finland
-@k @M48 @1 @Diag @0 @0
-
 2022-09-02
 
 Mozdok
 @k @T-54 (1949) @1.06 @Near-perp @24 @0
 @k @ASU-85 @.02, .02 @Para, para @0, 0 @0, 0
-
-2022-08-27
-
-Cargo Port
-@kb @T-54 (1947) @.35 @DIag @0 @0
-
-Ground Zero
-@k @IS-6 @.46 @Diag @11 @0
-@k @T-54 (1949) @.24 @Diag @0 @0
 
 2022-08-23
 
@@ -321,11 +325,6 @@ Poland
 @k @IS-4M @.91 @Diag @0 @0
 @k @BTR-ZD @.42 @Diag @0 @0
 
-2022-08-17
-
-Campania
-@k @T-54 (1947) @.59, .54 @Perp, perp @10, 0 @0, 0
-
 2022-08-11
 
 Mozdok
@@ -338,19 +337,7 @@ Hurtgen Forest
 @k @T-54 (1947) @.12 @Para @0 @0
 @kb @T-54 (1947) @.06 @Near-para @0 @6
 
-Berlin
-@kb @T-54 (1947) @.41 @Diag @0 @0
-@k @ASU-85 @.24 @Para @0 @0
-
 2022-07-30
-
-Cargo Port
-@k @PT-76-57 @1.13, 1.13 @Near-perp, near-perp @24, 0 @33, 0
-@k @T-54 (1949) @.99 @Diag @10 @0
-@k @T-54 (1949) @.48 @Para @-3 @0
-
-Ground Zero
-@kb @T-54 (1949) @.58 @Para @0 @-5
 
 Poland
 @k @T-54 (1949) @.86 @Diag @0 @0

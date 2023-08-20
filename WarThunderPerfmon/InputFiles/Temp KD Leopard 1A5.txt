@@ -1,5 +1,18 @@
 Event, Vehicle, Distance, Orientation, Speed, SlefSpeed
 
+2023-08-21
+
+Fields of Normandy
+@k @T-64A (1971) @1.26, 1.26 @Near-para, para @23, 0 @0, 0
+@k @M60A3 TTS @.05 @Para @0 @0
+@kb @M60A3 TTS @.06 @Near-perp @0 @0
+@kb @M60A3 TTS @.05 @diag @0 @0
+
+2023-08-16
+
+Normandy
+@kb @QN506 @.1 @Para @11 @0
+
 2023-08-05
 
 Fire Arc
