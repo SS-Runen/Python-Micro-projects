@@ -247,7 +247,7 @@ Here, the population standard deviation (σ) is the standard deviation of a feat
 
 - Any data modification that is part of the ML pipeline should NOT be done using the entire data set. Normalization and feature engineering should be done separately for each data split or using metrics taken from the training set. Using summary statistics from the entire dataset to pre-process the data set before splitting into groups or splits risks leaking information or mismatching the data pipeline used during real-world deployment.
 
-- Giving more weight or influence to certain examples might be necessary. For example, certain samples may require very high accuracy and precision due to business rules. Adding a weight to the loss function that increases the loss for such examples is a valid tactic. A custom cost and/or loss function might be necessary for this. In other words, the overall cost function may be J = Σ(n=1, sum(w)) w * L(y_pred, y_true) where w is a developer-supplied weight that is set higher than one if the example being checked is a priority example.
+- Giving more weight or influence to certain examples might be necessary. For example, certain samples may require very high accuracy and precision due to business rules. Adding a weight to the loss function that increases the loss for such examples is a valid tactic. A custom cost and/or loss function might be necessary for this. In other words, the overall cost function may be J = 1/sum(w) Σ(n=1, m_samples) w * L(y_pred, y_true) where w is a developer-supplied weight that is set higher than one if the example being checked is a priority example.
 
 - If your model does well on the training, validation, and test sets but works poorly in production, the performance metrics and the entire dataset have to be changed. Augmentation and data gathering are good options.
 
@@ -283,5 +283,25 @@ Mismatched Training and Dev/Test Sets
 
 - Simulating or synthesizing data similar to the problematic classes is another good option. When synthesizing or augmenting data, make sure that the augmentations are randomized and do not follow a pattern. Otherwise, the model may recognize the pattern and only correct for that specific error. The error on the test set probably won't be reduced as much compared to the train and dev sets. For example, the noise added to speech in a quiet room should be mostly unique frome example to example. The same applies to image transformations. 
 
-- Make sure the distribution of the data selected for augmentation or synthesis has the same distribution as the train and dev sets.
+- Make sure the distribution of the data selected for augmentation or synthesis has the same distribution as the train and dev sets. The data used in augmentation should be randomly distributed or at least reflect the real distribution of distortions.
+@@@
+
+Transfer Learning
+- Transfer learning may be used as a solution for lack of data. If there is neural network with good performance and plenty of training data on a similar problem, that trained network could be modified for your problem. Remove the pre-trained output layer and add a new output layer or more hidden layers. The old neural network weights may be retained throughout the process or trained along with the new layers. Make sure that the pre-trained network has more data than you have for your problem and that the problems are similar, e.g. general image recognition vs. image recognition for radiology images.
+
+- For transfer learning to work, the networks must have the same or compatible input. Transformations to fit data into the first layer are allowed. The reference or pre-trained layer should have had much more data to train on than what is available to you. If possible, check if the low level features of the pre-trained network's problem could be applicable to your problem.
+
+Multi-task Learning
+- For some reason, training a neural network to find weights for several very similar tasks often increases performance. The example given was an image recognition problem for self-driving cars. If the output of the model tells whether there are pedestrians, traffic lights, and other objects on screen, the model may perform better overall since it is doing several similar but different tasks. Transfer learning works well for tasks with shared lower-level features.
+
+- If some outputs are missing a label, do not calculate a loss for the unlabled sample.
+
+End-to-end Deep Learning
+- For some applications, developing several networks to perform subtasks and then feed their data into a final network is a valid plan. This is especially useful if you do not have enough data for your task. End-to-end learning uses one large and deep neural network to find weights and biases for the final output without using other networks for subtasks. This usually requires a much higher amount of data, but data-gathering has advanced so much that end-to-end learning is common.
+
+- An example of good use for step-by-step learning is in facial recognition. It is common to have separate software to detect and crop or pre-process faces and another to verify identity. By breaking down the problem, the available data is used much more effectively. Identity verification images are usually cropped and close-up. Facial tracking images are from different angles and distances. Since the proper weights for the separate problems are very different, breaking down the problem increases performance. Putting these pipelines together would require an extremely large data-set.
+
+- A counter-example to the split pipeline is with machine translation. There is a sufficiently large sample size of translations than before so a split pipeline is not necessary. Many automatic translators have a single pipeline.
+
+- It is hard to check whether the available data is a match for the complexity of your task. It can be helpful to divide your problem into components and check if they are similar enough or have transferrable data among each other. The specificity or closeness with which data matches your x and y mappings should also be checked. Refer to the example using image classification and self-driving.
 
