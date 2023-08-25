@@ -3,6 +3,8 @@ General Guidelines
 
 - When testing a formula or procedure, try the process using some input. For equations, try to find a trend in the results relative to the input. For ML algorithms, run limited tests on groups or sets with at least thirty samples. Depending on the situation, a control may be needed or the same data has to be used for different processes.
 
+- Test validation and logic-checking are mandatory. For complicated functions or classes, more granular or step-by-step checks may be necessary. This applies to both math and code.
+
 - To start Spyder in Ubuntu Linux:
 conda activate spyder-env
 spyder
@@ -11,6 +13,8 @@ Here, "spyder-env" is the name of your Conda environment. This is the default na
 
 - A plugin is needed to open and edit notebooks in Spyder:
 conda install spyder-notebook -c conda-forge
+
+- Until there is a proven need for other programming languages or libraries, Python and its libraries will be the primary ML and AI tools. Julia, R, and SQL may be learned based on what the problem or research project requires. For now, the focus is on transferrable fundamentals of math, statistics, AI, and ML.
 
 +++++++++++++++++
 Linear Regression
@@ -67,7 +71,7 @@ Polynomial Regression
 - You may derive a new feature from x by taking its various powers - usually the second or third - or taking x' square root. This may not be applicable to some features with negative values. For negative values, it may be useful to transform the absolute value and then multiply it to a negative value as part of the transformation process.
 
 Loss Functions and Cost Functions
-A loss function is calculated per set of parameters and input. This is equivalent to calculating using the data of one row. A cost function uses the principles of derivatives and polynomials to find the slope of the entire data set. The cost function uses the average of all results in the data set to determine the general direction parameters need to be shifted.
+- A loss function is calculated per set of parameters and input. This is equivalent to calculating using the data of one row. A cost function uses the principles of derivatives and polynomials to find the slope of the entire data set. The cost function uses the average of all results in the data set to determine the general direction parameters need to be shifted.
 
 +++++++++++++++
 Feature Scaling
@@ -183,7 +187,7 @@ Performance Baselines, Bias, and Variance
 
 - If possible, benchmark model performance against human performance.
 
-- Competing or standard algorithms may also be used as a baseline for performance, variance, and bias. The same training, cross-validation, and test data must be used for all models. To get the average train-test or train-cross-validation error difference, several different splits of data will have to be used. Process the average error difference.
+- Competing or standard algorithms may also be used as a baseline for performance, variance, and bias. The same training, cross-validation, and test data must be used for all models. To get the average train-test or train-cross-validation error difference, several different splits of data will have to be used.
 
 - The training error is expected to increase as more data is used, eventually resembling a straight line. The cross-validation error is expected to decrease as training data increases. The graph of the cross-validation error will also straigten out as it approaches zero. Steadily increasing the train data with different sizes of subsets is usually too resource-intensive to be practical.
 
@@ -203,7 +207,7 @@ Transfer Learning
 Skewed Data Sets
 - For data sets with isolated but important cases, plain accuracy is not a good metric. For example, rare medical conditions have be diagnosed accurately even if their input values are outliers. For continuous output, the input data where the model has a high error metric should be analyzed, whether thru categorization or statistical analysis.
 
-- Precision: Precision refers to the ratio of correct positive predictions to total positive predictions. True positives vs. predicted positives.
+- Precision: Precision refers to the ratio of correct positive predictions to total positive predictions. P(True|PredictedTrue).
 Precision = ( true_positives / (true_positive_predictions + false_positive_predictions)).
 
 - Recall: Recall is the ratio of correctly predicted positives and actual positives. True positives vs. actual positives.
@@ -300,7 +304,7 @@ p(vector(x)) = j=1Πn p(xj;μj,σj^2)
 
 The assumption here is that the features are independent of each other.
 
-- F1 scores, precision and recall may also be used to evaluate model performance. The training, cross-validation and test sets should be representative of real data. Precision = ( true_positives / (true_positive_predictions + false_positive_predictions)). Recall = true_positives / true_positives + false_negatives. In anomaly detection, it is safer to only use a test set and training set, instead of a training, cross-validation, and test set. This should only be done if there is not enough data for a cross-validation and test set. Based on the results, adjust the cut-off parameter ε.
+- F1 scores, precision, and recall may also be used to evaluate model performance. The training, cross-validation and test sets should be representative of real data. Precision = ( true_positives / (true_positive_predictions + false_positive_predictions)). Recall = true_positives / true_positives + false_negatives. In anomaly detection, it is safer to only use a test set and training set, instead of a training, cross-validation, and test set. This should only be done if there is not enough data for a cross-validation and test set. Based on the results, adjust the cut-off parameter ε.
 
 @@@
 Unsupervised vs. Supervised Anomaly Detection
@@ -373,7 +377,7 @@ Finally, you could use something like a neural network that will by itself figur
 Content-based Filtering
 - Content-based filtering matches the features of an item to the features of a user. The vectors describing the user and the item or product may be different lengths. Content-based filtering involves operations on these two vectors. Collaborative filtering finds parameters for user data to predict a product characteristic vector. Afterward, the model can be used to predict or learn parameters for product characteristics to find a good match.
 
-- The final vectors for content-based filtering have to be processed so that they are the same length. After solving for the parameters of a certain user or product, matches can be made by calculating the distance between reference products or users and the corresponding input vector.
+- The final vectors for content-based filtering have to be processed so that they are the same length. After solving for the parameters of a certain user or product, matches can be made by calculating the distance between reference output from a product or user and actual products or users.
 
 - To get around the computation costs, it is better to perform an infrequent and slow retrieval step where large numbers of items or users are matched. Afterward, they are ranked based on closeness to the reference user or product.
 

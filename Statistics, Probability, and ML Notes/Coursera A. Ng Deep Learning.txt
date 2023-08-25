@@ -7,6 +7,8 @@ General Guidelines
 
 - To test if values meet conditions in Python, use the assert() method. E.g. assert(Z.shape[0] == w.shape) or assert Z.shape[1] == W.T.shape[1], "Z column count mismatch with W.transpose column count."
 
+- Test validation and logic-checking are mandatory. For complicated functions or classes, more granular or step-by-step checks may be necessary.
+
 +++++++++++++++++++++
 Neural Network Basics
 
@@ -183,7 +185,7 @@ Local Optima
 
 @@@
 Hyper-parameter Tuning
-- Sample values at random or using a coarse-to-fine process. Do not use a table or grid. It is hard to make a comprehensive grid of random values without sampling an impractical number of combinations. Sampling coarse-to-fine means sampling at random then gradually limiting your search to the combinations with the best performance.
+- Sample values at random or using a coarse-to-fine process. Do not use a table or grid. It is hard to make a comprehensive grid of random values without sampling an impractical number of combinations. Sampling coarse-to-fine means sampling at random then gradually limiting your search to the combination groups with the best performance.
 
 - Make sure to sample using a scale that matches the possible hyper-parameter values. For values that may range from near-zero to one, use an exponential or logarithmic scale. Find your minimum and maximum values. Take the base ten logarithm of the start and end points then make a uniformly distributed random sample. The number of samples to make is arbitrary. E.g. for a value that may range from 0.0001 to 1, take the base-10 logarithm of equidistant values. Here, log_10 0.0001 = -4 and log_10 1 = 0. If you need to take five samples, use exponents ranging from -4, -3.2, -2.4...0.2, 1.
 
@@ -191,6 +193,7 @@ Hyper-parameter Tuning
 
 @@@
 Batch Normalization
+
 - Batch normalization increases robustness versus hyper-parameter changes. Batch norm normalizes the input layer and even the out z or activation a of each layer. After normalizing the layer z or a values, change Z or A using gamma γ and beta β: z = γ*Z_norm + β. Gamma and beta are learnable parameters. Z is usually normalized using Z-score normalization. The normalized Z is often referred to as Z̃.
 Z = Z - μ / sqrt(σ^2 + ε)
 or
@@ -227,4 +230,58 @@ Back-prop:
 δJ/δz = ŷ - y
 or
 J'(z(W, b)) = ŷ - y 
+
++++++++++++++++++++++++++++++++++++++
+Structuring Machine Learning Projects
+
+- Single-number evaluation metrics are preferable over multiple metrics. Ideally, an "organic" single-number metric should be used, such as entropy or information gain. If such a metric is not available, multiple metrics may be combined, such as thru the F1 score which combines precision and recall. Be careful with how much weight or ratios you place on the metrics to combine.
+
+- Depending on your project goal, some metrics may be optimized while others only need to satisfy a certain threshold. Those metrics which do not need to be maximuzed or optimized, i.e. metrics that only need to meet a threshold, are called satisficing metrics.
+
+- For extremely large datasets, it is possible to use a much smaller fraction of data for validation and test sets, e.g. 1-2%. There is no hard rule for this. One possible way to set sample size is to use the formula for sample variance deviation.
+s(x) = σ / sqrt(n)
+
+Here, the population standard deviation (σ) is the standard deviation of a feature across the entire data set. The training and development sample sizes may be set to stay within a certain standard error. Standard error (s(x)) refers to the ratio or number of standard deviations from the population mean a sample mean will probably be. The difficulty of using this method is the large number of features for some data sets.
+
+- Having a test set that is too small can reduce accuracy. Putting too many samples in the dev/cross-validation and test sets could reduce performance. In contrast, too few validation and test items might not be enough to represent your data set accurately.
+
+- Any data modification that is part of the ML pipeline should NOT be done using the entire data set. Normalization and feature engineering should be done separately for each data split or using metrics taken from the training set. Using summary statistics from the entire dataset to pre-process the data set before splitting into groups or splits risks leaking information or mismatching the data pipeline used during real-world deployment.
+
+- Giving more weight or influence to certain examples might be necessary. For example, certain samples may require very high accuracy and precision due to business rules. Adding a weight to the loss function that increases the loss for such examples is a valid tactic. A custom cost and/or loss function might be necessary for this. In other words, the overall cost function may be J = Σ(n=1, sum(w)) w * L(y_pred, y_true) where w is a developer-supplied weight that is set higher than one if the example being checked is a priority example.
+
+- If your model does well on the training, validation, and test sets but works poorly in production, the performance metrics and the entire dataset have to be changed. Augmentation and data gathering are good options.
+
+- Surpassing human-level performance on a task is difficult. At that point, human feedback and manual analysis give much less results, even if they are done by domain experts. For these and other reasons, the default proxy for best possible performance is human-level performance. Especially for natural perception tasks, human level is used as a stand-in for the theoretical minimum possible error. The difference between Baye's Optimal Error and your model performance is referred to as avoidable bias.
+
+@@@
+Error Analysis
+
+- Check the distribution and characteristics of the samples that are mislabled or have high error. The number of samples to take is arbtirary. Some good references are the normal distribution and sample mean deviation from the population mean. The percentage of mislabled examples from a certain class is also the percentage of the model error you can remove by training for that class.
+
+- Deep-learning algorithms are resistant to random erors, but if the errors have a pattern then the model might apply it. Sadly, evaluating the effect of mislabled data requires some amount of manual checking.
+
+- Error checking may also be used to find which examples are misclassified in the dev/validation and test sets.
+
+- Feature engineering with reference to the error analysis results is also a valid response. If data is missing from the training set or there is a pattern to the underfit, data might need to be augmented.
+
+- Examining the data of correctly predicted examples may corroborate or add to the findings of error analysis. Whether or not to check correct labels depends on the return on resources.
+
+- Make sure that the validation/dev set and test set come from the same distribution.
+
+- Find a balance between designing the system and running another iteration to evaluate performance. Be aware of the gains from design changes, algorithm changes, and possible optimization. Without a proper error test, performance metrics are incomplete. Especially in problems with few references or precedents, evaluating the effect of smaller groups of changes by building and then testing an incomplete system is often better than trying to anticipate and fix problems.
+
+@@@
+Mismatched Training and Dev/Test Sets
+
+- The expected or tolerable difference between the training and validation set is skewed for these kinds of data distributions. To help check for overfitting, use a training-dev set. This set should be taken from the training set or have the same distribution as the training set. If the train-dev/train-validation set error is significantly higher than the training error, it is good proof of overfitting.
+
+- If the difference between the error on the train-dev set and validation/test set is high, there is a data mismatch. Consider augmenting your training data and other ways to reduce error. A last resort is to include more data similar to the test and validation sets.
+
+- A large difference between the validation/dev set and test set error is a sign of overfitting to the dev set or information leakage. It might also mean you need more data for the dev and test sets.
+
+- If there is a data mismatch problem, manual error analysis or analysis by a domain expert are viable despite high manual labor cost. Another option is to add weights to problematic classes.
+
+- Simulating or synthesizing data similar to the problematic classes is another good option. When synthesizing or augmenting data, make sure that the augmentations are randomized and do not follow a pattern. Otherwise, the model may recognize the pattern and only correct for that specific error. The error on the test set probably won't be reduced as much compared to the train and dev sets. For example, the noise added to speech in a quiet room should be mostly unique frome example to example. The same applies to image transformations. 
+
+- Make sure the distribution of the data selected for augmentation or synthesis has the same distribution as the train and dev sets.
 

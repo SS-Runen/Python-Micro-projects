@@ -324,13 +324,13 @@ Stratified Sampling - A population is sorted into segments based on certain char
 Clustering - The population is broken into groups and samples are taken from a random selection of groups. The group sample size ratio to total sample size must be the same as group size ratio to population size.
 
 -- Central Limit Theorem - The means of a set of samples are normally distributed around the mean of the source population. This is proposed to be true no matter the probability distribution of the population.
-The standard deviation of a set of sample means from the population mean is equal to the population SD divided by the square root of the sample size.
+The standard deviation of a sample's mean from the population mean is equal to the population SD divided by the square root of the sample size.
 s(x) = σ / sqrt(n)
 
 Here:
 σ = Population standard deviation.
 n = Sample size.
-s(x) = Standard deviation of the sample means from the population mean. This may be referred to as the sample standard error.
+s(x) = Standard deviation of the sample mean from the population mean. This may be referred to as the sample standard error.
 
 The larger the sample size, the lower the sample mean's deviation around the population mean.
 
