@@ -1,5 +1,11 @@
 Event, Vehicle, Distance, Orientation, Speed, SlefSpeed
 
+2023-08-25
+
+Pradesh #2
+@k @T-55A @1.84 @Diag @-1 @0
+@kb @ZTZ88A @.11 @Near-perp @0 @0
+
 2023-08-21
 
 Fields of Normandy

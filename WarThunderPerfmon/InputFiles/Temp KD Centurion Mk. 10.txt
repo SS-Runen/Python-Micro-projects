@@ -35,6 +35,26 @@ Poland two points in town
 
 KD records for maps on the avoidance list will be removed. This was implemented on Aug. 14, 2023, and applies to all vehicles.
 
+2023-08-26
+
+Pradesh #2
+@k @Type 62 @1.41 @Para @0 @0
+@K @Type 62 @1.05 @near-Perp @0 @0
+@k @T-44-100 @.61 @Diag @0 @0
+
+Pradesh #1
+@k @IS-4M @.5 @Diag @0 @0
+@k @T-54 (1947) @1.01 @Diag @0 @-11
+
+Fields of Normandy
+@k @T-54 (1949) @.53 @Perp @0 @34
+@k @T-54 (1949) @.37 @Perp @-7 @0
+@k @T-54 (1949) @.23, .22 @diag, diag @-11, -7 @0, 0
+@k @2S3M @.46 @Para @0 @0
+@k @T-54 (1947) @.27 @Para @0 @0
+@k @T-54 (1947) @.5, .5 @Diag, diag @8, 0 @0, 0
+@k @IS-4M @.46 @Para @0 @0
+
 2023-08-18
 
 Pradesh #2
