@@ -273,15 +273,15 @@ Error Analysis
 @@@
 Mismatched Training and Dev/Test Sets
 
-- The expected or tolerable difference between the training and validation set is skewed for these kinds of data distributions. To help check for overfitting, use a training-dev set. This set should be taken from the training set or have the same distribution as the training set. If the train-dev/train-validation set error is significantly higher than the training error, it is good proof of overfitting.
+- The expected or tolerable difference between the training and validation set is skewed for these kinds of data distributions. To help check for overfitting, use a training-dev set. This set should be taken from the training set before feeding into the model. It must have the same distribution as the training set. If the train-dev/train-validation set error is significantly higher than the training error, it is good proof of overfitting.
 
 - If the difference between the error on the train-dev set and validation/test set is high, there is a data mismatch. Consider augmenting your training data and other ways to reduce error. A last resort is to include more data similar to the test and validation sets.
 
-- A large difference between the validation/dev set and test set error is a sign of overfitting to the dev set or information leakage. It might also mean you need more data for the dev and test sets.
+- A large difference between the validation/dev set and test set error is a sign of overfitting to the validation set or information leakage. It might also mean you need more data for the dev and test sets.
 
 - If there is a data mismatch problem, manual error analysis or analysis by a domain expert are viable despite high manual labor cost. Another option is to add weights to problematic classes.
 
-- Simulating or synthesizing data similar to the problematic classes is another good option. When synthesizing or augmenting data, make sure that the augmentations are randomized and do not follow a pattern. Otherwise, the model may recognize the pattern and only correct for that specific error. The error on the test set probably won't be reduced as much compared to the train and dev sets. For example, the noise added to speech in a quiet room should be mostly unique frome example to example. The same applies to image transformations. 
+- Simulating or synthesizing data similar to the problematic classes is another good option. When synthesizing or augmenting data, make sure that the augmentations are randomized and do not follow a pattern. Otherwise, the model may recognize the pattern and only correct for that specific error. For example, the noise added to speech in a quiet room should be mostly unique frome example to example. The same applies to image transformations. 
 
 - Make sure the distribution of the data selected for augmentation or synthesis has the same distribution as the train and dev sets. The data used in augmentation should be randomly distributed or at least reflect the real distribution of distortions.
 @@@
@@ -304,4 +304,34 @@ End-to-end Deep Learning
 - A counter-example to the split pipeline is with machine translation. There is a sufficiently large sample size of translations than before so a split pipeline is not necessary. Many automatic translators have a single pipeline.
 
 - It is hard to check whether the available data is a match for the complexity of your task. It can be helpful to divide your problem into components and check if they are similar enough or have transferrable data among each other. The specificity or closeness with which data matches your x and y mappings should also be checked. Refer to the example using image classification and self-driving.
+
++++++++++++++++++++++++++++++
+Convolutional Neural Networks
+
+???
+Question:
+What are the general rules or principles for finding matrix operations that are used as image filters in convolutional neural networks? E.g. per-element multiplication of an image by a three by three matrix with ones in the first column, zeroes in the second, and negative ones in the third.
+
+- The parameters of the matrix used to "convolve" the image may be set by hand or learned by the model. The convolution operation between the image and filter reduces the dimensions of the data but preserves certain relationships, such as edges or distinct differences in brightness in images. The result of a convolution between an n x n matrix and f x f filter will have the dimensions (n-f+1 ) x (n-f+1).
+
+- Some papers or books define convolution as mirroring the filter along the vertical and horizontal axes before applying it. The convolution described in many machine-learning literature is technically a cross-correlation, not a convolution according to signal processing or mathematics. A mathematical convolution is associative, i.e. (A * B) * C = A * (B * C).
+
+Padding
+- A possible problem with certain filters is that pixels on the edge may have diminished effect on the final result. This could reduce information gained. Next, the input shrinks after every convolution with a smaller matrix. To avoid shrinking and losing information in the corners of the input matrix, the input may be padded with zeroes or a certain number. The amount of padding to maintain size is derived from this formula: n + 2p - f + 1 = n. Here, 2p is used since padding one row and one column to keep symmetry results in two more rows and columns, one for each side.
+So,
+n + 2p - f + 1 = n
+->
+p = (f-1)/2
+
+- If f (the dimensions of the filter) is odd, you will need asymmetric padding. Also, an odd-valued filter has a centered position. That center is a useful reference for some situations. Using odd filters is a convention in computer vision.
+
+Strided Convolution
+- The movement of the filter is increased. Instead of shifting by one row and then one column, it shifts two or more rows and then two or more columns. The output dimensions are ((n + 2p - f)/s) + 1 where s is the "stride." If the fraction here is not an integer, round down, i.e. take the floor and bring it down to the nearest integer. The filter has to be fully contained by the input and the padding.
+
+Convolutions Over Volume
+- For images, the channels of the input and the filter have to match. When convoluting, multiply the input by the corresponding layer or channel in the filter. The result in the output is the total of the element-wise multiplications across all channels and across the length and width of the filter. The filters per channel or layer may be different to detect specific colors. The output will still be two-dimensional.
+
+- Multiple filters may be used by convolving them and stacking or appending the result matrices. The result will be (((n + 2p - f)/s) + 1) x (((n + 2p - f)/s) + 1) x c where c is the depth or number of channels of the input and of the filter. Using a stride of one and padding zero is equivalent to the base fomrula (n - f + 1 ).
+
+
 
