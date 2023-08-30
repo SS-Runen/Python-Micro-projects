@@ -316,6 +316,8 @@ What are the general rules or principles for finding matrix operations that are 
 
 - Some papers or books define convolution as mirroring the filter along the vertical and horizontal axes before applying it. The convolution described in many machine-learning literature is technically a cross-correlation, not a convolution according to signal processing or mathematics. A mathematical convolution is associative, i.e. (A * B) * C = A * (B * C).
 
+- The convolution operation may reduce the dimensions of the input. In the cases where it doesn't reduce input dimensions, it still reduces the possibility of over-fitting due to the high number of parameters to learn. This is a side-effect of slight information loss during the convolution.
+
 Padding
 - A possible problem with certain filters is that pixels on the edge may have diminished effect on the final result. This could reduce information gained. Next, the input shrinks after every convolution with a smaller matrix. To avoid shrinking and losing information in the corners of the input matrix, the input may be padded with zeroes or a certain number. The amount of padding to maintain size is derived from this formula: n + 2p - f + 1 = n. Here, 2p is used since padding one row and one column to keep symmetry results in two more rows and columns, one for each side.
 So,
@@ -332,6 +334,11 @@ Convolutions Over Volume
 - For images, the channels of the input and the filter have to match. When convoluting, multiply the input by the corresponding layer or channel in the filter. The result in the output is the total of the element-wise multiplications across all channels and across the length and width of the filter. The filters per channel or layer may be different to detect specific colors. The output will still be two-dimensional.
 
 - Multiple filters may be used by convolving them and stacking or appending the result matrices. The result will be (((n + 2p - f)/s) + 1) x (((n + 2p - f)/s) + 1) x c where c is the depth or number of channels of the input and of the filter. Using a stride of one and padding zero is equivalent to the base fomrula (n - f + 1 ).
+
+Pooling Layers
+- Pooling layers reduce the dimension of the input. They may also make the network more robust against overfitting by omitting some data, e.g. max-pooling. Reducing the data according to proper limits reduces noise.
+
+- Pooling algorithms have two common hyper-parameters: f and s. These are the filter size (f) and stride (s). In rare cases, the padding of a pooling layer is also used as a hyper-parameter. There are NO learnable parameters in a pooling layer.
 
 
 
