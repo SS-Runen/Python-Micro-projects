@@ -380,8 +380,15 @@ Sliding Windows
 Intersection over Union
 - The IOU is the conventional way to measure overlap between image boundaries. It takes the ratio of intersection (pixels or values present in both boundaries or sets) and divides by the union (unique elements present in either or both of the sets). This method may be used to measure bounding box accuracy. It may be used to remove image detections that overlap and are redundant with an arbitrary reference set/image boundary.
 
+Non-max suppression
+- If there are several boundaries or anchors that have high overlap, pick the window with the highest probability of containing any object as a center point. Remove windows or bounding boxes with a lower probability and high overlap with the center point.
+
+- Bounding boxes that do not meet a certain probability of holding an object should be removed before non-max suppression. A possible defect of this method is that two different objects with overlapping boundaries and high overlap might be removed. To prevent this, perform non-max suppression separately for different object classes.
+
 Anchor Boxes
 - Anchor boxes allow the model to make multiple boundary boxes for different objects with the same midpoint. If a person and a car have the same midpoint, the boundary could be too tall or too long without an anchor box. An anchor box increases the elements of the activation vector and gives separate outputs for each anchor box. The anchor box is a pre-defined shape typical to a certain class. This will allow the model to make different boundaries for a human and a car that share the same midpoint.
 
-- The anchor box shapes may be set manually or based on an algorithm, e.g. unsupervised K-means clustering.
+- The anchor box shapes may be set manually or based on an algorithm, e.g. unsupervised K-means clustering. To pick which anchor box is best suited to a certain object, use a metric like IOU.
+
+
 
