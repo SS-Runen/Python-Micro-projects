@@ -383,7 +383,7 @@ Content-based Filtering
 
 @@@
 Principal Component Analysis
-- Principal Component Analysis (PCA) is an unsupervised algorithm used to reduce the number of input features for a machine learning model. PCA may also reduce the number of features by detecting a new axes or engineered feature to represent two other features without losing information.
+- Principal Component Analysis (PCA) is an unsupervised algorithm used to reduce the number of input features for a machine learning model. PCA may reduce the number of features by detecting a new axis or engineered feature to represent two other features without losing information.
 
 - To perform PCA, the features have to be normalized to have a mean of zero. The features should also be scaled to avoid differences in value due to measurement scales. Usually, z-score normalization is used to prepare data for PCA.
 

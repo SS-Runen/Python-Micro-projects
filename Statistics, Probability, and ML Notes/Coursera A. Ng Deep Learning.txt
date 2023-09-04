@@ -312,6 +312,15 @@ Convolutional Neural Networks
 Question:
 What are the general rules or principles for finding matrix operations that are used as image filters in convolutional neural networks? E.g. per-element multiplication of an image by a three by three matrix with ones in the first column, zeroes in the second, and negative ones in the third.
 
+Convolutions Over Volume
+- The channels or depth of the input and the filter have to match. When convolving, multiply the input by the corresponding depth or channel in the filter. Next, take the sum of all the element-wise multiplications across all channels and across the length and width of the filter. That single number - i.e. the sum across all channels, rows, and columns - is one element in the activations or outputs. Shift the filter one column and repeat the process.
+
+- The filters per channel or depth may have different parameters to detect specific colors. The output will still be two-dimensional unless multiple filters are used.
+
+- Multiple filters may be used by convolving them and stacking or appending the result matrices. The result will be (((n + 2p - f)/s) + 1) x (((n + 2p - f)/s) + 1) x c where c is the number of filters. Using a stride of one and padding zero is equivalent to the base fomrula (n - f + 1 ).
+
+- If a filter's depth does not match the input, each layer will be applied to all the input values separately. In case the depth of the filter does not match the depth of the input, layers will function as if they are different filters.
+
 - The parameters of the matrix used to "convolve" the image may be set by hand or learned by the model. The convolution operation between the image and filter reduces the dimensions of the data but preserves certain relationships, such as edges or distinct differences in brightness in images. The result of a convolution between an n x n matrix and f x f filter will have the dimensions (n-f+1 ) x (n-f+1).
 
 - Some papers or books define convolution as mirroring the filter along the vertical and horizontal axes before applying it. The convolution described in much of machine-learning literature is technically a cross-correlation, not a convolution according to signal processing or mathematics. A mathematical convolution is associative, i.e. (A * B) * C = A * (B * C).
@@ -329,11 +338,6 @@ p = (f-1)/2
 
 Strided Convolution
 - The movement of the filter is increased. Instead of shifting by one row right to left and then one column top to bottom, it shifts two or more rows and then two or more columns. The output dimensions are ((n + 2p - f)/s) + 1 where s is the "stride." If the fraction here is not an integer, round down, i.e. take the floor and bring it down to the nearest integer. The filter has to be fully contained by the input and the padding.
-
-Convolutions Over Volume
-- The channels or depth of the input and the filter have to match. When convolving, multiply the input by the corresponding depth or channel in the filter. Next, take the sum of the element-wise multiplications across all channels and across the length and width of the filter. The filters per channel or depth may be different to detect specific colors. The output will still be two-dimensional unless multiple filters are used.
-
-- Multiple filters may be used by convolving them and stacking or appending the result matrices. The result will be (((n + 2p - f)/s) + 1) x (((n + 2p - f)/s) + 1) x c where c is the number of filters. Using a stride of one and padding zero is equivalent to the base fomrula (n - f + 1 ).
 
 Pooling Layers
 - Pooling layers reduce the dimension of the input. They may also make the network more robust against overfitting since they aggregate data, e.g. max-pooling. Reducing the data according to proper limits reduces noise.
@@ -362,5 +366,22 @@ Residual Neural Network/ResNet
 Inception Network
 - The Inception network appends the result of serveral filters and poolings depthwise. To reduce the layers needed for each filter, a one by one convolution is used before applying the filter or pooling. In some layers, a prediction is made using the activation function. The result is added to the stack. This has a regularizing effect.
 
+Mobile Net
+- Mobile Net arranges the convolutions in a way that reduces the number of operations. V1 uses a single filter to downsize the input. Next, it will apply one or more one by one filters on the reduced input. It manages to get similar performance for less computations.
 
+- Mobile Net V2 uses several one by one filters to increase the depth of the input before applying a single filter to downsize it. After downsizing, one or more one by one filters will be used. Mobile Net V2 also applies residuals. It takes the input before the first filter and adds it to the last output of the "bottleneck" block.
+
+@@@
+Detection Algorithms
+
+Sliding Windows
+- Converting fully-connected layers into convolutional layers removes the need to re-compute predictions for several windows. Instead, the filters and strides will be used to traverse the input. In the convolutional implementation, one forward propagation step will be used for all windows in the image. Fully connected layers would have been run once for every window. Since they are now convolutions, the windows will be calculated and returned as one matrix. This way, the forward and backward propagation steps will be done for all windows all at once instead of sequentially, one cycle per window.
+
+Intersection over Union
+- The IOU is the conventional way to measure overlap between image boundaries. It takes the ratio of intersection (pixels or values present in both boundaries or sets) and divides by the union (unique elements present in either or both of the sets). This method may be used to measure bounding box accuracy. It may be used to remove image detections that overlap and are redundant with an arbitrary reference set/image boundary.
+
+Anchor Boxes
+- Anchor boxes allow the model to make multiple boundary boxes for different objects with the same midpoint. If a person and a car have the same midpoint, the boundary could be too tall or too long without an anchor box. An anchor box increases the elements of the activation vector and gives separate outputs for each anchor box. The anchor box is a pre-defined shape typical to a certain class. This will allow the model to make different boundaries for a human and a car that share the same midpoint.
+
+- The anchor box shapes may be set manually or based on an algorithm, e.g. unsupervised K-means clustering.
 
