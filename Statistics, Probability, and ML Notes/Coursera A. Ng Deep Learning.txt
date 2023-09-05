@@ -390,5 +390,27 @@ Anchor Boxes
 
 - The anchor box shapes may be set manually or based on an algorithm, e.g. unsupervised K-means clustering. To pick which anchor box is best suited to a certain object, use a metric like IOU.
 
+Transpose Convolutions
+- There are many methods to expand or blow up input. This is one method. A filter will be placed on top of the output or, at least, with reference to the output. Take the element-wise product of the filter and the element in the first row and first column of the input. The resulting matrix should be placed with the matching corner in the first row and column of the output. If padding is used, the filter output should be placed in the padding. Output elements within the padding bounds are removed.
+
+-  After the filter output is placed in the output matrix, use the next element in the input. At the same time, shift the filter location on the output matrix according to the stride. Broadcast the current input element across the filter as before. In case of overlap between different filter outputs on the output matrix, add the overlapping values.
+
+- Be sure that the parameters and dimensions of the input and filter do not force the filter output out of bounds. The movement of the filter in the output should correspond to the movement and location of the focus in the input.
+
+U-Net Architecture
+- This transpose convolution is necessary for the U-Net architecture. The transpose convolution is necessary to match the dimensions of the output with the dimensions of the input. A U-Net is used for semantic segmentation of images, so each pixel or image region has to be classified individually.
+
+- The transposition of input in the U-Net architecture is combined with several residual blocks. This combines the previous input - i.e. the image or convolutions of the image - with the block output. The transposition of the convolution layers will retain some patterns that emerge from the convolution, e.g. edges or shapes. Adding the original image or convolutions to the output will overlay the transpoistion of the patterns with the original image or convolutions. The goal is to make the model learn parameters to classify pixels based on the original convolutions, the original image, and the patterns detected during feed-forward convolutions.
+
+Triplet Loss Function
+- The triplet loss function requires three images or inputs: an anchor, a positive (match) example, and a negative example (non-match). Loss:
+L = max(||f(A) - f(P)||^2 - ||f(A) - f(N)||^2 + α, 0)
+
+- Here, alpha (α) is a parameter for the required margin or difference. The function f encodes the image. The differences between the encoding of the positive example f(P) less the encoding of the anchor image f(A) should be as small as possible. The difference between the encoding of the anchor image f(A) and negative example f(N) should be as high as possible. If the difference is the same, the margin forces the loss to go above zero to stop the algorithm from treating all images as fifty-fifty matches.
+
+- It is required to choose triplets that are hard to solve. Similar images of different people are necessary to train the function in recognizing similar but different faces. For deployed facial recognition systems, the encoding of positive examples may be pre-computed. The model would only need to find a match.
+
+
+
 
 
