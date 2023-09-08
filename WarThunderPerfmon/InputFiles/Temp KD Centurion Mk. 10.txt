@@ -35,6 +35,17 @@ Poland two points in town
 
 KD records for maps on the avoidance list will be removed. This was implemented on Aug. 14, 2023, and applies to all vehicles.
 
+2023-09-07
+
+Middle East
+@k @T-54 (1949) @~1.1 @near-perp @0 @0
+@k @T-54 (1949) @~1 @Para
+
+Poland
+@k @IS-4M @~1.1 @Perp
+@k @ASU-85 @~1
+@k @BTR @~.8 @Perp @0 @0
+
 2023-08-30
 
 Fields of Normandy
