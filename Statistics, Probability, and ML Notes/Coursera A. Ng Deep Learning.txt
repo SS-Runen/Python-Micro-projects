@@ -410,7 +410,36 @@ L = max(||f(A) - f(P)||^2 - ||f(A) - f(N)||^2 + α, 0)
 
 - It is required to choose triplets that are hard to solve. Similar images of different people are necessary to train the function in recognizing similar but different faces. For deployed facial recognition systems, the encoding of positive examples may be pre-computed. The model would only need to find a match.
 
++++++++++++++++
+Sequence Models
 
+@@@
+Recurrent Neural Networks
+
+- To allow earlier words to influence the activation of later words, the activation array from the previous word will be included in the calculations for the next word. A dummy initiazliation value will be included when necessary. After processing the first word of the input and making a prediction on it, the model will take the activations and use them in calculating the activations of the next word. Each layer will have parameters for the previous activations and parameters for the current input word. In the illustrations and videos of A. Ng's Sequence Models - Recurrent Neural Network Model, the arrows from layer to layer indicate a change in time or input. The layer in question is the same thruought the video and slides.
+
+- The basic RNN described here stacks the results of Wax and Waa or Wa * [a, x]. The addition operation does not mean adding the matrices element to element.
+
+- Sequence generators and language models include the preceeding input in the information passed to the model in the next pass. After processing the first part of an input sequence and generating a prediction, the model is given all the preceeding values x[0, n-1] before processing the current x[n]. Generally, sequence generation requires a large dataset. Language models require a large corpus or body of text. Sequence models may be used to predict the chance of a certain tokenized element (e.g. a word) given a certain preceeding input set. Such a prediction requires that the tokenized elements are represented in a dictionary or vocabulary. Notes, words, and representations for unknown words and control characters have to be represented. One way is thru one-hot encoding.
+
+- Word-level language models are the norm, but character-based language models are an option. Character-level models use a vocabulary with characters instead of wrods. They avoid unknown characters or items missing from the vocabulary. They are resource-intensive though, and usually don't capture relationships that are separated by many words.
+
+- Exploding and vanishing gradients are possible defects for RNNs, especially vanishing gradients. Exploding gradients often result in NaN paramters or overflow errors due to large values. Gradient clipping and other regularization methods usually avoid this problem, but another solution is required for vanishing gradients. Vanishing gradients prevent the errors computed for earlier words from having a strong effect on the backpropagation step.
+
+Gated Recurrent Unit
+- A memory cell c will be used to hold the activation value of the current input. A candidate alternative, c̃, will be computed as well. The alternative will have its own bias and parameters. The alternative c̃ takes the current activation c and input x as parameters. A gate parameter (gamma) Γ will be calculated using its own learnable bias and parameters. The gate parameter is a value between zero and one that will be used to combine the values of c and c̃. Zero or one will either return c or replace c with c̃.
+
+- There are cases when a previous input (e.g. the subject of a spoken or written sentence) influences a distant section of the input. The encoded value of the previous input may be unable to influence related but distant inputs. For example, take the sentence "The cat, which ate fruits..., was full." The encoding of "cat" may not be able to shift the gradient and teach the model that "was" is singular. The middle phrase may dilute the influence of "cat/cats" on "was/were".
+
+Long Short Term Memory (LSTM)
+- An LSTM uses an update gate like the GRU. It has a separate "forget" gate that controls how much of the current activation value is retained. A Long Short Term Memory model may add the full values of c̃ and c. The LSTM has a third gate called the output gate. These gates all have separate learnable parameters and biases. The output gate determines the proportion of the final value of c (after processing it with c̃) is returned as the activation value.
+
+- An LSTM model may have a relevance gate, but the common version doesn't. The peephole variant of LSTMs includes the previous activation (c<t-1>) when calculating the values of the gates. There is no consensus on which is universally better between LSTMs and GRUs.
+
+Bi-directional Recurrent Neural Network (BRNN)
+- A bi-directional neural network processes input in two passes. The first pass processes input from left to right. The second pass processes input right to left and adds the new values to the forward activation functions. After the two passes, corresponding forward and backward predictions will be aggregated. Next, backpropagation will be done as normal. The graph of a BRNN is an acyclic graph.
+
+When RNNs are stacked or multi-layered, the first input will be pushed thru all the layers until a prediction is made. If it is a BRNN, the reverse pass is also completed before the next input element is processed. It is also possible to feed the output of the RNN to a normal neural network before processing the next input element.
 
 
 
