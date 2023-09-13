@@ -443,8 +443,42 @@ Bi-directional Recurrent Neural Network (BRNN)
 
 - When RNNs are stacked or multi-layered, the first input will be pushed thru all the layers until a prediction is made. In a BRNN, the backward pass will start after the entire input set (sentence, phrase, or paragraph) is fed forward. It is possible to feed the output of the RNN to a normal neural network.
 
+@@@
 Word Embeddings
 - Words may be represented using matrices of features. Usually, the features learned by a model that generates word embeddngs or encodings are hard to interpret. Still, these encodings can help describe the differences and similarities between words. Take word analogies as an example. The vectors between the pairs man-woman and king-queen will be similar. Those pairs would have different values but similar changes in value along different axes. This is because the arrangement, frequency, chance of occurance, and other quantifiable features can be learned by an encoder model. Since both word pairs are used in a similar way, their features or embeddings will also have some similarities. For example, they should have a similar chance of occuring after or in relation to pronouns like he, she, him, and her.
 
+- Word embeddings may be learned. A matrix may be used to represent vectors of word features. Each column or row is a vector of feature values. The rows or columns correspond to a fixed word dictionary. Assuming the words are represented using a one-hot vector corresponding to the word dtictionary, a one-hot encoding of a word O could be multiplied to a word embedding matrix E. The resulting sparse matrix would have the values of E corresponding to feature values of O. The values of E can be represented as learnable variables.
+
+- Visualizing word embeddings may show clusters or patterns among the features of certain words. However, word embeddings are not guaranteed to be human-interpretable. Despite the patterns present in word embeddings, the reason for such patterns may not always be inferred after all the calculations done to get the encodings/embeddings.
+
+- Large pre-trained language models can be modified as part of transfer learning to work using much smaller data sets. Networks trained on a large corpus may be transferred to a different but similar task. The embeddings and some earlier layers may also need to be canged in addition to later layers.
+
+- Analogies between words may be learned using similarity measures as cost functions, e.g. cosine similarity and the negative euclidean distance. A probabilistic model may be used to learn word sequences or the likelihood of a certain word given some input. The "context" - range of words used as reference - used as training input is a hyperparameter.
+
+Word2Vec
+- Word2Vec attempts to learn a matrix of embeddings E using a softmax final layer vs. the entire dictionary. It will adjust the feature vector (e) of a specific word to minimize the error when predicting P(t|c). P(t|c) is the probability of encountering a target word t within a context/range of words c. The disadvantage of this method is the slowness of softmax and its alternatives (e.g. heirarchical softmax, based on binary search).
+
+Negative Sampling
+- Negative sampling functions similarly to Word2Vec but reduces the number of alternative/negative probabilities in the softmax. It will take a certain positive example where the context is known to contain a target word. At random, other contexts will be selected at random. These contexts may be a single word in the dictionary. Given one positive example of context and several negative examples, the learning problem is now P(t|c,t) = sigmoid(E.transpose() * e<context>). For every word in the dictionary, Word2Vec computes a softmax vs. every other word in the dictionary. Negative sampling trains one positive example and an arbitrary amount of negative examples.
+
+- Negative sampling requires proper sampling of the negative examples. There has to be a balance between teaching the model using frequent words and some less-common and obscure words. The distribution must reflect actual use of the language's words.
+
+GloVe Vectors
+- GloVe (Global Vectors for word embeddings) optimizes by the summation:
+Σ_i,n_dictionary Σ_j,n_dictionary f(X_i,j) (O.transpose() * e_j + b_i + b_j - logX_i,j)
+
+Here,
+f(X_i,j) = Regularization term to set log 0 to zero instead of undefined.
+X_i,j = The number of times j appears within proximity of i. The proximity limit is called the "context of i."
+
+- GloVe takes the summation of the number of times each word appears within the context of every other word in the dictionary. It will adjust parameters of E so that E.tranpose() * e_j corresponds well to whether or not certain words appear close to each other.
+@@@
+
+Beam Search
+- Beam Search is an alternative to a greedy search of liekly words. A greedy search is likely to miss context that changes the probability of certain word mappings. If a certain word usually follows another, it may become the de-facto "best translation" even for certain sentences where the most frequent and most likely word isn't the best translation.
+
+- Beam search has a hyperparameter that determines how many of the most likely translations will be "remembered" and evaluated. For each of the words or encodings included in the "beam," beam search will pick a beam-sized set of likely next tokens. Finally, a beam-sized set of two-token sequences will be picked from the pairs.
+
+- At every step of the beam search, an instance of the network will be instantiated for each token in the beam.
 
 
