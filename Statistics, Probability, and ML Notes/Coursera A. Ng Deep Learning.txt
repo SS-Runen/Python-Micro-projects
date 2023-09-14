@@ -475,10 +475,15 @@ X_i,j = The number of times j appears within proximity of i. The proximity limit
 @@@
 
 Beam Search
-- Beam Search is an alternative to a greedy search of liekly words. A greedy search is likely to miss context that changes the probability of certain word mappings. If a certain word usually follows another, it may become the de-facto "best translation" even for certain sentences where the most frequent and most likely word isn't the best translation.
+- Beam Search is an alternative to a greedy search of likely words. A greedy search is likely to miss context that changes the probability of certain word mappings. If a certain word usually follows another, it may become the de-facto "best translation" even for certain sentences where the most frequent and most likely word isn't the best translation.
 
-- Beam search has a hyperparameter that determines how many of the most likely translations will be "remembered" and evaluated. For each of the words or encodings included in the "beam," beam search will pick a beam-sized set of likely next tokens. Finally, a beam-sized set of two-token sequences will be picked from the pairs.
+- Beam search has a hyperparameter that determines how many of the most likely translations will be "remembered" and evaluated. For each of the words or encodings included in the "beam," beam search will pick a beam-sized set of likely next tokens. Next, a beam-sized set of candidate next values will be picked for each of the pairs. The probability of each two-step-ahead pair will be evaluated. A beam-sized set of two-element sequences will be selected. At every step of the beam search, an instance of the network will be instantiated for each token in the beam.
 
-- At every step of the beam search, an instance of the network will be instantiated for each token in the beam.
+- To avoid numerical underflow, a beam search algorithm is usually taught to maximize the sum of logarithms of P(y<t>|x,y<1>,...y<t-1>). Beam search maximizes the product of probabilities Π (capital pi): Π_t=1,Ty P(y<t>|x,y<1>,...y<t-1>). Practically, take the sum of logarithms Σ (capital sigma) instead to avoid values that cannot be represented. Σ_y=1,Ty log P(y<t>|x,y<1>,...y<t-1>). The log (a.k.a appropriate exponent) of a non-zero base is higher the higher the target value or "argument."
+
+- A side-effect of maximizing the summation of logarithms is that longer sequences will get a lower probability because multiplying numbers less than one decreases overall value. The summation has to be normalized. One way is to take the average of the logarithms (e.g. multiply by 1 / Ty). A hyperparameter α may be used as an exponent to Ty. There is no theoretical proof this works, but most experiments show 1/Ty^α is a useful normalization term.
+
+- The cumulative probability of each possible sequence will be compted according to the probability summation function. For the current element in the sequence, a beam-sized set of candidate next steps will be chosen. For each of the candidates, more beam-sized sets of "grandchildren" will be selected. The probabilities of all these branches will be calculated. Based on that, A beam-sized set of the top sequences will be chosen for the current step. The cycle then repeats.
+
 
 
