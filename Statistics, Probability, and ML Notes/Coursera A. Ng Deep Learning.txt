@@ -472,6 +472,10 @@ f(X_i,j) = Regularization term to set log 0 to zero instead of undefined.
 X_i,j = The number of times j appears within proximity of i. The proximity limit is called the "context of i."
 
 - GloVe takes the summation of the number of times each word appears within the context of every other word in the dictionary. It will adjust parameters of E so that E.tranpose() * e_j corresponds well to whether or not certain words appear close to each other.
+
+Sentence Level and Higher-level Embeddings
+- Embedding a sentence or paragraph has the advantage of being able to calculate the context of all the words. In word-by-word embeddings, sentences with similar words but different meaning due to arrangement are better reflected by sentence level embeddings. "The kids play in the park" and "The play in the park was for kids" have a very different meaning. Word embeddings usually mark those sentences as being more similar than do sentence embeddings.
+
 @@@
 
 Beam Search
@@ -481,9 +485,22 @@ Beam Search
 
 - To avoid numerical underflow, a beam search algorithm is usually taught to maximize the sum of logarithms of P(y<t>|x,y<1>,...y<t-1>). Beam search maximizes the product of probabilities Π (capital pi): Π_t=1,Ty P(y<t>|x,y<1>,...y<t-1>). Practically, take the sum of logarithms Σ (capital sigma) instead to avoid values that cannot be represented. Σ_y=1,Ty log P(y<t>|x,y<1>,...y<t-1>). The log (a.k.a appropriate exponent) of a non-zero base is higher the higher the target value or "argument."
 
-- A side-effect of maximizing the summation of logarithms is that longer sequences will get a lower probability because multiplying numbers less than one decreases overall value. The summation has to be normalized. One way is to take the average of the logarithms (e.g. multiply by 1 / Ty). A hyperparameter α may be used as an exponent to Ty. There is no theoretical proof this works, but most experiments show 1/Ty^α is a useful normalization term.
+- A side-effect of maximizing the summation of logarithms is that longer sequences will get a lower probability because multiplying numbers less than one decreases overall value. The summation has to be normalized. One way is to take the average of the logarithms (e.g. multiply by 1 / Ty). A hyperparameter α ranging from zero to one may be used as an exponent to Ty. There is no theoretical proof this works, but most experiments show 1/Ty^α is a useful normalization term.
 
 - The cumulative probability of each possible sequence will be compted according to the probability summation function. For the current element in the sequence, a beam-sized set of candidate next steps will be chosen. For each of the candidates, more beam-sized sets of "grandchildren" will be selected. The probabilities of all these branches will be calculated. Based on that, A beam-sized set of the top sequences will be chosen for the current step. The cycle then repeats.
+
+- To check whether the beam search stage or RNN stage is at fault, check the cumulative probability of the ground truth label y* and the output ŷ. If the probability of y* is higher, the RNN is probably computing the probability correctly but beam search is not maximizing the P(ŷ|x,y_n...). If P(y* |x) >= P(ŷ|x), the RNN needs to be more accurate. Check how many errors are due to a bad output from the RNN and how many are due to a failure to find the best ŷ during beam search.
+
+- If the loss or cost function includes length normalization, evaluate P(y*) and P(ŷ) using a function that takes the normalization term into account. Special considerations have to be made when evaluating a beam search that uses length normalization.
+
+Bleu Score
+- This measures accuracy by checking how many times certain words and combinations of words in a model output actually appear in the ground truth label or labels. The number of times a certain word or word combination may be counted is limited to the number of times such a set appears in the labels. For example, "the cat" may only be counted once for a label "The cat is fat." This avoids giving a high score to a translation like "The cat is the cat." The ratio of clip counts (number of times the set appears in the label) to the counts (number of times the set appears in the output) is taken per set. Several sets of words may be used to get a Bleu Score. The score will be averaged.  There is also a brevity penalty that reduces the score of a translation the shorter it is compared to the label. This avoids the side-effect of short sentences having higher computed probabilities due to how numbers work.
+
+Attention Model
+- An attention model encourages a model to give greater weight to tokens that are at and near the current input. An RNN or BRNN will be used to compute features or encodings of the input sequence. After the entire sequence is processed, the resulting sequence of encodings will be processed by the attention model. The elements are processed sequentially. For each input element, an attention parameter α (alpha) is assigned to all the encodings. Based on α, a "context" is calculated and then used to generate an activation to predict a translation. When the next input element, i.e. encoding, is processed, the previous output is used along with a new context to generate a succeeding prediction.
+
+Connectionist Temporal Classification (CTC) Cost Function for Speech Recognition
+- The CTC is used for audio processing problems. The output of audio may be very long since the audio is sampled at a very high rate, e.g. several times a second. The output may have blanks where there is no meaningful audio. It will also have long repeated sequences of letters for stretches of audio lasting a few milliseconds that make up one letter. CTC collapses these repeated letters and blanks into human-readable transcripts. It may also be used in trigger-word detection. In trigger-word detection, the entire audio sequence that holds the trigger word is labelled as one or positive to counter the large number of non-trigger audio sequences.
 
 
 
