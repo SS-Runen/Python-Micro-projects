@@ -35,16 +35,41 @@ Poland two points in town
 
 KD records for maps on the avoidance list will be removed. This was implemented on Aug. 14, 2023, and applies to all vehicles.
 
+2023-09-15
+
+Fire Arc
+@k @T-54 (1949) @1.22 @Perp @0 @0
+@k @T-54 (1947) @1.22 @diag @-2 @0
+
+Second Battle of El Alamein #1
+@k @T-54 (1947) @.88 @diag @0 @0
+@k @2S3M @2.4 @Diag @0 @0
+@k @T-54 (1949) @2.4 @Para @0 @0
+@k @IS-3 @1.46 @Para @0 @0
+
+Fields of Normandy
+@k @T-54 (1949) @~.2 @Perp @0 @0
+@k @T-54 (1949) @~.1 @Perp @0 @0
+@k @T-44-1000 @~.08 @Diag
+
+Second Battle of El Alamein #1
+@k @T-54 (1949) @1.47 @Para @0 @0
+
+Pradesh #1
+@k @T-44-100 @1.09 @near-para @6 @0
+@k @T-44-100 @1.77 @Diag @-4 @0
+
+2023-09-13
+
+Second Battle of El Alamein #1
+@k @T-54 (1949) @1.04 @Para @0 @0
+@k @WZ305 @1.12 @Para @48 @0
+
 2023-09-07
 
 Middle East
 @k @T-54 (1949) @~1.1 @near-perp @0 @0
 @k @T-54 (1949) @~1 @Para
-
-Poland
-@k @IS-4M @~1.1 @Perp
-@k @ASU-85 @~1
-@k @BTR @~.8 @Perp @0 @0
 
 2023-08-30
 
