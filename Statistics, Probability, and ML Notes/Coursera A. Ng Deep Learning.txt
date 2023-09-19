@@ -483,7 +483,7 @@ Beam Search
 
 - Beam search has a hyperparameter that determines how many of the most likely translations will be "remembered" and evaluated. For each of the words or encodings included in the "beam," beam search will pick a beam-sized set of likely next tokens. Next, a beam-sized set of candidate next values will be picked for each of the pairs. The probability of each two-step-ahead pair will be evaluated. A beam-sized set of two-element sequences will be selected. At every step of the beam search, an instance of the network will be instantiated for each token in the beam.
 
-- To avoid numerical underflow, a beam search algorithm is usually taught to maximize the sum of logarithms of P(y<t>|x,y<1>,...y<t-1>). Beam search maximizes the product of probabilities Π (capital pi): Π_t=1,Ty P(y<t>|x,y<1>,...y<t-1>). Practically, take the sum of logarithms Σ (capital sigma) instead to avoid values that cannot be represented. Σ_y=1,Ty log P(y<t>|x,y<1>,...y<t-1>). The log (a.k.a appropriate exponent) of a non-zero base is higher the higher the target value or "argument."
+- To avoid numerical underflow, a beam search algorithm is usually taught to maximize the sum of logarithms of P(y<t>|x,y<1>,...y<t-1>). Beam search maximizes the product of probabilities Π (capital pi): Π_t=1,Ty P(y<t>|x,y<1>,...y<t-1>). Practically, take the sum Σ (capital sigma) of logarithms instead to avoid values that cannot be represented. Σ_y=1,Ty log P(y<t>|x,y<1>,...y<t-1>). The log (a.k.a appropriate exponent) of a non-zero base is higher the higher the target value or "argument."
 
 - A side-effect of maximizing the summation of logarithms is that longer sequences will get a lower probability because multiplying numbers less than one decreases overall value. The summation has to be normalized. One way is to take the average of the logarithms (e.g. multiply by 1 / Ty). A hyperparameter α ranging from zero to one may be used as an exponent to Ty. There is no theoretical proof this works, but most experiments show 1/Ty^α is a useful normalization term.
 
@@ -497,10 +497,44 @@ Bleu Score
 - This measures accuracy by checking how many times certain words and combinations of words in a model output actually appear in the ground truth label or labels. The number of times a certain word or word combination may be counted is limited to the number of times such a set appears in the labels. For example, "the cat" may only be counted once for a label "The cat is fat." This avoids giving a high score to a translation like "The cat is the cat." The ratio of clip counts (number of times the set appears in the label) to the counts (number of times the set appears in the output) is taken per set. Several sets of words may be used to get a Bleu Score. The score will be averaged.  There is also a brevity penalty that reduces the score of a translation the shorter it is compared to the label. This avoids the side-effect of short sentences having higher computed probabilities due to how numbers work.
 
 Attention Model
-- An attention model encourages a model to give greater weight to tokens that are at and near the current input. An RNN or BRNN will be used to compute features or encodings of the input sequence. After the entire sequence is processed, the resulting sequence of encodings will be processed by the attention model. The elements are processed sequentially. For each input element, an attention parameter α (alpha) is assigned to all the encodings. Based on α, a "context" is calculated and then used to generate an activation to predict a translation. When the next input element, i.e. encoding, is processed, the previous output is used along with a new context to generate a succeeding prediction.
+- An attention model encourages a model to give greater weight to tokens that are at and near the current input. An RNN or BRNN will be used to compute features or encodings of the input sequence. After the entire sequence is processed, the resulting sequence of encodings will be processed by the attention model. The elements are processed sequentially. An attention parameter α (alpha) will be used to calculate the context for all tokens in the sequence. For each input element, a "context" is calculated using α and other tokens/encodings in the sequence. The context is used to generate an activation to predict a translation. When the next input element, i.e. encoding, is processed, the previous output is used along with a new context to generate a succeeding prediction. The attention parameter α has to be the same for the entire sequence.
 
 Connectionist Temporal Classification (CTC) Cost Function for Speech Recognition
 - The CTC is used for audio processing problems. The output of audio may be very long since the audio is sampled at a very high rate, e.g. several times a second. The output may have blanks where there is no meaningful audio. It will also have long repeated sequences of letters for stretches of audio lasting a few milliseconds that make up one letter. CTC collapses these repeated letters and blanks into human-readable transcripts. It may also be used in trigger-word detection. In trigger-word detection, the entire audio sequence that holds the trigger word is labelled as one or positive to counter the large number of non-trigger audio sequences.
+
+@@@
+Transformers
+
+Self-attention
+- Calculate the attention matrix of the current token:
+A(q, K, V) = Σ_i ((exp(q*k<i>) / Σ_j exp(q*k<j>))*v<i>)
+Here:
+q (query), K (key), and V (value) are matrices computed using learnable weights. Each word or token in the sequence will be assigned a different set of W * q, W * k, and W * v matrices. The matrix A of the current token A<t> will be calculated relative to its own set of parameters and vectors - W * q, W * k, and W * v - and the matrices K and V, which are the computed W*k and W*v vectors of other tokens in the sequence.
+
+- A<t> will be computed as the soft-max of A(q, K, V)<t> vs all other tokens in the sequence, Σ_j A(q, K, V)<0,..j>. A of the current token may also be represented as A(q<t>, K, V). Take note that matrix multiplications are NOT commutative. The result of matrices A * B will be different from B * A. The resulting A<t> here will be a matrix of ratios. In each each row or column vector, the larger values will result from high exp(q*k<i>) results.
+
+- A_1,...An will be computed in parallel for all tokens in the input of a transformer network. One advantage of this process is that A is not a fixed word embedding. The representation/encoding A of a token will not be based on a large corpus. Based on the sequence currently being processed, the model will generate a representation for the token.
+
+- There is an alternative notation in literature for calculating the self-attention equation/matrix A of the current token. In the equation below, the denominator term is used to scale the dot product to prevent an explosion.
+A(Q, K, V) = softmax(Q*K.transpose() / sqrt(d_k))V
+
+Multi-head Attention
+- In Multihead(Q, K, V), several instances of A(Q, K, V) will be run simultaneously for the current token vs. all other tokens in the sequence. The heads are a hyper-parameter. The concatenation of the results from the heads will be used to compute the output of the multi-head attention equation. The parameter matrices W are different for each head.
+
+Multihead(Q, K, V) = concat(A<head_1,...head_n>) * W_o
+where:
+A<head_n> = Attention(W_i*Q, W_i*K, W_i*V)
+
+- For the full Transformer network, the multi-head step will be looped during the encoding and decoding stages. The convention is six times. After encoding, the Q, K, and V values of the token will be computed. Next, the Q, K, and V values of the previous token will be added. The decoder step also loops.
+
+- The position of a word is also added to enrich context. The vector encoding the token position will be added directly to the input vector before starting the encoding loop.
+PE(pos, 2i) = sin(pos / 10000 * (2i/d))
+
+PE(pos, 2i + 1) = cos(pos / 10000 * (2i/d))
+in both:
+pos = Numeric position of the current token in the sequence.
+i = Current position being calculated for the PE vector, 0 - PE.length, usually 0-4.
+These will be represented as vectors. By convention, they are 4-dimensional vectors.
 
 
 
