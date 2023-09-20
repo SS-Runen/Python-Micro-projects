@@ -515,9 +515,9 @@ Self-attention
 - Calculate the attention matrix of the current token:
 A(q, K, V) = Σ_i ((exp(q*k<i>) / Σ_j exp(q*k<j>))*v<i>)
 Here:
-q (query), K (key), and V (value) are matrices computed using learnable weights. Each word or token in the sequence will be assigned a different set of W * q, W * k, and W * v matrices. The matrix A of the current token A<t> will be calculated relative to its own set of parameters and vectors - W * q, W * k, and W * v - and the matrices K and V, which are the computed W*k and W*v vectors of other tokens in the sequence.
+q (query), K (key), and V (value) are matrices computed using learnable weights. Each word or token in the sequence will be assigned a different set of W * q, W * k, and W * v matrices. The matrix A of the current token A<t> will be calculated relative to its own set of parameters and vectors - W * q, W * k, and W * v - and the matrices K and V, which are the computed W*k and W*v vectors of other tokens in the sequence. Here, q, k, and v are representations/tokenized encodings of each word. When embedding, it is the convention to have q = k = v, i.e. the tokenized representation of a sequence is the same for the W_q, W_k, and W_v matrices. These encodings multiplied to W_q, Q_k, and W_v will result in Q, K, and V matrices for each word.
 
-- A<t> will be computed as the soft-max of A(q, K, V)<t> vs all other tokens in the sequence, Σ_j A(q, K, V)<0,..j>. A of the current token may also be represented as A(q<t>, K, V). Take note that matrix multiplications are NOT commutative. The result of matrices A * B will be different from B * A. The resulting A<t> here will be a matrix of ratios. In each each row or column vector, the larger values will result from high exp(q*k<i>) results.
+- A<t> will be computed as the soft-max of A(q, K, V)<t> vs all other tokens in the sequence, Σ_j A(q, K, V)<0,..j>. A of the current token may also be represented as A(q<t>, K, V). Take note that matrix multiplications are NOT commutative. The result of matrices A * B will be different from B * A. The resulting A<t> here will be a matrix of ratios. The softmax and A(q, K, V) computations will guarantee that information from all words in the sequence will influence A<t>, the matrix representation of the current token.
 
 - A_1,...An will be computed in parallel for all tokens in the input of a transformer network. One advantage of this process is that A is not a fixed word embedding. The representation/encoding A of a token will not be based on a large corpus. Based on the sequence currently being processed, the model will generate a representation for the token.
 
@@ -525,29 +525,29 @@ q (query), K (key), and V (value) are matrices computed using learnable weights.
 A(Q, K, V) = softmax(Q*K.transpose() / sqrt(d_k))V
 
 Multi-head Attention
-- In Multihead(Q, K, V), several instances of A(Q, K, V) will be run simultaneously for the current token vs. all other tokens in the sequence. The number of heads is a hyper-parameter. The concatenation of the results from the heads will be used to compute the output of the multi-head attention equation. The parameter matrices W are different for each head.
+- In Multihead(Q, K, V), several instances of A(Q, K, V) will be run simultaneously for the current token vs. all other tokens in the sequence. The number of heads is a hyper-parameter. The concatenation of the results from the heads will be used to compute the output of the multi-head attention equation. The parameter matrices W are different for each head. Each head has different parameters W for each Q, K, and V. The goal is to have different versions of the Q, K, and V matrices per head.
 
 Multihead(Q, K, V) = concat(A<head_1,...head_n>) * W_o
 where:
 A<head_n> = Attention(W_i*Q, W_i*K, W_i*V)
 
-- The full transformer network has separate encoding and decoding stages. The input sentence is turned into a basic embedding and then passed to the encoder. During encoding, the Q, K, and V values of all the tokens will be computed. First, a multi-head attention calculation will be performed on the input tokens. The results will be passed to a feed-forward neural network. The encoder will be looped N times. Here, N is a hyper parameter. After the encoding stage runs N times, the results will be passed to the decoder. In the decoder, the start-of-sentence token will be fed in at the beginning. The Q matrix will be calculated by the first multi-head block of the decoder based on the <SOS> token. In the next block, the Q matrix of the first decoder block will be processed with the K and V matrices from the encoder in another multi-head attention layer. The decoder will feed the result to a feed-forward neural network. The decoder will also be looped N times. Finally, the decoder will output the next token after <SOS> using a Linear layer with a Softmax activation to predict a translation. This output translation will be passed back into the beginning of the decoder block. The decoding cycle will repeat until the end-of-sentence <EOS> token is reached.
+- The full transformer network has separate encoding and decoding stages. The input sequence is turned into a basic vector encoding and then passed to the encoder stage. The encoding should include the position of the token in the sequence. In the encoding stage, the Q, K, and V values of all the tokens will be computed. First, a multi-head attention calculation will be performed for each of the input tokens. The results will be passed to a feed-forward neural network. The encoder will be looped N times, with the output being passed back in after the first iteration. N is a hyper parameter. After the encoding stage runs N times, the results will be passed to the decoder. In the decoder, the start-of-sentence token will be fed in at the beginning. The Q matrix will be calculated by the first multi-head block of the decoder based on the start-of-sentence (<SOS>) token. In the next block, the Q matrix of the first decoder block will be processed with the K and V matrices from the encoder in another multi-head attention layer. The decoder will feed the result to a feed-forward neural network. The decoder will also be looped N times. Finally, the decoder will output the next token after <SOS> using a linear layer with a softmax activation to predict a translation. This output translation will be passed back into the beginning of the decoder block so that the next token can be predicted. The decoding cycle will repeat until the end-of-sentence <EOS> token is reached.
 
-- In the decoding stage, the true or correct next token is hidden from the decoder to prevent information leakage. While a certain token is being processed, the correct tokens after it are hidden. The correct previous tokens may also be provided during training. This mechanism is referred to in the paper as "masked multi-headed attention."
+- In the decoding stage, the true or correct next token is hidden from the decoder to prevent information leakage. While a certain token is being processed, the correct tokens after it are hidden. The correct previous tokens may also be provided during training. Hiding the correct future tokens is referred to in the paper as "masked multi-headed attention."
 
 - The position of a word is also added to enrich context. The vector encoding the token position will be added directly to the input vector before starting the encoding loop.
 PE(pos, 2i) = sin(pos / 10000 * (2i/d))
-
+and
 PE(pos, 2i + 1) = cos(pos / 10000 * (2i/d))
 in both:
 pos = Numeric position of the current token in the sequence.
-i = Current position being calculated for the PE vector, 0 - PE.length, usually 0-4.
-These will be represented as vectors. By convention, they are 4-dimensional vectors.
+i = Current position being calculated for the PE vector, 0 - PE.length, depends on network shape.
+These will be represented as vectors.
 
 - After every multi-head and neural network block, residuals will be added and normalization will be run in an "Add[ition] & Norm[alization]" layer. This has an effect similar to batch normalizaion. It makes gradient descent smoother.
 
 @@@
-Transformer Network Architecture According to "Attention is All You Need"
+Transformer Network Encoder and Decoder Architecture According to "Attention is All You Need"
 - Here, the encoder maps an input sequence of symbol representations (x1 , ..., xn ) to a sequence
 of continuous representations z = (z1 , ..., zn ). Given z, the decoder then generates an output
 sequence (y1 , ..., ym ) of symbols one element at a time. At each step the model is auto-regressive
