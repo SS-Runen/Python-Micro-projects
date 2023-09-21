@@ -1,20 +1,21 @@
 ++++++++++++++++++
 General Procedures
 
--- Procedure When There are Too Many Missing Values
+- - Procedure When There are Too Many Missing Values
 - Run a simulation that includes a sample size value
 - When operating on percentages without any unit change (e.g. percentage to decimal), keep the unit symbol, as in 20% * 0.05 when getting 5% of 20% and expressing the final answer in percentage (1%).
 - When possible, use 0 (zero) as the replacement or stand-in value for variables you assume to be the same or insignificant. When certain values are not given but are said to be equal, zero should be their default value.
 
--- Interpreting Questions and Fitting to Formulas
+- - Interpreting Questions and Fitting to Formulas
 - Check for "domain knowledge" or other circumstances that could change the values or formulas you need.
+- Verify if the number of possible outcomes is too high or the problem is too complex for a case-by-case evaluation. If it is, use formulas instead.
 - Run a simulation of worded problems and match the formula and values with steps or actions where possible.
 - Review your work.
 
--- Before a break, check the new notes made using GitHub Desktop while reviewing the video or activity.
--- Symbols may be searched for and copied from Wumbo.net:
+- Before a break, check the new notes made using GitHub Desktop while reviewing the video or activity.
+- Symbols may be searched for and copied from Wumbo.net:
 https://wumbo.net/symbols/
--- To see the function prameters of a Google Sheet formula, click the question mark tooltip. It is usually on the left side of the cell.
+- To see the function prameters of a Google Sheet formula, click the question mark tooltip. It is usually on the left side of the cell.
 
 ++++
 Data
@@ -134,9 +135,17 @@ Multiplication Rule for Independent Events - If A and B are independent, P (A �
 
 Multiplication Rule for Dependent Events - Where event A is dependent on B, i.e. B -> A, P(A|B) = P(A) * P(B|A). This may be rephrased as the probability of A given that B has occurred. The formula is equivalent to: P(A|B) = P(A ∩ B) / P(B). From that formula, P(A ∩ B) = P(A|B) * P(B).
 
-Law of Total Probability - If A is the union of a finite number of events (B1 U B2 U Bn...), P(A) = (P(A|B1) * P(B)) + (P(A|B2) * P(B2)) +...
+Law of Total Probability - If A is the union of a finite number of events (B1 U B2 U Bn...), P(A) = (P(A|B1) * P(B1)) + (P(A|B2) * P(B2)) +...
 
 Expected Outcome = The expected numerical result E of an experiment for an event A. Denoted as E(A). For categorical results, E(A) = P(A) * n, where n is the number of trials performed.
+
+Complement of an Event - The complement of an event is the mutually exclusive alternative to the event. E.g. in a coin toss, the complement of heads is tails. There is no way to get both heads and tails in a coin toss, hence the phrase "mutually exclusive alternative." P(A') = 1 - P(A) where A' is P(~A).
+
+Disjoint Events - Events are called disjoint when they are mutually exclusive.
+
+Sum of Probabilities for Joint Events - If A and B are joint/non-mutually-exclusive events:
+P(A U B) = (P(A) + P(B)) - P(A ∩ B)
+* When calculating the cumulative or sum of probabilities of joint events, make sure to avoid double-counting. Given events that are dependent on each other, P(A|B) and P(B|A), it is impossible to tell which elements of P(A|B) are also elements of P(B|A). In other words, it is impossible to determine the intersection (∩) set of joint events P(A ∩ B) using only P(A|B) and P(B|A). A and B are different sample sets.
 
 - Conditional Probability
 
@@ -146,11 +155,11 @@ The probability of B given A, i.e. P(B) if A has happened:
 P(B|A) = P(B ∩ A) / P(A)
 ~ The probability of B given A is equal to the probability of B intersection A divided by the probability of A.
 
-The probability of A given B, i.e. P(B) happening if A has happened/will happen:
+The probability of A given B, i.e. P(A) happening if it depends on B:
 P(A|B) = P(B ∩ A) / P(B)
-~ The probability of A given B is equal to the probability of A intersection B divided by the probability of B.
+~ The probability of A given B is equal to the intersection of P(A) and P(B) divided by the probability of B.
 
-* The probability of the event "taken for granted" or assumed to happen will be the denominator of the probability of A intersection B. To put the equation in words, the probability of A given B is the subset of P(B) where P(A) is also true. Out of the target outcomes P(B), count the number of times where P(A) is true and P(B) is true, hence P(A|B) = P(A ∪ B) / P(B)
+* The probability of the event "taken for granted" or assumed to happen will be the denominator of the probability of A intersection B. To put the equation in words, the probability of A given B is the subset of P(B) where P(A) is also true. Out of the target outcomes P(B), count the number of times where P(A) is true when P(B) is true, hence P(A|B) = P(A ∪ B) / P(B)
 
 * In a Bernoulli Trial, there are only two possible outcomes that are mutually exclusive. It is convention to label them as success and failure.
 
