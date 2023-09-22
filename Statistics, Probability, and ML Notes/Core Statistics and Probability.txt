@@ -147,19 +147,33 @@ Sum of Probabilities for Joint Events - If A and B are joint/non-mutually-exclus
 P(A U B) = (P(A) + P(B)) - P(A ∩ B)
 * When calculating the cumulative or sum of probabilities of joint events, make sure to avoid double-counting. Given events that are dependent on each other, P(A|B) and P(B|A), it is impossible to tell which elements of P(A|B) are also elements of P(B|A). In other words, it is impossible to determine the intersection (∩) set of joint events P(A ∩ B) using only P(A|B) and P(B|A). A and B are different sample sets.
 
+General Product Rule for Probability
+P(A ∩ B) = P(A) * P(B|A)
+e.g.
+Independent Coin Flips:
+P(A ∩ B) = 0.5 * 0.5 = 0.25
+Dependent Events:
+P(A) = 0.5, P(B|A) = 0.1 (P(B) given A has happened):
+P(A ∩ B) = P(0.5) * P(B|A)
+Dependent Events:
+P(A ∩ B) if P(A) = 0.5, P(B) = 0.1 in general, and B depends on A:
+NOT ENOUGH INFORMATION, requires P(A|B) for Baye's Theorem or P(B|A) to be known.
+
 - Conditional Probability
 
 -- For dependent events A and B
 
-The probability of B given A, i.e. P(B) if A has happened:
+The probability of B given A, i.e. P(B) if A must happen or is taken for granted and B depends on A:
 P(B|A) = P(B ∩ A) / P(A)
-~ The probability of B given A is equal to the probability of B intersection A divided by the probability of A.
+- The probability of B given A is equal to the intersection (∩) of probability of B and probability of A divided by the probability of A.
 
 The probability of A given B, i.e. P(A) happening if it depends on B:
 P(A|B) = P(B ∩ A) / P(B)
-~ The probability of A given B is equal to the intersection of P(A) and P(B) divided by the probability of B.
+- The probability of A given B is equal to the intersection of P(A) and P(B) divided by the probability of B.
 
-* The probability of the event "taken for granted" or assumed to happen will be the denominator of the probability of A intersection B. To put the equation in words, the probability of A given B is the subset of P(B) where P(A) is also true. Out of the target outcomes P(B), count the number of times where P(A) is true when P(B) is true, hence P(A|B) = P(A ∪ B) / P(B)
+* The probability of the event that must happen will be the denominator of the probability of A intersection B. To put the equation in words, the probability of A given B is the subset of P(B) where P(A) is also true. Out of the target outcomes P(B), count the number of times where P(A) is true when P(B) is true, hence P(A|B) = P(A ∪ B) / P(B)
+
+* If P(A|B) are independent and B is given, "taken for granted," or assumed to have happened already, P(A|B) = P(A).
 
 * In a Bernoulli Trial, there are only two possible outcomes that are mutually exclusive. It is convention to label them as success and failure.
 
@@ -171,16 +185,26 @@ P(A) != P(A|B) ~ dependent
 -- Because independent events do not affect each others probability, the intersection of independent events A and B should equal the probability of A multiplied to the probability of B.
 P (A ∩ B) = P(A) * P(B) ~ independent
 
-- Baye's Theorem
+@@@
+Bayes Theorem and Naive Bayes
+Formula Variant:
 P(B|A) = P(A|B)*P(B) / P(A)
-The probability of B given A is:
-The probability of A given B/the subset of B where A P(A|B) multiplied by the probability of B P(B) all over/for every probability of A (.../P(A)).
-In probability, division usually removes the divisor probability from the dividend probability.
 
--- The order of probabilities in an intersection are interchangeable. P(A ∪ B) = P(B ∪ A). P(B ∪ A) can also be re-written as P(B | A)*P(A). Thus, rewriting the formula for P(A | B) can yield Baye's Theorem.
-P(A | B) = P(A ∪ B) / P(B)
-P(A | B) = P(B ∪ A) / P(B)
-P(A | B) = (P(B | A) * P(A)) / P(B)
+- The probability of B given A is:
+The probability of A given B - the subset of B where A is true, P(A|B) - multiplied by the probability of B - P(B) - all over/for every probability of A, P(A). In probability, division removes the divisor probability from the dividend probability.
+- The order of probabilities in an intersection are interchangeable. P(A ∪ B) = P(B ∪ A). P(B ∪ A) can also be re-written as P(B | A)*P(A). Thus, rewriting the formula for P(A|B) can yield Baye's Theorem.
+P(A | B) => P(A ∪ B) / P(B)
+P(A | B) => P(B ∪ A) / P(B)
+P(A | B) => (P(B|A) * P(A)) / P(B)
+
+Bayes Theorem is equivalent to:
+P(A|B) = P(A) * P(B|A) / ((P(A) * P(B|A)) + (P(A') * P(B|A')))
+- The denominator term is a representation of all P(B), i.e. the subset of B where A and the subset of B where A'. The numerator represents the probability or subset of A out of B where A was true, i.e. A out of/given A where B was true. The basic principle of probability is still kept: find the ratio of target outcomes vs. all possible outcomes given your problem definition.
+
+Naive Bayes
+- In naive Bayes, the events A and B are calculated as if they are independent, i.e. A and B are naively assumed to be independent. This changes the calculation of P(A|B) to P(A) * P(B). This change changes the criteria for a success case from P(A) * P(B|A) to P(A) * P(B) * P(A). In other words, treating the different restrictions as independent increases the set of target outcomes.
+
+@@@
 
 - Functions of Random Variables
 Given that the function expected value (μ) = b * X + a where a is a constant, and X is a random variable, μ is a linear equation. The equation standard deviation can be calculated by multiplying the absolute value of the equation's slope and the SD of X:
