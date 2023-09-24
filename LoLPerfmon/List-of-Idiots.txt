@@ -118,6 +118,8 @@ Yenii - This player went AFK in time for a consecutive enemy baron and dragon.
 
 The KungFu Tai - This player shoed bot-like behaviour: firing very quick W's with no lead at all but having very quick Q and auto combos. Fed at least five kills early game by going into a Gwen. Kept splitting away from objectives without TP or picking fights without numbers advantage.
 
+Mystic Alchemist - As Sivir, this player kept taking buff camps even after my smite upgrade. Slow response to pings, especially a free baron that we lost after they died near dragon.
+
 -------------
 Low Priority:
 

@@ -35,6 +35,27 @@ Poland two points in town
 
 KD records for maps on the avoidance list will be removed. This was implemented on Aug. 14, 2023, and applies to all vehicles.
 
+2023-09-23
+
+Mozdok
+@k @PT-76B @.66 @Diag @6 @0
+@k @SU-100P @1.33 @Diag @0 @0
+@k @IS-4M @2.11 @Diag @1 @0
+@k @M53/59 @.1 @Diag @0 @0
+@k @T-54 (1949) @2.14 @Diag @0 @0
+
+Mistake: Late change of position for better angle.
+Pradesh #2
+@k @PT-76B @2.04, 2.04 @Perp, perp @23, 0 @0, 0
+@k @T-54 (1949) @2.03, 2.03 @Perp, perp @2, 0 @0, 0
+@k @IS-3 @1.75 @diag @24 @0
+@k @PT-76B @1.68 @Near-para @0 @0
+
+Sands of Sinai
+@k @T-44-100 @2.28 @Perp @56 @0
+@k @T-54 (1949) @2.32 @near-perp @0 @0
+@kb @IS-4M @.74 @Para @0 @0
+
 2023-09-15
 
 Fire Arc
@@ -46,11 +67,6 @@ Second Battle of El Alamein #1
 @k @2S3M @2.4 @Diag @0 @0
 @k @T-54 (1949) @2.4 @Para @0 @0
 @k @IS-3 @1.46 @Para @0 @0
-
-Fields of Normandy
-@k @T-54 (1949) @~.2 @Perp @0 @0
-@k @T-54 (1949) @~.1 @Perp @0 @0
-@k @T-44-1000 @~.08 @Diag
 
 Second Battle of El Alamein #1
 @k @T-54 (1949) @1.47 @Para @0 @0
@@ -64,22 +80,6 @@ Pradesh #1
 Second Battle of El Alamein #1
 @k @T-54 (1949) @1.04 @Para @0 @0
 @k @WZ305 @1.12 @Para @48 @0
-
-2023-09-07
-
-Middle East
-@k @T-54 (1949) @~1.1 @near-perp @0 @0
-@k @T-54 (1949) @~1 @Para
-
-2023-08-30
-
-Fields of Normandy
-@k @T-54 (1949) @~.7 @Near-para @0 @0
-@k @PT-76-57 @~.6 @near-perp
-@k @T-44-100 @~.03 @Near-perp @0 @0
-@k @T-44-100 @~.03 @Near-para
-@k @T-44-100 @~.2 @Para
-@kb @T-44-100 @~.2 @Near-perp @0 @0
 
 2023-08-26
 
