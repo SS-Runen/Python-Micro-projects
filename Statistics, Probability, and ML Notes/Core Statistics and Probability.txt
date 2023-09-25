@@ -2,15 +2,15 @@
 General Procedures
 
 - - Procedure When There are Too Many Missing Values
-- Run a simulation that includes a sample size value
-- When operating on percentages without any unit change (e.g. percentage to decimal), keep the unit symbol, as in 20% * 0.05 when getting 5% of 20% and expressing the final answer in percentage (1%).
-- When possible, use 0 (zero) as the replacement or stand-in value for variables you assume to be the same or insignificant. When certain values are not given but are said to be equal, zero should be their default value.
+- Run a simulation with an arbitrary sample data.
+- When operating on percentages without any unit change (e.g. percentage to decimal), keep the unit symbol, as in 20% * 0.05 when getting 5% of 20%.
+- When possible, use 0 (zero) as the replacement or stand-in value for variables you assume to be insignificant. When certain values are not given but are said to be equal, use zero as their default value.
 
 - - Interpreting Questions and Fitting to Formulas
 - Check for "domain knowledge" or other circumstances that could change the values or formulas you need.
-- Verify if the number of possible outcomes is too high or the problem is too complex for a case-by-case evaluation. If it is, use formulas instead.
+- Verify if the number of possible outcomes is too high or the problem is too complex for a simulation or case-by-case evaluation. If it is, use formulas instead.
 - Run a simulation of worded problems and match the formula and values with steps or actions where possible.
-- Review your work.
+- Corroborate your answers using other sources when possible.
 
 - Before a break, check the new notes made using GitHub Desktop while reviewing the video or activity.
 - Symbols may be searched for and copied from Wumbo.net:
@@ -141,6 +141,11 @@ Expected Outcome = The expected numerical result E of an experiment for an event
 
 Complement of an Event - The complement of an event is the mutually exclusive alternative to the event. E.g. in a coin toss, the complement of heads is tails. There is no way to get both heads and tails in a coin toss, hence the phrase "mutually exclusive alternative." P(A') = 1 - P(A) where A' is P(~A).
 
+Probability Mass Function - A probability mass function represents the likelihood of all outcomes of a certain event or experiment. It must satisfy the following condtions:
+Px(x) >= 0
+Σ(Px(x)) = 1
+* The sum of all probabilities Σ(sigma) in a probability distribution(Px(x)) should be one since it quantifies the likelihood of all possible outcomes.
+
 Disjoint Events - Events are called disjoint when they are mutually exclusive.
 
 Sum of Probabilities for Joint Events - If A and B are joint/non-mutually-exclusive events:
@@ -213,9 +218,13 @@ SD = |b| * SD(X)
 ++++++++++++++++++++++
 Discrete Distributions
 
-Binomial Distribution Probability Mass Function - Describes the probability of observing x successes in total after performing n trials. The term with a vertical (n x) denotes a combination of n taken x at a time, as in here: P(x;p,n)=(n x)(p)^x(1−p)(n−x). Note that n! / (x! * (n-x)!) is also the formula for calculating combinations. Specifically, it is the formula for n elements combined x at a time: nCx.
+Binomial Coefficient - The binomial coefficient for getting k successes out of n trials is:
+P(n k) = n! / (k! * (n-k)!)
+* Note that n! / (x! * (n-x)!) is also the formula for calculating combinations. Specifically, it is the formula for n elements combined x at a time: nCx. In the numerator, n! is the total number of arrangements or permutations for n trials. The denominator term removes the permutations that result in identical combinations (.../(k! * (n-k)!). In the denominator, k! gives the number of permutations for the successes and (n-k)! gives the permutations for the number of failures given k successes.
 
-P(x) = (n! / (x! * (n-x)!)) * P^x * (1-P)^(n-x)
+Binomial Distribution Probability Mass Function - Describes the probability of observing x successes in total after performing n trials. The term with a vertical (n x) denotes a combination of n taken x at a time, as in here: P(x;p,n)=(n x)(p)^x(1−p)(n−x). 
+
+P(n x) = (n! / (x! * (n-x)!)) * P^x * (1-P)^(n-x)
 Here,
 P(x): probability of x occurring given that it is a binomial distribution.
 P: probability of x occurring during one trial, i.e the probability of success/ getting the preferred outcome.
@@ -248,7 +257,7 @@ Continuous Distributions
 
 Standard Normal Distribution: A normal distribution with a mean of 0 and standard deviation of 1.
 
-The area under the curve of a normal probability distribution is always equal to one. This applies to distributions where probabilities are used as the values.
+The area under the curve of a normal probability distribution is always equal to one. This applies to all distributions where probabilities are used as the values.
 Around 68% of values are within one standard deviation - i.e. one multiplied by the value of the standard deviation - less and more than the mean.
 About 95% of values fall within two standard deviations from the mean in either direction/magnitude.
 
