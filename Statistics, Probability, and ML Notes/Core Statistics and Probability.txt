@@ -85,15 +85,14 @@ Symmetry of Combinations - n C r = n C (n - r). E.g. 10C7 = 10C3.
 ++++++++++++++++++++++++++++
 Measures of Central Tendency
 
-Mean/Arithmetic Mean - The sum of values in a set divided by the count of values. It can be influenced significantly by outliers. Population mean is usually denoted by μ and sample mean by x or x-bar.
+Mean/Arithmetic Mean - The sum of values in a set divided by the count of values. It can be influenced significantly by outliers. Population mean is usually denoted by μ and sample mean by x or x-bar. In some cases, the mean is affected by outliers more than the median.
+* Note: The mean is not always the point where the sample count is split in half. Neither is it always the point where probabilities are equally halved. This only applies to the normal distribution.
 
 Geometric mean - The product of all values in a set raised to the (1/n)th power, with n being the number of values in the set. μ = (n1 * n2 * ...n)^(1/n) or μ = n√(n1 * n2 * ...n). The term 1/n denotes the nth root, e.g. 1/2 denotes the square root. This mean is often used to calculate growth over time. It can be referred to as the time-weighted rate of return. Unlike the arithmetic mean, the geometric mean can be used to measure compounding. E.g. for [2, 18], geometric μ = (2*18)^1/2. For [2, 18, 20, 25], geometric μ = (2*18*20*25)^(1/4).
 
-Median - The middle value or the average of the two middle values of an ordered set. A large difference between the mean and median could be a sign that there are outliers with unusually strong effects on the mean.
+Median - The middle value or the average of the two middle values of an ordered set. A large difference between the mean and median could be a sign that there are outliers with unusually strong effects on the mean. The median is more resistant to outliers than the mean but does not always reflect the expected value.
 
-Mode - The most frequent value in a set.
-
-The mean is usually more affected by outliers with a high absolute value.
+Mode - The most frequent value in a set. The mode is also the event or value with the highest probability. Some distributions are multi-modal.
 
 Percentile - A value which a certain percentage of values in a set are less than. I.e. the 10th percentile denotes a value compared to which 10% of all values in the set are lower.
 
@@ -236,7 +235,7 @@ This formula can be accessed in Excel or Google sheets using =BINOM.DIST.RANGE()
 For binomial probability distributions, P(x) should be consistent for each trial or member event. The trials should be independent of each other.
 
 Variance σ2 = n * P * (1-P)
-Expected Value for Independent Events n to z: (n * P(n)) + (m * P(m))...(z * P(z))
+Expected Value for Independent Events n to z: (n * P(n)) + (m * P(m)) +...(z * P(z))
 Expected Value of a Binomial Probability Distribution: P(x) * n
 
 Binomial Probability Distribution Table - This table lists the intersections between the number of trials, P, and x. It is a cumulative probability distribution. To get the probability for a specific x, take its cumulative probability and subtract the undesired outcomes. I.e, subtract the cumulative probability of the opposite "undesirable" condition. E.g.: if you need the probability of getting x >= 5, subtract the probability of getting x <= 4 from 1. If you need the probability of a specific x, say x = 5, subtract the probability of x <= 4 from the probability of x <= 5.
@@ -255,19 +254,22 @@ Continuous Distributions
 
 - Normal/Guassian/Bell-curve distribution: Maps probabilities to an area x. Probabilities cannot be mapped to a single specific outcome and have to be mapped to a range or interval instead. In a continuous normal distribution, the mean, median and mode are equal. Regardless of what the mean, median, or mode are, all normal distributions are centered and symmetric around the mean.
 
-Standard Normal Distribution: A normal distribution with a mean of 0 and standard deviation of 1.
+Standard Normal Distribution: A normal distribution with a mean of 0 and standard deviation of 1. To set the mean to zero, subtracting the mean from every value will center the deviation at zero. Dividing every value by the standard deviation will turn the standard deviation into one. To "standardize" a normal distribution:
+X = (X - μ) / σ
 
 The area under the curve of a normal probability distribution is always equal to one. This applies to all distributions where probabilities are used as the values.
 Around 68% of values are within one standard deviation - i.e. one multiplied by the value of the standard deviation - less and more than the mean.
 About 95% of values fall within two standard deviations from the mean in either direction/magnitude.
+
+Symmetric distributions centered around 0 have E = 0.
 
 -- Normal Distribution Formula
 f(x) = (1/sqrt(2πσ^2) * e^((-(x-μ)^2) / 2σ^2)
 
 Where:
 π = Pi, 3.14159...
-σ = Standard Deviation
-μ = Mean
+σ = Standard Deviation (sigma)
+μ = Mean (mu)
 e = Euler's number: 2.71828...
 
 - Z-score
@@ -293,18 +295,17 @@ The universe probabilities for two sets of random variables X and Y refers to al
 Correlation - Correlation measures the relation between two variables. A correlation of positive or negative one indicates a perfect positive or negative linear correlation between two variables. E.g. the radius of a circle and the circumference of a circle, temperature in Fahrenheit and temperature in Celsius, amount of charitable donations and tax exemption amount. A correlation of zero means two variables are independent.
 
 Covariance Equation:
-
 Cov(X,Y) = Σ E((X – μ) E(Y – ν)) / n-1
 Here:
 X - random variable
-E(X) is the expected value (the mean) of the random variable X and
-E(Y) is the expected value (the mean) of the random variable Y
+E(X) is the expected value (the mean) of the random variable X.
+E(Y) is the expected value (the mean) of the random variable Y.
 n - number of items in the data set.
 
 Alternative Covariance Equation:
 Cov(X, Y) = E[XY] - μx * μy
 Here:
-E[XY] - Expected value/average of X * Y
+E[XY] - Expected value/average of (X * Y)
 μx - Mean of X
 μy - Mean of Y
 
@@ -318,6 +319,7 @@ Related Equations:
 
 Expected Value of X + Y:
 E[X + Y] = μx + μy
+E[X + Y] = E(x) + E(y)
 
 Expected Value of X - Y:
 E[X - Y] = μx - μy
@@ -325,6 +327,9 @@ E[X - Y] = μx - μy
 Weighted Expected Values of the sum/difference of X and Y:
 E[aX + bY] = a*μx + b*μy
 E[aX - bY] = a*μx - b*μy
+
+Expected Value of Variance of X:
+Var(X) = E[X^2] - (E[X])^2
 
 Variance of X + Y:
 Var(X + Y) = σx^2 + σy^2 + 2Cov(X, Y)
@@ -344,7 +349,6 @@ Here:
 a, b - weights.
 σx - standard deviation (SD) of x.
 σy - SD of y.
-
 
 ++++++++
 Sampling
