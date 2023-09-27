@@ -2,7 +2,7 @@
 General Procedures
 
 - - Procedure When There are Too Many Missing Values
-- Run a simulation with an arbitrary sample data.
+- Run a simulation with an arbitrary sample.
 - When operating on percentages without any unit change (e.g. percentage to decimal), keep the unit symbol, as in 20% * 0.05 when getting 5% of 20%.
 - When possible, use 0 (zero) as the replacement or stand-in value for variables you assume to be insignificant. When certain values are not given but are said to be equal, use zero as their default value.
 
@@ -207,7 +207,6 @@ P(A|B) = P(A) * P(B|A) / ((P(A) * P(B|A)) + (P(A') * P(B|A')))
 
 Naive Bayes
 - In naive Bayes, the events A and B are calculated as if they are independent, i.e. A and B are naively assumed to be independent. This changes the calculation of P(A|B) to P(A) * P(B). This change changes the criteria for a success case from P(A) * P(B|A) to P(A) * P(B) * P(A). In other words, treating the different restrictions as independent increases the set of target outcomes.
-
 @@@
 
 - Functions of Random Variables
@@ -295,17 +294,19 @@ The universe probabilities for two sets of random variables X and Y refers to al
 Correlation - Correlation measures the relation between two variables. A correlation of positive or negative one indicates a perfect positive or negative linear correlation between two variables. E.g. the radius of a circle and the circumference of a circle, temperature in Fahrenheit and temperature in Celsius, amount of charitable donations and tax exemption amount. A correlation of zero means two variables are independent.
 
 Covariance Equation:
-Cov(X,Y) = Σ E((X – μ) E(Y – ν)) / n-1
+Cov(X,Y) = Σ E((X – μ_x) E(Y – μ_y)) / n-1
 Here:
 X - random variable
-E(X) is the expected value (the mean) of the random variable X.
-E(Y) is the expected value (the mean) of the random variable Y.
+μ_x - mean of the random variable X.
+μ_y - mean of the random variable Y.
+E((X – μ_x) - expected value of x - μ_x.
+E((Y – μ_y)) - expected value of y - μ_y.
 n - number of items in the data set.
 
 Alternative Covariance Equation:
 Cov(X, Y) = E[XY] - μx * μy
 Here:
-E[XY] - Expected value/average of (X * Y)
+E[XY] - Expected value/average of (X * Y). Take Σ(X*Y) then divide the result by the number of samples (n) these variables describe.
 μx - Mean of X
 μy - Mean of Y
 
@@ -328,8 +329,9 @@ Weighted Expected Values of the sum/difference of X and Y:
 E[aX + bY] = a*μx + b*μy
 E[aX - bY] = a*μx - b*μy
 
-Expected Value of Variance of X:
+Variance of X based on Expected Value of X, E[X]:
 Var(X) = E[X^2] - (E[X])^2
+* Note that E[X^2] is obtained by squaring all values of x (X) and then taking the average. E[X^2] != (E[X])^2.
 
 Variance of X + Y:
 Var(X + Y) = σx^2 + σy^2 + 2Cov(X, Y)
