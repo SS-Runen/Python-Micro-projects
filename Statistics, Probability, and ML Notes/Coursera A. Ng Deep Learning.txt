@@ -434,9 +434,13 @@ Gated Recurrent Unit
 - Remember that c<t-1> is calculated not just using the last input element but all previous input elements.
 
 Long Short Term Memory (LSTM)
-- An LSTM uses an update gate like the GRU. An LSTM has a separate "forget" gate that controls how much of the previous activation value c<t-1> is retained. A Long Short Term Memory model may add the full values of c̃ and c<t-1>. The LSTM has a third gate called the output gate. These gates each have their own learnable parameters and biases. The output gate determines what proportion of c (after processing it with c̃) is returned as the activation value a.
+- An LSTM uses an update gate like the GRU. An LSTM has a separate "forget" gate with a separate parameter Γ_f that controls how much of the previous activation value c<t-1> is retained. This is in contrast to GRUs which simply use the term (1-Γ_u). A Long Short Term Memory model may add the full values of c̃ and c<t-1>. The LSTM has a third gate called the output gate. These gates each have their own learnable parameters and biases. The output gate determines what proportion of c (after processing it with c̃) is returned as the activation value a. GRUs simply return c<t>, so in a GRU, a<t> = c<t>. LSTMs pass c<t> thru a tanh or other activation, tanh(c<t>).
 
-- An LSTM model may have a relevance gate, but the common version doesn't. The peephole variant of LSTMs includes the previous activation (c<t-1>) when calculating the values of the gates. There is no consensus on which is universally better between LSTMs and GRUs.
+- An LSTM model may have a relevance gate Γ_r (capital gamma) like GRUs, but the common version doesn't. Recall that GRUs compute Γ_r (relevance) using a - usually sigmoid - activation function that takes c<t-1> as input. GRUs use Γ_r in calculating c̃. The common LSTM doesn't, but this peephole version does. However, the peephole LSTM retains the separate forget gate to control the merging of c and c̃.
+
+- When computing the output gates of an LSTM, the values of c<t-1> may be combined with the values of x<t>. This is called a "peephole connection." Here, c<t-1> is the "memory cell" output computed based on a<t-1>.
+
+- There is no consensus on which is universally better between LSTMs and GRUs.
 
 Bi-directional Recurrent Neural Network (BRNN)
 - A bi-directional neural network processes input in two passes. The first pass processes input from left to right. The second pass processes input right to left and adds the new values to the forward activation functions. Corresponding forward and backward predictions will be aggregated. Next, backpropagation will be done as normal. The graph of a BRNN is an acyclic graph.
