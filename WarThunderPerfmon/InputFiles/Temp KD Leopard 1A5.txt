@@ -1,5 +1,12 @@
 Event, Vehicle, Distance, Orientation, Speed, SlefSpeed
 
+2023-09-30
+
+Second Battle of El Alamein
+@k @Obj 122MT "MC" @2.7, 2.17 @near-para @1, 0 @0, 0
+@k @T-64A (1971) @1.53, 1.32, 1.32 @para, near-perp, near-perp @22, 7, 0 @0, 0, 0
+@k @Obj 122MT "MC" @2, 2 @Near-perp @10, 0 @0, 0
+
 2023-08-25
 
 Pradesh #2
