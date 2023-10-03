@@ -427,7 +427,7 @@ Here:
 CI - A pair of values defining a range. You will get the upper and lower values (x1 and x2) for the CI.
 Tα - T-score of alpha value divided by two. For a CI with 95% confidence, take the T-score for 0.025 ((1-CI) / 2).
 n - Sample size.
-s- Sample SD from true/population mean or sample mean if population mean is unknown.
+s - Sample SD from true/population mean or sample mean if population mean is unknown.
 
 Possible T-value calculation for those not in table:
 https://www.ttable.org/

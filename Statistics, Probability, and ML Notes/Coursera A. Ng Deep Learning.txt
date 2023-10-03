@@ -317,7 +317,7 @@ Convolutions Over Volume
 
 - The filters per channel or depth may have different parameters to detect specific colors. The output will still be two-dimensional unless multiple filters are used.
 
-- Multiple filters may be used by convolving them and stacking or appending the result matrices. The result will be (((n + 2p - f)/s) + 1) x (((n + 2p - f)/s) + 1) x c where c is the number of filters. Using a stride of one and padding zero is equivalent to the base fomrula (n - f + 1 ).
+- Multiple filters may be used by convolving them and stacking or appending the result matrices. The result will be (((n + 2p - f)/s) + 1) x (((n + 2p - f)/s) + 1) x c where c is the number of filters. Using a stride of one and padding zero is equivalent to the base fomrula (n - f + 1 ). Here, f is the filter dimension at the corresponding channel.
 
 - If a filter's depth does not match the input, each layer will be applied to all the input values separately. In case the depth of the filter does not match the depth of the input, layers will function as if they are different filters.
 
