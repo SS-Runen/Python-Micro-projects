@@ -285,10 +285,6 @@ A z-table of standard normal probabilities maps a certain z-score to the area un
 ++++++++++++++++++++++
 Joint Random Variables
 
-Confidence Interval - A confidence interval is a range of values with a certain probability to include an unknown parameter. E.g. a confidence interval of 10 - 20 meters with a confidence level of 90% means that a result from a certain population or sample is 90% likely to fall within 10 to 20 meters.
-
-Alpha value - The alpha value is the probability of rejecting the null hypothesis when the null hypothesis is true. In relation to a confidence interval, the alpha value can be defined as the probability that an unknown value will not be included in the confidence interval. There are equations for setting the alpha value and some arbitrary guidelines. It may be expressed as 1 - Confidence. If the confidence for a certain interval is 50%, the probability of a value outside the interval is also 50%. The interval is usually set as the alternate hypothesis.
-
 The universe probabilities for two sets of random variables X and Y refers to all combinations of values for X and Y.
 
 Covariance - Covariance measures the ratio of the change in variance (x - μ)^2 of two variables. Covariance accurately gives the direction or type of relationship. It does not accurately give the magnitude of the relationship because covariance may be large only because of a large difference in units of measure between X and Y.
@@ -383,6 +379,10 @@ Clustering - The population is broken into groups and samples are taken from a r
 The standard deviation of a sample's mean from the population mean is equal to the population SD divided by the square root of the sample size.
 s(x) = σ / sqrt(n)
 
+Confidence Interval - A confidence interval is a range of values with a certain probability to include an unknown parameter. E.g. a confidence interval of 10 - 20 meters with a confidence level of 90% means that a result from a certain population or sample is 90% likely to fall within 10 to 20 meters.
+
+Alpha value - The alpha value is the probability of rejecting the null hypothesis when the null hypothesis is true. In relation to a confidence interval, the alpha value can be defined as the probability that an unknown value will not be included in the confidence interval. There are equations for setting the alpha value and some arbitrary guidelines. It may be expressed as 1 - Confidence. If the confidence for a certain interval is 50%, the probability of a value outside the interval is also 50%. The interval is usually set as the alternate hypothesis.
+
 Here:
 σ = Population standard deviation.
 n = Sample size.
@@ -403,12 +403,12 @@ n - sample size.
 Confidence Interval Fourmula
 CI = μ +/- ((Zα * s) / sqrt(n))
 Here:
-Zα - Z-score of alpha value, i.e. Z-score of percentiles for your alpha. Given a CI for 95%, take the Z-score for the 2.5th and 97.5th percentiles.
+Zα - Z-score of alpha value, i.e. Z-score of percentiles for your alpha. Given a CI for 95%, take the Z-score for the 2.5th and 97.5th percentiles for the upper and lower limits of the CI.
 n - Sample size.
 s- Sample SD.
 CI - A pair of values defining a range. You will get the upper and lower values (x1 and x2) for the CI.
 
-T-score of a sample mean/expected value, i.e. T-score for the average value of each sample member, also called the sample mean:
+T-score of a sample mean/expected value, i.e. T-score for the average value of each sample group:
 T = (x - μ) / (s / sqrt(n))
 Here:
 x - Sample mean.
@@ -422,12 +422,12 @@ d = n - 1
 * In some cases, the sample standard deviation can be used as a stand-in for the population mean. Its accuracy depends heavily on the situation, especially on factors like sample size, accuracy of measuring instruments, and the precision with which what you are measuring is created.
 
 CI using T-score:
-CI = μ +/- Tα * s / sqrt(n)
+CI = μ +/- (Tα * s / sqrt(n))
 Here:
 CI - A pair of values defining a range. You will get the upper and lower values (x1 and x2) for the CI.
-Tα - T-score of alpha value divided by two. For a CI for 95%, take the T-score for 0.025 ((1-CI) / 2).
+Tα - T-score of alpha value divided by two. For a CI with 95% confidence, take the T-score for 0.025 ((1-CI) / 2).
 n - Sample size.
-s- Sample SD from true/population mean.
+s- Sample SD from true/population mean or sample mean if population mean is unknown.
 
 Possible T-value calculation for those not in table:
 https://www.ttable.org/
@@ -435,7 +435,7 @@ https://www.ttable.org/
 Formula for Margin based on formula for CI:
 Margin = +/- (Zα * s) / sqrt(n)
 Here:
-Zα - Z-score of (alpha / 2). May be replaced with T-score of (alpha / 2).
+Zα - Z-score of (alpha / 2), the critical value. May be replaced with T-score of (alpha / 2).
 s - Sample standard deviation
 n - sample size
 
