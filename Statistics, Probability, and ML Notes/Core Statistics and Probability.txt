@@ -381,7 +381,8 @@ s(x) = σ / sqrt(n)
 
 Confidence Interval - A confidence interval is a range of values with a certain probability to include an unknown parameter. E.g. a confidence interval of 10 - 20 meters with a confidence level of 90% means that a result from a certain population or sample is 90% likely to fall within 10 to 20 meters.
 
-Alpha value - The alpha value is the probability of rejecting the null hypothesis when the null hypothesis is true. In relation to a confidence interval, the alpha value can be defined as the probability that an unknown value will not be included in the confidence interval. There are equations for setting the alpha value and some arbitrary guidelines. It may be expressed as 1 - Confidence. If the confidence for a certain interval is 50%, the probability of a value outside the interval is also 50%. The interval is usually set as the alternate hypothesis.
+Alpha value - The alpha value (α), a.k.a significance level, is the probability of rejecting the null hypothesis when the null hypothesis is true. In relation to a confidence interval, the alpha value can be defined as the probability that an unknown value will not be included in the confidence interval. There are equations for setting the alpha value and some arbitrary guidelines. It may be expressed as 1 - Confidence. If the confidence for a certain interval is 50%, the probability of a value outside the interval is also 50%. The interval is usually set as the alternate hypothesis.
+* Note: The alpha is different from the p-value. A p-value is the probability of getting a test statistic as or more extreme than a certain experiment result 
 
 Here:
 σ = Population standard deviation.
@@ -454,11 +455,11 @@ q - 1-p where p is a sample proportion.
 n - sample size.
 https://courses.lumenlearning.com/introstats1/chapter/a-population-proportion/
 
-The standard deviation of a sample proportion (denoted by p-hat, p-circumflex, or p-caret) p̂ is calculated using:
-p̂ = sqrt((P * (1 - P)) / n)
+For a sample proportion - denoted by p-hat, p-circumflex, or p-caret, p̂ - the standard deviation in percentages is calculated using:
+s = sqrt((p̂ * (1 - p̂)) / n)
 Here:
 p̂ - proportion that meet target value or hypothesis, i.e. proportion of sample that contains target characteristics.
-When calculating the standard deviation of a sample proportion, use the population percentage when you can.
+* When calculating the standard deviation of a sample proportion, use the population percentage P instead of p̂ when you can.
 
 A proportion can be given a Z score.
 Z(prop) = (Prop - P) / s
@@ -483,11 +484,13 @@ Hypothesis Testing
 
 Null Hypothesis - Default hypothesis. Assumed hypothesis. It often assumes no significant change or difference between experiment groups. Technically, it states that no statistical relationship and significance exists in a set of given, single, observed variables between two sets of observed data and measured phenomena.
 
-Alternate Hypothesis - It's probability is the complement of the null hypothesis. This hypothesis is the theory that needs to be proven.
+Alternate Hypothesis - Its probability is the complement of the null hypothesis. This hypothesis is the theory that needs to be proven and which states that there is a significant difference between the results of an experiment and one or more reference statistic values.
 
 Type I Error - Rejecting the H0 when H0 is true. The probability of a type one error is referred to as the "level of significance" or "alpha."
 
 Type II Error - Failing to reject the H0 when H0 is false.
+
+Power of a Test - The probability beta (β) of rejecting the null hypothesis given that it should be rejected, assuming a certain passing value for the reference test statistic and a certain observed value of that statistic. The power of a test is equal to the inverse of the percentage of values that fall above or below the observed value assuming the possible values of the statistic are normally distributed around the true value. The proportion, probability, or percentage of failing values is also the probability of committing Type II error where the null hypothesis is NOT rejected despite a certain assumed true value of the reference statistic.
 
 Analysis of Variance (ANOVA)
 - Analysis of Variance is used to check if there is a significant difference between two or more samples. ANOVA is used to avoid the increased risk of type I error caused by the stacking alpha probabilities. BINOM.DIST.RANGE(3, 0.5, 1, 3) = 14.263%, i.e. confidence ~ 85.7%. Although applicable when comparing two samples, ANOVA is appropriate for three or more groups since normal significance testing can be used on two samples. The F distribution used to set values in ANOVA is skewed to the right. This is probably because ANOVA calculations result in negative differences increasing the F-value or F-score. Both negative and positive differences will increase the F-score. 
