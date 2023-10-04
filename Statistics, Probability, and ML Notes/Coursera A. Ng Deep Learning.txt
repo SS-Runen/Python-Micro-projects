@@ -226,7 +226,7 @@ J(W, b) = (1/m_examples) Σ(i = 1, m)L(ŷ, y)
 J(W, b) = (1/m_examples) Σ(i = 1, m)(-Σ(j = 1, C)(y log_e(ŷ_j)))
 
 Back-prop:
-- Here, delta is used to denote a partial derivative.
+- Here, delta is used to denote a partial derivative. A parital derivative is denoted by delta (δ).
 δJ/δz = ŷ - y
 or
 J'(z(W, b)) = ŷ - y 
