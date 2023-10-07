@@ -1,3 +1,5 @@
+kittiya - Bronze II scripter Ezreal. Two scripts: one for dodging, turned off at twenty minutes. Substitued with skillshot script.
+
 SwarM3D1 - This player picked Xin Zhao bottom/ADC. During late game, player stood still for two minutes to let Ekko kill two inhibitor turrets and the Nexus.
 
 potpottie - This Shyvanna refused to defend mid just to lose the game.

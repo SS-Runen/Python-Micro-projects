@@ -26,7 +26,7 @@ Fields of Poland no foxhole
 Fulda mini
 Maginot mini
 Red Desert
-Fields of Poland (winter)
+Fields of Poland (winter) new and old
 American Desert no hill platform/domination
 Sinai no elevated flank rocks platform
 Battle of Hurtgen Forest [Battle] zones in town
@@ -34,3 +34,17 @@ Finland
 Poland two points in town
 
 KD records for maps on the avoidance list will be removed. This was implemented on Aug. 14, 2023, and applies to all vehicles.
+
+2023-10-07
+
+Pradesh
+@k @IS-4M @1.25, 1.25 @Near-perp, near-perp @-6, 0 @0, 0
+@k @T-54 (1949) @.32, .32 @near-Perp, near-para @18, 0 @0, 0
+@k @2S3M @1.32 @diag @0 @0
+@k @IS-4M @.97, .97 @para, para @-9,0 @0,0
+
+Second Battle of El Alamein
+@k @T-54 (1947) @1.08 @Perp @0 @0
+@k @T-54 (1949) @1.02, 1.01 @para, para @12, 0 @0, 0
+@k @T-44-100 @1.39, 1.4 @near-Perp @-8, 0 @0, 0
+@k @T-54 (1949) @1.41 @Perp @6 @0
