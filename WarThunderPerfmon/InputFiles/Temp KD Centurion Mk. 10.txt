@@ -32,12 +32,32 @@ Sinai no elevated flank rocks platform
 Battle of Hurtgen Forest [Battle] zones in town
 Finland
 Poland two points in town
+Poland (new 2023-10-07)
+Middle East (new 2023-10-10)
 
 KD records for maps on the avoidance list will be removed. This was implemented on Aug. 14, 2023, and applies to all vehicles.
 
+2023-10-12
+
+Fire Arc
+@k @IS-4M @~1.1 @Diag @0 @0
+@k @IS-4M @~.8 @Near-para
+@k @IS-4M @~1.1 @Near-para
+
+Mozdok [Battle]
+@k @T-54 (1947) @~.9 @Perp
+@k @2S3M @~.9 @Near-para @0 @0
+@k @T-54 (1949) @~1.5 @Perp @0 @0
+@k @T-54 (1949) @~.9 @Perp @0 @0
+
 2023-10-07
 
-Pradesh
+Pradesh #1
+@k @T-44 @1.65, 1.65 @Para, diag @0, -3 @0, 0
+@k @T-54 (1947) @1.1, 1.1 @Perp, perp @7, 0 @0, 0
+@K @T-44-100 @1.32 @Near-para @0 @0
+
+Pradesh #2
 @k @IS-4M @1.25, 1.25 @Near-perp, near-perp @-6, 0 @0, 0
 @k @T-54 (1949) @.32, .32 @near-Perp, near-para @18, 0 @0, 0
 @k @2S3M @1.32 @diag @0 @0
