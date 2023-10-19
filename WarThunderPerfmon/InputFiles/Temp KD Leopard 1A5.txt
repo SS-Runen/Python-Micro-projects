@@ -36,3 +36,12 @@ Poland (new 2023-10-07)
 Middle East (new 2023-10-10)
 
 Event, Vehicle, Distance, Orientation, Speed, SlefSpeed
+
+2023-10-20
+
+Second Battle of El Alamein [Battle]
+@kb @QN506 @~1.35 @Diag
+
+Second Battle of El Alamein [Battle]
+@k @QN506 @2 @Diag @0 @0
+@k @BMP-3 @.9

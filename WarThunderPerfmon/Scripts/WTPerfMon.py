@@ -121,12 +121,16 @@ def txt_to_csv(
 
 
 def main():
-    # txt_to_csv(
-    #     overwrite_outfiles=True,
-    #     input_filepath ="../ArchiveFiles/",
-    #     filename_prefix="Running Temp KD",
-    #     outfile_name = "records_archive.csv")
-    txt_to_csv(overwrite_outfiles=False)
+    # Reconstruct output file.
+    txt_to_csv(
+         overwrite_outfiles=True,
+         input_filepath ="../ArchiveFiles/",
+         filename_prefix="Running Temp KD",
+         outfile_name = "records_archive.csv")
+    
+    # Append partial KD records to output file.
+    # txt_to_csv(overwrite_outfiles=False)
+    
     return None
 
 
