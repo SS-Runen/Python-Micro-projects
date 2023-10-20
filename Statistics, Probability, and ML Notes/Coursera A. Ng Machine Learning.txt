@@ -172,8 +172,7 @@ ADAM
 - Adaptive Moment Estimation changes the learning rate for each parameter. It also adjusts the learning rate based on the direction and amount of change in the computed adjustment. As of July 06, 2023, A. Ng. described ADAM as the defacto optimization algorithm for neural networks.
 
 - Back-propagation and Forward-propagation
-Back-propagation using a computational graph takes N(nodes) + P(parameters) resources versus N * P during forward prop.
-My understanding is that instead of calculating the derivative of J with respect to each parameter, the derivative is calculated at the end for one parameter. That final derivative is used to calculate the derivative of other parameters without calculating all other parameters and x-values using separate differentiation operations. The sequence of operations is done based on a computational graph.
+Back-propagation using a computational graph takes N(nodes) + P(parameters) resources versus N * P during forward prop. Based on the calculus of derivatives, a formula or function can be deduced that allows the calculation of a derivative solving backward from the result of the cost function. Instead of increasing each parameter's value by an infinitesmal amount and measuring the change in the cost function, the derivative can be calculated in one "backward pass" based on the values already computed while making a prediction.
 
 ++++++++++++++++
 Model Evalutaion

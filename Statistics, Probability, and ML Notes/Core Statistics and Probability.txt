@@ -397,7 +397,7 @@ Z-score of a sample, i.e. Z-score for the sample mean assuming it is distributed
 Z = (x - μ) / (σ / sqrt(n))
 Here:
 x - Sample mean.
-μ - Population mean.
+μ - Population mean or reference mean.
 σ - Population SD.
 n - sample size.
 
