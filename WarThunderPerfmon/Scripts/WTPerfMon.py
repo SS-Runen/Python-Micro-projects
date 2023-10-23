@@ -10,7 +10,7 @@ def get_mean_mode(group_records):
     for group in group_records:
         try:
             decimals = [float(n) for n  in group.split("&")] 
-            ave = sum(decimals) / len(decimals)
+            ave = sum(abs(decimals)) / len(decimals)
             lst_averages.append(ave)
         except ValueError:
             most_frequent = ""

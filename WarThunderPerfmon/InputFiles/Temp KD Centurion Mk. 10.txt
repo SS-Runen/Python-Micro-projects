@@ -37,26 +37,39 @@ Middle East (new 2023-10-10)
 
 KD records for maps on the avoidance list will be removed. This was implemented on Aug. 14, 2023, and applies to all vehicles.
 
+2023-10-22
+
+Pradesh #1
+@k @T-54 (1949) @1.77 @Para @0 @0
+@K @Obj 211 @1.66 @Para @3 @0
+@k @T-54 (1949) @.95 @Para @0 @0
+
+Mozdok
+@k @IS-4M @.04 @Diag @12 @0
+@k @Type 62 @.12 @Perp @0 @0
+@k @M42 @.03 @Near-perp @0 @0
+@k @Obj 211 @.89 @Para @0 @0
+
 2023-10-17
 
 Sands of Sinai
-@k @PT-76B @.6 @Para
-@k @T-54 (1949) @~1.1 @Perp
-@k @T-44 @~1
-@k @T-54 (1947) @~2 @Perp @0 @0
+@k @PT-76B @.35 @Diag @6 @0
+@k @T-54 (1949) @1.32 @diag @-3 @0
+@k @T-44 @1.22, 1.23 @Para, para @4, 0 @0, 0
+@k @T-54 (1947) @2.13 @diag @0 @0
 
 2023-10-12
 
 Fire Arc
-@k @IS-4M @~1.1 @Diag @0 @0
-@k @IS-4M @~.8 @Near-para
-@k @IS-4M @~1.1 @Near-para
+@k @IS-4M @1.45 @Diag @0 @0
+@k @IS-4M @.74, .7 @para, near-para @27, -5 @0, 0
+@k @IS-4M @1.14 @Near-para, near-para @-3, @0 @0, 0
 
 Mozdok [Battle]
-@k @T-54 (1947) @~.9 @Perp
-@k @2S3M @~.9 @Near-para @0 @0
-@k @T-54 (1949) @~1.5 @Perp @0 @0
-@k @T-54 (1949) @~.9 @Perp @0 @0
+@k @T-54 (1947) @.73, .73 @Perp, near-perp @27, 10 @0, 0
+@k @2S3M @.96 @near-para @0 @0
+@k @T-54 (1949) @1.56 @near-Perp @0 @0
+@k @T-54 (1949) @.74 @Perp @0 @0
 
 2023-10-07
 

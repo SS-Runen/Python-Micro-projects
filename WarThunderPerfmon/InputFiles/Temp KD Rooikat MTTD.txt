@@ -35,15 +35,16 @@ Poland two points in town
 Poland (new 2023-10-07)
 Middle East (new 2023-10-10)
 
+2023-10-15
+
+Mozdok
+@k @BMP-2 @1.02 @Para @22 @0
+@k @M113 (China) @1.71 @Para @32 @0
+
 2023-08-05
 
 Pradesh #1
 @kb @2S25 @1.94 @Para @0 @0
-
-Poland
-@k @T-55AMD-1 @~.2 @Perp
-@kb @2S25 @~1.1 @Para
-@kb @2S25 @~1.2
 
 2023-07-08
 
