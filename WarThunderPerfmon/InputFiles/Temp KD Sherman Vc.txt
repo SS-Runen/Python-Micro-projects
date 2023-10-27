@@ -35,6 +35,13 @@ Poland two points in town
 Poland (new 2023-10-07)
 Middle East (new 2023-10-10)
 
+2023-10-25
+
+Mozdok [Battle]
+@k @E.B.R. (1951) @1.38, 1.38 @diag, diag @26, 0 @0, 0
+@k @T-34-85 @.51 @diag @0 @0
+@kb @KV-220 @.8 @Para @0 @0
+
 2023-06-08
 
 Sands of Sinai

@@ -30,12 +30,25 @@ Fields of Poland (winter) new and old
 American Desert no hill platform/domination
 Sinai no elevated flank rocks platform
 Battle of Hurtgen Forest [Battle] zones in town
+Hurtgen Forest (Shielded Enemy Spawn and Exits)
 Finland
 Poland two points in town
 Poland (new 2023-10-07)
 Middle East (new 2023-10-10)
 
 KD records for maps on the avoidance list will be removed. This was implemented on Aug. 14, 2023, and applies to all vehicles.
+
+2023-10-27
+
+Pradesh
+@k @T-54 (1949) @1.74 @diag @0 @0
+@kb @IS-4M @0.03 @Para @0 @0
+
+Sands of Sinai
+@k @T-54 (1949) @2.74 @Diag @0 @0
+@k @SU-100 @2.72 @Para @0 @0
+@k @IS-4M @1.91 @Para @0 @0
+@k @2S3M @1.93 @Near-perp @7 @0
 
 2023-10-22
 
