@@ -38,6 +38,23 @@ Middle East (new 2023-10-10)
 
 KD records for maps on the avoidance list will be removed. This was implemented on Aug. 14, 2023, and applies to all vehicles.
 
+2023-11-11
+
+Second Battle of El Alamein
+@k @PT-76 @2.26 @Diag @-6 @0
+@k @IS-3 @1.81, 1.8 @Para, para @33, 0 @0, 0
+@k @T-54 (1947) @1.95, 1.95 @perp, perp @0, 0 @0, 0
+@k @T-54 (1949) @1.56, 1.55 @Diag, para @26, 0 @0, 0
+@k @T-44-100 @2.65 @Diag @0 @0
+@k @T-54 (1947 @2.08 @Perp @0 @0
+
+Mozdok
+@kb @2S3M @1.5 @Para @0 @0
+
+Pradesh #1
+@kb @2S3M @1.66 @Diag @0 @-6
+@k @2S3M @1.7 @near-Para @0 @0
+
 2023-10-27
 
 Pradesh

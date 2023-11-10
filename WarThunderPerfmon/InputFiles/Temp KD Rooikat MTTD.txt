@@ -35,6 +35,19 @@ Poland two points in town
 Poland (new 2023-10-07)
 Middle East (new 2023-10-10)
 
+2023-11-04
+
+Pradesh #1
+@k @BTR-80 @1.61 @Diag @50 @0
+@k @WMA301 @1.7 @para @0 @0
+@k @QN506 @1.73 @diag @-3 @0
+@k @WMA301 @.75 @Para @0 @0
+@kb @WMA301 @.85 @para @0 @0
+
+Pradesh #2
+@kb @BMP-3 @.1 @Near-perp @0 @0
+@kb @BMP-3 @.05 @perp @0 @0
+
 2023-10-15
 
 Mozdok
