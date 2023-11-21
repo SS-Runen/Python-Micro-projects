@@ -195,7 +195,7 @@ Formula Variant:
 P(B|A) = P(A|B)*P(B) / P(A)
 
 - The probability of B given A is:
-The probability of A given B - the subset of B where A is true, P(A|B) - multiplied by the probability of B - P(B) - all over/for every probability of A, P(A). In probability, division removes the divisor probability from the dividend probability.
+The probability of A given B - the subset of B where A is true, P(A|B) - multiplied by the probability of B, P(B), all over/for every probability of A, P(A). In probability, division removes the divisor probability from the dividend probability.
 - The order of probabilities in an intersection are interchangeable. P(A ∪ B) = P(B ∪ A). P(B ∪ A) can also be re-written as P(B | A)*P(A). Thus, rewriting the formula for P(A|B) can yield Baye's Theorem.
 P(A | B) => P(A ∪ B) / P(B)
 P(A | B) => P(B ∪ A) / P(B)

@@ -181,7 +181,7 @@ Learning Rate Decay
 Local Optima
 - For high-dimensional data, local optima are very rare. It is more common to have a set of parameters where the derivative is zero and changes to certain sets of parameters may guide the estimation to an acceptable or optimal minimum. It is rare to have a common convergence point where the derivative is zero and it would take excessive shifts that increase error to the levels of random initialization just to find the optimum gradient. A larger number of significant data inputs reduces the likelihood of a local minimum where the error of estimation cannot be reduced by ordinary parameter updates.
 
-- Plateaus are still a problem with high-dimensional data since the derivative may stay at near-zero or zero for a long time despite the parameters being far from optimal. They can make gradient descent slow or give the illusion that it is safe to stop learning.
+- Plateaus or saddles are still a problem with high-dimensional data since the derivative may stay at near-zero or zero for a long time despite the parameters being far from optimal. They can make gradient descent slow or give the illusion that it is safe to stop learning.
 
 @@@
 Hyper-parameter Tuning
@@ -315,13 +315,13 @@ What are the general rules or principles for finding matrix operations that are 
 Convolutions Over Volume
 - The channels or depth of the input and the filter have to match. When convolving, multiply the input by the corresponding depth or channel in the filter. Next, take the sum of all the element-wise multiplications across all channels and across the length and width of the filter. That single number - i.e. the sum across all channels, rows, and columns - is one element in the activations or outputs. Shift the filter one column and repeat the process.
 
-- The filters per channel or depth may have different parameters to detect specific colors. The output will still be two-dimensional unless multiple filters are used.
+- The filters per channel or depth may have different parameters to detect specific colors. The output will still be two-dimensional unless multiple filters are used. The result of a convolution between an n x n matrix and f x f filter will have the dimensions (n-f+1 ) x (n-f+1).
 
 - Multiple filters may be used by convolving them and stacking or appending the result matrices. The result will be (((n + 2p - f)/s) + 1) x (((n + 2p - f)/s) + 1) x c where c is the number of filters. Using a stride of one and padding zero is equivalent to the base fomrula (n - f + 1 ). Here, f is the filter dimension at the corresponding channel.
 
 - If a filter's depth does not match the input, each layer will be applied to all the input values separately. In case the depth of the filter does not match the depth of the input, layers will function as if they are different filters.
 
-- The parameters of the matrix used to "convolve" the image may be set by hand or learned by the model. The convolution operation between the image and filter reduces the dimensions of the data but preserves certain relationships, such as edges or distinct differences in brightness in images. The result of a convolution between an n x n matrix and f x f filter will have the dimensions (n-f+1 ) x (n-f+1).
+- The parameters of the matrix used to "convolve" the image may be set by hand or learned by the model. The convolution operation between the image and filter reduces the dimensions of the data but preserves certain relationships, such as edges or distinct differences in brightness in images.
 
 - Some papers or books define convolution as mirroring the filter along the vertical and horizontal axes before applying it. The convolution described in much of machine-learning literature is technically a cross-correlation, not a convolution according to signal processing or mathematics. A mathematical convolution is associative, i.e. (A * B) * C = A * (B * C).
 
@@ -416,9 +416,11 @@ Sequence Models
 @@@
 Recurrent Neural Networks
 
-- To allow earlier words to influence the activation of later words, the activation array from the previous word will be included in the calculations for the next word. A dummy initiazliation value will be included when necessary. After processing the first word of the input and making a prediction on it, the model will take the activations and use them in calculating the activations of the next word. Each layer will have parameters for the previous activations and parameters for the current input word. In the illustrations and videos of A. Ng's Sequence Models - Recurrent Neural Network Model, the arrows from layer to layer indicate a change in time or input. The layer in question is the same thruought the video and slides.
+- Ordinary neural networks do not share their calculations or data with other neurons in the network. This is a problem in NLP because a word and its data influence how other words may be interpreted.
 
-- The basic RNN described here stacks the results of Wax and Waa or Wa * [a, x]. The addition operation does not mean adding the matrices element to element.
+- In an RNN, earlier words influence the activation of later word. Each input word is processed by all the neurons. The activation array from the previous word will be included in the calculations for the next word. A dummy initiazliation value will be included when necessary. After processing the first word of the input and making a prediction on it, the model will take the activations and use them in calculating the activations of the next word. Each layer will have parameters for the previous activations and parameters for the current input word. In the illustrations and videos of A. Ng's Sequence Models - Recurrent Neural Network Model, the arrows from layer to layer indicate a change in time or input. The layer in question is the same thruought the video and slides.
+
+- The basic RNN described in the DeepLearning.AI course stacks or concatenates the results of Wax and Waa or Wa * [a, x]. The addition operation does not mean adding the matrices element to element.
 
 - Sequence generators and language models include the preceeding input in the information passed to the model in the next pass. After processing the first part of an input sequence and generating a prediction, the model is given all the preceeding values x[0, n-1] before processing the current x[n]. Generally, sequence generation requires a large dataset. Language models require a large corpus or body of text. Sequence models may be used to predict the chance of a certain tokenized element (e.g. a word) given a certain preceeding input set. Such a prediction requires that the tokenized elements are represented in a dictionary or vocabulary. Notes, words, unknown words, and control characters have to be represented. One way is one-hot encoding.
 
@@ -580,7 +582,23 @@ Teacher Forcing
 - In "teacher forcing", the true label of a previous token is used as the input to the decoder regardless of whether it got the last token right. This is to avoid a cascade of errors. This forcing may be gradually reduced as training continues.
 
 Transformers vs. RNNs and BRNNs
-- RNNs, despite the implementation of attention, are may still lose information the further tokens are from each other. Sequential models process tokens sequentially, so there are less ways to parallelize their implementation. With RNNs and especially deep deep RNNs, there are more steps taken during back-propagation than transformers. RNNs perform back-propagation for each input token. Transformers take around one step from output to gradients during a cycle of back-propagation. Last, transformers are less likely to cause vanishing gradients even vs. LSTM and GRU transformer nets.
+- RNNs, despite the implementation of attention, may still lose information the further tokens are from each other. Sequential models process tokens sequentially, so there are less ways to parallelize their implementation. With RNNs and especially deep RNNs, there are more steps taken during back-propagation than transformers. RNNs perform back-propagation for each input token. Transformers take around one step from output to gradients during a cycle of back-propagation. Last, transformers are less likely to cause vanishing gradients even vs. LSTM and GRU transformer nets.
+
+@@@
+Nerual Machine Translation
+https://www.coursera.org/learn/machinetranslation/home
+
+In phrase-based neural machine translation, the translation is done in steps. First, the model is trained to align the words or phrases. After alignment, the phrase have to be extracted and then passed as input into a log-linear predictor model.
+
+In neural machine translation, the training is done end-to-end using one model to set all the translation parameters.
+
+Encoder-Decoder
+- In the encoder-decoder framework, a sentence representation is calculated first. The encoding has fixed dimensions. This is the encoder stage. Words are given integer representations. Next, they are one-hot encoded. A word embedding describing all words in the vocabulary is calculated. To reduce the output, the one-hot word encoding is multiplied to the embedding matrix so that only the feature values of the current word are passed forward. The one-hot encoding or output feature values from the embedding layer may also include a positional encoding. From this vector of feature values that describe the word, a hidden state is calculated. The process is repeated for all input words, but all words' output is integrated into one hidden state.
+
+- The decoder may now use the entire source sentence to determine the translation. The target sentence/sequence will be decoded word for word. When first given the source sequence word embedding, the sentence start token is the only item in the input sequence.Next, a word embedding is calculated by the decoder. A new hidden state will be calculated based on the word embedding and previous hidden state, including the hidden state from the encoder. After output is generated, the predicted output will be added to the sequence encoding of the target sentence. The encoding or hidden state will be used thoughout the translation stage by the decoder.
+
+- The output of the decoder will be a vector of probabilities corresponding to the vocabulary of the target language. There will be one forward and backward pass for each item in the sequence/sentence.
+
 
 
 
