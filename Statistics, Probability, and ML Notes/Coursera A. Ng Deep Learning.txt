@@ -485,7 +485,7 @@ Sentence Level and Higher-level Embeddings
 @@@
 
 Beam Search
-- Beam Search is an alternative to a greedy search of likely words. A greedy search is likely to miss context that changes the probability of certain word mappings. If a certain word usually follows another, it may become the de-facto "best translation" even for certain sentences where the most frequent and most likely word isn't the best translation.
+- Beam Search is an alternative to a greedy search of likely words. A greedy search is likely to miss context that changes the probability of certain word mappings. If a certain word usually follows another, it may become the de-facto "best translation" even for certain sentences where the most frequent and most likely word isn't the best translation or cannot lead to the best translation.
 
 - Beam search has a hyperparameter that determines how many of the most likely translations will be "remembered" and evaluated. For each of the words or encodings included in the "beam," beam search will pick a beam-sized set of likely next tokens. Next, a beam-sized set of candidate next values will be picked for each of the pairs. The probability of each two-step-ahead pair will be evaluated. A beam-sized set of two-element sequences will be selected. At every step of the beam search, an instance of the network will be instantiated for each token in the beam.
 
@@ -493,9 +493,9 @@ Beam Search
 
 - A side-effect of maximizing the summation of logarithms is that longer sequences will get a lower probability because multiplying numbers less than one decreases overall value. The summation has to be normalized. One way is to take the average of the logarithms (e.g. multiply by 1 / Ty). A hyperparameter α ranging from zero to one may be used as an exponent to Ty. There is no theoretical proof this works, but most experiments show 1/Ty^α is a useful normalization term.
 
-- The cumulative probability of each possible sequence will be compted according to the probability summation function. For the current element in the sequence, a beam-sized set of candidate next steps will be chosen. For each of the candidates, more beam-sized sets of "grandchildren" will be selected. The probabilities of all these branches will be calculated. Based on that, A beam-sized set of the top sequences will be chosen for the current step. The cycle then repeats.
+- To rephrase he beam search algorithm, the cumulative probability of each possible sequence will be computed according to the probability summation function. For the current element in the sequence, a beam-sized set of candidate next steps will be chosen. For each of the candidates, more beam-sized sets of "grandchildren" will be selected. The probabilities of all these branches will be calculated. Based on that, a beam-sized set of the top sequences will be chosen for the current step. The cycle then repeats.
 
-- To check whether the beam search stage or RNN stage is at fault, check the cumulative probability of the ground truth label y* and the output ŷ. If the probability of y* is higher, the RNN is probably computing the probability correctly but beam search is not maximizing the P(ŷ|x,y_n...). If P(y* |x) >= P(ŷ|x), the RNN needs to be more accurate. Check how many errors are due to a bad output from the RNN and how many are due to a failure to find the best ŷ during beam search.
+- To check whether the beam search stage or RNN stage is at fault, check the cumulative probability of the ground truth label y* and the output ŷ. If the probability of y* is higher, the RNN may be computing the probabilities correctly but beam search is not maximizing the P(ŷ|x,y_n...). Maybe the beam often misses the candidate that leads to the best translation. If P(y* |x) <= P(ŷ|x), the RNN needs to be more accurate at predicting probabilities. Check how many errors are due to a bad output from the RNN and how many are due to a failure to find the best ŷ during beam search.
 
 - If the loss or cost function includes length normalization, evaluate P(y*) and P(ŷ) using a function that takes the normalization term into account. Special considerations have to be made when evaluating a beam search that uses length normalization.
 
@@ -599,6 +599,12 @@ Encoder-Decoder
 
 - The output of the decoder will be a vector of probabilities corresponding to the vocabulary of the target language. There will be one forward and backward pass for each item in the sequence/sentence.
 
+Neural Machine Translation Decoding
+- The heuristics discussed in this section are the greedy search and beam search. In a greedy search, the most likely translation of each sequence item or token is selected from the vocabulary. After this selection, the correct answer may be supplied during training. That is not always the best method. It is also acceptable to keep selecting the most likely next token or translation up to the end of the sequence without correcting wrong token predictions. This process is stopped when the end of sentence token is predicted. To avoid an indefnitely long sentence, a hard limit may be enforced.
+
+- The problem with a greedy search is that once the first tokens are locked in, they will affect the hidden state and skew the model so that it adapts to previous predictions even if the hidden state suggests they are wrong based on newer tokens.
+
+- In beam search, the representation of the source sentence is calculated the same way. Beam search accepts a developer-defined number (n) of most probable words to translate a token into. After selecting the n most probable translations, the algorithm will select another n most likely predictions for each of the initial translations. For n = 3, the "paths" number of paths explored would grow from 3, 9. After widening the search, beam search will prune the predictions by selecting only the top n combinations. This means the number of paths explored does not grow indefinitely. For n = 3, it would be 3, 9, (out of the combinations, three will be selected), 3 for each possible combination, the top three probable words will be generated), 9, and etc. There is no definite limit on beam size. This lecture suggests never exceeding ten to fifteen.
 
 
 
