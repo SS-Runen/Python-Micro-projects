@@ -400,7 +400,7 @@ Transpose Convolutions
 U-Net Architecture
 - This transpose convolution is necessary for the U-Net architecture. The transpose convolution is necessary to match the dimensions of the output with the dimensions of the input. A U-Net is used for semantic segmentation of images, so each pixel or image region has to be classified individually.
 
-- The transposition of input in the U-Net architecture is combined with several residual blocks. This combines the previous input - i.e. the image or convolutions of the image - with the block output. The transposition of the convolution layers will retain some patterns that emerge from the convolution, e.g. edges or shapes. Adding the original image or convolutions to the output will overlay the transpoistion of the patterns with the original image or convolutions. The goal is to make the model learn parameters to classify pixels based on the original convolutions, the original image, and the patterns detected during feed-forward convolutions.
+- The transposition of input in the U-Net architecture is combined with several skip connections. This concatenates the corresponding encoder-level output - i.e. convolutions of the image - with the decoder block input. The transposition of the convolution layers will retain some patterns that emerge from the convolution, e.g. edges or shapes. Concatenating the original image or convolutions to the output will overlay the transpoistion of the patterns with the original image or convolutions. The goal is to make the model learn parameters to classify pixels based on the original convolutions, the original image, and the patterns detected during feed-forward convolutions.
 
 Triplet Loss Function
 - The triplet loss function requires three images or inputs: an anchor, a positive (match) example, and a negative example (non-match). Loss:
@@ -509,7 +509,7 @@ here:
 Metric may be a loss function or measure of similarity. Multiple translations have to be generated. For each candidate, get the score or metric relative to every other translation. This is a one vs. all comparison. Do the comparison for all translations and pick the one with the highest average similarity score. This assumes that all the translations taken together tend toward the correct translation.
 
 Attention Model
-- An attention model encourages a model to give greater weight to tokens that are at and near the current input. An RNN or BRNN will be used to compute features or encodings of the input sequence. After the entire sequence is processed, the resulting sequence of encodings will be processed by the attention model. The elements are processed sequentially. An attention parameter α (alpha) will be used to calculate the context for all tokens in the sequence. For each input element, a "context" is calculated using α and other tokens/encodings in the sequence. The context is used to generate an activation to predict a translation. When the next input element, i.e. encoding, is processed, the previous output is used along with a new context to generate a succeeding prediction. The attention parameter α has to be the same for the entire sequence.
+- An attention model encourages a model to give greater weight to tokens that are at and near the current input. An RNN or BRNN will be used to compute features or encodings of the input sequence. After the entire sequence is processed, the resulting sequence of encodings will be processed by the attention model. The elements are processed sequentially. An attention parameter α (alpha) will be used to calculate the context for all tokens in the sequence. For each input element, a "context" is calculated using α and other tokens/encodings in the sequence. The context will used to generate an activation to predict a translation. When the next input element, i.e. encoding, is processed, the previous output is used along with a new context to generate a succeeding prediction. The attention parameter α has to be the same for the entire sequence.
 
 Connectionist Temporal Classification (CTC) Cost Function for Speech Recognition
 - The CTC is used for audio processing problems. The output of audio may be very long since the audio is sampled at a very high rate, e.g. several times a second. The output may have blanks where there is no meaningful audio. It will also have long repeated sequences of letters for stretches of audio lasting a few milliseconds that make up one letter. CTC collapses these repeated letters and blanks into human-readable transcripts. It may also be used in trigger-word detection. In trigger-word detection, the entire audio sequence that holds the trigger word is labelled as one or positive to counter the large number of non-trigger audio sequences.
@@ -521,7 +521,7 @@ Self-attention
 - Calculate the attention matrix of the current token:
 A(q, K, V) = Σ_i ((exp(q*k<i>) / Σ_j exp(q*k<j>))*v<i>)
 Here:
-q (query), K (key), and V (value) are matrices computed using learnable weights. Each word or token in the sequence will be assigned a different set of W * q, W * k, and W * v matrices. The matrix A of the current token A<t> will be calculated relative to its own set of parameters and vectors - W * q, W * k, and W * v - and the matrices K and V, which are the computed W*k and W*v vectors of other tokens in the sequence. Here, q, k, and v are representations/tokenized encodings of each word. When embedding, it is the convention to have q = k = v, i.e. the tokenized representation of a sequence is the same for the W_q, W_k, and W_v matrices. These encodings multiplied to W_q, Q_k, and W_v will result in Q, K, and V matrices for each word.
+q (query), K (key), and V (value) are matrices computed using learnable weights. Each word or token in the sequence will be assigned a different set of W * q, W * k, and W * v matrices. The attention matrix A at the current token/timestamp A<t> will be calculated relative to its own set of parameters and vectors - W * q, W * k, and W * v - and the matrices K and V, which are the computed W*k and W*v vectors of other tokens in the sequence. Here, q, k, and v are representations/tokenized encodings of each word. When embedding, it is the convention to have q = k = v, i.e. the tokenized representation of a sequence is the same for the W_q, W_k, and W_v matrices. These encodings multiplied to W_q, Q_k, and W_v will result in Q, K, and V matrices for each word.
 
 - A<t> will be computed as the soft-max of A(q, K, V)<t> vs all other tokens in the sequence, Σ_j A(q, K, V)<0,..j>. A of the current token may also be represented as A(q<t>, K, V). Take note that matrix multiplications are NOT commutative. The result of matrices A * B will be different from B * A. The resulting A<t> here will be a matrix of ratios. The softmax and A(q, K, V) computations will guarantee that information from all words in the sequence will influence A<t>, the matrix representation of the current token.
 
@@ -582,9 +582,9 @@ Teacher Forcing
 - In "teacher forcing", the true label of a previous token is used as the input to the decoder regardless of whether it got the last token right. This is to avoid a cascade of errors. This forcing may be gradually reduced as training continues.
 
 Transformers vs. RNNs and BRNNs
-- RNNs, despite the implementation of attention, may still lose information the further tokens are from each other. Sequential models process tokens sequentially, so there are less ways to parallelize their implementation. With RNNs and especially deep RNNs, there are more steps taken during back-propagation than transformers. RNNs perform back-propagation for each input token. Transformers take around one step from output to gradients during a cycle of back-propagation. Last, transformers are less likely to cause vanishing gradients even vs. LSTM and GRU transformer nets.
+- RNNs, despite the implementation of attention, may still lose information the further tokens are from each other. Sequential models process tokens one at a time, so there are less ways to parallelize their implementation. With RNNs and especially deep RNNs, there are more steps taken during back-propagation than transformers. RNNs perform back-propagation for each input token. Transformers take around one step from output to gradients during a cycle of back-propagation. Last, transformers are less likely to cause vanishing gradients even vs. LSTM and GRU transformer nets.
 
-@@@
+++++++++++++++++++++++++++
 Nerual Machine Translation
 https://www.coursera.org/learn/machinetranslation/home
 
@@ -605,6 +605,46 @@ Neural Machine Translation Decoding
 - The problem with a greedy search is that once the first tokens are locked in, they will affect the hidden state and skew the model so that it adapts to previous predictions even if the hidden state suggests they are wrong based on newer tokens.
 
 - In beam search, the representation of the source sentence is calculated the same way. Beam search accepts a developer-defined number (n) of most probable words to translate a token into. After selecting the n most probable translations, the algorithm will select another n most likely predictions for each of the initial translations. For n = 3, the "paths" number of paths explored would grow from 3, 9. After widening the search, beam search will prune the predictions by selecting only the top n combinations. This means the number of paths explored does not grow indefinitely. For n = 3, it would be 3, 9, (out of the combinations, three will be selected), 3 for each possible combination, the top three probable words will be generated), 9, and etc. There is no definite limit on beam size. This lecture suggests never exceeding ten to fifteen.
+
+
+Ensemble of Models
+- Several models with different deliberately chosen setups may be combined. The output layers will be combined. The softmax or one vs. all normalzied probability vs. other models may be used to combine probabilities per output word in the vocabulary.
+
+- Copies of the same model with different initializations may be combined. This avoids overfitting and the tendency of some data to exclude other correct translations or outputs from the same model.
+
+- In a checkpoint ensemble, only one model is trained. For the last n iterations in the training run, the output will be combined and normalized. This avoids the heavy resource consumption of training multiple models.
+
+- In weight ensembling, four different models will be taken from one training iteration. The weights will be averaged before the next iteration. This usually reduces the performance or accuracy increase compared to a model ensemble.
+
+Vocabulary
+- In byte-pair encoding, a sequence is first represented as a series of characters. Next, the model looks up the most common n-grams or n-chracter sequences. Usually bi-grams (common sequences of two characters) are used. These compressed n-gram representations will be passed to the model for translation. This avoids the problem of unknown tokens that have to be masked or filled in.  Context or statistical translation may be used to fill in unknown tokens. The problem here is that character sequences might not be represented properly in the target language. Individual characters might be misplaced.
+
+- In byte-pair or character-based encoding, the embeddings are now per-character or per-n-gram. The encoder data will always be longer and less aligned to the target words. This significantly increases the run-time of the model.
+
+Using Monolingual Data
+- To avoid the problems of limited data on language-to-language translation, a nueral network language model trained on monolingual data may be integrated into a translation system. One model will train to parse one language and its output will be integrated into the translation model.
+
+- A separate state will be calculated based on the language model. This state may be generated in parallel by a language model. The output will be merged with the decoder immediately before it predicts the next token. Alternatively, the hidden state of the language model may be added to the attention and hidden state calculation stage of the decoder.
+
+- There is no conclusion yet on whether the language model and translation model should be trained jointly or independently. They may even be trained in alternating steps at every time-step.
+
+- It is possible to translate data from the target language into the source language and use the translations as additional training data. This "synthetic" generated data is not perfect, but it is better than adding imperfect translations from source to target to the data set.
+
+Multilingual Translation
+- In order to translate many different languages without building several language specific models is to translate using a "pivot point." Several languages may be translated to English first then to a third language next.
+
+- It is possible to build an encoding or representation of one source language that is usable for translation by many decoder or into many different target languages. Another method is to learn a "language-independent" hidden representation of sequences.
+
+Architecture: Transformer with Self-attention
+- As usual, a sequence will be tokenized and then represented as one-hot vectors. Next, the processing steps will be done item by item or token by token. First, an embedding is generated for the current token. From this embedding, matrices to represent a query, key, and value will be computed. A dummy initialization is used for the first token. After the Q, K, and V matrices are calculated for the current word, a hidden state is calculated based on these matrices and the representations of other tokens in the sequence. This includes the q, k, and v matrices of other tokens in the input sequence.
+
+- This architecture ensures that all tokens have some operation that connects them to the entire sequence. The hiddens state at the current token is calculated using both the previous hidden state and the representation of the current token. This token representation includes interactions with the other tokens in the sequence.
+
+- Positional information is for each word by a sinous or cosinous functions with different wavelengths. The function formulae are constant for all tokens. Depending on the order of the token in the sequence, e.g. 0, 1,...n, the combination of the function outputs will be different. However, the combinations are going to be the same for all tokens in the same sequence position.
+
+- In multi-head attention, the operations described above will be done independently to generate multiple sets of Q, K, and V matrices. The resulting output bectors will be concatenated into one output vector. With proper initialization, the different heads may avoid saddles and assign different weights to different parts of the sequence for one token. When combined, this makes the output more generalized.
+
+- The decoder section also applies the process of the encoder to the most recent predicted target token. If the sequence just started, this is a start of sentence or start of sequence token. After the matrices and hidden state for the target token are calculated, the matrices and hidden state will be adjusted by taking the output of the encoder block. 
 
 
 
