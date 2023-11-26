@@ -34,3 +34,19 @@ Finland
 Poland two points in town
 Poland (new 2023-10-07)
 Middle East (new 2023-10-10)
+Test Site 2271
+Flanders
+
+2023-11-12
+
+Mozdok
+@k @KV-122 @~1.1 @Para @0 @0
+@kb @T-34-85 @.03 @Near-para @0 @0
+
+Mozdok [Battle]
+@k @M24 @.6 @Near-perp @0 @0
+@k @M4A2 (76) W @1.33 @Para @0 @0
+@k @T-34-85 @.7 @para @-3 @0
+@k @ZSU-37 @1.07 @Diag @0 @0
+@k @Comet I FR @1.15 @Near-perp @0 @0
+@kb @T-34-85 (D-5T) @1.2 @Diag @0 @30

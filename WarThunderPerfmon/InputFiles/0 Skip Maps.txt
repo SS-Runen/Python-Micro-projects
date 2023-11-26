@@ -1,4 +1,3 @@
-SKIP:
 Seversk-13
 Sweden
 Abandoned Factory
@@ -30,6 +29,7 @@ Fields of Poland (winter) new and old
 American Desert no hill platform/domination
 Sinai no elevated flank rocks platform
 Battle of Hurtgen Forest [Battle] zones in town
+Hurtgen Forest (Shielded Enemy Spawn and Exits)
 Finland
 Poland two points in town
 Poland (new 2023-10-07)
@@ -37,29 +37,4 @@ Middle East (new 2023-10-10)
 Test Site 2271
 Flanders
 
-Event, Vehicle, Distance, Orientation, Speed, SlefSpeed
 
-2023-11-04
-
-Pradesh #2
-@k @T-55A @1.15 @Near-para @0 @0
-@k @Obj 435 @1.79 @Diag @0 @0
-@k @T-55AMD-1 @1.82 @Para @10 @0
-@k @ZSU-37-2 @1.85 @near-Para @0 @0
-
-Pradesh #2
-@k @BMP-3 @1.73 @Diag @54 @0
-@k @ZSU-57-2 @1.77 @para @0 @0
-
-2023-10-20
-
-Second Battle of El Alamein [Battle]
-@K @T-62 No. 545 @1.3 @Diag @0 @0
-@K @BMP-3 @.91 @Near-para @6 @0
-@k @2S25 @1.19 @Para @0 @0
-@kb @QN506 @1.34 @Diag @0 @-11
-
-Second Battle of El Alamein [Battle]
-@k @QN506 @2.35 @Diag @0 @0
-@k @BMP-3 @1.1, 1.09 @Perp, diag @57, 0 @0, 0
-@k @T-62 @1.74 @Para @0 @0

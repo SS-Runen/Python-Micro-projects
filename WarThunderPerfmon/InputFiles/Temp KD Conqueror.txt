@@ -7,6 +7,8 @@ Campania
 Finland [Battle]
 Second Battle of El Alamein [Battle] no sniper mountain
 Poland two points in town
+Test Site 2271
+Flanders
 
 Unlike the Centurion MK. 10 custom sight, the Conqueror sight does not have any difference between HESH and APDS.
 For the Centurion Mk. 10, an increase of one hundred meters for HESH rounds is needed.

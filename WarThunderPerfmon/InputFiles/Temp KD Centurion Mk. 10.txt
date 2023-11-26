@@ -35,8 +35,22 @@ Finland
 Poland two points in town
 Poland (new 2023-10-07)
 Middle East (new 2023-10-10)
+Test Site 2271
+Flanders
 
 KD records for maps on the avoidance list will be removed. This was implemented on Aug. 14, 2023, and applies to all vehicles.
+
+2023-11-16
+
+Pradesh #2
+@k @2S3M @~1.6 @Near-para
+@k @PT-76B @~1.3 @Para @0 @0
+
+Pradesh #2
+@k @PT-76-57 @1.18 @Diag @1 @0
+@k @T-54 (1947) @1.8, 1.88 @para, Diag @0, 0 @0, 0
+@k @T-54 (1949) @1.87 @Near-perp @0 @0
+@k @T-44-100 @1.27, 1.27 @Diag, diag @-7, 0 @0, 0
 
 2023-11-11
 
