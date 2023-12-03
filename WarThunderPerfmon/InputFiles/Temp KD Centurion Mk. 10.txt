@@ -41,13 +41,14 @@ Flanders
 KD records for maps on the avoidance list will be removed. This was implemented on Aug. 14, 2023, and applies to all vehicles.
 
 Mozdok [Battle]
-@k @2S25 @~1 @Perp @0 @0
-@k @ASU-85 @~1.1 @near-perp @0 @0
-@k @T-54 (1949) @~.9
-@k @PT-76B @~1
-@k @T-54 (1949) @~1 @Perp
-@k @T-54 (1949) @~.6 @Para @0 @0
-@kb @T-54 (1949) @~.8 @Diag
+@k @2S1 @1.24 @Perp @0 @0
+@k @ASU-85 @1.14 @near-para @0 @0
+@k @Obj 268 @1.14 @near-perp @0 @0
+@k @T-54 (1949) @.58, 0.56 @Near-perp, Near-perp @0, 0 @26, 0
+@k @PT-76B @1.29 @Para @0 @-8
+@k @T-54 (1949) @.62 @Para @0 @0
+@k @T-54 (1949) @.85 @near-perp, near-perp @15, 0 @0, 0
+@kb @T-54 (1949) @.29 @Near-para @0 @-7
 
 2023-11-16
 
