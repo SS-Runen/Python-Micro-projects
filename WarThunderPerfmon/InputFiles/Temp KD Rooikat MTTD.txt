@@ -37,6 +37,17 @@ Middle East (new 2023-10-10)
 Test Site 2271
 Flanders
 
+2023-12-09
+
+Pradesh #1
+@k @BMP @~1.2 @Perp @0 @0
+@k @Type 62 @2 @Perp
+@kb @T-64A (1971) @~0.01 @Para @0 @0
+
+Second Battle of El Alamein
+@kb @T-64A (1971) @0.9 @near-para @0 @0
+@kb @T-64A (1971) @0.02 @near-perp @0 @0
+
 2023-11-04
 
 Pradesh #1
