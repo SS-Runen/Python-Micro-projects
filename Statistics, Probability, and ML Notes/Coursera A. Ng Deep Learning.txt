@@ -9,6 +9,8 @@ General Guidelines
 
 - Test validation and logic-checking are mandatory. For complicated functions or classes, more granular or step-by-step checks may be necessary.
 
+- To allow codes scaffolding, you need to IMPORT the classes and methods.
+
 +++++++++++++++++++++
 Neural Network Basics
 
@@ -391,7 +393,7 @@ Anchor Boxes
 - The anchor box shapes may be set manually or based on an algorithm, e.g. unsupervised K-means clustering. To pick which anchor box is best suited to a certain object, use a metric like IOU.
 
 Transpose Convolutions
-- There are many methods to expand or blow up input. This is one method. A filter will be placed on top of the output or, at least, with reference to the output. Take the element-wise product of the filter and the element in the first row and first column of the input. The resulting matrix should be placed with the matching corner in the first row and column of the output. If padding is used, the filter output should be placed in the padding. Output elements within the padding bounds are removed.
+- There are many methods to expand or blow up input. This is one method. A filter will be placed on top of the output or with reference to the output. Take the element-wise product of the filter and the element in the first row and first column of the input. The resulting matrix should be placed with the matching corner in the first row and column of the output. If padding is used, the filter output should be placed in the padding. Output elements within the padding bounds are removed.
 
 -  After the filter output is placed in the output matrix, use the next element in the input. At the same time, shift the filter location on the output matrix according to the stride. Broadcast the current input element across the filter as before. In case of overlap between different filter outputs on the output matrix, add the overlapping values.
 
