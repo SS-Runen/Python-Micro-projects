@@ -37,12 +37,17 @@ Middle East (new 2023-10-10)
 Test Site 2271
 Flanders
 
-2023-12-09
+2023-12-24
 
-Pradesh #1
-@k @BMP @~1.2 @Perp @0 @0
-@k @Type 62 @2 @Perp
-@kb @T-64A (1971) @~0.01 @Para @0 @0
+Pradesh #2
+@k @Obj 122MT 'MC' @1.77 @Perp @34 @0
+@k @T-64A (1971) @1.87 @Para @0 @0
+@k @PGZ09 @1.85 @Near-para @0 @0
+@k @BMP-2 @1.8 @Perp @18 @0
+@k @QN506 @1.86 @Para @16 @0
+@k @M113 Chinese @1.7 @Para @0 @0
+
+2023-12-09
 
 Second Battle of El Alamein
 @kb @T-64A (1971) @0.9 @near-para @0 @0
