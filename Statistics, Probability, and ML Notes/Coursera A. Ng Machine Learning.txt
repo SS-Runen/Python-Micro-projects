@@ -16,26 +16,6 @@ conda install spyder-notebook -c conda-forge
 
 - Until there is a proven need for other programming languages or libraries, Python and its libraries will be the primary ML and AI tools. Julia, R, and SQL may be learned based on what the problem or research project requires. For now, the focus is on transferrable fundamentals of math, statistics, AI, and ML.
 
-++++++++++++++++++++++++++++
-Overfitting and Underfitting
-
-@@@
-Avoiding or Solving Overfitting
-
-- Collect more samples. Make sure as many samples as possible are representative of your population.
-
-- Remove some features. A disadvantage of reducing features is that some nuance may be removed. Testing and other kinds of analysis are needed to remove features properly.
-
-- Regularization. Reduce all feature values to lessen their comparative effect on the chosen parameters. The reduction calculation has to be the same for all features. A regularization parameter (λ) has to be chosen. Taking an average of the parameters (w) ensures that if there are outlying parameter values, the magnitude and direction of the amount added or subtracted to the equation reduces their effect. For both large negative and large positive numbers, the regularization value will get the same direction and magnitude of change, i.e. it will still be a positive number no matter the sign the input to the regularization function. A large regularization value will have greater effect on low-value output than high-value output.
-The following term may be added to the simplified logistic regression cost function to regularize the input.
-
-λ/2m * Σ(j=1 n) w[j]^2
-Where:
-n = Number of features.
-j = Index for the row/horizontal vector. Index j points to a feature parameter.
-m = Number of rows/horizontal vectors.
-w = Input or feature value.
-
 +++++++++++++++++++++++++++++++++++
 Matrix Operations and Vectorization
 
@@ -60,13 +40,7 @@ Activation Functions
 
 - For binary classification problems, the sigmoid function is usually best for the final or "output" layer. The network will predict the probability of y = 1 or 0. The decision boundary (values where P(y=0) = P(y=1)) or an arbitrary probability may be used as a threshold for activation.
 
-- Problems that fit the criteria of linear regression often need the linear activation function for the output layer. It is recommended to avoid using the linear activation function for hidden layers. If a linear or sigmoid function is used at the output layer, the results will be similar to ordinary linear or logistic regression.
-
-- If the ground truth or source of truth (y) should only have positive values, use the Rectified Linear Unit (ReLU) function for the output layer.
-
-*Note: The activation function of the output layer is not always the same as the hidden layer/s. The most common hidden layer activation function is the ReLU.
-
-ReLU - g(z) = max(0, z). This function is slightly faster to compute than the sigmoid function. More important for speed, the sigmoid function has two areas where the output is flat when graphed. When using gradient descent, the computations for those values will change slowly. The ReLU only has one area where it is flat. If done properly, the ReLU will be computed faster without losing accuracy.
+- avoid using the linear activation function for hidden layers. If a linear or sigmoid function is used at the output layer, the results will be similar to ordinary linear or logistic regression.
 
 - SoftMax
 Soft Max Loss Function = -log a(j) if y = j
