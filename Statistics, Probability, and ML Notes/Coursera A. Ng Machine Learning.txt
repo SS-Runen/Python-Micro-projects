@@ -36,24 +36,6 @@ Matrix Multiplication Rules
 Basic Artificial Neural Networks
 
 @@@
-Activation Functions
-
-- For binary classification problems, the sigmoid function is usually best for the final or "output" layer. The network will predict the probability of y = 1 or 0. The decision boundary (values where P(y=0) = P(y=1)) or an arbitrary probability may be used as a threshold for activation.
-
-- avoid using the linear activation function for hidden layers. If a linear or sigmoid function is used at the output layer, the results will be similar to ordinary linear or logistic regression.
-
-- SoftMax
-Soft Max Loss Function = -log a(j) if y = j
-
-The Softmax activation function computes the probability of each label versus the cumulative probability of all labels. For each output layer neuron or unit output a, the Softmax function g is calculated using the probabilities of each class label.
-a1 = g(z1,z2,...zn)
-
-Thus:
-g(z1) = (e^z1) / (e^z1) + (e^z2) +...(e^zn)
-...
-g(zn) = (e^zn) / (e^z1) +...(e^zn)
-
-@@@
 Convolutional Neural Network
 - A Convolutional Nueral Network (CNN) has units or neurons that only process part of the previous layer's output. These units will only process a section of the input data. It can compute results faster and reduce overfitting. The data or input for each neuron may overlap with other neurons. For images, it could mean overlapping coverage of an area. For time-series data, the time boundaries of the neurons may overlap. There, the next neuron has some idea of earlier or later data.
 
