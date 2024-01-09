@@ -39,12 +39,6 @@ Basic Artificial Neural Networks
 Convolutional Neural Network
 - A Convolutional Nueral Network (CNN) has units or neurons that only process part of the previous layer's output. These units will only process a section of the input data. It can compute results faster and reduce overfitting. The data or input for each neuron may overlap with other neurons. For images, it could mean overlapping coverage of an area. For time-series data, the time boundaries of the neurons may overlap. There, the next neuron has some idea of earlier or later data.
 
-ADAM
-- Adaptive Moment Estimation changes the learning rate for each parameter. It also adjusts the learning rate based on the direction and amount of change in the computed adjustment. As of July 06, 2023, A. Ng. described ADAM as the defacto optimization algorithm for neural networks.
-
-- Back-propagation and Forward-propagation
-Back-propagation using a computational graph takes N(nodes) + P(parameters) resources versus N * P during forward prop. Based on the calculus of derivatives, a formula or function can be deduced that allows the calculation of a derivative solving backward from the result of the cost function. Instead of increasing each parameter's value by an infinitesmal amount and measuring the change in the cost function, the derivative can be calculated in one "backward pass" based on the values already computed while making a prediction.
-
 ++++++++++++++++
 Model Evalutaion
 
