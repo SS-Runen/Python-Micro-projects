@@ -61,6 +61,18 @@ Second Battle of El Alamein
 @k @Type 63 @1.8 @Near-perp @24 @0
 @k @IS-4M @1.43 @Para @0 @0
 
+Pradesh #2
+@k @T-44-100 @1.82 @Perp @-8 @0
+@k @T-54 (1949) @1.62 @Para @0 @0
+@k @T-54 (1949) @1.74 @Para @0 @0
+
+Sands of Sinai
+@k @2S1 @2 @Perp @0 @0
+@k @
+
+Pradesh #2
+@kb @Obj 268 @1.66 @Para @0 @0
+
 2023-12-21
 
 Mozdok
