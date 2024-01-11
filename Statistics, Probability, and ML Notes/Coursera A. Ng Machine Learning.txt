@@ -42,31 +42,6 @@ Convolutional Neural Network
 ++++++++++++++++
 Model Evalutaion
 
-- Divide your training data into two representative sets. One will be used to train and the other will stand in for unknown test data. The convention is to divide train and test sets seventy to thirty. Extreme differences between the model error during training and the model error processing the test function is a sign of overfitting.
-
-- The lowest test set error is not always a sign of the best parameters for a machine learning algorithm. Even if a test set error is low, it is still possible that the model happened to overfit to the test set. One solution is to add a third set to measure accuracy and pick a model before evaluating using the test set. The convention is 60-20-20. The cross-validation set is also called the development set.
-
-@@@
-Performance Baselines, Bias, and Variance
-
-- If possible, benchmark model performance against human performance.
-
-- Competing or standard algorithms may also be used as a baseline for performance, variance, and bias. The same training, cross-validation, and test data must be used for all models. To get the average train-test or train-cross-validation error difference, several different splits of data will have to be used.
-
-- The training error is expected to increase as more data is used, eventually resembling a straight line. The cross-validation error is expected to decrease as training data increases. The graph of the cross-validation error will also straigten out as it approaches zero. Steadily increasing the train data with different sizes of subsets is usually too resource-intensive to be practical.
-
-- Large neural networks are usually low-bias machines. Increasing the number of layers or units both reduce bias. For certain reasons, regularization can prevent large neural networks getting high variance.
-
-Error Analysis
-- In some cases, manually analyzing the inputs where the model gave the wrong answer is a good technique. Classify and describe possible patterns or markers.
-
-Adding Data
-- You may add more data similar to input that the model usually gets wrong.
-- Certain cases benefit from data augmentation. Modifying or transforming data has to be consistent with the real-life input and use of the model. Rotating letters and adding background noise to speech audio are good examples. Synthesizing data is an acceptable practice.
-
-Transfer Learning
-- Transfer Learning refers to using an existing model used in a similar problem to train on your current data. The model input types should be the same. The idea is that certain generalized parameters could be learned and maintained. For example, image classification tasks with very different data might both require parameters to ignore empty space. The given example is image recognition of animals and people vs. digit recognition. If data for one problem is scarce, take the model with larger data. Either keep its hidden layer parameters and change the input and output layers or just its output layer to match your problem.
-
 @@@
 Skewed Data Sets
 - For data sets with isolated but important cases, plain accuracy is not a good metric. For example, rare medical conditions have be diagnosed accurately even if their input values are outliers. For continuous output, the input data where the model has a high error metric should be analyzed, whether thru categorization or statistical analysis.
