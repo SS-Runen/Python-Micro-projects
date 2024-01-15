@@ -32,58 +32,27 @@ Matrix Multiplication Rules
 
 - In general, matrix multiplication is NOT commutative. The order of the matrices is significant in matrix multiplication. Only certain edge cases result in commutative matrix multiplications.
 
-++++++++++++++++++++++++++++++++
-Basic Artificial Neural Networks
-
-@@@
-Convolutional Neural Network
-- A Convolutional Nueral Network (CNN) has units or neurons that only process part of the previous layer's output. These units will only process a section of the input data. It can compute results faster and reduce overfitting. The data or input for each neuron may overlap with other neurons. For images, it could mean overlapping coverage of an area. For time-series data, the time boundaries of the neurons may overlap. There, the next neuron has some idea of earlier or later data.
-
 ++++++++++++++++
 Model Evalutaion
 
 @@@
 Skewed Data Sets
-- For data sets with isolated but important cases, plain accuracy is not a good metric. For example, rare medical conditions have be diagnosed accurately even if their input values are outliers. For continuous output, the input data where the model has a high error metric should be analyzed, whether thru categorization or statistical analysis.
-
-- Precision: Precision refers to the ratio of correct positive predictions to total positive predictions. P(True|PredictedTrue).
-Precision = ( true_positives / (true_positive_predictions + false_positive_predictions)).
-
-- Recall: Recall is the ratio of correctly predicted positives and actual positives. True positives vs. actual positives.
-Recall = true_positives / true_positives + false_negatives.
 
 - F1 Score. This calculation takes a weighted average where the smaller value's effect is increased. This is better at measuring precision vs. recall since if either one is high, it can "hide" defects. The F1 score equation may be referred to as the "harmonic mean of precision and recall (P and R)."
 F1 = 1 / (0.5 * ((1/Precision) + (1/Recall)))
 Alternative:
-F1 = 2 * ((P*R) / (P+R)) 
+F1 = 2 * ((P*R) / (P+R) 
 
 ++++++++++++++
 Decision Trees
 
 - When deciding on criteria to split a node, maximize the purity or homogenity of the split groups. The increase in purity is referred to as "information gain."
 
-- Entropy
-E = -p1 log2(p1) - (1 - p1)log2(1-p1)
-where:
-p1 = Proportion of true or positive labels.
-
-The logarithm has a base of two so that the output is always between zero and one. Entropy is used to measure purity. The higher the entropy, the more mixed or non-homogenous the split.
+Entropy
 
 - Entropy is best used with a weighted average or coefficient. A group with few examples and high purity could skew the results. For each decision node, multiply the proportion of input samples per group with the group entropy. Add the two results to get the overall node entropy.
 
-- To calculate the information gain/entropy reduction for decision nodes (nodes beyond the root node), find the difference between the entropy of the root node and the entropy of the decision node. Information gain may be a better metric for split quality than plain entropy.
-
-Information gain from a node:
-IG = H(p1r) - (wl * H(p1l) + wr * H(p1r))
-where:
-
-H(p1r) = Entropy of input before splitting at the node. The input here is the proportion of positively labelled data.
-wl = Proportion of input split into the left node.
-wr = Proportion of input split into the right node.
-p1l = Proportion of positively labeled examples in the left node.
-H(p1l) = Entropy of left split.
-p1r = Proportion of positively labeled examples in the right node.
-H(p1r) = Entropy of right split.
+- To calculate the information gain/entropy reduction for decision nodes (nodes beyond the root node), find the difference between the entropy of the root previous node and the entropy of the decision node. Information gain may be a better metric for split quality than plain entropy.
 
 - When using one-hot encoding on a decision tree, create k new features/columns for k number of features, not k-1 for linear regression dummy values.
 
