@@ -43,9 +43,11 @@ KD records for maps on the avoidance list will be removed. This was implemented 
 2024-01-15
 
 Pradesh #2
-@k @2S3M @~1.6 @Near-para, Perp
-@k @T-54 (1949) @~1.6 @Perp
-@k @ASU-85 @~1.4 @Perp @0 @0
+@k @2S3M @1.74 @diag @0 @0
+@k @T-54 (1949) @1.63, 1.63 @diag,diag @-2, 0 @0, 0
+@k @ASU-85 @1.34 @near-perp @0 @0
+@k @PT-76B @1.57, 1.57 @perp, perp @18, 0 @0, 0
+@k @ZSU-37 @1.13 @near-Para @0 @0
 
 2023-12-26
 
@@ -72,10 +74,6 @@ Pradesh #2
 @k @T-44-100 @1.82 @Perp @-8 @0
 @k @T-54 (1949) @1.62 @Para @0 @0
 @k @T-54 (1949) @1.74 @Para @0 @0
-
-Sands of Sinai
-@k @2S1 @2 @Perp @0 @0
-@k @
 
 Pradesh #2
 @kb @Obj 268 @1.66 @Para @0 @0

@@ -48,6 +48,14 @@ Pradesh #2
 @kb @BMP-3 @~.9
 @kb @PTL0@ @1.6 @Para @0 @0
 
+@k @ZSU-37-2 @2.23 @Perp @0 @0
+@k @T-55AM-1 @1.94, 1.94 @Perp, diag @-7, 0 @0, 0
+@k @QN506 @1.68 @Para @0 @0
+@k @QN506 @1.36 @Diag @0 @0
+@k @BMP-3 @Perp @.7 @perp @0 @0
+@k @BMD-4 @1.66 @Perp @0 @0
+@kb @BMD-4 @.1 @Perp @0 @0
+
 2024-01-07
 
 Pradesh #2
