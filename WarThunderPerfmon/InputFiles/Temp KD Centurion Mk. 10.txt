@@ -40,6 +40,20 @@ Flanders
 
 KD records for maps on the avoidance list will be removed. This was implemented on Aug. 14, 2023, and applies to all vehicles.
 
+2024-01-25
+
+Second Battle of El Alamein
+@k @2S3M @.96 @near-Perp @0 @0
+@k @IS-6 @.96, .95 @perp, perp @18, 0 @0, 0
+@k @Obj 268 @2.1 @Para @0 @0
+@k @IS-6 @1.49 @Para @0 @0
+@k @T-54 (1949) @1.02 @Diag @29 @0
+@k @BTR-ZD @.56 @diag @0 @0
+
+Sands of Sinai
+@k @IS-3 @~1.5 @Perp, perp
+@k @IS-4M @~1.4 @perp @0 @0
+
 2024-01-20
 
 Mozdok [Battle] Low Side
@@ -108,6 +122,11 @@ Mozdok
 @k @T-44-100 @1.04 @Diag @35 @0
 @k @IS-4M @1.12 @Diag @-4 @0
 @k @2S3M @1.77, 1.76 @Perp, perp @11, 0 @0, 0
+
+Mozdok #1
+@k @SU-100P @.52 @para @0 @0
+@k @IS-3 @1.57 @Perp @0 @0
+@kb @IS-3 @1.04 @Para @0 @0
 
 2023-12-16
 
