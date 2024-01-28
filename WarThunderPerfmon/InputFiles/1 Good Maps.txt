@@ -1,4 +1,9 @@
 ---------
+Settings
+
+Set "Aim Sensitivity" to 15. This makes the sight move slower, making adjustments for long range more precise.
+
+---------
 Good Maps
 
 Pradesh #2

@@ -13,7 +13,7 @@ Pradesh #2
 @k @T-80B @~1.8 @Perp
 @k @ZTZ-99II @~1.5 @Diag @0 @0
 
-2024-01
+2024-01-01
 
 Pradesh #2
 @k @T-80B @1.75 @Diag @0 @0
