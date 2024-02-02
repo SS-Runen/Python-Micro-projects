@@ -40,6 +40,14 @@ Flanders
 
 KD records for maps on the avoidance list will be removed. This was implemented on Aug. 14, 2023, and applies to all vehicles.
 
+2024-01-30
+
+https://warthunder.com/en/tournament/replay/165676538084415488
+Second Battle of El Alamein
+@k @2S3M @2.5, 2.3 @Perp, diag
+@k @T-54 (1949) @~2.5 @Diag @0 @0
+@k @T-54 (1949) @~1.9 @Diag @0 @0
+
 2024-01-25
 
 Second Battle of El Alamein
@@ -53,6 +61,10 @@ Second Battle of El Alamein
 Sands of Sinai
 @k @IS-3 @~1.5 @Perp, perp
 @k @IS-4M @~1.4 @perp @0 @0
+
+Second Battle of El Alamein
+@k @IS-6 @.38 @Para @16 @0
+@k @T-44 @1.45, 1.46 @Diag, diag @15, 0 @0, 0
 
 2024-01-20
 

@@ -39,14 +39,28 @@ Flanders
 
 Event, Vehicle, Distance, Orientation, Speed, SlefSpeed
 
+2024-02-02
+
+Pradesh #2
+@k @BMP-2 @1.78 @Para @9 @0
+@k @T-62M-1 @1.3 @Para @13 @0
+@k @BMD-4 @.45 @Perp @46 @0
+
+Pradesh #2
+@k @T-62M-1 @~1.3 @Para
+
+Pradesh #1
+@k @T-55AMD-1 @1.74, 1.75 @para, Diag @0, -7 @0, 0
+@kb @T-62M-1 @1.77 @diag @0 @0
+
 2024-01-28
 
 Pradesh #2
-@k @BMP-3 @~1.9 @perp
-@k @Obj 775 @~1.8 @Diag @0 @0
-@k @BMP-3 @~1.6 @Perp @0 @0
-@kb @BMP-3 @~2 @Para @0 @0
-@kb @BMP-3 @~1.6 @Perp @0 @0
+@k @BMP-3 @2.09 @perp @0 @0
+@k @Obj 775 @1.84 @para @0 @0
+@k @BMP-3 @1.66 @diag @0 @0
+@kb @BMP-3 @2.1 @Para @0 @0
+@kb @BMP-3 @1.66 @Perp @0 @0
 
 2024-01-13
 

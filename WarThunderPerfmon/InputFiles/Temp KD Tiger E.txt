@@ -37,6 +37,13 @@ Middle East (new 2023-10-10)
 Test Site 2271
 Flanders
 
+2024-01-29
+
+Fields of Normandy
+@k @T-34-85 @1.18 @Para @0 @0
+@k @M24 @1.03 @para @0 @0
+@k @T1E1 @1.2 @para @0 @0
+
 2024-01-23
 
 Second Battle of El Alamein #1 [Domination]

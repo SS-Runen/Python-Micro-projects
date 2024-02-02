@@ -1,7 +1,25 @@
+2024-01-31
+
+Second Battle of El Alamein
+@k @T-72 TURMS-T @~.8
+@k @2S6 @~2.1 @Perp
+@k @T-80B @~1.3 @Para
+@k @2S6 @~1.3 @Perp
+
+Pradesh #2
+@k @BMP-2M @1.6 @Perp @22 @0
+@kb @T-90A @.1 @Perp @0 @0
+
+Pradesh #2
+@k @T-90A @~1.3 @Para @0 @0
+@k @2S25 @~1.7 @Para @0 @0
+@kb @T-90A @~1.7 @Near-para @0 @0
+@kb @MBT2000 @~1.3 @Near-para @0 @0
+
 2024-01-26
 
 Pradesh #2
-@k @T-72 TURMS-T @~1.7 @Diag @0 @)
+@k @T-72 TURMS-T @~1.7 @Diag @0 @0
 @kb @T-72 1983 @~1.7 @Para @0 @0
 
 Pradesh #1

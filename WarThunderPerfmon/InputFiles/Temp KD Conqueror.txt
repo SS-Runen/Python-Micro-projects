@@ -21,9 +21,9 @@ Pradesh #2
 @k @TO 55 @1.5
 
 Pradesh #2
-@k @T-54 (1947) @~1.2 @Perp
-@k @ZSU-57-2 @~1.4 @Perp
-@k @T-54 @~1.2 @Near-perp
+@k @T-54 (1947) @1.19 @Perp @6 @0
+@k @ZSU-57-2 @1.38 @Perp, para @12, 0 @0, 0
+@k @T-54 (1949) @1.13 @diag @0 @0
 
 Sands of Sinai
 @k @ZTZ59A @2.1 @Perp @0 @0
