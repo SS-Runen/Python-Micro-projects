@@ -39,6 +39,22 @@ Flanders
 
 Event, Vehicle, Distance, Orientation, Speed, SlefSpeed
 
+2024-02-06
+
+Second Battle of El Alamein
+@K @T-55AM-1 @1.4, 1.4 @near-para, near-para @10, 0 @0, 0
+@k @T-64A (1971) @1.44 @para @0 @0
+@k @BMP-3 @1.34 @Para @0 @0
+@k @T-69 II G @2.17 @para @0 @0
+@k @T-62 @1.07 @Para @0 @0
+@k @Obj 122MT "MC" @1.46 @Near-para @0 @0
+@k @ZSU-23-4 @1.19, 1.18 @diag, diag @44, 0 @0, 0
+@k @BMP-2 @1.09 @Perp @32 @0
+@k @ZSU-57-2 @1.77 @perp @22 @0
+
+Pradesh #2
+@k @BMP-3 @~1.7 @Para
+
 2024-02-02
 
 Pradesh #2
