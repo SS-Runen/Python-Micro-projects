@@ -33,6 +33,11 @@ Pradesh #2
 Pradesh #1
 @kb @T-80BVM @1.65 @Diag @0 @0
 
+Pradesh #2
+@k @T-90M @1.72 1.72 @Para @48 @0
+@kb @T-80BVM @.04 @Para @0 @0
+@kb @T-80BVM @.22 @Perp @0 @0
+
 2023-04-01
 
 Middle East [Battle]

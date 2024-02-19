@@ -37,6 +37,21 @@ Middle East (new 2023-10-10)
 Test Site 2271
 Flanders
 
+2024-02-12
+
+Pradesh #2
+@k @T-55AMD-1 @1.7 @Diag @0 @0
+@k @BMP-3 @1.75 @Para @-6 @0
+@k @T-64A (1971) @2.28 @Perp @0 @0
+@k @T-64A (1971) @1.75 @Diag @0 @0
+@k @QN506 @2.26 @Perp @0 @0
+
+2024-02-07
+
+Pradesh #2
+@k @Oj 775 @~1.9 @Perp
+@k @2S25 @~2 @Perp @0 @0
+
 2024-02-02
 
 Pradesh #2
@@ -60,10 +75,15 @@ Mozdok [Battle]
 Pradesh #2
 @k @BTR-80A @~1.6 @Perp @0 @0
 
+
+Pradesh #1
+@k @BMP-3 @1.8 @perp @30 @0
+@k @T-64A (1971) @1.63 @Para @0 @0
+@k @IT-1 @1.71 @diag @0 @0
+
 2023-12-29
 
 Pradesh #1
-@k @PTL02 @~1.8 @diag @0 @0
 @k @BMP-2 @1.76 @Para @-3 @0
 @k @BMP-2 @1.69 @perp @0 @0
 @k @Obj 435 @1.82 @Para @0 @0
