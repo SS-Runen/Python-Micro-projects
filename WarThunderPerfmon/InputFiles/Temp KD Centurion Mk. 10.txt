@@ -53,29 +53,29 @@ Second Battle of El Alamen [Battle]
 @k @SU-100P @~.9 @perp, diag
 
 Second Battle of El Alamein
-@k @BTR-ZD @~.9 @Perp
-@k @T-54 (1947) @~1.5 @Perp @0 @0
-@k @IS-6 @~.9 @para @0 @0
+@k @BTR-ZD @.97 @diag @60 @0
+@k @T-54 (1947) @1.67, 1.68 @para, para @-4, -3 @0, 0
+@k @IS-6 @.95 @diag @0 @0
 
 Pradesh #2
-@k @T-54 (1949) @~1.5 @Diag
-@k @BTR-ZD @.03 @Para @0 @0
-@kb @T-54 (1949) @~1.5 @Para
-@kb BTR-ZD @.03 @Para @0 @0
+@k @T-54 (1949) @1.64 @near-para @26 @0
+@k @BTR-ZD @.02 @Para @0 @0
+@kb @T-54 (1949) @1.76 @Para @0 @-6
+@kb BTR-ZD @.02 @Para @0 @0
 
 Pradesh #2
-@k @T-54 (1949) @~1.5
-@k @T-54 (1949) @~1.5
-@k @T-54 (1947) @~1.5
-@k @T-54 (1949) @~1.1 @near-perp
-@k @T-54 (1947) @~1.8 @Diag
+@k @T-54 (1949) @1.54 @diag @-8 @0
+@k @T-54 (1949) @.86 @near-perp @0 @0
+@k @T-54 (1947) @1.66 @para @0 @0
+@k @T-54 (1949) @1.52 @diag @0 @0
+@k @T-54 (1947) @2 @Diag @8 @0
 
 2024-02-09
 
 Pradesh #2
-@k @T-54 (1949) @~2 @Perp
-@k @T-44-100 @~1.2 @Perp
-@k @T-54 (1947) @~1.5 @diag, para
+@k @T-44-100 @1.28 @Perp @8 @0
+@k @T-54 (1949) @2.02 @Perp @38 @0
+@k @T-54 (1947) @1.66, 1.64 @diag, para @31, 19 @0, 0
 
 Pradesh #2
 @k @T-54 @~2 @Diag @0 @0
@@ -174,12 +174,6 @@ Pradesh #2
 Pradesh #2
 @kb @Obj 268 @1.66 @Para @0 @0
 
-2023-12-21
-
-Mozdok
-@k @IS-3m @1.1 @Diag
-@k @2S3M @1.8 @Perp
-
 Mozdok
 @k @Type 62 @1.12 @diag @0 @0
 @k @T-54 (1949) @1.41 @Para @0 @0
@@ -197,12 +191,6 @@ Mozdok #1
 @k @SU-100P @.52 @para @0 @0
 @k @IS-3 @1.57 @Perp @0 @0
 @kb @IS-3 @1.04 @Para @0 @0
-
-2023-12-16
-
-Mozdok
-@k @IS-3 @1.2
-@kb @IS-3 @1.2
 
 Mozdok
 @k @T-44-100 @2.08 @Perp @39 @34
