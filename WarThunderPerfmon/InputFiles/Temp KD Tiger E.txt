@@ -51,12 +51,6 @@ Second Battle of El Alamein #1 [Domination]
 @k @T-34-85 @1.39, 1.38 @Para, near-para @36, 0 @0, 0
 @k @M4A1 (76) W @1.37 @Perp @0 @0
 
-2023-11-12
-
-Mozdok
-@k @KV-122 @~1.1 @Para @0 @0
-@kb @T-34-85 @.03 @Near-para @0 @0
-
 Mozdok [Battle]
 @k @M24 @.6 @Near-perp @0 @0
 @k @M4A2 (76) W @1.33 @Para @0 @0

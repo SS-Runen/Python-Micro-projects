@@ -1,9 +1,3 @@
-2024-01-24
-
-Second Battle of El Alamein [Battle]
-@k @T-80U @.01 @perp @0 @0
-@k @T-80UK @~1.3 @Diag @0 @0
-@k @BMP-2M @~1.2 @Diag @0 @0
 
 2022-10-23
 

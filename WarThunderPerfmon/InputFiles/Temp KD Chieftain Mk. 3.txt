@@ -7,11 +7,6 @@ Pradesh #1
 @k @T-10M @.6 @Para @0 @0
 @kb @BMP-3 @.03 @Para @0 @0
 
-2023-08-05
-
-Poland
-@k @BMP-2 @~1.2 @Para @0 @0
-
 2023-05-01
 
 Fields of Poland

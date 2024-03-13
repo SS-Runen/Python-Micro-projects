@@ -50,9 +50,6 @@ Sinai
 
 2023-12-30
 
-Hurtgen Forest
-@k @T-34-85 @~1 @Perp
-
 Mozdok [Battle]
 @k @T-34-85 @.73 @Para @0 @0
 @kb @KV-220 @.19 @Perp @0 @12

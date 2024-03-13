@@ -1,17 +1,3 @@
-2024-02-10
-
-Pradesh #2
-@k @T-80B @~1.5 @Diag
-@k @T-80B @~.9 @Near-para
-@k @2S25 @~2 @Perp
-@k @T-72AV (TURMS-T) @~1.3 @perp
-@k @BMP-3 @~2 @perp @0 @0
-
-2024-02-05
-
-Pradesh #2
-@k @MBT2000 @~1.9 @Perp @0 @0
-@kb @T-90A @~1.9 @perp @0 @0
 
 2024-01-31
 
@@ -30,11 +16,6 @@ Pradesh #2
 @k @T-69 II-G @1.27 @diag @0 @0
 @kb @T-90A @1.94 @Diag @0 @0
 
-@k @T-90A @~1.3 @Para @0 @0
-@k @2S25 @~1.7 @Para @0 @0
-@kb @T-90A @~1.7 @Near-para @0 @0
-@kb @MBT2000 @~1.3 @Near-para @0 @0
-
 2024-01-26
 
 Pradesh #2
@@ -46,10 +27,6 @@ Pradesh #2
 Pradesh #2
 @k @T-72AV (TURMS-T) @1.75 @Para @0 @0
 @k @T-64A (1971) @1.81 @Diag @0 @0
-
-Pradesh #2
-@k @T-80B @~1.8 @Perp
-@k @ZTZ-99II @~1.5 @Diag @0 @0
 
 2024-01-01
 

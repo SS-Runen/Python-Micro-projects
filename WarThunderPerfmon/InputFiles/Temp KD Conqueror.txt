@@ -22,11 +22,6 @@ Pradesh #2
 @k @Type 59 @1.6 @Diag @21 @0
 @k @M48 @1.43, 1.36 @Para, para @20, 18 @0, 0
 
-2024-01-27
-
-Pradesh #2
-@k @TO 55 @~1.5
-
 Pradesh #2
 @k @T-54 (1947) @1.19 @Perp @6 @0
 @k @ZSU-57-2 @1.38 @Perp, para @12, 0 @0, 0
@@ -50,13 +45,6 @@ Pradesh #2
 Pradesh #2
 @k @Obj 268 @.75 @Perp @0 @0
 @k @T-54 (1951) @1.31 @Para @0 @0
-
-2023-12-23
-
-Mozdok [Battle]
-@K @T-54 ? @~1.2 @Para
-@k @2S3M @~1.1 @Para @0 @0
-@kb @Type 62 @.8 @Perp @0 @0
 
 2023-11-08
 

@@ -40,24 +40,8 @@ Flanders
 
 KD records for maps on the avoidance list will be removed. This was implemented on Aug. 14, 2023, and applies to all vehicles.
 
-2024-02-24
-
-Second Battle of El Alamein
-@k @Type 62 @1.1
-@k @T-54 @2 @Perp
-
-
-2024-02-19
-
-Pradesh #2
-@k @IS-4M @~1.3 @Diag @0 @0
-
 
 2024-02-14
-
-Second Battle of El Alamen [Battle]
-@k @T-34-100 @~1.4 @diag @0 @0
-@k @SU-100P @~.9 @perp, diag
 
 Second Battle of El Alamein
 @k @BTR-ZD @.97 @diag @60 @0
@@ -85,12 +69,6 @@ Pradesh #2
 @k @T-54 (1947) @1.66, 1.64 @diag, para @31, 19 @0, 0
 
 Pradesh #2
-@k @T-54 @~2 @Diag @0 @0
-@k @IS-6 @~1 @Perp
-@k @ZSD
-@kb @2S3M @~.8 @Perp @0 @0
-
-Pradesh #2
 @k @IS-4M @1.76 @Para @0 @0
 @kb @PT-76-57 @.6 @Perp @0 @0
 @kb @T-54 (1949) @2.03 @Para @0 @0
@@ -105,7 +83,6 @@ Pradesh #2
 
 2024-01-30
 
-https://warthunder.com/en/tournament/replay/165676538084415488
 Second Battle of El Alamein
 @k @2S3M @2.54, 2.3 @Perp, para @39, 0 @0, 0
 @k @T-54 (1949) @2.66 @Diag @0 @0
@@ -122,10 +99,6 @@ Second Battle of El Alamein
 @k @IS-6 @1.49 @Para @0 @0
 @k @T-54 (1949) @1.02 @Diag @29 @0
 @k @BTR-ZD @.56 @diag @0 @0
-
-Sands of Sinai
-@k @IS-3 @~1.5 @Perp, perp
-@k @IS-4M @~1.4 @perp @0 @0
 
 Second Battle of El Alamein
 @k @IS-6 @.38 @Para @16 @0
