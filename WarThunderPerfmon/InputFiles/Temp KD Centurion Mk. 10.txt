@@ -40,6 +40,12 @@ Flanders
 
 KD records for maps on the avoidance list will be removed. This was implemented on Aug. 14, 2023, and applies to all vehicles.
 
+2024-03-15
+
+Mozdok [Domination]
+@k @T-44-100 @1.13 @Para @0 @26
+@k @ASU-85 @.97 @Para @-1 @0
+@K @T-54 (1949) @1.38 @Diag @0 @0
 
 2024-02-14
 
