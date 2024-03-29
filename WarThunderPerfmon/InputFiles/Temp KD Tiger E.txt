@@ -37,6 +37,13 @@ Middle East (new 2023-10-10)
 Test Site 2271
 Flanders
 
+2024-03-29
+
+Sands of Sinai [Battle]
+@k @T-34-85 (S53) @.91 @Perp @0 @0
+@k @M4A2 (76) W @.97 @diag @0 @0
+@k @M4A1 (76) W @.92, .92 @diag, @para @-2, 0 @0, 0
+
 2024-01-29
 
 Fields of Normandy
