@@ -37,5 +37,5 @@ Middle East (changed 2023-10-10)
 Test Site 2271
 Flanders
 Fire Arc Mini (changed 2023-12-27)
-Sands of Sinai (changed 2024-01-01) Skip for BR 6 and up.
+Sands of Sinai (changed 2024-01-01) Skip for BR 7.7 and up.
 Eastern Europe (changed 2024-12-01)
