@@ -37,6 +37,19 @@ Middle East (new 2023-10-10)
 Test Site 2271
 Flanders
 
+2024-04-07
+
+Pradesh #2
+@K @BMP-2 @1.23 @Perp @0 @0
+@k @T-55AMD-1 @1.25 @Para @0 @0
+@k @T-62M-1 @1.18 @perp @21 @0
+@k @Obj 906 @1.33 @para @0 @0
+@k @T-55AMD-1 @1.87, 1.87 @Near-para, para @0, 0 @0, 0
+@k @BMP-1 @1.76 @Para @0 @0
+
+Pradesh #2
+@k @WMA301 @1.87 @diag @0 @0
+
 2024-03-28
 
 Mozdok [Battle]

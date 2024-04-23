@@ -39,6 +39,12 @@ Flanders
 
 Event, Vehicle, Distance, Orientation, Speed, SlefSpeed
 
+2024-04-12
+
+Second Battle of El Alamein
+@k @2S25 @2.45 @diag @0 @0
+@k @2S25 @1.78, 1.78 @diag, near-para @19, 0 @0, 0
+
 2024-03-18
 
 Pradesh #2
