@@ -3,13 +3,15 @@ Settings
 
 Set "Aim Sensitivity" to 15. This makes the sight move slower, making adjustments for long range more precise.
 
+-------------------
+Respawn Rule Change
+
+In 2024-04-24, respawns after deaths to targets less than one thousand meters away are allowed. This policy is a modification of the respawn rule in 2021-10-04. The old rule was that any death to a high-priority target (T-54 series, T-34-85 series, T64A etc.) cannot be "avenged" or unfairly balanced out using knowledge of the killer's location. The rule was changed because good maps are extremely rare. Before the map changes of 2024, there was high chance to get one or two good maps after ten battles. Now, it normally takes fifteen to twenty battles to get a good map regardless of battle rating.
+
 ---------
 Good Maps
 
 Pradesh #2
-
-Pradesh #1
-- C point and B point are both urban in this version. Neither can be shot at from long range.
 
 Second Battle of El Alamein #1 [Domination]
 - Unlike the Battle version, the zones cannot all be accessed thru cover. A point can be shot at from long distance and multiple angles, though some spots require going thru close-range combat and can be close range flanked easily.
