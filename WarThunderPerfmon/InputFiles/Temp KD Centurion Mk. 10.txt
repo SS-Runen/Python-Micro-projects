@@ -40,6 +40,11 @@ Flanders
 
 KD records for maps on the avoidance list will be removed. This was implemented on Aug. 14, 2023, and applies to all vehicles.
 
+2024-04-29
+
+Pradesh #2
+@kb @PT-76-57 @.8 @near-perp @0 @0
+
 2024-04-24
 
 Pradesh #2
