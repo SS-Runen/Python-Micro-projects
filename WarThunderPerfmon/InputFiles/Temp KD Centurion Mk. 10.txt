@@ -53,10 +53,10 @@ Pradesh #2
 @kb @T-54 (1947) @0.26 @Para @4 @26
 
 Pradesh #2
-@k @Typ 63 @.8
-@k @Type 62 @~1.8
-@k @T-44-100 @~1.8 @para @0 @0
-@k @T-54 (1949) @~.1 @perp
+@k @Type 63 @.72, .71 @perp, perp @21, 0 @0, 0
+@k @Type 62 @1.96, 1.96 @near-perp, near-perp @19, 0 @0, 0
+@k @T-44-100 @2 @diag @0 @0
+@k @T-54 (1949) @0.27 @near-perp @0 @0
 
 Pradesh #2
 @k @T-54 (1947) @1.12, 1.11, 1.10 @diag, perp, perp @0, 21, 0 @0, 0, 0

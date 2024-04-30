@@ -1,3 +1,15 @@
+2024-04-30
+
+Pradesh #2
+https://warthunder.com/en/tournament/replay/199420820524789409
+@k @2S6 @2.32 @Para @0 @0
+*@kb @T-64B @2.2 @Para @0 @0
+
+2024-04-30
+
+Pradesh #2
+@k @2S6 @2.32 @Para @0 @0
+@kb @T-64B @2.26 @Para @0 @0
 
 2024-04-25
 
@@ -14,8 +26,9 @@ Mozdok
 2024-04-20
 
 Second Battle of El Alamein
+@k @2S6 @3.18 @Perp @0 @0
 @kb @Obj 292 @0.01 @Perp @0 @0
-@kb @BMP-2 @~1.9 @Para
+@kb @BMP-2 @2.25 @Para @10 @0
 
 Second Battle of El Alamein [Battle]
 @k @ZTZ59A @~1.6 @near-perp
