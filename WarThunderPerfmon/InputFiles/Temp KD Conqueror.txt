@@ -10,18 +10,25 @@ Poland two points in town
 Test Site 2271
 Flanders
 
-Unlike the Centurion MK. 10 custom sight, the Conqueror sight does not have any difference between HESH and APDS.
-For the Centurion Mk. 10, an increase of one hundred meters for HESH rounds is needed.
+Unlike the Centurion MK. 10 custom sight, the Conqueror cold-war custom sight does not have any difference between HESH and APDS.
+For the Centurion Mk. 10, an increase of one hundred meters for HESH rounds is needed at ranges under 1500.
 
 KD records for maps on the avoidance list will be removed. This was implemented on Aug. 14, 2023, and applies to all vehicles.
+
+Shots fired using the commander's gun sight will land in the upper right sight quadrant slightly above the horizontal line/sight x-axis.
+
+2024-05-06
+
+Pradesh #2
+@k @Type 59 @1.81, 1.81 @perp, perp @12, 0 @0, 0
 
 2024-04-26
 
 Pradesh #2
-@kb @Type 62 @0.1 @Perp @0 @0
-@k @T-54 @~1.5 @Perp
-@k @ZSU-57-2 @~1.1 @Perp @0 @0
-@k @T-54 (1947) @~0.04 @Para @0 @0
+@kb @Type 62 @0.15 @Perp @0 @0
+@k @T-54 (1951) @1.83 @Perp @0 @0
+@k @ZSU-57-2 @1.09, 1.09 @diag, diag @12, 0 @0, 0
+@k @T-54 (1947) @0.22 @Para @0 @0
 
 2024-02-06
 
