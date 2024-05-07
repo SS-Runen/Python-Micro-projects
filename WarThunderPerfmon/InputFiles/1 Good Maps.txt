@@ -8,6 +8,16 @@ Respawn Rule Change
 
 In 2024-04-24, respawns after deaths to targets less than one thousand meters away are allowed. This policy is a modification of the respawn rule in 2021-10-04. The old rule was that any death to a high-priority target (T-54 series, T-34-85 series, T64A etc.) cannot be "avenged" or unfairly balanced out using knowledge of the killer's location. The rule was changed because good maps are extremely rare. Before the map changes of 2024, there was high chance to get one or two good maps after ten battles. Now, it normally takes fifteen to twenty battles to get a good map regardless of battle rating.
 
+-----------------------------
+Kill/Death Distance Filtering
+
+- Starting from May 2024, long range kills will get priority. Other games or forms of leisure will be prioritized over close range K/D records. These are the thresholds:
+
+BR <= 6.0: Range >= 1.00 km, adapted to Tiger E & Sherman Vc
+BR <= 9.0: Range >= 1.50 km, adapted to Centurion Mk. 10, Conqueror, Rooikat, and vehicles with a laser rangefinder.
+BR <= 13.0: Range >= 2.00 km, adapted to high-velocity APFSDS.
+
+
 ---------
 Good Maps
 
@@ -21,4 +31,7 @@ Second Battle of El Alamein #1 [Domination]
 
 Second Battle of El Alamein #1 [Battle]
 - Only play the side where the defense zone can be covered from line g, around 1.3 km away. Skip the side where the defense zone is in a path between two mountains. It cannot be defended from long range. Mountains block all long-range lines of sight.
+
+Sands of Sinai [Battle]
+- Sands of Sinai battle mode is only good for the Tiger or Sherman Vc and lower battle ratings (6.0 & below). Unlike the domination mode, the close-range flank and middle of the map don't consume your tickets. They are exclusively for fighting and can be somewhat bypassed if you shoot and reload quick enough. Fights are more long-range since the zones are both very close to the spawn points. To reach the zones, you have to get kills.
 

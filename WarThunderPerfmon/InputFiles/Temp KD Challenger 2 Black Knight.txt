@@ -1,9 +1,9 @@
 2024-04-12
 
 Pradesh #2
-@k @T-90M @~1.8 @Para
-@k @Pantsir S1 @~1.8
-@kb @BMP-2M @~1.8 @Perp
+@k @T-90M @1.88 @Para @-3 @0
+@k @Pantsir S1 @1.85, 1.85 @diag, diag @1, 0 @0, 0
+@kb @BMP-2M @1.76 @Perp @0 @0
 
 Pradesh #2
 @k @BMP-2M @2.08 @diag @0 @0
@@ -15,6 +15,11 @@ Pradesh #2
 @k @T-80UK @1.42 @Perp @0 @0
 @k @T-90M @1.82 @Diag @0 @0
 @k @Pantsir S1 @2.03 @Perp @0 @0
+
+Pradesh #2
+@k @T-72B3 @1.85 @para @-3 @0
+@k @2S25M @1.82 @perp @32 @0
+@k @2S25 @0.08 @diag @0 @0
 
 2024-02-23
 
