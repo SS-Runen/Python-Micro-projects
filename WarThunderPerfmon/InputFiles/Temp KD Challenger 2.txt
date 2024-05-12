@@ -1,3 +1,19 @@
+2024-05-10
+
+Second Battle of El Alamein
+@k @T-80B @1.14, 1.14 @diag, diag @2, 0 @0, 0
+@k @BMP-2M @2.40 @near-para @0 @0
+@k @T-90A @1.48, 1.48 @near-para, near-para @0, 0 @0, 0
+@k @T-80UD @0.97 @Perp @0 @0
+@K @T-90A @1.05, 1.05 @diag, diag @23, 0 @0, 0
+@k @ZSU-23-4M4 @Para @38 @0
+
+Second Battle of El Alamein
+@k @T-90A @1.3 @diag @0 @0
+@k @T-90A @2.09, 2.10 @diag, para @-3, 0 @0, 0
+@k @2S25 @2.11 @diag @0 @0
+@kb @Khrizantema-S @0.05 @Para @0 @0
+
 2024-04-30
 
 Pradesh #2

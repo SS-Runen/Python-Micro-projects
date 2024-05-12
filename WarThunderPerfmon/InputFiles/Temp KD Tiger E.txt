@@ -37,6 +37,13 @@ Middle East (new 2023-10-10)
 Test Site 2271
 Flanders
 
+2024-05-10
+
+Second Battle of El Alamein
+@k @M10 @2.68 @para @0 @0
+@k @IS-1 @2.61 @Diag @0 @0
+@k @M4/T4 @1.83 @para @0 @0
+
 2024-03-29
 
 Sands of Sinai [Battle]
