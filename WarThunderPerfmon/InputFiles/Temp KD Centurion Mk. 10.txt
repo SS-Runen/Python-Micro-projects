@@ -40,6 +40,21 @@ Flanders
 
 KD records for maps on the avoidance list will be removed. This was implemented on Aug. 14, 2023, and applies to all vehicles.
 
+2024-05-19
+
+@K @T-54 (1947) @1.55 @near-para @0 @0
+@k @IS-4M @1.67, 1.66 @diag, para @21, 0 @0, 0
+@k @T-54 (1949) @1.56 @near-perp @0 @0
+
+2024-05-14
+
+Pradesh #2
+@k @T-54 (1949) @~1.3 @Perp @0 @0
+@k @T-44 @~1.3 @Para @0 @0
+@k @SU-100P @~1.6
+@k @SU-100P @~1.8 @
+@k @T-54 (1949) @~1.9 @Para
+
 2024-05-04
 
 Second Battle of El Alamein

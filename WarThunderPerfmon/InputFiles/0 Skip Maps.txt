@@ -40,3 +40,5 @@ Fire Arc Mini (changed 2023-12-27)
 Sands of Sinai [Battle] (changed 2024-01-01) Skip for BR 6.3 and up.
 Sands of Sinai [Domination] Skip for all battle ratings.
 Eastern Europe (changed 2023-12-01)
+Mozdok Mini
+Mozdok [Battle], Skip for B.R. 10.0 and up. Probable range of combat is 1.5 km.
