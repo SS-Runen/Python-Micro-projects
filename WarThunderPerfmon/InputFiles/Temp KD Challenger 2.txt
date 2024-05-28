@@ -1,5 +1,20 @@
-2024-05-20
+2024-05-25
 
+Pradesh #2
+@k @T-90A @1.86 @para @0 @0
+
+Pradesh #2
+@k @2S25 @1.84 @diag @0 @0
+@k @BMP-2M @1.69 @near-perp @0 @0
+@kb @T-72AV (TURMS-T) @1.77 @para @0 @0
+
+Pradesh #1
+@k @Khrizantema-S @1.79 @near-para @4 @0
+@k @QN506 @1.55, 1.55 @near-para, near-para @8, 0 @0, 0
+@k @2S6 @2.02 @perp @39 @0
+@k @T-90A @1.46 @para @0 @0
+
+2024-05-20
 
 Second Battle of El Alamein
 *@kb @T-80B @2.59 @Para @0 @0
