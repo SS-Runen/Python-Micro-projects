@@ -37,6 +37,23 @@ Middle East (new 2023-10-10)
 Test Site 2271
 Flanders
 
+2024-06-01
+
+Pradesh #2
+@k @T-62M-1 @~1.3 @Perp @0 @0
+@K @T-62M-1 @~1.8 @Para @0 @0
+@kb @T-55A @0.04 @near-perp @0 @0
+
+Sands of Sinai [Battle]
+@k @T-55AMD-1 @~1.6
+@k @T-55AMD-1 @~1.6 @perp
+@kb @ZTZ59A @~1.6 @near-para
+
+Sands of Sinai [Battle]
+@k @CM113 @1.9 @perp @0 @0
+@kb @CM113 @1.9 @para @0 @0
+@kb @2S25 @~2 @near-perp @0 @0
+
 2024-04-07
 
 Pradesh #2

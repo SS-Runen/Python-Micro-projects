@@ -39,6 +39,17 @@ Flanders
 
 Event, Vehicle, Distance, Orientation, Speed, SlefSpeed
 
+2024-06-01
+
+Sands of Sinai [Battle]
+@k @Obj 122 MTC @~1.9 @perp @0 @0
+@k @Obj 120 @~1.9 @perp, perp
+@k @T-55AMD-1 @~1.8 @para
+
+Pradesh #1
+@k @WMA301 @~2.2 @perp
+@k @T-55AMD-1 @~2.2 @perp
+
 2024-05-22
 
 Pradesh #2
