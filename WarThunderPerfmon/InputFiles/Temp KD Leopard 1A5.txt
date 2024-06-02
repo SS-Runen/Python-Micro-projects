@@ -42,13 +42,14 @@ Event, Vehicle, Distance, Orientation, Speed, SlefSpeed
 2024-06-01
 
 Sands of Sinai [Battle]
-@k @Obj 122 MTC @~1.9 @perp @0 @0
-@k @Obj 120 @~1.9 @perp, perp
-@k @T-55AMD-1 @~1.8 @para
+@k @Obj 120 @1.8, 1.8 @perp, perp @24, 0 @0, 0
+@k @Typ 59 @1.43, 1.43 @diag, near-perp @31, 0 @0, 0
+@k @Obj 122MT "MC" @1.72 @near-perp @0 @0
+@k @T-55AMD-1 @1.8, 1.8 @para, para @35, 0 @0, 0
 
 Pradesh #1
-@k @WMA301 @~2.2 @perp
-@k @T-55AMD-1 @~2.2 @perp
+@k @WMA301 @2.23, 2.23 @perp, perp @38, 0 @0, 0
+@k @T-55AMD-1 @2.28 @perp @0 @0
 
 2024-05-22
 
