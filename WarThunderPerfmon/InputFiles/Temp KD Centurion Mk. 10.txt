@@ -40,11 +40,46 @@ Flanders
 
 KD records for maps on the avoidance list will be removed. This was implemented on Aug. 14, 2023, and applies to all vehicles.
 
+2024-06-18
+
+Pradesh #2
+@k @T-44-100 @1.5 @para @0 @0
+
+2024-06-13
+
+Pradesh #2
+@k @T-54 (1947) @1.67, 1.69 @diag, para @0, 0 @0, 0
+@kb @T-54 (1947) @.77 @near-para @0 @0
+
+Second Battle of El Alamein
+@k @T-54 (1949) @2.71 @para @0 @0
+
+2024-06-08
+
+Pradesh #1
+@k @IS-3 @1.74, 1.77 @diag, near-perp @0, 0 @0, 0
+
+Pradesh #1
+@k @T-54 (1949) @1.85 @diag @0 @0
+@k @T-44 @1.64 @para @0 @0
+
+Pradesh #2
+@kb @Type 63 @1.87 @diag @0 @0
+@k @T-54 (1949) @.1 @Diag @0 @0
+
 2024-05-19
 
+Pradesh #2
 @K @T-54 (1947) @1.55 @near-para @0 @0
 @k @IS-4M @1.67, 1.66 @diag, para @21, 0 @0, 0
 @k @T-54 (1949) @1.56 @near-perp @0 @0
+
+Mozdok [Battle]
+@k @IS-6 @.89 @para @23 @0
+@k @IS-4M @1.32, @near-para, near-para @6, 0 @0, 0
+@k @IS-4M @.98, .97 @perp, perp @19, 0 @0, 0
+@k @IS-6 @.75, .75 @para, para @0, 6 @0, 0
+@k @ASU-85 @1.35 @diag @0 @0
 
 2024-05-14
 
@@ -103,9 +138,6 @@ Pradesh #2
 @k @T-44 @1.6 @near-para @0 @0
 
 2024-04-09
-
-Pradesh #2
-@k @T-54 (1949) @~1.2 @Diag, diag
 
 Pradesh #2
 @k @T-54 (1949) @1.8 @diag @0 @0
@@ -254,7 +286,7 @@ Mozdok
 @k @IS-4M @1.12 @Diag @-4 @0
 @k @2S3M @1.77, 1.76 @Perp, perp @11, 0 @0, 0
 
-Mozdok #1
+Mozdok
 @k @SU-100P @.52 @para @0 @0
 @k @IS-3 @1.57 @Perp @0 @0
 @kb @IS-3 @1.04 @Para @0 @0

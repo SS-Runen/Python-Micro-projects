@@ -15,7 +15,7 @@ Jungle
 Abandoned Town
 Berlin
 Cargo Port
-Ardennes / Wallonia Domination
+Ardennes / Wallonia
 European Province/Eastern Europe no windmill hill
 American Desert [Domination]
 Eastern Europe (Points all in central town)
@@ -42,3 +42,5 @@ Sands of Sinai [Domination] Skip for battle ratings up to 10.0.
 Eastern Europe (changed 2023-12-01)
 Mozdok Mini (changed 2023-01-01)
 Mozdok [Battle], Skip for B.R. 10.0 and up. Probable range of combat is 1.5 km.
+Sands of Sinai (changed 2024-06-19, Major Update, Seek and Destroy)
+Tunisia
