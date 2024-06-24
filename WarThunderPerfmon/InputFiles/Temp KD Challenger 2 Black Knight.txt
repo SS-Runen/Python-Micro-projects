@@ -1,8 +1,9 @@
 2024-06-22
 
 Pradesh #2
-@k @2S25M @~1.8 @near-perp
-@kb @VT4A1 @~1.3 @para @0 @0
+@k @2S25M @1.87 @diag @0 @0
+@k @T-80BVM @1.34 @para @0 @0
+@kb @VT4A1 @1.26 @near-perp @0 @-8
 
 @k @T-90M @2.11 @near-perp @0 @0
 

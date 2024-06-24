@@ -1,5 +1,11 @@
 2024-06-24
 
+Pradesh #1
+@k @BMP-3 @~1.7 @near-perp @0 @0
+@k @BMP-2M @~1.7 @near-perp @0 @0
+@k @ZTZ96A (P) @~1.6 @diag @0 @0
+
+Pradesh #1
 @k @2S25M @~2 @perp
 @k @Obj 292 @~2
 @k @T-72 @~1.6

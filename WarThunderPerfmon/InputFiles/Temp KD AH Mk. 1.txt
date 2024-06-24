@@ -1,0 +1,14 @@
+
+KD records for maps on the avoidance list will be removed. This was implemented on Aug. 14, 2023, and applies to all vehicles.
+
+2024-06-24
+
+@k @Ka-52 @4.5 @perp @-4 @0
+
+Surroundings of Volokolamsk
+@kb @Ka-50 @7.77 @diag @0 @0
+
+Sands of Sinai [Battle]
+@k @Ka-52 @6.2 @perp @0 @0
+
+

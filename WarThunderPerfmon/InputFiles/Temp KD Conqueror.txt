@@ -25,7 +25,7 @@ KD records for maps on the avoidance list will be removed. This was implemented 
 2024-06-20
 
 Pradesh #1
-@k @Obj 268 @1.6 @para @0 @0
+@k @Obj 268 @1.68 @para @0 @0
 
 Pradesh #1
 @kb @IS-6 @1.63 @near-perp @0 @4
