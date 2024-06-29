@@ -1,18 +1,5 @@
-Jungle
+Naafiri
+- Lacks waveclear. Slow auto-attacks. Requires short-range jump (3rd) and projectile AoE (1st) to clear. Cooldowns result in less clear speed than Anivia even at level six and up.
 
-39179-VSAmN-PZZEt
+2024-06-26
 
-Mid
-
-Top
-
-Support
-Cut Out Until Next Division
-
-ADC
-2023-06-06
-29-21
-Karthus
-10-7
-Sivir
-9-4

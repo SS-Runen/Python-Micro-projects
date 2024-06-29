@@ -22,6 +22,10 @@ BR <= 13.0: Range >= 2.00 km, adapted to high-velocity APFSDS.
 Good Maps
 
 Pradesh #2
+- One urban and "closed-off" zone that is hard to snipe at, one mid-range zone, and one zone that can only be reached by passing through an exposed road.
+
+Pradesh #1
+- The zones are more urban easier to take without getting shot, but teams often take exposed positions to shoot at capture zones.
 
 Second Battle of El Alamein #1 [Domination]
 - Unlike the Battle version, the zones cannot all be accessed thru cover. A point can be shot at from long distance and multiple angles, though some spots require going thru close-range combat and can be close range flanked easily.
@@ -31,4 +35,8 @@ Second Battle of El Alamein #1 [Domination]
 
 Second Battle of El Alamein #1 [Battle]
 - Only play the side where the defense zone can be covered from line g, around 1.3 km away. Skip the side where the defense zone is in a path between two mountains. It cannot be defended from long range. Mountains block all long-range lines of sight.
+
+Fire Arc #2
+- Normal encounters are at 1300 m and above, even when shooting at the central urban area.
+
 

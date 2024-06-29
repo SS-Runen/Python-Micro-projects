@@ -44,3 +44,9 @@ Mozdok Mini (changed 2023-01-01)
 Mozdok [Battle], Skip for B.R. 10.0 and up. Probable range of combat is 1.5 km.
 Sands of Sinai (changed 2024-06-19, Major Update, Seek and Destroy)
 Tunisia
+
+----------
+2024-06-25
+
+Un-announced changes to Hellfire spalling. There were at least two incidents where ammunition in the rack was not detonated. It could be due to the ammunition position being switched from upright to parallel with the floor, but it could also be reduced cook-off chance due to the auto-loader (carousel, other smaller modules announced with "Seek and Destroy").
+
