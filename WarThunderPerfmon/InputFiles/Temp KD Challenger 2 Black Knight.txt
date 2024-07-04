@@ -7,6 +7,9 @@ Pradesh #2
 
 @k @T-90M @2.11 @near-perp @0 @0
 
+Second Battle of El Alamein
+@kb @2S25M @2.23 @near-para @4 @0
+
 2024-04-12
 
 Pradesh #2

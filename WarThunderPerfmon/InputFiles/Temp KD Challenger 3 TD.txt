@@ -47,7 +47,7 @@ Second Battle of El Alamein
 @kb @2S25M @2.28 @diag @0 @0
 
 Pradesh #2
-@k @T-90M @~1.8 @para
+@k @T-90M @1.84 @para @1 @0
 
 Pradesh #1
 @k @T-80 @~1.7 @near-perp

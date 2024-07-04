@@ -2,6 +2,8 @@ Skip Maps for Helicopters
 Aral Sea - No cover from ground AA.
 Iberian Castle
 North Holland
+Tunisia
+Arctic Base - No cover from enemy airfields. Too close-range. Partial cover from ground AA is good, but air-to-air battles are affected by random spawning.
 
 Good Maps for Helicopters
 Sands of Sinai - Covered from ground AA despite being unable to shoot them. Limited cover for both helicopter bases.
@@ -9,7 +11,13 @@ Sands of Sinai - Covered from ground AA despite being unable to shoot them. Limi
 2024-07-02
 
 Sands of Sinai
-@k @KA50
+@K @Mi-28N @4.61 @perp @22 @0
+@K @Mi-28N @1.4 @perp @92 @0
+@k @Ka-50 @4.2 @diag @111 @0
+@kb @Mi-28N @5.51 @diag @0 @22
+
+Alaska
+@k @Ka-52 @5.8 @perp @194 @0
 
 2024-06-24
 
