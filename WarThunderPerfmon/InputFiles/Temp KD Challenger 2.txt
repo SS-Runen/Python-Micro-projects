@@ -1,20 +1,24 @@
 2024-07-04
 
 Pradesh #1
-@k @Obj 292 @~1.7 @perp @0 @0
-@k @T-90A @~1.7 @perp, perp
+@k @Obj 292 @1.71 @perp @0 @0
+@k @T-90A @1.7, 1.7 @near-perp, near-perp @38, 0 @0, 0
 
 2024-06-24
 
 Pradesh #1
-@k @BMP-3 @~1.7 @near-perp @0 @0
-@k @BMP-2M @~1.7 @near-perp @0 @0
-@k @ZTZ96A (P) @~1.6 @diag @0 @0
+@k @BMP-2M @1.66 @diag @0 @0
+@k @T-80U @1.75, 1.75 @diag, diag @-4, 0 @0, 0
+@k @T-80B @1.05 @perp @45 @0
+@k @T-72A @1.65, 1.64 @diag, diag @31, 0 @0, 0
+@k @BMP-2M @1.67 @para @0 @0
 
 Pradesh #1
-@k @2S25M @~2 @perp
-@k @Obj 292 @~2
-@k @T-72 @~1.6
+@k @2S25M @2.24, 2.24 @perp, perp @-2, 0 @0, 0
+@k @Obj 292 @1.84 @near-perp @0 @0
+@k @T-72AV (TURMS-T) @1.75 @diag @0 @0
+@k @T-72AV (TURMS-T) @2.23 @perp @-1 @0
+@k @BMP-2M @1.12 @perp @0 @0
 
 2024-06-14
 

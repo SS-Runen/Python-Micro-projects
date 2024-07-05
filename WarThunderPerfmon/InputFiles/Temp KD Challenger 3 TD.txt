@@ -50,9 +50,9 @@ Pradesh #2
 @k @T-90M @1.84 @para @1 @0
 
 Pradesh #1
-@k @T-80 @~1.7 @near-perp
-@k @BMP-2M @~1.7 @near-perp @0 @0
-@k @
+@k @T-80UK @1.79, 1.79 @diag, diag @10, 0 @0, 0
+@k @BMP-2M @1.78 @perp @0 @0
+@k @T-80UK @.59 @near-perp @0 @0
 
 Pradesh #1
 @kb @T-90M @.1 @near-para @0 @0
