@@ -42,14 +42,29 @@ Rooikat Handling
 
 - Without the machine gun, there is no easy way to tell if the gun is pointing beyond and over your cover. In cases where it is hard to tell through the gun sight, point the gun at the target first. After pointing the gun, use the 3rd person view or binoculars to check while moving into line of sight.
 
+2024-06-07
+
+Second Battle of El Alamein
+@k @T-55AMD-1 @2.72 @para @0 @0
+@k @T-55AMD-1 @1.88, 1.88 @diag, diag @48, 0 @0, 0
+@k @BMD-4 @2.28 @diag @0 @0
+
+Pradesh #2
+@k @T-64A (1971) @1.83 @para @0 @0
+@k @BMP-3 @1.7 @diag @16 @0
+@kb @T-64A (1971) @1.83 @near-perp @0 @0
+@kb @ZTZ88A @2.03 @diag @0 @0
+
 2024-06-26
 
 Pradesh #1
-@k @PTL02 @~1.7 @diag
-@k @T-62M-1 @~1.8 @Near-para @0 @0
-@k @T-55AMD-1 @~1.8 @near-perp @0 @0
-@k @BMP-3 @~1.6 @para @0 @0
-@kb @T-55AMD-1 @~1.8 @Para
+@k @PTL02 @1.8 @diag @7 @0
+@k @T-62M-1 @1.81 @Near-para @0 @0
+@k @T-55AMD-1 @1.76 @near-perp @0 @0
+@k @PGZ09 @1.62 @para @0 @0
+@k @T-55AMD-1 @1.7 @para @0 @0
+@k @T-62M-1 @.67 @near-perp @38 @0
+@kb @T-55AMD-1 @1.83 @Para @0 @6
 
 2024-06-21
 
@@ -237,9 +252,6 @@ Mozdok
 @k @2S25 @1.03 @Diag @0 @0
 @k @ZSU-57-2 @1.78 @para @0 @0
 @kb @T-55AMD-1 @1.57 @Near-perp @0 @44
-
-Middle East
-@kb @AFT09 @.06 @Diag @0 @0
 
 2023-05-01
 
