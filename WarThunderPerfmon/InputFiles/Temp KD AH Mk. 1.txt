@@ -1,12 +1,35 @@
 Skip Maps for Helicopters
 Aral Sea - No cover from ground AA.
-Iberian Castle
-North Holland
-Tunisia
+Iberian Castle - Ground AA.
+North Holland - Ground AA.
+Tunisia - Ground AA.
 Arctic Base - No cover from enemy airfields. Too close-range. Partial cover from ground AA is good, but air-to-air battles are affected by random spawning.
+Flanders - Spawn points are too close. Ground AA.
+Poland - Ground AA can prevent high flight and allow ground-huggers to hide from radar.
+Fire Arc - Ground AA can prevent high flight and allow ground-huggers to hide from radar.
+Normandy - Flat. Points are in town. Ground AA can prevent high flight and allow ground-huggers to hide from radar.
+Abandoned Town - No hard cover. Ground AA can prevent high flight and allow ground-huggers to hide from radar.
+Hurgen Forest - Flat with no cover.
+Fulda - Ground AA can prevent high flight and allow ground-huggers to hide from radar.
 
 Good Maps for Helicopters
-Sands of Sinai - Covered from ground AA despite being unable to shoot them. Limited cover for both helicopter bases.
+Sands of Sinai - Covered from ground AA despite being unable to shoot them. Limited cover for both helicopter bases that allows high flight against ground huggers.
+Vietnam - Hills cover both helicopter spawns from ground AA and each other. There are areas close to the base to fligh high enough to peak in and out from in case of ground huggers and ground AA.
+Pradesh - Good cover for both heli spawns against ground AA and ground-huggers.
+
+2024-07-16
+
+Middle East
+@k @Ka-50 @7
+
+Sands of Sinai
+@kb @Ka-52 @2
+@kb @Ka-52 @1
+
+2024-07-11
+
+Vietnam
+@k @Ka-50 @~6 @perp
 
 2024-07-02
 
