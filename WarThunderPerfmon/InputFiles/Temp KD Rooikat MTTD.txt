@@ -52,6 +52,13 @@ Pradesh #1
 @k @PTL02 @2 @Perp
 @kb @ZTZ88A @~2 @para
 
+Pradesh #2
+@k @BMP-3 @1.8 @para @0 @0
+@k @PTL02 @2.26 @near-perp @0 @0
+@k @BMP-2 @1.81 @near-para @0 @0
+@kb @ZTZ88A @2.28 @Para @0 @6
+@kb @ZTZ88A @2.32 @Para @0 @0
+
 2024-06-07
 
 Second Battle of El Alamein

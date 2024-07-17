@@ -11,13 +11,15 @@ Normandy - Flat. Points are in town. Ground AA can prevent high flight and allow
 Abandoned Town - No hard cover. Ground AA can prevent high flight and allow ground-huggers to hide from radar.
 Hurgen Forest - Flat with no cover.
 Fulda - Ground AA can prevent high flight and allow ground-huggers to hide from radar.
+American Desert - Flat without cover from ground AA or from enemy heli spawns. Open ko fast ATGMs.
+Sun City - Too much cover up to enemy heli spawns from either opposing spawn point.
 
 Good Maps for Helicopters
 Sands of Sinai - Covered from ground AA despite being unable to shoot them. Limited cover for both helicopter bases that allows high flight against ground huggers.
 Vietnam - Hills cover both helicopter spawns from ground AA and each other. There are areas close to the base to fligh high enough to peak in and out from in case of ground huggers and ground AA.
 Pradesh - Good cover for both heli spawns against ground AA and ground-huggers.
 
-2024-07-16
+2024-07-17
 
 Middle East
 @k @Ka-50 @7
