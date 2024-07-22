@@ -49,8 +49,12 @@ Pradesh #2
 @K @Shturm S @~1.7 @Para @0 @0
 
 Pradesh #1
-@k @PTL02 @2 @Perp
-@kb @ZTZ88A @~2 @para
+@k @Obj 435 @1.83 @diag @-2 @0
+@k @T-64A (1971) @2.11 @para @0 @0
+@k @Obj 122MT "MC" @1.63 @diag @0 @0
+@k @Shturm-S @1.71 @para @0 @0
+@k @CM25 @1.77 @para @0 @0
+@k @ZSU-23-4 @1.61 @diag @0 @0
 
 Pradesh #2
 @k @BMP-3 @1.8 @para @0 @0
