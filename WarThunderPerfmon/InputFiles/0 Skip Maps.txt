@@ -48,5 +48,7 @@ Tunisia
 ----------
 2024-06-25
 
-Un-announced changes to Hellfire spalling. There were at least two incidents where ammunition in the rack was not detonated. It could be due to the ammunition position being switched from upright to parallel with the floor, but it could also be reduced cook-off chance due to the auto-loader (carousel, other smaller modules announced with "Seek and Destroy").
+Un-announced changes to Hellfire spalling. Mostly untested.
+
+Additional modules added to many vehicles, including autoloader racks. There were at least two incidents where ammunition in the rack was not detonated. It could be due to the ammunition position being switched from upright to parallel with the floor, but it could also be reduced cook-off chance due to the auto-loader (carousel, other smaller modules announced with "Seek and Destroy").
 

@@ -39,6 +39,12 @@ Flanders
 
 Event, Vehicle, Distance, Orientation, Speed, SlefSpeed
 
+2024-07-26
+
+Pradesh #2
+@k @T-55AMD-1 @~2 @perp @0 @0
+@k @T-55AMD-1 @~1.8 @diag @0 @0
+
 2024-07-16
 
 Pradesh #1
