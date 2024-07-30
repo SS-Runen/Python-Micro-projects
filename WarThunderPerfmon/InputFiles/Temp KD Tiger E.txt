@@ -1,8 +1,14 @@
 2024-07-27
 
 Mozdok [Battle]
-@k @T-34-85 (D-5T) @~1.3 @para @0 @0
-@k @T-34-85 (Chinese) @~1.1
+@k @ZSU-37 @1.4 @near-para @0 @0
+@k @M24 @.99 @perp @0 @0
+@k @KV-122 @near-para @1.36 @para @0 @0
+@k @T-34-85 (Chinese) @1.37, 1.38 @para, para @0, 0 @0, 0
+@k @T-34-85 (Chinese) @1.12 @diag @0 @0
+
+Fields of Normandy
+@k @KV-2 @1.58 @near-perp @0 @0
 
 2024-05-22
 

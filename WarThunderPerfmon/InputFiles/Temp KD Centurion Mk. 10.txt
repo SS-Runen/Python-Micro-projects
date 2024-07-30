@@ -10,9 +10,10 @@ Pradesh #2
 2024-07-18
 
 Second Battle of El Alamein
-@k @PT-76-57 @~2.9 @Perp
-@k @IS-6 @~1.2
-@kb @IS-6 @~2.4 @para @0 @0
+*Note: The IS-6 was the same player killed at 1.2 km. The enemy was killed first.
+@k @PT-76-57 @3.15 @near-Perp @10 @0
+@k @IS-6 @1.21, 1.23 @perp, diag  @-6, 0 @0, 0
+@kb @IS-6 @3.15 @near-para @0 @0
 
 Pradesh #2
 @k @Obj 268 @1.84 @para @0 @0
@@ -27,7 +28,7 @@ Pradesh #2
 @kb @ASU-85 @~1.2 @perp @0 @0
 
 Pradesh #1
-@k @ASU-85 @~1.8 @perp
+@k @ASU-85 @1.82 @perp @9 @0
 
 Pradesh #2
 @k @PT-76B @1.84 @para @-6 @0

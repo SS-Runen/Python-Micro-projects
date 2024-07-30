@@ -44,10 +44,6 @@ Rooikat Handling
 
 2024-07-16
 
-Pradesh #2
-@k @T-64A @~1.9 @near-para @0 @0
-@K @Shturm S @~1.7 @Para @0 @0
-
 Pradesh #1
 @k @Obj 435 @1.83 @diag @-2 @0
 @k @T-64A (1971) @2.11 @para @0 @0
@@ -75,6 +71,10 @@ Pradesh #2
 @k @BMP-3 @1.7 @diag @16 @0
 @kb @T-64A (1971) @1.83 @near-perp @0 @0
 @kb @ZTZ88A @2.03 @diag @0 @0
+
+Pradesh #1
+@k @T-55AM-1 @1.86 @para @0 @0
+@kb @IT-1 @1.62 @para @0 @0
 
 2024-06-26
 
