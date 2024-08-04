@@ -6,15 +6,16 @@ Rooikat Handling
 2024-07-31
 
 Pradesh #2
-@k @Obj 685 @~1.7
-@k @T-62M-1 @~1.8 @para @0 @0
-@k @T-55AM-1 @~1.7 @near-para @0 @0
-@k @BMD-4 @~1.9 @perp @0 @0
-@k @2S25 @~1.9 @perp, perp
+@k @Obj 685 @1.73 @para @36 @0
+@k @T-62M-1 @1.76 @diag @0 @0
+@k @T-55AM-1 @1.77 @diag @0 @0
+@k @BMD-4 @1.91 @para @0 @0
+@k @2S25 @1.95 @diag @0 @0
 
 Pradesh #1
-@k @2S25 @2 @perp
-@kb @T-55AMD-1 @~1.7 @diag @0 @0
+@k @T-62 @1.76 @para @0 @0
+@k @2S25 @2.07 @diag @-20 @0
+@kb @T-55AMD-1 @1.78 @diag @0 @0
 
 2024-07-16
 

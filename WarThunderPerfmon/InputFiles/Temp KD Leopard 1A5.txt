@@ -33,8 +33,9 @@ Pradesh #2
 @k @T-55AMD-1 @~2 @near-para @0 @0
 
 Pradesh #1
-@k @T-55AMD-1 @~1.7 @para
-@kb @Obj 775 @1 @near-perp @0 @0
+@k @T-55AMD-1 @1.8 @para @18 @0
+@k @Obj 775 @1.56 @diag @0 @0
+@kb @Obj 775 @0.88 @near-perp @0 @0
 
 2024-06-21
 

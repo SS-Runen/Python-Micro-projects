@@ -13,11 +13,20 @@ Hurgen Forest - Flat with no cover.
 Fulda - Ground AA can prevent high flight and allow ground-huggers to hide from radar.
 American Desert - Flat without cover from ground AA or from enemy heli spawns. Open ko fast ATGMs.
 Sun City - Too much cover up to enemy heli spawns from either opposing spawn point.
+Cargo Port - Flat. Buildings block AA, but high-flying helicopters can be hit.
+Advance to the Rhine - Mostly flat, not enough cover from AA to counter low-flying targets, many buildings to hide in.
+Seversk-13 - Flying high, ~500 meters, will expose you to AA. Flat.
+Alaska - Hills too low to shield from AA or to allow high flight against ground-huggers.
 
 Good Maps for Helicopters
 Sands of Sinai - Covered from ground AA despite being unable to shoot them. Limited cover for both helicopter bases that allows high flight against ground huggers.
 Vietnam - Hills cover both helicopter spawns from ground AA and each other. There are areas close to the base to fligh high enough to peak in and out from in case of ground huggers and ground AA.
 Pradesh - Good cover for both heli spawns against ground AA and ground-huggers.
+
+2024-08-01
+
+Test Site 2271
+@k @Ka-50 @~5 @para
 
 2024-07-17
 
