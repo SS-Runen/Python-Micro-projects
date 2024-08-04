@@ -25,14 +25,18 @@ KD records for maps on the avoidance list will be removed. This was implemented 
 2024-08-04
 
 Pradesh #2
-@k T-54 @~1.7 @perp
-
+@k @ZSU-57-2 @1.6 @diag @26 @0
+@k @T-54 (1951) @1.21 @diag @0 @0
+@k @TO-55 @1.1 @diag @13 @0
+@k T-54 (1949) @1.74 @near-perp 28 @0
+@k @M53/59 @.71 @diag @-5 @0
+@k @T-54 (1947) @1.31 @diag @15 @0
 
 Pradesh #2
-@k @ZTZ58A @~1.7 @para @0 @0
-@k @Obj 268 @~1.2 @perp, perp
-@k @ZSU-85 @~1.7 @Diag @0 @0
-@k @2S1 @~.7 @near-perp @0 @0
+@k @ZTZ59A @1.8 @para @0 @0
+@k @Obj 268 @1.28, 1.28 @perp, perp @13, 0 @0, 0
+@k @SU-122-54 @1.76 @diag @0 @0
+@k @2S1 @.71 @near-perp @0 @0
 
 2024-07-30
 
