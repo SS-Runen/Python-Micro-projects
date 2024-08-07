@@ -2,6 +2,11 @@ Event, Vehicle, Distance, Orientation, Speed, SlefSpeed
 
 2024-07-31
 
+Pradesh #1
+@k @T-55AM-1 @1.76, 1.76 @perp, perp @-1, 0 @0, 0
+@k @T-64A (1971) @1.84 @diag @-3 @0
+@k @T-55AMD-1 @1.72 @para @0 @0
+
 Pradesh #2
 @k @Obj 120 @~1.7 @diag @0 @0
 
@@ -38,8 +43,6 @@ Pradesh #1
 @kb @Obj 775 @0.88 @near-perp @0 @0
 
 2024-06-21
-
-
 
 Pradesh #2
 @k @BMP-3 @1.71 @near-perp @-3 @0

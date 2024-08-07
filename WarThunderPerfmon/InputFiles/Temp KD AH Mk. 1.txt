@@ -17,30 +17,35 @@ Cargo Port - Flat. Buildings block AA, but high-flying helicopters can be hit.
 Advance to the Rhine - Mostly flat, not enough cover from AA to counter low-flying targets, many buildings to hide in.
 Seversk-13 - Flying high, ~500 meters, will expose you to AA. Flat.
 Alaska - Hills too low to shield from AA or to allow high flight against ground-huggers.
+Surroundings of Volokolamsk - No cover from AA to fly high and spot ground-huggers.
+Mozdok - No protection from ground AA at altitudes over 100 meters.
 
 Good Maps for Helicopters
 Sands of Sinai - Covered from ground AA despite being unable to shoot them. Limited cover for both helicopter bases that allows high flight against ground huggers.
 Vietnam - Hills cover both helicopter spawns from ground AA and each other. There are areas close to the base to fligh high enough to peak in and out from in case of ground huggers and ground AA.
 Pradesh - Good cover for both heli spawns against ground AA and ground-huggers.
 
-2024-08-01
+2024-08-06
 
-Test Site 2271
-@k @Ka-50 @~5 @para
+Sands of Sinai
+@k @Ka-50 @~6 @Perp
+
+Aral Sea
+@k @Ka-50 @4.1, 4.07 @para, perp @88, 51 @4, 0
 
 2024-07-17
 
 Middle East
-@k @Ka-50 @7
+@k @Ka-50 @6.9 @diag @93 @0
 
 Sands of Sinai
-@kb @Ka-52 @2
-@kb @Ka-52 @1
+@kb @Ka-52 @2.35 @diag @0 @22
+@kb @Ka-52 @1 @perp @0 @22
 
 2024-07-11
 
 Vietnam
-@k @Ka-50 @~6 @perp
+@k @Ka-50 @5.95 @perp @123 @0
 
 2024-07-02
 
@@ -59,9 +64,6 @@ Test Site 221
 @k @Ka-50 @6.15 @para @164 @0
 
 @k @Ka-52 @4.5 @perp @-4 @0
-
-Surroundings of Volokolamsk
-@kb @Ka-50 @7.77 @diag @0 @0
 
 Sands of Sinai [Battle]
 @k @Ka-52 @6.2 @perp @0 @0
