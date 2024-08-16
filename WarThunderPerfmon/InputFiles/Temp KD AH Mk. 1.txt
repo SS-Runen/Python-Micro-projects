@@ -28,7 +28,7 @@ Pradesh - Good cover for both heli spawns against ground AA and ground-huggers.
 2024-08-06
 
 Sands of Sinai
-@k @Ka-50 @~6 @Perp
+@k @Ka-50 @6.64 @Perp @72 @0
 
 Aral Sea
 @k @Ka-50 @4.1, 4.07 @para, perp @88, 51 @4, 0
