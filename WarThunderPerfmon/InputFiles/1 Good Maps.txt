@@ -37,6 +37,6 @@ Second Battle of El Alamein #1 [Battle]
 - Only play the side where the defense zone can be covered from line g, around 1.3 km away. Skip the side where the defense zone is in a path between two mountains. It cannot be defended from long range. Mountains block all long-range lines of sight.
 
 Fire Arc #2
-- Normal encounters are at 1300 m and above, even when shooting at the central urban area.
+- Normal encounters are at 1300 m and above, even when shooting at the central urban area. This map is only good for the side with a spawn away from the town and close to a sniping position inaccessible from the town. There is at least 1 km of open or defensible ground to pass through before reaching it from the urban area.
 
 

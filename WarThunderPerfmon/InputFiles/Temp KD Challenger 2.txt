@@ -1,3 +1,20 @@
+2024-08-18
+
+Pradesh #1
+@k @2S25 @1.7 @para
+@k @T-72M2 @1.6
+
+Pradesh #2
+@k @ZTZ96A(P) @~1.7 @perp
+@k @T-90A @~1.8 @para
+@k @ZTZ-99II @~1.8 @diag @0 @0
+
+Pradesh #1
+@k @Shturm-S @1.84 @para @-11 @0
+@k @Strela-10M2 @2.03 @perp @0 @0
+@k @2S6 @para @0.04 @para @0 @0
+@kb @2S25M @1.51 @near-perp @0 @0
+
 2024-08-13
 
 Pradesh #1
