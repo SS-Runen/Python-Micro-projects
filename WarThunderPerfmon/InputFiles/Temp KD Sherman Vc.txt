@@ -1,4 +1,19 @@
 
+2024-08-27
+
+Second Battle of El Alamein
+@k @T-34-85 @0.8 @perp @0 @0
+
+Fire Arc
+@k @Yag-10K @~1.5 @para @0 @0
+
+Fire Arc
+@K @T-34-85 @1.13 @perp @0 @0
+@k @T-20 @1.28 @para @0 @0
+@k @M4A2 76 (W) @1.39 @para @0 @0
+@k @M4A3 76 (W) @0.61 @para @0 @0
+@kb @M4A3 @0.8 @diag @0 @0
+
 2024-07-27
 
 Second Battle of El Alamein

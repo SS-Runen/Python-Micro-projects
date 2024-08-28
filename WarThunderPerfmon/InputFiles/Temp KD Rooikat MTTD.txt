@@ -3,12 +3,24 @@ Rooikat Handling
 
 - Without the machine gun, there is no easy way to tell if the gun is pointing beyond and over your cover. In cases where it is hard to tell through the gun sight, point the gun at the target first. After pointing the gun, use the 3rd person view or binoculars to check while moving into line of sight.
 
+2024-08-25
+
+Second Battle of El Alamein
+@k @BMP-3 @1.73 @para @0 @0
+@k @T-64A (1971) @2.1 @diag @0 @0
+@k @T-55AM-1 @1.65, 1.66 @diag,diag @11,0 @0,0
+@k @Object 120 @2.38 @para @0 @0
+@k @PGZ09 @2.39 @para @0 @0
+@kb @T-64A (1971) 0.04 @diag @0 @0
+
 2024-08-20
 
 Second Battle of El Alamein [Battle]
-@k @ZTZ59D1 @~1.7
-@k @T-62M-1 @~2
-@k @T-55AMD-1 @~1.9
+@k @ZTZ59D1 @1.89 @para @8 @0
+@k @M60A3 TTS @1.97 @para @0 @0
+@k @T-62 @1.76 @para @0 @0
+@k @T-62M-1 @2.07 @para @0 @0
+@k @T-55AMD-1 @1.97, 1.94 @para,para @2, 20 @0,0
 
 2024-08-10
 

@@ -58,7 +58,7 @@ Additional modules added to many vehicles, including autoloader racks. There wer
 The time limit to join ongoing battles is the new minimum amount of time allowed to be absent or AFK during match start.
 
 2024-08-08
-Until approximately ten matches on average result in one good map, the limit on respawns will not be implemented even for long-range deaths. That limit was chosen because it is the best estimate for the number of bad maps per good map before the map changes in 2024-01-01.
+Until ten matches guarantee at least one good map, the limit on respawns will not be implemented even for long-range deaths. That limit was chosen because it is the best estimate for the number of bad maps per good map before the map changes in 2024-01-01.
 
 2024-08-20
 The current ratio of good maps to bad maps is 4 to 50 based on this list:

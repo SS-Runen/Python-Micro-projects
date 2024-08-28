@@ -3,6 +3,8 @@ Settings
 
 Set "Aim Sensitivity" to 15. This makes the sight move slower, making adjustments for long range more precise.
 
+If the sight is stuck rotating or moving on its own, adjust the sight distance using the mouse wheel, arrow keys, or whatever setting was bound to it, e.g. Ctrl or Tab.
+
 -------------------
 Respawn Rule Change
 
