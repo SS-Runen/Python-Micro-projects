@@ -1,5 +1,67 @@
 KD records for maps on the avoidance list will be removed. This was implemented on Aug. 14, 2023, and applies to all vehicles.
 
+2024-08-27
+
+Pradesh #2
+@k @T-54 (1949) @1.3 @diag @19 @0
+@k @M53/59 @1 @para @0 @0
+@k @IS-4M @2.21 @diag @0 @0
+
+Pradesh #2
+@k @T-54 (1949) @1.84, 1.83 @diag,diag @24,0 @0,0
+@k @T-44-100 @1.85 @para @0 @0
+@k @T-54 (1947) @0.53 @perp @30 @0
+@k @T-44 @1.83 @near-perp @46 @0
+@kb @M41A3 @0.01 @perp @0 @0
+
+Pradesh #2
+@k @T-54 (1947) @1.82 @perp @16 @0
+@k @T-54 (1949) @1.76, 1.74 @diag, para @49,0 @0,0
+
+Pradesh #1
+@k @T-44-100 @1.65, 1.65 @near-perp,diag @22,0 @0,0
+@k @Object 268 @1.68 @diag @0 @0
+@k @Object 268 @1.69 @para @0 @0
+@k @T-54 (1949) @1.6 @diag @0 @0
+
+Pradesh #2
+@k @IS-6 @~1.1 @near-para @0 @0
+@k @SU-100P @~1.6 @perp @0 @0
+
+Pradesh #2
+@k @T-54 (1947) @1.68 @perp @0 @0
+
+2024-08-22
+
+Second Battle of El Alamein
+@k @PT-76-57 @2.04 @para @0 @0
+@k @IS-6 @2.52 @para @0 @0
+@k @T-44-100 @1.62 @near-para @37 @0
+@k @IS-6 @2.36, 2.36 @diag,diag @15,0 @0,0
+
+Pradesh #2
+@k @T-54 (1949) @1.84, @perp, perp @0,17 @0,0
+@k @Obj 268 @1.82 @para @0 @0
+@kb @T-54 (1949) @1.21 @near-perp @0 @0
+
+Second Battle of El Alamein [Battle]
+@K @T-44 @1.2 @perp, perp
+@k @T-54 (1949) @~1.4 @para
+
+Pradesh #2
+@k @T-54 (1949) @1.78 @para @0 @0
+@k @ZSL92 @.57 @para @29 @0
+@kb @ZSL92 @0.01 @perp @0 @0
+
+Pradesh #2
+@k @T-54 (1949) @~1.6 @perp
+@k @T-54 (1949) @~1.2 @diag @0 @0
+
+Pradesh #1
+@K @T-54 (1949) @1.39, 1.39 @diag,near-perp @12,0 @0,0
+@k @T-54 (1947) @1.84, 1.85 @diag, diag @0,0 @0,0
+@K @T-54 (1949) @1.71 @para @-3 @0
+
 2024-08-17
 
 Pradesh #1

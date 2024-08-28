@@ -1,10 +1,21 @@
 Event, Vehicle, Distance, Orientation, Speed, SlefSpeed
 
-2024-08-19
+2024-08-25
+
+Pradesh #2
+@k @T-62M-1 @~1.7 @para
+@k @T-55AM-1 @~0.9 @para
+
+2024-08-20
 
 Pradesh #1
-@K @T-69II-G @1.9 @para @0 @0
-@k @ZSU-23-4 @~1.9 @perp
+@k @PGZ09 @1.85 @diag @0 @0
+@k @Shturm-S @1.68 @para @0 @0
+@k @Obj 685 @1.36 @diag @-6 @0
+@K @T-69 II G @1.93 @near-para @0 @0
+@k @Shturm-S @1.7 @diag @-6 @0
+@k @ZSU-23-4 @2.04 @near-perp @-1 @0
+@k @IT-1 @1.7 @diag @-11 @0
 
 Second Battle of El Alamein [Battle]
 @k @T-55AM-1 @0.4 @diag
