@@ -41,4 +41,7 @@ Second Battle of El Alamein #1 [Battle]
 Fire Arc #2
 - Normal encounters are at 1300 m and above, even when shooting at the central urban area. This map is only good for the side with a spawn away from the town and close to a sniping position inaccessible from the town. There is at least 1 km of open or defensible ground to pass through before reaching it from the urban area.
 
+Japan Domination
+- For low tier only. One side of the map has a long and narrow elevated platform that can allow you to shoot at the enemy from ranges 1km and longer.
+
 

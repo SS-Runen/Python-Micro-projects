@@ -5,7 +5,7 @@ Second Battle of El Alamein
 @k @T-34-85 @0.8 @perp @0 @0
 
 Fire Arc
-@k @Yag-10K @~1.5 @para @0 @0
+@k @YaG-10 (29-K) @1.44 @para @0 @0
 
 Fire Arc
 @K @T-34-85 @1.13 @perp @0 @0

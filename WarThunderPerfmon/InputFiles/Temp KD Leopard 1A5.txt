@@ -6,6 +6,10 @@ Pradesh #2
 @k @T-62M-1 @~1.7 @para
 @k @T-55AM-1 @~0.9 @para
 
+Pradesh #2
+@k @T-55AM-1 @0.96 @diag @18 @0
+@k @T-55AMD-1 @1.8 @para @0 @0
+
 2024-08-20
 
 Pradesh #1

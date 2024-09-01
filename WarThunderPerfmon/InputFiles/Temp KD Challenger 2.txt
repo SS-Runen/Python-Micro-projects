@@ -1,8 +1,11 @@
 2024-08-28
 
 Pradesh #1
-@k @MBT2000 @1.85 @diag
-@k @MBT2000 @1.8 @para @0 @0
+@k @MBT-2000 @1.86, 1.86 @diag, diag @3,0 @0,0
+@k @T-72AV (TURMS-T) @1.7 @perp @0 @0
+@k @T-90A @0.07 @diag @9 @0
+@k @MBT2000 @1.82 @para @0 @0
+@kb @ZTZ-99II @0.09 @diag @0 @0
 
 Second Battle of El Alamein
 @kb @Object 292 @0.01 @diag @0 @0
