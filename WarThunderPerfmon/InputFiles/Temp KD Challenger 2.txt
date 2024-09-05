@@ -1,3 +1,21 @@
+2024-09-92
+
+Pradesh #2
+@k @T-90A @1.75 @para @4 @0
+
+Second Battle of El Alamein [Battle]
+@k @BMP-2M @2.24 @near-perp @0 @0
+@k @T-72A @2.04 @diag @0 @0
+@k @ZSU-57-2 @0.23 @para @17 @0
+@kb @Object 292 @0.1 @perp @11 @0
+@kb @Object 292 @0.39 @para @0 @0
+
+Second Battle of El Alamein
+@k @T-72AV (TURMS-T) @2.69, 2.69 @para,diag @20,0 @0,0
+@k @2S38 @1.37 @perp @0 @0
+@k @ZSU-23-4 @2.28 @Diag @-1 @0
+@k @Object 292 @2.66 @diag @0 @0
+
 2024-08-28
 
 Pradesh #1
@@ -50,6 +68,14 @@ Pradesh #2
 @k @T-72AV (TURMS-T @~1.68) @near-para @0 @0
 @k @T-72AV (TURMS-T @~1.68) @diag
 @k @2S38 @~1.7 @near-perp @0 @0
+
+Pradesh #2
+@k @T-72AV (TURMS-T) @1.78 @para @10 @0
+@k @Object 292 @1.14 @para @0 @0
+@k @T-72AV (TURMS-T) @1.17 @para @0 @0
+@k @BMP-2M @1.24 @diag @0 @0
+@kb @ZTZ99-III @1.25 @diag @0 @0
+@kb @ZTZ99-III @1.45 @para @0 @0
 
 2024-08-08
 
