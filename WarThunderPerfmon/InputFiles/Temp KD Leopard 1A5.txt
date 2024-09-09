@@ -1,5 +1,12 @@
 Event, Vehicle, Distance, Orientation, Speed, SelfSpeed
 
+2024-09-09
+
+Pradesh #1
+@k @T-55AMD-1 @1.84 @perp @16 @0
+@k @Object 122MT "MC" @2.06 @diag @0 @0
+@k @Object 122MT "MC" @1.86 @near-para @0 @0
+
 2024-08-25
 
 Pradesh #2
