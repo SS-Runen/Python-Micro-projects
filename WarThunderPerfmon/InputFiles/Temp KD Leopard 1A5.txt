@@ -2,16 +2,20 @@ Event, Vehicle, Distance, Orientation, Speed, SelfSpeed
 
 2024-09-09
 
+Pradesh #2
+@k @T-55AMD-1 @1.83 @para @0 @0
+@k @T-55AMD-1 @1.97 @diag @0 @0
+@k @WMA301 @1.88 @diag @1 @0
+@k @Object 120 @1.84 @near-perp @0 @0
+@k @T-55AMD-1 @1.99 @diag @0 @0
+@k @IS-7 @1.82, 1.82 @near-perp, near-perp @17,0 @0,0
+
 Pradesh #1
 @k @T-55AMD-1 @1.84 @perp @16 @0
 @k @Object 122MT "MC" @2.06 @diag @0 @0
 @k @Object 122MT "MC" @1.86 @near-para @0 @0
 
 2024-08-25
-
-Pradesh #2
-@k @T-62M-1 @~1.7 @para
-@k @T-55AM-1 @~0.9 @para
 
 Pradesh #2
 @k @T-55AM-1 @0.96 @diag @18 @0
@@ -32,11 +36,6 @@ Pradesh #2
 @k @BMP-3 @1.71 @near-para @0 @0
 @k @ZSU-23-4 @1.86 @para @-4 @0
 @k @T-64A (1971) @1.82, 1.82 @perp,diag @28,0 @0,0
-
-Second Battle of El Alamein [Battle]
-@k @T-55AM-1 @0.4 @diag
-@k @T-55AM-1 @~1.2 @diag @0 @0
-@k @T-55AM-1 @~1.3 @para
 
 2024-08-15
 
