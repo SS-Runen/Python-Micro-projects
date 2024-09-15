@@ -1,4 +1,10 @@
-2024-09-92
+2024-09-12
+
+Pradesh #2
+@k @BMP-3 @2.03 @diag @0 @0
+@k @ZTZ-96A (P) @1.78 @near-perp @0 @0
+@k @T-90A @2.24 @near-perp @4 @0
+@kb @Al-Khalid-I @1.69 @diag @0 @0
 
 Pradesh #2
 @k @T-90A @1.75 @para @4 @0

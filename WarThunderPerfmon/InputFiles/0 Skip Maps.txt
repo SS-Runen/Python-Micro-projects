@@ -65,7 +65,7 @@ The current ratio of good maps to bad maps is 4 to 50 based on this list:
 https://wiki.warthunder.com/Category:Maps_and_missions#General_Ground_Forces_Maps
 Maps with at least one good spawn point were counted as one good map. The availability of maps per battle rating was not considered to simplify calculations. Maps with at least one good variant are treated as one good map unless the variant was separately listed in the WarThunder Wiki article. It can also change easily with an update. This is why Fire Arc was included in the count of good maps despite only appearing in BRs of 6.0 and below. The other good maps are Second Battle of El Alamein, a.k.a El Alamein, Pradesh, and Mozdok. Mozdok [Battle] has a good side for battle ratings 8.0 and below.
 
-By the same standard, there were 7 good maps vs. 50 in 2023. Mozdok Domination, European Province, a.k.a Eastern Europe (with the windmill hill sniper's spot), Sands of Sinai, and Fields of Poland had at least one viable spawn. Fire Arc used to be available for all tiers, not just 6.0 and below (Tiger E and below).
+By the same standard, there were 7 good maps vs. 48 in 2023. Mozdok Domination, European Province, a.k.a Eastern Europe (with the windmill hill sniper's spot), Sands of Sinai, and Fields of Poland had at least one viable spawn. Fire Arc used to be available for all tiers, not just 6.0 and below (Tiger E and below).
 
 Middle East and Maginot line were destroyed on or before 2023.
 
