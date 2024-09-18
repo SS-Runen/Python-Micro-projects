@@ -7,6 +7,12 @@ Pradesh #2
 @k @IT-1 @~1.8 @diag @0 @0
 @k @Object 906 @1.7 @perp @0 @0
 
+Second Battle of El Alamein [Battle]
+@k @T-62  @1.13, 1.12 @perp,perp @3,0 @0,0
+@k @T-62M-1 @1.95, 1.95 @para,para @14,0 @0,0
+@k @T-55AM-1 @2.08 @para @0 @0
+@k @Object 906 @2.03, 2.03 @perp,perp @3,0 @0,0
+
 Pradesh #1
 @k @2S25M @1.55 @para @0 @0
 @kb @2S25M @0.4 @near-para @0 @0
