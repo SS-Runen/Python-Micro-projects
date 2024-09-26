@@ -1,6 +1,42 @@
 KD records for maps on the avoidance list will be removed. This was implemented on Aug. 14, 2023, and applies to all vehicles.
 
+2024-09-26
 
+Pradesh #2
+@k @T-54 (1949) @~1.4 @diag @0 @0
+@k @T-54 (1949) @~1.2 @diag @0 @0
+@k @T-44-100 @~1.35 @perp @0 @0
+@k @T-54 (1949) @~1.4 @near-para @0 @0
+
+Second Battle of El Alamein
+@k @T-54 (1949) @~1 @near-perp
+
+2024-09-21
+
+Pradesh #2
+@k @PT-76B @1.6 @diag @0 @0
+@k @T-54 (1949) @1 @near-para @0 @0
+
+Pradesh #2
+@k @ASU-85 @~1.4 @para,diag
+@k @T-54 (1949) @~1.8 @para @0 @0
+
+Pradesh #2
+@k @Object 268 @~1.2 @near-para
+@k @T-54 (1949) @~1.7 @para
+
+Pradesh #1
+@k @T-54 (1949) @~1.6 @diag @0 @0
+@k @T-54 (1949) @~1.8 @diag
+@k @T-44-100 @~1.7 @near-para @0 @0
+
+Pradesh #1
+@k @T-44-100 @~1.3 @para
+
+Pradesh #2
+@k @T-54 @~1.6 @near-para @0 @0
+@k @Object 268 @~1.8 @perp @0 @0
+@k @ASU-85 @~1.8 @para @0 @0
 
 2024-09-15
 

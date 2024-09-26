@@ -6,7 +6,13 @@ Set "Aim Sensitivity" to 15. This makes the sight move slower, making adjustment
 If the sight is stuck rotating or moving on its own, adjust the sight distance using the mouse wheel, arrow keys, or whatever setting was bound to it, e.g. Ctrl or Tab.
 
 -------------------
-Respawn Rule Change
+Respawn Rule Changes
+
+2024-08-20
+
+Until the ratio of good maps to bad maps returns to the mid-2023 ratio, respawns are now allowed even for long-range deaths.
+
+2024-04-24
 
 In 2024-04-24, respawns after deaths to targets less than one thousand meters away are allowed. This policy is a modification of the respawn rule in 2021-10-04. The old rule was that any death to a high-priority target (T-54 series, T-34-85 series, T64A etc.) cannot be "avenged" or unfairly balanced out using knowledge of the killer's location. The rule was changed because good maps are extremely rare. Before the map changes of 2024, there was high chance to get one or two good maps after ten battles. Now, it normally takes fifteen to twenty battles to get a good map regardless of battle rating.
 
@@ -19,7 +25,6 @@ BR <= 6.0: Range >= 1.00 km, adapted to Tiger E & Sherman Vc
 BR <= 9.0: Range >= 1.50 km, adapted to Centurion Mk. 10, Conqueror, Rooikat, and vehicles with a laser rangefinder.
 BR <= 13.0: Range >= 2.00 km, adapted to high-velocity APFSDS.
 
-
 ---------
 Good Maps
 
@@ -27,16 +32,13 @@ Pradesh #2
 - One urban and "closed-off" zone that is hard to snipe at, one mid-range zone, and one zone that can only be reached by passing through an exposed road.
 
 Pradesh #1
-- The zones are more urban easier to take without getting shot, but teams often take exposed positions to shoot at capture zones.
-
-Second Battle of El Alamein #1 [Domination]
-- Unlike the Battle version, the zones cannot all be accessed thru cover. A point can be shot at from long distance and multiple angles, though some spots require going thru close-range combat and can be close range flanked easily.
+- The zones are more urban and easier to take without getting shot, but teams often take exposed positions to shoot at capture zones.
 
 Second Battle of El Alamein #1 [Domination]
 - Unlike the Battle version, the zones cannot all be accessed thru cover. A point can be shot at from long distance and multiple angles, though some spots require going thru close-range combat and can be close range flanked easily.
 
 Second Battle of El Alamein #1 [Battle]
-- Only play the side where the defense zone can be covered from line g, around 1.3 km away. Skip the side where the defense zone is in a path between two mountains. It cannot be defended from long range. Mountains block all long-range lines of sight.
+- One side's zone can be covered from line g, around 1.3 km away. The side where the defense zone is in a path between two mountains has a tall plateu accessible from the lower/left-side spawn point by going up a mountain path.
 
 Fire Arc Domination #2
 - Normal encounters are at 1300 m and above, even when shooting at the central urban area. This map is only good for the side with a spawn away from the town and close to a sniping position inaccessible from the town. There is at least 1 km of open or defensible ground to pass through before reaching it from the urban area.
