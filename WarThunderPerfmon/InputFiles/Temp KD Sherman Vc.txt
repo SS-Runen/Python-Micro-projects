@@ -1,3 +1,11 @@
+2024-09-29
+
+Second Battle of El Alamein
+@k @M4A3 (76) W @2.23, 2.23 @perp,perp @0,-5 @0,0
+@k @T-34-85 No. 215 @1.93, 1.93 @diag,diag @0,-5 @0,0
+@k @T-34-85 No. 215 @2.77 @para @0 @0
+@kb @Comet I @1.92 @diag @0 @0
+
 2024-09-07
 
 Second Battle of El Alamein

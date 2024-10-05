@@ -1,5 +1,16 @@
 Event, Vehicle, Distance, Orientation, Speed, SelfSpeed
 
+2024-10-04
+
+Pradesh #2
+@k @T-62M-1 @~1.6 @para @0 @0
+@k @ZSU-23-4 @~1.9 @para @0 @0
+
+Pradesh #1
+@k @2S25 @~1.7 @near-para @0 @0
+@k @AFT09 @~1.9 @para
+@k @Object 279 @~2 @perp @0 @0
+
 2024-09-29
 
 Pradesh #1
@@ -10,6 +21,17 @@ Pradesh #1
 @k @T-62M-1 @1.9 @diag @0 @0
 @k @BMP-2 @1.87 @perp @40 @0
 @k @T-62 @1.78 @near-perp @23 @0
+
+2024-09-19
+
+Pradesh #1
+@k @T-64A (1971) @2.25 @perp @0 @-1
+@k @2S25 @1.83 @para @0 @1
+@k @WZ305 @1.84 @para @0 @0
+@k @T-69 II G @1.7 @para @0 @-9
+@k @T-55AMD-1 @1.09 @near-para @0 @0
+@k @ZSU-23-4 @1.65 @para @0 @0
+@kb @BMD-4 @1.67 @near-perp @0 @0
 
 2024-09-14
 
