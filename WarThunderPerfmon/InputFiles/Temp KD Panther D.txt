@@ -1,4 +1,6 @@
 2024-09-24
 
 Mozdok [Battle]
-@k @T-34-85 (D-5T) @~1.3 @para @0 @0
+@k @SU-85 @1.12 @near-perp @53 @0
+@k @T-34-85 (D-5T) @1.36 @para @9 @0
+@k @SU-85 @.58 @para @0 @0

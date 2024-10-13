@@ -1,5 +1,22 @@
 Event, Vehicle, Distance, Orientation, Speed, SelfSpeed
 
+Second Battle of El Alamein
+@k @BMP-3 @0.95 @para @0 @0
+@k @Object 435 @1.4 @diag @0 @0
+@k @PTL02 @1.48, 1.48 @perp,perp @3,0 @0,0
+@k @BMP-3 @1.41 @near-perp @0 @0
+@k @T-64A (1971) @1.6, 1.58 @diag, near-perp @46,0 @0,0
+@k @Object 120 @2.4 @para @0 @0
+@k @T-55AMD-1 @2.39 @para @0 @0
+@k @T-55A @2.35 @diag @0 @0
+
+2024-10-09
+
+Pradesh #1
+@k @BMP-3 @1.7 @diag @0 @0
+@k @BMP-3 @2.04 @perp @-10 @0
+@k @BMP-1 @.71 @diag @11 @0
+
 2024-10-04
 
 Pradesh #2
