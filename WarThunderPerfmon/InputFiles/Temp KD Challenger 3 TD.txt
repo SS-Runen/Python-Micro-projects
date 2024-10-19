@@ -2,9 +2,9 @@
 2024-10-10
 
 Second Battle of El Alamein
-@k @T-90M @~1.9 @perp @0 @0
-@k @T-90M @~1.8 @near-perp @0 @0
-@k @T-80BVM @~1.98 @diag @0 @0
+@K @T-90M @2.11 @perp @0 @0
+@k @T-90M @1.83,1.83 @perp,perp @5,0 @0,0
+@k @T-80BVM @1.99 @near-para @0 @0
 
 2024-10-04
 

@@ -1,3 +1,10 @@
+2024-10-19
+
+Second Battle of El Alamein
+@K @T-34-85 (Chinese) @1.27, 1.27 @diag,diag @11,0 @0,0
+@k @M4/T26 @1.95 @para @0 @0
+@k @M4A1 (76) W @0.99 @diag @3 @0
+
 2024-10-07
 
 Mozdok
