@@ -11,12 +11,13 @@ Pradesh #1
 2024-10-12
 
 Second Battle of El Alamein
-@k @MBT2000 @~1.9 @near-perp
-@k @BMP-2
+@k @MBT-2000 @2.55 @near-perp @29 @0
+@k @BMP-2 @2.79 @perp @-11 @0
 
 Pradesh #1
-@k @T-80B @~1.9 @near-perp
-@k @BMP @~1.7 @perp
+@k @T-80B @1.88 @diag @33 @0
+@k @2S6 @1.65 @perp @1 @0
+@k @BMP-2M @1.76 @diag @-11 @0
 
 2024-09-27
 

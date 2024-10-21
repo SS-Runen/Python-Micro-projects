@@ -23,7 +23,7 @@ Pradesh #1
 2024-10-03
 
 Pradesh #2
-@k @PLZ @~1.7 @para @0 @0
+@k @PLZ @1.73 @near-para @0 @0
 
 Pradesh #2
 @k @T-54 (1951) @1.41 @perp @0 @0

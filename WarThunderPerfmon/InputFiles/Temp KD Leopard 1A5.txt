@@ -1,7 +1,5 @@
 Event, Vehicle, Distance, Orientation, Speed, SelfSpeed
 
-
-
 2024-10-09
 
 Pradesh #1
@@ -34,6 +32,13 @@ Pradesh #1
 @k @ZTZ88B @1.65, 1.63 @diag,diag @6,0 @0,0
 
 2024-09-29
+
+Pradesh #1
+@k @2S25 @1.58 @para @0 @0
+@k @BMP-3 @1.75 @para @0 @0
+@k @2S25 @1.56 @para @0 @0
+@k @Shturm-S @1.8 @diag @-3 @0
+@k @T-62 @1.75 @perp @3 @0
 
 Pradesh #2
 @k @BMP-2 @1.51 @diag @5 @0

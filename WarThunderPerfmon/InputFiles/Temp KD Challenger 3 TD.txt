@@ -9,8 +9,8 @@ Second Battle of El Alamein
 2024-10-04
 
 Pradesh #1
-@k @T-80U-E1 @~1.9 @diag
-@k @Pantsir-S1 @~1.7 @para @0 @0
+@k @Pantsir-S1 @1.69 @near-para @0 @0
+@k @T-80U-E1 @2 @diag @55 @0
 
 2024-09-25
 
