@@ -1,3 +1,13 @@
+2024-10-25
+
+Second Battle of El Alamein
+@k @T-34-85 (D-5T) @1.38, 1.38 @perp,perp @5,0 @0,0
+
+Fire Arc
+@k @IS-2 (1944) @1.5 @para @0 @0
+@k @M-51 @2.35, 2.35 @near-para, near-para @3,3 @0,0
+@kb @ISU-152 @1.84 @diag @0 @0
+
 2024-09-29
 
 Second Battle of El Alamein

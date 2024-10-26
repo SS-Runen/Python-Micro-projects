@@ -1,9 +1,21 @@
+2024-10-22
+
+Second Battle of El Alamein
+@K @T-80B @2.62 @near-perp @10 @0
+@k @Object 292 @1.23 @diag @8 @0
+@k @MBT-2000 @1.53 @near-perp @-4 @0
+
+Pradesh #1
+@k @T-72AV (TURMS-T) @1.8 @perp @0 @0
+@k @BMP-3 @~1.8 @diag @0 @0
+@k @T-72A @~1.9, 1.9 @diag,diag
+
 2024-10-17
 
 Pradesh #2
-@k @BMP-2 @~1.6 @Perp
-@k @Object 292 @~1.7 @para @0 @0
-@k @T-90A @~1.7 @near-perp
+@k @BMP-2M @1.5 @Perp @0 @0
+@k @Object 292 @1.74 @para @-4 @0
+@k @T-80B @1.81 @diag @23 @0
 
 Pradesh #1
 @k @ZTZ96 (P) @~1.8 @near-perp @0 @0

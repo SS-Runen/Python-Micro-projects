@@ -3,6 +3,11 @@ KD records for maps on the avoidance list will be removed. This was implemented 
 2024-10-21
 
 Pradesh #1
+@k @T-44-100 @1.7 @para @-6 @0
+@k @Type 62 @1.4 @para @0 @0
+@k @T-54 (1949) @2.03, 2.03 @diag,diag @11,0 @0,0
+
+Pradesh #2
 @k @Type 62 @~1.4 @para @0 @0
 
 2024-10-16

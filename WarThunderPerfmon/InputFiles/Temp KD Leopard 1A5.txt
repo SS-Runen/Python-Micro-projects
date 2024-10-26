@@ -1,5 +1,14 @@
 Event, Vehicle, Distance, Orientation, Speed, SelfSpeed
 
+2024-10-24
+
+Second Battle of El Alamein
+@k @T-55AMD-1 @2.75, 2.75  @para,para @24,0 @0,0
+@k @BMP-3 @2.23 @perp @10 @0
+@k @T-64A (1971) @1.89,1.89 @diag,para @0,0 @0,0
+@k @PGZ09 @3.27 @diag @0 @0
+@k @Shturm-S @1.84 @para @0 @0
+
 2024-10-09
 
 Pradesh #1
