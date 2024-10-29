@@ -1,5 +1,12 @@
 KD records for maps on the avoidance list will be removed. This was implemented on Aug. 14, 2023, and applies to all vehicles.
 
+2024-10-26
+
+Pradesh #2
+@k @IS-3 @1.73 @near-para @7 @0
+@k @Type 62 @1.58 @para @0 @0
+@k @IS-4M @1.34 @para @0 @0
+
 2024-10-21
 
 Pradesh #1
@@ -34,7 +41,8 @@ Second Battle of El Alamein
 @k @IS-4M @2.65 @para @18 @0
 
 Second Battle of El Alamein
-@k @IS-4M @~2.65 @diag @0 @0
+@k @IS-4M @2.75 @para @0 @0
+@k @PT-76B @1.81, 1.80 @perp,perp @36,0 @0,0
 
 Pradesh #1
 @k @IS-6 @~1.4 @para @0 @0

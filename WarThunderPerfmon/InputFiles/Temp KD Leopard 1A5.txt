@@ -1,5 +1,13 @@
 Event, Vehicle, Distance, Orientation, Speed, SelfSpeed
 
+2024-10-29
+
+Second Battle of El Alamein [Battle]
+@k @T-55AMD-1 @1.64 @para @0 @0
+@k @2S25 @1.62 @diag @0 @0
+@k @ZSU-23-4 @1.33, 1.33 @diag,diag @12,0 @0,0
+@kb @BMP-3 @0.18 @near-perp @-10 @0
+
 2024-10-24
 
 Second Battle of El Alamein
