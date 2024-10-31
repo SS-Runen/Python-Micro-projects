@@ -1,3 +1,11 @@
+2024-10-31
+
+Second Battle of El Alamein
+@k @IS-1 @1.79 @diag @0 @0
+@k @T-34-85 (D-5T) @0.84 @near-para @0 @0
+@k @Sherman Vc @0.52 @diag @0 @0
+@k @ZSD63/PG87 @.6 @perp @0 @0
+
 2024-10-25
 
 Second Battle of El Alamein
