@@ -1,5 +1,26 @@
 Event, Vehicle, Distance, Orientation, Speed, SelfSpeed
 
+2024-11-03
+
+Pradesh #2
+@k @T-62M-1 @.9 @perp @0 @0
+@k @T-62M-1 @1.79, 1.79 @diag,diag @14,0 @0,0
+@k @BMD-4 @0.23 @perp @0 @0
+@k @ZSU-37-2 @2.27, 2.27 @perp,perp @9,0 @0,0
+@k @Object 435 @2.30 @near-para @0 @0
+@kb @BMD-4 @0.23 @perp @0 @0
+@kb @BMD-4 @0.2 @para @0 @0
+
+Pradesh #2
+@K @BMP-1 @1.7 @near-perp @0 @0
+@k @T-62 @1.88 @para @0 @0
+@k @BMD-4 @1.80 @near-perp @33 @0
+@k @BMP-2 @1.81 @perp @8 @0
+@k @ZBD86 @1.98 @diag @0 @0
+@k @BMP-2 @2.03 @diag @40 @0
+@k @T-55A @2.06, 2.05 @perp, para @4,0 @0,0
+@k @T-55AMD-1 @0.89 @para @0 @0
+
 2024-10-29
 
 Second Battle of El Alamein [Battle]
