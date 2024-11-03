@@ -35,8 +35,10 @@ Pradesh #2
 @k @PLZ @1.73 @near-para @0 @0
 
 Pradesh #2
-@k @T-54 (1951) @1.41 @perp @0 @0
-@k @T-54 @~1.4, 1.4 @perp, near-para @0,0 @0,0
+@K @T-54 (1949) @1.40 @para @0 @0
+@k @T-54 (1951) @1.48 @para @0 @0
+@k @WZ305 @1.24 @perp @0 @0
+@k @ZSU-57-2 @1.19 @diag @0 @0
 
 Pradesh #1
 @k @T-54 (1947) @1.85 @diag @0 @0
