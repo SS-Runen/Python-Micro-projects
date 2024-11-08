@@ -23,9 +23,10 @@ Second Battle of El Alamein
 @k @MBT-2000 @1.53 @near-perp @-4 @0
 
 Pradesh #1
-@k @T-72AV (TURMS-T) @1.8 @perp @0 @0
-@k @BMP-3 @~1.8 @diag @0 @0
-@k @T-72A @~1.9, 1.9 @diag,diag
+@k @T-72AV (TURMS-T) @1.77 @diag @0 @0
+@k @T-90A @1.73, 1.71 @diag,diag @43,0 @0,0
+@k @Object 292 @1.79 @near-perp @0 @0
+@k @Al-Khalid-I @1.44 @perp @39 @0
 
 2024-10-17
 
@@ -35,7 +36,8 @@ Pradesh #2
 @k @T-80B @1.81 @diag @23 @0
 
 Pradesh #1
-@k @ZTZ96 (P) @~1.8 @near-perp @0 @0
+@k @ZTZ96A (P) @1.83 @near-para @2 @0
+@k @Object 292 @0.07 @para @10 @0
 
 2024-10-12
 
