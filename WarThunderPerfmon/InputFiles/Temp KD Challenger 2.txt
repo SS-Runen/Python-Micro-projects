@@ -1,3 +1,18 @@
+
+2024-11-11
+
+Pradesh #2
+@k @BMP-3 @~1.2 @near-perp @0 @0
+@k @T-90A @~1.8 @perp @0 @0
+@k @T-72AV (TURMS-T) @~1.7 @perp @0 @0
+@kb @Object 292 @~1.8 @para @0 @0
+
+Pradesh #1
+@k @ZTZ96(P) @1.8 @perp
+@k @2S38 @~1.8 @perp
+@K @T-90A @~1.8 @perp
+@kb @T-80B @~1.4 @diag @0 @0
+
 2024-11-06
 
 Pradesh #2
