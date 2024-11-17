@@ -8,10 +8,13 @@ Pradesh #2
 @kb @Object 292 @~1.8 @para @0 @0
 
 Pradesh #1
-@k @ZTZ96(P) @1.8 @perp
-@k @2S38 @~1.8 @perp
-@K @T-90A @~1.8 @perp
-@kb @T-80B @~1.4 @diag @0 @0
+@k @ZTZ96A (P) @1.84 @perp @0 @0
+@k @2S38 @1.87 @perp @0 @0
+@K @T-90A @1.84, 1.83 @near-perp,near-perp @25,0 @0,0
+@k @T-80B @1.41 @para @0 @0
+@k @Object 292 @1.43, 1.42 @diag,para @6,0 @0,0
+@k @T-64B @1.98 @para @0 @0
+@kb @T-80B @1.4 @diag @0 @0
 
 2024-11-06
 
