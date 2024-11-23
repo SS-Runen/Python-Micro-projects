@@ -1,11 +1,14 @@
 KD records for maps on the avoidance list will be removed. This was implemented on Aug. 14, 2023, and applies to all vehicles.
 
-@k @Object 268 @1.38 @para @3 @0
-@k @IS-6 @1.49, 1.50 @para,para @-11,0 @0,0
-@k @IS-3 @1.05 @near-perp @11 @0
-@k @M53/59 @0.87 @near-perp @0 @0
-@k @PT-76B @1.03 @para @0 @0
-@kb @SU-100P @0.89 @near-perp @0 @0
+2024-11-22
+
+Pradesh #2
+@k @SU-122-54 @1.77 @para @0 @0
+@k @T-54 (1947) @1.73 @near-perp @8 @0
+@k @Object 268 @1.78 @para @0 @0
+@k @T-54 (1951) @1.57, 1.57 @diag,near-para @-5,0 @0,0
+@k @PLZ05 @1.99 @diag @17 @0
+@kb @PLZ05 @2.22 @para @0 @0
 
 2024-11-05
 
@@ -33,21 +36,18 @@ Pradesh #2
 
 2024-10-21
 
+Second Battle of El Alamein
+@k @Object 268 @1.38 @para @3 @0
+@k @IS-6 @1.49, 1.50 @para,para @-11,0 @0,0
+@k @IS-3 @1.05 @near-perp @11 @0
+@k @M53/59 @0.87 @near-perp @0 @0
+@k @PT-76B @1.03 @para @0 @0
+@kb @SU-100P @0.89 @near-perp @0 @0
+
 Pradesh #1
 @k @T-44-100 @1.7 @para @-6 @0
 @k @Type 62 @1.4 @para @0 @0
 @k @T-54 (1949) @2.03, 2.03 @diag,diag @11,0 @0,0
-
-Pradesh #2
-@k @Type 62 @~1.4 @para @0 @0
-
-2024-10-16
-
-Pradesh #2
-@k @IS-5 @~1.2 @perp @0 @0
-@k @T-44-100 @~1.2 @near-perp @0 @0
-@k @IS-3 @~1.3 @perp @0 @0
-@kb @IS-6 @~0.02 @diag @0 @0
 
 2024-10-11
 
@@ -85,19 +85,6 @@ Pradesh #1
 @k @Object 268 @1.82 @perp @23 @0
 @kb @Object 268 @1.58 @para @0 @-5
 
-Pradesh #2
-@k @Type 52 @~0.8 @daig @0 @0
-@k @T-34-100 @~1.6 @perp @0 @0
-@k @Type 63 @~1.8 @near-perp @0 @0
-
-2024-09-26
-
-Pradesh #2
-@k @T-54 (1949) @~1.4 @diag @0 @0
-@k @T-54 (1949) @~1.2 @diag @0 @0
-@k @T-44-100 @~1.35 @perp @0 @0
-@k @T-54 (1949) @~1.4 @near-para @0 @0
-
 2024-09-21
 
 Pradesh #2
@@ -110,26 +97,10 @@ Pradesh #2
 @k @Object 268 @2.01 @perp @0 @0
 @kb @Type 63 @0.16 @diag @0 @0
 
-Pradesh #2
-@k @ASU-85 @~1.4 @para,diag
-@k @T-54 (1949) @~1.8 @para @0 @0
-
-Pradesh #2
-@k @Object 268 @~1.2 @near-para
-@k @T-54 (1949) @~1.7 @para
-
 Pradesh #1
 @k @T-54 (1949) @1.47 @diag @0 @0
 @k @T-54 (1949) @1.83, 1.83 @diag, diag @6, 0 @0, 0
 @k @T-44-100 @1.72, 1.73 @para, diag @-8,0 @0,0
-
-Pradesh #1
-@k @T-44-100 @~1.3 @para
-
-Pradesh #2
-@k @T-54 @~1.6 @near-para @0 @0
-@k @Object 268 @~1.8 @perp @0 @0
-@k @ASU-85 @~1.8 @para @0 @0
 
 2024-09-15
 
@@ -195,10 +166,6 @@ Pradesh #1
 @k @T-54 (1949) @1.6 @diag @0 @0
 
 Pradesh #2
-@k @IS-6 @~1.1 @near-para @0 @0
-@k @SU-100P @~1.6 @perp @0 @0
-
-Pradesh #2
 @k @T-54 (1947) @1.68 @perp @0 @0
 
 2024-08-22
@@ -214,18 +181,10 @@ Pradesh #2
 @k @Obj 268 @1.82 @para @0 @0
 @kb @T-54 (1949) @1.21 @near-perp @0 @0
 
-Second Battle of El Alamein [Battle]
-@K @T-44 @1.2 @perp, perp
-@k @T-54 (1949) @~1.4 @para
-
 Pradesh #2
 @k @T-54 (1949) @1.78 @para @0 @0
 @k @ZSL92 @.57 @para @29 @0
 @kb @ZSL92 @0.01 @perp @0 @0
-
-Pradesh #2
-@k @T-54 (1949) @~1.6 @perp
-@k @T-54 (1949) @~1.2 @diag @0 @0
 
 Pradesh #1
 @K @T-54 (1949) @1.39, 1.39 @diag,near-perp @12,0 @0,0
@@ -233,10 +192,6 @@ Pradesh #1
 @K @T-54 (1949) @1.71 @para @-3 @0
 
 2024-08-17
-
-Pradesh #1
-@k @T-54 (1949) @~1.7 @perp
-@k @T-54 (1949) @~1.5 @para @0 @0
 
 Pradesh #2
 @k @Type 62 @1.4 @para @0 @0
@@ -273,9 +228,6 @@ Second Battle of El Alamein
 @k @Type 62 @2.16 @diag @5 @0
 @k @Obj 211 @1.82 @diag, near-para
 @k @T-54 (1947) @2.11 @diag @0 @0
-
-Second Battle of El Alamein
-@k @T-54 (1949) @~1.2 @perp
 
 Pradesh #2
 @k @PT-76B @1.79 @perp @17 @0
@@ -344,10 +296,6 @@ Pradesh #2
 @k @M53/59 @1.84 @para @0 @0
 
 2024-07-13
-
-Pradesh #2
-@k @T-54 @~1.2 @perp
-@kb @ASU-85 @~1.2 @perp @0 @0
 
 Pradesh #1
 @k @ASU-85 @1.82 @perp @9 @0

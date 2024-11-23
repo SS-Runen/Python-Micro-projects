@@ -47,11 +47,6 @@ Pradesh #1
 Second Battle of El Alamein [Battle]
 @k @Type 59 @1.77, 1.75 @near-para,para @28,0 @0,0
 
-2024-10-23
-
-Second Battle of El ALamein
-@kb @T-54 @~1.5 @para
-
 2024-10-03
 
 Pradesh #2
