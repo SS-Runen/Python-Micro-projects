@@ -4,8 +4,7 @@ import pprint
 import re
 from pathlib import Path
 
-
-def get_mean_mode(group_records):
+def get_mean_or_mode(group_records):
     lst_averages = list()
     for group in group_records:
         try:
@@ -22,7 +21,6 @@ def get_mean_mode(group_records):
 
     return lst_averages
 
-
 def parse_textfile(input_filepath):    
     file_obj = open(input_filepath, 'r')
     lst_lines = file_obj.readlines()
@@ -38,7 +36,7 @@ def parse_textfile(input_filepath):
         current_line = current_line[ :7]
         for column in current_line:
             if '&' in str(column):
-                current_line[3: ] = get_mean_mode(current_line[3: ])
+                current_line[3: ] = get_mean_or_mode(current_line[3: ])
         current_line = [str(n).strip() for n in current_line]
         if len(current_line) == 1:
             if re.search(r"\d{4}[\-_/](\d{1,2}[\-_/]\d{1,2})", current_line[0]) is not None:
@@ -53,7 +51,6 @@ def parse_textfile(input_filepath):
     
     # pprint.pprint(lst_cleanlines)
     return lst_cleanlines
-
 
 def txt_to_csv(
     input_filepath = Path(r"../InputFiles/"),
@@ -118,7 +115,6 @@ def txt_to_csv(
         print(str_log)
 
     return None
-
 
 def main():
     # Reconstruct output file.
