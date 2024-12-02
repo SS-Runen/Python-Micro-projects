@@ -1,3 +1,11 @@
+
+2024-11-30
+
+Fire Arc
+@k @M18 @1.48 @diag @0 @0
+@k @SU-152 @1.95 @diag @0 @0
+@k @T-34-85 @0.73 @para @0 @0
+
 2024-10-25
 
 Second Battle of El Alamein
