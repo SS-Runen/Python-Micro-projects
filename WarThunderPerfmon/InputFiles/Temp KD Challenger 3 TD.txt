@@ -22,9 +22,6 @@ Second Battle of El Alamein
 2024-09-15
 
 Pradesh #1
-@k @T-80 @~1.6 @diag @0 @0
-
-Pradesh #1
 @kb @T-90M @1.4 @diag @0 @0
 
 2024-09-10
