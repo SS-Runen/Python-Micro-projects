@@ -1,5 +1,74 @@
 KD records for maps on the avoidance list will be removed. This was implemented on Aug. 14, 2023, and applies to all vehicles.
 
+2025-01-06
+8.0
+
+Pradesh #2
+@k @IS-6 @~1.3 @perp @0 @0
+@k @T-54 (1947) @~1.679 @near-perp @0 @0
+
+2025-01-04
+
+Pradesh #2
+@k @T-44-100 @~.2 @diag
+@k @T-54 (1949) @~1.891 @diag @0 @0
+@k @T-44-100 @~1.7 @near-para @0 @0
+@k @T-54 (1947) @~1.352 @diag
+
+Pradesh #2
+@k @T-54 (1949) @~1.5 @para @0 @0
+@k @T-54 (1949) @~1.7 @perp
+@k @IS-3 @~1.6 @perp
+@k @IS-4M @~1.5 @para @0 @0
+@k @T-54 (1949) @~1.7 @perp
+@k @SU-100P @~1.4 @near-para @0 @0
+@k @T-54 (1949) @~0.7 @diag
+@kb @Type 62 @~0.6 @near-perp @0 @0
+
+2024-12-30
+
+Pradesh #1
+@k @T-44-100 @1.49 @para @0 @0
+@k @Object 268 @1.816, 1.806 @near-perp,near-perp @21,0 @0,0
+@k @IS-4M @1.919 @diag @0 @0
+@k @IS-4M @0.42 @near-perp @0 @0
+
+Pradesh #2
+@k @IS-4M @~1.714 @para @0 @0
+@k @IS-6 @~1.74 @para @0 @0
+@k @Type 63 @~1.780 @para @0 @0
+
+Pradesh #1
+@k @T-54 (1949) @0.87 @perp @0 @0
+@k @T-54 (1949) @1.65 @para @0 @0
+@k @IS-4M @1.919 @near-para @0 @0
+@k @BTR-ZD @1.93 @near-para @0 @0
+@kb @T-54 (1949) @1 @diag @0 @0
+
+2024-12-27
+BR 8.0
+Pradesh #2
+@k @ZSU-57-2 @1.42, 1.42 @near-para,near-para @-3,0 @0,0
+@k @WZ305 @1.846, 1.859 @para
+
+2024-12-20
+
+Pradesh #1
+@k @IS-3 @~1.6 @para @0 @0
+
+Pradesh #2
+@k @T-44-100 @2.217, 2.248 @perp,para @18,-4 @0,0
+@k @IS-4M @1.56 @para @0 @0
+
+Pradesh #2
+@k @Type 62 @1.41 @diag @0 @0
+@k @IS-4M @1.84 @para @0 @0
+@k @T-54 (1949) @1.82 @near-perp @18 @0
+
+Pradesh #2
+@k @ASU-85 @2.003 @near-para @0 @0
+@k @T-54 (1947) @0.92 @diag @0 @0
+
 2024-11-22
 
 Pradesh #2

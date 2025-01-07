@@ -10,6 +10,38 @@ For the Centurion Mk. 10, an increase of one hundred meters for HESH rounds is n
 
 KD records for maps on the avoidance list will be removed. This was implemented on Aug. 14, 2023, and applies to all vehicles.
 
+2025-01-06
+
+Second Battle of El Alamein
+@K @SU-122-54 @2.793 @diag @0 @0
+
+2025-01-04
+7.7
+
+Pradesh #1
+@k @T-54 @1.85 @near-perp
+@k @T-54 (1949) @~1.984 @Perp
+
+X
+
+2024-12-30
+BR 7.7
+
+Pradesh #1
+@k @T-44 @~1.7 @para @0 @0
+@k @T-54 (1949) @~1.6 @para @0 @0
+
+Pradesh #1
+@k @T-54 (1949) @~2.020 @near-para @0 @0
+@k @IS-4M @~1.3 @near-para @0 @0
+
+2024-12-27
+BR 8.0
+
+Pradesh #1
+@k @TO-55 @1.998 @diag @4 @0
+@k @2S1 @.58 @diag @0 @0
+
 2024-12-12
 
 Second Battle of El Alamein

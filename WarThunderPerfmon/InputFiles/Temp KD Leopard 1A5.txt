@@ -1,5 +1,22 @@
 Event, Vehicle, Distance, Orientation, Speed, SelfSpeed
 
+2025-01-07
+
+Pradesh #1
+@k @BMP-3 @2.140 @para @0 @0
+@k @WMA301 @~2.012 @perp @0 @0
+@k @T-62M-1 @2.179 @para
+@kb @WMA301 @~2.089 @near-para @0 @0
+
+2025-01-02
+
+Pradesh #1
+@k @T-69 II G @~1.8 @diag @0 @0
+
+Pradesh #1
+@k @T-62 No. 204 @~2 @perp,para
+@kb @AFT09 @~1.4 @near-para @0 @0
+
 2024-11-03
 
 Pradesh #2
