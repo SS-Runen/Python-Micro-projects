@@ -19,10 +19,10 @@ Second Battle of El Alamein
 7.7
 
 Pradesh #1
-@k @T-54 @1.85 @near-perp
-@k @T-54 (1949) @~1.984 @Perp
-
-X
+@k @T-54 (1949) @1.85 @diag @-3 @0
+@k @T-54 (1949) @1.984 @perp @34 @0
+@k @Type 62 @1.689 @diag @0 @0
+@k @M53/59 @0.734 @diag @2 @0
 
 2024-12-30
 BR 7.7

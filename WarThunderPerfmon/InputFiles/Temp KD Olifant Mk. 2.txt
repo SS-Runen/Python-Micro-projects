@@ -6,10 +6,8 @@ Olifant Mk.2 Guide
 2025-01-02
 
 Pradesh #1
-@k @BMD-4 @~1.6 @perp @0 @0
-@k @Object 122MT "MC" @~2.025
-
-X
+@k @BMD-4 @1.689 @perp @0 @0
+@k @Object 122MT "MC" @2.018, 2.025 @near-para,diag @-3,0 @0,0
 
 2024-10-29
 
