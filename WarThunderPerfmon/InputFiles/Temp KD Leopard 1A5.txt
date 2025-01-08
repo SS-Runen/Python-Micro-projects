@@ -3,10 +3,15 @@ Event, Vehicle, Distance, Orientation, Speed, SelfSpeed
 2025-01-07
 
 Pradesh #1
-@k @BMP-3 @2.140 @para @0 @0
-@k @WMA301 @~2.012 @perp @0 @0
-@k @T-62M-1 @2.179 @para
-@kb @WMA301 @~2.089 @near-para @0 @0
+@k @BMP-3 @2.14 @Near-para @11 @0
+@k @WMA301 @2.012 @perp @3 @0
+@k @Shturm-S @2.136 @diag @0 @0
+@k @PTL02 @1.966 @Para @0 @0
+@k @M113A1 (China) @1.911 @para @0 @0
+@k @T-62M-1 @2.179 @para @0 @0
+@k @BMP-3 @1.699 @near-para @0 @0
+@k @T-55A @1.329 @diag @-2 @0
+@kb @WMA301 @2.089 @near-para @0 @0
 
 2025-01-02
 
@@ -14,8 +19,8 @@ Pradesh #1
 @k @T-69 II G @~1.8 @diag @0 @0
 
 Pradesh #1
-@k @T-62 No. 204 @~2 @perp,para
-@kb @AFT09 @~1.4 @near-para @0 @0
+@k @T-62 No. 545 @2.025, 2.019 @perp,para @30,0 @0,0
+@kb @AFT09 @1.3 @near-perp @0 @0
 
 2024-11-03
 
