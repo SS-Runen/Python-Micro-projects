@@ -1,6 +1,6 @@
 -----------------------------------------------------------------
 DO NOT FIRE USING COMMANDER'S SIGHT AT MOVING OR COVERED TARGETS.
-- - Only fire at stationary targets without cover. Fire on targets obscured by non-blocking objects if unable to locate them using the gunner sight.
+- - Only fire at stationary targets obscured by non-blocking objects that cannot be viewed using the gunner sight.
 - - The offset varies at different ranges. The guidelines here are an approximation and may have significant difference from the actual impact.
 
 Shots fired using the commander's gun sight will land higher, equivalent to around one hundred meters elevation, in the upper right sight quadrant, within the right-most half of the gun sight.
@@ -9,6 +9,27 @@ Unlike the Centurion MK. 10 custom sight, the Conqueror cold-war custom sight do
 For the Centurion Mk. 10, an increase of one hundred meters for HESH rounds is needed at ranges under 1500.
 
 KD records for maps on the avoidance list will be removed. This was implemented on Aug. 14, 2023, and applies to all vehicles.
+
+2025-01-11
+
+Pradesh #2
+@k @T-54 (1949) @1.720 @para @~5 @0
+@k @PLZ83-130 @0.987 @perp @0 @0
+
+Pradesh #2
+@k @SU-122-54 @1.701 @para @0 @0
+@k @Object 268 @1.714 @para @0 @0
+
+2025-01-09
+B.R. 7.7
+
+Pradesh #1
+@k @T-54 (1949) @1.119 @near-perp @10 @0
+
+Pradesh #1
+@k @IS-3 @2.080 @perp @0 @0
+@kb @PT-76-57 @0.66 @near-perp @0 @0
+@kb @PT-76-57 @0.66 @near-perp @0 @0
 
 2025-01-06
 
