@@ -6,13 +6,15 @@ Olifant Mk.2 Guide
 2025-01-12
 
 Pradesh #1
-@k @T-55A @2.098 @perp @0 @0
-@k @T-55AMD-1 @2.079 @perp @0 @0
-@k @BMP-3 @1.880 @~near-para
-@k @ZTZ88B @1.957 @~perp @0 @0
+@k @BMP-2 @1.81 @perp @26 @0
+@k @T-55A @2.098 @diag @0 @0
+@k @T-55AMD-1 @2.079 @diag @0 @0
+@k @BMP-3 @1.880 @para @13 @0
+@k @ZTZ88B @1.957 @diag @0 @0
+@k @ZTZ59D1 @2.095 @diag @0 @0
 
 Second Battle of El Alamein
-@k @T-55AMD-1 @2.031, 2.025 @perp,para  @~10,0 @0,0
+@k @T-55AMD-1 @2.031, 2.025 @perp,para  @11,0 @0,0
 @k @T-62M-1 @2.570 @near-perp @0 @0
 @k @Object 775 @2.449 @para @0 @0
 
