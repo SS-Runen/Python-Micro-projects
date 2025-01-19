@@ -1,4 +1,11 @@
 
+2025-01-18
+
+Pradesh #1
+@k @Tor-M1 @1.998 @diag @0 @0
+@k @T-80BVM @1.1.445 @para @0 @0
+@k @T-80U-K @2.012 @perp @~20 @0
+
 2024-10-10
 
 Second Battle of El Alamein
