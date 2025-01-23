@@ -1,4 +1,11 @@
 
+2025-01-23
+
+Fire Arc
+@k @M4A3E2 @1.465 @para @~-1 @0
+@k @T1E1 @1.409 @diag @0 @0
+@k @Yag-10 (29-K) @0.590 @near-perp @~6 @0
+
 2024-11-30
 
 Fire Arc
