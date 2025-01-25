@@ -1,4 +1,11 @@
 
+2025-01-09
+
+Pradesh #2
+@k @T-72B @1.833 @diag @0 @0
+@K @BMP-2M @1.4 @diag @-4 @0
+@k @Shturm-S @1.958 @diag, @-3 @0
+
 2024-11-11
 
 Pradesh #2

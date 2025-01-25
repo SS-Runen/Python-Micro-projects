@@ -10,9 +10,10 @@ Pradesh #2
 
 Pradesh #1
 @k @PT-76 (Chinese) @2.010 @para @0 @0
-@k @T-44-100 @2.024 @diag @~-6 @0
+@k @T-44-100 @2.014, 2.024 @near-perp,near-perp @0,-7 @0,0
+@k @PT-76 (Chinese) @1.932 @para @0 @0
 @k @IS-6 @1.386 @perp @0 @0
-@k @T-54 (1947) @1.058, 1.043 @near-perp,near-perp @~10,0 @0,0
+@k @T-54 (1947) @1.058, 1.043 @perp,perp @21,0 @0,0
 
 Pradesh #1
 X
@@ -23,9 +24,9 @@ B.R. 8.0
 2025-01-19
 
 Second Battle of El Alamein
-@K @Type 63 @2.001 @perp
-@k @T-54 (1947) @2.601, 2.613 @near-para,near-para @0,0 @0,0
-@k @M53/59 @1.215 @perp @~0 @0
+@K @Type 63 @2.001 @perp @35 @0
+@k @T-54 (1947) @2.601, 2.613 @near-para,near-para @-1,0 @0,0
+@k @M53/59 @1.215 @perp @0 @0
 
 Pradesh #1
 @k @PT-76B @2.117 @diag @0 @0

@@ -26,7 +26,7 @@ Pradesh #1
 B.R. 8.0
 
 Pradesh #1
-@k @ZSU-57-2 @2.17 @para @~
+@k @ZSU-57-2 @2.170 @para @0 @0
 
 Pradesh #2
 @k @PLZ83-130 @1.641, 1.677 @diag,diag @~
@@ -38,7 +38,7 @@ Pradesh #2
 @k @PT-76B @1.571 @~para @0 @0
 
 Pradesh #1
-@k @PT-76B @1.695 @near-perp @0 @0
+@k @PT-76B @1.695 @diag @0 @0
 @k @Object 268 @2.052 @para @0 @0
 
 Pradesh #1
