@@ -1,4 +1,16 @@
 
+2025-01-28
+
+Pradesh #1
+X
+@k @WZ1001(E) LCT @1.317 @diag @0 @0
+@k @T-80BVM @0.984 @near-perp @~20,0 @0,0
+@K @T-72B3 @1.509 @diag @0 @0
+
+Pradesh #1
+X
+@k @T-80U @0.964 @perp @~10 @0
+
 2025-01-18
 
 Pradesh #1
