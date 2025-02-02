@@ -1,5 +1,30 @@
 Event, Vehicle, Distance, Orientation, Speed, SelfSpeed
 
+2025-02-01
+
+Pradesh #1
+@k @BMP-1 @2.04 @para @0 @0
+@k @BMP-3 @1.885 @para @37 @0
+@k @Object 120 @2.027 @para @0 @0
+@K @T-64A (1971) @1.862 @para @0 @0
+@k @T-62M-1 @2.002 @diag @0 @0
+@k @BMP-1 @.1910 @para @0 @0
+@k @IT-1 @2.015 @near-perp @-9 @0
+@k @T-62M-1 @1.480 @perp @10 @0
+
+Pradesh #2
+@k @BMP-2 @1.740 @diag
+@k @BMP-3 @1.703 @diag @0 @0
+@k @T-62M-1 @1.655 @near-para @0 @0
+
+Pradesh #2
+@k @BTR-80A @1.58 @perp @0 @0
+@k @BMP-3 @1.58 @diag @42 @0
+@k @T-55AMD-1 @1.78 @diag @0 @0
+@k @T-55AM-1 @2.238 @para @0 @0
+@k @T-64A (1971) @2.239, 2.246 @para,diag @0,0 @0,0
+@k @BMP-3 @1.759 @para @0 @0
+
 2025-01-27
 
 Pradesh #2
