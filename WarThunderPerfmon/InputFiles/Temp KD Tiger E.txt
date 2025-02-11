@@ -1,7 +1,16 @@
 
+2025-02-04
+
+Second Battle of El Alamein
+X
+@k @Pvkv 1963 @1.4 @perp
+@k @T-34-85 @~0.7 @diag
+@kb @M4A3 @~.1 @near-perp @0 @0
+
 2025-01-23
 
 Mozdok [Battle]
+X
 @k @T-34-85 (D-5T) @1.008 @near-perp @0 @0
 
 Second Battle of El Alamein
@@ -10,6 +19,7 @@ X
 2025-01-17
 
 Fire Arc
+X
 @k @Sherman Vc @1.259 @perp @0 @0
 @kb @T-34-85 @1.480 @perp @0 @0
 

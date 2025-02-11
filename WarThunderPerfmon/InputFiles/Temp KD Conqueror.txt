@@ -10,7 +10,43 @@ For the Centurion Mk. 10, an increase of one hundred meters for HESH rounds is n
 
 KD records for maps on the avoidance list will be removed. This was implemented on Aug. 14, 2023, and applies to all vehicles.
 
+2025-02-10
+
+Pradesh #1
+@k @T-54 (1949) @~1.1 @para
+
+2025-02-8
+BR 7.7
+Diff v Cent -1
+
+Pradesh #1
+@k @PT-76-57 @1.997 @diag @0 @0
+
+Pradesh #1
+@k @ASU-85 @1.797 @diag @0 @0
+
+2025-02-05
+BR 8.0
+Diff. v. Cent 0
+
+Second Battle of El Alamein
+@k @Object 268 @1.453 @diag @5 @0
+@k @ZTZ59A @2.655 @para @14 @0
+@kb @ZTZ59A @1.08 @para @0 @0
+
+Second Battle of El Alamein [Battle]
+@kb @PLZ05 @2.014 @para @0 @4
+
+2025-02-03
+BR 7.7
+
+Pradesh #1
+X
+@k @Type 63 @1.704 @diag @0 @0
+@k @ZSL92 @1.412
+
 2025-01-31
+BR 8.0
 
 Pradesh #1
 X
@@ -50,7 +86,7 @@ X
 B.R. 7.7
 
 Second Battle of El Alamein
-@k @IS-6 @2.584, 2.585 @~20,0 @0,0
+@k @IS-6 @2.584, 2.585 @20,0 @0,0
 @k @T-54 (1947) @1.933 @near-para @0 @0
 @k @T-54 (1949) @1.297 @diag @3 @0
 @K @T-54 (1949) @1.830 @diag @0 @0
@@ -68,6 +104,7 @@ Pradesh #2
 @k @PLZ83-130 @1.641, 1.677 @diag,diag @~
 
 2025-01-19
+BR 8.0
 
 Pradesh #2
 @k @Object 268 @1.666 @~perp @0 @0
@@ -142,8 +179,8 @@ Pradesh #1
 @k @T-54 (1949) @~1.6 @para @0 @0
 
 Pradesh #1
-@k @T-54 (1949) @~2.020 @near-para @0 @0
-@k @IS-4M @~1.3 @near-para @0 @0
+@k @T-54 (1949) @2.020 @near-para @0 @0
+@k @IS-4M @1.3 @near-para @0 @0
 
 2024-12-27
 BR 8.0

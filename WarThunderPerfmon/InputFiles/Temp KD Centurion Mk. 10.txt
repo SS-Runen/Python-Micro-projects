@@ -1,6 +1,48 @@
 KD records for maps on the avoidance list will be removed. This was implemented on Aug. 14, 2023, and applies to all vehicles.
 
+2025-02-10
+
+Second Battle of El Alamein
+@k @T-54 (1949) @1.923 @diag @0 @0
+
+2025-02-08
+BR 7.7
+Difference v Conq +1
+
+Second Battle of El Alamein [Battle]
+@K @T-54 (1947) @1.600 @near-para
+
+Second Battle of El Alamein
+X
+@k @Object 268 @1.681, 1.682 @para,para @~
+
+2025-02-05
+BR 8.0
+Diff. v. Conq. 0
+
+Pradesh #1
+@k @2S3M @2.000,2.022 @diag,perp
+@K @T-54 (1951) @1.824 @para
+
+Pradesh #2
+X
+@k @ZSL92 @1.1 @diag @0 @0
+@k @T-54 (1949) @1.410 @para @0 @0
+@k @IS-6 @~1.337
+
+2025-02-03
+BR 7.7
+
+Pradesh #2
+X
+@K @PT-76 @1.846 @diag @0 @0
+
+Pradesh #1
+X
+@k @PT-76-57 @1.826 @perp @0 @0
+
 2025-01-31
+BR 8.0
 
 Pradesh #2
 @k @T-54 (1949) @2.024 @perp @0 @0
@@ -9,7 +51,7 @@ Second Battle of El Alamein
 X
 
 2025-01-29
-B.R. 7.7
+BR 7.7
 
 Pradesh #2
 @k @PT-76-57 @~0.590 @perp @0 @0
