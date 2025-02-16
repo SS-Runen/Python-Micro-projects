@@ -1,3 +1,11 @@
+2025-02-16
+Diff v. Tiger E 0
+
+Second Battle of El Alamein
+@k @M4A1 (76) @1.991, 1.955 @near-perp,diag @16,0 @0,0
+@k @M18 @1.905, 1.905 @perp,perp @-18,0 @0,0
+@k @T1E1 (90) @1.995, 1.995 @diag,para @11,0 @0,0
+
 2025-02-04
 
 Second Battle of El Alamein

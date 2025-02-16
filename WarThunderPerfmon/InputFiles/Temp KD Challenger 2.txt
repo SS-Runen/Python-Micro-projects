@@ -2,6 +2,16 @@
 2025-02-14
 
 Pradesh #1
+@k @T-72AV (TURMS-T) @2.046 @diag @0 @0
+@k @T-80UD @2.048 @para @0 @0
+@k @T-72M2 Moderna @2.021 @para @0 @0
+
+Pradesh #2
+@k @Al-Khalid @1.679 @para
+
+2025-02-14
+
+Pradesh #1
 @k @BMD-4M @~1.8 @near-para @0 @0
 @kb @2S25 @2.005 @para @0 @0
 
