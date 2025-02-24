@@ -1,4 +1,11 @@
 
+2025-02-22
+
+Second Battle of El Alamein
+@k @T-34-85 @~1.392 @para @0 @0
+@k @M4/T26 @~1.9 @perp @0 @0
+@k @M4/T26 @2.044 @para @0 @0
+
 2025-02-16
 
 Diff v. Sherman Vc 0
