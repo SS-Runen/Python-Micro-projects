@@ -12,6 +12,10 @@ KD records for maps on the avoidance list will be removed. This was implemented 
 
 2025-02-25
 BR 8.0
+Diff v. Cent 0
+
+Pradesh #1
+@k @Type 59 @2.06 @perp @0 @0
 
 Pradesh #2
 @k @PLZ05 @2.057 @diag @0 @0
