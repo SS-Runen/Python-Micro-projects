@@ -1,4 +1,12 @@
 Event, Vehicle, Distance, Orientation, Speed, SelfSpeed
+2025-03-08
+
+Pradesh #2
+X
+@k @T-55AMD-1 @1.783 @para
+
+Pradesh #2
+@k @ZTZ88B @2.001 @diag @0 @0
 
 2025-02-11
 

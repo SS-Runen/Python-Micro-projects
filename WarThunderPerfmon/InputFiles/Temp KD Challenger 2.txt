@@ -3,7 +3,13 @@
 
 Second Battle of El Alamein
 @K @BMP-2 @2.728 @para @0 @0
+@k @2S6 @2.115 @para @17 @0
+@k @BMP-2 @1.351 @perp @3 @0
+@k @2S38 @0.873 @para @13 @0
+@k @2S38 @0.684 @para @0 @0
+@k @ZSU-23-4M4 @2.561 @diag @0 @0
 @k @BMP-2M @3.184 @near-perp @0 @0
+@kb @T-80B @.292 @near-perp @0 @0
 
 2025-02-14
 
