@@ -24,9 +24,9 @@ Pradesh #1
 @k @BTR-80A @1.947 @near-perp @0 @0
 
 Pradesh #1
-@k @T-55AMD-1 @0.752,0.750 @para,para @~10,0 @0,0
+@k @T-55AMD-1 @0.752,0.750 @para,para @10,0 @0,0
 @kb @T-55AMD-1 0.866 @diag @0 @0
-@kb @2S25 @2.162 @para @0 @~-10
+@kb @2S25 @2.162 @para @0 @-10
 
 Pradesh #2
 @K @ZTZ59D1 @1.703 @perp @~15 @0

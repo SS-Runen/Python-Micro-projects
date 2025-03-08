@@ -6,11 +6,18 @@ Olifant Mk.2 Guide
 2025-03-08
 
 Pradesh #1
-@k @T-62 @2.118 @near-perp @0 @0
-@k @BMP-3 @~1.9 @diag
+@k @Shturm-S @1.654 @para @0 @0
+@k @BMP-3 @1.930 @diag @10 @0
+@k @BMP-2 @1.292 @diag @0 @0
+@k @T-62 @2.118 @near-perp @13 @0
+@k @BMP-2 @1.356 @near-para @0 @0
 
 Pradesh #2
-@k @T-55AM-1 @2.244 @near-para @0 @0
+@k @WMA301 @1.67 @diag @0 @0
+@k @T-55AMD-1 @1.76 @diag @0 @0
+@k @WMA301 @1.73 @diag @0 @0
+@k @BMP-3 @2.03 @perp @26 @0
+@k @T-55AM-1 @2.224 @near-para @0 @0
 
 2025-02-11
 
