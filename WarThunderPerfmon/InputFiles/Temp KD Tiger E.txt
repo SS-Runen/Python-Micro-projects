@@ -3,9 +3,13 @@
 Diff v Sherman Vc 0
 
 Second Battle of El Alamein
-@k @T-34-85 @~1.392 @para @0 @0
-@k @M4/T26 @~1.9 @perp @0 @0
+@k @E.B.R. (1954) @0.72 @para @0 @0
+@k @T-34-85 @1.392 @para @0 @0
+@k @Skink @1.91 @diag @0 @0
+@k @M4/T26 @1.92 @perp @-5 @0
+@k @M4A2 (76) W @1.5 @near-para @36 @0
 @k @M4/T26 @2.044 @para @0 @0
+@k @Sherman Vc @0.696 @perp @31 @0
 
 2025-02-16
 

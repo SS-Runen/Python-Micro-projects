@@ -29,7 +29,7 @@ Pradesh #1
 @kb @2S25 @2.162 @para @0 @-10
 
 Pradesh #2
-@K @ZTZ59D1 @1.703 @perp @~15 @0
+@K @ZTZ59D1 @1.703 @diag @22 @0
 @k @Object 775 @2.177 @para @0 @0
 
 2025-02-01

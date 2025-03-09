@@ -74,7 +74,7 @@ Pradesh #1
 
 Pradesh #2
 @k @T-44 @2.025 @diag @0 @0
-@k @BTR-ZD @1.641, 1.616 @diag,diag @~15,0 @0,0
+@k @BTR-ZD @1.641, 1.616 @diag,diag @19,0 @0,0
 
 2025-02-10
 BR 8.0
@@ -99,8 +99,11 @@ BR 8.0
 Diff. v. Conq. 0
 
 Pradesh #1
-@k @2S3M @2.000,2.022 @diag,perp
-@K @T-54 (1951) @1.824 @para
+@k @ZSU-57-2 @1.823 @near-perp @16 @0
+@k @2S3M @2.022 @near-perp @0 @0
+@k @PLZ83 @1.678 @near-para @20 @0
+@k @Type 59 @1.35 @para @0 @0
+@K @T-54 (1951) @1.824 @para @8 @0
 
 Pradesh #2
 X
@@ -124,7 +127,7 @@ BR 8.0
 Diff v. Conq. 0
 
 Pradesh #2
-@k @T-54 (1949) @2.024 @perp @0 @0
+@k @T-54 (1949) @2.024 @perp @-12 @0
 
 Second Battle of El Alamein
 X

@@ -42,7 +42,7 @@ Second Battle of El Alamein
 @k @T-55AMD-1 @2.257 @near-perp @0 @0
 
 Pradesh #2
-@k @Type 69 @1.698 @perp @~10 @0
+@k @Type 69 @1.698 @near-perp @17 @0
 @K @BMD-4M @1.080 @perp @0 @0
 @kb @T-69 II G @2.026 @para @0 @0
 @kb @T-55AMD-1 @0.081 @perp @0 @0

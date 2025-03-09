@@ -15,7 +15,7 @@ BR 8.0
 Diff v Cent +1
 
 Pradesh #2
-@k @T-54 (1947) @2.056, 2.056 @diag,diag
+@k @T-54 (1947) @2.056 @diag @0 @0
 @k @SU-122-54 @2.080 @para @0 @0
 
 2025-03-05
@@ -48,7 +48,7 @@ BR 8.0
 Diff v. Cent 0
 
 Pradesh #1
-@k @Type 59 @2.06 @perp @0 @0
+@k @Type 59 @2.065 @perp @0 @0
 
 Pradesh #2
 @kb @ZSU-57-2 @1.06 @perp @0 @0
@@ -179,9 +179,9 @@ X
 B.R. 7.7
 
 Second Battle of El Alamein
-@k @IS-6 @2.584, 2.585 @20,0 @0,0
-@k @T-54 (1947) @1.933 @near-para @0 @0
-@k @T-54 (1949) @1.297 @diag @3 @0
+@k @IS-6 @2.584, 2.585 @4,0 @0,0
+@k @T-54 (1947) @1.933 @para @0 @0
+@k @T-54 (1949) @1.297 @diag @9 @0
 @K @T-54 (1949) @1.830 @diag @0 @0
 
 Pradesh #1
