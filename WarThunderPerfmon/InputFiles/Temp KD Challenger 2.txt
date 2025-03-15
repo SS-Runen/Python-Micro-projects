@@ -14,9 +14,12 @@ Second Battle of El Alamein
 2025-02-14
 
 Pradesh #1
-@k @T-72AV (TURMS-T) @2.046 @diag @0 @0
-@k @T-80UD @2.048 @para @0 @0
-@k @T-72M2 Moderna @2.021 @para @0 @0
+@k @T-72AV (TURMS-T) @2.046 @diag @8 @0
+@k @T-90A @1.674 @diag @-2 @0
+@k @2S25M @1.852 @diag @-4 @0
+@k @T-80UD @2.030, 2.048 @near-perp, para @0,0 @0,0
+@K @2S38 @1.801 @near-perp @27 @0
+@k @T-72M2 Moderna @2.021 @diag @0 @0
 
 Pradesh #2
 @k @Al-Khalid @1.679 @para

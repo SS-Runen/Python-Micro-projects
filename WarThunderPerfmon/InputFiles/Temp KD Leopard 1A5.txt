@@ -7,6 +7,11 @@ X
 
 Pradesh #2
 @k @ZTZ88B @2.001 @diag @0 @0
+@k @ZSU-57-2 @1.749 @near-perp @0 @0
+@k @ZTZ88A @1.723 @para @0 @0
+@k @BMD-4 @1.666 @para @-2 @0
+@k @M41D @1.709, 1.695 @near-para,near-perp @30,0 @0,0
+@k @T-69 II G @1.844 @perp @0 @0
 
 2025-02-11
 
