@@ -95,8 +95,9 @@ BR 7.7
 Diff v Cent +1
 
 Pradesh #2
-@k @T-44-100 @~1.643 @para @0 @0
-@k @M48A1 (Chinese) @1.967, 1.965 @diag,para @~10,0 @0,0
+@k @T-44-100 @1.643 @para @0 @0
+@k @M48A1 (Chinese) @1.967, 1.965 @diag,para @27,0 @0,0
+@k @T-44-100 @1.44, 1.44 @diag @8,0 @0,0
 
 Second Battle of El Alamein [Battle]
 X

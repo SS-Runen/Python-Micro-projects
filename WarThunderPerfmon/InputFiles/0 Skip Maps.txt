@@ -44,7 +44,7 @@ Mozdok Mini (changed 2024-01-01)
 Mozdok [Battle], Skip for B.R. 10.0 and up. Probable range of combat is 1.5 km.
 Sands of Sinai (changed 2024-06-19, Major Update, Seek and Destroy)
 Tunisia
-Second Battle of El Alamein [Battle] - The miniaturized version cuts out easy access to the sniping platforms of the domination version while putting the spawns so close to each other that it is easy to avoid the open space and capture either zone.
+Second Battle of El Alamein [Battle] - Only good for low tier. The miniaturized version cuts out easy access to the sniping platforms of the domination version while putting the spawns so close to each other that it is easy to avoid the open space and capture either zone.
 
 ----------
 2024-06-25
