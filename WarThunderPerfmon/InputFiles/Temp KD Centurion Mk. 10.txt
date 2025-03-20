@@ -1,39 +1,22 @@
 KD records for maps on the avoidance list will be removed. This was implemented on Aug. 14, 2023, and applies to all vehicles.
 
+2025-03-20
+BR 7.7
+Diff v Conq 0
+
+Pradesh #2
+@k @T-54 (1947) @1.217 @near-perp @0 @0
+@k @T-54 (1949) @1.689 @diag @13 @0
+@k @T-54 (1949) @1.737 @diag @0 @0
+@k @T-54 (1947) @2.161, 2.173 @para,para @0,0 @0,0
+@K @IS-4M @1.09, 1.09 @perp,near-para @12,0 @0,0
+
 2025-03-17
 BR 8.0
 Diff v Conq 0
 
 Pradesh #1
-@k @TO-55 @~1.6
-@k @SU-122-54 @~1.8 @para,perp
-@kb @TO-55 @~1.6
-
-2025-03-15
-BR 7.7
-Diff v Cent
-
-Pradesh #1
-@k @T-44-100 @~1.547 @perp
-
-Pradesh #2
 X
-
-2025-03-07
-BR 8.0
-Diff v. Conq -1
-
-2025-03-05
-BR 7.7
-Diff v Conq 0
-
-2025-03-02
-BR 8.0
-Diff v Conq 0
-
-Pradesh #2
-@k @M48 @~1.88 @diag @0 @0
-@k @T-54 (1947) @~1.4 @perp @0 @0
 
 2025-02-28
 BR 7.7
@@ -59,26 +42,6 @@ Pradesh #2
 @k @PLZ05 @1.855 @para @0 @0
 @kb @PLZ05 @1.739 @para @0 @0
 
-2025-02-23
-BR 7.7
-Diff. v. Conq. +1
-
-2025-02-20
-BR 8.0
-Diff v. Conq -1
-
-2025-02-18
-BR 7.7
-Diff. v. Conq. +1
-
-Second Battle of El Alamein
-X
-@k @T-54 (1949) @~1.1 @perp
-
-Pradesh #1
-X
-@k @T-44 @~1.2 @near-perp @~15 @0
-
 2025-02-15
 BR 8.0
 Diff v. Conq. -1
@@ -88,7 +51,6 @@ BR 7.7
 Diff v. Conq -1
 
 Pradesh #1
-@k @IS-6 @~1.888 @diag
 @k @T-54 (1949) @2.007 @para @0 @0
 
 Pradesh #2
@@ -104,17 +66,6 @@ Second Battle of El Alamein
 @k @SU-122-54 @1.3 @diag @0 @0
 @k @M48A1 (Chinese) @1.43 @para @3 @0
 
-2025-02-08
-BR 7.7
-Difference v Conq +1
-
-Second Battle of El Alamein [Battle]
-@K @T-54 (1947) @1.600 @near-para
-
-Second Battle of El Alamein
-X
-@k @Object 268 @1.681, 1.682 @para,para @~
-
 2025-02-05
 BR 8.0
 Diff. v. Conq. 0
@@ -125,12 +76,6 @@ Pradesh #1
 @k @PLZ83 @1.678 @near-para @20 @0
 @k @Type 59 @1.35 @para @0 @0
 @K @T-54 (1951) @1.824 @para @8 @0
-
-Pradesh #2
-X
-@k @ZSL92 @1.1 @diag @0 @0
-@k @T-54 (1949) @1.410 @para @0 @0
-@k @IS-6 @~1.337
 
 2025-02-03
 BR 7.7
@@ -156,11 +101,6 @@ X
 2025-01-29
 BR 7.7
 
-Pradesh #2
-@k @PT-76-57 @~0.590 @perp @0 @0
-@k @IS-3 @1.898 @diag @0 @0
-@k @IS-4M @1.684 @perp @~10 @0
-
 Second Battle of El Alamein
 @k @T-54 (1947) @2.242, 2.238 @perp,para @17,0 @0,0
 @k @T-54 (1949) @2.669 @para @0 @0
@@ -168,23 +108,12 @@ Second Battle of El Alamein
 @k @T-44-100 @2.046, 2.042 @near-perp, near-perp @18,0 @0,0
 @k @T-54 (1949) @1.865 @perp @9 @0
 
-Pradesh #2
-@k @T-54 (1949) @0.950 @near-perp @0 @0
-@k @T-54 (1947) @1.751 @diag,diag @~6,0 @0,0
-@K @PT-76B @1.491 @para @~15 @0
-@kb @T-54 (1949) @1.750 @near-para @0 @0
-
 2025-01-26
 B.R. 8.0
 
 
 2025-01-24
 B.R. 7.7
-
-Pradesh #2
-@k @Object 268 @1.284, 1.291 @diag,near-para @0,0 @0,0
-@k @IS-3 @1.842, 1.817 @near-para, perp @0,~6 @0,0
-@k @T-54 (1947) @1.753 @diag @0 @0
 
 Pradesh #1
 @k @PT-76 (Chinese) @2.010 @para @0 @0
@@ -221,11 +150,6 @@ Pradesh #2
 BR 8.0
 
 Pradesh #2
-@k @T-54 (1947) @1.710, 1.707 @perp,perp @~
-@k @IS-6 @1.762 @perp @~
-@k @WZ305 @1.839 @perp @~
-
-Pradesh #2
 @k @Object 268 @1.983 @para @0 @0
 @k @T-54 (1951) @1.370, 1.368 @para,para @16,0 @0,0
 @k @T-54 (1947) @1.693, 1.692 @para,para @3,0 @0,0
@@ -238,13 +162,6 @@ Pradesh #2
 Second Battle of El Alamein [Battle]
 @k @T-44-100 @2.043 @para @0 @0
 
-2025-01-11
-B.R. 8.0
-
-Pradesh #2
-@k @ZSU-57-2 @1.846 @~diag @0 @0
-@k @Object 268 @1.694 @~near-perp @0 @0
-
 2025-01-09
 
 Pradesh #2
@@ -255,31 +172,6 @@ Pradesh #2
 @k @T-44-100 @1.997 @para @0 @0
 @k @ASU-85 @1.161 @near-perp @0 @0
 
-2025-01-06
-8.0
-
-Pradesh #2
-@k @IS-6 @~1.3 @perp @0 @0
-@k @T-54 (1947) @~1.679 @near-perp @0 @0
-
-2025-01-04
-
-Pradesh #2
-@k @T-44-100 @~.2 @diag
-@k @T-54 (1949) @~1.891 @diag @0 @0
-@k @T-44-100 @~1.7 @near-para @0 @0
-@k @T-54 (1947) @~1.352 @diag
-
-Pradesh #2
-@k @T-54 (1949) @~1.5 @para @0 @0
-@k @T-54 (1949) @~1.7 @perp
-@k @IS-3 @~1.6 @perp
-@k @IS-4M @~1.5 @para @0 @0
-@k @T-54 (1949) @~1.7 @perp
-@k @SU-100P @~1.4 @near-para @0 @0
-@k @T-54 (1949) @~0.7 @diag
-@kb @Type 62 @~0.6 @near-perp @0 @0
-
 2024-12-30
 
 Pradesh #1
@@ -287,11 +179,6 @@ Pradesh #1
 @k @Object 268 @1.816, 1.806 @near-perp,near-perp @21,0 @0,0
 @k @IS-4M @1.919 @diag @0 @0
 @k @IS-4M @0.42 @near-perp @0 @0
-
-Pradesh #2
-@k @IS-4M @~1.714 @para @0 @0
-@k @IS-6 @~1.74 @para @0 @0
-@k @Type 63 @~1.780 @para @0 @0
 
 Pradesh #1
 @k @T-54 (1949) @0.87 @perp @0 @0
@@ -307,9 +194,6 @@ Pradesh #2
 @k @WZ305 @1.846, 1.859 @para
 
 2024-12-20
-
-Pradesh #1
-@k @IS-3 @~1.6 @para @0 @0
 
 Pradesh #2
 @k @T-44-100 @2.217, 2.248 @perp,para @18,-4 @0,0
