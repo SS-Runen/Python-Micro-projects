@@ -1,4 +1,12 @@
 KD records for maps on the avoidance list will be removed. This was implemented on Aug. 14, 2023, and applies to all vehicles.
+2025-03-25
+BR 7.7
+Diff v Conq 0
+
+Pradesh #1
+@K @Type 62 @1.964 @near-perp @14 @0
+@k @SU-100P @1.69 @diag @0 @0
+@k @ASU-85 @.72, .72 @diag @3,0 @0,0
 
 2025-03-22
 BR 8.0
