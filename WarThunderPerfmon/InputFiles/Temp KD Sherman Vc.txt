@@ -1,4 +1,20 @@
+2025-04-23
+Diff v Tiger E -1
+
+Fire Arc #2
+@kb @M18 @0.737 @perp @0 @0
+@kb @SU-152 @1.722 @para @0 @0
+
+2025-04-05
+Diff v Tiger E 0
+
+Fire Arc #2
+@k @M4/T26 @1.744, 1.740 @diag,diag
+@k @T77E1 @1.497 @near-para
+
 2025-03-24
+Diff v Tiger E 0
+
 Second Battle of El Alamein [Battle]
 @k @Comet I @1.761 @perp @0 @0
 @kb @M4A3 (76) W @0.748 @near-perp @0 @0
