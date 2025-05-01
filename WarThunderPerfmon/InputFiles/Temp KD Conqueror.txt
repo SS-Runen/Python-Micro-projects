@@ -9,9 +9,18 @@ Unlike the Centurion MK. 10 custom sight, the Conqueror cold-war custom sight do
 For the Centurion Mk. 10, an increase of one hundred meters for HESH rounds is needed at ranges under 1500.
 
 KD records for maps on the avoidance list will be removed. This was implemented on Aug. 14, 2023, and applies to all vehicles.
+
+2025-05-01
+BR 8.0
+Diff v Cent
+
+Pradesh #1
+X
+@k @IS-6 @1.457, 1.457 @near-perp,near-perp
+
 2024-05-29
 BR 7.7
-Diff v. Cent
+Diff v. Cent +1
 
 Pradesh #2
 X
