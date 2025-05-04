@@ -1,3 +1,11 @@
+2025-05-05
+Diff v Tiger E
+
+Fire Arc
+@k @T-34-85 @~1.273, 1.264 @perp,perp
+@k @IS-1 @1.855 @diag @0 @0
+@k @IS-1 @1.389, 1.406 @near-para, near-perp @0,0 @0,0
+
 2025-04-23
 Diff v Tiger E -1
 

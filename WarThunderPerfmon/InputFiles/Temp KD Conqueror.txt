@@ -18,13 +18,13 @@ Pradesh #1
 X
 @k @IS-6 @1.457, 1.457 @near-perp,near-perp
 
-2024-05-29
+2024-04-29
 BR 7.7
 Diff v. Cent +1
 
 Pradesh #2
-X
-@k @T-44 @1.140 @diag
+@k @SU-100P @1.818, 1.818 @diag,diag @22,0 @0,0
+@k @T-44-100 @1.401 @para @0 @0
 
 2025-04-26
 BR 8.0
