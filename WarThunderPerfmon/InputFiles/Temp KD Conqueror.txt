@@ -10,6 +10,14 @@ For the Centurion Mk. 10, an increase of one hundred meters for HESH rounds is n
 
 KD records for maps on the avoidance list will be removed. This was implemented on Aug. 14, 2023, and applies to all vehicles.
 
+2024-04-29
+BR 7.7
+Diff v. Cent
+
+Pradesh #1
+@k @T-54 (1947) @1.826 @para @0 @0
+@k @M53/59 @1.947 @diag @0 @0
+
 2025-05-01
 BR 8.0
 Diff v Cent -1
