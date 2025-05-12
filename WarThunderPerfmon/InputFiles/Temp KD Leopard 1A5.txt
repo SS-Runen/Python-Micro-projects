@@ -1,5 +1,18 @@
 Event, Vehicle, Distance, Orientation, Speed, SelfSpeed
 
+2025-05-12
+Diff v. Olifant
+
+Pradesh #2
+@k @Type 69 @1.771 @diag
+@k @T-55AMD-1 @1.1176
+@k @Type 69 II G @1.093
+
+Pradesh #2
+@k @M60A3 TTS @1.672 @diag @0 @0
+@k @T-55AMD-1 @1.743 @diag @0 @0
+@k @PGZ09 @2.191 @perp @0 @0
+
 2025-05-07
 Diff v Olifant +1
 
