@@ -27,7 +27,8 @@ Pradesh #1
 @kb @BMD-4 @0.592 @para @0 @0
 
 Second Battle of El Alamein
-@k @PGZ09 @2.684 @para @0 @0
+@k @PGZ09 @2.684 @para @0 @-12
+@k @PGZ09 @1.605, 1.592 @perp,para @0,0 @14,0
 @kb @AFT09 @2.292 @perp @0 @0
 
 2025-05-07
