@@ -3,6 +3,12 @@ Rooikat Handling
 
 - Without the machine gun, there is no easy way to tell if the gun is pointing beyond and over your cover. In cases where it is hard to tell through the gun sight, point the gun at the target first. After pointing the gun, use the 3rd person view or binoculars to check while moving into line of sight.
 
+2025-06-11
+
+Pradesh #1
+@k @T-55AM-1 @2.180 @para @0 @0
+@k @T-62M-1 @2.009 @diag
+
 2025-01-12
 
 Pradesh #1

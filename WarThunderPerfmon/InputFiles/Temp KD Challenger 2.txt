@@ -18,7 +18,13 @@ Second Battle of El Alamein
 2025-04-15
 
 Pradesh #2
-@k @ZSU-23-4 @2.286, 2.247 @perp, near-perp @0,0 @0,0
+@k @ZTZ00-III @1.732, 1.724 @diag,para @0,0 @0,0
+@K @2S38 @1.755 @diag @-4 @0
+@k @BMP-2M @1.770 @diag @0 @0
+@k @T-80UD @1.751 @near-para @0 @0
+@k @ZSU-23-4M4 @2.286, 2.247 @near-perp, near-perp @10,0 @0,0
+@K @PGZ04A @1.739, 1.732 @diag,diag @34,0 @0,0
+@k @BMD-4M @1.608 @diag @0 @0
 
 Pradesh #2
 @k @2S6 @1.936 @para @0 @0
