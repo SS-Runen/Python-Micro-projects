@@ -6,8 +6,8 @@ Rooikat Handling
 2025-06-11
 
 Pradesh #1
-@k @T-55AM-1 @2.180 @para @0 @0
-@k @T-62M-1 @2.009 @diag
+@k @T-55AM-1 @2.180 @para @-10 @0
+@k @T-62M-1 @2.009 @near-para @14 @0
 
 2025-01-12
 

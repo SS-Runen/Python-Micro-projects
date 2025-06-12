@@ -8,7 +8,7 @@ Diff v Leopard 1A5 0
 
 Pradesh #1
 @kb @T-55AM-1 @2.177 @para @0 @0
-@kb @T-55AM-1 @2.175 @near-para @0 @0
+@kb @T-55AM-1 @2.175 @near-para @0 @-1
 
 2025-05-22
 Diff v Leopard 1A5 0
@@ -45,8 +45,8 @@ Diff v Leo -1
 Diff v Leo 0
 
 Second Battle of El Alamein
-@k @T-10M @~1.652
-@k @T-10A @2.071 @diag @0 @0
+@k @T-10M @1.652, 1.6 @diag,near-para @24,0 @0,0
+@k @T-10A @2.071 @near-perp @0 @0
 @k @2S25 @2.230 @diag @0 @0
 
 2025-04-27
