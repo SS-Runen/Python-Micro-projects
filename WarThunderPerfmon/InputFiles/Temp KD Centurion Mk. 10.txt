@@ -2,9 +2,22 @@ KD records for maps on the avoidance list will be removed. This was implemented 
 
 If there were no kills or deaths in a match, it is not counted.
 
+2025-06-13
+7.7
+Diff v Conq -1
+
+Pradesh #1
+@k @IS-3 @0.740 @diag @0 @0
+@k @IS-3 @1.952 @perp
+
+Second Battle of El Alamein #1
+@k @IS-4M @1.792, 1.793 @para,para
+@k @T-44-100 @1.888 @diag @0 @0
+@k @2.756, 2.740 @near-perp,near-para
+
 2025-06-08
 BR 7.7
-Diff v Conq.
+Diff v Conq. -1
 
 Pradesh #2
 @k @ZSL92 @2.011, 1.999 @near-perp,near-perp
@@ -57,7 +70,7 @@ Pradesh #2
 BR 7.7
 Diff v. Conq 0
 
-Second Battle of El Alamein
+Second Battle of El Alamein #1
 @k @SU-100P @1.974 @para @0 @0
 @k @Type 62 @1.567 @para @0 @0
 
