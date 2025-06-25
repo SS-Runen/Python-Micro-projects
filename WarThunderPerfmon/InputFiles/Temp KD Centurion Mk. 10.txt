@@ -2,16 +2,17 @@ KD records for maps on the avoidance list will be removed. This was implemented 
 
 If there were no kills or deaths in a match, it is not counted.
 
-2025-06-15
+2025-06-25
 BR 8.0
-Diff v Conq 
+Diff v Conq
 
-Second Battle of El Alamein
-@K @T-54 (1947) @2.185 @para @0 @0
-@k @ZSU-57-2 @1.239, 1.229
-@k @T-54 (1947) @2.416, 2.412 @perp,perp
-@k @T-54 (1951) @1.440 @perp @0 @0
-@k @T-54 (1951) @0.864
+Second Battle of El Alamein #1
+@k @2S19M1 @1.715 @para
+@k @ZSU-57-2 @2.289, 2.295 @para,diag
+@k @Type 63 @1.203 @perp
+@k @ZSU-57-2 @diag @2.118 @0 @0
+@k @T-54 (1947) @1.424 @para
+@k @Object 268 @2.357 @para
 
 2025-06-18
 BR 7.7
@@ -31,9 +32,9 @@ Pradesh #1
 @k @IS-3 @1.952 @perp
 
 Second Battle of El Alamein #1
-@k @IS-4M @1.792, 1.793 @para,para
+@k @IS-4M @1.792, 1.793 @near-para,para @17,0 @0,0
 @k @T-44-100 @1.888 @diag @0 @0
-@k @2.756, 2.740 @near-perp,near-para
+@k @IS-4M @2.756, 2.740 @diag,near-para @31,0 @0,0
 
 2025-06-08
 BR 7.7
@@ -42,6 +43,27 @@ Diff v Conq. -1
 Pradesh #2
 @k @ZSL92 @2.011, 1.999 @near-perp,near-perp
 @k @IS-4M @1.781 @near-perp,near-perp
+
+2025-06-20
+BR 8.0
+Diff v Conq 0
+
+Pradesh #1
+@k @Type 59 @1.740 @perp @0 @0
+@k @T-54 (1949) @1.2
+@k @T-54 (1947) @1.771, 1.770 @perp,perp
+
+2025-06-15
+BR 8.0
+Diff v Conq 0
+
+Second Battle of El Alamein
+@K @T-54 (1947) @2.185 @para @0 @0
+@k @ZSU-57-2 @1.239, 1.229 @46,0 @0,0
+@k @T-54 (1947) @2.416, 2.412 @perp,perp @31,0 @0,0
+@k @T-54 (1951) @1.440 @perp @0 @0
+@k @SU-122-54 @1.44 @diag @15 @0
+@k @T-54 (1951) @0.864 @perp @13 @0
 
 2025-05-24
 BR 7.7
@@ -73,17 +95,17 @@ Diff v Conq 0
 Pradesh #2
 @k @M48A1 (Chinese) @2.048 @perp @0 @0
 @k @Type 62 @1.815 @diag @0 @0
-@k @T-54 (1949) @1.1164 @diag
-@k @T-44 @1.1150 @near-perp @0 @0
+@k @T-54 (1949) @1.164 @diag @0 @0
+@k @T-44 @1.150 @near-perp @0 @0
 
 2024-05-11
 BR 8.0
 Diff v. Conq +1
 
 Pradesh #2
-@k @ZSU-57-2 @1.712 @near-para @0 @0
-@k @T-54 (1951) @1.694 @near-perp
-@k @PLZ05 @2.100 @perp
+@k @ZSU-57-2 @1.712 @diag @5 @0
+@k @T-54 (1951) @1.694 @diag @25 @0
+@k @PLZ05 @2.100 @perp @0 @0
 @kb @T-54 (1947) @1.715 @para @0 @0
 
 2024-05-09
@@ -109,7 +131,7 @@ X
 
 Second Battle of El Alamein
 @k @ZTS63 @2.208 @perp @0 @0
-@k @T-54 (1951) @~1.755 @diag @0 @0
+@k @T-54 (1951) @1.755 @near-para @0 @0
 @k @T-54 (1951) @2.070 @para @0 @0
 
 Pradesh #2
