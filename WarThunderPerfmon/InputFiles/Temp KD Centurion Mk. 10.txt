@@ -2,17 +2,37 @@ KD records for maps on the avoidance list will be removed. This was implemented 
 
 If there were no kills or deaths in a match, it is not counted.
 
+2025-06-30
+BR 8.0
+Diff v Conq.
+
+Pradesh #2
+@kb @M53/59 @0.244 @perp @0 @0
+@kb @M53/59 @0.234 @perp @0 @0
+
+2025-06-28
+BR 7.7
+Diff v Conq.
+
+Pradesh #1
+@k @IS-6 @1.618, 1.605 @perp,diag
+@k @T-44-100 @0.746 @perp
+@k @T-54 (1949) @1.345 @para @0 @0
+
+Pradesh #1
+@k @T-54 (1949) @1.991 @diag @0 @0
+
 2025-06-25
 BR 8.0
-Diff v Conq
+Diff v Conq 0
 
 Second Battle of El Alamein #1
-@k @2S19M1 @1.715 @para
-@k @ZSU-57-2 @2.289, 2.295 @para,diag
-@k @Type 63 @1.203 @perp
+@k @2S19M1 @1.715 @para @0 @0
+@k @ZSU-57-2 @2.289, 2.295 @para,diag @10,0 @0,0
+@k @Type 63 @1.203 @perp @5 @0
 @k @ZSU-57-2 @diag @2.118 @0 @0
-@k @T-54 (1947) @1.424 @para
-@k @Object 268 @2.357 @para
+@k @T-54 (1947) @1.424 @para @5 @0
+@k @Object 268 @2.357 @para @0 @0
 
 2025-06-18
 BR 7.7
@@ -21,7 +41,7 @@ Diff v Conq 0
 Pradesh #1
 @k @IS-3 @1.292 @near-perp
 @k @T-34-100 @1.322 @near-perp
-@k @T-54 (1947) @2.005, 2.013 @diag,diag
+@k @T-54 (1947) @2.005, 2.013 @diag,diag @5,0 @0,0
 
 2025-06-13
 BR 7.7
@@ -29,7 +49,7 @@ Diff v Conq -1
 
 Pradesh #1
 @k @IS-3 @0.740 @diag @0 @0
-@k @IS-3 @1.952 @perp
+@k @IS-3 @1.952 @perp @0 @0
 
 Second Battle of El Alamein #1
 @k @IS-4M @1.792, 1.793 @near-para,para @17,0 @0,0

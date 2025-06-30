@@ -10,26 +10,45 @@ For the Centurion Mk. 10, an increase of one hundred meters for HESH rounds is n
 
 KD records for maps on the avoidance list will be removed. This was implemented on Aug. 14, 2023, and applies to all vehicles.
 
-2025-06-25
+2025-06-30
 BR 8.0
-Diff v Cent
+Diff v Cent.
 
+Second Battle of El Alamein #1
+@k @PLZ05 @2.395,2.391 @para,para @0,0 @0,0
+@k @TO-55 @1.746 @diag
+@k @T-54 (1947) @1.781, 1.789 @diag,diag @0,0 @0,0
+@kb @T-54 (1947) @0.685 @para @0 @0
 
-
-2025-06-23
+2025-06-28
 BR 7.7
 Diff v Cent
 
+Pradesh #1
+@k @IS-3 @0.918 @para @0 @0
+@k @T-54 (1947) @1.691 @near-perp @0 @0
+@K @IS-4M @1.688, 1.681 @para,para
+
+2025-06-25
+BR 8.0
+Diff v Cent 0
+
+Pradesh #2
+@k @ZSU-57-2 @0.950 @para @0 @0
+
+2025-06-23
+BR 7.7
+Diff v Cent +2
+
 Second Battle of El Alamein #1
-@k @BTR-ZD @.2582 @diag @0 @0 *Might be AFK, didn't move after miss.
 @k @IS-3 @1.644 @para @0 @0
-@k @IS-4M @1.645 @diag
-@k @T-44-100 @0.851 @near-perp
+@k @IS-4M @1.645 @diag @0 @0
+@k @T-44-100 @0.851 @near-perp @0 @0
 
 Second Battle of El Alamein #1
 @k @M42 (Chinese) @1.449 @diag @0 @0
-@k @ZSL92 @1.1
-@k @IS-4M @1.206, 1.185
+@k @ZSL92 @1.1 @diag @0 @0
+@k @IS-4M @1.206, 1.185 @near-para, near-para @0 @0
 
 2025-06-15
 BR 8.0
@@ -37,7 +56,7 @@ Diff v Cent. 0
 
 Pradesh #2
 @k @Object 268 @1.687, 1.689 @para,para @0,0 @0,0
-@k @TO-55 @1.338 @para
+@k @TO-55 @1.338 @para @0 @0
 
 2025-06-13
 7.7

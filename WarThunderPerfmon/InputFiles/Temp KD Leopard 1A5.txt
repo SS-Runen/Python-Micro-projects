@@ -1,9 +1,21 @@
 Event, Vehicle, Distance, Orientation, Speed, SelfSpeed
 
-2025-06-21
-Diff v Olifant
+2025-06-26
+Diff v. Olifant 0
 
-Second Battle of El Alamein
+Pradesh #2
+@k @ZTZ88B @1.719 @diag
+@k @Object 775 @1.987 @near-para @0 @0
+@K @T-64A (1971) @1.741 @diag @0 @0
+@k @BMP-3 @1.878 @diag,diag
+@k @BMP-3 @2.226 @diag @0 @0
+@k @T-55AMD-1 @2.018, 2.018 @perp,perp
+@kb @2S25 @0.949 @para
+
+2025-06-21
+Diff v Olifant +1
+
+Second Battle of El Alamein #1
 @k @BMP-3 @0.98 @diag @30 @0
 @K @PGZ09 @2.376, 2.382 @near-para,diag @15,0 @0,0
 
