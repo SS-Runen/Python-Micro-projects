@@ -1,3 +1,11 @@
+2025-07-22
+Diff v Tiger E 0
+
+Fire Arc #2
+@k @M18 @1.258 @para @0 @0
+@k @T-34-85 (D-5T) @1.239 @perp,perp
+@k @Comet I @1.436 @near-para 
+
 2025-05-23
 Diff v Tiger E 0
 
@@ -9,7 +17,7 @@ Fire Arc
 Diff v Tiger E 0
 
 Fire Arc
-@k @T-34-85 @~1.273, 1.264 @perp,perp
+@k @T-34-85 @1.273, 1.264 @perp,perp @0,0 @0,0
 @k @IS-1 @1.855 @diag @0 @0
 @k @IS-1 @1.389, 1.406 @near-para, near-perp @0,0 @0,0
 
@@ -24,8 +32,8 @@ Fire Arc #2
 Diff v Tiger E 0
 
 Fire Arc #2
-@k @M4/T26 @1.744, 1.740 @diag,diag
-@k @T77E1 @1.497 @near-para
+@k @M4/T26 @1.744, 1.740 @diag,diag @0,0 @0,0
+@k @T77E1 @1.497 @near-para @0,0 @0,0
 
 2025-03-24
 Diff v Tiger E 0
@@ -57,9 +65,9 @@ X
 
 Fire Arc
 X
-@k @M4A3E2 @1.465 @para @~-1 @0
+@k @M4A3E2 @1.465 @para @-1 @0
 @k @T1E1 @1.409 @diag @0 @0
-@k @Yag-10 (29-K) @0.590 @near-perp @~6 @0
+@k @Yag-10 (29-K) @0.590 @near-perp @6 @0
 
 2024-11-30
 

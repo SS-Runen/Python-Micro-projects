@@ -1,8 +1,16 @@
+2025-07-22
+Diff v Sherman Vc 0
+
+Second Battle of El Alamein [Battle]
+@kb @E.B.R. (1954) @0.242 @near-para @0 @0
+@k @T1E1 @1.1144 @diag @0 @0
+@k @T-34-85 (D-5T) @1.129 @near-para @0 @0
+
 2025-05-23
 Diff v Sherman Vc 0
 
 Second Battle of El Alamein
-@k @KV-85 @0.927, 0.924 @near-perp,para
+@k @KV-85 @0.927, 0.924 @near-perp,para @0,0 @0,0
 @kb @M4A1 (76) W @0.489 @perp @0 @0
 
 2023-12-30
