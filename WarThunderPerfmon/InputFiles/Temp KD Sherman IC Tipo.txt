@@ -1,7 +1,11 @@
 2025-08-
 Diff v Sherman Vc
 
-
+Fire Arc #2
+@k @ARL-44 @1.697 @para @0 @0
+@k @Pvkv m/43 @2.393, 2.403 @para,para @0,0 @0,0
+@k @M4A2 (76) W @2.335 @diag
+@k @M18 @1.185 @para @0 @0
 
 2025-07-22
 Diff v Sherman Vc 0
