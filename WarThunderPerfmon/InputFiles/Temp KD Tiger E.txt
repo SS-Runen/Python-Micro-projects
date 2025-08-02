@@ -1,7 +1,10 @@
-2025-07-
+2025-08-03
 Diff v Sherman Vc
 
-
+Second Battle of El Alamein #1
+@k @Comet @1.805,1.804 @diag,diag @0,0 @0,0
+@k @M24 @0.819, 0.820 @near-perp,near-perp
+@k @IS-1 @1.689, 1.690 @para,para @0,0 @0,0
 
 2025-05-17
 Diff v Sherman Vc +1
