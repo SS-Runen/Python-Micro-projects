@@ -4,8 +4,61 @@ If there were no kills or deaths in a match, it is not counted.
 
 2025-08-
 BR
-Diff v. Conq. 
+Diff v. Conq. 0
 
+https://warthunder.com/en/tournament/replay/373654440993202342
+52f7cbc0025a0a6
+LENINGRAD1979
+ID 12307420
+!
+MLGPvp_Tv
+ID 126112000
+!
+Воин Пухх
+ID 177422734
+!
+КРАСАВЧИК#3
+ID 178586217
+!
+zhycnm
+ID 185782133
+!
+Kinematograph
+ID 33161785
+!
+simo12343
+ID 61041804
+!
+PanAdam1998
+ID 5103140
+!
+Team 2
+Dromikadze
+ID 137670162
+!
+APdy3ik22637
+ID 141105466
+!
+J_Rives
+ID 28552741
+!
+Corsicator
+ID 6911311
+!
+Savage1239272@live
+ID 73447387
+!
+Hostias
+ID 9685807
+!
+zanytoy
+ID 98152450
+!
+jail962hungry@psn
+ID 105504044
+Second Battle of El Alamein #1
+@k @M48A1 (Chinese) @2.63 @near-perp @0 @0
+@k @Type 62 @
 
 2025-07-25
 BR 8.0
