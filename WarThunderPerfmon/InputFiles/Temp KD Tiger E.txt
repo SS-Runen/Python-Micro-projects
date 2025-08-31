@@ -1,5 +1,16 @@
+2025-08-15
+Diff v Sherman Vc +1
+
+Fire Arc #2
+@k @T-34-85 "Partisan"@1.342 @diag @0 @0
+@k @E.B.R. (1951) @1.190 @perp
+@k @T-34-85 "Parisan"@2.317 @near-para @0 @0
+@k @ASU-57 @2.154 @para @0 @0
+@k @M4A4 (SA50) @1.737 @perp @0 @0
+@K @M4A4 (SA50) @2.450 @perp @0 @0
+
 2025-08-03
-Diff v Sherman Vc
+Diff v Sherman Vc 0
 
 Second Battle of El Alamein #1
 @k @Comet @1.805,1.804 @diag,diag @0,0 @0,0

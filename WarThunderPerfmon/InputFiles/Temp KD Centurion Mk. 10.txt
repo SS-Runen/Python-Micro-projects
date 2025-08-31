@@ -2,74 +2,30 @@ KD records for maps on the avoidance list will be removed. This was implemented 
 
 If there were no kills or deaths in a match, it is not counted.
 
-2025-08-
-BR
+2025-08-24
+
+Second Battle of El Alamein #1
+@k @T-54 (1951) @2.603, 2.616 @para,diag @0,0 @0,0
+
+2025-08-12
+BR 8.0
 Diff v. Conq. 0
 
-https://warthunder.com/en/tournament/replay/373654440993202342
-52f7cbc0025a0a6
-LENINGRAD1979
-ID 12307420
-!
-MLGPvp_Tv
-ID 126112000
-!
-Воин Пухх
-ID 177422734
-!
-КРАСАВЧИК#3
-ID 178586217
-!
-zhycnm
-ID 185782133
-!
-Kinematograph
-ID 33161785
-!
-simo12343
-ID 61041804
-!
-PanAdam1998
-ID 5103140
-!
-Team 2
-Dromikadze
-ID 137670162
-!
-APdy3ik22637
-ID 141105466
-!
-J_Rives
-ID 28552741
-!
-Corsicator
-ID 6911311
-!
-Savage1239272@live
-ID 73447387
-!
-Hostias
-ID 9685807
-!
-zanytoy
-ID 98152450
-!
-jail962hungry@psn
-ID 105504044
 Second Battle of El Alamein #1
 @k @M48A1 (Chinese) @2.63 @near-perp @0 @0
-@k @Type 62 @
+@k @Type 62 @2.16, 2.16 @near-perp,near-perp @-1,0 @0,0
 
 2025-07-25
 BR 8.0
 Diff v Conq. +1
 
+Second Battle of El Alamein #1
 @k @Type 62 @1.915 @near-perp @0 @0
 @k @TO-55 @2.090, 2.091 @para, para @0,0 @0,0
 @k @Type 59 @2.709, 2.710 @para,para @0,0 @0,0
 @k @SU-122-54 @2.063, 2.062 @para,para
 @k @TO-55 @2.772 @near-perp @0 @0
-@k @ZSU-57-2 @2.168, 2.155 @diag,diag
+@k @ZSU-57-2 @2.168, 2.155 @diag,diag @43,0 @0,0
 
 2025-07-03
 BR 7.7

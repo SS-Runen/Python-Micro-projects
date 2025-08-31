@@ -1,5 +1,14 @@
 Event, Vehicle, Distance, Orientation, Speed, SelfSpeed
 
+2025-08-24
+Diff v. Olifant 0
+
+Second Battle of El Alamein #1
+@k @Object 120 @2.118, 2.104 @diag,diag @0,0 @0,0
+@k @T-55AMD-1 @1.864, 1.835 @diag,diag
+@kb @BMD-4M @1.036 @diag @0 @0
+@kb @BMD-4M @0.128 @para @0 @0
+
 2025-07-31
 Diff v. Olifant +1
 
