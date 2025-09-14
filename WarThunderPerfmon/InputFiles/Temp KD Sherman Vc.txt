@@ -1,7 +1,15 @@
-2025-08-
+2025-09-14
+Diff v Tiger E 0
+
+Fire Arc #2
+@k @ARL-44 @1.295 @perp @0 @0
+@k @BTR-152D @1.401 @diag @0 @0
+
+2025-09-02
 Diff v Tiger E
 
-
+Second Battle of El Alamein [Battle]
+@k @AMX-13 (FL11) @1.580, 1.559 @diag,diag
 
 2025-07-22
 Diff v Tiger E 0
@@ -60,11 +68,6 @@ Second Battle of El Alamein
 @k @M4A1 (76) @1.991, 1.955 @near-perp,diag @16,0 @0,0
 @k @M18 @1.905, 1.905 @perp,perp @-18,0 @0,0
 @k @T1E1 (90) @1.995, 1.995 @diag,para @11,0 @0,0
-
-2025-02-04
-
-Second Battle of El Alamein
-X
 
 2025-01-23
 

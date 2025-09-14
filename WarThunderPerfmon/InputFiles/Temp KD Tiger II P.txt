@@ -1,9 +1,9 @@
 2025-08-13
 
 Fire Arc #2
-@k @IS-2 (1944) @2.019 @para @0 @0
-@k @Black Prince @2.332, 2.332 @diag,para @0,0 @0,0
-@k @M19A1 @2.399, 2.399 @diag,diag
+@k @IS-2 (1944) @2.019 @para @31 @0
+@k @Black Prince @2.332 @para @0 @0
+@k @M19A1 @2.399 @diag @0 @0
 @k @M26 @2.265 @para @0 @0
 @k @M51 @1.254 @diag @0 @0
-@k @IS-2 (1944) @~1.4 @perp @0 @0
+@k @IS-2 (1944) @1.29 @perp @0 @0
