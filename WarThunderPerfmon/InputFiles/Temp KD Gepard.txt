@@ -2,4 +2,4 @@
 2022-09-14
 
 Second Battle of El Alamein #1
-@k @BTR-80A @2.255 @near-perp
+@k @BTR-80A @2.255 @near-perp @0 @0

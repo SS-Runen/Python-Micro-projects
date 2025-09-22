@@ -12,7 +12,7 @@ KD records for maps on the avoidance list will be removed. This was implemented 
 
 2025-09-18
 BR 8.0
-Diff v. Cent
+Diff v. Cent 0
 
 Second Battle of El Alamein #1
 @K @SU-122-54 @1.628 @para @0 @0
@@ -23,8 +23,8 @@ BR 7.7
 Diff v Cent. 0
 
 Second Battle of El Alamein #1
-@K @T-54 (1949) @1.099, 1.099 @diag,para
-@k @T-54 (1947) @1.559, 1.559 @near-perp,diag
+@K @T-54 (1949) @1.099, 1.099 @diag,para @24,0 @0,0
+@k @T-54 (1947) @1.559, 1.559 @near-perp,diag @33,0 @0,0
 @k @T-44-100 @1.722 @diag @0 @0
 
 2025-08-12
@@ -43,8 +43,8 @@ Diff v Cent. 0
 
 Second Battle of El Alamein #1
 @k @PLZ05 @2.395,2.391 @para,para @0,0 @0,0
-@k @TO-55 @1.746 @diag
-@k @T-54 (1947) @1.781, 1.789 @diag,diag @0,0 @0,0
+@k @TO-55 @1.746 @diag @15 @0
+@k @T-54 (1947) @1.781, 1.789 @near-perp,diag @0,0 @0,0
 @kb @T-54 (1947) @0.685 @para @0 @0
 
 2025-06-28
