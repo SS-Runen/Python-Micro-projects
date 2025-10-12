@@ -33,7 +33,7 @@ BR 8.0
 Diff v. Cent 0
 
 Second Battle of El Alamein #1
-@K @2S19M1 @2.832 @diag @0 @0
+@K @2S19M1 @2.832 @para @0 @0
 
 2025-09-26
 BR 7.7
