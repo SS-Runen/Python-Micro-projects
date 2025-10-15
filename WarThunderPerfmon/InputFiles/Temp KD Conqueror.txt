@@ -12,7 +12,7 @@ KD records for maps on the avoidance list will be removed. This was implemented 
 
 2025-10-11
 BR 7.7
-Diff v. Cent
+Diff v. Cent 0
 
 Pradesh #2
 @k @Object 268 @1.862, 1.859 @diag,diag
