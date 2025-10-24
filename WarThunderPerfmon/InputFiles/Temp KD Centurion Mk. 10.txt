@@ -4,7 +4,12 @@ If there were no kills or deaths in a match, it is not counted.
 
 2025-10-16
 BR 7.7
-Diff v Conq.
+Diff v Conq. 0
+
+Second Battle of El Alamein #1
+@k @T-44-100 @2.179 @perp
+@k @M53/59 @1.605, 1.607 @near-para,near-para
+@k @T-44-100 @1.539 @perp
 
 Second Battle of El ALamein #1
 @k @IS-4M @1.681 @perp
