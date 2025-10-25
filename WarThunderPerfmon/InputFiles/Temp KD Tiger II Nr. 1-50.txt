@@ -1,3 +1,12 @@
+2025-10-25
+
+Second Battle of El Alamein #1
+@k @T-34-100 @0.93 @near-para @0 @0
+@K @IS-2 (1944) @2.007 @diag @0 @0
+@K @IS-2 (1944) @1.798 @diag
+@k @T-34-100 @1.338 @diag @0 @0
+@k @Pvkv m/43 @1.834 @para @0 @0
+
 2025-10-18
 
 Second Battle of El Alamein [Battle]
