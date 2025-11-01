@@ -1,7 +1,11 @@
-2025-10-
+2025-11-01
 Diff. v. Tiger E
 
-
+Second Battle of El Alamein #1
+@k @Avenger @2.692 @para @0 @0
+@k @M4/T26 @1.915 @para @0 @0
+@k @T20 @1.288 @diag
+@k @T1E1 (90) @2.115 @para @0 @0
 
 2025-09-14
 Diff v Tiger E 0
