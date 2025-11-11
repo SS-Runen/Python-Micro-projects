@@ -2,6 +2,19 @@ KD records for maps on the avoidance list will be removed. This was implemented 
 
 If there were no kills or deaths in a match, it is not counted.
 
+2025-11-12
+BR 8.0
+
+Pradesh #2
+@k @ZTS63 @2.016 @near-para @0 @0
+@k @ZTS63 @1.676 @near-para @0 @0
+@k @Type 59 @2.019 @diag @0 @0
+*@k @ZTZ59A @2.003 @perp @0 @0
+Only the gunner of the ZTZ69A was hit but it exploded about one second after.
+@k @PLZ05 @1.812 @para @0 @0
+@k @ZSU-57-2 @1.959 @diag @0 @0
+@k @T-54 (1947) @1.846 @diag @0 @0
+
 2025-10-31
 BR 7.7
 Diff v. Conq. +1
@@ -16,7 +29,7 @@ Diff v Conq. 0
 
 Pradesh #1
 @k @ZSU-57-2 @1.680 @perp @0 @0
-@k @PLZ05 @1.854 @diag
+@k @PLZ05 @1.854 @diag @ @
 @k @ZTS63 @2.060 @diag @0 @0
 @k @BTR-ZD @1.39 @near-para @0 @0
 
