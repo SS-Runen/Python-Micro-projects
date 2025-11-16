@@ -12,18 +12,17 @@ KD records for maps on the avoidance list will be removed. This was implemented 
 
 2025-11-15
 BR 7.7
-Diff v. Cent.
+Diff v. Cent. 0
 
 Second Battle of El Alamein #1
 @k @ASU-85 @1.947 @near-para @0 @0
-@k @ZSU-85 @1.865 @para @0 @0
+@k @ASU-85 @1.888, 1.865 @diag, para @36, 0 @0,0
 
 2025-11-05
 BR 7.7
-Diff v Cent. 
+Diff v Cent. 0
 
 Pradesh #2
-@k @IS-3 @1.498 @diag
 @k @T-54 (1947) @1.715 @diag @0 @0
 
 2025-10-16
@@ -35,14 +34,12 @@ Pradesh #1
 
 Pradesh #2
 @k @Object 211 @1.604 @near-para @0 @0
-@k @SU-100 @1.741, 1.728 @diag,diag
 
 2025-10-11
 BR 7.7
 Diff v. Cent 0
 
 Pradesh #2
-@k @Object 268 @1.862, 1.859 @diag,diag
 @k @Type 62 @2.018 @near-perp @0 @0
 @k @ASU-85 @1.817 @diag @0 @0
 @k @T-54 (1949) @1.257 @diag @0 @0

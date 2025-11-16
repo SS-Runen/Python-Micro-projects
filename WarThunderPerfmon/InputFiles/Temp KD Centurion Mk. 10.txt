@@ -4,13 +4,11 @@ If there were no kills or deaths in a match, it is not counted.
 
 2025-11-12
 BR 8.0
+Diff v. Conq 0
 
 Pradesh #2
 @k @ZTS63 @2.016 @near-para @0 @0
 @k @ZTS63 @1.676 @near-para @0 @0
-@k @Type 59 @2.019 @diag @0 @0
-*@k @ZTZ59A @2.003 @perp @0 @0
-Only the gunner of the ZTZ69A was hit but it exploded about one second after.
 @k @PLZ05 @1.812 @para @0 @0
 @k @ZSU-57-2 @1.959 @diag @0 @0
 @k @T-54 (1947) @1.846 @diag @0 @0
