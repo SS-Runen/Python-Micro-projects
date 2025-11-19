@@ -1,7 +1,10 @@
-2025-11-
-Diff v Sherman Vc
+2025-11-19
+Diff v Sherman Vc +1
 
-
+Second Battle of El Alamein #1
+@K @T-34-85E @1.213 @near-perp @0 @0
+@k @M4A3 (76) W @1.834 @near-perp @0 @0
+*Kills after this were discarded after the death to a T-34-85 while exploring A for Sherman shooting positions.
 
 2025-08-15
 Diff v Sherman Vc +1
