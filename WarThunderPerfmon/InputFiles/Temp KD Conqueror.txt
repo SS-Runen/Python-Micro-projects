@@ -110,7 +110,6 @@ Diff v Cent. +1
 Pradesh #1
 @k @IS-3 @0.918 @para @0 @0
 @k @T-54 (1947) @1.691 @near-perp @0 @0
-@K @IS-4M @1.688, 1.681 @para,para
 
 2025-06-25
 BR 8.0
@@ -158,7 +157,6 @@ Pradesh #2
 Diff v Cent. +1
 
 @K @SU-100 @1.874 @perp
-@k @Type 63 @1.547
 @k @IS-3 @1.766 @diag @0 @0
 @k @T-54 (1949) @1.308 @diag @0 @0
 @k @IS-4M @1.828 @diag @0 @0
@@ -177,14 +175,12 @@ Diff v Cent. 0
 
 Second Battle of El Alamein
 @k @2S1 @1.702 @para @0 @0
-@k @BTR-ZD 0.725 @perp
 
 2025-05-24
 BR 7.7
 Diff v Cent. 0
 
 Pradesh #2
-@K @T-54 (1949) @1.509
 @k @PT-76-57 @1.832 @near-para @0 @0
 
 Pradesh #1
@@ -196,13 +192,6 @@ Diff v. Cent 0
 
 Pradesh#2
 @k @T-54 (1949) @1.595 @para @0 @0
-
-2025-05-14
-BR 7.7
-Diff v Cent 0
-
-Pradesh #1
-@k @IS-4M @0.791 @diag
 
 2025-05-11
 BR 8.0
@@ -220,14 +209,6 @@ Diff v. Cent
 Pradesh #1
 @k @T-54 (1947) @1.826 @para @0 @0
 @k @M53/59 @1.947 @diag @0 @0
-
-2025-05-01
-BR 8.0
-Diff v Cent -1
-
-Pradesh #1
-X
-@k @IS-6 @1.457, 1.457 @near-perp,near-perp
 
 2025-04-29
 BR 7.7
