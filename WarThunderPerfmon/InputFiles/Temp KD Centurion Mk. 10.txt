@@ -4,7 +4,11 @@ If there were no kills or deaths in a match, it is not counted.
 
 2025-11-22
 BR 8.0
-Diff v. Conq
+Diff v. Conq 0
+
+Pradesh #2
+@k @ZSU-57-2 @1.2
+@kb @T-54 (1951) @~0.1 @near-perp @0 @0
 
 Pradesh #2
 @k @Type 59 @2.019 @diag @0 @0
