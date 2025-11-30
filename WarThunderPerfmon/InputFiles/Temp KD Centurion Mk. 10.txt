@@ -1,9 +1,10 @@
 KD records for maps on the avoidance list will be removed. This was implemented on Aug. 14, 2023, and applies to all vehicles.
 
 If there were no kills or deaths in a match, it is not counted.
+
 2025-11-27
 BR 8.0
-Diff v. Conq.
+Diff v. Conq. 0
 
 Second Battle of El Alamein #1
 @K @PLZ05 @2.723 @diag @0 @0
