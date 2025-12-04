@@ -9,7 +9,7 @@ Poland - Ground AA can prevent high flight and allow ground-huggers to hide from
 Fire Arc - Ground AA can prevent high flight and allow ground-huggers to hide from radar.
 Normandy - Flat. Points are in town. Ground AA can prevent high flight and allow ground-huggers to hide from radar.
 Abandoned Town - No hard cover. Ground AA can prevent high flight and allow ground-huggers to hide from radar.
-Hurgen Forest - Flat with no cover.
+Hurtgen Forest - Flat with no cover.
 Fulda - Ground AA can prevent high flight and allow ground-huggers to hide from radar.
 American Desert - Flat without cover from ground AA or from enemy heli spawns. Open ko fast ATGMs.
 Sun City - Too much cover up to enemy heli spawns from either opposing spawn point.
@@ -19,6 +19,8 @@ Seversk-13 - Flying high, ~500 meters, will expose you to AA. Flat.
 Alaska - Hills too low to shield from AA or to allow high flight against ground-huggers.
 Surroundings of Volokolamsk - No cover from AA to fly high and spot ground-huggers.
 Mozdok - No protection from ground AA at altitudes over 100 meters.
+Middle East - Approaches to enemy helicopters are all covered by ground AA. Hiding behind the hill requires Hellfires on helicopters far forward from their spawn.
+Red Desert - The hills that cover against ground AA force a long roundabout.
 
 Good Maps for Helicopters
 Sands of Sinai - Covered from ground AA despite being unable to shoot them. Limited cover for both helicopter bases that allows high flight against ground huggers.
