@@ -4,7 +4,7 @@ If there were no kills or deaths in a match, it is not counted.
 
 2025-12-12
 BR 8.0
-Diff v. Conq
+Diff v. Conq 0
 
 Pradesh #1
 @k @ZSU-57-2 @1.905 @diag
