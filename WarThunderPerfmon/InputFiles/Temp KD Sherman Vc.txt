@@ -1,6 +1,14 @@
 2025-12-13
 Diff v. Tiger E
 
+Fire Arc #2 [Battle]
+@k @A.C.IV @1.711 @diag
+@k @T77E1 @1.706 @para @0 @0
+
+Second Battle of El Alamein #1
+@kb @M4A3 (76) W @2.163 @para @0 @0
+@kb @M4A3 (76) W @2.172 @para @0 @0
+
 Second Battle of El Alamein #1
 @kb @T-34-85 @2.101 @diag @0 @0
 
