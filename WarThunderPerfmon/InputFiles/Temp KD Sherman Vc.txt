@@ -1,6 +1,10 @@
 2025-12-13
 Diff v. Tiger E
 
+Fire Arc #2
+@k @T1E1 (90) @1.743 @diag @0 @0
+@K @Concept 3 @2.213 @diag @0 @0
+
 Fire Arc #2 [Battle]
 @k @A.C.IV @1.711 @diag
 @k @T77E1 @1.706 @para @0 @0
