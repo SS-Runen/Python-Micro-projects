@@ -1,16 +1,12 @@
 ---------
 Settings
 
-Set "Aim Sensitivity" to 15. This makes the sight move slower, making adjustments for long range more precise.
+Set "Aim Sensitivity" at or near 15. This makes the sight move slower, making adjustments for long range more precise.
 
 If the sight is stuck rotating or moving on its own, adjust the sight distance using the mouse wheel, arrow keys, or whatever setting was bound to it, e.g. Ctrl or Tab.
 
 -------------------
 Respawn Rule Changes
-
-2024-08-20
-
-Until the ratio of good maps to bad maps returns to the mid-2023 ratio, respawns are now allowed even for long-range deaths.
 
 2024-04-24
 

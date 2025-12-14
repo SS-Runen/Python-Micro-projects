@@ -1,9 +1,13 @@
 2025-12-13
-Diff v. Tiger E
+Diff v. Tiger E -1
 
-* Needs review. Either enemy ran out of fire extinguishers or disconnected.
-@k @T-34-85 @1.931 @diag
-@k @T-34-85 (D-5T) @1.901 @near-perp
+Fire Arc #2
+@k @M24 (China) @1.264, 1.24 @near-perp,near-perp @20,0 @44,0
+@k @M18 @1.06 @perp @0 @0
+
+Enemy ran out of fire extinguishers after only being set on fire twice.
+@k @T-34-85 @2.03, 1.931 @diag,diag @0,0 @0,0
+@k @T-34-85 (D-5T) @1.901 @perp @15 @0
 
 2025-12-01
 Diff v. Tiger E -1
