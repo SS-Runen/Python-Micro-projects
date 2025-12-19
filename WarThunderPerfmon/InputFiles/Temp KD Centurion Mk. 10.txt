@@ -3,7 +3,7 @@ KD records for maps on the avoidance list will be removed. This was implemented 
 If there were no kills or deaths in a match, it is not counted.
 
 2025-12-17
-Diff v. Conq
+Diff v. Conq 0
 
 Pradesh #2
 @k @2S1 @0.039 @diag @0 @0
