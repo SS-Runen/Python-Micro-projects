@@ -12,7 +12,7 @@ KD records for maps on the avoidance list will be removed. This was implemented 
 
 2025-12-22
 BR 8.0
-Diff v Cent
+Diff v. Cent 0
 
 Second Battle of El Alamein #1
 @k @T-54 (1949) @1.337 @para @24 @0

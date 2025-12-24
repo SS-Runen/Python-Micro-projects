@@ -1,3 +1,13 @@
+2025-12-24
+
+Fire Arc #2 [Battle]
+@k @M18 @1.372 @perp @0 @0
+@K @Charioteer @1.661 @diag @0 @0
+@K @AMX-13 @1.14 @perp @0 @0
+@k @T-34-85 Gai @1.119 @diag @0 @0
+@kb @AMX M4 @0.243 @diag @0 @0
+@kb @SU-152 @1.486 @diag @0 @0
+
 2025-11-06
 
 Fire Arc #2
