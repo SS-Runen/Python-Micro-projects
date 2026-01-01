@@ -1,5 +1,9 @@
+2025-12-31
+
+
+
 2025-12-13
-Diff v. Tiger E
+Diff v. Tiger E -1
 
 Fire Arc #2
 @k @T1E1 (90) @1.743 @diag @0 @0
@@ -17,12 +21,6 @@ Invisible enemey comes in vision after firing then disappears. 11:20
 
 Second Battle of El Alamein #1
 @kb @T-34-85 @2.101 @diag @0 @0
-
-2025-12-01
-Diff v. Tiger E -1
-
-Fire Arc #2 [Battle]
-@k @T-34-85 @1.565, 1.556 @diag,diag
 
 2025-11-01
 Diff. v. Tiger E -1
