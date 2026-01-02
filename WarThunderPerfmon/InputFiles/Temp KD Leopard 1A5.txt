@@ -1,7 +1,7 @@
 Event, Vehicle, Distance, Orientation, Speed, SelfSpeed
 
 2025-12-28
-Diff v. Olifant
+Diff v. Olifant +1
 
 @k @BMD-4M2 @2.045 @diag @0 @0
 @k @T-55A @1.629 @para
