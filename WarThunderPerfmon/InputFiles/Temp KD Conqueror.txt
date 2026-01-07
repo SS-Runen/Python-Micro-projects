@@ -15,6 +15,11 @@ BR 8.0
 Diff. v. Cent.
 
 Second Battle of El Alamein #1
+@k @ZSU-57-2 @1.397 @para @0 @0
+@k @TO-55 @0.04 @para @0 @0
+@K @IS-6 @0.039 @near-para
+
+Second Battle of El Alamein #1
 @k @2S19M1 @1.916 @para @0 @0
 
 2026-01-04
