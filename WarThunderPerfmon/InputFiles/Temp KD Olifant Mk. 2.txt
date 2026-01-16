@@ -4,6 +4,17 @@ Olifant Mk.2 Guide
 - Moving into and out of line of sight is much slower even when full upgraded. Use the commander's thermal sight. Stay as close to cover as possible without showing any part of the turret, including any hatches.
 Use the thermal sight to avoid having to move in and out of cover as much as the Rooikat.
 
+2025-01-07
+Diff v. Leo1A5 
+
+Pradesh #2
+@k @BMD-4M @2.029 @diag @0 @0
+@K @Object 122MT "MC"@2.526 @diag @0 @0
+@k @PTL02 @2.192 @diag @0 @0
+@K @Object 435 @1.121 @diag
+@K @BMD-4M @1.745 @para
+@kb @BMD-4M @1.77, 1.769
+
 2025-01-02
 Diff v. Leo 1A5
 

@@ -1,6 +1,16 @@
 On 2025-10-05, it was decided to stop tracking battles without events ~2 km or more for the Challenger 2 and higher BRs.
 Kills that round of to 2 km at the second decimal, e.g. 1.95 km, are counted.
 
+2026-01-15
+
+Second Battle of El Alamein #1
+@k @Al-Khalid-I @1.626 @near-perp @0 @0
+@k @BMP-3 @2.714 @para @0 @0
+@K @CM34 @2.171, 2.164 @diag,diag
+@k @T-80B @1.488, 1.489 @perp,para
+@k @T-80UD @1.310 @diag @0 @0
+@k @T-72B @1.146 @diag
+
 2025-12-21
 
 Second Battle of El Alamein #1
