@@ -1,3 +1,12 @@
+2026-01-18
+Diff v Sherman Vc +1
+
+Second Battle of El Alamein #1
+@k @T-34-85 @1.405 @diag @0 @0
+@K @T1E1 @1.659 @diag
+@kb @M18 @1.087 @near-perp @0 @0
+@kb @M18 @0.01 @near-perp
+
 2025-11-19
 Diff v Sherman Vc +1
 

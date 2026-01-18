@@ -1,6 +1,12 @@
+2026-01-18
+Diff v. Tiger E -1
+
+Mozdok [Battle]
+@k @T-34-85 @1.179 @near-perp @0 @0
+@K @1.017 @para @0 @0
 
 2026-01-06
-Diff v. Tiger E
+Diff v. Tiger E -1
 
 Mozdok [Battle]
 @k @T-34-85 @1.081 @diag @0 @0
