@@ -1,6 +1,10 @@
-2025-12-31
+2026-01-23
+BR 6.3
 
-
+Fire Arc #2
+@k @SU-100 @1.063 @para @0 @0
+@k @T-34-85 Gai @1.275, 1 @perp, perp
+@k @M36 (Chinese) @2.233 @diag @0 @0
 
 2025-12-13
 Diff v. Tiger E -1
