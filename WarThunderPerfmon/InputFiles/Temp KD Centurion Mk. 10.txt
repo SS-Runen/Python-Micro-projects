@@ -4,8 +4,13 @@ If there were no kills or deaths in a match, it is not counted.
 
 2026-01-24
 BR 7.7
+Diff v. Conq +1
 
-SEcond Battle of El Alamein #1
+Pradesh #2
+@K @T-44-100 @1.849 @para @0 @0
+@K @Object 268 @1.843, 1.844 @diag,diag
+
+Second Battle of El Alamein #1
 @k @IS-4M @1.320 @near-para @0 @0
 @k @Object 268 @1.311 @near-perp @0 @0
 @k @IS-6 @1.403 @diag @0 @0
@@ -15,7 +20,7 @@ SEcond Battle of El Alamein #1
 
 2026-01-21
 BR 8.0
-Diff v. Conq
+Diff v. Conq 0
 
 Pradesh #2
 @k @M53/59 @1.964 @diag @0 @0
@@ -44,7 +49,7 @@ BR 8.0
 Diff v. Conq. +1
 
 Second Battle of El Alamein #1
-@k @Type 59 @2.651, 2.648 @diag,diag
+@k @Type 59 @2.651, 2.648 @diag,diag @9,0 @0,0
 
 Pradesh #1
 @k @M48 @1.872 @diag @0 @0
