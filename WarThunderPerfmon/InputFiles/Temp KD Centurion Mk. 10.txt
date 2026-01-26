@@ -4,7 +4,7 @@ If there were no kills or deaths in a match, it is not counted.
 
 2026-01-26
 BR 8.0
-Diff v. Conq.
+Diff v. Conq. 0
 
 Pradesh #1
 @k @2S19M1 @2.007 @diag @0 @0
