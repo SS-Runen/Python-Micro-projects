@@ -1,3 +1,11 @@
+2026-01-30
+Diff v. Tiger E -1
+
+Second Battle of El Alamein [Battle]
+@K @T-34-85 (D-5T) @1.232 @diag @0 @0
+@k @T-34-85 (D-5T) @0.229 @diag @0 @0
+@K @TPK 6.41 @1.372 @diag @0 @0
+
 2026-01-18
 Diff v. Tiger E -1
 

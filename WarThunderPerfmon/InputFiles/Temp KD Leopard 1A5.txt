@@ -1,7 +1,7 @@
 Event, Vehicle, Distance, Orientation, Speed, SelfSpeed
 
 2025-01-07
-Diff v. Olifant
+Diff v. Olifant 0
 
 Pradesh #2
 @k @T-55AMD-1 @2.428 @near-perp @0 @0

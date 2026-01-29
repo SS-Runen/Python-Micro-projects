@@ -12,7 +12,7 @@ Pradesh #2
 @k @Shturm-S @1.476 @diag
 
 2026-01-07
-Diff v. Leo1A5 
+Diff v. Leo1A5 0
 
 Pradesh #2
 @k @BMD-4M @2.029 @diag @0 @0
@@ -23,7 +23,7 @@ Pradesh #2
 @kb @BMD-4M @1.77, 1.769
 
 2025-01-02
-Diff v. Leo 1A5
+Diff v. Leo 1A5 -1
 
 Pradesh #1
 @k @Shturm S @2.168 @diag @0 @0
