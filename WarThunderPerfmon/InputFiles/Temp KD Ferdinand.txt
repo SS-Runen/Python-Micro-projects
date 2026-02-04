@@ -1,6 +1,15 @@
 2026-02-04
 Diff v. Tiger II Nr. 1-50 0
 
+Fire Arc #2 [Battle]
+@k @T-34-85 (STP) @1.577 @diag
+@k @Phong kong T-34 @1.639 @near-perp @0 @0
+@k @T-34-85 (STP) @1.509 @near-perp @0 @0
+
+Fire Arc #2 [Battle]
+@k @AMX-M4 @1.257 @perp @0 @0
+@kb @T-45-85 (STP) @0.581 @diag @0 @0
+
 Second Battle of El Alamein #1
 @k @IS-2 (1944) @1.84 @near-perp @0 @0
 @k @Charioteer (French) @2.809 @diag @0 @0
