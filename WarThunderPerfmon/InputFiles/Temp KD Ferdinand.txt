@@ -13,7 +13,8 @@ Fire Arc #2 [Battle]
 Second Battle of El Alamein #1
 @k @IS-2 (1944) @1.84 @near-perp @0 @0
 @k @Charioteer (French) @2.809 @diag @0 @0
-@k @IS-2 @2.203 @para
+@k @IS-2 @2.203 @para @5 @0
 @k @SU-100 @1.892 @diag @0 @0
 @k @T-34-85 @1.326 @para @0 @0
+@kb @AMX M4 @0.14 @near-perp @0 @0
 
