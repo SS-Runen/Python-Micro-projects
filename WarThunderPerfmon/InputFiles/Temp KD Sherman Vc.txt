@@ -17,7 +17,7 @@ Fire Arc
 Diff v. Tiger E -1
 
 Second Battle of El ALamein #1
-@k @Pvkv m/43 (1963) @2.553 @perp @0 @0
+@k @Pvkv m/43 (1963) @2.553 @perp @11 @0
 @k @ARL-44 @2.501 @Para @0 @0
 @kb @T55E1 @0.913 @para @0 @0
 
@@ -26,8 +26,8 @@ BR 6.3
 Diff v. Tiger II Nr. 1-50 0
 
 Fire Arc #2
-@k @SU-100 @1.063 @para @0 @0
-@k @T-34-85 Gai @1.275, 1 @perp, perp
+@k @SU-100 @1.063 @para @0 @-4
+@k @T-34-85 Gai @1.275, 1 @perp,perp @14,0 @0,0
 @k @M36 (Chinese) @2.233 @diag @0 @0
 
 2025-12-13

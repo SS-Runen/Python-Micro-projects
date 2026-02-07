@@ -45,18 +45,18 @@ BR 7.7
 Diff v. Cent -1
 
 Pradesh #1
-@k @Object 268 @2.172 @para @0 @0
+@k @Object 268 @2.172 @near-para,para @0 @0
 @k @IS-3 @1.558 @near-para @0 @0
 
 Second Battle of El Alamein #1
-@k @IS-6 @0.946 @diag @0 @0
+@k @IS-6 @0.946 @diag @3 @0
 @k @IS-6 @2.001 @para @0 @0
 
 2026-01-21
 BR 8.0
 Diff v. Cent. 0
 
-PRadesh #2
+Pradesh #2
 @k @T-54 (1947) @2.115 @diag @0 @0
 
 2026-01-16

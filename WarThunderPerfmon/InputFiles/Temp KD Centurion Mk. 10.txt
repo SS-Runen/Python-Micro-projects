@@ -86,10 +86,10 @@ BR 8.0
 Diff v. Conq 0
 
 Pradesh #1
-@k @Type 59 @1.703 @diag @0 @0
-@k @ZTS63 @2.058 @diag @0 @0
-@k @T-54 (1949) @1.863 @para @0 @0
-@k @ZSU-57-2 @1.964, 1.964 @perp,diag
+@k @Type 59 @1.703 @diag,diag @-3,0 @0,0
+@k @T-54 (1949) @1.869, 1.863 @para @-7,0 @0,0
+@k @ZTS63 @2.058 @diag @-8 @0
+@k @ZSU-57-2 @1.964, 1.964 @perp,diag @14,0 @0,0
 
 2025-12-17
 BR 8.0
