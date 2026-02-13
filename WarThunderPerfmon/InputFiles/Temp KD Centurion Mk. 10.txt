@@ -2,6 +2,16 @@ KD records for maps on the avoidance list will be removed. This was implemented 
 
 If there were no kills or deaths in a match, it is not counted.
 
+Event, TargetVehicle, Distance, Orientation, TargetSpeed, OwnSpeed
+
+2026-02-13
+BR 7.7
+Diff v. Conq +
+
+Second Battle of El Alamein #1
+@k @T-54 (1949) @1.424 @diag @0 @0
+@K @IS-3 @2.333 @perp @0 @0
+
 2026-01-31
 BR 8.0
 Diff v. Conq 0
