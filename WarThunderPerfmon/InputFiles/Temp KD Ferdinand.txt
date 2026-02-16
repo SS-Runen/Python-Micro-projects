@@ -1,3 +1,15 @@
+2026-02-16
+Diff v. Tiger II Nr. 1-50 0
+
+Second Battle of El Alamein #1 [Battle]
+@k @SU-100 @1.115 @para @0 @0
+
+Second Battle of El Alamein #1
+@k @M4A3 (76) W @1.987, 1.985 @diag,diag @0,0 @0,0
+@k @M36 GMC @2.059 @near-para 
+@k @T-34-85 Gai @2.07 @perp
+@k @SU-100 @1.602 @para @0 @0
+
 2026-02-04
 Diff v. Tiger II Nr. 1-50 0
 
