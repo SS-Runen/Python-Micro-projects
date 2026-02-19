@@ -44,6 +44,8 @@ Mozdok Mini (changed 2024-01-01)
 Mozdok [Battle], Skip for B.R. 10.0 and up. Probable range of combat is 1.5 km.
 Sands of Sinai (changed 2024-06-19, Major Update, Seek and Destroy)
 Tunisia
+Mozdok [Battle]
+
 Second Battle of El Alamein [Battle] - Only good for low tier. The miniaturized version cuts out easy access to the sniping platforms of the domination version while putting the spawns so close to each other that it is easy to avoid the open space and capture either zone.
 
 ----------
@@ -65,7 +67,7 @@ Until the ratio of good maps to bad maps returns to the mid-2023 ratio where ten
 The current ratio of good maps to bad maps is 4 out of 50 based on this list:
 https://wiki.warthunder.com/Category:Maps_and_missions#General_Ground_Forces_Maps
 
-Since Fire Arc is limited to BR 6.0 and below as of September 2024 and Mozdok [Battle] is only good for 6.0 and below, only two maps out of 50 are good for BR 7.0 and above.
+Since Fire Arc is limited to BR 6.0 and below as of September 2024 and Mozdok [Battle] is bad, only two maps out of 50 are good for BR 7.0 and above.
 
 Maps with at least one good spawn point were counted as one good map. The availability of maps per battle rating was not considered to simplify calculations. Maps with at least one good variant are treated as one good map unless the variant was separately listed in the WarThunder Wiki article. It can also change easily with an update. This is why Fire Arc was included in the count of good maps despite only appearing in BRs of 6.0 and below. The other good maps are Second Battle of El Alamein, a.k.a El Alamein, Pradesh, and Mozdok. Mozdok [Battle] has a good side for battle ratings 8.0 and below.
 

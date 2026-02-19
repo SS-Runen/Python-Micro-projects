@@ -1,5 +1,16 @@
-2026-02-05
+2026-02-17
 Diff v. Tiger E
+
+Fire Arc #2 [Battle]
+@k @M18 @0.296 @near-perp
+
+Second Battle of El Alamein #1
+@k @M18 @0.702 @para
+@k @M18 "Black Cat" @2.329, 2.319, 2.320 @diag,diag,diag
+@k @M18 @1.883 @diag @0 @0
+
+2026-02-05
+Diff v. Tiger E -1
 
 Fire Arc #2 [Battle]
 @k @Comet I @1.562 @diag @0 @0
