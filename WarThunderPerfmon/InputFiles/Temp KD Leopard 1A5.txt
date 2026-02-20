@@ -1,5 +1,17 @@
 Event, Vehicle, Distance, Orientation, Speed, SelfSpeed
 
+2026-02-21
+Diff v. Olifant
+
+Pradesh #2
+@k @BMD-4M @1.702 @diag @0 @0
+@k @BMP-3 @1.839 @diag
+@K @Object 775 @diag @0 @0
+@k @Object 435 @1.804 @diag @0 @0
+@K @Object 685 @1.837 @para @0 @0
+@k @Shturm S @1.708 @diag @0 @0
+@k @T-62 @1.83, 1.84 @diag,diag
+
 2026-02-01
 Diff v. Olifant 0
 
