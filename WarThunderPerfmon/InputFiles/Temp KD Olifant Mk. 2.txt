@@ -8,6 +8,9 @@ Use the thermal sight to avoid having to move in and out of cover as much as the
 Diff v. Leo 1A5
 
 Pradesh #2
+@k @ZSU-57-2 @1.719 @diag
+
+Pradesh #2
 @k @Shturm S @2.025 @diag @0 @0
 @k @WMA301 @1.074 @diag
 @k @T-64A (1971) @2.077 @diag @0 @0
