@@ -14,6 +14,7 @@ Event, TargetVehicle, Distance, Orientation, TargetSpeed, OwnSpeed
 
 2026-02-22
 BR 7.7
+Diff v. Cent -1
 
 Pradesh #1
 @K @T-54 (1949) @1.321 @near-perp
