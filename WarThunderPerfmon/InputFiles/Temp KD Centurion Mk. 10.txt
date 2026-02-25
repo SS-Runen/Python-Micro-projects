@@ -4,8 +4,16 @@ If there were no kills or deaths in a match, it is not counted.
 
 Event, TargetVehicle, Distance, Orientation, TargetSpeed, OwnSpeed
 
+2026-02-24
+BR 8.0
+Diff v. Conq -1
+
+@k @T-54 (1947) @0.713 @diag @0 @0
+@k @ZSU-57-2 @0.714 @perp @0 @0
+
 2026-02-15
 BR 8.0
+Diff v. Conq -1
 
 Pradesh #2
 @k @T-54 (1951) @1.845 @diag
