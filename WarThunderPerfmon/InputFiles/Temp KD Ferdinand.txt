@@ -2,10 +2,10 @@
 Diff v. Tiger II Nr. 1-50
 
 Second Battle of El Alamein #1
-@k @M26 @0.902 @near-para @0 @0
-@k @AMX-13 (Israeli) @1.068 @diag
-@k @M26 @2.373 @near-para @0 @0
-@k @AMX-M4 @1.342 @para
+@k @M26 @0.902 @near-para @-4 @0
+@k @AMX-13 (Israeli) @1.068 @diag @8 @0
+@k @M26 @2.373 @near-para @-6 @0
+@k @AMX-M4 @1.342 @para @1 @0
 @k @M55 (French) @1.522 @diag @0 @0
 @k @Sherman Firefly @2.363 @near-para @0 @0
 

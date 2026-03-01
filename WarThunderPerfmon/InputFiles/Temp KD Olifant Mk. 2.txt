@@ -7,6 +7,9 @@ Use the thermal sight to avoid having to move in and out of cover as much as the
 2026-02-26
 Diff v. Leo 1A5
 
+Second Battle of El Alamein #1
+@k @BTR-82AT @1.098 @diag
+
 Pradesh #2
 @k @Shturm S @2.165 @diag @0 @0
 @K @BTR-82AT @1.699 @diag

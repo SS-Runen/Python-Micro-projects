@@ -5,9 +5,9 @@ Fire Arc #2 [Battle]
 @k @M4A3E2 @0.944 @near-perp @0 @0
 
 Second Battle of El Alamein [Battle]
-@k @M4A2 (76) W @2.234, 2.235 @near-para,near-para @0,0 @0,0
-@k @M4/T26 @2.264 @para
-@k @Comet I @0.958 @para
+@k @M4A2 (76) W @2.234, 2.235 @near-para,near-para @11,0 @0,0
+@k @M4/T26 @2.264 @para @0 @0
+@k @Comet I @0.958 @para @9 @0
 
 2026-02-05
 Diff v. Tiger E -1
