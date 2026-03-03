@@ -1,7 +1,7 @@
 -----------------------------------------------------------------
 DO NOT FIRE USING COMMANDER'S SIGHT AT MOVING OR COVERED TARGETS.
-- - Only fire at stationary targets obscured by non-blocking objects that cannot be viewed using the gunner sight.
-- - The offset varies at different ranges. The guidelines here are an approximation and may have significant difference from the actual impact.
+- Only fire at stationary targets obscured from the gunner's sight by non-blocking objects.
+- The offset varies at different ranges. The guidelines here are an approximation and may have significant difference from the actual impact.
 
 Shots fired using the commander's gun sight will land higher, equivalent to around one hundred meters elevation, in the upper right sight quadrant, within the right-most half of the gun sight.
 
@@ -14,11 +14,11 @@ Event, TargetVehicle, Distance, Orientation, TargetSpeed, OwnSpeed
 
 2026-02-25
 BR 8.0
-Diff v. Cent
+Diff v. Cent 0
 
 Pradesh #1
 @k @2S19M1 @2.176 @diag @0 @0
-@k @ZSU-57-2 @1.822 @diag @0 @0
+@k @ZSU-57-2 @1.822 @diag @8 @0
 @kb @PLZ05 @1.046 @diag @0 @0
 
 2026-02-22

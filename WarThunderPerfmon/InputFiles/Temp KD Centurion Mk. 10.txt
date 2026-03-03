@@ -2,12 +2,23 @@ KD records for maps on the avoidance list will be removed. This was implemented 
 
 If there were no kills or deaths in a match, it is not counted.
 
+If a vehicle is stationary, state the orientation of the surface hit in the orientation field.
+If a vehicle is moving, state the relative orientation of movement in the orientation field.
+
 Event, TargetVehicle, Distance, Orientation, TargetSpeed, OwnSpeed
+
+2026-03-02
+BR 8.0
+Diff v. Conq 0
+
+Pradesh #2
+@kb @T-54 (1951) @1.275 @perp @0 @0
 
 2026-02-24
 BR 8.0
 Diff v. Conq -1
 
+Pradesh #1
 @k @T-54 (1947) @0.713 @diag @0 @0
 @k @ZSU-57-2 @0.714 @perp @0 @0
 
@@ -42,9 +53,9 @@ Diff v. Conq. 0
 
 Pradesh #1
 @k @2S19M1 @2.007 @diag @0 @0
-@K @T-54 (1947) @2.042, 2.045 @perp,near-perp
-@k @PLZ05 @1.675 @para @0 @0
-@K @T-54 (1949) @1.121 @diag
+@K @T-54 (1947) @2.042, 2.045 @perp,near-perp @22,0 @0,0
+@k @PLZ05 @1.675 @perp @10 @0
+@K @T-54 (1949) @1.121 @diag @3 @0
 
 2026-01-24
 BR 7.7
