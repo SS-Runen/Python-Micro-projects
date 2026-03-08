@@ -1,5 +1,12 @@
+2026-03-07
+Diff v. Tiger E -1
+
+Fire Arc #2 [Battle]
+@k @Comet I @2.107 @diag @36 @0
+@K @Sherman Firefly @2.213 @diag @0 @0
+
 2026-02-16
-Diff v. Tiger E
+Diff v. Tiger E -1
 
 Fire Arc #2 [Battle]
 @k @M4A3E2 @0.944 @near-perp @0 @0

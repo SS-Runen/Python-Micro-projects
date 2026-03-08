@@ -80,7 +80,7 @@ Diff v. Conq 0
 Pradesh #2
 @k @M53/59 @1.964 @diag @0 @0
 @k @T-54 (1947) @2.014 @diag @0 @0
-@K @T-54 (1947) @2.047, 2.054 @diag,para
+@K @T-54 (1947) @2.047, 2.054 @diag,para @0,0 @0,0
 
 2026-01-09
 BR 7.7
@@ -134,7 +134,7 @@ BR 8.0
 Diff v. Conq 0
 
 Pradesh #2
-@k @2S1 @0.039 @diag @0 @0
+@k @2S1 @0.04, 0.039 @diag,diag @8,0 @0,0
 @k @ZTS63 @2.051 @diag @0 @0
 @kb @TO-55 @0.98 @diag @0 @0
 
