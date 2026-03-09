@@ -37,21 +37,21 @@ Pradesh #2
 Second Battle of El Alamein #1
 @k @Al-Khalid-I @1.626 @near-perp @0 @0
 @k @BMP-3 @2.714 @para @0 @0
-@K @CM34 @2.171, 2.164 @diag,diag
-@k @T-80B @1.488, 1.489 @perp,para
+@K @CM34 @2.171, 2.164 @diag,diag @42,0 @0,0
+@k @T-80B @1.488, 1.489 @perp,para @37,0 @0,0
 @k @T-80UD @1.310 @diag @0 @0
-@k @T-72B @1.146 @diag
+@k @T-72B @1.146 @diag @35 @0
 
 2025-12-21
 
 Second Battle of El Alamein #1
 @k @Al-Khalid @2.591, 2.594 @diag,para @0,0 @0,0
 @K @BMPT-72 @2.334 @near-perp @0 @0
-@k @Al-Khalid @2.452 @diag @0 @0
+@k @Al-Khalid @2.452 @diag @-15 @0
 @K @ZBD-04A @1.094 @diag @0 @0
 @k @2S6 @2.370 @near-perp @0 @0
-@k @ZTZ96A (P) @1.909 @diag
-@kb @2S38 @2.832, 2.831 @diag,diag
+@k @ZTZ96A (P) @1.909 @diag @-2 @0
+@kb @2S38 @2.832, 2.831 @diag,diag @0,0 @0,0
 
 2025-12-16
 
