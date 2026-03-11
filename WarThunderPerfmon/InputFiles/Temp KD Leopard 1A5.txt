@@ -31,9 +31,10 @@ Pradesh #2
 Diff v. Olifant 0
 
 Pradesh #2
-@k @T-55AMD-1 @2.428 @near-perp @0 @0
-@k @WZ305 @1.832 @para @0 @0
-@K @AFT09 @1.836 @near-perp
+@k @T-55AMD-1 @2.428 @near-perp @-5 @0
+@k @WZ305 @1.832 @para @-2 @0
+@K @AFT09 @1.836 @near-perp @-3 @0
+@kb @2S25 @1.3 @near-perp @0 @0
 
 2025-12-28
 Diff v. Olifant +1

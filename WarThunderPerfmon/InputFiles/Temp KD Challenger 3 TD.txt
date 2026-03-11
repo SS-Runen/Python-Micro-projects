@@ -12,7 +12,7 @@ Second Battle of El Alamein #1
 Second Battle of El Alamein #1
 @K @CS/SA5 @2.418 @para @0 @0
 @K @BUK-M3 @2.507 @perp @0 @0
-@K @T-80BVM @0.945 @diag
+@K @T-80BVM @0.945 @diag @47 @0
 @k @ZTZ99A @0.954 @near-perp @0 @0
 @K @T-80UK @1.472 @perp @0 @0
 @k @T-80U-E1 @2.022 @para @0 @0

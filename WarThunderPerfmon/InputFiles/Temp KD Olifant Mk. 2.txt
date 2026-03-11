@@ -66,7 +66,7 @@ Pradesh #2
 @k @PTL02 @2.192 @diag @0 @0
 @K @Object 435 @1.121 @diag @5 @0
 @K @BMD-4M @1.745 @para @0 @0
-@kb @BMD-4M @1.77, 1.769
+@kb @BMD-4M @1.77 @perp @0 @0
 
 2025-01-02
 Diff v. Leo 1A5 -1
@@ -78,14 +78,14 @@ Pradesh #1
 Second Battle of El Alamein #1
 @k @T-55AM-1 @2.388 @para @0 @0
 @k @BMP-3 @2.405 @near-para @0 @0
-@k @T-55A @0.429 @diag
+@k @T-55A @0.429 @diag @7 @32
 @k @Object 279 @1.64 @para @0 @0
 @k @Object 775 @0.535 @diag @0 @0
 @k @T-64A (1971) @1.243 @diag @0 @0
-@k @Object 120 @1.922 @para
-@K @ZSU-23-4V @2.342, 2.342
-@k @BTR-80A @0.967 @near-perp
-@k @BMP-3 @1.129 @para
+@k @Object 120 @1.922 @para @34 @0
+@K @ZSU-23-4V @2.342, 2.342 @diag,diag @8,0 @0,0
+@k @BTR-80A @0.967 @near-perp @-6 @0
+@k @BMP-3 @1.129 @para @1 @0
 
 2025-12-28
 Diff v. Leo 1A5 -1
