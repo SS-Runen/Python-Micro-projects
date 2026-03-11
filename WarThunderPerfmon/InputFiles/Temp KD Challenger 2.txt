@@ -16,10 +16,10 @@ Pradesh #2
 
 Second Battle of El Alamein #1
 @k @ZTZ96A @2.345 @diag @0 @0
-@k @ZBD04A @2.218 @para @0 @0
-@k @BMD-4M @1.404 @perp
+@k @ZBD04A @2.218 @para @19 @0
+@k @BMD-4M @1.404 @perp @63 @0
 @k @2S6 @1.731 @para @0 @0
-@k @T-90A @1.41 @near-para
+@k @T-90A @1.41 @near-para @35 @0
 
 2026-02-14
 
@@ -28,7 +28,7 @@ Pradesh #1
 
 2026-02-09
 
-Pradesh #2
+Pradesh #1
 @K @MBT-2000 @0.779 @diag @0 @0
 @k @T-90A @2.254 @diag @0 @0
 
