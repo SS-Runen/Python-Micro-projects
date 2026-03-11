@@ -61,11 +61,11 @@ Pradesh #2
 Diff v. Leo1A5 0
 
 Pradesh #2
-@k @BMD-4M @2.029 @diag @0 @0
+@k @BMD-4M2 @2.029 @diag @0 @0
 @K @Object 122MT "MC"@2.526 @diag @0 @0
 @k @PTL02 @2.192 @diag @0 @0
-@K @Object 435 @1.121 @diag
-@K @BMD-4M @1.745 @para
+@K @Object 435 @1.121 @diag @5 @0
+@K @BMD-4M @1.745 @para @0 @0
 @kb @BMD-4M @1.77, 1.769
 
 2025-01-02
