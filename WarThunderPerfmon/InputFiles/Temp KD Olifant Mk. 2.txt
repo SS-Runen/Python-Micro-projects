@@ -30,9 +30,9 @@ Pradesh #2
 @k @ZSU-57-2 @1.719 @diag
 
 Pradesh #2
-@k @Shturm S @2.025 @diag @0 @0
-@k @WMA301 @1.074 @diag
-@k @T-64A (1971) @2.077 @diag @0 @0
+@k @Shturm S @2.025 @diag @-12 @-5
+@k @WMA301 @1.074 @diag @1 @0
+@k @T-64A (1971) @2.077 @diag @-4 @0
 
 2026-02-01
 Diff v. Leo 1A5 0

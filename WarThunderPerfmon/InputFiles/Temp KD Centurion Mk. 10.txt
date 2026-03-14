@@ -27,8 +27,8 @@ BR 8.0
 Diff v. Conq -1
 
 Pradesh #2
-@k @T-54 (1951) @1.845 @diag
-@K @PLZ05 @0.499 @diag
+@k @T-54 (1951) @1.845 @diag @-12 @0
+@K @PLZ05 @0.499 @diag @-4 @0
 
 2026-02-13
 BR 7.7
@@ -63,7 +63,8 @@ Diff v. Conq +1
 
 Pradesh #2
 @K @T-44-100 @1.849 @para @0 @0
-@K @Object 268 @1.843, 1.844 @diag,diag
+@K @Object 268 @1.843, 1.844 @diag,diag @7,0 @0,0
+@k @IS-4M @ @14
 
 Second Battle of El Alamein #1
 @k @IS-4M @1.320 @near-para @0 @0

@@ -4,7 +4,8 @@ Kills that round of to 2 km at the second decimal, e.g. 1.95 km, are counted.
 2026-02-24
 
 Pradesh #1
-@k @Shturm S @2.013 @diag @0 @0
+@k @Khrizantema-S @2.013 @diag @0 @0
+@kb @T-72B3 "Arena" @0.788 @diag @0 @0
 
 2026-02-19
 

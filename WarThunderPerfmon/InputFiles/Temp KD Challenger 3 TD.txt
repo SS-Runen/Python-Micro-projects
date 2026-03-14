@@ -18,10 +18,10 @@ Second Battle of El Alamein #1
 @k @T-80U-E1 @2.022 @para @0 @0
 
 Pradesh #2
-@k @T-80BVM @1.838, 1.846
+@k @T-80BVM @1.838, 1.846 @-8,0 @0,0
 @k @BUK-M3 (TELAR) @1.946 @diag @0 @0
-@k @T-80UK @1.84, @1.821
-@k @T-80BVM @1.841 @para @0 @0
+@k @T-80UK @1.84, 1.821 @diag, @39, @0,0
+@k @T-80BVM @1.841 @near-perp @-5 @0
 
 2025-12-14
 
