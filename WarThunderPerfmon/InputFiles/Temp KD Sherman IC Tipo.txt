@@ -20,8 +20,8 @@ Second Battle of El Alamein #1
 Diff v. Tiger E -1
 
 Fire Arc #2 [Battle]
-@k @Comet I @1.562 @diag @0 @0
-@K @M18 GMC (Chinese) @0.376 @diag
+@k @Comet I @1.562 @diag @6 @0
+@K @M18 GMC (Chinese) @0.376 @diag @-20 @0
 
 Second Battle of El Alamein #1
 @k @Sherman Firefly @1.911 @diag @0 @0

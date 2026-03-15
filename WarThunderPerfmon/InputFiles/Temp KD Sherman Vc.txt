@@ -20,9 +20,10 @@ Second Battle of El Alamein [Battle]
 Diff v. Tiger E -1
 
 Fire Arc #2 [Battle]
-@k @Comet I @1.317, 1.316 @diag,diag
-@kb @ARL-44 @1.485 @diag
-@kb @ARL-44 @1.778 @near-perp
+@k @Comet I @1.317, 1.316 @diag,diag @5,0 @0,0
+@kb @ARL-44 @1.485 @diag @29 @0
+@kb @ARL-44 @1.778 @near-perp @0 @0
+* Before 8:12, the enemy disappeared from the replay. There is a minute-long gap between the first possible sighting at 1.9 km distance and the kill at 1.7.
 
 2026-02-04
 BR 6.3
