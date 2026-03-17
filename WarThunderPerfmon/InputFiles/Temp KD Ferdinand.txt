@@ -1,5 +1,5 @@
 2026-02-22
-Diff v. Tiger II Nr. 1-50
+Diff v. Tiger II Nr. 1-50 0
 
 Second Battle of El Alamein #1
 @k @M26 @0.902 @near-para @-4 @0
@@ -25,9 +25,9 @@ Second Battle of El Alamein #1
 Diff v. Tiger II Nr. 1-50 0
 
 Fire Arc #2 [Battle]
-@k @T-34-85 (STP) @1.577 @diag
+@k @T-34-85 (STP) @1.577 @diag @0 @0
 @k @Phong kong T-34 @1.639 @near-perp @0 @0
-@k @T-34-85 (STP) @1.509 @near-perp @0 @0
+@k @T-34-85 (STP) @1.509 @near-perp @47 @0
 
 Fire Arc #2 [Battle]
 @k @AMX-M4 @1.257 @perp @0 @0

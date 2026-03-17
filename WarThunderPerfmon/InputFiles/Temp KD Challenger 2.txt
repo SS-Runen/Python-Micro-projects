@@ -10,9 +10,9 @@ Pradesh #1
 2026-02-19
 
 Pradesh #2
-@k @T-72B3 "Arena" @1.695 @diag
+@k @T-72B3 "Arena" @1.695 @diag,diag @-2,0 @0,0
 @k @M60A3 TTS (Taiwanese) @1.678 @para @0 @0
-@k @T-72B3 "Arena"@1.738 @para
+@k @T-72B3 "Arena"@1.738 @para @1 @0
 @k @2S6 @1.677 @para @0 @0
 
 Second Battle of El Alamein #1

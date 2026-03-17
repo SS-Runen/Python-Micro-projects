@@ -27,7 +27,7 @@ Pradesh #2
 Diff v. Leo 1A5 0
 
 Pradesh #2
-@k @ZSU-57-2 @1.719 @diag
+@k @ZSU-57-2 @1.719 @diag @15 @0
 
 Pradesh #2
 @k @Shturm S @2.025 @diag @-12 @-5
@@ -91,7 +91,7 @@ Second Battle of El Alamein #1
 Diff v. Leo 1A5 -1
 
 Pradesh #2
-@k @Object 435 @1.73, 1.727 @near-para
+@k @Object 435 @1.73, 1.727 @near-para @0 @0
 @k @Type 59 @1.519 @diag @0 @0
 
 2025-12-08
