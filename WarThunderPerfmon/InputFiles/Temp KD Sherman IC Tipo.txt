@@ -1,5 +1,11 @@
+2026-04-06
+Diff v. Tiger E -1
+
+Second Battle of El Alamein [Battle]
+@k @ASU-57 @1.567 @diag
+
 2026-03-07
-Diff v. Tiger E
+Diff v. Tiger E -1
 
 Fire Arc #2 [Battle]
 @k @Sherman Firefly @2.102 @near-para @0 @0
