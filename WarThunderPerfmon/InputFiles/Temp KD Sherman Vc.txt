@@ -1,3 +1,11 @@
+2026-04-12
+Diff v. Tiger E -1
+
+Second Battle of El Alamein #1
+@k @SU-152 @0.707
+@k @T-34-85E @2.063, 2.046 @perp,diag @0,0 @0,0
+@k @SU-152 @1.779 @para @0 @0
+
 2026-03-07
 Diff v. Tiger E -1
 
