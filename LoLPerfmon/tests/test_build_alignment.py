@@ -22,6 +22,7 @@ def _bundle_ludens_style() -> GameDataBundle:
         2600.0,
         StatBonus(ability_power=100.0),
         ("nlr", "lc"),
+        max_inventory_copies=1,
     )
     items = dict(ob.items)
     items.update({"nlr": nlr, "lc": lc, "ludens": ludens})

@@ -17,6 +17,7 @@ from .simulator import (
     SimResult,
     SimulationState,
     acquire_goal,
+    inventory_count,
     simulate,
 )
 from .stats import total_stats
@@ -48,6 +49,9 @@ def _marginal_candidates(
     dps0 = effective_dps(profile, state.level, base_stats)
     out: list[tuple[str, float, float, float]] = []
     for iid in sorted(items.keys()):
+        it_def = items[iid]
+        if inventory_count(state.inventory, iid) >= it_def.max_inventory_copies:
+            continue
         trial = _snapshot_state(state)
         spent_before = trial.total_gold_spent_on_items
         if not acquire_goal(trial, iid, items):
@@ -135,6 +139,10 @@ def make_forced_prefix_then_greedy_hook(
             return
         while forced:
             fid = forced[0]
+            itd = items.get(fid)
+            if itd is not None and inventory_count(state.inventory, fid) >= itd.max_inventory_copies:
+                forced.popleft()
+                continue
             if acquire_goal(state, fid, items):
                 forced.popleft()
                 if order_sink is not None:

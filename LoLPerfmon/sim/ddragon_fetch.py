@@ -200,6 +200,24 @@ def _bonus_from_item_stats(stats: dict[str, float]) -> StatBonus:
     )
 
 
+def max_inventory_copies_from_ddragon(raw: dict[str, Any], from_ids: tuple[str, ...]) -> int:
+    """
+    League-aligned: one copy of **finished** items (``into`` empty in Data Dragon) and one
+    **Lane** starter (Doran's, Dark Seal). Multiple **components** (Dagger, Tome, etc.).
+    """
+    tags = raw.get("tags") or []
+    if not isinstance(tags, list):
+        tags = []
+    tag_set = {str(t) for t in tags}
+    into = raw.get("into")
+    into_terminal = into is None or (isinstance(into, list) and len(into) == 0)
+    if from_ids and into_terminal:
+        return 1
+    if not from_ids and "Lane" in tag_set and "Consumable" not in tag_set:
+        return 1
+    return 6
+
+
 def item_def_from_ddragon_entry(item_id: str, raw: dict[str, Any]) -> ItemDef | None:
     gold = raw.get("gold") or {}
     total = gold.get("total")
@@ -213,12 +231,14 @@ def item_def_from_ddragon_entry(item_id: str, raw: dict[str, Any]) -> ItemDef | 
     bonus = _bonus_from_item_stats(stats_f)
     from_raw = raw.get("from") or []
     from_ids = tuple(str(x) for x in from_raw) if isinstance(from_raw, list) else ()
+    mic = max_inventory_copies_from_ddragon(raw, from_ids)
     return ItemDef(
         id=str(item_id),
         name=name,
         total_cost=float(total),
         stats=bonus,
         from_ids=from_ids,
+        max_inventory_copies=mic,
     )
 
 

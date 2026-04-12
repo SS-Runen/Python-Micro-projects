@@ -14,6 +14,8 @@ class ItemDef:
     total_cost: float
     stats: "StatBonus"
     from_ids: tuple[str, ...] = field(default_factory=tuple)
+    #: Max copies of this item id in inventory (League: one terminal legendary, one Seal, many Daggers).
+    max_inventory_copies: int = 6
 
 
 @dataclass(frozen=True)
@@ -115,11 +117,13 @@ def load_items_from_json(items_list: list[Mapping[str, Any]]) -> dict[str, ItemD
             from_ids = tuple(str(x) for x in fid)
         else:
             from_ids = ()
+        mic = int(raw.get("max_inventory_copies", 6))
         out[str(raw["id"])] = ItemDef(
             id=str(raw["id"]),
             name=str(raw["name"]),
             total_cost=float(raw["total_cost"]),
             stats=bonus,
             from_ids=from_ids,
+            max_inventory_copies=mic,
         )
     return out

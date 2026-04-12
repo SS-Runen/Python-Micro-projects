@@ -20,7 +20,14 @@ def _bundle_with_linear_mythic() -> GameDataBundle:
     ob = build_offline_bundle()
     a = ItemDef("cmp_a", "Comp A", 100.0, StatBonus(ability_power=10.0), ())
     b = ItemDef("cmp_b", "Comp B", 200.0, StatBonus(ability_power=5.0), ())
-    myth = ItemDef("mythic_x", "Mythic X", 700.0, StatBonus(ability_power=80.0), ("cmp_a", "cmp_b"))
+    myth = ItemDef(
+        "mythic_x",
+        "Mythic X",
+        700.0,
+        StatBonus(ability_power=80.0),
+        ("cmp_a", "cmp_b"),
+        max_inventory_copies=1,
+    )
     items = dict(ob.items)
     items.update({a.id: a, b.id: b, myth.id: myth})
     return GameDataBundle(
@@ -51,6 +58,19 @@ def test_craft_costs_recipe_fee_not_full_sticker() -> None:
     assert "mythic_x" in res.final_inventory
     assert res.final_gold > 0
     _assert_wallet_identity(res)
+
+
+def test_second_copy_of_finished_item_in_queue_is_skipped() -> None:
+    """Duplicate goals for a unique finished item are dropped (cannot double-buy in-game)."""
+    data = _bundle_with_linear_mythic()
+    res = simulate(
+        data,
+        "generic_ap",
+        FarmMode.LANE,
+        PurchasePolicy(buy_order=("cmp_a", "cmp_b", "mythic_x", "mythic_x")),
+        t_max=3600.0,
+    )
+    assert res.final_inventory.count("mythic_x") == 1
 
 
 def _assert_wallet_identity(res) -> None:

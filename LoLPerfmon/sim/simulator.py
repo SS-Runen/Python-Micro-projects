@@ -25,6 +25,10 @@ from .xp_level import level_from_total_xp, xp_for_minion_kill
 MAX_INVENTORY_SLOTS = 6
 
 
+def inventory_count(inventory: list[str], item_id: str) -> int:
+    return sum(1 for x in inventory if x == item_id)
+
+
 def config_from_rules(data: GameDataBundle) -> GameConfig:
     r = data.rules
     return GameConfig(
@@ -121,11 +125,15 @@ def _acquire_goal(state: SimulationState, target_id: str, items_by_id: dict) -> 
 
     At most :data:`MAX_INVENTORY_SLOTS` items after the operation. Combining consumes
     components and frees slots before the finished item occupies one slot.
+
+    If the inventory already holds ``max_inventory_copies`` of ``target_id``, acquisition fails.
     """
     it = items_by_id.get(target_id)
     if not it:
         return False
     inv = state.inventory
+    if inventory_count(inv, target_id) >= it.max_inventory_copies:
+        return False
     if not it.from_ids:
         if len(inv) >= MAX_INVENTORY_SLOTS:
             return False
@@ -192,6 +200,11 @@ def _apply_purchases(state: SimulationState, items_by_id: dict, defer_purchases_
             break
         next_id = state.buy_queue[0]
         if next_id not in items_by_id:
+            state.buy_queue.pop(0)
+            changed = True
+            continue
+        nit = items_by_id.get(next_id)
+        if nit is not None and inventory_count(state.inventory, next_id) >= nit.max_inventory_copies:
             state.buy_queue.pop(0)
             changed = True
             continue

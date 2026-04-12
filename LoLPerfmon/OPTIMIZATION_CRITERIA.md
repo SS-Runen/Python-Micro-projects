@@ -25,6 +25,7 @@ Normative rules for unconstrained farm / clear-speed search. Code paths that max
 ## Recipe validity
 
 - Purchases must succeed under [`acquire_goal`](sim/simulator.py) (Data Dragon–style craft, sticker buy, or component buy).
+- **No duplicate finished items:** each [`ItemDef`](sim/models.py) has `max_inventory_copies` (often **1** for terminal legendaries and lane starters; **6** for generic components). The simulator refuses a second copy of the same id when the cap is reached, matching in-game unique-item rules.
 - Do **not** optimize with [`best_item_order_exhaustive`](sim/optimizer.py) over a flat list that mixes a component and its parent as independent goals unless that is intentional and documented.
 
 ## Kit and item modeling limits
