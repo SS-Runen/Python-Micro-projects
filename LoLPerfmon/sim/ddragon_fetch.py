@@ -1,5 +1,11 @@
 """
-Fetch champion and item definitions from Riot Data Dragon (HTTPS, no API key).
+Fetch champion and item definitions from Riot **Data Dragon** (CDN JSON over HTTPS).
+
+This is **not** the Riot Games API: requests go to ``ddragon.leagueoflegends.com`` only.
+Per Riot's docs (`Data Dragon` under https://developer.riotgames.com/docs/lol ), these are
+static data files; **no** ``RGAPI-`` / developer API key is used or required here. API keys
+apply to ``*.api.riotgames.com`` endpoints (match history, summoners, etc.), which this
+module does not call.
 
 Falls back to None on network/parse errors so callers can use offline bundles.
 """
