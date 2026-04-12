@@ -15,6 +15,7 @@ from pathlib import Path
 from typing import Any, Callable
 
 from LoLPerfmon.sim.bundle_factory import get_game_bundle
+from LoLPerfmon.sim.ddragon_fixture_checks import verify_frozen_sample_payloads
 from LoLPerfmon.sim.clear import wave_gold_if_full_clear
 from LoLPerfmon.sim.config import FarmMode, GameConfig
 from LoLPerfmon.sim.data_loader import GameDataBundle, GameRules, cumulative_xp_thresholds, load_game_data
@@ -192,7 +193,7 @@ def check_exhaustive_optimizer(ctx: ValidationContext) -> None:
         t_max=600.0,
     )
     assert len(order) == 2, f"order length {len(order)}"
-    assert val == res.final_gold, "optimizer score should match sim final_gold"
+    assert val == res.total_farm_gold, "optimizer default score is total farm gold (clear income)"
 
 
 def check_compare_purchase_timing(ctx: ValidationContext) -> None:
@@ -208,6 +209,11 @@ def check_compare_purchase_timing(ctx: ValidationContext) -> None:
         t_max=800.0,
     )
     assert a.final_gold != b.final_gold or delta == 0.0, "counterfactual A/B should be comparable"
+
+
+def check_ddragon_frozen_fixtures(_ctx: ValidationContext) -> None:
+    """Parser + audit invariants on frozen CDN-shaped excerpts (see ``tests/README_DATA_DRAGON.md``)."""
+    verify_frozen_sample_payloads()
 
 
 CHECKS: list[tuple[str, Callable[[ValidationContext], None]]] = [
@@ -226,6 +232,7 @@ CHECKS: list[tuple[str, Callable[[ValidationContext], None]]] = [
     ("defer_purchases_delays_spending", check_defer_purchases_delays_spending),
     ("exhaustive_optimizer", check_exhaustive_optimizer),
     ("compare_purchase_timing", check_compare_purchase_timing),
+    ("ddragon_frozen_fixtures", check_ddragon_frozen_fixtures),
 ]
 
 

@@ -7,7 +7,15 @@ No JSON seed files are required for the default path.
 from __future__ import annotations
 
 from .data_loader import GameDataBundle, GameRules, WaveComposition
-from .ddragon_fetch import fetch_champions, fetch_items_for_sim, latest_version
+from .ddragon_availability import DDragonAuditReport, build_ddragon_audit_report
+from .ddragon_fetch import (
+    champions_from_raw,
+    fetch_champion_jsons,
+    item_json_full,
+    items_for_sim_from_item_data,
+    latest_version,
+    summoners_rift_item_defs_all,
+)
 from .minion_defaults import default_minion_economy_tables
 from .models import ChampionProfile, ItemDef, KitParams, StatBonus
 from .summoners_rift_rules import (
@@ -105,15 +113,55 @@ def build_offline_bundle() -> GameDataBundle:
     )
 
 
-def build_bundle_from_ddragon(version: str, timeout: float = 25.0) -> GameDataBundle | None:
-    champs = fetch_champions(version, ("Lux", "Karthus", "Quinn"), timeout=timeout)
-    items = fetch_items_for_sim(version, timeout=timeout)
+CHAMPION_KEYS_DEFAULT: tuple[str, ...] = ("Lux", "Karthus", "Quinn")
+
+
+def build_bundle_from_ddragon(
+    version: str,
+    timeout: float = 25.0,
+    *,
+    full_sr_item_catalog: bool = False,
+) -> GameDataBundle | None:
+    """
+    Data Dragon bundle: official JSON only when this returns non-None.
+
+    ``full_sr_item_catalog``: include every SR item (``maps[\"11\"]``) from ``item.json``;
+    default is recipe-closure from optimizer seeds (smaller graph).
+    """
+    pair = load_ddragon_bundle_with_audit(version, timeout=timeout, full_sr_item_catalog=full_sr_item_catalog)
+    return pair[0]
+
+
+def load_ddragon_bundle_with_audit(
+    version: str,
+    timeout: float = 25.0,
+    *,
+    full_sr_item_catalog: bool = False,
+    champion_keys: tuple[str, ...] = CHAMPION_KEYS_DEFAULT,
+) -> tuple[GameDataBundle | None, DDragonAuditReport | None]:
+    """
+    Single fetch of ``item.json`` and champion files; builds audit report and bundle.
+
+    Returns ``(None, None)`` if Data Dragon payloads are missing or unusable.
+    """
+    item_full = item_json_full(version, timeout=timeout)
+    if not item_full:
+        return None, None
+    champs_raw = fetch_champion_jsons(version, champion_keys, timeout=timeout)
+    if not champs_raw:
+        return None, None
+    report = build_ddragon_audit_report(version, champs_raw, item_full)
+    champs = champions_from_raw(champs_raw)
+    if full_sr_item_catalog:
+        items = summoners_rift_item_defs_all(item_full)
+    else:
+        items = items_for_sim_from_item_data(item_full)
     if not champs or len(items) < 1:
-        return None
+        return None, report
     if len(items) < 2:
-        items.update(_offline_placeholder_items())
+        items = {**items, **_offline_placeholder_items()}
     rules = _rules(version)
-    return GameDataBundle(
+    bundle = GameDataBundle(
         rules=rules,
         champions=champs,
         items=items,
@@ -121,20 +169,43 @@ def build_bundle_from_ddragon(version: str, timeout: float = 25.0) -> GameDataBu
         minion_economy=default_minion_economy_tables(),
         data_dir=None,
     )
+    return bundle, report
+
+
+def get_game_bundle_with_audit(
+    offline: bool = False,
+    ddragon_version: str | None = None,
+    timeout: float = 25.0,
+    *,
+    full_sr_item_catalog: bool = False,
+) -> tuple[GameDataBundle, DDragonAuditReport | None]:
+    """
+    Like :func:`get_game_bundle` but returns ``(bundle, audit_report)``.
+    ``audit_report`` is None when ``offline`` is True or Data Dragon failed (offline fallback).
+    """
+    if offline:
+        return build_offline_bundle(), None
+    ver = ddragon_version or latest_version(timeout=timeout)
+    if not ver:
+        return build_offline_bundle(), None
+    bundle, report = load_ddragon_bundle_with_audit(ver, timeout=timeout, full_sr_item_catalog=full_sr_item_catalog)
+    if bundle is not None:
+        return bundle, report
+    return build_offline_bundle(), None
 
 
 def get_game_bundle(offline: bool = False, ddragon_version: str | None = None, timeout: float = 25.0) -> GameDataBundle:
     """
-    Preferred entry point: try Data Dragon when ``offline`` is False; otherwise or on
-    failure return :func:`build_offline_bundle`.
+    Preferred entry path: **Data Dragon first** when ``offline`` is False; on failure or
+    ``offline`` True use :func:`build_offline_bundle` (``generic_ap``, ``cheap_*`` — not
+    patch-accurate; CI / no-network only).
     """
-    if offline:
-        return build_offline_bundle()
-    ver = ddragon_version or latest_version(timeout=timeout)
-    if ver:
-        b = build_bundle_from_ddragon(ver, timeout=timeout)
-        if b is not None:
-            return b
-    return build_offline_bundle()
+    bundle, _audit = get_game_bundle_with_audit(
+        offline=offline,
+        ddragon_version=ddragon_version,
+        timeout=timeout,
+        full_sr_item_catalog=False,
+    )
+    return bundle
 
 

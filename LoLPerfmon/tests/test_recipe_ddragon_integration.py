@@ -36,4 +36,4 @@ def test_ludens_bundle_has_recipe_closure_and_optimal_runs() -> None:
     )
     assert order == seq
     assert ludens in res.final_inventory
-    assert val == res.final_gold
+    assert val == res.total_farm_gold

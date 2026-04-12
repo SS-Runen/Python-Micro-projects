@@ -33,7 +33,10 @@ def compare_purchase_timing(
     """
     Counterfactual pair: A purchases whenever affordable; B defers purchases until
     game time reaches ``t_buy_cutoff_seconds`` (same ordered buy list afterward).
-    Returns ``(result_A, result_B, final_gold_A - final_gold_B)``.
+    Returns ``(result_A, result_B, final_gold_A - final_gold_B)`` (wallet delta).
+
+    For **farm-income** comparisons (clear-speed-driven), subtract ``total_farm_gold``
+    or use :func:`~LoLPerfmon.sim.simulator.default_build_optimizer_score` on each result.
     """
     policy = PurchasePolicy(buy_order=buy_order)
     res_a = simulate(

@@ -8,6 +8,10 @@ apply to ``*.api.riotgames.com`` endpoints (match history, summoners, etc.), whi
 module does not call.
 
 Falls back to None on network/parse errors so callers can use offline bundles.
+
+Champion filenames on the CDN use the ``id`` field from each champion summary (see
+``champion.json``); display names differ (e.g. Wukong → ``MonkeyKing``). Per-champion
+JSON is fetched after resolving the caller’s string against the patch’s champion list.
 """
 
 from __future__ import annotations
@@ -15,12 +19,17 @@ from __future__ import annotations
 import json
 import urllib.error
 import urllib.request
+from dataclasses import dataclass, field
 from typing import Any
 
-from .models import ChampionProfile, ItemDef, KitParams, StatBonus
+from .ddragon_spell_parse import kit_params_from_spells, parse_champion_spells
+from .models import ChampionProfile, ItemDef, StatBonus
 
 DDRAGON_VERSIONS = "https://ddragon.leagueoflegends.com/api/versions.json"
 USER_AGENT = "LoLPerfmonSim/1.0 (educational; +https://github.com)"
+
+# Per-patch champion list (``champion.json``) — one fetch per version for id/name resolution.
+_champion_index_cache: dict[str, "ChampionDDragonIndex | None"] = {}
 
 # Riot item.json ``maps`` field: ``"11"`` = Summoner's Rift (aligns with wiki "Classic SR 5v5" filter).
 SUMMONERS_RIFT_CLASSIC_MAP_ID = "11"
@@ -46,6 +55,87 @@ def _get_json(url: str, timeout: float = 20.0) -> Any:
         return json.loads(resp.read().decode("utf-8"))
 
 
+def _alnum_lower(s: str) -> str:
+    return "".join(c.lower() for c in s if c.isalnum())
+
+
+@dataclass
+class ChampionDDragonIndex:
+    """
+    Maps user input to the Data Dragon **champion id** string used in
+    ``/cdn/<version>/data/<lang>/champion/<id>.json`` (e.g. ``MonkeyKing`` for Wukong).
+
+    Built from ``champion.json`` ``data`` entries: each summary has ``id`` (filename) and
+    ``name`` (display name); see Riot Data Dragon docs.
+    """
+
+    lower_to_id: dict[str, str] = field(default_factory=dict)
+
+    def resolve(self, user: str) -> str | None:
+        s = user.strip()
+        if not s:
+            return None
+        low = s.lower()
+        if low in self.lower_to_id:
+            return self.lower_to_id[low]
+        compact = _alnum_lower(s)
+        if compact in self.lower_to_id:
+            return self.lower_to_id[compact]
+        return None
+
+
+def champion_list_json(version: str, timeout: float = 25.0) -> dict[str, Any] | None:
+    """Full champion list (summaries only) — used to resolve internal ids vs display names."""
+    url = f"https://ddragon.leagueoflegends.com/cdn/{version}/data/en_US/champion.json"
+    try:
+        data = _get_json(url, timeout=timeout)
+        return data if isinstance(data, dict) else None
+    except (urllib.error.URLError, TimeoutError, OSError, json.JSONDecodeError, ValueError):
+        return None
+
+
+def champion_index_from_list_payload(payload: dict[str, Any]) -> ChampionDDragonIndex:
+    """Pure: build resolver from a ``champion.json``-shaped dict (for unit tests)."""
+    m: dict[str, str] = {}
+    champions = payload.get("data") or {}
+    if not isinstance(champions, dict):
+        return ChampionDDragonIndex(lower_to_id=m)
+    for _k, summary in champions.items():
+        if not isinstance(summary, dict):
+            continue
+        did = str(summary.get("id", "") or _k).strip()
+        if not did:
+            continue
+        name = str(summary.get("name", "") or "").strip()
+        aliases: set[str] = set()
+        aliases.add(did.lower())
+        aliases.add(_alnum_lower(did))
+        if name:
+            aliases.add(name.lower())
+            aliases.add(_alnum_lower(name))
+        for a in aliases:
+            if a and a not in m:
+                m[a] = did
+    return ChampionDDragonIndex(lower_to_id=m)
+
+
+def champion_index_for_version(version: str, timeout: float = 25.0) -> ChampionDDragonIndex | None:
+    """Cached index for a patch; returns None if ``champion.json`` cannot be loaded (not cached)."""
+    if version in _champion_index_cache:
+        return _champion_index_cache[version]
+    raw = champion_list_json(version, timeout=timeout)
+    if not raw:
+        return None
+    idx = champion_index_from_list_payload(raw)
+    _champion_index_cache[version] = idx
+    return idx
+
+
+def clear_champion_index_cache() -> None:
+    """Test hook: reset cached indices (e.g. after monkeypatching fetch)."""
+    _champion_index_cache.clear()
+
+
 def latest_version(timeout: float = 15.0) -> str | None:
     try:
         data = _get_json(DDRAGON_VERSIONS, timeout=timeout)
@@ -57,11 +147,31 @@ def latest_version(timeout: float = 15.0) -> str | None:
 
 
 def champion_json(version: str, champion_id: str, timeout: float = 20.0) -> dict[str, Any] | None:
-    key = champion_id.capitalize()
-    url = f"https://ddragon.leagueoflegends.com/cdn/{version}/data/en_US/champion/{key}.json"
+    """
+    Load one champion's full JSON. ``champion_id`` may be a Data Dragon id (``Lux``),
+    display name (``Wukong``), or compact spelling (``kaisa``); resolution uses
+    ``champion.json`` for the given ``version``. If the index loads but the name is
+    unknown, returns None. If the index cannot be loaded, falls back to ``capitalize()``
+    for the filename (works for simple ids like ``lux`` only).
+    """
+    s = champion_id.strip()
+    if not s:
+        return None
+    resolved: str | None = None
+    idx = champion_index_for_version(version, timeout=timeout)
+    if idx is not None:
+        resolved = idx.resolve(champion_id)
+        if resolved is None:
+            return None
+    else:
+        resolved = s.capitalize()
+    url = f"https://ddragon.leagueoflegends.com/cdn/{version}/data/en_US/champion/{resolved}.json"
     try:
         data = _get_json(url, timeout=timeout)
-        return data.get("data", {}).get(key)
+        inner = data.get("data", {}) if isinstance(data, dict) else {}
+        if not isinstance(inner, dict):
+            return None
+        return inner.get(resolved)
     except (urllib.error.URLError, TimeoutError, OSError, json.JSONDecodeError, ValueError, KeyError):
         return None
 
@@ -125,6 +235,8 @@ def find_items_by_name_substring(item_data: dict[str, Any], *substrings: str) ->
 
 def champion_profile_from_ddragon(champion_key: str, raw: dict[str, Any]) -> ChampionProfile:
     s = raw.get("stats") or {}
+    spell_data = parse_champion_spells(champion_key, raw)
+    kit = kit_params_from_spells(champion_key, spell_data)
     hp = float(s.get("hp", 580))
     hppl = float(s.get("hpperlevel", 90))
     mp = float(s.get("mp", 400))
@@ -139,7 +251,6 @@ def champion_profile_from_ddragon(champion_key: str, raw: dict[str, Any]) -> Cha
     aspl = float(s.get("attackspeedperlevel", 0.0))
     as_ratio = 0.625
     bonus_as_growth = aspl / 100.0 if aspl > 0.5 else 0.03
-    kit = KitParams(ad_weight=0.3, ap_weight=1.0, as_weight=0.2, ah_weight=0.02, base_ability_dps=12.0)
     cid = champion_key.lower()
     return ChampionProfile(
         id=cid,
@@ -162,13 +273,54 @@ def champion_profile_from_ddragon(champion_key: str, raw: dict[str, Any]) -> Cha
     )
 
 
-def fetch_champions(version: str, keys: tuple[str, ...], timeout: float = 20.0) -> dict[str, ChampionProfile]:
-    out: dict[str, ChampionProfile] = {}
+def fetch_champion_jsons(version: str, keys: tuple[str, ...], timeout: float = 20.0) -> dict[str, dict[str, Any]]:
+    """Raw Data Dragon champion payloads keyed by lower-case id (for audits and parsers)."""
+    out: dict[str, dict[str, Any]] = {}
     for k in keys:
         raw = champion_json(version, k, timeout=timeout)
         if raw:
-            out[k.lower()] = champion_profile_from_ddragon(k, raw)
+            out[k.lower()] = raw
     return out
+
+
+def summoners_rift_item_defs_all(item_data: dict[str, Any]) -> dict[str, ItemDef]:
+    """Every Summoner's Rift (maps[\"11\"]) item in one O(n) pass over ``item.json`` ``data``."""
+    out: dict[str, ItemDef] = {}
+    raw_by_id: dict[str, dict[str, Any]] = item_data.get("data") or {}
+    for sid, raw in raw_by_id.items():
+        if not isinstance(raw, dict):
+            continue
+        ent = item_def_from_ddragon_entry(str(sid), raw)
+        if ent:
+            out[ent.id] = ent
+    return out
+
+
+def items_for_sim_from_item_data(item_data: dict[str, Any]) -> dict[str, ItemDef]:
+    """Recipe closure from name seeds — same as :func:`fetch_items_for_sim` but uses preloaded JSON."""
+    seeds = find_items_by_name_substring(
+        item_data,
+        "Doran",
+        "Recurve",
+        "Needlessly",
+        "Lost Chapter",
+        "B. F.",
+        "Luden",
+        "Statikk",
+        "Infinity",
+    )
+    if not seeds:
+        return {}
+    return recipe_closure_from_seeds(item_data, set(seeds.keys()))
+
+
+def champions_from_raw(raw_by_id: dict[str, dict[str, Any]]) -> dict[str, ChampionProfile]:
+    """Build profiles from pre-fetched Data Dragon payloads (one network round-trip)."""
+    return {cid: champion_profile_from_ddragon(cid, raw) for cid, raw in raw_by_id.items()}
+
+
+def fetch_champions(version: str, keys: tuple[str, ...], timeout: float = 20.0) -> dict[str, ChampionProfile]:
+    return champions_from_raw(fetch_champion_jsons(version, keys, timeout=timeout))
 
 
 def recipe_closure_from_seeds(item_data: dict[str, Any], seed_ids: set[str]) -> dict[str, ItemDef]:
@@ -211,17 +363,4 @@ def fetch_items_for_sim(version: str, timeout: float = 30.0) -> dict[str, ItemDe
     full = item_json_full(version, timeout=timeout)
     if not full:
         return {}
-    seeds = find_items_by_name_substring(
-        full,
-        "Doran",
-        "Recurve",
-        "Needlessly",
-        "Lost Chapter",
-        "B. F.",
-        "Luden",
-        "Statikk",
-        "Infinity",
-    )
-    if not seeds:
-        return {}
-    return recipe_closure_from_seeds(full, set(seeds.keys()))
+    return items_for_sim_from_item_data(full)

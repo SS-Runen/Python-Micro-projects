@@ -5,7 +5,7 @@ from typing import Callable
 
 from .config import FarmMode
 from .data_loader import GameDataBundle
-from .simulator import PurchasePolicy, SimResult, simulate
+from .simulator import PurchasePolicy, SimResult, default_build_optimizer_score, simulate
 
 
 def best_item_order_exhaustive(
@@ -13,13 +13,15 @@ def best_item_order_exhaustive(
     champion_id: str,
     farm_mode: FarmMode,
     item_ids: tuple[str, ...],
-    score: Callable[[SimResult], float] = lambda r: r.final_gold,
+    score: Callable[[SimResult], float] = default_build_optimizer_score,
     eta_lane: float = 1.0,
     t_max: float | None = None,
 ) -> tuple[tuple[str, ...], float, SimResult]:
     """
     Try every permutation of ``item_ids`` as fixed buy order; return best by ``score``.
-    Practical only for small lists (n! simulations).
+
+    Default ``score`` is :func:`default_build_optimizer_score` (**total farm gold** from
+    clears), not ``final_gold`` (wallet balance can reward underspending).
     """
     best_order: tuple[str, ...] = ()
     best_val = float("-inf")

@@ -17,6 +17,9 @@ from .passive import passive_gold_in_interval
 from .stats import total_stats
 from .xp_level import level_from_total_xp, xp_for_minion_kill
 
+# Summoner's Rift inventory (item slots only; trinket/ward not modeled).
+MAX_INVENTORY_SLOTS = 6
+
 
 def config_from_rules(data: GameDataBundle) -> GameConfig:
     r = data.rules
@@ -41,16 +44,52 @@ class SimulationState:
     total_xp: float
     level: int
     buy_queue: list[str]
+    total_gold_spent_on_items: float = 0.0
 
 
 @dataclass
 class SimResult:
+    """
+    Economic fields:
+
+    - ``total_farm_gold`` — sum of **discrete** farm ticks in this model (not a continuous
+      last-hit integral).
+
+      **Lane** (``FarmMode.LANE``): per arriving wave,
+      ``gold_gain = wave_gold_if_full_clear × throughput_ratio(clear_time, wave_interval) × eta_lane``,
+      where ``clear_time = wave_hp_budget / effective_dps`` (see ``clear.py``). Throughput
+      caps at a full wave; higher DPS raises income until that cap.
+
+      **Jungle**: per route cycle,
+      ``gold_gain = jungle_base_route_gold × min(1, base_cycle_seconds / jungle_cycle_seconds)``,
+      with ``jungle_cycle_seconds`` scaling inversely with ``effective_dps``.
+
+      **Preferred default for build optimization** under this simulator (not a claim of
+      real-client optimality).
+
+    - ``total_passive_gold`` — passive income (does not depend on items in this model).
+    - ``total_gold_spent_on_items`` — all gold paid to the shop (components + crafts + full buys).
+    - ``final_gold`` — wallet after income and purchases (``starting_gold`` + farm + passive - spent).
+    - ``net_wealth_delta`` — ``final_gold - starting_gold`` (= farm + passive - spent).
+    """
+
     final_gold: float
     final_level: float
     final_inventory: tuple[str, ...]
     timeline: list[tuple[float, float, int]]
     total_farm_gold: float
     total_passive_gold: float
+    total_gold_spent_on_items: float
+    starting_gold: float
+    net_wealth_delta: float
+
+
+def default_build_optimizer_score(res: SimResult) -> float:
+    """
+    Maximize ``total_farm_gold`` from :class:`SimResult` — the simulator’s lane/jungle farm
+    sums described there. Does **not** maximize residual ``final_gold`` (wallet).
+    """
+    return res.total_farm_gold
 
 
 def _cs_cumulative_by_wave(data: GameDataBundle) -> dict[int, int]:
@@ -74,16 +113,23 @@ def _acquire_goal(state: SimulationState, target_id: str, items_by_id: dict) -> 
     - Composite: if inventory has **exact** recipe multiset, pay recipe fee
       (``total - sum(components)``), consume components, add item.
       If inventory has **some but not all** recipe pieces, refuse (buy components via earlier goals).
-      If inventory has **none** of the recipe pieces, allow **full sticker** purchase for ``total_cost``.
+    - If inventory has **none** of the recipe pieces, allow **full sticker** purchase for ``total_cost``.
+
+    At most :data:`MAX_INVENTORY_SLOTS` items after the operation. Combining consumes
+    components and frees slots before the finished item occupies one slot.
     """
     it = items_by_id.get(target_id)
     if not it:
         return False
     inv = state.inventory
     if not it.from_ids:
+        if len(inv) >= MAX_INVENTORY_SLOTS:
+            return False
         if state.gold + 1e-9 < it.total_cost:
             return False
-        state.gold -= it.total_cost
+        paid = it.total_cost
+        state.gold -= paid
+        state.total_gold_spent_on_items += paid
         inv.append(target_id)
         return True
 
@@ -100,17 +146,26 @@ def _acquire_goal(state: SimulationState, target_id: str, items_by_id: dict) -> 
     if matched == need:
         comp_sum = sum(items_by_id[k].total_cost * need[k] for k in need)
         craft_cost = max(0.0, it.total_cost - comp_sum)
+        remove_cnt = sum(need.values())
+        new_len = len(inv) - remove_cnt + 1
+        if new_len > MAX_INVENTORY_SLOTS:
+            return False
         if state.gold + 1e-9 < craft_cost:
             return False
         for k, n in need.items():
             for _ in range(n):
                 inv.remove(k)
         state.gold -= craft_cost
+        state.total_gold_spent_on_items += craft_cost
         inv.append(target_id)
         return True
+    if len(inv) >= MAX_INVENTORY_SLOTS:
+        return False
     if state.gold + 1e-9 < it.total_cost:
         return False
-    state.gold -= it.total_cost
+    paid = it.total_cost
+    state.gold -= paid
+    state.total_gold_spent_on_items += paid
     inv.append(target_id)
     return True
 
@@ -158,14 +213,16 @@ def simulate(
     rules = data.rules
     cfg = config_from_rules(data)
     t_end = t_max if t_max is not None else cfg.t_max_seconds
+    starting_gold = float(rules.start_gold)
 
     state = SimulationState(
         time_seconds=0.0,
-        gold=rules.start_gold,
+        gold=starting_gold,
         inventory=[],
         total_xp=0.0,
         level=1,
         buy_queue=list(policy.buy_order),
+        total_gold_spent_on_items=0.0,
     )
     cum = _cs_cumulative_by_wave(data)
     max_wave_index = max(cum.keys()) if cum else 0
@@ -242,6 +299,7 @@ def simulate(
         _apply_purchases(state, items, defer_purchases_until)
         timeline.append((state.time_seconds, state.gold, state.level))
 
+    net_delta = state.gold - starting_gold
     return SimResult(
         final_gold=state.gold,
         final_level=float(state.level),
@@ -249,4 +307,7 @@ def simulate(
         timeline=timeline,
         total_farm_gold=total_farm,
         total_passive_gold=total_passive,
+        total_gold_spent_on_items=state.total_gold_spent_on_items,
+        starting_gold=starting_gold,
+        net_wealth_delta=net_delta,
     )

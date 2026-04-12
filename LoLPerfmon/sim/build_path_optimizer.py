@@ -6,7 +6,7 @@ from typing import Callable, Mapping
 from .config import FarmMode
 from .data_loader import GameDataBundle
 from .models import ItemDef
-from .simulator import PurchasePolicy, SimResult, simulate
+from .simulator import PurchasePolicy, SimResult, default_build_optimizer_score, simulate
 
 # Exhaustive interleaving is factorial-like; keep default small for CI.
 _DEFAULT_MAX_INTERLEAVE_STEPS = 12
@@ -72,7 +72,7 @@ def optimal_interleaved_build(
     champion_id: str,
     farm_mode: FarmMode,
     root_item_ids: tuple[str, ...],
-    score: Callable[[SimResult], float] = lambda r: r.final_gold,
+    score: Callable[[SimResult], float] = default_build_optimizer_score,
     eta_lane: float = 1.0,
     t_max: float | None = None,
     max_interleave_steps: int = _DEFAULT_MAX_INTERLEAVE_STEPS,
@@ -114,7 +114,7 @@ def optimal_build_for_item_order_roots(
     champion_id: str,
     farm_mode: FarmMode,
     root_item_ids: tuple[str, ...],
-    score: Callable[[SimResult], float] = lambda r: r.final_gold,
+    score: Callable[[SimResult], float] = default_build_optimizer_score,
     eta_lane: float = 1.0,
     t_max: float | None = None,
 ) -> tuple[tuple[str, ...], float, SimResult]:

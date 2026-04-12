@@ -3,7 +3,15 @@ from .build_path_optimizer import (
     optimal_build_for_item_order_roots,
     optimal_interleaved_build,
 )
-from .bundle_factory import build_offline_bundle, get_game_bundle
+from .bundle_factory import (
+    build_offline_bundle,
+    get_game_bundle,
+    get_game_bundle_with_audit,
+    load_ddragon_bundle_with_audit,
+)
+from .ddragon_availability import DDragonAuditReport, build_ddragon_audit_report
+from .ddragon_fetch import ChampionDDragonIndex, champion_index_from_list_payload
+from .ddragon_spell_parse import base_ability_dps_hint_from_mean_cooldown, parse_champion_spells
 from .config import FarmMode, GameConfig
 from .data_loader import GameDataBundle, load_game_data
 from .optimizer import best_item_order_exhaustive
@@ -17,13 +25,28 @@ from .stats import (
     total_attack_speed,
     total_stats,
 )
-from .simulator import PurchasePolicy, SimResult, SimulationState, simulate
+from .simulator import (
+    MAX_INVENTORY_SLOTS,
+    PurchasePolicy,
+    SimResult,
+    SimulationState,
+    default_build_optimizer_score,
+    simulate,
+)
 
 __all__ = [
     "FarmMode",
     "GameConfig",
     "GameDataBundle",
     "get_game_bundle",
+    "get_game_bundle_with_audit",
+    "load_ddragon_bundle_with_audit",
+    "build_ddragon_audit_report",
+    "DDragonAuditReport",
+    "base_ability_dps_hint_from_mean_cooldown",
+    "parse_champion_spells",
+    "ChampionDDragonIndex",
+    "champion_index_from_list_payload",
     "build_offline_bundle",
     "load_game_data",
     "acquisition_postorder_for_item",
@@ -41,6 +64,8 @@ __all__ = [
     "PurchasePolicy",
     "SimResult",
     "SimulationState",
+    "MAX_INVENTORY_SLOTS",
+    "default_build_optimizer_score",
     "simulate",
     "compare_purchase_timing",
     "marginal_farm_rate",
