@@ -12,6 +12,13 @@ from .bundle_factory import (
 )
 from .ddragon_availability import DDragonAuditReport, build_ddragon_audit_report
 from .ddragon_fetch import ChampionDDragonIndex, champion_index_from_list_payload
+from .greedy_farm_build import (
+    BeamFarmMetadata,
+    GreedyFarmMetadata,
+    beam_refined_farm_build,
+    greedy_farm_build,
+    ranked_marginal_acquisitions,
+)
 from .marginal_clear import clear_upgrade_report
 from .ddragon_spell_parse import base_ability_dps_hint_from_mean_cooldown, parse_champion_spells
 from .config import FarmMode, GameConfig
@@ -32,6 +39,7 @@ from .simulator import (
     PurchasePolicy,
     SimResult,
     SimulationState,
+    acquire_goal,
     default_build_optimizer_score,
     simulate,
 )
@@ -53,7 +61,13 @@ __all__ = [
     "load_game_data",
     "acquisition_postorder_for_item",
     "acquisition_sequence_for_finished_roots",
+    "BeamFarmMetadata",
+    "GreedyFarmMetadata",
+    "beam_refined_farm_build",
+    "greedy_farm_build",
+    "ranked_marginal_acquisitions",
     "clear_upgrade_report",
+    "acquire_goal",
     "optimal_interleaved_build",
     "optimal_build_for_item_order_roots",
     "best_item_order_exhaustive",

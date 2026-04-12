@@ -174,6 +174,14 @@ def _acquire_goal(state: SimulationState, target_id: str, items_by_id: dict) -> 
     return True
 
 
+def acquire_goal(state: SimulationState, target_id: str, items_by_id: dict) -> bool:
+    """
+    Public wrapper for :func:`_acquire_goal` — recipe-valid single-item acquisition
+    (used by greedy / beam farm search).
+    """
+    return _acquire_goal(state, target_id, items_by_id)
+
+
 def _apply_purchases(state: SimulationState, items_by_id: dict, defer_purchases_until: float | None) -> None:
     changed = True
     while changed:
@@ -200,6 +208,18 @@ def _xp_for_wave_fraction(wave, level: int, fraction: float, rules) -> float:
     return f * (wave.melee * xm + wave.caster * xc + wave.siege * xs)
 
 
+def _lane_purchase_round(
+    state: SimulationState,
+    items_by_id: dict,
+    defer_purchases_until: float | None,
+    lane_purchase_hook: Callable[[SimulationState], None] | None,
+) -> None:
+    if lane_purchase_hook is not None:
+        lane_purchase_hook(state)
+    else:
+        _apply_purchases(state, items_by_id, defer_purchases_until)
+
+
 def simulate(
     data: GameDataBundle,
     champion_id: str,
@@ -209,9 +229,17 @@ def simulate(
     t_max: float | None = None,
     on_wave: Callable[[SimulationState, float, int], None] | None = None,
     defer_purchases_until: float | None = None,
+    lane_purchase_hook: Callable[[SimulationState], None] | None = None,
 ) -> SimResult:
+    """
+    If ``lane_purchase_hook`` is set (``FarmMode.LANE`` only), it runs at each lane purchase
+    point instead of draining ``policy.buy_order`` via :func:`_apply_purchases`. Use for
+    greedy or custom shop policies; leave ``policy.buy_order`` empty when the hook owns buys.
+    """
     if champion_id not in data.champions:
         raise KeyError(champion_id)
+    if lane_purchase_hook is not None and farm_mode != FarmMode.LANE:
+        raise ValueError("lane_purchase_hook is only supported for FarmMode.LANE")
     profile = data.champions[champion_id]
     items = data.items
     rules = data.rules
@@ -247,7 +275,7 @@ def simulate(
             state.gold += pg
             total_passive += pg
             state.time_seconds = t_wave
-            _apply_purchases(state, items, defer_purchases_until)
+            _lane_purchase_round(state, items, defer_purchases_until, lane_purchase_hook)
             wave = data.wave_at_index(k)
             if wave is None:
                 k += 1
@@ -265,7 +293,7 @@ def simulate(
             total_farm += gold_gain
             state.total_xp += xp_gain
             state.level = level_from_total_xp(state.total_xp, rules)
-            _apply_purchases(state, items, defer_purchases_until)
+            _lane_purchase_round(state, items, defer_purchases_until, lane_purchase_hook)
             timeline.append((state.time_seconds, state.gold, state.level))
             if on_wave:
                 on_wave(state, t_wave, k)
@@ -300,7 +328,7 @@ def simulate(
         state.gold += pg
         total_passive += pg
         state.time_seconds = t_end
-        _apply_purchases(state, items, defer_purchases_until)
+        _lane_purchase_round(state, items, defer_purchases_until, lane_purchase_hook)
         timeline.append((state.time_seconds, state.gold, state.level))
 
     net_delta = state.gold - starting_gold
