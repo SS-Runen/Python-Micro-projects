@@ -1,3 +1,7 @@
+"""
+Lane/jungle simulation with recipe purchases. **Selling or swapping items is not modeled.**
+"""
+
 from __future__ import annotations
 
 from collections import Counter

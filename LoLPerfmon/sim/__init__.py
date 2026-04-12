@@ -1,5 +1,6 @@
 from .build_path_optimizer import (
     acquisition_postorder_for_item,
+    acquisition_sequence_for_finished_roots,
     optimal_build_for_item_order_roots,
     optimal_interleaved_build,
 )
@@ -11,6 +12,7 @@ from .bundle_factory import (
 )
 from .ddragon_availability import DDragonAuditReport, build_ddragon_audit_report
 from .ddragon_fetch import ChampionDDragonIndex, champion_index_from_list_payload
+from .marginal_clear import clear_upgrade_report
 from .ddragon_spell_parse import base_ability_dps_hint_from_mean_cooldown, parse_champion_spells
 from .config import FarmMode, GameConfig
 from .data_loader import GameDataBundle, load_game_data
@@ -50,6 +52,8 @@ __all__ = [
     "build_offline_bundle",
     "load_game_data",
     "acquisition_postorder_for_item",
+    "acquisition_sequence_for_finished_roots",
+    "clear_upgrade_report",
     "optimal_interleaved_build",
     "optimal_build_for_item_order_roots",
     "best_item_order_exhaustive",

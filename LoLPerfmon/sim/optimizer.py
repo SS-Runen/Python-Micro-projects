@@ -22,6 +22,10 @@ def best_item_order_exhaustive(
 
     Default ``score`` is :func:`default_build_optimizer_score` (**total farm gold** from
     clears), not ``final_gold`` (wallet balance can reward underspending).
+
+    For **recipe-correct** goal lists, prefer :func:`LoLPerfmon.sim.build_path_optimizer.optimal_interleaved_build`
+    or :func:`LoLPerfmon.sim.build_path_optimizer.acquisition_sequence_for_finished_roots`
+    with **finished-item roots**; see ``DATA_SOURCES.md`` (Build optimization vs recipe expansion).
     """
     best_order: tuple[str, ...] = ()
     best_val = float("-inf")

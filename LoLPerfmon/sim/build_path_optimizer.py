@@ -143,8 +143,27 @@ def optimal_build_for_item_order_roots(
     return best_order, best_val, best_res
 
 
+def acquisition_sequence_for_finished_roots(
+    items: Mapping[str, ItemDef], *root_item_ids: str
+) -> tuple[str, ...]:
+    """
+    Concatenate :func:`acquisition_postorder_for_item` for each root in order.
+
+    Use when you want a single deterministic goal queue (components → parent per root)
+    without searching interleavings. For ordering **between** roots, prefer
+    :func:`optimal_interleaved_build` or :func:`optimal_build_for_item_order_roots`.
+    """
+    seq: tuple[str, ...] = ()
+    for rid in root_item_ids:
+        if rid not in items:
+            raise KeyError(rid)
+        seq += acquisition_postorder_for_item(rid, items)
+    return seq
+
+
 __all__ = [
     "acquisition_postorder_for_item",
+    "acquisition_sequence_for_finished_roots",
     "optimal_interleaved_build",
     "optimal_build_for_item_order_roots",
 ]
