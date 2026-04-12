@@ -9,6 +9,9 @@ __pycache__/
 venv/
 env/
 
+# Optional local wiki / browser tooling (never ship HTML scraping inside LoLPerfmon/sim)
+LoLPerfmon/_local/
+
 # Local environment / secrets (keep templates if you use them)
 .env
 .env.*

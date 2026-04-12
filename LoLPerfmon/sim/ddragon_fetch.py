@@ -16,6 +16,23 @@ from .models import ChampionProfile, ItemDef, KitParams, StatBonus
 DDRAGON_VERSIONS = "https://ddragon.leagueoflegends.com/api/versions.json"
 USER_AGENT = "LoLPerfmonSim/1.0 (educational; +https://github.com)"
 
+# Riot item.json ``maps`` field: ``"11"`` = Summoner's Rift (aligns with wiki "Classic SR 5v5" filter).
+SUMMONERS_RIFT_CLASSIC_MAP_ID = "11"
+
+
+def item_on_summoners_rift_classic(raw: dict[str, Any]) -> bool:
+    """
+    True if the item is available on Summoner's Rift classic 5v5 per Data Dragon.
+
+    This matches the League of Legends wiki list when the game-mode dropdown is set to
+    "Classic SR 5v5" (option value ``classic sr 5v5`` on the Item page); we use Riot's
+    authoritative ``maps`` data instead of scraping HTML.
+    """
+    m = raw.get("maps")
+    if not isinstance(m, dict):
+        return False
+    return m.get(SUMMONERS_RIFT_CLASSIC_MAP_ID) is True
+
 
 def _get_json(url: str, timeout: float = 20.0) -> Any:
     req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
@@ -71,11 +88,21 @@ def item_def_from_ddragon_entry(item_id: str, raw: dict[str, Any]) -> ItemDef | 
     total = gold.get("total")
     if total is None:
         return None
+    if not item_on_summoners_rift_classic(raw):
+        return None
     name = str(raw.get("name", item_id))
     stats_raw = raw.get("stats") or {}
     stats_f = {k: float(v) for k, v in stats_raw.items() if isinstance(v, (int, float))}
     bonus = _bonus_from_item_stats(stats_f)
-    return ItemDef(id=str(item_id), name=name, total_cost=float(total), stats=bonus)
+    from_raw = raw.get("from") or []
+    from_ids = tuple(str(x) for x in from_raw) if isinstance(from_raw, list) else ()
+    return ItemDef(
+        id=str(item_id),
+        name=name,
+        total_cost=float(total),
+        stats=bonus,
+        from_ids=from_ids,
+    )
 
 
 def find_items_by_name_substring(item_data: dict[str, Any], *substrings: str) -> dict[str, ItemDef]:
@@ -138,9 +165,57 @@ def fetch_champions(version: str, keys: tuple[str, ...], timeout: float = 20.0) 
     return out
 
 
+def recipe_closure_from_seeds(item_data: dict[str, Any], seed_ids: set[str]) -> dict[str, ItemDef]:
+    """
+    Include every Data Dragon item id reachable via ``from`` edges from ``seed_ids`` so
+    components and recipe fees are simulated with real costs. Only ids that are enabled on
+    Summoner's Rift (``maps["11"]``) are included.
+    """
+    raw_by_id: dict[str, dict[str, Any]] = item_data.get("data") or {}
+    needed: set[str] = set()
+    for sid in seed_ids:
+        raw = raw_by_id.get(sid)
+        if raw and item_on_summoners_rift_classic(raw):
+            needed.add(sid)
+    changed = True
+    while changed:
+        changed = False
+        for i in list(needed):
+            raw = raw_by_id.get(i)
+            if not raw:
+                continue
+            for comp in raw.get("from") or []:
+                cid = str(comp)
+                craw = raw_by_id.get(cid)
+                if craw and item_on_summoners_rift_classic(craw) and cid not in needed:
+                    needed.add(cid)
+                    changed = True
+    out: dict[str, ItemDef] = {}
+    for i in needed:
+        raw = raw_by_id.get(i)
+        if not raw:
+            continue
+        ent = item_def_from_ddragon_entry(i, raw)
+        if ent:
+            out[ent.id] = ent
+    return out
+
+
 def fetch_items_for_sim(version: str, timeout: float = 30.0) -> dict[str, ItemDef]:
     full = item_json_full(version, timeout=timeout)
     if not full:
         return {}
-    items = find_items_by_name_substring(full, "Doran", "Recurve", "Needlessly", "Lost Chapter", "B. F.")
-    return items
+    seeds = find_items_by_name_substring(
+        full,
+        "Doran",
+        "Recurve",
+        "Needlessly",
+        "Lost Chapter",
+        "B. F.",
+        "Luden",
+        "Statikk",
+        "Infinity",
+    )
+    if not seeds:
+        return {}
+    return recipe_closure_from_seeds(full, set(seeds.keys()))

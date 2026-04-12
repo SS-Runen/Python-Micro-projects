@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from collections import Counter
 from dataclasses import dataclass
 from typing import Callable
 
@@ -66,6 +67,54 @@ def _delta_cs(wave_index: int, cum: dict[int, int]) -> int:
     return cur - prev
 
 
+def _acquire_goal(state: SimulationState, target_id: str, items_by_id: dict) -> bool:
+    """
+    Acquire one copy of ``target_id`` using Data Dragon-style rules:
+    - Leaf (no ``from_ids``): pay ``total_cost``, add item.
+    - Composite: if inventory has **exact** recipe multiset, pay recipe fee
+      (``total - sum(components)``), consume components, add item.
+      If inventory has **some but not all** recipe pieces, refuse (buy components via earlier goals).
+      If inventory has **none** of the recipe pieces, allow **full sticker** purchase for ``total_cost``.
+    """
+    it = items_by_id.get(target_id)
+    if not it:
+        return False
+    inv = state.inventory
+    if not it.from_ids:
+        if state.gold + 1e-9 < it.total_cost:
+            return False
+        state.gold -= it.total_cost
+        inv.append(target_id)
+        return True
+
+    need = Counter(it.from_ids)
+    have = Counter(inv)
+    matched = Counter()
+    for k in need:
+        if k not in items_by_id:
+            return False
+        matched[k] = min(need[k], have[k])
+    matched_sum = sum(matched.values())
+    if matched_sum > 0 and matched != need:
+        return False
+    if matched == need:
+        comp_sum = sum(items_by_id[k].total_cost * need[k] for k in need)
+        craft_cost = max(0.0, it.total_cost - comp_sum)
+        if state.gold + 1e-9 < craft_cost:
+            return False
+        for k, n in need.items():
+            for _ in range(n):
+                inv.remove(k)
+        state.gold -= craft_cost
+        inv.append(target_id)
+        return True
+    if state.gold + 1e-9 < it.total_cost:
+        return False
+    state.gold -= it.total_cost
+    inv.append(target_id)
+    return True
+
+
 def _apply_purchases(state: SimulationState, items_by_id: dict, defer_purchases_until: float | None) -> None:
     changed = True
     while changed:
@@ -79,10 +128,7 @@ def _apply_purchases(state: SimulationState, items_by_id: dict, defer_purchases_
             state.buy_queue.pop(0)
             changed = True
             continue
-        cost = items_by_id[next_id].total_cost
-        if state.gold + 1e-9 >= cost:
-            state.gold -= cost
-            state.inventory.append(next_id)
+        if _acquire_goal(state, next_id, items_by_id):
             state.buy_queue.pop(0)
             changed = True
 

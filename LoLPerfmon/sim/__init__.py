@@ -1,3 +1,8 @@
+from .build_path_optimizer import (
+    acquisition_postorder_for_item,
+    optimal_build_for_item_order_roots,
+    optimal_interleaved_build,
+)
 from .bundle_factory import build_offline_bundle, get_game_bundle
 from .config import FarmMode, GameConfig
 from .data_loader import GameDataBundle, load_game_data
@@ -21,6 +26,9 @@ __all__ = [
     "get_game_bundle",
     "build_offline_bundle",
     "load_game_data",
+    "acquisition_postorder_for_item",
+    "optimal_interleaved_build",
+    "optimal_build_for_item_order_roots",
     "best_item_order_exhaustive",
     "passive_accumulated",
     "passive_gold_in_interval",

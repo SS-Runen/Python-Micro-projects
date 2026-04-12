@@ -56,12 +56,14 @@ def _offline_placeholder_items() -> dict[str, ItemDef]:
             name="Budget AP component (offline)",
             total_cost=400.0,
             stats=StatBonus(ability_power=18.0, health=80.0),
+            from_ids=(),
         ),
         "cheap_ad": ItemDef(
             id="cheap_ad",
             name="Budget AD component (offline)",
             total_cost=450.0,
             stats=StatBonus(attack_damage=20.0),
+            from_ids=(),
         ),
     }
 

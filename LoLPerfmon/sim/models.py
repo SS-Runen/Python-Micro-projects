@@ -10,6 +10,7 @@ class ItemDef:
     name: str
     total_cost: float
     stats: "StatBonus"
+    from_ids: tuple[str, ...] = field(default_factory=tuple)
 
 
 @dataclass(frozen=True)
@@ -100,10 +101,16 @@ def load_items_from_json(items_list: list[Mapping[str, Any]]) -> dict[str, ItemD
             armor=float(st.get("armor", 0)),
             magic_resist=float(st.get("magic_resist", 0)),
         )
+        fid = raw.get("from_ids")
+        if isinstance(fid, (list, tuple)):
+            from_ids = tuple(str(x) for x in fid)
+        else:
+            from_ids = ()
         out[str(raw["id"])] = ItemDef(
             id=str(raw["id"]),
             name=str(raw["name"]),
             total_cost=float(raw["total_cost"]),
             stats=bonus,
+            from_ids=from_ids,
         )
     return out
