@@ -1,0 +1,206 @@
+from __future__ import annotations
+
+from dataclasses import dataclass
+from typing import Callable
+
+from .clear import (
+    clear_time_seconds,
+    effective_dps,
+    jungle_cycle_seconds,
+    throughput_ratio,
+    wave_gold_if_full_clear,
+)
+from .config import FarmMode, GameConfig
+from .data_loader import GameDataBundle
+from .passive import passive_gold_in_interval
+from .stats import total_stats
+from .xp_level import level_from_total_xp, xp_for_minion_kill
+
+
+def config_from_rules(data: GameDataBundle) -> GameConfig:
+    r = data.rules
+    return GameConfig(
+        start_gold=r.start_gold,
+        passive_gold_per_10_seconds=r.passive_gold_per_10_seconds,
+        passive_gold_start_seconds=r.passive_gold_start_seconds,
+        patch_version=r.patch_version,
+    )
+
+
+@dataclass(frozen=True)
+class PurchasePolicy:
+    buy_order: tuple[str, ...]
+
+
+@dataclass
+class SimulationState:
+    time_seconds: float
+    gold: float
+    inventory: list[str]
+    total_xp: float
+    level: int
+    buy_queue: list[str]
+
+
+@dataclass
+class SimResult:
+    final_gold: float
+    final_level: float
+    final_inventory: tuple[str, ...]
+    timeline: list[tuple[float, float, int]]
+    total_farm_gold: float
+    total_passive_gold: float
+
+
+def _cs_cumulative_by_wave(data: GameDataBundle) -> dict[int, int]:
+    return data.cumulative_cs_by_wave_index()
+
+
+def _delta_cs(wave_index: int, cum: dict[int, int]) -> int:
+    if wave_index not in cum:
+        return 0
+    cur = cum[wave_index]
+    if wave_index <= 0:
+        return cur
+    prev = cum.get(wave_index - 1, 0)
+    return cur - prev
+
+
+def _apply_purchases(state: SimulationState, items_by_id: dict, defer_purchases_until: float | None) -> None:
+    changed = True
+    while changed:
+        changed = False
+        if not state.buy_queue:
+            break
+        if defer_purchases_until is not None and state.time_seconds + 1e-9 < defer_purchases_until:
+            break
+        next_id = state.buy_queue[0]
+        if next_id not in items_by_id:
+            state.buy_queue.pop(0)
+            changed = True
+            continue
+        cost = items_by_id[next_id].total_cost
+        if state.gold + 1e-9 >= cost:
+            state.gold -= cost
+            state.inventory.append(next_id)
+            state.buy_queue.pop(0)
+            changed = True
+
+
+def _xp_for_wave_fraction(wave, level: int, fraction: float, rules) -> float:
+    f = max(0.0, min(1.0, fraction))
+    xm = xp_for_minion_kill("melee", level, rules)
+    xc = xp_for_minion_kill("caster", level, rules)
+    xs = xp_for_minion_kill("siege", level, rules)
+    return f * (wave.melee * xm + wave.caster * xc + wave.siege * xs)
+
+
+def simulate(
+    data: GameDataBundle,
+    champion_id: str,
+    farm_mode: FarmMode,
+    policy: PurchasePolicy,
+    eta_lane: float = 1.0,
+    t_max: float | None = None,
+    on_wave: Callable[[SimulationState, float, int], None] | None = None,
+    defer_purchases_until: float | None = None,
+) -> SimResult:
+    if champion_id not in data.champions:
+        raise KeyError(champion_id)
+    profile = data.champions[champion_id]
+    items = data.items
+    rules = data.rules
+    cfg = config_from_rules(data)
+    t_end = t_max if t_max is not None else cfg.t_max_seconds
+
+    state = SimulationState(
+        time_seconds=0.0,
+        gold=rules.start_gold,
+        inventory=[],
+        total_xp=0.0,
+        level=1,
+        buy_queue=list(policy.buy_order),
+    )
+    cum = _cs_cumulative_by_wave(data)
+    max_wave_index = max(cum.keys()) if cum else 0
+    timeline: list[tuple[float, float, int]] = [(0.0, state.gold, state.level)]
+    total_farm = 0.0
+    total_passive = 0.0
+    t_prev = 0.0
+
+    if farm_mode == FarmMode.LANE:
+        k = 0
+        while True:
+            t_wave = rules.first_wave_spawn_seconds + k * rules.wave_interval_seconds
+            if t_wave > t_end:
+                break
+            if k > max_wave_index:
+                break
+            pg = passive_gold_in_interval(t_prev, t_wave, cfg)
+            state.gold += pg
+            total_passive += pg
+            state.time_seconds = t_wave
+            _apply_purchases(state, items, defer_purchases_until)
+            wave = data.wave_at_index(k)
+            if wave is None:
+                k += 1
+                t_prev = t_wave
+                continue
+            stats = total_stats(profile, state.level, tuple(state.inventory), items)
+            game_minute = t_wave / 60.0
+            dps = effective_dps(profile, stats)
+            ct = clear_time_seconds(wave, game_minute, data, dps)
+            thr = throughput_ratio(ct, rules.wave_interval_seconds) * eta_lane
+            gold_full = wave_gold_if_full_clear(wave, game_minute, data)
+            gold_gain = gold_full * thr
+            xp_gain = _xp_for_wave_fraction(wave, state.level, thr, rules)
+            state.gold += gold_gain
+            total_farm += gold_gain
+            state.total_xp += xp_gain
+            state.level = level_from_total_xp(state.total_xp, rules)
+            _apply_purchases(state, items, defer_purchases_until)
+            timeline.append((state.time_seconds, state.gold, state.level))
+            if on_wave:
+                on_wave(state, t_wave, k)
+            t_prev = t_wave
+            k += 1
+    else:
+        t_next = rules.jungle_base_cycle_seconds
+        while t_next <= t_end:
+            pg = passive_gold_in_interval(t_prev, t_next, cfg)
+            state.gold += pg
+            total_passive += pg
+            state.time_seconds = t_next
+            _apply_purchases(state, items, defer_purchases_until)
+            stats = total_stats(profile, state.level, tuple(state.inventory), items)
+            cycle = jungle_cycle_seconds(profile, stats, data)
+            eff = min(1.0, rules.jungle_base_cycle_seconds / max(cycle, 1e-9))
+            gold_gain = rules.jungle_base_route_gold * eff
+            xp_gain = rules.jungle_base_route_xp * eff
+            state.gold += gold_gain
+            total_farm += gold_gain
+            state.total_xp += xp_gain
+            state.level = level_from_total_xp(state.total_xp, rules)
+            _apply_purchases(state, items, defer_purchases_until)
+            timeline.append((state.time_seconds, state.gold, state.level))
+            if on_wave:
+                on_wave(state, t_next, -1)
+            t_prev = t_next
+            t_next += rules.jungle_base_cycle_seconds
+
+    if t_prev < t_end:
+        pg = passive_gold_in_interval(t_prev, t_end, cfg)
+        state.gold += pg
+        total_passive += pg
+        state.time_seconds = t_end
+        _apply_purchases(state, items, defer_purchases_until)
+        timeline.append((state.time_seconds, state.gold, state.level))
+
+    return SimResult(
+        final_gold=state.gold,
+        final_level=float(state.level),
+        final_inventory=tuple(state.inventory),
+        timeline=timeline,
+        total_farm_gold=total_farm,
+        total_passive_gold=total_passive,
+    )
