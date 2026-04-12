@@ -70,6 +70,9 @@ dmypy.json
 .idea/
 .vscode/
 
+# Cursor (local agent rules; not shared via this repo)
+.cursor/
+
 # OS
 .DS_Store
 Thumbs.db
