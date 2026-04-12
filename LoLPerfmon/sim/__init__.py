@@ -21,6 +21,7 @@ from .greedy_farm_build import (
 )
 from .marginal_clear import clear_upgrade_report
 from .ddragon_spell_parse import base_ability_dps_hint_from_mean_cooldown, parse_champion_spells
+from .clear import lane_clear_dps
 from .config import FarmMode, GameConfig
 from .data_loader import GameDataBundle, load_game_data
 from .optimizer import best_item_order_exhaustive
@@ -45,6 +46,7 @@ from .simulator import (
 )
 
 __all__ = [
+    "lane_clear_dps",
     "FarmMode",
     "GameConfig",
     "GameDataBundle",

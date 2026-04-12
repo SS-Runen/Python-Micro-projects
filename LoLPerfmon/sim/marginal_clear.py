@@ -42,14 +42,14 @@ def clear_upgrade_report(
         return True, []
 
     base_stats = total_stats(profile, lvl, tuple(inv), items)
-    base_dps = effective_dps(profile, base_stats)
+    base_dps = effective_dps(profile, lvl, base_stats)
 
     rows: list[tuple[str, float, float]] = []
     for iid, idef in items.items():
         if gold + 1e-9 < idef.total_cost:
             continue
         st = total_stats(profile, lvl, tuple(inv + [iid]), items)
-        delta = effective_dps(profile, st) - base_dps
+        delta = effective_dps(profile, lvl, st) - base_dps
         if delta > 1e-12:
             rows.append((iid, delta, idef.total_cost))
 

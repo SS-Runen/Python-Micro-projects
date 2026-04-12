@@ -1,7 +1,10 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Any, Mapping
+from typing import TYPE_CHECKING, Any, Mapping
+
+if TYPE_CHECKING:
+    from .spell_farm_model import SpellFarmCoefficients
 
 
 @dataclass(frozen=True)
@@ -27,13 +30,16 @@ class StatBonus:
 
 @dataclass(frozen=True)
 class KitParams:
-    """Weights for abstract clear / DPS proxy (data-driven per champion)."""
+    """Weights for lane/jungle farm DPS; see :func:`LoLPerfmon.sim.clear.lane_clear_dps`."""
 
     ad_weight: float = 1.0
     ap_weight: float = 1.0
     as_weight: float = 0.5
     ah_weight: float = 0.02
     base_ability_dps: float = 0.0
+    #: Multiplier on ``attack_speed * attack_damage`` (auto-based clear). Use ``0`` for
+    #: champions modeled as **waveclearing with abilities only** (e.g. typical mages).
+    auto_attack_clear_weight: float = 1.0
 
 
 @dataclass(frozen=True)
@@ -55,6 +61,7 @@ class ChampionProfile:
     attack_speed_ratio: float
     bonus_attack_speed_growth: float
     kit: KitParams = field(default_factory=KitParams)
+    spell_farm: "SpellFarmCoefficients | None" = None
 
     @staticmethod
     def from_json(obj: Mapping[str, Any]) -> ChampionProfile:
@@ -65,6 +72,7 @@ class ChampionProfile:
             as_weight=float(kit_raw.get("as_weight", 0.5)),
             ah_weight=float(kit_raw.get("ah_weight", 0.02)),
             base_ability_dps=float(kit_raw.get("base_ability_dps", 0.0)),
+            auto_attack_clear_weight=float(kit_raw.get("auto_attack_clear_weight", 1.0)),
         )
         return ChampionProfile(
             id=str(obj["id"]),
@@ -84,6 +92,7 @@ class ChampionProfile:
             attack_speed_ratio=float(obj["attack_speed_ratio"]),
             bonus_attack_speed_growth=float(obj["bonus_attack_speed_growth"]),
             kit=kit,
+            spell_farm=None,
         )
 
 

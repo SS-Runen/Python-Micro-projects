@@ -29,9 +29,10 @@ Normative rules for unconstrained farm / clear-speed search. Code paths that max
 
 ## Kit and item modeling limits
 
-- **`effective_dps`** uses [`KitParams`](sim/models.py) weights; overrides in [`ddragon_spell_parse.py`](sim/ddragon_spell_parse.py) are **proxies**, not full tooltip-accurate scalings.
+- **Lane/jungle clear rate** uses [`lane_clear_dps`](sim/clear.py) (alias **`effective_dps`**): **ability** damage is derived from Data Dragon spell **`effect`** base values and **`vars`** coeff lists when possible ([`spell_farm_model`](sim/spell_farm_model.py)), with **kit fallbacks** for scalings missing from JSON. **Auto-attack** clear is `auto_attack_clear_weight × as_weight × attack_speed × attack_damage`; mages use **`auto_attack_clear_weight=0`** so AD/AS items do not fake spell waveclear (see [`KitParams`](sim/models.py)).
+- If no spell lines parse, the sim falls back to linear [`KitParams`](sim/models.py) weights (legacy).
 - Item **actives** and many passives are **not** modeled; stats come from Data Dragon flat stat lines on [`ItemDef`](sim/models.py).
-- Champions with **nonzero `ap_weight`** may still rank AP items even when real kits are AD-only unless overrides are adjusted (e.g. Quinn `ap_weight=0` for AD-faithful farm ranking).
+- Quinn remains AD-skewed via kit + spell `vars` when present.
 
 ## Parameters (defaults for scripts)
 

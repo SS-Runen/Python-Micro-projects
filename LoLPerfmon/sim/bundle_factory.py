@@ -52,7 +52,15 @@ def _offline_generic_ap_carry() -> ChampionProfile:
         base_attack_speed=0.655,
         attack_speed_ratio=0.625,
         bonus_attack_speed_growth=0.028,
-        kit=KitParams(ad_weight=0.25, ap_weight=1.1, as_weight=0.15, ah_weight=0.025, base_ability_dps=14.0),
+        kit=KitParams(
+            ad_weight=0.25,
+            ap_weight=1.1,
+            as_weight=0.15,
+            ah_weight=0.025,
+            base_ability_dps=14.0,
+            auto_attack_clear_weight=0.0,
+        ),
+        spell_farm=None,
     )
 
 

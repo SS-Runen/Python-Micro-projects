@@ -10,14 +10,15 @@ from .stats import StatBlock, total_stats
 
 def marginal_farm_rate(
     profile: ChampionProfile,
+    level: int,
     stats_before: StatBlock,
     stats_after: StatBlock,
     _data: GameDataBundle,
     _game_minute: float,
 ) -> float:
     """Local diagnostic: change in effective DPS proxy after a stat change."""
-    d0 = effective_dps(profile, stats_before)
-    d1 = effective_dps(profile, stats_after)
+    d0 = effective_dps(profile, level, stats_before)
+    d1 = effective_dps(profile, level, stats_after)
     return d1 - d0
 
 

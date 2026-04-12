@@ -119,13 +119,41 @@ def parse_champion_spells(champion_key: str, raw: dict[str, Any]) -> ChampionSpe
 
 
 _KIT_OVERRIDES: dict[str, KitParams] = {
-    "lux": KitParams(ad_weight=0.2, ap_weight=1.1, as_weight=0.2, ah_weight=0.02, base_ability_dps=12.0),
-    "karthus": KitParams(ad_weight=0.1, ap_weight=1.2, as_weight=0.15, ah_weight=0.02, base_ability_dps=14.0),
-    # AD-skewed farm proxy: no AP scaling in clear DPS (see OPTIMIZATION_CRITERIA.md)
-    "quinn": KitParams(ad_weight=1.0, ap_weight=0.0, as_weight=0.35, ah_weight=0.02, base_ability_dps=11.0),
+    # AP mages: waveclear modeled as spell rotation; no auto-attack clear term (see lane_clear_dps).
+    "lux": KitParams(
+        ad_weight=0.0,
+        ap_weight=1.0,
+        as_weight=0.0,
+        ah_weight=0.02,
+        base_ability_dps=12.0,
+        auto_attack_clear_weight=0.0,
+    ),
+    "karthus": KitParams(
+        ad_weight=0.0,
+        ap_weight=1.0,
+        as_weight=0.0,
+        ah_weight=0.02,
+        base_ability_dps=14.0,
+        auto_attack_clear_weight=0.0,
+    ),
+    "quinn": KitParams(
+        ad_weight=1.0,
+        ap_weight=0.0,
+        as_weight=0.35,
+        ah_weight=0.02,
+        base_ability_dps=11.0,
+        auto_attack_clear_weight=1.0,
+    ),
 }
 
-_DEFAULT_KIT = KitParams(ad_weight=0.35, ap_weight=0.85, as_weight=0.25, ah_weight=0.02, base_ability_dps=11.0)
+_DEFAULT_KIT = KitParams(
+    ad_weight=0.35,
+    ap_weight=0.85,
+    as_weight=0.25,
+    ah_weight=0.02,
+    base_ability_dps=11.0,
+    auto_attack_clear_weight=1.0,
+)
 
 
 def _mean_cooldown(spell: ParsedSpell) -> float | None:

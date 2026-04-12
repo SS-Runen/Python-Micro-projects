@@ -23,6 +23,7 @@ from dataclasses import dataclass, field
 from typing import Any
 
 from .ddragon_spell_parse import kit_params_from_spells, parse_champion_spells
+from .spell_farm_model import spell_farm_from_champion_data
 from .models import ChampionProfile, ItemDef, StatBonus
 
 DDRAGON_VERSIONS = "https://ddragon.leagueoflegends.com/api/versions.json"
@@ -237,6 +238,7 @@ def champion_profile_from_ddragon(champion_key: str, raw: dict[str, Any]) -> Cha
     s = raw.get("stats") or {}
     spell_data = parse_champion_spells(champion_key, raw)
     kit = kit_params_from_spells(champion_key, spell_data)
+    spell_farm = spell_farm_from_champion_data(spell_data)
     hp = float(s.get("hp", 580))
     hppl = float(s.get("hpperlevel", 90))
     mp = float(s.get("mp", 400))
@@ -270,6 +272,7 @@ def champion_profile_from_ddragon(champion_key: str, raw: dict[str, Any]) -> Cha
         attack_speed_ratio=as_ratio,
         bonus_attack_speed_growth=bonus_as_growth,
         kit=kit,
+        spell_farm=spell_farm,
     )
 
 

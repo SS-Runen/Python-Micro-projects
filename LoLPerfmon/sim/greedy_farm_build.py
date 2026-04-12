@@ -45,7 +45,7 @@ def _marginal_candidates(
     Δeffective_dps. Returns tuples ``(item_id, score, delta_dps, gold_paid)`` unsorted.
     """
     base_stats = total_stats(profile, state.level, tuple(state.inventory), items)
-    dps0 = effective_dps(profile, base_stats)
+    dps0 = effective_dps(profile, state.level, base_stats)
     out: list[tuple[str, float, float, float]] = []
     for iid in sorted(items.keys()):
         trial = _snapshot_state(state)
@@ -54,7 +54,7 @@ def _marginal_candidates(
             continue
         paid = trial.total_gold_spent_on_items - spent_before
         st1 = total_stats(profile, trial.level, tuple(trial.inventory), items)
-        dps1 = effective_dps(profile, st1)
+        dps1 = effective_dps(profile, trial.level, st1)
         delta = dps1 - dps0
         if delta <= 1e-15:
             continue

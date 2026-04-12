@@ -283,7 +283,7 @@ def simulate(
                 continue
             stats = total_stats(profile, state.level, tuple(state.inventory), items)
             game_minute = t_wave / 60.0
-            dps = effective_dps(profile, stats)
+            dps = effective_dps(profile, state.level, stats)
             ct = clear_time_seconds(wave, game_minute, data, dps)
             thr = throughput_ratio(ct, rules.wave_interval_seconds) * eta_lane
             gold_full = wave_gold_if_full_clear(wave, game_minute, data)
@@ -308,7 +308,7 @@ def simulate(
             state.time_seconds = t_next
             _apply_purchases(state, items, defer_purchases_until)
             stats = total_stats(profile, state.level, tuple(state.inventory), items)
-            cycle = jungle_cycle_seconds(profile, stats, data)
+            cycle = jungle_cycle_seconds(profile, state.level, stats, data)
             eff = min(1.0, rules.jungle_base_cycle_seconds / max(cycle, 1e-9))
             gold_gain = rules.jungle_base_route_gold * eff
             xp_gain = rules.jungle_base_route_xp * eff
