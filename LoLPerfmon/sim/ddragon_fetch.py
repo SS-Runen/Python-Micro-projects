@@ -200,22 +200,29 @@ def _bonus_from_item_stats(stats: dict[str, float]) -> StatBonus:
     )
 
 
-def max_inventory_copies_from_ddragon(raw: dict[str, Any], from_ids: tuple[str, ...]) -> int:
+def max_inventory_copies_from_ddragon(item_id: str, raw: dict[str, Any], from_ids: tuple[str, ...]) -> int:
     """
-    League-aligned: one copy of **finished** items (``into`` empty in Data Dragon) and one
-    **Lane** starter (Doran's, Dark Seal). Multiple **components** (Dagger, Tome, etc.).
+    League-aligned: one copy of **finished** items (``into`` empty), terminal **Lane**
+    starters (Doran's), **Dark Seal**, and any non-basic item (Data Dragon ``depth`` ≥ 2).
+    Stack multiple **basic** components (Dagger, Tome, Long Sword, …).
     """
     tags = raw.get("tags") or []
     if not isinstance(tags, list):
         tags = []
     tag_set = {str(t) for t in tags}
     into = raw.get("into")
-    into_terminal = into is None or (isinstance(into, list) and len(into) == 0)
+    into_empty = into is None or (isinstance(into, list) and len(into) == 0)
+    into_terminal = into_empty
     if from_ids and into_terminal:
         return 1
-    if not from_ids and "Lane" in tag_set and "Consumable" not in tag_set:
+    if item_id == "1082" and not from_ids:
         return 1
-    return 6
+    if not from_ids and "Lane" in tag_set and "Consumable" not in tag_set and into_empty:
+        return 1
+    depth = raw.get("depth")
+    if depth is None or (isinstance(depth, int) and depth < 2):
+        return 6
+    return 1
 
 
 def item_def_from_ddragon_entry(item_id: str, raw: dict[str, Any]) -> ItemDef | None:
@@ -231,13 +238,16 @@ def item_def_from_ddragon_entry(item_id: str, raw: dict[str, Any]) -> ItemDef | 
     bonus = _bonus_from_item_stats(stats_f)
     from_raw = raw.get("from") or []
     from_ids = tuple(str(x) for x in from_raw) if isinstance(from_raw, list) else ()
-    mic = max_inventory_copies_from_ddragon(raw, from_ids)
+    mic = max_inventory_copies_from_ddragon(str(item_id), raw, from_ids)
+    tags_raw = raw.get("tags") or []
+    tags = tuple(str(x) for x in tags_raw) if isinstance(tags_raw, list) else ()
     return ItemDef(
         id=str(item_id),
         name=name,
         total_cost=float(total),
         stats=bonus,
         from_ids=from_ids,
+        tags=tags,
         max_inventory_copies=mic,
     )
 

@@ -5,8 +5,10 @@ Lane/jungle simulation with recipe purchases. **Selling or swapping items is not
 from __future__ import annotations
 
 from collections import Counter
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from typing import Callable
+
+from .models import ItemDef
 
 from .clear import (
     clear_time_seconds,
@@ -27,6 +29,31 @@ MAX_INVENTORY_SLOTS = 6
 
 def inventory_count(inventory: list[str], item_id: str) -> int:
     return sum(1 for x in inventory if x == item_id)
+
+
+def _inventory_has_boots(inventory: list[str], items_by_id: dict) -> bool:
+    for sid in inventory:
+        oit = items_by_id.get(sid)
+        if oit is not None and "Boots" in oit.tags:
+            return True
+    return False
+
+
+def _boots_blocks_purchase(inventory: list[str], target_id: str, items_by_id: dict) -> bool:
+    it = items_by_id.get(target_id)
+    if it is None or "Boots" not in it.tags:
+        return False
+    return _inventory_has_boots(inventory, items_by_id)
+
+
+def _release_blocks_for_removed_items(state: "SimulationState", removed_ids: list[str]) -> None:
+    for rid in removed_ids:
+        state.blocked_purchase_ids.discard(rid)
+
+
+def _register_acquisition_blocks(state: "SimulationState", target_id: str, it: ItemDef) -> None:
+    if it.max_inventory_copies <= 1:
+        state.blocked_purchase_ids.add(target_id)
 
 
 def config_from_rules(data: GameDataBundle) -> GameConfig:
@@ -53,6 +80,8 @@ class SimulationState:
     level: int
     buy_queue: list[str]
     total_gold_spent_on_items: float = 0.0
+    #: Item ids that must not be purchased again this run (single-copy epics/legendaries; see :func:`_register_acquisition_blocks`).
+    blocked_purchase_ids: set[str] = field(default_factory=set)
 
 
 @dataclass
@@ -127,11 +156,18 @@ def _acquire_goal(state: SimulationState, target_id: str, items_by_id: dict) -> 
     components and frees slots before the finished item occupies one slot.
 
     If the inventory already holds ``max_inventory_copies`` of ``target_id``, acquisition fails.
+
+    Single-copy items already purchased are listed in ``state.blocked_purchase_ids``. At most one
+    **Boots** item may be held (see ``ItemDef.tags``).
     """
     it = items_by_id.get(target_id)
     if not it:
         return False
     inv = state.inventory
+    if target_id in state.blocked_purchase_ids:
+        return False
+    if _boots_blocks_purchase(inv, target_id, items_by_id):
+        return False
     if inventory_count(inv, target_id) >= it.max_inventory_copies:
         return False
     if not it.from_ids:
@@ -143,6 +179,7 @@ def _acquire_goal(state: SimulationState, target_id: str, items_by_id: dict) -> 
         state.gold -= paid
         state.total_gold_spent_on_items += paid
         inv.append(target_id)
+        _register_acquisition_blocks(state, target_id, it)
         return True
 
     need = Counter(it.from_ids)
@@ -164,12 +201,16 @@ def _acquire_goal(state: SimulationState, target_id: str, items_by_id: dict) -> 
             return False
         if state.gold + 1e-9 < craft_cost:
             return False
+        removed: list[str] = []
         for k, n in need.items():
             for _ in range(n):
                 inv.remove(k)
+                removed.append(k)
         state.gold -= craft_cost
         state.total_gold_spent_on_items += craft_cost
+        _release_blocks_for_removed_items(state, removed)
         inv.append(target_id)
+        _register_acquisition_blocks(state, target_id, it)
         return True
     if len(inv) >= MAX_INVENTORY_SLOTS:
         return False
@@ -179,6 +220,7 @@ def _acquire_goal(state: SimulationState, target_id: str, items_by_id: dict) -> 
     state.gold -= paid
     state.total_gold_spent_on_items += paid
     inv.append(target_id)
+    _register_acquisition_blocks(state, target_id, it)
     return True
 
 
@@ -204,6 +246,10 @@ def _apply_purchases(state: SimulationState, items_by_id: dict, defer_purchases_
             changed = True
             continue
         nit = items_by_id.get(next_id)
+        if next_id in state.blocked_purchase_ids:
+            state.buy_queue.pop(0)
+            changed = True
+            continue
         if nit is not None and inventory_count(state.inventory, next_id) >= nit.max_inventory_copies:
             state.buy_queue.pop(0)
             changed = True

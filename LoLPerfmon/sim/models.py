@@ -14,6 +14,8 @@ class ItemDef:
     total_cost: float
     stats: "StatBonus"
     from_ids: tuple[str, ...] = field(default_factory=tuple)
+    #: Data Dragon ``tags`` (e.g. ``Boots``) for shop compatibility checks.
+    tags: tuple[str, ...] = field(default_factory=tuple)
     #: Max copies of this item id in inventory (League: one terminal legendary, one Seal, many Daggers).
     max_inventory_copies: int = 6
 
@@ -118,12 +120,18 @@ def load_items_from_json(items_list: list[Mapping[str, Any]]) -> dict[str, ItemD
         else:
             from_ids = ()
         mic = int(raw.get("max_inventory_copies", 6))
+        tr = raw.get("tags")
+        if isinstance(tr, (list, tuple)):
+            tags = tuple(str(x) for x in tr)
+        else:
+            tags = ()
         out[str(raw["id"])] = ItemDef(
             id=str(raw["id"]),
             name=str(raw["name"]),
             total_cost=float(raw["total_cost"]),
             stats=bonus,
             from_ids=from_ids,
+            tags=tags,
             max_inventory_copies=mic,
         )
     return out

@@ -32,6 +32,7 @@ def _snapshot_state(s: SimulationState) -> SimulationState:
         level=s.level,
         buy_queue=list(s.buy_queue),
         total_gold_spent_on_items=s.total_gold_spent_on_items,
+        blocked_purchase_ids=set(s.blocked_purchase_ids),
     )
 
 
@@ -49,6 +50,8 @@ def _marginal_candidates(
     dps0 = effective_dps(profile, state.level, base_stats)
     out: list[tuple[str, float, float, float]] = []
     for iid in sorted(items.keys()):
+        if iid in state.blocked_purchase_ids:
+            continue
         it_def = items[iid]
         if inventory_count(state.inventory, iid) >= it_def.max_inventory_copies:
             continue
@@ -139,6 +142,9 @@ def make_forced_prefix_then_greedy_hook(
             return
         while forced:
             fid = forced[0]
+            if fid in state.blocked_purchase_ids:
+                forced.popleft()
+                continue
             itd = items.get(fid)
             if itd is not None and inventory_count(state.inventory, fid) >= itd.max_inventory_copies:
                 forced.popleft()
@@ -231,6 +237,7 @@ def beam_refined_farm_build(
         level=1,
         buy_queue=[],
         total_gold_spent_on_items=0.0,
+        blocked_purchase_ids=set(),
     )
     ranked = ranked_marginal_acquisitions(initial, profile, data.items, epsilon)
     if not ranked:
