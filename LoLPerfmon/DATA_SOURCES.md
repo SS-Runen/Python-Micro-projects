@@ -11,7 +11,7 @@ Simulation code under `LoLPerfmon/sim/` follows this order for **Classic Summone
 | **5** | **Local SR rules** (`summoners_rift_rules.py`, `minion_defaults.py`, `wave_schedule.py`) | Documented constants (passive cadence, waves, XP curve); prefer values traceable to official design posts/patch notes where possible. |
 | **6** | **Offline bundle** (`build_offline_bundle`) | **CI / no-network / DD failure only.** Not patch-accurate; labeled placeholder. |
 
-Modules: `ddragon_fetch.py` (CDN loads; SR classic map id `11`), `ddragon_availability.py`, `ddragon_spell_parse.py`, `bundle_factory.get_game_bundle_with_audit`.
+Modules: `ddragon_fetch.py` (CDN loads; SR classic map id `11`; optional **ranked/draft** item filter via `item_eligible_ranked_summoners_rift_5v5` on full catalogs), `ddragon_availability.py`, `ddragon_spell_parse.py`, `bundle_factory.get_game_bundle_with_audit`.
 
 Wiki or repo YAML must **never** override official JSON when Data Dragon is available for the same fact.
 

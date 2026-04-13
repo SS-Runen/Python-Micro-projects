@@ -154,10 +154,14 @@ def load_ddragon_bundle_with_audit(
     timeout: float = 25.0,
     *,
     full_sr_item_catalog: bool = False,
+    ranked_summoners_rift_only: bool = True,
     champion_keys: tuple[str, ...] = CHAMPION_KEYS_DEFAULT,
 ) -> tuple[GameDataBundle | None, DDragonAuditReport | None]:
     """
     Single fetch of ``item.json`` and champion files; builds audit report and bundle.
+
+    ``ranked_summoners_rift_only``: when True (default), item catalogs exclude non–draft-pick
+    entries (Arena augments, non-shop grants) per :func:`~LoLPerfmon.sim.ddragon_fetch.item_eligible_ranked_summoners_rift_5v5`.
 
     Returns ``(None, None)`` if Data Dragon payloads are missing or unusable.
     """
@@ -170,9 +174,9 @@ def load_ddragon_bundle_with_audit(
     report = build_ddragon_audit_report(version, champs_raw, item_full)
     champs = champions_from_raw(champs_raw)
     if full_sr_item_catalog:
-        items = summoners_rift_item_defs_all(item_full)
+        items = summoners_rift_item_defs_all(item_full, ranked_summoners_rift_only=ranked_summoners_rift_only)
     else:
-        items = items_for_sim_from_item_data(item_full)
+        items = items_for_sim_from_item_data(item_full, ranked_summoners_rift_only=ranked_summoners_rift_only)
     if not champs or len(items) < 1:
         return None, report
     if len(items) < 2:
@@ -195,6 +199,7 @@ def get_game_bundle_with_audit(
     timeout: float = 25.0,
     *,
     full_sr_item_catalog: bool = False,
+    ranked_summoners_rift_only: bool = True,
 ) -> tuple[GameDataBundle, DDragonAuditReport | None]:
     """
     Like :func:`get_game_bundle` but returns ``(bundle, audit_report)``.
@@ -205,7 +210,12 @@ def get_game_bundle_with_audit(
     ver = ddragon_version or latest_version(timeout=timeout)
     if not ver:
         return build_offline_bundle(), None
-    bundle, report = load_ddragon_bundle_with_audit(ver, timeout=timeout, full_sr_item_catalog=full_sr_item_catalog)
+    bundle, report = load_ddragon_bundle_with_audit(
+        ver,
+        timeout=timeout,
+        full_sr_item_catalog=full_sr_item_catalog,
+        ranked_summoners_rift_only=ranked_summoners_rift_only,
+    )
     if bundle is not None:
         return bundle, report
     return build_offline_bundle(), None

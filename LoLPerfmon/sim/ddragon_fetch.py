@@ -34,6 +34,24 @@ _champion_index_cache: dict[str, "ChampionDDragonIndex | None"] = {}
 
 # Riot item.json ``maps`` field: ``"11"`` = Summoner's Rift (aligns with wiki "Classic SR 5v5" filter).
 SUMMONERS_RIFT_CLASSIC_MAP_ID = "11"
+# Other ``maps`` ids appear on items alongside ``11``; Nexus Blitz (``21``) and the rotating-queue
+# map slot (``35``) combine to flag Guardian's * starters vs normal Doran's/long-sword lines.
+MAP_ID_NEXUS_BLITZ = "21"
+MAP_ID_ROTATING_QUEUE = "35"
+
+
+def _item_rotating_queue_starter_maps(raw: dict[str, Any]) -> bool:
+    """
+    True for Data Dragon entries that include Summoner's Rift but exclude Nexus Blitz while
+    including the rotating-queue map — the shape used for Guardian's Horn/Orb/Blade/Hammer
+    (rotating-mode starters), not normal draft/ranked purchases.
+    """
+    m = raw.get("maps")
+    if not isinstance(m, dict):
+        return False
+    if m.get(SUMMONERS_RIFT_CLASSIC_MAP_ID) is not True:
+        return False
+    return m.get(MAP_ID_NEXUS_BLITZ) is False and m.get(MAP_ID_ROTATING_QUEUE) is True
 
 
 def item_on_summoners_rift_classic(raw: dict[str, Any]) -> bool:
@@ -48,6 +66,53 @@ def item_on_summoners_rift_classic(raw: dict[str, Any]) -> bool:
     if not isinstance(m, dict):
         return False
     return m.get(SUMMONERS_RIFT_CLASSIC_MAP_ID) is True
+
+
+def _special_recipe_parent_ranked_eligible(parent_raw: dict[str, Any]) -> bool:
+    """
+    True when ``specialRecipe`` points at a normal item (e.g. Archangel's for Seraph's).
+    Mode augments (e.g. empty ``tags``, no ``depth``) are rejected so arena spatulas etc.
+    stay out of the ranked shop catalog.
+    """
+    tags = parent_raw.get("tags")
+    if not isinstance(tags, list) or len(tags) == 0:
+        return False
+    depth = parent_raw.get("depth")
+    if isinstance(depth, int) and depth >= 1:
+        return True
+    return len(tags) >= 1
+
+
+def item_eligible_ranked_summoners_rift_5v5(
+    raw: dict[str, Any],
+    raw_by_id: dict[str, dict[str, Any]],
+) -> bool:
+    """
+    Filter for **draft / ranked Summoner's Rift** shop modeling: SR map, and an acquisition
+    path that is not mode-only (Arena augments, some event items).
+
+    Keeps: purchasable gold buys, normal ``from`` recipes, and transform-only items whose
+    ``specialRecipe`` parent is a bona fide item (tags + depth, e.g. Seraph's from Archangel's).
+    Drops: non-purchasable, no-``from`` items with no valid special recipe (e.g. Golden Spatula
+    tied to augment stubs), rotating-queue Guardian's * starters (distinct ``maps`` shape vs
+    Doran's), rune boots, poro snacks, etc.
+    """
+    if not item_on_summoners_rift_classic(raw):
+        return False
+    if _item_rotating_queue_starter_maps(raw):
+        return False
+    from_raw = raw.get("from") or []
+    if isinstance(from_raw, list) and len(from_raw) > 0:
+        return True
+    gold = raw.get("gold") or {}
+    if gold.get("purchasable") is not False:
+        return True
+    sr = raw.get("specialRecipe")
+    if sr is not None:
+        parent = raw_by_id.get(str(sr))
+        if parent and _special_recipe_parent_ranked_eligible(parent):
+            return True
+    return False
 
 
 def _get_json(url: str, timeout: float = 20.0) -> Any:
@@ -252,15 +317,24 @@ def item_def_from_ddragon_entry(item_id: str, raw: dict[str, Any]) -> ItemDef | 
     )
 
 
-def find_items_by_name_substring(item_data: dict[str, Any], *substrings: str) -> dict[str, ItemDef]:
+def find_items_by_name_substring(
+    item_data: dict[str, Any],
+    *substrings: str,
+    ranked_summoners_rift_only: bool = True,
+) -> dict[str, ItemDef]:
     out: dict[str, ItemDef] = {}
-    items = item_data.get("data") or {}
-    for sid, raw in items.items():
+    raw_by_id: dict[str, dict[str, Any]] = item_data.get("data") or {}
+    for sid, raw in raw_by_id.items():
+        if not isinstance(raw, dict):
+            continue
         name = str(raw.get("name", ""))
-        if any(s.lower() in name.lower() for s in substrings):
-            ent = item_def_from_ddragon_entry(sid, raw)
-            if ent:
-                out[ent.id] = ent
+        if not any(s.lower() in name.lower() for s in substrings):
+            continue
+        if ranked_summoners_rift_only and not item_eligible_ranked_summoners_rift_5v5(raw, raw_by_id):
+            continue
+        ent = item_def_from_ddragon_entry(str(sid), raw)
+        if ent:
+            out[ent.id] = ent
     return out
 
 
@@ -316,12 +390,23 @@ def fetch_champion_jsons(version: str, keys: tuple[str, ...], timeout: float = 2
     return out
 
 
-def summoners_rift_item_defs_all(item_data: dict[str, Any]) -> dict[str, ItemDef]:
-    """Every Summoner's Rift (maps[\"11\"]) item in one O(n) pass over ``item.json`` ``data``."""
+def summoners_rift_item_defs_all(
+    item_data: dict[str, Any],
+    *,
+    ranked_summoners_rift_only: bool = True,
+) -> dict[str, ItemDef]:
+    """
+    Summoner's Rift (``maps[\"11\"]``) items from ``item.json`` ``data``.
+
+    When ``ranked_summoners_rift_only`` is True, applies :func:`item_eligible_ranked_summoners_rift_5v5`
+    so Arena-only / augment paths and non-shop items are omitted from the optimizer catalog.
+    """
     out: dict[str, ItemDef] = {}
     raw_by_id: dict[str, dict[str, Any]] = item_data.get("data") or {}
     for sid, raw in raw_by_id.items():
         if not isinstance(raw, dict):
+            continue
+        if ranked_summoners_rift_only and not item_eligible_ranked_summoners_rift_5v5(raw, raw_by_id):
             continue
         ent = item_def_from_ddragon_entry(str(sid), raw)
         if ent:
@@ -329,7 +414,11 @@ def summoners_rift_item_defs_all(item_data: dict[str, Any]) -> dict[str, ItemDef
     return out
 
 
-def items_for_sim_from_item_data(item_data: dict[str, Any]) -> dict[str, ItemDef]:
+def items_for_sim_from_item_data(
+    item_data: dict[str, Any],
+    *,
+    ranked_summoners_rift_only: bool = True,
+) -> dict[str, ItemDef]:
     """Recipe closure from name seeds — same as :func:`fetch_items_for_sim` but uses preloaded JSON."""
     seeds = find_items_by_name_substring(
         item_data,
@@ -341,10 +430,15 @@ def items_for_sim_from_item_data(item_data: dict[str, Any]) -> dict[str, ItemDef
         "Luden",
         "Statikk",
         "Infinity",
+        ranked_summoners_rift_only=ranked_summoners_rift_only,
     )
     if not seeds:
         return {}
-    return recipe_closure_from_seeds(item_data, set(seeds.keys()))
+    return recipe_closure_from_seeds(
+        item_data,
+        set(seeds.keys()),
+        ranked_summoners_rift_only=ranked_summoners_rift_only,
+    )
 
 
 def champions_from_raw(raw_by_id: dict[str, dict[str, Any]]) -> dict[str, ChampionProfile]:
@@ -356,17 +450,31 @@ def fetch_champions(version: str, keys: tuple[str, ...], timeout: float = 20.0) 
     return champions_from_raw(fetch_champion_jsons(version, keys, timeout=timeout))
 
 
-def recipe_closure_from_seeds(item_data: dict[str, Any], seed_ids: set[str]) -> dict[str, ItemDef]:
+def recipe_closure_from_seeds(
+    item_data: dict[str, Any],
+    seed_ids: set[str],
+    *,
+    ranked_summoners_rift_only: bool = True,
+) -> dict[str, ItemDef]:
     """
     Include every Data Dragon item id reachable via ``from`` edges from ``seed_ids`` so
     components and recipe fees are simulated with real costs. Only ids that are enabled on
-    Summoner's Rift (``maps["11"]``) are included.
+    Summoner's Rift (``maps["11"]``) are included; optional ranked filter matches
+    :func:`item_eligible_ranked_summoners_rift_5v5`.
     """
     raw_by_id: dict[str, dict[str, Any]] = item_data.get("data") or {}
     needed: set[str] = set()
+
+    def _sr_ok(iid: str, raw: dict[str, Any]) -> bool:
+        if not item_on_summoners_rift_classic(raw):
+            return False
+        if ranked_summoners_rift_only:
+            return item_eligible_ranked_summoners_rift_5v5(raw, raw_by_id)
+        return True
+
     for sid in seed_ids:
         raw = raw_by_id.get(sid)
-        if raw and item_on_summoners_rift_classic(raw):
+        if raw and _sr_ok(str(sid), raw):
             needed.add(sid)
     changed = True
     while changed:
@@ -378,7 +486,7 @@ def recipe_closure_from_seeds(item_data: dict[str, Any], seed_ids: set[str]) -> 
             for comp in raw.get("from") or []:
                 cid = str(comp)
                 craw = raw_by_id.get(cid)
-                if craw and item_on_summoners_rift_classic(craw) and cid not in needed:
+                if craw and _sr_ok(cid, craw) and cid not in needed:
                     needed.add(cid)
                     changed = True
     out: dict[str, ItemDef] = {}
