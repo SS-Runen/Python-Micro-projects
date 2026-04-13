@@ -11,8 +11,32 @@ Normative rules for unconstrained farm / clear-speed search. Code paths that max
 - **No half-XP without a jungle item** is modeled: the abstract route XP/gold formulas in [`sim/simulator.py`](sim/simulator.py) do not apply a “laner tax” or dual-path XP. Junglers are always assumed to clear with a companion for the purpose of this farm model.
 - **`FarmMode.JUNGLE` always starts with one jungle companion** identified by Data Dragon’s **`Jungle` tag** (e.g. Gustwalker Hatchling, Mosstomper Seedling, Scorchclaw Pup on live patches). It is **bought from starting gold** at `t=0` (same as [`acquire_goal`](sim/simulator.py)); [`resolve_jungle_starter_item_id`](sim/jungle_items.py) picks the lexicographically first companion in the bundle if you do not pass `jungle_starter_item_id` to [`simulate`](sim/simulator.py) / [`beam_refined_farm_build`](sim/greedy_farm_build.py).
 - **Companion treat evolution** (e.g. **15** and **35** large-monster treats on Classic SR for pet evolutions) is documented on the wiki ([Jungling § Jungle items](https://wiki.leagueoflegends.com/en-us/Jungling)); this simulator **does not** track treats or Smite tier names—only **flat stats** on [`ItemDef`](sim/models.py) affect [`effective_dps`](sim/clear.py) and jungle cycle scaling.
-- **Selling the companion** is optional: [`simulate`](sim/simulator.py) accepts `jungle_sell_at_seconds` and `jungle_sell_only_after_level_18`. On the first jungle cycle at or after `jungle_sell_at_seconds`, if the companion is still owned (and level ≥ 18 when the flag is set), it is sold once for **`JUNGLE_COMPANION_SELL_REFUND_FRACTION` × `total_cost`** (default **50%**, see [`jungle_items.py`](sim/jungle_items.py)).
+- **Selling the companion** is optional: [`simulate`](sim/simulator.py) accepts `jungle_sell_at_seconds` and `jungle_sell_only_after_level_18`. On the first jungle cycle at or after `jungle_sell_at_seconds`, if the companion is still owned (and level ≥ 18 when the flag is set), it is sold once for **`JUNGLE_COMPANION_SELL_REFUND_FRACTION` × `total_cost`** (same **50%** as [`STANDARD_SHOP_SELL_REFUND_FRACTION`](sim/sell_economy.py); see [`jungle_items.py`](sim/jungle_items.py)).
 - **Optimal sell timing search** (maximize [`default_build_optimizer_score`](sim/simulator.py), i.e. `total_farm_gold`): [`optimal_jungle_sell_timing`](sim/jungle_sell_timing.py) scans **never sell** and **sell at each jungle cycle boundary** up to `t_max` with the same greedy purchase hook, and returns the best-scoring `jungle_sell_at_seconds` (or `None` for never sell).
+
+## Modeling assumptions (deterministic)
+
+The farm simulator is **fully deterministic** (no last-hit RNG, crit variance, or Monte Carlo). Selling credits **50%** of `ItemDef.total_cost` ([`shop_sell_refund_gold`](sim/sell_economy.py)), not necessarily Data Dragon `gold.sell` per item.
+
+| ID | Assumption | Implication |
+|----|------------|-------------|
+| A1 | Lane income from **wave throughput** (`throughput_ratio` × wave value), not per-minion rolls | “Perfect” fractional clear from DPS vs wave HP budget |
+| A2 | No combat RNG in [`effective_dps`](sim/clear.py) | No variance bands |
+| A3 | Fixed wave clock from `GameRules` | No lane-freeze lever |
+| A4 | Lane XP = minion XP tables × same throughput as gold | No champion-kill XP |
+| A5 | Jungle abstract route; pet treat counts not tracked | Wiki thresholds documentation-only |
+| A6 | Instant shop purchases | No latency |
+| A7 | Flat stats on items; most actives/passives omitted | Client-strong items may be weak here |
+| A8 | State advances on **discrete events** (per wave / per jungle cycle), not a universal ODE `dt` | See **Temporal resolution** below |
+| A9 | Sell refund **50%** of `total_cost` | Unified with [`sell_item_once`](sim/simulator.py) |
+
+Optional: **`use_level_weighted_marginal`** in [`make_greedy_hook`](sim/greedy_farm_build.py) blends farm-tick marginal score with raw ΔDPS/gold by champion level (early = more weight on capped farm derivative).
+
+## Temporal resolution
+
+- **Macro clock:** Lane steps once per wave arrival (`first_wave_spawn + k × wave_interval`); jungle steps once per `jungle_base_cycle_seconds`. Farm and XP apply on those boundaries; there is no user-tuned global `Δt` for the forward loop.
+- **Passive gold:** [`passive_gold_in_interval`](sim/passive.py) over real time between event boundaries.
+- **Marginal derivative:** [`marginal_farm_tick.py`](sim/marginal_farm_tick.py) uses SciPy `approx_fprime` on DPS → tick gold; step size scales with `max(1, |dps|)`. Stability can be checked by comparing derivatives at nearby DPS (see tests).
 
 ## Primary objective (farm income proxy)
 

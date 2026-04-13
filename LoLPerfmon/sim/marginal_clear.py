@@ -1,8 +1,9 @@
 """
-Post-simulation marginal clear / DPS checks (no selling or item replacement).
+Post-simulation marginal clear / DPS checks (buy-only; no sell/replace in this module).
 
 Used to report whether another valid shop acquisition could still increase ``effective_dps``
-given final level, inventory, and gold.
+given final level, inventory, and gold. For sell-then-buy paths use :func:`~LoLPerfmon.sim.simulator.sell_item_once`
+with a copied state.
 """
 
 from __future__ import annotations

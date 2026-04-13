@@ -12,9 +12,10 @@ from __future__ import annotations
 
 from .data_loader import GameDataBundle
 from .models import ItemDef
+from .sell_economy import STANDARD_SHOP_SELL_REFUND_FRACTION
 
-# Sell price for jungle companion when sold in sim (plan: 50% of sticker ``total_cost``).
-JUNGLE_COMPANION_SELL_REFUND_FRACTION = 0.5
+# Same as :data:`STANDARD_SHOP_SELL_REFUND_FRACTION` (50% of ``total_cost``).
+JUNGLE_COMPANION_SELL_REFUND_FRACTION = STANDARD_SHOP_SELL_REFUND_FRACTION
 
 # https://wiki.leagueoflegends.com/en-us/Jungling — Classic 5v5 pet evolution treat counts.
 SR_JUNGLE_COMPANION_EVOLVE_TREAT_THRESHOLDS: tuple[int, ...] = (15, 35)

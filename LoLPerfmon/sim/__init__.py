@@ -30,6 +30,7 @@ from .data_loader import GameDataBundle, load_game_data
 from .optimizer import best_item_order_exhaustive
 from .passive import passive_accumulated, passive_gold_in_interval
 from .purchase_metrics import compare_purchase_timing, marginal_farm_rate
+from .sell_economy import STANDARD_SHOP_SELL_REFUND_FRACTION, shop_sell_refund_gold
 from .stats import (
     StatBlock,
     StatDelta,
@@ -46,6 +47,7 @@ from .simulator import (
     acquire_goal,
     blocked_purchase_ids_from_inventory,
     default_build_optimizer_score,
+    sell_item_once,
     simulate,
 )
 
@@ -79,6 +81,9 @@ __all__ = [
     "clear_upgrade_report",
     "acquire_goal",
     "blocked_purchase_ids_from_inventory",
+    "STANDARD_SHOP_SELL_REFUND_FRACTION",
+    "shop_sell_refund_gold",
+    "sell_item_once",
     "optimal_interleaved_build",
     "optimal_build_for_item_order_roots",
     "best_item_order_exhaustive",

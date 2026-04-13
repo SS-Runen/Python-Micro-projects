@@ -129,6 +129,8 @@ def _ranked_horizon_next_items(
     extrapolate_lane_waves: bool | None = None,
     endpoints_only_marginals: bool = False,
     allow_lane_starter_sell: bool = True,
+    allow_sell_non_starter_items: bool = False,
+    use_level_weighted_marginal: bool = False,
 ) -> list[tuple[str, float, float, float]]:
     """Rank next purchases by Δtotal_farm_gold vs baseline greedy (nested full sims)."""
     dps_ranked = ranked_marginal_acquisitions(
@@ -141,6 +143,9 @@ def _ranked_horizon_next_items(
         eta_lane=eta_lane,
         marginal_income_cap=marginal_income_cap,
         endpoints_only_marginals=endpoints_only_marginals,
+        allow_lane_starter_sell=allow_lane_starter_sell,
+        allow_sell_non_starter_items=allow_sell_non_starter_items,
+        use_level_weighted_marginal=use_level_weighted_marginal,
     )
     cap = max(horizon_candidate_cap, 4)
     candidate_ids = [r[0] for r in dps_ranked[:cap]]
@@ -162,6 +167,8 @@ def _ranked_horizon_next_items(
             marginal_income_cap=marginal_income_cap,
             endpoints_only_marginals=endpoints_only_marginals,
             allow_lane_starter_sell=allow_lane_starter_sell,
+            allow_sell_non_starter_items=allow_sell_non_starter_items,
+            use_level_weighted_marginal=use_level_weighted_marginal,
         )
         res_i = simulate(
             data,
@@ -204,6 +211,8 @@ def _marginals_for_beam_step(
     extrapolate_lane_waves: bool | None = None,
     endpoints_only_marginals: bool = False,
     allow_lane_starter_sell: bool = True,
+    allow_sell_non_starter_items: bool = False,
+    use_level_weighted_marginal: bool = False,
 ) -> list[tuple[str, float, float, float]]:
     st = state_after_prefix(data, items, prefix, farm_mode, jungle_starter_item_id)
     if st is None:
@@ -215,6 +224,8 @@ def _marginals_for_beam_step(
         marginal_income_cap=marginal_income_cap,
         endpoints_only_marginals=endpoints_only_marginals,
         allow_lane_starter_sell=allow_lane_starter_sell,
+        allow_sell_non_starter_items=allow_sell_non_starter_items,
+        use_level_weighted_marginal=use_level_weighted_marginal,
     )
     if prefix:
         return ranked_marginal_acquisitions(st, profile, items, epsilon, **margs_kw)
@@ -238,6 +249,8 @@ def _marginals_for_beam_step(
             extrapolate_lane_waves,
             endpoints_only_marginals,
             allow_lane_starter_sell,
+            allow_sell_non_starter_items,
+            use_level_weighted_marginal,
         )
     return ranked_marginal_acquisitions(st, profile, items, epsilon, **margs_kw)
 
@@ -277,6 +290,10 @@ class FarmBuildSearch:
     endpoints_only_marginals: bool = False
     #: If True, greedy hooks may sell Doran's / Dark Seal / … to afford or fit the next marginal buy.
     allow_lane_starter_sell: bool = True
+    #: If True, after lane starters, greedy may sell any inventory item (50% refund) to afford a buy.
+    allow_sell_non_starter_items: bool = False
+    #: Blend farm-tick marginal with raw ΔDPS/gold by champion level (see greedy_farm_build).
+    use_level_weighted_marginal: bool = False
 
     def run(self) -> tuple[tuple[str, ...], float, SimResult, BeamFarmMetadata | GreedyFarmMetadata]:
         profile = self.data.champions[self.champion_id]
@@ -297,6 +314,8 @@ class FarmBuildSearch:
             marginal_income_cap=self.marginal_income_cap,
             endpoints_only_marginals=self.endpoints_only_marginals,
             allow_lane_starter_sell=self.allow_lane_starter_sell,
+            allow_sell_non_starter_items=self.allow_sell_non_starter_items,
+            use_level_weighted_marginal=self.use_level_weighted_marginal,
         )
         if self.leaf_score == "early_dps_auc":
             best_val, res_g = _simulate_greedy_hook_early_dps_auc(
@@ -354,6 +373,8 @@ class FarmBuildSearch:
             self.extrapolate_lane_waves,
             self.endpoints_only_marginals,
             self.allow_lane_starter_sell,
+            self.allow_sell_non_starter_items,
+            self.use_level_weighted_marginal,
         )
         if not first_margs:
             meta = GreedyFarmMetadata(epsilon=self.epsilon, purchase_count=len(best_order))
@@ -385,6 +406,8 @@ class FarmBuildSearch:
                     self.extrapolate_lane_waves,
                     self.endpoints_only_marginals,
                     self.allow_lane_starter_sell,
+                    self.allow_sell_non_starter_items,
+                    self.use_level_weighted_marginal,
                 )
                 for row in margs[:w]:
                     next_id = row[0]
@@ -405,6 +428,8 @@ class FarmBuildSearch:
                         marginal_income_cap=self.marginal_income_cap,
                         endpoints_only_marginals=self.endpoints_only_marginals,
                         allow_lane_starter_sell=self.allow_lane_starter_sell,
+                        allow_sell_non_starter_items=self.allow_sell_non_starter_items,
+                        use_level_weighted_marginal=self.use_level_weighted_marginal,
                     )
                     if self.leaf_score == "early_dps_auc":
                         fv, res_i = _simulate_greedy_hook_early_dps_auc(

@@ -39,7 +39,6 @@ def test_try_acquire_sells_doran_for_slot_and_gold() -> None:
         into_ids=(),
         tags=("Lane",),
         max_inventory_copies=1,
-        sell_gold=160.0,
     )
     fillers = [
         ItemDef(
@@ -74,7 +73,7 @@ def test_try_acquire_sells_doran_for_slot_and_gold() -> None:
     assert try_acquire_with_lane_starter_sells(state, "big", items)
     assert "dr" not in state.inventory
     assert "big" in state.inventory
-    assert state.gold + 1e-9 >= 400.0 + 160.0 - 500.0
+    assert state.gold + 1e-9 >= 400.0 + 200.0 - 500.0
 
 
 def test_greedy_burst_can_replace_doran_with_higher_dps_item() -> None:
@@ -87,7 +86,6 @@ def test_greedy_burst_can_replace_doran_with_higher_dps_item() -> None:
         into_ids=(),
         tags=("Lane",),
         max_inventory_copies=1,
-        sell_gold=160.0,
     )
     fillers = [
         ItemDef(

@@ -22,8 +22,33 @@ from .simulator import (
     inventory_count,
     simulate,
     try_acquire_with_lane_starter_sells,
+    try_acquire_with_shop_sells,
 )
 from .stats import total_stats
+
+
+def _level_weight_for_marginal_blend(level: int) -> float:
+    """Higher at low champion level: weight farm-tick marginal more early, raw ΔDPS/gold more later."""
+    if level >= 14:
+        return 0.2
+    return max(0.0, min(1.0, (14 - level) / 13.0))
+
+
+def _try_marginal_acquire(
+    trial: SimulationState,
+    item_id: str,
+    items: dict,
+    *,
+    allow_lane_starter_sell: bool,
+    allow_sell_non_starter_items: bool,
+) -> bool:
+    if allow_sell_non_starter_items:
+        return try_acquire_with_shop_sells(
+            trial, item_id, items, allow_sell_non_starter_items=True
+        )
+    if allow_lane_starter_sell:
+        return try_acquire_with_lane_starter_sells(trial, item_id, items)
+    return acquire_goal(trial, item_id, items)
 
 def _snapshot_state(s: SimulationState) -> SimulationState:
     return SimulationState(
@@ -70,13 +95,16 @@ def _marginal_candidates(
     marginal_income_cap: bool = True,
     endpoints_only_marginals: bool = False,
     allow_lane_starter_sell: bool = False,
+    allow_sell_non_starter_items: bool = False,
+    use_level_weighted_marginal: bool = False,
 ) -> list[tuple[str, float, float, float]]:
     """
     One pass over ``items``: acquisitions that succeed on a snapshot and pass marginal rules.
     Returns tuples ``(item_id, score, delta_dps, gold_paid)`` unsorted.
 
-    With ``allow_lane_starter_sell``, a trial uses :func:`try_acquire_with_lane_starter_sells`
-    so marginals can include buys that only succeed after selling a Doran's-style starter.
+    With ``allow_sell_non_starter_items``, trials use :func:`try_acquire_with_shop_sells`
+    (lane starters first, then any item). With ``allow_lane_starter_sell`` only, trials use
+    :func:`try_acquire_with_lane_starter_sells`.
 
     With ``marginal_income_cap`` and ``data`` set, score uses a first-order farm tick estimate
     ``(d tick_gold / d dps) * Δdps / gold_paid`` (SciPy ``approx_fprime`` on capped throughput);
@@ -102,10 +130,13 @@ def _marginal_candidates(
             continue
         trial = _snapshot_state(state)
         spent_before = trial.total_gold_spent_on_items
-        if allow_lane_starter_sell:
-            ok = try_acquire_with_lane_starter_sells(trial, iid, items)
-        else:
-            ok = acquire_goal(trial, iid, items)
+        ok = _try_marginal_acquire(
+            trial,
+            iid,
+            items,
+            allow_lane_starter_sell=allow_lane_starter_sell,
+            allow_sell_non_starter_items=allow_sell_non_starter_items,
+        )
         if not ok:
             continue
         paid = trial.total_gold_spent_on_items - spent_before
@@ -115,13 +146,19 @@ def _marginal_candidates(
         if delta <= 1e-15:
             continue
         denom = max(paid, epsilon)
+        score_dps = delta / denom
         if marginal_income_cap and data is not None:
             marginal_farm = dg_ddps * delta
             if marginal_farm <= 1e-18:
                 continue
-            score = marginal_farm / denom
+            score_cap = marginal_farm / denom
+            if use_level_weighted_marginal:
+                w = _level_weight_for_marginal_blend(state.level)
+                score = w * score_cap + (1.0 - w) * score_dps
+            else:
+                score = score_cap
         else:
-            score = delta / denom
+            score = score_dps
         out.append((iid, score, delta, paid))
     return out
 
@@ -148,6 +185,8 @@ def ranked_marginal_acquisitions(
     marginal_income_cap: bool = True,
     endpoints_only_marginals: bool = False,
     allow_lane_starter_sell: bool = False,
+    allow_sell_non_starter_items: bool = False,
+    use_level_weighted_marginal: bool = False,
 ) -> list[tuple[str, float, float, float]]:
     """Sorted best-first: score desc, delta desc, item_id asc."""
     cands = _marginal_candidates(
@@ -161,6 +200,8 @@ def ranked_marginal_acquisitions(
         marginal_income_cap=marginal_income_cap,
         endpoints_only_marginals=endpoints_only_marginals,
         allow_lane_starter_sell=allow_lane_starter_sell,
+        allow_sell_non_starter_items=allow_sell_non_starter_items,
+        use_level_weighted_marginal=use_level_weighted_marginal,
     )
     cands.sort(key=lambda t: (-t[1], -t[2], t[0]))
     return cands
@@ -180,6 +221,8 @@ def _greedy_purchase_burst(
     marginal_income_cap: bool = True,
     endpoints_only_marginals: bool = False,
     allow_lane_starter_sell: bool = False,
+    allow_sell_non_starter_items: bool = False,
+    use_level_weighted_marginal: bool = False,
 ) -> None:
     if defer_purchases_until is not None and state.time_seconds + 1e-9 < defer_purchases_until:
         return
@@ -196,14 +239,19 @@ def _greedy_purchase_burst(
             marginal_income_cap=marginal_income_cap,
             endpoints_only_marginals=endpoints_only_marginals,
             allow_lane_starter_sell=allow_lane_starter_sell,
+            allow_sell_non_starter_items=allow_sell_non_starter_items,
+            use_level_weighted_marginal=use_level_weighted_marginal,
         )
         best = _pick_best_marginal(cands)
         if best is None:
             break
-        if allow_lane_starter_sell:
-            ok = try_acquire_with_lane_starter_sells(state, best, items)
-        else:
-            ok = acquire_goal(state, best, items)
+        ok = _try_marginal_acquire(
+            state,
+            best,
+            items,
+            allow_lane_starter_sell=allow_lane_starter_sell,
+            allow_sell_non_starter_items=allow_sell_non_starter_items,
+        )
         if not ok:
             break
         if order_sink is not None:
@@ -220,6 +268,8 @@ def make_early_stop_full_inventory_no_dps_marginal(
     farm_mode: FarmMode = FarmMode.LANE,
     eta_lane: float = 1.0,
     allow_lane_starter_sell: bool = True,
+    allow_sell_non_starter_items: bool = False,
+    use_level_weighted_marginal: bool = False,
 ) -> Callable[[SimulationState], bool]:
     """
     End simulation when the bag has :data:`MAX_INVENTORY_SLOTS` items and
@@ -240,6 +290,8 @@ def make_early_stop_full_inventory_no_dps_marginal(
             eta_lane=eta_lane,
             marginal_income_cap=False,
             allow_lane_starter_sell=allow_lane_starter_sell,
+            allow_sell_non_starter_items=allow_sell_non_starter_items,
+            use_level_weighted_marginal=use_level_weighted_marginal,
         )
         return len(cands) == 0
 
@@ -280,6 +332,8 @@ def make_greedy_hook(
     marginal_income_cap: bool = True,
     endpoints_only_marginals: bool = False,
     allow_lane_starter_sell: bool = True,
+    allow_sell_non_starter_items: bool = False,
+    use_level_weighted_marginal: bool = False,
 ) -> Callable[[SimulationState], None]:
     def purchase_hook(state: SimulationState) -> None:
         _greedy_purchase_burst(
@@ -295,6 +349,8 @@ def make_greedy_hook(
             marginal_income_cap=marginal_income_cap,
             endpoints_only_marginals=endpoints_only_marginals,
             allow_lane_starter_sell=allow_lane_starter_sell,
+            allow_sell_non_starter_items=allow_sell_non_starter_items,
+            use_level_weighted_marginal=use_level_weighted_marginal,
         )
 
     return purchase_hook
@@ -317,6 +373,8 @@ def make_forced_prefix_then_greedy_hook(
     marginal_income_cap: bool = True,
     endpoints_only_marginals: bool = False,
     allow_lane_starter_sell: bool = True,
+    allow_sell_non_starter_items: bool = False,
+    use_level_weighted_marginal: bool = False,
 ) -> Callable[[SimulationState], None]:
     forced: deque[str] = deque(forced_prefix)
 
@@ -352,6 +410,8 @@ def make_forced_prefix_then_greedy_hook(
             marginal_income_cap=marginal_income_cap,
             endpoints_only_marginals=endpoints_only_marginals,
             allow_lane_starter_sell=allow_lane_starter_sell,
+            allow_sell_non_starter_items=allow_sell_non_starter_items,
+            use_level_weighted_marginal=use_level_weighted_marginal,
         )
 
     return purchase_hook
@@ -383,6 +443,8 @@ def greedy_farm_build(
     jungle_starter_item_id: str | None = None,
     marginal_income_cap: bool = True,
     allow_lane_starter_sell: bool = True,
+    allow_sell_non_starter_items: bool = False,
+    use_level_weighted_marginal: bool = False,
 ) -> tuple[tuple[str, ...], float, SimResult, GreedyFarmMetadata]:
     """
     Greedily maximize marginal farm income proxy (or Δeffective_dps / gold when cap off) at each
@@ -402,6 +464,8 @@ def greedy_farm_build(
         eta_lane=eta_lane,
         marginal_income_cap=marginal_income_cap,
         allow_lane_starter_sell=allow_lane_starter_sell,
+        allow_sell_non_starter_items=allow_sell_non_starter_items,
+        use_level_weighted_marginal=use_level_weighted_marginal,
     )
     res = simulate(
         data,
@@ -429,6 +493,8 @@ def greedy_farm_build_waveclear_dps_saturation(
     farm_mode: FarmMode = FarmMode.LANE,
     jungle_starter_item_id: str | None = None,
     allow_lane_starter_sell: bool = True,
+    allow_sell_non_starter_items: bool = False,
+    use_level_weighted_marginal: bool = False,
 ) -> tuple[tuple[str, ...], SimResult, GreedyFarmMetadata, bool]:
     """
     Greedy shop using **Δeffective_dps / gold** only (no throughput-capped marginal farm tick).
@@ -446,6 +512,8 @@ def greedy_farm_build_waveclear_dps_saturation(
         farm_mode=farm_mode,
         eta_lane=eta_lane,
         allow_lane_starter_sell=allow_lane_starter_sell,
+        allow_sell_non_starter_items=allow_sell_non_starter_items,
+        use_level_weighted_marginal=use_level_weighted_marginal,
     )
     hook = make_greedy_hook(
         profile,
@@ -458,6 +526,8 @@ def greedy_farm_build_waveclear_dps_saturation(
         eta_lane=eta_lane,
         marginal_income_cap=False,
         allow_lane_starter_sell=allow_lane_starter_sell,
+        allow_sell_non_starter_items=allow_sell_non_starter_items,
+        use_level_weighted_marginal=use_level_weighted_marginal,
     )
     res = simulate(
         data,
@@ -496,6 +566,8 @@ def beam_refined_farm_build(
     extrapolate_lane_waves: bool | None = None,
     endpoints_only_marginals: bool = False,
     allow_lane_starter_sell: bool = True,
+    allow_sell_non_starter_items: bool = False,
+    use_level_weighted_marginal: bool = False,
 ) -> tuple[tuple[str, ...], float, SimResult, BeamFarmMetadata | GreedyFarmMetadata]:
     """
     Beam search over purchase prefixes (depth ``beam_depth``, width ``beam_width``).
@@ -529,6 +601,8 @@ def beam_refined_farm_build(
         extrapolate_lane_waves=extrapolate_lane_waves,
         endpoints_only_marginals=endpoints_only_marginals,
         allow_lane_starter_sell=allow_lane_starter_sell,
+        allow_sell_non_starter_items=allow_sell_non_starter_items,
+        use_level_weighted_marginal=use_level_weighted_marginal,
     )
     return search.run()
 

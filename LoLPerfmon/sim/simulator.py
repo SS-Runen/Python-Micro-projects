@@ -1,10 +1,11 @@
 """
-Lane/jungle simulation with recipe purchases. **General selling is not modeled**, except:
+Lane/jungle simulation with recipe purchases. **Selling** uses a deterministic rule: **50%**
+of ``ItemDef.total_cost`` credited (see :mod:`sell_economy`, assumption A9).
 
-- Optional sale of the **jungle companion** (50% of ``total_cost`` refund) when enabled by
-  :func:`simulate` jungle sell parameters.
-- Optional **lane starter** resell (Doran's, Dark Seal, …) used by greedy purchase hooks
-  when ``allow_lane_starter_sell`` is True — see :func:`sell_lane_starter_once`.
+- :func:`sell_item_once` — any inventory item.
+- :func:`sell_jungle_companion_once` — jungle-tagged companion only (same refund).
+- :func:`sell_lane_starter_once` — Doran's / Dark Seal–style starters only; greedy hooks may
+  call these when ``allow_lane_starter_sell`` is True — see :func:`try_acquire_with_lane_starter_sells`.
 """
 
 from __future__ import annotations
@@ -34,10 +35,8 @@ from .jungle_items import (
     is_jungle_companion_item,
     resolve_jungle_starter_item_id,
 )
-from .lane_items import (
-    is_resellable_lane_starter,
-    lane_starter_sell_value,
-)
+from .lane_items import is_resellable_lane_starter
+from .sell_economy import shop_sell_refund_gold
 
 # Summoner's Rift inventory (item slots only; trinket/ward not modeled).
 MAX_INVENTORY_SLOTS = 6
@@ -125,6 +124,12 @@ class SimResult:
     - ``final_gold`` — wallet after income and purchases (``starting_gold`` + farm + passive - spent).
     - ``net_wealth_delta`` — ``final_gold - starting_gold`` (= farm + passive - spent).
     - ``ended_by_early_stop`` — True when ``simulate(..., early_stop=...)`` returned early.
+
+    **Throughput aggregates (lane/jungle):** sums of per-tick **throughput** scalars—useful
+    as a deterministic proxy for “how much wave/camp income was unlocked” (not raw minion counts).
+
+    - ``total_lane_throughput_units`` — lane only: sum of ``throughput_ratio × eta_lane`` per wave.
+    - ``total_jungle_route_eff_units`` — jungle only: sum of per-cycle route efficiency ``eff``.
     """
 
     final_gold: float
@@ -137,6 +142,8 @@ class SimResult:
     starting_gold: float
     net_wealth_delta: float
     ended_by_early_stop: bool = False
+    total_lane_throughput_units: float = 0.0
+    total_jungle_route_eff_units: float = 0.0
 
 
 def default_build_optimizer_score(res: SimResult) -> float:
@@ -242,6 +249,24 @@ def _acquire_goal(state: SimulationState, target_id: str, items_by_id: dict) -> 
     return True
 
 
+def sell_item_once(
+    state: SimulationState,
+    item_id: str,
+    items_by_id: dict[str, ItemDef],
+) -> bool:
+    """
+    Remove one copy of ``item_id`` from the bag and credit :func:`~LoLPerfmon.sim.sell_economy.shop_sell_refund_gold`
+    (50% of ``total_cost``).
+    """
+    it = items_by_id.get(item_id)
+    if it is None or inventory_count(state.inventory, item_id) < 1:
+        return False
+    state.inventory.remove(item_id)
+    state.gold += shop_sell_refund_gold(it)
+    state.blocked_purchase_ids.discard(item_id)
+    return True
+
+
 def sell_jungle_companion_once(
     state: SimulationState,
     companion_id: str,
@@ -254,6 +279,8 @@ def sell_jungle_companion_once(
         return False
     if inventory_count(state.inventory, companion_id) < 1:
         return False
+    if math.isclose(refund_fraction, JUNGLE_COMPANION_SELL_REFUND_FRACTION):
+        return sell_item_once(state, companion_id, items_by_id)
     state.inventory.remove(companion_id)
     state.gold += float(it.total_cost) * refund_fraction
     state.blocked_purchase_ids.discard(companion_id)
@@ -265,16 +292,11 @@ def sell_lane_starter_once(
     item_id: str,
     items_by_id: dict[str, ItemDef],
 ) -> bool:
-    """Remove one resellable lane starter and credit :func:`~LoLPerfmon.sim.lane_items.lane_starter_sell_value` gold."""
+    """Remove one resellable lane starter and credit the standard shop sell refund."""
     it = items_by_id.get(item_id)
     if it is None or not is_resellable_lane_starter(it):
         return False
-    if inventory_count(state.inventory, item_id) < 1:
-        return False
-    state.inventory.remove(item_id)
-    state.gold += lane_starter_sell_value(it)
-    state.blocked_purchase_ids.discard(item_id)
-    return True
+    return sell_item_once(state, item_id, items_by_id)
 
 
 def sell_one_lane_starter_lex_first(
@@ -304,6 +326,48 @@ def try_acquire_with_lane_starter_sells(
         return True
     for _ in range(max_sells):
         if not sell_one_lane_starter_lex_first(state, items_by_id):
+            return acquire_goal(state, target_id, items_by_id)
+        if acquire_goal(state, target_id, items_by_id):
+            return True
+    return acquire_goal(state, target_id, items_by_id)
+
+
+def sell_one_non_lane_starter_item_lex_first(
+    state: SimulationState,
+    items_by_id: dict[str, ItemDef],
+) -> bool:
+    """Sell one non-lane-starter item (lexicographic distinct ids) to credit standard shop refund."""
+    for iid in sorted(set(state.inventory)):
+        it = items_by_id.get(iid)
+        if it is None or is_resellable_lane_starter(it):
+            continue
+        return sell_item_once(state, iid, items_by_id)
+    return False
+
+
+def try_acquire_with_shop_sells(
+    state: SimulationState,
+    target_id: str,
+    items_by_id: dict[str, ItemDef],
+    *,
+    max_sells: int = 24,
+    allow_sell_non_starter_items: bool = False,
+) -> bool:
+    """
+    Try :func:`acquire_goal`; if it fails, sell lane starters (lex-first), then optionally
+    any other inventory items, until the purchase succeeds or ``max_sells`` operations pass.
+    """
+    if acquire_goal(state, target_id, items_by_id):
+        return True
+    for _ in range(max_sells):
+        progressed = False
+        if sell_one_lane_starter_lex_first(state, items_by_id):
+            progressed = True
+        elif allow_sell_non_starter_items and sell_one_non_lane_starter_item_lex_first(
+            state, items_by_id
+        ):
+            progressed = True
+        if not progressed:
             return acquire_goal(state, target_id, items_by_id)
         if acquire_goal(state, target_id, items_by_id):
             return True
@@ -474,6 +538,8 @@ def simulate(
     timeline: list[tuple[float, float, int]] = [(0.0, state.gold, state.level)]
     total_farm = 0.0
     total_passive = 0.0
+    total_lane_thr_sum = 0.0
+    total_jungle_eff_sum = 0.0
     t_prev = 0.0
     ended_by_early_stop = False
 
@@ -504,6 +570,7 @@ def simulate(
                 on_lane_clear_dps(t_wave, k, dps)
             ct = clear_time_seconds(wave, game_minute, data, dps)
             thr = throughput_ratio(ct, rules.wave_interval_seconds) * eta_lane
+            total_lane_thr_sum += thr
             gold_full = wave_gold_if_full_clear(wave, game_minute, data)
             gold_gain = gold_full * thr
             xp_gain = _xp_for_wave_fraction(wave, state.level, thr, rules)
@@ -535,6 +602,7 @@ def simulate(
                 on_jungle_clear_dps(t_next, jk, jdps)
             cycle = jungle_cycle_seconds(profile, state.level, stats, data)
             eff = min(1.0, rules.jungle_base_cycle_seconds / max(cycle, 1e-9))
+            total_jungle_eff_sum += eff
             gold_gain = rules.jungle_base_route_gold * eff
             xp_gain = rules.jungle_base_route_xp * eff
             state.gold += gold_gain
@@ -581,4 +649,6 @@ def simulate(
         starting_gold=starting_gold,
         net_wealth_delta=net_delta,
         ended_by_early_stop=ended_by_early_stop,
+        total_lane_throughput_units=total_lane_thr_sum,
+        total_jungle_route_eff_units=total_jungle_eff_sum,
     )

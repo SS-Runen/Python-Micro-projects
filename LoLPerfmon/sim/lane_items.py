@@ -9,9 +9,10 @@ client (see :func:`~LoLPerfmon.sim.simulator.sell_lane_starter_once`).
 from __future__ import annotations
 
 from .models import ItemDef
+from .sell_economy import STANDARD_SHOP_SELL_REFUND_FRACTION, shop_sell_refund_gold
 
-# When Data Dragon omits ``gold.sell``, many starters use ~40% of sticker price.
-LANE_STARTER_SELL_REFUND_FALLBACK = 0.4
+# Backwards compatibility: unified model uses :func:`shop_sell_refund_gold` (50% of ``total_cost``).
+LANE_STARTER_SELL_REFUND_FALLBACK = STANDARD_SHOP_SELL_REFUND_FRACTION
 
 
 def is_resellable_lane_starter(it: ItemDef) -> bool:
@@ -30,9 +31,8 @@ def is_resellable_lane_starter(it: ItemDef) -> bool:
 
 
 def lane_starter_sell_value(it: ItemDef) -> float:
-    if it.sell_gold is not None:
-        return float(it.sell_gold)
-    return LANE_STARTER_SELL_REFUND_FALLBACK * float(it.total_cost)
+    """Gold credited when selling a resellable lane starter (50% of ``total_cost``, A9)."""
+    return shop_sell_refund_gold(it)
 
 
 __all__ = [

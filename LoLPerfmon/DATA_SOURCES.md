@@ -33,6 +33,16 @@ Guidelines for meaningful pytest coverage and validation (frozen excerpts, indep
 - **`acquisition_postorder_for_item`** + **`optimal_interleaved_build`** ([`sim/build_path_optimizer.py`](sim/build_path_optimizer.py)): each **finished-item root** is expanded along Data Dragon **`from_ids`** (DFS post-order), then sequences are **interleaved** or block-permuted. Components like NLR appear only as steps toward a root (e.g. Luden’s), not as unrelated terminal goals.
 - **`acquisition_sequence_for_finished_roots`**: concatenates post-orders for roots in order (helper when you do not need interleaving search).
 
-Use **finished roots** + recipe expansion for “max clear” builds; reserve exhaustive permutation for small sets of **intentionally independent** items (e.g. three mythics). **Selling items is not modeled**; the sim assumes purchases follow a coherent path.
+Use **finished roots** + recipe expansion for “max clear” builds; reserve exhaustive permutation for small sets of **intentionally independent** items (e.g. three mythics). **Selling** is modeled deterministically: [`sell_item_once`](sim/simulator.py) credits **50%** of `ItemDef.total_cost` ([`shop_sell_refund_gold`](sim/sell_economy.py)); greedy hooks may sell lane starters and, with `allow_sell_non_starter_items`, other items to afford the next buy.
 
 Post-run **marginal clear** checks: [`sim/marginal_clear.py`](sim/marginal_clear.py) (`clear_upgrade_report`).
+
+## Wiki alignment (farm model scope)
+
+| Wiki topic | URL | In-repo behavior |
+|------------|-----|-------------------|
+| **Jungling** (jungle items, pets) | [Jungle items](https://wiki.leagueoflegends.com/en-us/Jungling#Jungle_items) | Companion from Data Dragon `Jungle` tag at `t=0`; treat evolution / Smite tiers **not** simulated—only stats on `ItemDef`. Optional companion sell timing via `simulate(..., jungle_sell_at_seconds=...)`. |
+| **Farming** (CS, lane income) | [Farming](https://wiki.leagueoflegends.com/en-us/Farming) | Lane: **wave throughput** (`throughput_ratio` × wave gold), not per-minion last-hit RNG. Shared lane CS / proxy freeze not modeled. |
+| **Experience** (champion) | [Experience](https://wiki.leagueoflegends.com/en-us/Experience_(champion)) | Lane XP from minion tables × same throughput fraction as gold; **no** XP from champion kills or objectives unless added to rules. |
+
+Full assumption list: [`OPTIMIZATION_CRITERIA.md`](OPTIMIZATION_CRITERIA.md) (Modeling assumptions).
