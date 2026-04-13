@@ -58,6 +58,31 @@ When the goal is **maximum modeled clears** (uniform minion count per wave, or a
 
 **Passive gold** ([`passive_gold_in_interval`](sim/passive.py)) accrues between ticks in the same timeline as farm ticks. It does **not** depend on items in this model. Full forward simulations therefore capture part of the **opportunity cost** of delaying purchases: you may bank passive gold while farming slowly if you skip smaller combat purchases to save for an expensive item—`total_farm_gold` still reflects lost lane/jungle farm income over the horizon.
 
+### Myopic marginal equivalence (`clear_count` vs `farm_gold`)
+
+Under the capped throughput model ([`throughput_ratio`](sim/clear.py), [`marginal_farm_tick.py`](sim/marginal_farm_tick.py)):
+
+- **Lane:** For a fixed wave snapshot, `gold_tick = wave_gold_if_full_clear × thr(DPS)` and `minions_tick = N × thr(DPS)` with the **same** `thr`. The greedy marginal uses `(d tick / d dps) × Δdps / paid`; `d(gold_tick)/d(dps)` and `d(minions_tick)/d(dps)` differ only by a **constant** (`gold_full` vs `N`), so **relative ordering of candidate items is unchanged** when switching `marginal_tick_objective` between `farm_gold` and `clear_count` at that snapshot (same `marginal_income_cap` / same wave inputs).
+- **Jungle:** Route gold and abstract monsters per cycle are both **linear in the same `eff(DPS)`** term; derivatives w.r.t. DPS differ by a constant per cycle. Same **marginal ordering** as farm gold.
+
+**Implication:** Greedy inner steps that rank by capped tick derivatives do **not** separate “gold farming” from “clear volume” myopia—they are **order-equivalent** under the current linear-in-throughput structure. Accumulated totals (`total_lane_minions_cleared`, `total_farm_gold`) still differ across full runs when per-minion gold weights differ, but **per-step greedy ranking** matches farm gold. Beam search with `leaf_score='total_clear_units'` compares **full simulations** at leaves; the **first** purchase at the empty prefix still follows whatever **empty-prefix** marginal ranking you configure (`dps_per_gold` vs `horizon_greedy_roi` in [`farm_build_search.py`](sim/farm_build_search.py)). The export script [`scripts/export_gameplay_build_orders.py`](scripts/export_gameplay_build_orders.py) defaults `marginal_objective=horizon_greedy_roi` when `leaf_score=total_clear_units` so the opening buy is ranked by nested full-sim Δprimary, not only myopic tick derivatives.
+
+**Throughput saturation:** When `throughput_ratio` (lane) or effective route scaling (jungle) is already at the cap, `d(thr)/d(dps)` (or `d(eff)/d(dps)`) is ~0, so marginals that only add DPS past saturation score poorly—**both** farm and clear objectives agree on skipping those purchases at the **next** tick.
+
+### Unit normalization (gold, minions, monsters)
+
+Gold, lane minion counts, and jungle monster counts are **different dimensions**. Do not add them into one scalar **without** explicit scaling (e.g. normalize each term to a comparable range, or express clears per gold when the denominator is gold).
+
+1. **Single-objective runs:** Optimizing **only** clears should use `default_clear_count_score` / `total_lane_minions_cleared` / `total_jungle_monsters_cleared` alone—do not add raw `total_farm_gold` into the same scalar without normalization.
+2. **Horizon ROI (`horizon_greedy_roi`):** Ranks candidates by `Δprimary / gold_paid`. For `leaf_score=total_farm_gold`, `Δprimary` is gold; for `leaf_score=total_clear_units`, `Δprimary` is **Δclears**—the ratio is **clears per gold** on that step (valid; **not** comparable numerically across different `leaf_score` choices without converting to a common unit).
+3. **Future multi-objective scores:** Any blend `w1 * gold + w2 * minions` needs explicit weights or per-run normalization; document constants in tests or docs.
+
+Myopic equivalence above is **not** fixed by “normalizing units” in the marginal score—it prevents **illegal** mixing of unrelated totals, not the algebraic proportionality of lane/jungle tick models.
+
+### Catalog policy (why “carry” champions can show support mythics)
+
+Default ranked SR bundles do **not** filter by role line. Items with the Data Dragon **`Support`** tag (often cheap full endpoints with AP) compete with “Damage” items unless you **exclude tags** at load or export time ([`sim/item_tag_filters.py`](sim/item_tag_filters.py), [`scripts/export_gameplay_build_orders.py`](scripts/export_gameplay_build_orders.py)).
+
 ## What `total_farm_gold` means
 
 - **Lane:** Sum of **discrete** per-wave gold ticks when lane farming: throughput from clear time vs wave interval, **not** a continuous last-hit model.
@@ -68,8 +93,8 @@ When the goal is **maximum modeled clears** (uniform minion count per wave, or a
 
 - **Global** maximization of `total_farm_gold` over all valid recipe-respecting purchase paths is **intractable** (huge branching factor × time horizon).
 - **`greedy_farm_build`** ([`sim/greedy_farm_build.py`](sim/greedy_farm_build.py)): at each purchase opportunity, rank acquisitions by marginal score with deterministic tie-breaks. When **`marginal_income_cap`** is **True** (default), the score uses a first-order **farm tick** proxy `(d tick_gold / d dps) × Δdps / gold_paid`, where `d tick_gold / d dps` comes from [`scipy.optimize.approx_fprime`](https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.approx_fprime.html) on the **capped** lane/jungle throughput maps in [`sim/marginal_farm_tick.py`](sim/marginal_farm_tick.py) (numpy/pandas for vectorized tick values and step metadata). Pure **Δeffective_dps / gold** applies when **`marginal_income_cap=False`**. This is **myopic** and **not** globally optimal. Pass **`farm_mode`** (default **lane**) for lane vs jungle.
-- **`beam_refined_farm_build`** / **`FarmBuildSearch`** ([`sim/farm_build_search.py`](sim/farm_build_search.py)): **bounded beam** over **purchase prefixes** of length up to **`beam_depth`**, keeping up to **`beam_width`** prefixes at each depth. Each leaf is a **full** `simulate` to **`t_max`** with **forced prefix** then **greedy** tail, scored by **`total_farm_gold`**. **`max_leaf_evals`** caps total full simulations.
-- **`marginal_objective`** (at the **empty prefix** only): **`dps_per_gold`** (default) ranks next candidates by myopic ΔDPS/price; **`horizon_greedy_roi`** ranks them by nested full-sim **Δtotal_farm_gold** vs the pure-greedy baseline (extra cost; uses **`horizon_candidate_cap`** to limit candidates). Deeper beam steps (non-empty prefix) use **ΔDPS/gold** marginals for tractability.
+- **`beam_refined_farm_build`** / **`FarmBuildSearch`** ([`sim/farm_build_search.py`](sim/farm_build_search.py)): **bounded beam** over **purchase prefixes** of length up to **`beam_depth`**, keeping up to **`beam_width`** prefixes at each depth. Each leaf is a **full** `simulate` to **`t_max`** with **forced prefix** then **greedy** tail; the leaf score is `total_farm_gold` by default or **`leaf_score`** when set (e.g. **`total_clear_units`** uses [`default_clear_count_score`](sim/simulator.py)). **`max_leaf_evals`** caps total full simulations. With a **tight** budget, beam may evaluate only a few leaves (e.g. `leaves_evaluated=2`); the reported best path can **coincide with pure greedy** if no alternative prefix improves the leaf metric.
+- **`marginal_objective`** (at the **empty prefix** only): **`dps_per_gold`** ranks next candidates by myopic ΔDPS/price; **`horizon_greedy_roi`** ranks them by nested full-sim **Δprimary** (farm gold or clear units per [`_leaf_primary_value`](sim/farm_build_search.py)) vs the pure-greedy baseline (extra cost; uses **`horizon_candidate_cap`** to limit candidates). For **`total_clear_units`** runs, prefer **`horizon_greedy_roi`** at the empty prefix so the first buy is not locked to myopic tick order (see **Myopic marginal equivalence** above). Deeper beam steps (non-empty prefix) use **ΔDPS/gold** marginals for tractability.
 
 ### Why “optimal” builds may not fill six item slots
 
@@ -102,7 +127,7 @@ When the goal is **maximum modeled clears** (uniform minion count per wave, or a
 | `beam_width` `B` | `3` | Prefixes retained per depth |
 | `max_leaf_evals` | `27` | Cap on full `simulate` calls in beam search |
 | `farm_mode` | `LANE` | `LANE` = minion waves; `JUNGLE` = camp routes |
-| `marginal_objective` | `dps_per_gold` | `horizon_greedy_roi` at empty prefix only (costly) |
+| `marginal_objective` | `dps_per_gold` (except `export_gameplay_build_orders.py` defaults `horizon_greedy_roi` when `leaf_score=total_clear_units`) | `horizon_greedy_roi` at empty prefix only (costly) |
 | `marginal_income_cap` | `True` | Use capped-throughput farm-tick derivative for greedy marginal score |
 | `eta_lane` | `1.0` | Lane throughput factor |
 
