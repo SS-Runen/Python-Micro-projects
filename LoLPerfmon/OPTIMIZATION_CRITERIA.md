@@ -34,9 +34,19 @@ Normative rules for unconstrained farm / clear-speed search. Code paths that max
 ## Greedy and beam search
 
 - **Global** maximization of `total_farm_gold` over all valid recipe-respecting purchase paths is **intractable** (huge branching factor × time horizon).
-- **`greedy_farm_build`** ([`sim/greedy_farm_build.py`](sim/greedy_farm_build.py)): at each purchase opportunity, the affordable acquisition maximizing **Δeffective_dps / max(gold_paid, ε)** with deterministic tie-breaks. This is **myopic** and **not** globally optimal. Pass **`farm_mode`** (default **lane**) for lane vs jungle.
+- **`greedy_farm_build`** ([`sim/greedy_farm_build.py`](sim/greedy_farm_build.py)): at each purchase opportunity, rank acquisitions by marginal score with deterministic tie-breaks. When **`marginal_income_cap`** is **True** (default), the score uses a first-order **farm tick** proxy `(d tick_gold / d dps) × Δdps / gold_paid`, where `d tick_gold / d dps` comes from [`scipy.optimize.approx_fprime`](https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.approx_fprime.html) on the **capped** lane/jungle throughput maps in [`sim/marginal_farm_tick.py`](sim/marginal_farm_tick.py) (numpy/pandas for vectorized tick values and step metadata). Pure **Δeffective_dps / gold** applies when **`marginal_income_cap=False`**. This is **myopic** and **not** globally optimal. Pass **`farm_mode`** (default **lane**) for lane vs jungle.
 - **`beam_refined_farm_build`** / **`FarmBuildSearch`** ([`sim/farm_build_search.py`](sim/farm_build_search.py)): **bounded beam** over **purchase prefixes** of length up to **`beam_depth`**, keeping up to **`beam_width`** prefixes at each depth. Each leaf is a **full** `simulate` to **`t_max`** with **forced prefix** then **greedy** tail, scored by **`total_farm_gold`**. **`max_leaf_evals`** caps total full simulations.
 - **`marginal_objective`** (at the **empty prefix** only): **`dps_per_gold`** (default) ranks next candidates by myopic ΔDPS/price; **`horizon_greedy_roi`** ranks them by nested full-sim **Δtotal_farm_gold** vs the pure-greedy baseline (extra cost; uses **`horizon_candidate_cap`** to limit candidates). Deeper beam steps (non-empty prefix) use **ΔDPS/gold** marginals for tractability.
+
+### Why “optimal” builds may not fill six item slots
+
+**Six filled slots is not an optimization target.** The scored objective is **`total_farm_gold`** over **`t_max`**, not inventory completeness.
+
+- **Gold vs horizon:** Over a fixed `t_max`, total income may not fund six separate valid [`acquire_goal`](sim/simulator.py) purchases at the prices in the catalog; the run can end with spare **`final_gold`** below the next affordable step.
+- **Throughput cap:** Lane per-wave gold and jungle per-route gold both **cap** once clear speed reaches the modeled interval (see [`throughput_ratio`](sim/clear.py) and jungle `eff` in [`simulate`](sim/simulator.py)). After that cap, extra **modeled** DPS does not increase **`total_farm_gold`** from those ticks, even though raw **`effective_dps`** can still rise with items.
+- **Greedy vs global score:** With **`marginal_income_cap`**, purchase steps prefer items that still raise **marginal farm gold per tick**; when throughput is **saturated**, `d tick_gold / d dps` is ~0 so raw DPS upgrades are skipped. That is still **not** the same as maximizing **`total_farm_gold`** globally; beam search only explores a **short forced prefix**, then the same greedy tail.
+- **Modeled stats only:** If Data Dragon omits or approximates passives, an item can be strong in-client but add nothing to [`effective_dps`](sim/clear.py); the greedy loop will not “value” it.
+- **Jungle:** [`FarmMode.JUNGLE`](sim/simulator.py) reserves one slot for the **companion** from starting gold. A full six-slot row is **companion + five other items**, unless you use optional **companion sell** (`jungle_sell_at_seconds`).
 
 ## Recipe validity
 
@@ -60,8 +70,9 @@ Normative rules for unconstrained farm / clear-speed search. Code paths that max
 | `max_leaf_evals` | `27` | Cap on full `simulate` calls in beam search |
 | `farm_mode` | `LANE` | `LANE` = minion waves; `JUNGLE` = camp routes |
 | `marginal_objective` | `dps_per_gold` | `horizon_greedy_roi` at empty prefix only (costly) |
+| `marginal_income_cap` | `True` | Use capped-throughput farm-tick derivative for greedy marginal score |
 | `eta_lane` | `1.0` | Lane throughput factor |
 
 ## Post-hoc checks
 
-After a run, [`clear_upgrade_report`](sim/marginal_clear.py) reports whether a **full sticker** buy of another finished item would increase **effective_dps** with remaining gold and a free slot. It does **not** prove global farm optimality; it signals modeled one-step DPS saturation for that snapshot.
+After a run, [`clear_upgrade_report`](sim/marginal_clear.py) tries each catalog item once via [`acquire_goal`](sim/simulator.py) on a snapshot of **`final_gold`**, **`final_inventory`**, and a reconstructed [`blocked_purchase_ids_from_inventory`](sim/simulator.py) set (same duplicate rules as the live sim). Rows list acquisitions that succeed and increase **modeled** **`effective_dps`**, with **actual gold paid** (sticker, recipe fee, or component cost) in the third field. It does **not** prove global farm optimality; it signals whether another **valid one-step shop action** would raise DPS at the final snapshot.
