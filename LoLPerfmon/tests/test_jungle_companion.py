@@ -7,6 +7,7 @@ from LoLPerfmon.sim.config import FarmMode
 from LoLPerfmon.sim.jungle_items import (
     JUNGLE_COMPANION_SELL_REFUND_FRACTION,
     jungle_companion_item_ids_sorted,
+    jungle_pet_companion_item_ids_sorted,
 )
 from LoLPerfmon.sim.jungle_sell_timing import optimal_jungle_sell_timing
 from LoLPerfmon.sim.simulator import PurchasePolicy, simulate
@@ -49,6 +50,7 @@ def test_jungle_sell_refund_50_percent() -> None:
 def test_offline_bundle_lists_one_jungle_companion() -> None:
     data = build_offline_bundle()
     assert jungle_companion_item_ids_sorted(data) == ["offline_jungle_pet"]
+    assert jungle_pet_companion_item_ids_sorted(data) == ["offline_jungle_pet"]
 
 
 def test_optimal_jungle_sell_timing_runs() -> None:

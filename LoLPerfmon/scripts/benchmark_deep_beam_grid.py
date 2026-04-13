@@ -31,7 +31,7 @@ from LoLPerfmon.sim.bundle_factory import build_offline_bundle, load_ddragon_bun
 from LoLPerfmon.sim.config import FarmMode
 from LoLPerfmon.sim.ddragon_fetch import latest_version
 from LoLPerfmon.sim.greedy_farm_build import beam_refined_farm_build, make_forced_prefix_then_greedy_hook
-from LoLPerfmon.sim.jungle_items import jungle_companion_item_ids_sorted
+from LoLPerfmon.sim.jungle_items import jungle_pet_companion_item_ids_sorted
 from LoLPerfmon.sim.simulator import PurchasePolicy, simulate
 
 REFERENCE: tuple[tuple[str, FarmMode], ...] = (
@@ -185,7 +185,7 @@ def main() -> None:
                 if fm == FarmMode.JUNGLE:
                     best_pack = None
                     best_sid = None
-                    for sid in jungle_companion_item_ids_sorted(bundle):
+                    for sid in jungle_pet_companion_item_ids_sorted(bundle):
                         pack = beam_refined_farm_build(
                             bundle,
                             cid,

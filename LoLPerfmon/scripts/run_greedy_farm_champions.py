@@ -18,7 +18,7 @@ from LoLPerfmon.sim.bundle_factory import build_offline_bundle, load_ddragon_bun
 from LoLPerfmon.sim.config import FarmMode
 from LoLPerfmon.sim.ddragon_fetch import latest_version
 from LoLPerfmon.sim.greedy_farm_build import beam_refined_farm_build
-from LoLPerfmon.sim.jungle_items import jungle_companion_item_ids_sorted
+from LoLPerfmon.sim.jungle_items import jungle_pet_companion_item_ids_sorted
 from LoLPerfmon.sim.marginal_clear import clear_upgrade_report
 
 
@@ -84,7 +84,7 @@ def main() -> None:
         if farm_mode == FarmMode.JUNGLE:
             best = None
             best_sid = None
-            for sid in jungle_companion_item_ids_sorted(bundle):
+            for sid in jungle_pet_companion_item_ids_sorted(bundle):
                 pack = beam_refined_farm_build(
                     bundle,
                     cid,

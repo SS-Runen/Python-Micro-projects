@@ -8,6 +8,26 @@ from .simulator import PurchasePolicy, SimResult, simulate
 from .stats import StatBlock, total_stats
 
 
+def auc_effective_dps_piecewise(samples: list[tuple[float, float]], t_end: float) -> float:
+    """
+    Integrate piecewise-constant effective DPS over time: for sorted ``(t, dps)`` samples,
+    sum ``dps * Δt`` from each sample time until ``t_end`` (used for early-game waveclear).
+    """
+    if not samples:
+        return 0.0
+    s = sorted(samples, key=lambda x: x[0])
+    total = 0.0
+    for i in range(len(s)):
+        t0, d0 = s[i]
+        if t0 >= t_end:
+            break
+        t1 = s[i + 1][0] if i + 1 < len(s) else t_end
+        t1 = min(t1, t_end)
+        if t1 > t0:
+            total += d0 * (t1 - t0)
+    return total
+
+
 def marginal_farm_rate(
     profile: ChampionProfile,
     level: int,

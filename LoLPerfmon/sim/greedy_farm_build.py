@@ -403,10 +403,13 @@ def beam_refined_farm_build(
     horizon_candidate_cap: int = 48,
     jungle_starter_item_id: str | None = None,
     marginal_income_cap: bool = True,
+    leaf_score: Literal["total_farm_gold", "early_dps_auc"] = "total_farm_gold",
+    early_horizon_seconds: float = 900.0,
 ) -> tuple[tuple[str, ...], float, SimResult, BeamFarmMetadata | GreedyFarmMetadata]:
     """
-    Beam search over purchase prefixes (depth ``beam_depth``, width ``beam_width``),
-    scoring leaves by full-horizon ``total_farm_gold``. Greedy tail after the prefix.
+    Beam search over purchase prefixes (depth ``beam_depth``, width ``beam_width``).
+    Default leaf score is full-horizon ``total_farm_gold``; use ``leaf_score='early_dps_auc'``
+    to maximize ∫ modeled effective DPS dt over ``early_horizon_seconds``. Greedy tail after prefix.
     """
     from .farm_build_search import FarmBuildSearch
 
@@ -425,6 +428,8 @@ def beam_refined_farm_build(
         horizon_candidate_cap=horizon_candidate_cap,
         jungle_starter_item_id=jungle_starter_item_id,
         marginal_income_cap=marginal_income_cap,
+        leaf_score=leaf_score,
+        early_horizon_seconds=early_horizon_seconds,
     )
     return search.run()
 

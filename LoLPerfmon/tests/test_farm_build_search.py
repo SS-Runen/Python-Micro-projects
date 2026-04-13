@@ -43,3 +43,23 @@ def test_farm_build_search_class_api() -> None:
     assert isinstance(order, tuple)
     assert val == res.total_farm_gold
     assert meta.leaves_evaluated >= 1
+
+
+def test_farm_build_search_early_dps_auc_leaf_score() -> None:
+    data = build_offline_bundle()
+    search = FarmBuildSearch(
+        data=data,
+        champion_id="generic_ap",
+        farm_mode=FarmMode.LANE,
+        t_max=300.0,
+        beam_depth=1,
+        beam_width=2,
+        max_leaf_evals=20,
+        leaf_score="early_dps_auc",
+        early_horizon_seconds=120.0,
+    )
+    order, val, res, meta = search.run()
+    assert isinstance(order, tuple)
+    assert val > 0.0
+    assert res.total_farm_gold >= 0.0
+    assert meta.leaves_evaluated >= 1

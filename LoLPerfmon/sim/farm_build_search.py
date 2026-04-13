@@ -19,8 +19,45 @@ from .greedy_farm_build import (
     make_greedy_hook,
     ranked_marginal_acquisitions,
 )
+from .purchase_metrics import auc_effective_dps_piecewise
 
 MarginalObjective = Literal["dps_per_gold", "horizon_greedy_roi"]
+LeafScore = Literal["total_farm_gold", "early_dps_auc"]
+
+
+def _simulate_greedy_hook_early_dps_auc(
+    data: GameDataBundle,
+    champion_id: str,
+    farm_mode: FarmMode,
+    eta_lane: float,
+    t_max: float | None,
+    defer_purchases_until: float | None,
+    purchase_hook,
+    early_horizon: float,
+    jungle_starter_item_id: str | None,
+) -> tuple[float, SimResult]:
+    samples: list[tuple[float, float]] = []
+
+    def lane_cb(t: float, _k: int, dps: float) -> None:
+        samples.append((t, float(dps)))
+
+    def jungle_cb(t: float, _k: int, dps: float) -> None:
+        samples.append((t, float(dps)))
+
+    res = simulate(
+        data,
+        champion_id,
+        farm_mode,
+        PurchasePolicy(buy_order=()),
+        eta_lane=eta_lane,
+        t_max=t_max,
+        defer_purchases_until=defer_purchases_until,
+        purchase_hook=purchase_hook,
+        on_lane_clear_dps=lane_cb if farm_mode == FarmMode.LANE else None,
+        on_jungle_clear_dps=jungle_cb if farm_mode == FarmMode.JUNGLE else None,
+        jungle_starter_item_id=jungle_starter_item_id,
+    )
+    return auc_effective_dps_piecewise(samples, early_horizon), res
 
 
 def initial_farm_state(
@@ -179,7 +216,8 @@ def _marginals_for_beam_step(
 @dataclass
 class FarmBuildSearch:
     """
-    Beam search over purchase prefixes; scores leaves with full-horizon ``total_farm_gold``.
+    Beam search over purchase prefixes. Default leaf score is full-horizon ``total_farm_gold``;
+    set ``leaf_score='early_dps_auc'`` to maximize ∫ effective_dps dt over ``early_horizon_seconds``.
     """
 
     data: GameDataBundle
@@ -198,6 +236,9 @@ class FarmBuildSearch:
     jungle_starter_item_id: str | None = None
     #: If True, greedy marginals skip purchases with negligible marginal farm gold (capped throughput).
     marginal_income_cap: bool = True
+    leaf_score: LeafScore = "total_farm_gold"
+    #: Upper bound of ∫ DPS dt when ``leaf_score == 'early_dps_auc'`` (seconds of simulated time).
+    early_horizon_seconds: float = 900.0
 
     def run(self) -> tuple[tuple[str, ...], float, SimResult, BeamFarmMetadata | GreedyFarmMetadata]:
         profile = self.data.champions[self.champion_id]
@@ -217,19 +258,32 @@ class FarmBuildSearch:
             eta_lane=self.eta_lane,
             marginal_income_cap=self.marginal_income_cap,
         )
-        res_g = simulate(
-            self.data,
-            self.champion_id,
-            self.farm_mode,
-            PurchasePolicy(buy_order=()),
-            eta_lane=self.eta_lane,
-            t_max=self.t_max,
-            defer_purchases_until=self.defer_purchases_until,
-            purchase_hook=hook_g,
-            jungle_starter_item_id=self.jungle_starter_item_id,
-        )
+        if self.leaf_score == "early_dps_auc":
+            best_val, res_g = _simulate_greedy_hook_early_dps_auc(
+                self.data,
+                self.champion_id,
+                self.farm_mode,
+                self.eta_lane,
+                self.t_max,
+                self.defer_purchases_until,
+                hook_g,
+                self.early_horizon_seconds,
+                self.jungle_starter_item_id,
+            )
+        else:
+            res_g = simulate(
+                self.data,
+                self.champion_id,
+                self.farm_mode,
+                PurchasePolicy(buy_order=()),
+                eta_lane=self.eta_lane,
+                t_max=self.t_max,
+                defer_purchases_until=self.defer_purchases_until,
+                purchase_hook=hook_g,
+                jungle_starter_item_id=self.jungle_starter_item_id,
+            )
+            best_val = res_g.total_farm_gold
         leaves_evaluated = 1
-        best_val = res_g.total_farm_gold
         best_res = res_g
         best_order = tuple(order_g)
 
@@ -295,19 +349,32 @@ class FarmBuildSearch:
                         eta_lane=self.eta_lane,
                         marginal_income_cap=self.marginal_income_cap,
                     )
-                    res_i = simulate(
-                        self.data,
-                        self.champion_id,
-                        self.farm_mode,
-                        PurchasePolicy(buy_order=()),
-                        eta_lane=self.eta_lane,
-                        t_max=self.t_max,
-                        defer_purchases_until=self.defer_purchases_until,
-                        purchase_hook=hook_f,
-                        jungle_starter_item_id=self.jungle_starter_item_id,
-                    )
+                    if self.leaf_score == "early_dps_auc":
+                        fv, res_i = _simulate_greedy_hook_early_dps_auc(
+                            self.data,
+                            self.champion_id,
+                            self.farm_mode,
+                            self.eta_lane,
+                            self.t_max,
+                            self.defer_purchases_until,
+                            hook_f,
+                            self.early_horizon_seconds,
+                            self.jungle_starter_item_id,
+                        )
+                    else:
+                        res_i = simulate(
+                            self.data,
+                            self.champion_id,
+                            self.farm_mode,
+                            PurchasePolicy(buy_order=()),
+                            eta_lane=self.eta_lane,
+                            t_max=self.t_max,
+                            defer_purchases_until=self.defer_purchases_until,
+                            purchase_hook=hook_f,
+                            jungle_starter_item_id=self.jungle_starter_item_id,
+                        )
+                        fv = res_i.total_farm_gold
                     leaves_evaluated += 1
-                    fv = res_i.total_farm_gold
                     tup = tuple(order_i)
                     children_scores.append((new_prefix, fv, res_i, tup))
                     if fv > best_val + 1e-9:
@@ -331,6 +398,7 @@ class FarmBuildSearch:
 
 __all__ = [
     "FarmBuildSearch",
+    "LeafScore",
     "MarginalObjective",
     "initial_farm_state",
     "state_after_prefix",
