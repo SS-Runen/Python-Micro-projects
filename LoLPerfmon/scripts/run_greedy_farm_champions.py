@@ -41,6 +41,11 @@ def main() -> None:
         help="How to rank next-item candidates at empty prefix (horizon uses nested sims; costly).",
     )
     p.add_argument("--horizon-candidate-cap", type=int, default=48)
+    p.add_argument(
+        "--no-marginal-income-cap",
+        action="store_true",
+        help="Use pure Δeffective_dps/gold for greedy marginals (ignore capped-throughput derivative).",
+    )
     p.add_argument("--timeout", type=float, default=45.0)
     args = p.parse_args()
 
@@ -61,7 +66,16 @@ def main() -> None:
             sys.exit(1)
 
     print("patch:", bundle.rules.patch_version)
-    print("farm_mode:", farm_mode.value, "beam_depth:", args.beam_depth, "marginal_objective:", args.marginal_objective)
+    print(
+        "farm_mode:",
+        farm_mode.value,
+        "beam_depth:",
+        args.beam_depth,
+        "marginal_objective:",
+        args.marginal_objective,
+        "marginal_income_cap:",
+        not args.no_marginal_income_cap,
+    )
     champs = ("lux", "karthus", "quinn") if not offline else ("generic_ap",)
     for cid in champs:
         if cid not in bundle.champions:
@@ -82,6 +96,7 @@ def main() -> None:
                     marginal_objective=args.marginal_objective,
                     horizon_candidate_cap=args.horizon_candidate_cap,
                     jungle_starter_item_id=sid,
+                    marginal_income_cap=not args.no_marginal_income_cap,
                 )
                 if best is None or pack[1] > best[1]:
                     best = pack
@@ -100,6 +115,7 @@ def main() -> None:
                 farm_mode=farm_mode,
                 marginal_objective=args.marginal_objective,
                 horizon_candidate_cap=args.horizon_candidate_cap,
+                marginal_income_cap=not args.no_marginal_income_cap,
             )
             print("---", cid.upper(), "---")
         names = [bundle.items[i].name if i in bundle.items else i for i in order]

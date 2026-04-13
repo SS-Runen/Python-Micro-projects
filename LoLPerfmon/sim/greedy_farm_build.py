@@ -11,6 +11,7 @@ from typing import Callable, Literal
 from .clear import effective_dps
 from .config import FarmMode
 from .data_loader import GameDataBundle
+from .marginal_farm_tick import marginal_farm_gold_per_tick_derivative
 from .models import ChampionProfile
 from .simulator import (
     PurchasePolicy,
@@ -40,13 +41,25 @@ def _marginal_candidates(
     profile: ChampionProfile,
     items: dict,
     epsilon: float,
+    *,
+    data: GameDataBundle | None = None,
+    farm_mode: FarmMode = FarmMode.LANE,
+    eta_lane: float = 1.0,
+    marginal_income_cap: bool = True,
 ) -> list[tuple[str, float, float, float]]:
     """
-    One pass over ``items``: acquisitions that succeed on a snapshot and have positive
-    Δeffective_dps. Returns tuples ``(item_id, score, delta_dps, gold_paid)`` unsorted.
+    One pass over ``items``: acquisitions that succeed on a snapshot and pass marginal rules.
+    Returns tuples ``(item_id, score, delta_dps, gold_paid)`` unsorted.
+
+    With ``marginal_income_cap`` and ``data`` set, score uses a first-order farm tick estimate
+    ``(d tick_gold / d dps) * Δdps / gold_paid`` (SciPy ``approx_fprime`` on capped throughput);
+    candidates with negligible marginal farm gold per tick are dropped even if Δdps > 0.
     """
     base_stats = total_stats(profile, state.level, tuple(state.inventory), items)
     dps0 = effective_dps(profile, state.level, base_stats)
+    dg_ddps = 0.0
+    if marginal_income_cap and data is not None:
+        dg_ddps = marginal_farm_gold_per_tick_derivative(data, farm_mode, eta_lane, profile, state)
     out: list[tuple[str, float, float, float]] = []
     for iid in sorted(items.keys()):
         if iid in state.blocked_purchase_ids:
@@ -65,7 +78,13 @@ def _marginal_candidates(
         if delta <= 1e-15:
             continue
         denom = max(paid, epsilon)
-        score = delta / denom
+        if marginal_income_cap and data is not None:
+            marginal_farm = dg_ddps * delta
+            if marginal_farm <= 1e-18:
+                continue
+            score = marginal_farm / denom
+        else:
+            score = delta / denom
         out.append((iid, score, delta, paid))
     return out
 
@@ -85,9 +104,23 @@ def ranked_marginal_acquisitions(
     profile: ChampionProfile,
     items: dict,
     epsilon: float,
+    *,
+    data: GameDataBundle | None = None,
+    farm_mode: FarmMode = FarmMode.LANE,
+    eta_lane: float = 1.0,
+    marginal_income_cap: bool = True,
 ) -> list[tuple[str, float, float, float]]:
     """Sorted best-first: score desc, delta desc, item_id asc."""
-    cands = _marginal_candidates(state, profile, items, epsilon)
+    cands = _marginal_candidates(
+        state,
+        profile,
+        items,
+        epsilon,
+        data=data,
+        farm_mode=farm_mode,
+        eta_lane=eta_lane,
+        marginal_income_cap=marginal_income_cap,
+    )
     cands.sort(key=lambda t: (-t[1], -t[2], t[0]))
     return cands
 
@@ -99,11 +132,25 @@ def _greedy_purchase_burst(
     defer_purchases_until: float | None,
     epsilon: float,
     order_sink: list[str] | None = None,
+    *,
+    data: GameDataBundle | None = None,
+    farm_mode: FarmMode = FarmMode.LANE,
+    eta_lane: float = 1.0,
+    marginal_income_cap: bool = True,
 ) -> None:
     if defer_purchases_until is not None and state.time_seconds + 1e-9 < defer_purchases_until:
         return
     while True:
-        cands = _marginal_candidates(state, profile, items, epsilon)
+        cands = _marginal_candidates(
+            state,
+            profile,
+            items,
+            epsilon,
+            data=data,
+            farm_mode=farm_mode,
+            eta_lane=eta_lane,
+            marginal_income_cap=marginal_income_cap,
+        )
         best = _pick_best_marginal(cands)
         if best is None:
             break
@@ -119,9 +166,25 @@ def make_greedy_hook(
     defer_purchases_until: float | None,
     epsilon: float,
     order_sink: list[str] | None = None,
+    *,
+    data: GameDataBundle | None = None,
+    farm_mode: FarmMode = FarmMode.LANE,
+    eta_lane: float = 1.0,
+    marginal_income_cap: bool = True,
 ) -> Callable[[SimulationState], None]:
     def purchase_hook(state: SimulationState) -> None:
-        _greedy_purchase_burst(state, profile, items, defer_purchases_until, epsilon, order_sink)
+        _greedy_purchase_burst(
+            state,
+            profile,
+            items,
+            defer_purchases_until,
+            epsilon,
+            order_sink,
+            data=data,
+            farm_mode=farm_mode,
+            eta_lane=eta_lane,
+            marginal_income_cap=marginal_income_cap,
+        )
 
     return purchase_hook
 
@@ -136,6 +199,11 @@ def make_forced_prefix_then_greedy_hook(
     epsilon: float,
     forced_prefix: tuple[str, ...],
     order_sink: list[str] | None = None,
+    *,
+    data: GameDataBundle | None = None,
+    farm_mode: FarmMode = FarmMode.LANE,
+    eta_lane: float = 1.0,
+    marginal_income_cap: bool = True,
 ) -> Callable[[SimulationState], None]:
     forced: deque[str] = deque(forced_prefix)
 
@@ -157,7 +225,18 @@ def make_forced_prefix_then_greedy_hook(
                     order_sink.append(fid)
             else:
                 return
-        _greedy_purchase_burst(state, profile, items, defer_purchases_until, epsilon, order_sink)
+        _greedy_purchase_burst(
+            state,
+            profile,
+            items,
+            defer_purchases_until,
+            epsilon,
+            order_sink,
+            data=data,
+            farm_mode=farm_mode,
+            eta_lane=eta_lane,
+            marginal_income_cap=marginal_income_cap,
+        )
 
     return purchase_hook
 
@@ -186,11 +265,13 @@ def greedy_farm_build(
     epsilon: float = 1e-9,
     farm_mode: FarmMode = FarmMode.LANE,
     jungle_starter_item_id: str | None = None,
+    marginal_income_cap: bool = True,
 ) -> tuple[tuple[str, ...], float, SimResult, GreedyFarmMetadata]:
     """
-    Greedily maximize Δeffective_dps / gold at each purchase opportunity.
-    Primary score for comparison is ``total_farm_gold`` on the returned :class:`SimResult`.
-    ``farm_mode``: lane (minion waves) or jungle (camp cycles)—mutually exclusive per run.
+    Greedily maximize marginal farm income proxy (or Δeffective_dps / gold when cap off) at each
+    purchase opportunity. Primary score for comparison is ``total_farm_gold`` on the returned
+    :class:`SimResult`. ``farm_mode``: lane (minion waves) or jungle (camp cycles)—mutually
+    exclusive per run.
     """
     order: list[str] = []
     hook = make_greedy_hook(
@@ -199,6 +280,10 @@ def greedy_farm_build(
         defer_purchases_until,
         epsilon,
         order_sink=order,
+        data=data,
+        farm_mode=farm_mode,
+        eta_lane=eta_lane,
+        marginal_income_cap=marginal_income_cap,
     )
     res = simulate(
         data,
@@ -229,6 +314,7 @@ def beam_refined_farm_build(
     marginal_objective: Literal["dps_per_gold", "horizon_greedy_roi"] = "dps_per_gold",
     horizon_candidate_cap: int = 48,
     jungle_starter_item_id: str | None = None,
+    marginal_income_cap: bool = True,
 ) -> tuple[tuple[str, ...], float, SimResult, BeamFarmMetadata | GreedyFarmMetadata]:
     """
     Beam search over purchase prefixes (depth ``beam_depth``, width ``beam_width``),
@@ -250,6 +336,7 @@ def beam_refined_farm_build(
         marginal_objective=marginal_objective,
         horizon_candidate_cap=horizon_candidate_cap,
         jungle_starter_item_id=jungle_starter_item_id,
+        marginal_income_cap=marginal_income_cap,
     )
     return search.run()
 

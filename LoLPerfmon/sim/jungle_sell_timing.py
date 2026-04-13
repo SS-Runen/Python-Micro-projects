@@ -24,6 +24,7 @@ def optimal_jungle_sell_timing(
     eta_lane: float = 1.0,
     defer_purchases_until: float | None = None,
     epsilon: float = 1e-9,
+    marginal_income_cap: bool = True,
 ) -> tuple[float | None, float, SimResult]:
     """
     Evaluate greedy jungle farm for each candidate sell time: never sell, then sell at
@@ -48,7 +49,17 @@ def optimal_jungle_sell_timing(
 
     for T in candidates:
         order: list[str] = []
-        hook = make_greedy_hook(profile, items, defer_purchases_until, epsilon, order_sink=order)
+        hook = make_greedy_hook(
+            profile,
+            items,
+            defer_purchases_until,
+            epsilon,
+            order_sink=order,
+            data=data,
+            farm_mode=FarmMode.JUNGLE,
+            eta_lane=eta_lane,
+            marginal_income_cap=marginal_income_cap,
+        )
         res = simulate(
             data,
             champion_id,

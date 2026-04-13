@@ -77,9 +77,19 @@ def _ranked_horizon_next_items(
     state: SimulationState,
     horizon_candidate_cap: int,
     jungle_starter_item_id: str | None,
+    marginal_income_cap: bool,
 ) -> list[tuple[str, float, float, float]]:
     """Rank next purchases by Δtotal_farm_gold vs baseline greedy (nested full sims)."""
-    dps_ranked = ranked_marginal_acquisitions(state, profile, items, epsilon)
+    dps_ranked = ranked_marginal_acquisitions(
+        state,
+        profile,
+        items,
+        epsilon,
+        data=data,
+        farm_mode=farm_mode,
+        eta_lane=eta_lane,
+        marginal_income_cap=marginal_income_cap,
+    )
     cap = max(horizon_candidate_cap, 4)
     candidate_ids = [r[0] for r in dps_ranked[:cap]]
     if not candidate_ids:
@@ -88,7 +98,16 @@ def _ranked_horizon_next_items(
     for iid in candidate_ids:
         order_i: list[str] = []
         hook_f = make_forced_prefix_then_greedy_hook(
-            profile, items, defer_purchases_until, epsilon, (iid,), order_sink=order_i
+            profile,
+            items,
+            defer_purchases_until,
+            epsilon,
+            (iid,),
+            order_sink=order_i,
+            data=data,
+            farm_mode=farm_mode,
+            eta_lane=eta_lane,
+            marginal_income_cap=marginal_income_cap,
         )
         res_i = simulate(
             data,
@@ -124,12 +143,19 @@ def _marginals_for_beam_step(
     baseline_res: SimResult | None,
     horizon_candidate_cap: int,
     jungle_starter_item_id: str | None = None,
+    marginal_income_cap: bool = True,
 ) -> list[tuple[str, float, float, float]]:
     st = state_after_prefix(data, items, prefix, farm_mode, jungle_starter_item_id)
     if st is None:
         return []
+    margs_kw = dict(
+        data=data,
+        farm_mode=farm_mode,
+        eta_lane=eta_lane,
+        marginal_income_cap=marginal_income_cap,
+    )
     if prefix:
-        return ranked_marginal_acquisitions(st, profile, items, epsilon)
+        return ranked_marginal_acquisitions(st, profile, items, epsilon, **margs_kw)
     if marginal_objective == "horizon_greedy_roi" and baseline_res is not None:
         return _ranked_horizon_next_items(
             data,
@@ -145,8 +171,9 @@ def _marginals_for_beam_step(
             st,
             horizon_candidate_cap,
             jungle_starter_item_id,
+            marginal_income_cap,
         )
-    return ranked_marginal_acquisitions(st, profile, items, epsilon)
+    return ranked_marginal_acquisitions(st, profile, items, epsilon, **margs_kw)
 
 
 @dataclass
@@ -169,6 +196,8 @@ class FarmBuildSearch:
     horizon_candidate_cap: int = 48
     #: Required for :class:`FarmMode.JUNGLE` beam prefix snapshots (same starter as :func:`simulate`).
     jungle_starter_item_id: str | None = None
+    #: If True, greedy marginals skip purchases with negligible marginal farm gold (capped throughput).
+    marginal_income_cap: bool = True
 
     def run(self) -> tuple[tuple[str, ...], float, SimResult, BeamFarmMetadata | GreedyFarmMetadata]:
         profile = self.data.champions[self.champion_id]
@@ -178,7 +207,15 @@ class FarmBuildSearch:
 
         order_g: list[str] = []
         hook_g = make_greedy_hook(
-            profile, items, self.defer_purchases_until, self.epsilon, order_sink=order_g
+            profile,
+            items,
+            self.defer_purchases_until,
+            self.epsilon,
+            order_sink=order_g,
+            data=self.data,
+            farm_mode=self.farm_mode,
+            eta_lane=self.eta_lane,
+            marginal_income_cap=self.marginal_income_cap,
         )
         res_g = simulate(
             self.data,
@@ -211,6 +248,7 @@ class FarmBuildSearch:
             res_g,
             self.horizon_candidate_cap,
             self.jungle_starter_item_id,
+            self.marginal_income_cap,
         )
         if not first_margs:
             meta = GreedyFarmMetadata(epsilon=self.epsilon, purchase_count=len(best_order))
@@ -237,6 +275,7 @@ class FarmBuildSearch:
                     res_g,
                     self.horizon_candidate_cap,
                     self.jungle_starter_item_id,
+                    self.marginal_income_cap,
                 )
                 for row in margs[:w]:
                     next_id = row[0]
@@ -251,6 +290,10 @@ class FarmBuildSearch:
                         self.epsilon,
                         new_prefix,
                         order_sink=order_i,
+                        data=self.data,
+                        farm_mode=self.farm_mode,
+                        eta_lane=self.eta_lane,
+                        marginal_income_cap=self.marginal_income_cap,
                     )
                     res_i = simulate(
                         self.data,

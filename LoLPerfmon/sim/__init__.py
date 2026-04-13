@@ -42,6 +42,7 @@ from .simulator import (
     SimResult,
     SimulationState,
     acquire_goal,
+    blocked_purchase_ids_from_inventory,
     default_build_optimizer_score,
     simulate,
 )
@@ -72,6 +73,7 @@ __all__ = [
     "ranked_marginal_acquisitions",
     "clear_upgrade_report",
     "acquire_goal",
+    "blocked_purchase_ids_from_inventory",
     "optimal_interleaved_build",
     "optimal_build_for_item_order_roots",
     "best_item_order_exhaustive",

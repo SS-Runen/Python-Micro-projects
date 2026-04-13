@@ -249,6 +249,21 @@ def sell_jungle_companion_once(
     return True
 
 
+def blocked_purchase_ids_from_inventory(inventory: list[str], items_by_id: dict[str, ItemDef]) -> set[str]:
+    """
+    Rebuild duplicate-purchase blocks from the current bag: same rule as
+    :func:`_register_acquisition_blocks` after buying an item with ``max_inventory_copies <= 1``.
+    Used for post-hoc snapshots (e.g. marginal upgrade checks) where the full simulation
+    ``blocked_purchase_ids`` history is not serialized on :class:`SimResult`.
+    """
+    out: set[str] = set()
+    for iid in inventory:
+        it = items_by_id.get(iid)
+        if it is not None and it.max_inventory_copies <= 1:
+            out.add(iid)
+    return out
+
+
 def acquire_goal(state: SimulationState, target_id: str, items_by_id: dict) -> bool:
     """
     Public wrapper for :func:`_acquire_goal` — recipe-valid single-item acquisition
