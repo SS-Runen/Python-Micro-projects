@@ -1,12 +1,12 @@
 """
-Greedy and bounded-beam farm build search (lane). See OPTIMIZATION_CRITERIA.md.
+Greedy and bounded-beam farm build search (lane or jungle). See OPTIMIZATION_CRITERIA.md.
 """
 
 from __future__ import annotations
 
 from collections import deque
 from dataclasses import dataclass
-from typing import Callable
+from typing import Callable, Literal
 
 from .clear import effective_dps
 from .config import FarmMode
@@ -21,7 +21,6 @@ from .simulator import (
     simulate,
 )
 from .stats import total_stats
-
 
 def _snapshot_state(s: SimulationState) -> SimulationState:
     return SimulationState(
@@ -114,17 +113,20 @@ def _greedy_purchase_burst(
             order_sink.append(best)
 
 
-def make_greedy_lane_hook(
+def make_greedy_hook(
     profile: ChampionProfile,
     items: dict,
     defer_purchases_until: float | None,
     epsilon: float,
     order_sink: list[str] | None = None,
 ) -> Callable[[SimulationState], None]:
-    def lane_hook(state: SimulationState) -> None:
+    def purchase_hook(state: SimulationState) -> None:
         _greedy_purchase_burst(state, profile, items, defer_purchases_until, epsilon, order_sink)
 
-    return lane_hook
+    return purchase_hook
+
+
+make_greedy_lane_hook = make_greedy_hook
 
 
 def make_forced_prefix_then_greedy_hook(
@@ -137,7 +139,7 @@ def make_forced_prefix_then_greedy_hook(
 ) -> Callable[[SimulationState], None]:
     forced: deque[str] = deque(forced_prefix)
 
-    def lane_hook(state: SimulationState) -> None:
+    def purchase_hook(state: SimulationState) -> None:
         if defer_purchases_until is not None and state.time_seconds + 1e-9 < defer_purchases_until:
             return
         while forced:
@@ -157,7 +159,7 @@ def make_forced_prefix_then_greedy_hook(
                 return
         _greedy_purchase_burst(state, profile, items, defer_purchases_until, epsilon, order_sink)
 
-    return lane_hook
+    return purchase_hook
 
 
 @dataclass(frozen=True)
@@ -182,13 +184,15 @@ def greedy_farm_build(
     t_max: float | None = None,
     defer_purchases_until: float | None = None,
     epsilon: float = 1e-9,
+    farm_mode: FarmMode = FarmMode.LANE,
 ) -> tuple[tuple[str, ...], float, SimResult, GreedyFarmMetadata]:
     """
-    Lane-only: greedily maximize Δeffective_dps / gold at each purchase opportunity.
+    Greedily maximize Δeffective_dps / gold at each purchase opportunity.
     Primary score for comparison is ``total_farm_gold`` on the returned :class:`SimResult`.
+    ``farm_mode``: lane (minion waves) or jungle (camp cycles)—mutually exclusive per run.
     """
     order: list[str] = []
-    hook = make_greedy_lane_hook(
+    hook = make_greedy_hook(
         data.champions[champion_id],
         data.items,
         defer_purchases_until,
@@ -198,12 +202,12 @@ def greedy_farm_build(
     res = simulate(
         data,
         champion_id,
-        FarmMode.LANE,
+        farm_mode,
         PurchasePolicy(buy_order=()),
         eta_lane=eta_lane,
         t_max=t_max,
         defer_purchases_until=defer_purchases_until,
-        lane_purchase_hook=hook,
+        purchase_hook=hook,
     )
     meta = GreedyFarmMetadata(epsilon=epsilon, purchase_count=len(order))
     return tuple(order), res.total_farm_gold, res, meta
@@ -219,87 +223,31 @@ def beam_refined_farm_build(
     beam_depth: int = 1,
     beam_width: int = 3,
     max_leaf_evals: int = 27,
+    farm_mode: FarmMode = FarmMode.LANE,
+    marginal_objective: Literal["dps_per_gold", "horizon_greedy_roi"] = "dps_per_gold",
+    horizon_candidate_cap: int = 48,
 ) -> tuple[tuple[str, ...], float, SimResult, BeamFarmMetadata | GreedyFarmMetadata]:
     """
-    Compares greedy to up to ``beam_width`` first purchases from ranked marginals at t=0
-    (beam depth 1 only; ``beam_depth`` > 1 is clamped to 1).
-
-    Each leaf is a full simulation with forced first purchase then greedy tail.
+    Beam search over purchase prefixes (depth ``beam_depth``, width ``beam_width``),
+    scoring leaves by full-horizon ``total_farm_gold``. Greedy tail after the prefix.
     """
-    profile = data.champions[champion_id]
-    if beam_depth > 1:
-        beam_depth = 1
-    initial = SimulationState(
-        time_seconds=0.0,
-        gold=float(data.rules.start_gold),
-        inventory=[],
-        total_xp=0.0,
-        level=1,
-        buy_queue=[],
-        total_gold_spent_on_items=0.0,
-        blocked_purchase_ids=set(),
-    )
-    ranked = ranked_marginal_acquisitions(initial, profile, data.items, epsilon)
-    if not ranked:
-        return greedy_farm_build(data, champion_id, eta_lane, t_max, defer_purchases_until, epsilon)
+    from .farm_build_search import FarmBuildSearch
 
-    candidates = [r[0] for r in ranked[:beam_width]]
-    leaves_evaluated = 0
-    best_res: SimResult | None = None
-    best_order: tuple[str, ...] = ()
-    best_val = float("-inf")
-
-    order_g: list[str] = []
-    hook_g = make_greedy_lane_hook(
-        profile, data.items, defer_purchases_until, epsilon, order_sink=order_g
-    )
-    res_g = simulate(
-        data,
-        champion_id,
-        FarmMode.LANE,
-        PurchasePolicy(buy_order=()),
+    search = FarmBuildSearch(
+        data=data,
+        champion_id=champion_id,
+        farm_mode=farm_mode,
         eta_lane=eta_lane,
         t_max=t_max,
         defer_purchases_until=defer_purchases_until,
-        lane_purchase_hook=hook_g,
-    )
-    leaves_evaluated += 1
-    best_val = res_g.total_farm_gold
-    best_res = res_g
-    best_order = tuple(order_g)
-
-    for first in candidates:
-        if leaves_evaluated >= max_leaf_evals:
-            break
-        order_i: list[str] = []
-        hook_f = make_forced_prefix_then_greedy_hook(
-            profile, data.items, defer_purchases_until, epsilon, (first,), order_sink=order_i
-        )
-        res_i = simulate(
-            data,
-            champion_id,
-            FarmMode.LANE,
-            PurchasePolicy(buy_order=()),
-            eta_lane=eta_lane,
-            t_max=t_max,
-            defer_purchases_until=defer_purchases_until,
-            lane_purchase_hook=hook_f,
-        )
-        leaves_evaluated += 1
-        if res_i.total_farm_gold > best_val + 1e-9:
-            best_val = res_i.total_farm_gold
-            best_res = res_i
-            best_order = tuple(order_i)
-
-    assert best_res is not None
-    meta = BeamFarmMetadata(
+        epsilon=epsilon,
         beam_depth=beam_depth,
         beam_width=beam_width,
         max_leaf_evals=max_leaf_evals,
-        epsilon=epsilon,
-        leaves_evaluated=leaves_evaluated,
+        marginal_objective=marginal_objective,
+        horizon_candidate_cap=horizon_candidate_cap,
     )
-    return best_order, best_val, best_res, meta
+    return search.run()
 
 
 __all__ = [
@@ -308,6 +256,7 @@ __all__ = [
     "beam_refined_farm_build",
     "greedy_farm_build",
     "make_forced_prefix_then_greedy_hook",
+    "make_greedy_hook",
     "make_greedy_lane_hook",
     "ranked_marginal_acquisitions",
 ]

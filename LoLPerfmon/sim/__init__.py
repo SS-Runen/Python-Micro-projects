@@ -12,6 +12,7 @@ from .bundle_factory import (
 )
 from .ddragon_availability import DDragonAuditReport, build_ddragon_audit_report
 from .ddragon_fetch import ChampionDDragonIndex, champion_index_from_list_payload
+from .farm_build_search import FarmBuildSearch
 from .greedy_farm_build import (
     BeamFarmMetadata,
     GreedyFarmMetadata,
@@ -65,6 +66,7 @@ __all__ = [
     "acquisition_sequence_for_finished_roots",
     "BeamFarmMetadata",
     "GreedyFarmMetadata",
+    "FarmBuildSearch",
     "beam_refined_farm_build",
     "greedy_farm_build",
     "ranked_marginal_acquisitions",

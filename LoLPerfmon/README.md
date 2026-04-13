@@ -1,6 +1,6 @@
-# LoLPerfmon — lane farm simulation
+# LoLPerfmon — lane / jungle farm simulation
 
-Python simulation of discrete lane/jungle farm income and recipe-aware purchases (Data Dragon item/champion data when online). **Selling, swapping, and most item actives are not modeled.**
+Python simulation of discrete **lane** or **jungle** farm income and recipe-aware purchases (Data Dragon when online). Scope: **Classic Summoner’s Rift 5v5**. **Selling, swapping, and most item actives are not modeled.**
 
 ## Setup
 
@@ -14,30 +14,42 @@ Ensure `LoLPerfmon` is importable (run commands from repo root, or add the root 
 
 ## Running simulations
 
-### Greedy / beam “optimal” lane farm build (CLI)
+### Greedy / beam farm build (CLI)
 
-Uses `beam_refined_farm_build`: at game start, compares the **greedy** run to up to **`beam_width`** different **first purchases**, then runs the same **greedy marginal** rule for the rest of the horizon. Default champions: Lux, Karthus, Quinn (offline: `generic_ap` only with a tiny item stub).
+Uses **`beam_refined_farm_build`**: runs a **pure greedy** baseline, then **beam search** over **purchase prefixes** up to **`beam_depth`** with width **`beam_width`**, each leaf scored by full-horizon **`total_farm_gold`**. Default champions: Lux, Karthus, Quinn (offline: `generic_ap` only).
 
-**Live Data Dragon** (full Summoner’s Rift catalog, needs network):
+**Live Data Dragon** (full SR catalog, needs network):
 
 ```bash
 export LOLPERFMON_OFFLINE=0
-python LoLPerfmon/scripts/run_greedy_farm_champions.py --t-max 3600 --beam-width 4 --timeout 60
+python LoLPerfmon/scripts/run_greedy_farm_champions.py --t-max 3600 --beam-width 3 --beam-depth 2 --farm-mode lane --timeout 60
 ```
 
-**Offline** (no network, synthetic bundle):
+**Offline**:
 
 ```bash
 export LOLPERFMON_OFFLINE=1
 python LoLPerfmon/scripts/run_greedy_farm_champions.py
 ```
 
-Useful flags: `--t-max` (seconds), `--beam-width`, `--max-leaf-evals`, `--timeout` (HTTP timeout for Data Dragon when online).
+Useful flags:
+
+| Flag | Meaning |
+|------|---------|
+| `--t-max` | Horizon (seconds) |
+| `--beam-width` | Prefixes kept per beam layer |
+| `--beam-depth` | How many purchase layers to branch |
+| `--max-leaf-evals` | Cap on full `simulate` calls |
+| `--farm-mode` | `lane` (default) or `jungle` — mutually exclusive income |
+| `--marginal-objective` | `dps_per_gold` (default) or `horizon_greedy_roi` (nested sims at empty prefix; costly) |
+| `--horizon-candidate-cap` | Max candidates when ranking with `horizon_greedy_roi` |
+| `--timeout` | HTTP timeout for Data Dragon when online |
 
 ### Programmatic API
 
-- `LoLPerfmon.sim.simulator.simulate` — lane or jungle ticks with optional `lane_purchase_hook` or fixed `PurchasePolicy(buy_order=...)`.
-- `LoLPerfmon.sim.greedy_farm_build.greedy_farm_build` / `beam_refined_farm_build` — unconstrained farm build search.
+- `LoLPerfmon.sim.simulator.simulate` — lane or jungle ticks with optional **`purchase_hook`** or fixed `PurchasePolicy(buy_order=...)`.
+- `LoLPerfmon.sim.greedy_farm_build.greedy_farm_build` / `beam_refined_farm_build` — greedy and beam search; pass **`farm_mode`**.
+- `LoLPerfmon.sim.farm_build_search.FarmBuildSearch` — configurable beam search class.
 - Notebook `LoLPerfmon/waveclear_item_optimizer.ipynb` — examples and validation entrypoints.
 
 ### Checks without pytest
@@ -50,21 +62,21 @@ python -c "from LoLPerfmon.validation_checks import format_report, run_validatio
 
 ### What to optimize (primary score)
 
-For build search, the intended objective is **`SimResult.total_farm_gold`** over **`t_max`** in **`FarmMode.LANE`**: integrated gold from **discrete per-wave** clears when the model says you full-clear, **not** residual **`final_gold`** (wallet balance can reward not spending). See **`OPTIMIZATION_CRITERIA.md`**.
+The intended objective is **`SimResult.total_farm_gold`** over **`t_max`** (lane or jungle), **not** residual **`final_gold`**. Passive gold accrues on the same timeline; see **`OPTIMIZATION_CRITERIA.md`**.
 
 ### What the printed “buy order” is
 
-It is the **sequence of successful `acquire_goal` purchases** over the run (components, crafts, full buys). Repeated names usually mean **components were crafted away** before the same item id is bought again—check recipe consumption, not “two copies in inventory.”
+The **sequence of successful `acquire_goal` purchases** (components, crafts, full buys). Repeated names often mean **components were crafted away** before the same id is bought again.
 
 ### Greedy / beam are not globally optimal
 
-`beam_refined_farm_build` uses **beam depth 1** only: it branches on the **first** purchase only, then follows a **myopic** greedy rule (`Δeffective_dps / gold`). That is **not** an exhaustive search over all legal build paths; different `beam_width` may or may not change the winner.
+Beam search is **bounded** (`beam_depth`, `beam_width`, `max_leaf_evals`). It is **not** exhaustive over all purchase orders.
 
 ### `clear_upgrade_report` (CLI tail line)
 
-After a run, the script reports whether **`clear_upgrade_report`** finds an affordable **full sticker** buy that would increase **modeled `effective_dps`**. **`saturated: True`** means that snapshot has no such step; it does **not** prove global farm optimality.
+Reports whether a hypothetical **full sticker** buy would increase **modeled `effective_dps`** at the end snapshot; it does **not** prove global farm optimality.
 
 ### Data and rules
 
-- Item/champion sourcing and filters: **`DATA_SOURCES.md`**.
-- Purchase validity (recipes, `max_inventory_copies`, boots, blocked rebuys): implemented in **`sim/simulator.py`** and **`sim/ddragon_fetch.py`**.
+- Source hierarchy and SR 5v5: **`DATA_SOURCES.md`**.
+- Purchase validity: **`sim/simulator.py`**, **`sim/ddragon_fetch.py`**.

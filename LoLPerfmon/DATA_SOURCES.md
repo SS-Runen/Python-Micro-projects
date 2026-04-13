@@ -1,25 +1,27 @@
 # Data sources hierarchy (LoLPerfmon)
 
-Simulation code under `LoLPerfmon/sim/` follows this order. **Riot Data Dragon** is authoritative when network and a patch version are available ([Data Dragon](https://developer.riotgames.com/docs/lol#data-dragon)).
+Simulation code under `LoLPerfmon/sim/` follows this order for **Classic Summoner’s Rift 5v5** (align with wiki filter “Classic SR 5v5” and Data Dragon `maps` where applicable). **Riot’s documentation and static CDN JSON** outrank local placeholders.
 
 | Priority | Source | Role |
 |----------|--------|------|
-| **1** | **Data Dragon** CDN JSON (`versions.json`, `item.json`, `champion/{id}.json`) | Default for items, champion stats, spells/passive fields. |
-| **2** | **League of Legends Wiki** (human reference) | Optional **curated** tables or manual exports **only** when Data Dragon is incomplete or not machine-parsed. **No** automated HTML scraping in `sim/`. |
-| **3** | **Local SR rules** (`summoners_rift_rules.py`, `minion_defaults.py`, `wave_schedule.py`) | Documented constants (passive gold cadence, waves, XP curve) — not a substitute for DD item/champion blobs. |
-| **4** | **Offline bundle** (`build_offline_bundle`: `generic_ap`, `cheap_ap` / `cheap_ad`) | **CI / no-network / DD failure only.** Not patch-accurate; do not treat as live balance. |
+| **1** | **[Riot developer docs](https://developer.riotgames.com/docs/lol)** + **Data Dragon** CDN JSON (`versions.json`, `item.json`, `champion/{id}.json`) | Authoritative patch versions, item/champion blobs, SR availability via `maps`, spell `effect`/`vars`. |
+| **2** | **Riot game APIs** (match/timeline, etc.) | Only if a feature needs **live** match data; static optimization uses Data Dragon. Respect [API key tiers and app registration](https://riot-api-libraries.readthedocs.io/en/latest/applications.html) when calling Riot APIs. |
+| **3** | **Community mirrors** of Data Dragon | Convenience only; **numeric ground truth** must match the official CDN JSON. |
+| **4** | **[League of Legends Wiki](https://wiki.leagueoflegends.com/en-us/Item)** (e.g. items, uniqueness, boots) | Human-readable rules and cross-checks when Data Dragon does not encode a behavior the sim enforces. **Do not** override Data Dragon numbers when they conflict. |
+| **5** | **Local SR rules** (`summoners_rift_rules.py`, `minion_defaults.py`, `wave_schedule.py`) | Documented constants (passive cadence, waves, XP curve); prefer values traceable to official design posts/patch notes where possible. |
+| **6** | **Offline bundle** (`build_offline_bundle`) | **CI / no-network / DD failure only.** Not patch-accurate; labeled placeholder. |
 
-Modules: `ddragon_fetch.py` (CDN loads; champion ids resolved via per-patch `champion.json` so display names and internal ids like `MonkeyKing`/`Wukong` align), `ddragon_availability.py` (key coverage audit), `ddragon_spell_parse.py` (cooldowns, costs, vars), `bundle_factory.get_game_bundle_with_audit` (bundle + audit report).
+Modules: `ddragon_fetch.py` (CDN loads; SR classic map id `11`), `ddragon_availability.py`, `ddragon_spell_parse.py`, `bundle_factory.get_game_bundle_with_audit`.
 
 Wiki or repo YAML must **never** override official JSON when Data Dragon is available for the same fact.
 
 ## Unconstrained farm / clear-speed optimization
 
-Normative scoring and anti-patterns (what to maximize, greedy vs beam, kit limits): [`OPTIMIZATION_CRITERIA.md`](OPTIMIZATION_CRITERIA.md).
+Normative scoring: [`OPTIMIZATION_CRITERIA.md`](OPTIMIZATION_CRITERIA.md).
 
-- **`greedy_farm_build`** / **`beam_refined_farm_build`** ([`sim/greedy_farm_build.py`](sim/greedy_farm_build.py)): full SR catalog (via bundle loading) with recipe-valid **`acquire_goal`** purchases; greedy uses **Δeffective_dps / gold** locally; beam (depth 1) tries top-**B** first purchases from ranked marginals at **t=0** plus the pure greedy baseline. Primary comparison metric remains **`total_farm_gold`** on :class:`~LoLPerfmon.sim.simulator.SimResult`.
-- **`simulate(..., lane_purchase_hook=...)`** ([`sim/simulator.py`](sim/simulator.py)): lane-only hook replaces fixed `PurchasePolicy` queue draining for custom shop logic.
-- **`lane_clear_dps`** ([`sim/clear.py`](sim/clear.py)): minion/jungle clear rate from parsed spell rotation + optional autos; greedy search uses **Δlane_clear_dps** (still labeled `effective_dps` as an alias).
+- **`greedy_farm_build`** / **`beam_refined_farm_build`** / **`FarmBuildSearch`** ([`sim/greedy_farm_build.py`](sim/greedy_farm_build.py), [`sim/farm_build_search.py`](sim/farm_build_search.py)): recipe-valid **`acquire_goal`** purchases; **`farm_mode`** selects **lane** (waves) vs **jungle** (camp cycles) exclusively. Greedy uses **Δeffective_dps / gold** locally; beam search branches **prefixes** up to **`beam_depth`** × **`beam_width`** with **`max_leaf_evals`** cap. Primary metric: **`total_farm_gold`** on [`SimResult`](sim/simulator.py).
+- **`simulate(..., purchase_hook=...)`** ([`sim/simulator.py`](sim/simulator.py)): optional hook at each purchase point for **lane or jungle** (replaces draining `PurchasePolicy` when set). **`lane_purchase_hook`** is a deprecated alias for **`purchase_hook`**.
+- **`lane_clear_dps`** ([`sim/clear.py`](sim/clear.py)): minion/jungle clear rate; greedy marginals use **Δeffective_dps**.
 
 ## Testing Data Dragon code
 
