@@ -290,6 +290,8 @@ def simulate(
     defer_purchases_until: float | None = None,
     purchase_hook: Callable[[SimulationState], None] | None = None,
     lane_purchase_hook: Callable[[SimulationState], None] | None = None,
+    on_lane_clear_dps: Callable[[float, int, float], None] | None = None,
+    on_jungle_clear_dps: Callable[[float, int, float], None] | None = None,
 ) -> SimResult:
     """
     If ``purchase_hook`` or ``lane_purchase_hook`` is set, it runs at each purchase point
@@ -297,6 +299,12 @@ def simulate(
     :func:`_apply_purchases`. Use for greedy or custom shop policies; leave
     ``policy.buy_order`` empty when the hook owns buys. ``lane_purchase_hook`` is a
     deprecated alias for ``purchase_hook``.
+
+    ``on_lane_clear_dps`` (lane only): called each wave with ``(t_wave_seconds, wave_index,
+    effective_dps)`` after pre-wave purchases, using the same DPS that drives clear time.
+
+    ``on_jungle_clear_dps`` (jungle only): called each cycle with ``(t_cycle_seconds,
+    cycle_index, effective_dps)`` after pre-cycle purchases.
     """
     if champion_id not in data.champions:
         raise KeyError(champion_id)
@@ -346,6 +354,8 @@ def simulate(
             stats = total_stats(profile, state.level, tuple(state.inventory), items)
             game_minute = t_wave / 60.0
             dps = effective_dps(profile, state.level, stats)
+            if on_lane_clear_dps is not None:
+                on_lane_clear_dps(t_wave, k, dps)
             ct = clear_time_seconds(wave, game_minute, data, dps)
             thr = throughput_ratio(ct, rules.wave_interval_seconds) * eta_lane
             gold_full = wave_gold_if_full_clear(wave, game_minute, data)
@@ -363,6 +373,7 @@ def simulate(
             k += 1
     else:
         t_next = rules.jungle_base_cycle_seconds
+        jk = 0
         while t_next <= t_end:
             pg = passive_gold_in_interval(t_prev, t_next, cfg)
             state.gold += pg
@@ -370,6 +381,9 @@ def simulate(
             state.time_seconds = t_next
             _purchase_round(state, items, defer_purchases_until, hook)
             stats = total_stats(profile, state.level, tuple(state.inventory), items)
+            jdps = effective_dps(profile, state.level, stats)
+            if on_jungle_clear_dps is not None:
+                on_jungle_clear_dps(t_next, jk, jdps)
             cycle = jungle_cycle_seconds(profile, state.level, stats, data)
             eff = min(1.0, rules.jungle_base_cycle_seconds / max(cycle, 1e-9))
             gold_gain = rules.jungle_base_route_gold * eff
@@ -384,6 +398,7 @@ def simulate(
                 on_wave(state, t_next, -1)
             t_prev = t_next
             t_next += rules.jungle_base_cycle_seconds
+            jk += 1
 
     if t_prev < t_end:
         pg = passive_gold_in_interval(t_prev, t_end, cfg)
