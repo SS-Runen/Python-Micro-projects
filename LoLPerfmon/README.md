@@ -14,6 +14,25 @@ Ensure `LoLPerfmon` is importable (run commands from repo root, or add the root 
 
 ## Running simulations
 
+### Package vs CLI entry points
+
+The **`LoLPerfmon`** directory is a **Python package** (it has `LoLPerfmon/__init__.py` and `LoLPerfmon/sim/__init__.py`). There is **no** `LoLPerfmon/__main__.py`, so you **cannot** run `python -m LoLPerfmon` as an application.
+
+**How to run things:**
+
+1. **Command-line scripts** in **`LoLPerfmon/scripts/`** — these are the **entry points** for operators (they call `argparse`, load Data Dragon, and invoke `simulate` / beam search). Treat them like small apps: run with `python path/to/script.py` from the **repository root** (or any layout where `LoLPerfmon` imports correctly).
+2. **Imports in your own code** — `from LoLPerfmon.sim import …` (see **Programmatic API** below).
+
+The main script for **exporting** beam-searched farm builds to a text file is:
+
+**[`LoLPerfmon/scripts/export_gameplay_build_orders.py`](scripts/export_gameplay_build_orders.py)** — documented as the **CLI entry point** for that workflow (writes under `LoLPerfmon/_local/` by default; use `--help` for leaf scores, item tag filters, `--only-champions`, six-slot mode, etc.).
+
+```bash
+# repository root
+python LoLPerfmon/scripts/export_gameplay_build_orders.py --help
+python LoLPerfmon/scripts/export_gameplay_build_orders.py --leaf-score total_farm_gold --out LoLPerfmon/_local/example_builds.txt
+```
+
 ### Greedy / beam farm build (CLI)
 
 Uses **`beam_refined_farm_build`**: runs a **pure greedy** baseline, then **beam search** over **purchase prefixes** up to **`beam_depth`** with width **`beam_width`**, each leaf scored by full-horizon **`total_farm_gold`**. Default champions: Lux, Karthus, Quinn (offline: `generic_ap` only).
