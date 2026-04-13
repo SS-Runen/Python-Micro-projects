@@ -1,5 +1,7 @@
 """
-Lane/jungle simulation with recipe purchases. **Selling or swapping items is not modeled.**
+Lane/jungle simulation with recipe purchases. **General selling is not modeled**, except
+optional sale of the **jungle companion** item (50% of ``total_cost`` refund) when enabled
+by :func:`simulate` jungle sell parameters.
 """
 
 from __future__ import annotations
@@ -22,6 +24,11 @@ from .data_loader import GameDataBundle
 from .passive import passive_gold_in_interval
 from .stats import total_stats
 from .xp_level import level_from_total_xp, xp_for_minion_kill
+from .jungle_items import (
+    JUNGLE_COMPANION_SELL_REFUND_FRACTION,
+    is_jungle_companion_item,
+    resolve_jungle_starter_item_id,
+)
 
 # Summoner's Rift inventory (item slots only; trinket/ward not modeled).
 MAX_INVENTORY_SLOTS = 6
@@ -224,6 +231,24 @@ def _acquire_goal(state: SimulationState, target_id: str, items_by_id: dict) -> 
     return True
 
 
+def sell_jungle_companion_once(
+    state: SimulationState,
+    companion_id: str,
+    items_by_id: dict[str, ItemDef],
+    refund_fraction: float = JUNGLE_COMPANION_SELL_REFUND_FRACTION,
+) -> bool:
+    """Remove one jungle-tagged companion and credit ``refund_fraction * total_cost`` gold."""
+    it = items_by_id.get(companion_id)
+    if it is None or not is_jungle_companion_item(it):
+        return False
+    if inventory_count(state.inventory, companion_id) < 1:
+        return False
+    state.inventory.remove(companion_id)
+    state.gold += float(it.total_cost) * refund_fraction
+    state.blocked_purchase_ids.discard(companion_id)
+    return True
+
+
 def acquire_goal(state: SimulationState, target_id: str, items_by_id: dict) -> bool:
     """
     Public wrapper for :func:`_acquire_goal` — recipe-valid single-item acquisition
@@ -292,6 +317,9 @@ def simulate(
     lane_purchase_hook: Callable[[SimulationState], None] | None = None,
     on_lane_clear_dps: Callable[[float, int, float], None] | None = None,
     on_jungle_clear_dps: Callable[[float, int, float], None] | None = None,
+    jungle_starter_item_id: str | None = None,
+    jungle_sell_at_seconds: float | None = None,
+    jungle_sell_only_after_level_18: bool = False,
 ) -> SimResult:
     """
     If ``purchase_hook`` or ``lane_purchase_hook`` is set, it runs at each purchase point
@@ -305,6 +333,14 @@ def simulate(
 
     ``on_jungle_clear_dps`` (jungle only): called each cycle with ``(t_cycle_seconds,
     cycle_index, effective_dps)`` after pre-cycle purchases.
+
+    **Jungle-only:** ``jungle_starter_item_id`` selects the companion (Data Dragon ``Jungle``
+    tag); if ``None``, the lexicographically first companion in the bundle is used. The
+    champion **must** start with that item (bought from starting gold). Optional sell:
+    if ``jungle_sell_at_seconds`` is set, the first cycle at or after that time may sell
+    the companion for ``JUNGLE_COMPANION_SELL_REFUND_FRACTION`` of ``total_cost`` (see
+    :mod:`jungle_items`). If ``jungle_sell_only_after_level_18`` is True, sell is only
+    attempted once ``level >= 18``.
     """
     if champion_id not in data.champions:
         raise KeyError(champion_id)
@@ -326,6 +362,15 @@ def simulate(
         total_gold_spent_on_items=0.0,
         blocked_purchase_ids=set(),
     )
+    resolved_jungle_starter: str | None = None
+    jungle_sell_done = False
+    if farm_mode == FarmMode.JUNGLE:
+        resolved_jungle_starter = resolve_jungle_starter_item_id(data, jungle_starter_item_id)
+        if not acquire_goal(state, resolved_jungle_starter, items):
+            raise ValueError(
+                f"Jungle starter {resolved_jungle_starter} could not be purchased at game start "
+                f"(gold={starting_gold})."
+            )
     cum = _cs_cumulative_by_wave(data)
     max_wave_index = max(cum.keys()) if cum else 0
     timeline: list[tuple[float, float, int]] = [(0.0, state.gold, state.level)]
@@ -393,6 +438,15 @@ def simulate(
             state.total_xp += xp_gain
             state.level = level_from_total_xp(state.total_xp, rules)
             _purchase_round(state, items, defer_purchases_until, hook)
+            if (
+                resolved_jungle_starter is not None
+                and not jungle_sell_done
+                and jungle_sell_at_seconds is not None
+                and t_next + 1e-9 >= jungle_sell_at_seconds
+                and (not jungle_sell_only_after_level_18 or state.level >= 18)
+            ):
+                if sell_jungle_companion_once(state, resolved_jungle_starter, items):
+                    jungle_sell_done = True
             timeline.append((state.time_seconds, state.gold, state.level))
             if on_wave:
                 on_wave(state, t_next, -1)

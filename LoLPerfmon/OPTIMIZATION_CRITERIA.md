@@ -6,6 +6,14 @@ Normative rules for unconstrained farm / clear-speed search. Code paths that max
 
 - **Classic Summoner’s Rift 5v5** only for default bundles and Data Dragon filters (see [`DATA_SOURCES.md`](DATA_SOURCES.md)). Lane vs jungle are **mutually exclusive** per run: a champion either farms **lane minion waves** (`FarmMode.LANE`) or **jungle camp cycles** (`FarmMode.JUNGLE`), not both in one simulation.
 
+### Jungle companion (mandatory) and sell timing
+
+- **No half-XP without a jungle item** is modeled: the abstract route XP/gold formulas in [`sim/simulator.py`](sim/simulator.py) do not apply a “laner tax” or dual-path XP. Junglers are always assumed to clear with a companion for the purpose of this farm model.
+- **`FarmMode.JUNGLE` always starts with one jungle companion** identified by Data Dragon’s **`Jungle` tag** (e.g. Gustwalker Hatchling, Mosstomper Seedling, Scorchclaw Pup on live patches). It is **bought from starting gold** at `t=0` (same as [`acquire_goal`](sim/simulator.py)); [`resolve_jungle_starter_item_id`](sim/jungle_items.py) picks the lexicographically first companion in the bundle if you do not pass `jungle_starter_item_id` to [`simulate`](sim/simulator.py) / [`beam_refined_farm_build`](sim/greedy_farm_build.py).
+- **Companion treat evolution** (e.g. **15** and **35** large-monster treats on Classic SR for pet evolutions) is documented on the wiki ([Jungling § Jungle items](https://wiki.leagueoflegends.com/en-us/Jungling)); this simulator **does not** track treats or Smite tier names—only **flat stats** on [`ItemDef`](sim/models.py) affect [`effective_dps`](sim/clear.py) and jungle cycle scaling.
+- **Selling the companion** is optional: [`simulate`](sim/simulator.py) accepts `jungle_sell_at_seconds` and `jungle_sell_only_after_level_18`. On the first jungle cycle at or after `jungle_sell_at_seconds`, if the companion is still owned (and level ≥ 18 when the flag is set), it is sold once for **`JUNGLE_COMPANION_SELL_REFUND_FRACTION` × `total_cost`** (default **50%**, see [`jungle_items.py`](sim/jungle_items.py)).
+- **Optimal sell timing search** (maximize [`default_build_optimizer_score`](sim/simulator.py), i.e. `total_farm_gold`): [`optimal_jungle_sell_timing`](sim/jungle_sell_timing.py) scans **never sell** and **sell at each jungle cycle boundary** up to `t_max` with the same greedy purchase hook, and returns the best-scoring `jungle_sell_at_seconds` (or `None` for never sell).
+
 ## Primary objective (farm income proxy)
 
 | Use | Do not use as the optimization target |

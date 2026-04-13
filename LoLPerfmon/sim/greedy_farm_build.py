@@ -185,6 +185,7 @@ def greedy_farm_build(
     defer_purchases_until: float | None = None,
     epsilon: float = 1e-9,
     farm_mode: FarmMode = FarmMode.LANE,
+    jungle_starter_item_id: str | None = None,
 ) -> tuple[tuple[str, ...], float, SimResult, GreedyFarmMetadata]:
     """
     Greedily maximize Δeffective_dps / gold at each purchase opportunity.
@@ -208,6 +209,7 @@ def greedy_farm_build(
         t_max=t_max,
         defer_purchases_until=defer_purchases_until,
         purchase_hook=hook,
+        jungle_starter_item_id=jungle_starter_item_id,
     )
     meta = GreedyFarmMetadata(epsilon=epsilon, purchase_count=len(order))
     return tuple(order), res.total_farm_gold, res, meta
@@ -226,6 +228,7 @@ def beam_refined_farm_build(
     farm_mode: FarmMode = FarmMode.LANE,
     marginal_objective: Literal["dps_per_gold", "horizon_greedy_roi"] = "dps_per_gold",
     horizon_candidate_cap: int = 48,
+    jungle_starter_item_id: str | None = None,
 ) -> tuple[tuple[str, ...], float, SimResult, BeamFarmMetadata | GreedyFarmMetadata]:
     """
     Beam search over purchase prefixes (depth ``beam_depth``, width ``beam_width``),
@@ -246,6 +249,7 @@ def beam_refined_farm_build(
         max_leaf_evals=max_leaf_evals,
         marginal_objective=marginal_objective,
         horizon_candidate_cap=horizon_candidate_cap,
+        jungle_starter_item_id=jungle_starter_item_id,
     )
     return search.run()
 

@@ -81,6 +81,15 @@ def _offline_placeholder_items() -> dict[str, ItemDef]:
             stats=StatBonus(attack_damage=20.0),
             from_ids=(),
         ),
+        "offline_jungle_pet": ItemDef(
+            id="offline_jungle_pet",
+            name="Offline jungle companion (stub)",
+            total_cost=450.0,
+            stats=StatBonus(ability_power=5.0),
+            from_ids=(),
+            tags=("Jungle",),
+            max_inventory_copies=1,
+        ),
     }
 
 

@@ -44,6 +44,9 @@ SR_JUNGLE_BASE_CYCLE_SECONDS = 90.0
 SR_JUNGLE_BASE_ROUTE_GOLD = 85.0
 SR_JUNGLE_BASE_ROUTE_XP = 400.0
 
+# Pet treat thresholds for companion evolutions on Classic 5v5 (wiki Jungling § Jungle items).
+# Not simulated in the farm loop; see ``LoLPerfmon.sim.jungle_items.SR_JUNGLE_COMPANION_EVOLVE_TREAT_THRESHOLDS``.
+
 
 def default_minion_xp_by_level_tables() -> tuple[tuple[float, ...], tuple[float, ...], tuple[float, ...]]:
     """

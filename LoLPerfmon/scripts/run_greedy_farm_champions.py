@@ -18,6 +18,7 @@ from LoLPerfmon.sim.bundle_factory import build_offline_bundle, load_ddragon_bun
 from LoLPerfmon.sim.config import FarmMode
 from LoLPerfmon.sim.ddragon_fetch import latest_version
 from LoLPerfmon.sim.greedy_farm_build import beam_refined_farm_build
+from LoLPerfmon.sim.jungle_items import jungle_companion_item_ids_sorted
 from LoLPerfmon.sim.marginal_clear import clear_upgrade_report
 
 
@@ -66,19 +67,42 @@ def main() -> None:
         if cid not in bundle.champions:
             print(f"skip {cid}: not in bundle")
             continue
-        order, farm_gold, res, meta = beam_refined_farm_build(
-            bundle,
-            cid,
-            t_max=args.t_max,
-            beam_width=args.beam_width,
-            beam_depth=args.beam_depth,
-            max_leaf_evals=args.max_leaf_evals,
-            farm_mode=farm_mode,
-            marginal_objective=args.marginal_objective,
-            horizon_candidate_cap=args.horizon_candidate_cap,
-        )
+        if farm_mode == FarmMode.JUNGLE:
+            best = None
+            best_sid = None
+            for sid in jungle_companion_item_ids_sorted(bundle):
+                pack = beam_refined_farm_build(
+                    bundle,
+                    cid,
+                    t_max=args.t_max,
+                    beam_width=args.beam_width,
+                    beam_depth=args.beam_depth,
+                    max_leaf_evals=args.max_leaf_evals,
+                    farm_mode=farm_mode,
+                    marginal_objective=args.marginal_objective,
+                    horizon_candidate_cap=args.horizon_candidate_cap,
+                    jungle_starter_item_id=sid,
+                )
+                if best is None or pack[1] > best[1]:
+                    best = pack
+                    best_sid = sid
+            assert best is not None
+            order, farm_gold, res, meta = best
+            print("---", cid.upper(), f"jungle_starter={best_sid}", "---")
+        else:
+            order, farm_gold, res, meta = beam_refined_farm_build(
+                bundle,
+                cid,
+                t_max=args.t_max,
+                beam_width=args.beam_width,
+                beam_depth=args.beam_depth,
+                max_leaf_evals=args.max_leaf_evals,
+                farm_mode=farm_mode,
+                marginal_objective=args.marginal_objective,
+                horizon_candidate_cap=args.horizon_candidate_cap,
+            )
+            print("---", cid.upper(), "---")
         names = [bundle.items[i].name if i in bundle.items else i for i in order]
-        print("---", cid.upper(), "---")
         print("total_farm_gold:", round(farm_gold, 2))
         print("meta:", meta)
         print("buy_order:", " -> ".join(names) if names else "(none)")
