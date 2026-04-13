@@ -114,8 +114,18 @@ Default ranked SR bundles do **not** filter by role line. Items with the Data Dr
 
 ## Kit and item modeling limits
 
-- **Lane/jungle clear rate** uses [`lane_clear_dps`](sim/clear.py) (alias **`effective_dps`**): **ability** damage from Data Dragon spell data when possible ([`spell_farm_model`](sim/spell_farm_model.py)), with kit fallbacks. **Auto-attack** clear uses `auto_attack_clear_weight × …`; mages often use **`auto_attack_clear_weight=0`**.
+- **Lane/jungle clear rate** uses [`lane_clear_dps`](sim/clear.py) (alias **`effective_dps`**): **ability** damage from Data Dragon spell JSON when [`spell_farm_model`](sim/spell_farm_model.py) parses **`cooldown`**, **`effect`** (base damage rows), and **`vars`** routed into **total vs bonus** AP and AD coefficients (see [`StatBlock`](sim/stats.py) **`bonus_attack_damage`** / **`bonus_ability_power`**). Modeled spell DPS uses per-spell **mean cooldown**, League **ability haste**, and a **mana sustain** factor when `resource_kind` is **Mana** and champion **`mpregen`** from Data Dragon is present; if regen is missing in data, sustain is not applied. **Auto-attack** clear uses **total AD** × attack speed (wiki: standard basic attacks deal **100% AD**). Optional **[`GameRules`](sim/data_loader.py)** **`lane_engagement_overhead_seconds`** / **`jungle_engagement_overhead_seconds`** shrink the effective throughput window (spawn/path/range abstraction). Spells are **independent** on-CD contributions, not a full rotation sim.
 - Item **actives** and many passives are **not** modeled; stats come from Data Dragon flat stat lines on [`ItemDef`](sim/models.py).
+
+### Components vs “full” items (deterministic)
+
+From recipe fields alone: **[`is_build_endpoint_item`](sim/models.py)** (`into_ids` empty), **[`is_pure_shop_component`](sim/models.py)** (no `from_ids`, still upgrades), and **[`item_graph_role`](sim/models.py)** (`endpoint` | `component` | `intermediate`). That does **not** encode power level—only the shop graph.
+
+**Why greedy search still buys components:** Marginal ranking prefers **large Δ[`effective_dps`](sim/clear.py) per gold spent** on the next step. Small components (Long Sword, Amplifying Tome) often win that ratio versus expensive finished items, especially near **throughput saturation** (extra DPS does not increase the next wave’s modeled clear). Use **`endpoints_only_marginals`** in [`greedy_farm_build`](sim/greedy_farm_build.py) / export scripts to restrict candidate purchases to finished endpoints (and recipe-combined buys), or add **tag filters** ([`item_tag_filters`](sim/item_tag_filters.py)) for catalog policy.
+
+### Resolving a champion display name to a bundle id
+
+[`resolve_champion_key_for_version`](sim/ddragon_fetch.py)(`"Lee Sin"`, patch) → Data Dragon id (e.g. `LeeSin`) using the same **`champion.json`** index as [`champion_json`](sim/ddragon_fetch.py). Use that string as `champion_id` in [`simulate`](sim/simulator.py) when the bundle was built from that patch.
 
 ## Parameters (defaults for scripts)
 
