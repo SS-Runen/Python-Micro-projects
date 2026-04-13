@@ -5,7 +5,7 @@ Bounded beam search over purchase prefixes for farm builds. See OPTIMIZATION_CRI
 from __future__ import annotations
 
 from dataclasses import dataclass
-from typing import Literal
+from typing import Callable, Literal
 
 from .config import FarmMode
 from .data_loader import GameDataBundle
@@ -41,6 +41,8 @@ def _simulate_greedy_hook_early_dps_auc(
     purchase_hook,
     early_horizon: float,
     jungle_starter_item_id: str | None,
+    early_stop: Callable[[SimulationState], bool] | None = None,
+    extrapolate_lane_waves: bool | None = None,
 ) -> tuple[float, SimResult]:
     samples: list[tuple[float, float]] = []
 
@@ -62,6 +64,8 @@ def _simulate_greedy_hook_early_dps_auc(
         on_lane_clear_dps=lane_cb if farm_mode == FarmMode.LANE else None,
         on_jungle_clear_dps=jungle_cb if farm_mode == FarmMode.JUNGLE else None,
         jungle_starter_item_id=jungle_starter_item_id,
+        early_stop=early_stop,
+        extrapolate_lane_waves=extrapolate_lane_waves,
     )
     return auc_effective_dps_piecewise(samples, early_horizon), res
 
@@ -121,6 +125,8 @@ def _ranked_horizon_next_items(
     horizon_candidate_cap: int,
     jungle_starter_item_id: str | None,
     marginal_income_cap: bool,
+    early_stop: Callable[[SimulationState], bool] | None = None,
+    extrapolate_lane_waves: bool | None = None,
 ) -> list[tuple[str, float, float, float]]:
     """Rank next purchases by Δtotal_farm_gold vs baseline greedy (nested full sims)."""
     dps_ranked = ranked_marginal_acquisitions(
@@ -162,6 +168,8 @@ def _ranked_horizon_next_items(
             defer_purchases_until=defer_purchases_until,
             purchase_hook=hook_f,
             jungle_starter_item_id=jungle_starter_item_id,
+            early_stop=early_stop,
+            extrapolate_lane_waves=extrapolate_lane_waves,
         )
         delta_farm = res_i.total_farm_gold - baseline_res.total_farm_gold
         paid = items[iid].total_cost if iid in items else 0.0
@@ -187,6 +195,8 @@ def _marginals_for_beam_step(
     horizon_candidate_cap: int,
     jungle_starter_item_id: str | None = None,
     marginal_income_cap: bool = True,
+    early_stop: Callable[[SimulationState], bool] | None = None,
+    extrapolate_lane_waves: bool | None = None,
 ) -> list[tuple[str, float, float, float]]:
     st = state_after_prefix(data, items, prefix, farm_mode, jungle_starter_item_id)
     if st is None:
@@ -215,6 +225,8 @@ def _marginals_for_beam_step(
             horizon_candidate_cap,
             jungle_starter_item_id,
             marginal_income_cap,
+            early_stop,
+            extrapolate_lane_waves,
         )
     return ranked_marginal_acquisitions(st, profile, items, epsilon, **margs_kw)
 
@@ -246,6 +258,10 @@ class FarmBuildSearch:
     leaf_score: LeafScore = "total_farm_gold"
     #: Upper bound of ∫ DPS dt when ``leaf_score == 'early_dps_auc'`` (seconds of simulated time).
     early_horizon_seconds: float = 900.0
+    #: If set, passed to :func:`simulate` (e.g. stop when six build-endpoint items fill the bag).
+    early_stop: Callable[[SimulationState], bool] | None = None
+    #: Passed to :func:`simulate`; ``None`` means infer from ``t_max`` (see simulator).
+    extrapolate_lane_waves: bool | None = None
 
     def run(self) -> tuple[tuple[str, ...], float, SimResult, BeamFarmMetadata | GreedyFarmMetadata]:
         profile = self.data.champions[self.champion_id]
@@ -276,6 +292,8 @@ class FarmBuildSearch:
                 hook_g,
                 self.early_horizon_seconds,
                 self.jungle_starter_item_id,
+                early_stop=self.early_stop,
+                extrapolate_lane_waves=self.extrapolate_lane_waves,
             )
         else:
             res_g = simulate(
@@ -288,6 +306,8 @@ class FarmBuildSearch:
                 defer_purchases_until=self.defer_purchases_until,
                 purchase_hook=hook_g,
                 jungle_starter_item_id=self.jungle_starter_item_id,
+                early_stop=self.early_stop,
+                extrapolate_lane_waves=self.extrapolate_lane_waves,
             )
             if self.leaf_score == "farm_gold_per_gold_spent":
                 best_val = _farm_gold_per_gold_spent(res_g, self.epsilon)
@@ -313,6 +333,8 @@ class FarmBuildSearch:
             self.horizon_candidate_cap,
             self.jungle_starter_item_id,
             self.marginal_income_cap,
+            self.early_stop,
+            self.extrapolate_lane_waves,
         )
         if not first_margs:
             meta = GreedyFarmMetadata(epsilon=self.epsilon, purchase_count=len(best_order))
@@ -340,6 +362,8 @@ class FarmBuildSearch:
                     self.horizon_candidate_cap,
                     self.jungle_starter_item_id,
                     self.marginal_income_cap,
+                    self.early_stop,
+                    self.extrapolate_lane_waves,
                 )
                 for row in margs[:w]:
                     next_id = row[0]
@@ -370,6 +394,8 @@ class FarmBuildSearch:
                             hook_f,
                             self.early_horizon_seconds,
                             self.jungle_starter_item_id,
+                            early_stop=self.early_stop,
+                            extrapolate_lane_waves=self.extrapolate_lane_waves,
                         )
                     else:
                         res_i = simulate(
@@ -382,6 +408,8 @@ class FarmBuildSearch:
                             defer_purchases_until=self.defer_purchases_until,
                             purchase_hook=hook_f,
                             jungle_starter_item_id=self.jungle_starter_item_id,
+                            early_stop=self.early_stop,
+                            extrapolate_lane_waves=self.extrapolate_lane_waves,
                         )
                         if self.leaf_score == "farm_gold_per_gold_spent":
                             fv = _farm_gold_per_gold_spent(res_i, self.epsilon)

@@ -426,11 +426,17 @@ def beam_refined_farm_build(
     marginal_income_cap: bool = True,
     leaf_score: Literal["total_farm_gold", "early_dps_auc", "farm_gold_per_gold_spent"] = "total_farm_gold",
     early_horizon_seconds: float = 900.0,
+    early_stop: Callable[[SimulationState], bool] | None = None,
+    extrapolate_lane_waves: bool | None = None,
 ) -> tuple[tuple[str, ...], float, SimResult, BeamFarmMetadata | GreedyFarmMetadata]:
     """
     Beam search over purchase prefixes (depth ``beam_depth``, width ``beam_width``).
     Default leaf score is full-horizon ``total_farm_gold``; use ``leaf_score='early_dps_auc'``
     to maximize ∫ modeled effective DPS dt over ``early_horizon_seconds``. Greedy tail after prefix.
+
+    Pass ``early_stop`` and ``t_max=float('inf')`` (e.g. with
+    :func:`make_early_stop_six_build_endpoints`) to run until a custom stop condition; set
+    ``extrapolate_lane_waves=True`` when the horizon can exceed the bundle wave list.
     """
     from .farm_build_search import FarmBuildSearch
 
@@ -451,6 +457,8 @@ def beam_refined_farm_build(
         marginal_income_cap=marginal_income_cap,
         leaf_score=leaf_score,
         early_horizon_seconds=early_horizon_seconds,
+        early_stop=early_stop,
+        extrapolate_lane_waves=extrapolate_lane_waves,
     )
     return search.run()
 
