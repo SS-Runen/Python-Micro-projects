@@ -5,7 +5,14 @@ from typing import Callable
 
 from .config import FarmMode
 from .data_loader import GameDataBundle
-from .simulator import PurchasePolicy, SimResult, SimulationState, default_build_optimizer_score, simulate
+from .simulator import (
+    PurchasePolicy,
+    SimResult,
+    SimulationState,
+    default_build_optimizer_score,
+    default_clear_count_score,
+    simulate,
+)
 
 
 def best_item_order_exhaustive(
@@ -24,6 +31,10 @@ def best_item_order_exhaustive(
 
     Default ``score`` is :func:`default_build_optimizer_score` (**total farm gold** from
     clears), not ``final_gold`` (wallet balance can reward underspending).
+
+    To maximize **modeled minion or monster clears** (not gold-weighted lane income), pass e.g.
+    ``score=lambda r: default_clear_count_score(r, farm_mode)`` — see :class:`~LoLPerfmon.sim.simulator.SimResult`
+    fields ``total_lane_minions_cleared`` / ``total_jungle_monsters_cleared``.
 
     For **recipe-correct** goal lists, prefer :func:`LoLPerfmon.sim.build_path_optimizer.optimal_interleaved_build`
     or :func:`LoLPerfmon.sim.build_path_optimizer.acquisition_sequence_for_finished_roots`

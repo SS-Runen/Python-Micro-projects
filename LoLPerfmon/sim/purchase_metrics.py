@@ -4,7 +4,7 @@ from .clear import effective_dps
 from .config import FarmMode
 from .data_loader import GameDataBundle
 from .models import ChampionProfile
-from .simulator import PurchasePolicy, SimResult, simulate
+from .simulator import PurchasePolicy, SimResult, default_clear_count_score, simulate
 from .stats import StatBlock, total_stats
 
 
@@ -26,6 +26,11 @@ def auc_effective_dps_piecewise(samples: list[tuple[float, float]], t_end: float
         if t1 > t0:
             total += d0 * (t1 - t0)
     return total
+
+
+def total_clear_units(res: SimResult, farm_mode: FarmMode) -> float:
+    """Lane minions or jungle monsters cleared (see :func:`~LoLPerfmon.sim.simulator.default_clear_count_score`)."""
+    return default_clear_count_score(res, farm_mode)
 
 
 def marginal_farm_rate(
@@ -56,8 +61,8 @@ def compare_purchase_timing(
     game time reaches ``t_buy_cutoff_seconds`` (same ordered buy list afterward).
     Returns ``(result_A, result_B, final_gold_A - final_gold_B)`` (wallet delta).
 
-    For **farm-income** comparisons (clear-speed-driven), subtract ``total_farm_gold``
-    or use :func:`~LoLPerfmon.sim.simulator.default_build_optimizer_score` on each result.
+    For **farm-income** comparisons, use :func:`~LoLPerfmon.sim.simulator.default_build_optimizer_score`.
+    For **max clears** over the horizon, use :func:`total_clear_units` / :func:`~LoLPerfmon.sim.simulator.default_clear_count_score`.
     """
     policy = PurchasePolicy(buy_order=buy_order)
     res_a = simulate(

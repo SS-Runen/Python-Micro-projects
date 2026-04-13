@@ -11,7 +11,10 @@ from typing import Callable, Literal
 from .clear import effective_dps
 from .config import FarmMode
 from .data_loader import GameDataBundle
-from .marginal_farm_tick import marginal_farm_gold_per_tick_derivative
+from .marginal_farm_tick import (
+    marginal_clear_units_per_tick_derivative,
+    marginal_farm_gold_per_tick_derivative,
+)
 from .models import ChampionProfile, ItemDef, is_build_endpoint_item, is_pure_shop_component
 from .simulator import (
     MAX_INVENTORY_SLOTS,
@@ -25,6 +28,8 @@ from .simulator import (
     try_acquire_with_shop_sells,
 )
 from .stats import total_stats
+
+MarginalTickObjective = Literal["farm_gold", "clear_count"]
 
 
 def _level_weight_for_marginal_blend(level: int) -> float:
@@ -93,6 +98,7 @@ def _marginal_candidates(
     farm_mode: FarmMode = FarmMode.LANE,
     eta_lane: float = 1.0,
     marginal_income_cap: bool = True,
+    marginal_tick_objective: MarginalTickObjective = "farm_gold",
     endpoints_only_marginals: bool = False,
     allow_lane_starter_sell: bool = False,
     allow_sell_non_starter_items: bool = False,
@@ -106,9 +112,10 @@ def _marginal_candidates(
     (lane starters first, then any item). With ``allow_lane_starter_sell`` only, trials use
     :func:`try_acquire_with_lane_starter_sells`.
 
-    With ``marginal_income_cap`` and ``data`` set, score uses a first-order farm tick estimate
-    ``(d tick_gold / d dps) * Δdps / gold_paid`` (SciPy ``approx_fprime`` on capped throughput);
-    candidates with negligible marginal farm gold per tick are dropped even if Δdps > 0.
+    With ``marginal_income_cap`` and ``data`` set, score uses a first-order tick estimate
+    ``(d tick_metric / d dps) * Δdps / gold_paid`` (SciPy ``approx_fprime`` on capped throughput).
+    Use ``marginal_tick_objective='farm_gold'`` (default) or ``'clear_count'`` for minions/monsters
+    per tick. Candidates with negligible marginal per tick are dropped even if Δdps > 0.
 
     With ``endpoints_only_marginals``, skips **pure shop components** (no ``from``, non-empty
     ``into``) so the shop only adds endpoints or recipe parents (``from_ids`` non-empty), i.e.
@@ -118,7 +125,10 @@ def _marginal_candidates(
     dps0 = effective_dps(profile, state.level, base_stats)
     dg_ddps = 0.0
     if marginal_income_cap and data is not None:
-        dg_ddps = marginal_farm_gold_per_tick_derivative(data, farm_mode, eta_lane, profile, state)
+        if marginal_tick_objective == "clear_count":
+            dg_ddps = marginal_clear_units_per_tick_derivative(data, farm_mode, eta_lane, profile, state)
+        else:
+            dg_ddps = marginal_farm_gold_per_tick_derivative(data, farm_mode, eta_lane, profile, state)
     out: list[tuple[str, float, float, float]] = []
     for iid in sorted(items.keys()):
         if iid in state.blocked_purchase_ids:
@@ -148,10 +158,10 @@ def _marginal_candidates(
         denom = max(paid, epsilon)
         score_dps = delta / denom
         if marginal_income_cap and data is not None:
-            marginal_farm = dg_ddps * delta
-            if marginal_farm <= 1e-18:
+            marginal_tick = dg_ddps * delta
+            if marginal_tick <= 1e-18:
                 continue
-            score_cap = marginal_farm / denom
+            score_cap = marginal_tick / denom
             if use_level_weighted_marginal:
                 w = _level_weight_for_marginal_blend(state.level)
                 score = w * score_cap + (1.0 - w) * score_dps
@@ -183,6 +193,7 @@ def ranked_marginal_acquisitions(
     farm_mode: FarmMode = FarmMode.LANE,
     eta_lane: float = 1.0,
     marginal_income_cap: bool = True,
+    marginal_tick_objective: MarginalTickObjective = "farm_gold",
     endpoints_only_marginals: bool = False,
     allow_lane_starter_sell: bool = False,
     allow_sell_non_starter_items: bool = False,
@@ -198,6 +209,7 @@ def ranked_marginal_acquisitions(
         farm_mode=farm_mode,
         eta_lane=eta_lane,
         marginal_income_cap=marginal_income_cap,
+        marginal_tick_objective=marginal_tick_objective,
         endpoints_only_marginals=endpoints_only_marginals,
         allow_lane_starter_sell=allow_lane_starter_sell,
         allow_sell_non_starter_items=allow_sell_non_starter_items,
@@ -219,6 +231,7 @@ def _greedy_purchase_burst(
     farm_mode: FarmMode = FarmMode.LANE,
     eta_lane: float = 1.0,
     marginal_income_cap: bool = True,
+    marginal_tick_objective: MarginalTickObjective = "farm_gold",
     endpoints_only_marginals: bool = False,
     allow_lane_starter_sell: bool = False,
     allow_sell_non_starter_items: bool = False,
@@ -237,6 +250,7 @@ def _greedy_purchase_burst(
             farm_mode=farm_mode,
             eta_lane=eta_lane,
             marginal_income_cap=marginal_income_cap,
+            marginal_tick_objective=marginal_tick_objective,
             endpoints_only_marginals=endpoints_only_marginals,
             allow_lane_starter_sell=allow_lane_starter_sell,
             allow_sell_non_starter_items=allow_sell_non_starter_items,
@@ -330,6 +344,7 @@ def make_greedy_hook(
     farm_mode: FarmMode = FarmMode.LANE,
     eta_lane: float = 1.0,
     marginal_income_cap: bool = True,
+    marginal_tick_objective: MarginalTickObjective = "farm_gold",
     endpoints_only_marginals: bool = False,
     allow_lane_starter_sell: bool = True,
     allow_sell_non_starter_items: bool = False,
@@ -347,6 +362,7 @@ def make_greedy_hook(
             farm_mode=farm_mode,
             eta_lane=eta_lane,
             marginal_income_cap=marginal_income_cap,
+            marginal_tick_objective=marginal_tick_objective,
             endpoints_only_marginals=endpoints_only_marginals,
             allow_lane_starter_sell=allow_lane_starter_sell,
             allow_sell_non_starter_items=allow_sell_non_starter_items,
@@ -371,6 +387,7 @@ def make_forced_prefix_then_greedy_hook(
     farm_mode: FarmMode = FarmMode.LANE,
     eta_lane: float = 1.0,
     marginal_income_cap: bool = True,
+    marginal_tick_objective: MarginalTickObjective = "farm_gold",
     endpoints_only_marginals: bool = False,
     allow_lane_starter_sell: bool = True,
     allow_sell_non_starter_items: bool = False,
@@ -408,6 +425,7 @@ def make_forced_prefix_then_greedy_hook(
             farm_mode=farm_mode,
             eta_lane=eta_lane,
             marginal_income_cap=marginal_income_cap,
+            marginal_tick_objective=marginal_tick_objective,
             endpoints_only_marginals=endpoints_only_marginals,
             allow_lane_starter_sell=allow_lane_starter_sell,
             allow_sell_non_starter_items=allow_sell_non_starter_items,
@@ -560,7 +578,9 @@ def beam_refined_farm_build(
     horizon_candidate_cap: int = 48,
     jungle_starter_item_id: str | None = None,
     marginal_income_cap: bool = True,
-    leaf_score: Literal["total_farm_gold", "early_dps_auc", "farm_gold_per_gold_spent"] = "total_farm_gold",
+    leaf_score: Literal[
+        "total_farm_gold", "early_dps_auc", "farm_gold_per_gold_spent", "total_clear_units"
+    ] = "total_farm_gold",
     early_horizon_seconds: float = 900.0,
     early_stop: Callable[[SimulationState], bool] | None = None,
     extrapolate_lane_waves: bool | None = None,
@@ -568,6 +588,7 @@ def beam_refined_farm_build(
     allow_lane_starter_sell: bool = True,
     allow_sell_non_starter_items: bool = False,
     use_level_weighted_marginal: bool = False,
+    marginal_tick_objective: MarginalTickObjective = "farm_gold",
 ) -> tuple[tuple[str, ...], float, SimResult, BeamFarmMetadata | GreedyFarmMetadata]:
     """
     Beam search over purchase prefixes (depth ``beam_depth``, width ``beam_width``).
@@ -595,6 +616,7 @@ def beam_refined_farm_build(
         horizon_candidate_cap=horizon_candidate_cap,
         jungle_starter_item_id=jungle_starter_item_id,
         marginal_income_cap=marginal_income_cap,
+        marginal_tick_objective=marginal_tick_objective,
         leaf_score=leaf_score,
         early_horizon_seconds=early_horizon_seconds,
         early_stop=early_stop,
@@ -608,6 +630,7 @@ def beam_refined_farm_build(
 
 
 __all__ = [
+    "MarginalTickObjective",
     "BeamFarmMetadata",
     "GreedyFarmMetadata",
     "beam_refined_farm_build",

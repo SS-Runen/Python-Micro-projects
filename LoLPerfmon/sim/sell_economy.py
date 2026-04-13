@@ -4,6 +4,9 @@ Unified shop sell refund (deterministic model).
 Selling an item credits a fixed fraction of the item sticker ``total_cost`` (assumption A9 in
 the farm policy plan). Live League uses Data Dragon ``gold.sell`` per item; this codebase
 uses one fraction for clarity and reproducibility unless extended later.
+
+Selling changes wallet and inventory timing only; it does not add a kill counter—cumulative
+minion/monster proxies on :class:`~LoLPerfmon.sim.simulator.SimResult` follow from the forward sim.
 """
 
 from __future__ import annotations

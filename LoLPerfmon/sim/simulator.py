@@ -25,7 +25,7 @@ from .clear import (
     wave_gold_if_full_clear,
 )
 from .config import FarmMode, GameConfig
-from .data_loader import GameDataBundle
+from .data_loader import GameDataBundle, wave_minion_count
 from .passive import passive_gold_in_interval
 from .stats import total_stats
 from .wave_schedule import wave_composition_at_index
@@ -130,6 +130,11 @@ class SimResult:
 
     - ``total_lane_throughput_units`` — lane only: sum of ``throughput_ratio × eta_lane`` per wave.
     - ``total_jungle_route_eff_units`` — jungle only: sum of per-cycle route efficiency ``eff``.
+
+    **Clear counts (interpretable kill proxies, not last-hit RNG):**
+
+    - ``total_lane_minions_cleared`` — lane only: sum per wave of ``throughput_ratio × eta_lane × minion_count`` (same ``thr`` as gold; count is uniform across melee/caster/siege).
+    - ``total_jungle_monsters_cleared`` — jungle only: sum per cycle of ``eff × jungle_monsters_per_route``.
     """
 
     final_gold: float
@@ -144,6 +149,8 @@ class SimResult:
     ended_by_early_stop: bool = False
     total_lane_throughput_units: float = 0.0
     total_jungle_route_eff_units: float = 0.0
+    total_lane_minions_cleared: float = 0.0
+    total_jungle_monsters_cleared: float = 0.0
 
 
 def default_build_optimizer_score(res: SimResult) -> float:
@@ -152,6 +159,16 @@ def default_build_optimizer_score(res: SimResult) -> float:
     sums described there. Does **not** maximize residual ``final_gold`` (wallet).
     """
     return res.total_farm_gold
+
+
+def default_clear_count_score(res: SimResult, farm_mode: FarmMode) -> float:
+    """
+    Maximize modeled minion or monster clears over the horizon (see :class:`SimResult` clear fields).
+    Use when optimizing **clear volume**, not ``total_farm_gold`` (gold-weighted lane income).
+    """
+    if farm_mode == FarmMode.LANE:
+        return res.total_lane_minions_cleared
+    return res.total_jungle_monsters_cleared
 
 
 def _cs_cumulative_by_wave(data: GameDataBundle) -> dict[int, int]:
@@ -540,6 +557,8 @@ def simulate(
     total_passive = 0.0
     total_lane_thr_sum = 0.0
     total_jungle_eff_sum = 0.0
+    total_lane_minions_sum = 0.0
+    total_jungle_monsters_sum = 0.0
     t_prev = 0.0
     ended_by_early_stop = False
 
@@ -571,6 +590,7 @@ def simulate(
             ct = clear_time_seconds(wave, game_minute, data, dps)
             thr = throughput_ratio(ct, rules.wave_interval_seconds) * eta_lane
             total_lane_thr_sum += thr
+            total_lane_minions_sum += thr * float(wave_minion_count(wave))
             gold_full = wave_gold_if_full_clear(wave, game_minute, data)
             gold_gain = gold_full * thr
             xp_gain = _xp_for_wave_fraction(wave, state.level, thr, rules)
@@ -603,6 +623,7 @@ def simulate(
             cycle = jungle_cycle_seconds(profile, state.level, stats, data)
             eff = min(1.0, rules.jungle_base_cycle_seconds / max(cycle, 1e-9))
             total_jungle_eff_sum += eff
+            total_jungle_monsters_sum += eff * float(rules.jungle_monsters_per_route)
             gold_gain = rules.jungle_base_route_gold * eff
             xp_gain = rules.jungle_base_route_xp * eff
             state.gold += gold_gain
@@ -651,4 +672,6 @@ def simulate(
         ended_by_early_stop=ended_by_early_stop,
         total_lane_throughput_units=total_lane_thr_sum,
         total_jungle_route_eff_units=total_jungle_eff_sum,
+        total_lane_minions_cleared=total_lane_minions_sum,
+        total_jungle_monsters_cleared=total_jungle_monsters_sum,
     )
