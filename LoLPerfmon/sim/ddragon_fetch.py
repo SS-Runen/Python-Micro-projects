@@ -308,6 +308,8 @@ def item_def_from_ddragon_entry(item_id: str, raw: dict[str, Any]) -> ItemDef | 
     mic = max_inventory_copies_from_ddragon(str(item_id), raw, from_ids)
     tags_raw = raw.get("tags") or []
     tags = tuple(str(x) for x in tags_raw) if isinstance(tags_raw, list) else ()
+    sell_raw = gold.get("sell")
+    sell_gold = float(sell_raw) if isinstance(sell_raw, (int, float)) else None
     return ItemDef(
         id=str(item_id),
         name=name,
@@ -317,6 +319,7 @@ def item_def_from_ddragon_entry(item_id: str, raw: dict[str, Any]) -> ItemDef | 
         into_ids=into_ids,
         tags=tags,
         max_inventory_copies=mic,
+        sell_gold=sell_gold,
     )
 
 

@@ -1,7 +1,10 @@
 """
-Lane/jungle simulation with recipe purchases. **General selling is not modeled**, except
-optional sale of the **jungle companion** item (50% of ``total_cost`` refund) when enabled
-by :func:`simulate` jungle sell parameters.
+Lane/jungle simulation with recipe purchases. **General selling is not modeled**, except:
+
+- Optional sale of the **jungle companion** (50% of ``total_cost`` refund) when enabled by
+  :func:`simulate` jungle sell parameters.
+- Optional **lane starter** resell (Doran's, Dark Seal, …) used by greedy purchase hooks
+  when ``allow_lane_starter_sell`` is True — see :func:`sell_lane_starter_once`.
 """
 
 from __future__ import annotations
@@ -30,6 +33,10 @@ from .jungle_items import (
     JUNGLE_COMPANION_SELL_REFUND_FRACTION,
     is_jungle_companion_item,
     resolve_jungle_starter_item_id,
+)
+from .lane_items import (
+    is_resellable_lane_starter,
+    lane_starter_sell_value,
 )
 
 # Summoner's Rift inventory (item slots only; trinket/ward not modeled).
@@ -251,6 +258,56 @@ def sell_jungle_companion_once(
     state.gold += float(it.total_cost) * refund_fraction
     state.blocked_purchase_ids.discard(companion_id)
     return True
+
+
+def sell_lane_starter_once(
+    state: SimulationState,
+    item_id: str,
+    items_by_id: dict[str, ItemDef],
+) -> bool:
+    """Remove one resellable lane starter and credit :func:`~LoLPerfmon.sim.lane_items.lane_starter_sell_value` gold."""
+    it = items_by_id.get(item_id)
+    if it is None or not is_resellable_lane_starter(it):
+        return False
+    if inventory_count(state.inventory, item_id) < 1:
+        return False
+    state.inventory.remove(item_id)
+    state.gold += lane_starter_sell_value(it)
+    state.blocked_purchase_ids.discard(item_id)
+    return True
+
+
+def sell_one_lane_starter_lex_first(
+    state: SimulationState,
+    items_by_id: dict[str, ItemDef],
+) -> bool:
+    """Sell one resellable lane starter; deterministic order by sorted distinct item ids in the bag."""
+    for iid in sorted(set(state.inventory)):
+        it = items_by_id.get(iid)
+        if it is not None and is_resellable_lane_starter(it):
+            return sell_lane_starter_once(state, iid, items_by_id)
+    return False
+
+
+def try_acquire_with_lane_starter_sells(
+    state: SimulationState,
+    target_id: str,
+    items_by_id: dict[str, ItemDef],
+    *,
+    max_sells: int = 24,
+) -> bool:
+    """
+    Try :func:`acquire_goal`; if it fails, repeatedly sell lane starters (lex-first) until
+    the purchase succeeds or nothing resellable remains.
+    """
+    if acquire_goal(state, target_id, items_by_id):
+        return True
+    for _ in range(max_sells):
+        if not sell_one_lane_starter_lex_first(state, items_by_id):
+            return acquire_goal(state, target_id, items_by_id)
+        if acquire_goal(state, target_id, items_by_id):
+            return True
+    return acquire_goal(state, target_id, items_by_id)
 
 
 def blocked_purchase_ids_from_inventory(inventory: list[str], items_by_id: dict[str, ItemDef]) -> set[str]:

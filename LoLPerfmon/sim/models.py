@@ -20,6 +20,8 @@ class ItemDef:
     tags: tuple[str, ...] = field(default_factory=tuple)
     #: Max copies of this item id in inventory (League: one terminal legendary, one Seal, many Daggers).
     max_inventory_copies: int = 6
+    #: Data Dragon ``gold.sell`` when present; else lane-starter resell uses a fallback fraction of ``total_cost``.
+    sell_gold: float | None = None
 
 
 def is_build_endpoint_item(it: ItemDef) -> bool:
@@ -148,6 +150,8 @@ def load_items_from_json(items_list: list[Mapping[str, Any]]) -> dict[str, ItemD
             tags = tuple(str(x) for x in tr)
         else:
             tags = ()
+        sg = raw.get("sell_gold")
+        sell_gold = float(sg) if isinstance(sg, (int, float)) else None
         out[str(raw["id"])] = ItemDef(
             id=str(raw["id"]),
             name=str(raw["name"]),
@@ -157,5 +161,6 @@ def load_items_from_json(items_list: list[Mapping[str, Any]]) -> dict[str, ItemD
             into_ids=into_ids,
             tags=tags,
             max_inventory_copies=mic,
+            sell_gold=sell_gold,
         )
     return out

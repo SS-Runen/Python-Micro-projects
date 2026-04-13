@@ -128,6 +128,7 @@ def _ranked_horizon_next_items(
     early_stop: Callable[[SimulationState], bool] | None = None,
     extrapolate_lane_waves: bool | None = None,
     endpoints_only_marginals: bool = False,
+    allow_lane_starter_sell: bool = True,
 ) -> list[tuple[str, float, float, float]]:
     """Rank next purchases by Δtotal_farm_gold vs baseline greedy (nested full sims)."""
     dps_ranked = ranked_marginal_acquisitions(
@@ -160,6 +161,7 @@ def _ranked_horizon_next_items(
             eta_lane=eta_lane,
             marginal_income_cap=marginal_income_cap,
             endpoints_only_marginals=endpoints_only_marginals,
+            allow_lane_starter_sell=allow_lane_starter_sell,
         )
         res_i = simulate(
             data,
@@ -201,6 +203,7 @@ def _marginals_for_beam_step(
     early_stop: Callable[[SimulationState], bool] | None = None,
     extrapolate_lane_waves: bool | None = None,
     endpoints_only_marginals: bool = False,
+    allow_lane_starter_sell: bool = True,
 ) -> list[tuple[str, float, float, float]]:
     st = state_after_prefix(data, items, prefix, farm_mode, jungle_starter_item_id)
     if st is None:
@@ -211,6 +214,7 @@ def _marginals_for_beam_step(
         eta_lane=eta_lane,
         marginal_income_cap=marginal_income_cap,
         endpoints_only_marginals=endpoints_only_marginals,
+        allow_lane_starter_sell=allow_lane_starter_sell,
     )
     if prefix:
         return ranked_marginal_acquisitions(st, profile, items, epsilon, **margs_kw)
@@ -233,6 +237,7 @@ def _marginals_for_beam_step(
             early_stop,
             extrapolate_lane_waves,
             endpoints_only_marginals,
+            allow_lane_starter_sell,
         )
     return ranked_marginal_acquisitions(st, profile, items, epsilon, **margs_kw)
 
@@ -270,6 +275,8 @@ class FarmBuildSearch:
     extrapolate_lane_waves: bool | None = None
     #: If True, greedy/beam marginals skip standalone components (Long Sword, Tome, …); only endpoints or recipe parents.
     endpoints_only_marginals: bool = False
+    #: If True, greedy hooks may sell Doran's / Dark Seal / … to afford or fit the next marginal buy.
+    allow_lane_starter_sell: bool = True
 
     def run(self) -> tuple[tuple[str, ...], float, SimResult, BeamFarmMetadata | GreedyFarmMetadata]:
         profile = self.data.champions[self.champion_id]
@@ -289,6 +296,7 @@ class FarmBuildSearch:
             eta_lane=self.eta_lane,
             marginal_income_cap=self.marginal_income_cap,
             endpoints_only_marginals=self.endpoints_only_marginals,
+            allow_lane_starter_sell=self.allow_lane_starter_sell,
         )
         if self.leaf_score == "early_dps_auc":
             best_val, res_g = _simulate_greedy_hook_early_dps_auc(
@@ -345,6 +353,7 @@ class FarmBuildSearch:
             self.early_stop,
             self.extrapolate_lane_waves,
             self.endpoints_only_marginals,
+            self.allow_lane_starter_sell,
         )
         if not first_margs:
             meta = GreedyFarmMetadata(epsilon=self.epsilon, purchase_count=len(best_order))
@@ -375,6 +384,7 @@ class FarmBuildSearch:
                     self.early_stop,
                     self.extrapolate_lane_waves,
                     self.endpoints_only_marginals,
+                    self.allow_lane_starter_sell,
                 )
                 for row in margs[:w]:
                     next_id = row[0]
@@ -394,6 +404,7 @@ class FarmBuildSearch:
                         eta_lane=self.eta_lane,
                         marginal_income_cap=self.marginal_income_cap,
                         endpoints_only_marginals=self.endpoints_only_marginals,
+                        allow_lane_starter_sell=self.allow_lane_starter_sell,
                     )
                     if self.leaf_score == "early_dps_auc":
                         fv, res_i = _simulate_greedy_hook_early_dps_auc(
