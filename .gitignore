@@ -73,6 +73,11 @@ dmypy.json
 # Cursor (local agent rules; not shared via this repo)
 .cursor/
 
+# GitHub Copilot config folder.
+.copilot/
+.github-copilot/
+.github/
+
 # OS
 .DS_Store
 Thumbs.db
