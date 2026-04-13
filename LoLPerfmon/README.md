@@ -25,12 +25,12 @@ The **`LoLPerfmon`** directory is a **Python package** (it has `LoLPerfmon/__ini
 
 The main script for **exporting** beam-searched farm builds to a text file is:
 
-**[`LoLPerfmon/scripts/export_gameplay_build_orders.py`](scripts/export_gameplay_build_orders.py)** — documented as the **CLI entry point** for that workflow (writes under `LoLPerfmon/_local/` by default; use `--help` for leaf scores, item tag filters, `--only-champions`, six-slot mode, etc.).
+**[`LoLPerfmon/scripts/export_gameplay_build_orders.py`](scripts/export_gameplay_build_orders.py)** — documented as the **CLI entry point** for that workflow (writes under `LoLPerfmon/.local/` by default; use `--help` for leaf scores, item tag filters, `--only-champions`, six-slot mode, etc.).
 
 ```bash
 # repository root
 python LoLPerfmon/scripts/export_gameplay_build_orders.py --help
-python LoLPerfmon/scripts/export_gameplay_build_orders.py --leaf-score total_farm_gold --out LoLPerfmon/_local/example_builds.txt
+python LoLPerfmon/scripts/export_gameplay_build_orders.py --leaf-score total_farm_gold --out LoLPerfmon/.local/example_builds.txt
 ```
 
 ### Greedy / beam farm build (CLI)

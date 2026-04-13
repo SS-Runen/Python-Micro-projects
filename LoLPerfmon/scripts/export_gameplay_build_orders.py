@@ -2,7 +2,7 @@
 """
 Export beam-searched farm builds to a local file for gameplay reference.
 
-Writes under ``LoLPerfmon/_local/`` (gitignored). Default file
+Writes under ``LoLPerfmon/.local/`` (gitignored). Default file
 ``waveclear_early_dps_lux_quinn_karthus.txt`` uses ``leaf_score=early_dps_auc`` so the beam
 maximizes modeled **∫ effective DPS dt** over ``--early-horizon-seconds``.
 
@@ -49,7 +49,7 @@ DEFAULT_BEAM_DEPTH = 8
 DEFAULT_BEAM_WIDTH = 3
 DEFAULT_MAX_LEAF_EVALS = 626
 DEFAULT_HORIZON_CAP = 48
-DEFAULT_OUT = Path(__file__).resolve().parents[1] / "_local" / "waveclear_early_dps_lux_quinn_karthus.txt"
+DEFAULT_OUT = Path(__file__).resolve().parents[1] / ".local" / "waveclear_early_dps_lux_quinn_karthus.txt"
 DEFAULT_LEAF_SCORE = "early_dps_auc"
 DEFAULT_EARLY_HORIZON = 900.0
 
@@ -88,7 +88,7 @@ REFERENCE: tuple[tuple[str, FarmMode, bool], ...] = (
 
 def main() -> None:
     p = argparse.ArgumentParser(description="Write beam farm buy orders to a local gameplay file.")
-    p.add_argument("--out", type=Path, default=DEFAULT_OUT, help="Output path (default: LoLPerfmon/_local/...)")
+    p.add_argument("--out", type=Path, default=DEFAULT_OUT, help="Output path (default: LoLPerfmon/.local/...)")
     p.add_argument("--t-max", type=float, default=DEFAULT_T_MAX)
     p.add_argument("--beam-depth", type=int, default=DEFAULT_BEAM_DEPTH)
     p.add_argument("--beam-width", type=int, default=DEFAULT_BEAM_WIDTH)
