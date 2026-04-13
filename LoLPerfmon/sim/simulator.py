@@ -21,6 +21,7 @@ from .clear import (
     clear_time_seconds,
     effective_dps,
     jungle_cycle_seconds,
+    lane_available_seconds,
     throughput_ratio,
     wave_gold_if_full_clear,
 )
@@ -588,7 +589,11 @@ def simulate(
             if on_lane_clear_dps is not None:
                 on_lane_clear_dps(t_wave, k, dps)
             ct = clear_time_seconds(wave, game_minute, data, dps)
-            thr = throughput_ratio(ct, rules.wave_interval_seconds) * eta_lane
+            lane_win = lane_available_seconds(
+                rules.wave_interval_seconds,
+                rules.lane_engagement_overhead_seconds,
+            )
+            thr = throughput_ratio(ct, lane_win) * eta_lane
             total_lane_thr_sum += thr
             total_lane_minions_sum += thr * float(wave_minion_count(wave))
             gold_full = wave_gold_if_full_clear(wave, game_minute, data)

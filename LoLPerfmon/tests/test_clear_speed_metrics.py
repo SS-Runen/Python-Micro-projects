@@ -3,7 +3,7 @@
 from __future__ import annotations
 
 from LoLPerfmon.sim.bundle_factory import build_offline_bundle
-from LoLPerfmon.sim.clear import clear_time_seconds, throughput_ratio
+from LoLPerfmon.sim.clear import clear_time_seconds, lane_available_seconds, throughput_ratio
 from LoLPerfmon.sim.clear_speed_metrics import (
     farm_income_per_gold_spent,
     time_to_saturated_farm_throughput,
@@ -88,7 +88,11 @@ def test_tau_matches_inline_lane_callback_offline() -> None:
             return
         gm = t_wave / 60.0
         ct = clear_time_seconds(wave, gm, data, dps)
-        thr = throughput_ratio(ct, rules.wave_interval_seconds)
+        lane_win = lane_available_seconds(
+            rules.wave_interval_seconds,
+            rules.lane_engagement_overhead_seconds,
+        )
+        thr = throughput_ratio(ct, lane_win)
         if thr + 1e-9 >= 1.0:
             first_inline = t_wave
 

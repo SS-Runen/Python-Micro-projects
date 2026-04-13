@@ -56,6 +56,10 @@ class GameRules:
     jungle_base_route_xp: float
     #: Abstract monsters cleared per full route at ``eff=1`` (scale ``eff`` each cycle).
     jungle_monsters_per_route: float = 1.0
+    #: Seconds per wave cycle not available for applying DPS to the wave (spawn/path/range abstraction).
+    lane_engagement_overhead_seconds: float = 0.0
+    #: Extra seconds before a jungle route clear completes (pathing/range abstraction).
+    jungle_engagement_overhead_seconds: float = 0.0
 
 
 @dataclass
@@ -122,6 +126,10 @@ def load_game_data_from_dicts(
         jungle_base_route_gold=float(game["jungle"]["base_route_gold"]),
         jungle_base_route_xp=float(game["jungle"]["base_route_xp"]),
         jungle_monsters_per_route=float(game["jungle"].get("monsters_per_route", 1.0)),
+        lane_engagement_overhead_seconds=float(game.get("lane_engagement_overhead_seconds", 0.0)),
+        jungle_engagement_overhead_seconds=float(
+            game.get("jungle_engagement_overhead_seconds", 0.0)
+        ),
     )
     waves = [
         WaveComposition(

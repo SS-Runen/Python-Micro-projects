@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import TYPE_CHECKING, Any, Mapping
+from typing import TYPE_CHECKING, Any, Literal, Mapping
 
 if TYPE_CHECKING:
     from .spell_farm_model import SpellFarmCoefficients
@@ -38,6 +38,21 @@ def is_pure_shop_component(it: ItemDef) -> bool:
     are bought via full sticker or by crafting parents with ``from_ids``.
     """
     return len(it.from_ids) == 0 and not is_build_endpoint_item(it)
+
+
+def item_graph_role(it: ItemDef) -> Literal["endpoint", "component", "intermediate"]:
+    """
+    Deterministic shop-graph class from Data Dragon recipe fields on :class:`ItemDef`:
+
+    - **endpoint** — ``into_ids`` empty (no further upgrades in this graph).
+    - **component** — no ``from_ids``, not an endpoint (base shop piece, e.g. Long Sword).
+    - **intermediate** — has ``from_ids`` (built from components; may still upgrade).
+    """
+    if is_build_endpoint_item(it):
+        return "endpoint"
+    if is_pure_shop_component(it):
+        return "component"
+    return "intermediate"
 
 
 @dataclass(frozen=True)
@@ -86,6 +101,10 @@ class ChampionProfile:
     bonus_attack_speed_growth: float
     kit: KitParams = field(default_factory=KitParams)
     spell_farm: "SpellFarmCoefficients | None" = None
+    #: Data Dragon ``partype`` (e.g. ``Mana``, ``None``, ``Energy``). Used for mana sustain heuristics.
+    resource_kind: str = "Mana"
+    base_mp_regen: float = 0.0
+    growth_mp_regen: float = 0.0
 
     @staticmethod
     def from_json(obj: Mapping[str, Any]) -> ChampionProfile:
@@ -117,6 +136,9 @@ class ChampionProfile:
             bonus_attack_speed_growth=float(obj["bonus_attack_speed_growth"]),
             kit=kit,
             spell_farm=None,
+            resource_kind=str(obj.get("resource_kind", "Mana")),
+            base_mp_regen=float(obj.get("base_mp_regen", 0.0)),
+            growth_mp_regen=float(obj.get("growth_mp_regen", 0.0)),
         )
 
 

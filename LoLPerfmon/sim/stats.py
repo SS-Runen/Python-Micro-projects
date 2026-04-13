@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from dataclasses import dataclass, field
+from dataclasses import dataclass
 from typing import Mapping
 
 from .models import ChampionProfile, ItemDef
@@ -22,6 +22,10 @@ class StatDelta:
 class StatBlock:
     attack_damage: float
     ability_power: float
+    #: ``attack_damage`` minus champion intrinsic AD at this level (no items); League-style bonus AD.
+    bonus_attack_damage: float
+    #: ``ability_power`` minus champion intrinsic AP at this level (no items); used for bonus-AP spell scalings.
+    bonus_ability_power: float
     attack_speed: float
     ability_haste: float
     health: float
@@ -95,9 +99,15 @@ def total_stats(profile: ChampionProfile, level: int, inventory: tuple[str, ...]
         delta.bonus_attack_speed_fraction,
         level,
     )
+    ad_base = growth_stat(profile.base_attack_damage, profile.growth_attack_damage, 0.0, level)
+    ap_base = growth_stat(profile.base_ability_power, profile.growth_ability_power, 0.0, level)
+    bonus_ad = max(0.0, ad - ad_base)
+    bonus_ap = max(0.0, ap - ap_base)
     return StatBlock(
         attack_damage=ad,
         ability_power=ap,
+        bonus_attack_damage=bonus_ad,
+        bonus_ability_power=bonus_ap,
         attack_speed=attack_speed,
         ability_haste=ah,
         health=hp,

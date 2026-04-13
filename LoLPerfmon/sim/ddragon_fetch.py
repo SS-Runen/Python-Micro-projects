@@ -197,6 +197,16 @@ def champion_index_for_version(version: str, timeout: float = 25.0) -> ChampionD
     return idx
 
 
+def resolve_champion_key_for_version(user: str, version: str, timeout: float = 25.0) -> str | None:
+    """
+    Map a display name or loose string (e.g. ``Lux``, ``lux``, ``Lee Sin``) to the Data Dragon
+    **champion id** used in URLs and bundle keys (e.g. ``LeeSin``). Returns ``None`` if the
+    index cannot be loaded or the name is unknown.
+    """
+    idx = champion_index_for_version(version, timeout=timeout)
+    return None if idx is None else idx.resolve(user)
+
+
 def clear_champion_index_cache() -> None:
     """Test hook: reset cached indices (e.g. after monkeypatching fetch)."""
     _champion_index_cache.clear()
@@ -364,6 +374,9 @@ def champion_profile_from_ddragon(champion_key: str, raw: dict[str, Any]) -> Cha
     as_ratio = 0.625
     bonus_as_growth = aspl / 100.0 if aspl > 0.5 else 0.03
     cid = champion_key.lower()
+    partype = str(raw.get("partype") or "Mana")
+    mpreg = float(s.get("mpregen", 0.0))
+    mpregpl = float(s.get("mpregenperlevel", 0.0))
     return ChampionProfile(
         id=cid,
         base_health=hp,
@@ -383,6 +396,9 @@ def champion_profile_from_ddragon(champion_key: str, raw: dict[str, Any]) -> Cha
         bonus_attack_speed_growth=bonus_as_growth,
         kit=kit,
         spell_farm=spell_farm,
+        resource_kind=partype,
+        base_mp_regen=mpreg,
+        growth_mp_regen=mpregpl,
     )
 
 

@@ -61,6 +61,9 @@ def _offline_generic_ap_carry() -> ChampionProfile:
             auto_attack_clear_weight=0.0,
         ),
         spell_farm=None,
+        resource_kind="Mana",
+        base_mp_regen=8.0,
+        growth_mp_regen=0.8,
     )
 
 
@@ -113,6 +116,8 @@ def _rules(patch_label: str) -> GameRules:
         jungle_base_route_gold=SR_JUNGLE_BASE_ROUTE_GOLD,
         jungle_base_route_xp=SR_JUNGLE_BASE_ROUTE_XP,
         jungle_monsters_per_route=1.0,
+        lane_engagement_overhead_seconds=0.0,
+        jungle_engagement_overhead_seconds=0.0,
     )
 
 

@@ -12,7 +12,7 @@ import numpy as np
 import pandas as pd
 from scipy.optimize import approx_fprime
 
-from .clear import effective_dps, wave_gold_if_full_clear, wave_hp_budget
+from .clear import effective_dps, lane_available_seconds, wave_gold_if_full_clear, wave_hp_budget
 from .config import FarmMode
 from .data_loader import GameDataBundle, GameRules, WaveComposition, wave_minion_count
 from .models import ChampionProfile
@@ -51,11 +51,14 @@ def _lane_tick_gold_array(
     eta_lane: float,
 ) -> np.ndarray:
     rules = data.rules
-    wi = rules.wave_interval_seconds
+    lane_win = lane_available_seconds(
+        rules.wave_interval_seconds,
+        rules.lane_engagement_overhead_seconds,
+    )
     hp = wave_hp_budget(wave, game_minute, data)
     dps = np.maximum(dps_vec, 1e-9)
     ct = hp / dps
-    thr = np.minimum(1.0, wi / np.maximum(ct, 1e-9)) * eta_lane
+    thr = np.minimum(1.0, lane_win / np.maximum(ct, 1e-9)) * eta_lane
     gold_full = wave_gold_if_full_clear(wave, game_minute, data)
     return (gold_full * thr).astype(np.float64, copy=False)
 
@@ -68,11 +71,14 @@ def _lane_tick_minions_array(
     eta_lane: float,
 ) -> np.ndarray:
     rules = data.rules
-    wi = rules.wave_interval_seconds
+    lane_win = lane_available_seconds(
+        rules.wave_interval_seconds,
+        rules.lane_engagement_overhead_seconds,
+    )
     hp = wave_hp_budget(wave, game_minute, data)
     dps = np.maximum(dps_vec, 1e-9)
     ct = hp / dps
-    thr = np.minimum(1.0, wi / np.maximum(ct, 1e-9)) * eta_lane
+    thr = np.minimum(1.0, lane_win / np.maximum(ct, 1e-9)) * eta_lane
     nm = float(wave_minion_count(wave))
     return (thr * nm).astype(np.float64, copy=False)
 
@@ -134,14 +140,18 @@ def jungle_route_tick_gold_from_dps(dps: float, rules: GameRules) -> float:
 
 def jungle_route_tick_gold_vec(dps_vec: np.ndarray, rules: GameRules) -> np.ndarray:
     dps = np.maximum(dps_vec, 1e-9)
-    cycle = rules.jungle_base_cycle_seconds * 80.0 / dps
+    cycle = rules.jungle_base_cycle_seconds * 80.0 / dps + max(
+        0.0, rules.jungle_engagement_overhead_seconds
+    )
     eff = np.minimum(1.0, rules.jungle_base_cycle_seconds / np.maximum(cycle, 1e-9))
     return (rules.jungle_base_route_gold * eff).astype(np.float64, copy=False)
 
 
 def jungle_route_tick_monsters_vec(dps_vec: np.ndarray, rules: GameRules) -> np.ndarray:
     dps = np.maximum(dps_vec, 1e-9)
-    cycle = rules.jungle_base_cycle_seconds * 80.0 / dps
+    cycle = rules.jungle_base_cycle_seconds * 80.0 / dps + max(
+        0.0, rules.jungle_engagement_overhead_seconds
+    )
     eff = np.minimum(1.0, rules.jungle_base_cycle_seconds / np.maximum(cycle, 1e-9))
     return (eff * float(rules.jungle_monsters_per_route)).astype(np.float64, copy=False)
 

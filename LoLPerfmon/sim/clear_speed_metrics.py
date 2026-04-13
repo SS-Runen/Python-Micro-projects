@@ -20,7 +20,7 @@ first reaches **≈1** (within ``saturate_eps``).
 
 from __future__ import annotations
 
-from .clear import clear_time_seconds, throughput_ratio
+from .clear import clear_time_seconds, lane_available_seconds, throughput_ratio
 from .config import FarmMode
 from .data_loader import GameDataBundle
 from .simulator import PurchasePolicy, SimResult, simulate
@@ -58,7 +58,11 @@ def time_to_saturated_farm_throughput(
             return
         gm = t_wave / 60.0
         ct = clear_time_seconds(wave, gm, data, dps)
-        thr = throughput_ratio(ct, rules.wave_interval_seconds) * eta_lane
+        lane_win = lane_available_seconds(
+            rules.wave_interval_seconds,
+            rules.lane_engagement_overhead_seconds,
+        )
+        thr = throughput_ratio(ct, lane_win) * eta_lane
         if thr + saturate_eps >= 1.0:
             first_t = t_wave
 
