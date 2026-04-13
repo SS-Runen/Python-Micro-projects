@@ -27,6 +27,17 @@ def is_build_endpoint_item(it: ItemDef) -> bool:
     return len(it.into_ids) == 0
 
 
+def is_pure_shop_component(it: ItemDef) -> bool:
+    """
+    **Component** in the shop graph: no recipe ``from`` (not built from smaller shop pieces here)
+    but ``into`` is non-empty, so it still upgrades (e.g. Long Sword, Amplifying Tome).
+
+    Excluded from greedy marginals when ``endpoints_only_marginals`` is True; finished items
+    are bought via full sticker or by crafting parents with ``from_ids``.
+    """
+    return len(it.from_ids) == 0 and not is_build_endpoint_item(it)
+
+
 @dataclass(frozen=True)
 class StatBonus:
     attack_damage: float = 0.0

@@ -12,7 +12,7 @@ from .clear import effective_dps
 from .config import FarmMode
 from .data_loader import GameDataBundle
 from .marginal_farm_tick import marginal_farm_gold_per_tick_derivative
-from .models import ChampionProfile, ItemDef, is_build_endpoint_item
+from .models import ChampionProfile, ItemDef, is_build_endpoint_item, is_pure_shop_component
 from .simulator import (
     MAX_INVENTORY_SLOTS,
     PurchasePolicy,
@@ -37,6 +37,26 @@ def _snapshot_state(s: SimulationState) -> SimulationState:
     )
 
 
+def _recipe_craft_burst(
+    state: SimulationState,
+    items: dict,
+    order_sink: list[str] | None,
+) -> None:
+    """Apply any affordable recipe combines (parents with ``from_ids``) until none succeed in a pass."""
+    while True:
+        progressed = False
+        for pid in sorted(items.keys()):
+            it = items[pid]
+            if not it.from_ids:
+                continue
+            if acquire_goal(state, pid, items):
+                progressed = True
+                if order_sink is not None:
+                    order_sink.append(pid)
+        if not progressed:
+            break
+
+
 def _marginal_candidates(
     state: SimulationState,
     profile: ChampionProfile,
@@ -47,6 +67,7 @@ def _marginal_candidates(
     farm_mode: FarmMode = FarmMode.LANE,
     eta_lane: float = 1.0,
     marginal_income_cap: bool = True,
+    endpoints_only_marginals: bool = False,
 ) -> list[tuple[str, float, float, float]]:
     """
     One pass over ``items``: acquisitions that succeed on a snapshot and pass marginal rules.
@@ -55,6 +76,10 @@ def _marginal_candidates(
     With ``marginal_income_cap`` and ``data`` set, score uses a first-order farm tick estimate
     ``(d tick_gold / d dps) * Δdps / gold_paid`` (SciPy ``approx_fprime`` on capped throughput);
     candidates with negligible marginal farm gold per tick are dropped even if Δdps > 0.
+
+    With ``endpoints_only_marginals``, skips **pure shop components** (no ``from``, non-empty
+    ``into``) so the shop only adds endpoints or recipe parents (``from_ids`` non-empty), i.e.
+    full buys or crafts—not standalone Long Swords / Tomes.
     """
     base_stats = total_stats(profile, state.level, tuple(state.inventory), items)
     dps0 = effective_dps(profile, state.level, base_stats)
@@ -66,6 +91,8 @@ def _marginal_candidates(
         if iid in state.blocked_purchase_ids:
             continue
         it_def = items[iid]
+        if endpoints_only_marginals and is_pure_shop_component(it_def):
+            continue
         if inventory_count(state.inventory, iid) >= it_def.max_inventory_copies:
             continue
         trial = _snapshot_state(state)
@@ -110,6 +137,7 @@ def ranked_marginal_acquisitions(
     farm_mode: FarmMode = FarmMode.LANE,
     eta_lane: float = 1.0,
     marginal_income_cap: bool = True,
+    endpoints_only_marginals: bool = False,
 ) -> list[tuple[str, float, float, float]]:
     """Sorted best-first: score desc, delta desc, item_id asc."""
     cands = _marginal_candidates(
@@ -121,6 +149,7 @@ def ranked_marginal_acquisitions(
         farm_mode=farm_mode,
         eta_lane=eta_lane,
         marginal_income_cap=marginal_income_cap,
+        endpoints_only_marginals=endpoints_only_marginals,
     )
     cands.sort(key=lambda t: (-t[1], -t[2], t[0]))
     return cands
@@ -138,9 +167,11 @@ def _greedy_purchase_burst(
     farm_mode: FarmMode = FarmMode.LANE,
     eta_lane: float = 1.0,
     marginal_income_cap: bool = True,
+    endpoints_only_marginals: bool = False,
 ) -> None:
     if defer_purchases_until is not None and state.time_seconds + 1e-9 < defer_purchases_until:
         return
+    _recipe_craft_burst(state, items, order_sink)
     while True:
         cands = _marginal_candidates(
             state,
@@ -151,6 +182,7 @@ def _greedy_purchase_burst(
             farm_mode=farm_mode,
             eta_lane=eta_lane,
             marginal_income_cap=marginal_income_cap,
+            endpoints_only_marginals=endpoints_only_marginals,
         )
         best = _pick_best_marginal(cands)
         if best is None:
@@ -159,6 +191,7 @@ def _greedy_purchase_burst(
             break
         if order_sink is not None:
             order_sink.append(best)
+        _recipe_craft_burst(state, items, order_sink)
 
 
 def make_early_stop_full_inventory_no_dps_marginal(
@@ -226,6 +259,7 @@ def make_greedy_hook(
     farm_mode: FarmMode = FarmMode.LANE,
     eta_lane: float = 1.0,
     marginal_income_cap: bool = True,
+    endpoints_only_marginals: bool = False,
 ) -> Callable[[SimulationState], None]:
     def purchase_hook(state: SimulationState) -> None:
         _greedy_purchase_burst(
@@ -239,6 +273,7 @@ def make_greedy_hook(
             farm_mode=farm_mode,
             eta_lane=eta_lane,
             marginal_income_cap=marginal_income_cap,
+            endpoints_only_marginals=endpoints_only_marginals,
         )
 
     return purchase_hook
@@ -259,6 +294,7 @@ def make_forced_prefix_then_greedy_hook(
     farm_mode: FarmMode = FarmMode.LANE,
     eta_lane: float = 1.0,
     marginal_income_cap: bool = True,
+    endpoints_only_marginals: bool = False,
 ) -> Callable[[SimulationState], None]:
     forced: deque[str] = deque(forced_prefix)
 
@@ -280,6 +316,7 @@ def make_forced_prefix_then_greedy_hook(
                     order_sink.append(fid)
             else:
                 return
+        _recipe_craft_burst(state, items, order_sink)
         _greedy_purchase_burst(
             state,
             profile,
@@ -291,6 +328,7 @@ def make_forced_prefix_then_greedy_hook(
             farm_mode=farm_mode,
             eta_lane=eta_lane,
             marginal_income_cap=marginal_income_cap,
+            endpoints_only_marginals=endpoints_only_marginals,
         )
 
     return purchase_hook
@@ -428,6 +466,7 @@ def beam_refined_farm_build(
     early_horizon_seconds: float = 900.0,
     early_stop: Callable[[SimulationState], bool] | None = None,
     extrapolate_lane_waves: bool | None = None,
+    endpoints_only_marginals: bool = False,
 ) -> tuple[tuple[str, ...], float, SimResult, BeamFarmMetadata | GreedyFarmMetadata]:
     """
     Beam search over purchase prefixes (depth ``beam_depth``, width ``beam_width``).
@@ -459,6 +498,7 @@ def beam_refined_farm_build(
         early_horizon_seconds=early_horizon_seconds,
         early_stop=early_stop,
         extrapolate_lane_waves=extrapolate_lane_waves,
+        endpoints_only_marginals=endpoints_only_marginals,
     )
     return search.run()
 
@@ -467,6 +507,7 @@ __all__ = [
     "BeamFarmMetadata",
     "GreedyFarmMetadata",
     "beam_refined_farm_build",
+    "ranked_marginal_acquisitions",
     "greedy_farm_build",
     "greedy_farm_build_waveclear_dps_saturation",
     "make_early_stop_full_inventory_no_dps_marginal",
@@ -474,5 +515,4 @@ __all__ = [
     "make_forced_prefix_then_greedy_hook",
     "make_greedy_hook",
     "make_greedy_lane_hook",
-    "ranked_marginal_acquisitions",
 ]

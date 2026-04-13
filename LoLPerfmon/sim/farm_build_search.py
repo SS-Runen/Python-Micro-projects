@@ -127,6 +127,7 @@ def _ranked_horizon_next_items(
     marginal_income_cap: bool,
     early_stop: Callable[[SimulationState], bool] | None = None,
     extrapolate_lane_waves: bool | None = None,
+    endpoints_only_marginals: bool = False,
 ) -> list[tuple[str, float, float, float]]:
     """Rank next purchases by Δtotal_farm_gold vs baseline greedy (nested full sims)."""
     dps_ranked = ranked_marginal_acquisitions(
@@ -138,6 +139,7 @@ def _ranked_horizon_next_items(
         farm_mode=farm_mode,
         eta_lane=eta_lane,
         marginal_income_cap=marginal_income_cap,
+        endpoints_only_marginals=endpoints_only_marginals,
     )
     cap = max(horizon_candidate_cap, 4)
     candidate_ids = [r[0] for r in dps_ranked[:cap]]
@@ -157,6 +159,7 @@ def _ranked_horizon_next_items(
             farm_mode=farm_mode,
             eta_lane=eta_lane,
             marginal_income_cap=marginal_income_cap,
+            endpoints_only_marginals=endpoints_only_marginals,
         )
         res_i = simulate(
             data,
@@ -197,6 +200,7 @@ def _marginals_for_beam_step(
     marginal_income_cap: bool = True,
     early_stop: Callable[[SimulationState], bool] | None = None,
     extrapolate_lane_waves: bool | None = None,
+    endpoints_only_marginals: bool = False,
 ) -> list[tuple[str, float, float, float]]:
     st = state_after_prefix(data, items, prefix, farm_mode, jungle_starter_item_id)
     if st is None:
@@ -206,6 +210,7 @@ def _marginals_for_beam_step(
         farm_mode=farm_mode,
         eta_lane=eta_lane,
         marginal_income_cap=marginal_income_cap,
+        endpoints_only_marginals=endpoints_only_marginals,
     )
     if prefix:
         return ranked_marginal_acquisitions(st, profile, items, epsilon, **margs_kw)
@@ -227,6 +232,7 @@ def _marginals_for_beam_step(
             marginal_income_cap,
             early_stop,
             extrapolate_lane_waves,
+            endpoints_only_marginals,
         )
     return ranked_marginal_acquisitions(st, profile, items, epsilon, **margs_kw)
 
@@ -262,6 +268,8 @@ class FarmBuildSearch:
     early_stop: Callable[[SimulationState], bool] | None = None
     #: Passed to :func:`simulate`; ``None`` means infer from ``t_max`` (see simulator).
     extrapolate_lane_waves: bool | None = None
+    #: If True, greedy/beam marginals skip standalone components (Long Sword, Tome, …); only endpoints or recipe parents.
+    endpoints_only_marginals: bool = False
 
     def run(self) -> tuple[tuple[str, ...], float, SimResult, BeamFarmMetadata | GreedyFarmMetadata]:
         profile = self.data.champions[self.champion_id]
@@ -280,6 +288,7 @@ class FarmBuildSearch:
             farm_mode=self.farm_mode,
             eta_lane=self.eta_lane,
             marginal_income_cap=self.marginal_income_cap,
+            endpoints_only_marginals=self.endpoints_only_marginals,
         )
         if self.leaf_score == "early_dps_auc":
             best_val, res_g = _simulate_greedy_hook_early_dps_auc(
@@ -335,6 +344,7 @@ class FarmBuildSearch:
             self.marginal_income_cap,
             self.early_stop,
             self.extrapolate_lane_waves,
+            self.endpoints_only_marginals,
         )
         if not first_margs:
             meta = GreedyFarmMetadata(epsilon=self.epsilon, purchase_count=len(best_order))
@@ -364,6 +374,7 @@ class FarmBuildSearch:
                     self.marginal_income_cap,
                     self.early_stop,
                     self.extrapolate_lane_waves,
+                    self.endpoints_only_marginals,
                 )
                 for row in margs[:w]:
                     next_id = row[0]
@@ -382,6 +393,7 @@ class FarmBuildSearch:
                         farm_mode=self.farm_mode,
                         eta_lane=self.eta_lane,
                         marginal_income_cap=self.marginal_income_cap,
+                        endpoints_only_marginals=self.endpoints_only_marginals,
                     )
                     if self.leaf_score == "early_dps_auc":
                         fv, res_i = _simulate_greedy_hook_early_dps_auc(

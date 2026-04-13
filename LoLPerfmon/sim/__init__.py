@@ -21,7 +21,7 @@ from .greedy_farm_build import (
     make_early_stop_six_build_endpoints,
     ranked_marginal_acquisitions,
 )
-from .models import is_build_endpoint_item
+from .models import is_build_endpoint_item, is_pure_shop_component
 from .marginal_clear import clear_upgrade_report
 from .ddragon_spell_parse import base_ability_dps_hint_from_mean_cooldown, parse_champion_spells
 from .clear import lane_clear_dps
@@ -75,6 +75,7 @@ __all__ = [
     "ranked_marginal_acquisitions",
     "make_early_stop_six_build_endpoints",
     "is_build_endpoint_item",
+    "is_pure_shop_component",
     "clear_upgrade_report",
     "acquire_goal",
     "blocked_purchase_ids_from_inventory",
