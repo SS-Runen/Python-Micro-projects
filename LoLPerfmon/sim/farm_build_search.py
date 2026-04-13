@@ -11,10 +11,18 @@ from .config import FarmMode
 from .data_loader import GameDataBundle
 from .models import ChampionProfile
 from .jungle_items import resolve_jungle_starter_item_id
-from .simulator import PurchasePolicy, SimResult, SimulationState, acquire_goal, simulate
+from .simulator import (
+    PurchasePolicy,
+    SimResult,
+    SimulationState,
+    acquire_goal,
+    default_clear_count_score,
+    simulate,
+)
 from .greedy_farm_build import (
     BeamFarmMetadata,
     GreedyFarmMetadata,
+    MarginalTickObjective,
     make_forced_prefix_then_greedy_hook,
     make_greedy_hook,
     ranked_marginal_acquisitions,
@@ -22,7 +30,17 @@ from .greedy_farm_build import (
 from .purchase_metrics import auc_effective_dps_piecewise
 
 MarginalObjective = Literal["dps_per_gold", "horizon_greedy_roi"]
-LeafScore = Literal["total_farm_gold", "early_dps_auc", "farm_gold_per_gold_spent"]
+LeafScore = Literal["total_farm_gold", "early_dps_auc", "farm_gold_per_gold_spent", "total_clear_units"]
+
+
+def _leaf_primary_value(
+    res: SimResult, leaf_score: LeafScore, farm_mode: FarmMode, epsilon: float
+) -> float:
+    if leaf_score == "farm_gold_per_gold_spent":
+        return _farm_gold_per_gold_spent(res, epsilon)
+    if leaf_score == "total_clear_units":
+        return default_clear_count_score(res, farm_mode)
+    return res.total_farm_gold
 
 
 def _farm_gold_per_gold_spent(res: SimResult, epsilon: float) -> float:
@@ -125,6 +143,8 @@ def _ranked_horizon_next_items(
     horizon_candidate_cap: int,
     jungle_starter_item_id: str | None,
     marginal_income_cap: bool,
+    marginal_tick_objective: MarginalTickObjective,
+    leaf_score: LeafScore,
     early_stop: Callable[[SimulationState], bool] | None = None,
     extrapolate_lane_waves: bool | None = None,
     endpoints_only_marginals: bool = False,
@@ -132,7 +152,7 @@ def _ranked_horizon_next_items(
     allow_sell_non_starter_items: bool = False,
     use_level_weighted_marginal: bool = False,
 ) -> list[tuple[str, float, float, float]]:
-    """Rank next purchases by Δtotal_farm_gold vs baseline greedy (nested full sims)."""
+    """Rank next purchases by Δleaf_primary vs baseline greedy (nested full sims)."""
     dps_ranked = ranked_marginal_acquisitions(
         state,
         profile,
@@ -142,6 +162,7 @@ def _ranked_horizon_next_items(
         farm_mode=farm_mode,
         eta_lane=eta_lane,
         marginal_income_cap=marginal_income_cap,
+        marginal_tick_objective=marginal_tick_objective,
         endpoints_only_marginals=endpoints_only_marginals,
         allow_lane_starter_sell=allow_lane_starter_sell,
         allow_sell_non_starter_items=allow_sell_non_starter_items,
@@ -165,6 +186,7 @@ def _ranked_horizon_next_items(
             farm_mode=farm_mode,
             eta_lane=eta_lane,
             marginal_income_cap=marginal_income_cap,
+            marginal_tick_objective=marginal_tick_objective,
             endpoints_only_marginals=endpoints_only_marginals,
             allow_lane_starter_sell=allow_lane_starter_sell,
             allow_sell_non_starter_items=allow_sell_non_starter_items,
@@ -183,10 +205,12 @@ def _ranked_horizon_next_items(
             early_stop=early_stop,
             extrapolate_lane_waves=extrapolate_lane_waves,
         )
-        delta_farm = res_i.total_farm_gold - baseline_res.total_farm_gold
+        delta_primary = _leaf_primary_value(res_i, leaf_score, farm_mode, epsilon) - _leaf_primary_value(
+            baseline_res, leaf_score, farm_mode, epsilon
+        )
         paid = items[iid].total_cost if iid in items else 0.0
-        score = delta_farm / max(paid, epsilon)
-        rows.append((iid, score, delta_farm, paid))
+        score = delta_primary / max(paid, epsilon)
+        rows.append((iid, score, delta_primary, paid))
     rows.sort(key=lambda t: (-t[1], -t[2], t[0]))
     return rows
 
@@ -207,6 +231,8 @@ def _marginals_for_beam_step(
     horizon_candidate_cap: int,
     jungle_starter_item_id: str | None = None,
     marginal_income_cap: bool = True,
+    marginal_tick_objective: MarginalTickObjective = "farm_gold",
+    leaf_score: LeafScore = "total_farm_gold",
     early_stop: Callable[[SimulationState], bool] | None = None,
     extrapolate_lane_waves: bool | None = None,
     endpoints_only_marginals: bool = False,
@@ -222,6 +248,7 @@ def _marginals_for_beam_step(
         farm_mode=farm_mode,
         eta_lane=eta_lane,
         marginal_income_cap=marginal_income_cap,
+        marginal_tick_objective=marginal_tick_objective,
         endpoints_only_marginals=endpoints_only_marginals,
         allow_lane_starter_sell=allow_lane_starter_sell,
         allow_sell_non_starter_items=allow_sell_non_starter_items,
@@ -245,6 +272,8 @@ def _marginals_for_beam_step(
             horizon_candidate_cap,
             jungle_starter_item_id,
             marginal_income_cap,
+            marginal_tick_objective,
+            leaf_score,
             early_stop,
             extrapolate_lane_waves,
             endpoints_only_marginals,
@@ -261,6 +290,9 @@ class FarmBuildSearch:
     Beam search over purchase prefixes. Default leaf score is full-horizon ``total_farm_gold``;
     set ``leaf_score='early_dps_auc'`` to maximize ∫ effective_dps dt over ``early_horizon_seconds``;
     set ``leaf_score='farm_gold_per_gold_spent'`` to maximize ``total_farm_gold / total_gold_spent_on_items``.
+    Set ``leaf_score='total_clear_units'`` to maximize lane minions or jungle monsters cleared
+    (uses :func:`~LoLPerfmon.sim.simulator.default_clear_count_score`; greedy marginals use clear-count
+    tick derivatives unless overridden by ``marginal_tick_objective``).
     """
 
     data: GameDataBundle
@@ -279,6 +311,8 @@ class FarmBuildSearch:
     jungle_starter_item_id: str | None = None
     #: If True, greedy marginals skip purchases with negligible marginal farm gold (capped throughput).
     marginal_income_cap: bool = True
+    #: ``farm_gold`` vs ``clear_count`` tick derivative for capped marginals (see :mod:`marginal_farm_tick`).
+    marginal_tick_objective: MarginalTickObjective = "farm_gold"
     leaf_score: LeafScore = "total_farm_gold"
     #: Upper bound of ∫ DPS dt when ``leaf_score == 'early_dps_auc'`` (seconds of simulated time).
     early_horizon_seconds: float = 900.0
@@ -300,6 +334,9 @@ class FarmBuildSearch:
         items = self.data.items
         d = max(1, self.beam_depth)
         w = max(1, self.beam_width)
+        eff_mtick: MarginalTickObjective = (
+            "clear_count" if self.leaf_score == "total_clear_units" else self.marginal_tick_objective
+        )
 
         order_g: list[str] = []
         hook_g = make_greedy_hook(
@@ -312,6 +349,7 @@ class FarmBuildSearch:
             farm_mode=self.farm_mode,
             eta_lane=self.eta_lane,
             marginal_income_cap=self.marginal_income_cap,
+            marginal_tick_objective=eff_mtick,
             endpoints_only_marginals=self.endpoints_only_marginals,
             allow_lane_starter_sell=self.allow_lane_starter_sell,
             allow_sell_non_starter_items=self.allow_sell_non_starter_items,
@@ -347,6 +385,8 @@ class FarmBuildSearch:
             )
             if self.leaf_score == "farm_gold_per_gold_spent":
                 best_val = _farm_gold_per_gold_spent(res_g, self.epsilon)
+            elif self.leaf_score == "total_clear_units":
+                best_val = default_clear_count_score(res_g, self.farm_mode)
             else:
                 best_val = res_g.total_farm_gold
         leaves_evaluated = 1
@@ -369,6 +409,8 @@ class FarmBuildSearch:
             self.horizon_candidate_cap,
             self.jungle_starter_item_id,
             self.marginal_income_cap,
+            eff_mtick,
+            self.leaf_score,
             self.early_stop,
             self.extrapolate_lane_waves,
             self.endpoints_only_marginals,
@@ -402,6 +444,8 @@ class FarmBuildSearch:
                     self.horizon_candidate_cap,
                     self.jungle_starter_item_id,
                     self.marginal_income_cap,
+                    eff_mtick,
+                    self.leaf_score,
                     self.early_stop,
                     self.extrapolate_lane_waves,
                     self.endpoints_only_marginals,
@@ -426,6 +470,7 @@ class FarmBuildSearch:
                         farm_mode=self.farm_mode,
                         eta_lane=self.eta_lane,
                         marginal_income_cap=self.marginal_income_cap,
+                        marginal_tick_objective=eff_mtick,
                         endpoints_only_marginals=self.endpoints_only_marginals,
                         allow_lane_starter_sell=self.allow_lane_starter_sell,
                         allow_sell_non_starter_items=self.allow_sell_non_starter_items,
@@ -461,6 +506,8 @@ class FarmBuildSearch:
                         )
                         if self.leaf_score == "farm_gold_per_gold_spent":
                             fv = _farm_gold_per_gold_spent(res_i, self.epsilon)
+                        elif self.leaf_score == "total_clear_units":
+                            fv = default_clear_count_score(res_i, self.farm_mode)
                         else:
                             fv = res_i.total_farm_gold
                     leaves_evaluated += 1

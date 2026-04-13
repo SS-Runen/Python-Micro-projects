@@ -87,6 +87,11 @@ def optimal_interleaved_build(
 
     This matches the recipe-aware simulator: goals are satisfied in order; crafts trigger when the
     inventory holds the full ``from`` multiset.
+
+    For **clear-count** optimization, pass ``score`` as a callable that uses
+    :func:`~LoLPerfmon.sim.simulator.default_clear_count_score` with the same ``farm_mode``
+    argument (see :class:`~LoLPerfmon.sim.simulator.SimResult` ``total_lane_minions_cleared`` /
+    ``total_jungle_monsters_cleared``) instead of :func:`~LoLPerfmon.sim.simulator.default_build_optimizer_score`.
     """
     items = data.items
     for rid in root_item_ids:
@@ -122,6 +127,8 @@ def optimal_build_for_item_order_roots(
     Compare every **order of root items** (e.g. mythic vs boots), expanding each root with
     :func:`acquisition_postorder_for_item`, concatenating whole blocks in permuted order.
     Does **not** interleave component steps across roots; use :func:`optimal_interleaved_build` for that.
+
+    Pass ``score`` as for :func:`optimal_interleaved_build` when optimizing minion/monster clears.
     """
     items = data.items
     per_root = tuple(acquisition_postorder_for_item(r, items) for r in root_item_ids)

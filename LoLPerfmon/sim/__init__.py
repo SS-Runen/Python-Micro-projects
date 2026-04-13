@@ -16,6 +16,7 @@ from .farm_build_search import FarmBuildSearch
 from .greedy_farm_build import (
     BeamFarmMetadata,
     GreedyFarmMetadata,
+    MarginalTickObjective,
     beam_refined_farm_build,
     greedy_farm_build,
     make_early_stop_six_build_endpoints,
@@ -26,10 +27,10 @@ from .marginal_clear import clear_upgrade_report
 from .ddragon_spell_parse import base_ability_dps_hint_from_mean_cooldown, parse_champion_spells
 from .clear import lane_clear_dps
 from .config import FarmMode, GameConfig
-from .data_loader import GameDataBundle, load_game_data
+from .data_loader import GameDataBundle, load_game_data, wave_minion_count
 from .optimizer import best_item_order_exhaustive
 from .passive import passive_accumulated, passive_gold_in_interval
-from .purchase_metrics import compare_purchase_timing, marginal_farm_rate
+from .purchase_metrics import compare_purchase_timing, marginal_farm_rate, total_clear_units
 from .sell_economy import STANDARD_SHOP_SELL_REFUND_FRACTION, shop_sell_refund_gold
 from .stats import (
     StatBlock,
@@ -47,6 +48,7 @@ from .simulator import (
     acquire_goal,
     blocked_purchase_ids_from_inventory,
     default_build_optimizer_score,
+    default_clear_count_score,
     sell_item_once,
     simulate,
 )
@@ -67,10 +69,12 @@ __all__ = [
     "champion_index_from_list_payload",
     "build_offline_bundle",
     "load_game_data",
+    "wave_minion_count",
     "acquisition_postorder_for_item",
     "acquisition_sequence_for_finished_roots",
     "BeamFarmMetadata",
     "GreedyFarmMetadata",
+    "MarginalTickObjective",
     "FarmBuildSearch",
     "beam_refined_farm_build",
     "greedy_farm_build",
@@ -100,7 +104,9 @@ __all__ = [
     "SimulationState",
     "MAX_INVENTORY_SLOTS",
     "default_build_optimizer_score",
+    "default_clear_count_score",
     "simulate",
     "compare_purchase_timing",
     "marginal_farm_rate",
+    "total_clear_units",
 ]

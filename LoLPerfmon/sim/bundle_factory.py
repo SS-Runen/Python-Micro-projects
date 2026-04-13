@@ -112,6 +112,7 @@ def _rules(patch_label: str) -> GameRules:
         jungle_base_cycle_seconds=SR_JUNGLE_BASE_CYCLE_SECONDS,
         jungle_base_route_gold=SR_JUNGLE_BASE_ROUTE_GOLD,
         jungle_base_route_xp=SR_JUNGLE_BASE_ROUTE_XP,
+        jungle_monsters_per_route=1.0,
     )
 
 

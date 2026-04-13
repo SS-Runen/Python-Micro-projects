@@ -34,6 +34,11 @@ class WaveComposition:
     siege: int
 
 
+def wave_minion_count(wave: WaveComposition) -> int:
+    """Total lane minions in one wave composition (deterministic model; no cannon RNG)."""
+    return wave.melee + wave.caster + wave.siege
+
+
 @dataclass(frozen=True)
 class GameRules:
     patch_version: str
@@ -49,6 +54,8 @@ class GameRules:
     jungle_base_cycle_seconds: float
     jungle_base_route_gold: float
     jungle_base_route_xp: float
+    #: Abstract monsters cleared per full route at ``eff=1`` (scale ``eff`` each cycle).
+    jungle_monsters_per_route: float = 1.0
 
 
 @dataclass
@@ -114,6 +121,7 @@ def load_game_data_from_dicts(
         jungle_base_cycle_seconds=float(game["jungle"]["base_cycle_seconds"]),
         jungle_base_route_gold=float(game["jungle"]["base_route_gold"]),
         jungle_base_route_xp=float(game["jungle"]["base_route_xp"]),
+        jungle_monsters_per_route=float(game["jungle"].get("monsters_per_route", 1.0)),
     )
     waves = [
         WaveComposition(

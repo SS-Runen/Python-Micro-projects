@@ -47,6 +47,15 @@ Optional: **`use_level_weighted_marginal`** in [`make_greedy_hook`](sim/greedy_f
 
 [`default_build_optimizer_score`](sim/simulator.py) returns `total_farm_gold` by design.
 
+## Clear volume (minions / monsters)
+
+When the goal is **maximum modeled clears** (uniform minion count per wave, or abstract monsters per jungle route), not gold-weighted lane income:
+
+- **Lane:** [`SimResult.total_lane_minions_cleared`](sim/simulator.py) sums `throughput_ratio × eta_lane × (melee + caster + siege)` each wave. This **differs** from maximizing `total_farm_gold` when per-minion gold values differ by type.
+- **Jungle:** [`SimResult.total_jungle_monsters_cleared`](sim/simulator.py) sums `eff × GameRules.jungle_monsters_per_route` each cycle (default `monsters_per_route` is **1.0** if omitted in bundle JSON).
+- **Score helper:** [`default_clear_count_score`](sim/simulator.py)(`res`, `farm_mode`) selects the appropriate field.
+- **Search:** [`FarmBuildSearch`](sim/farm_build_search.py) / [`beam_refined_farm_build`](sim/greedy_farm_build.py) support `leaf_score='total_clear_units'`; greedy marginals use **clear-count tick** derivatives when that leaf is selected (see [`marginal_clear_units_per_tick_derivative`](sim/marginal_farm_tick.py)).
+
 **Passive gold** ([`passive_gold_in_interval`](sim/passive.py)) accrues between ticks in the same timeline as farm ticks. It does **not** depend on items in this model. Full forward simulations therefore capture part of the **opportunity cost** of delaying purchases: you may bank passive gold while farming slowly if you skip smaller combat purchases to save for an expensive item—`total_farm_gold` still reflects lost lane/jungle farm income over the horizon.
 
 ## What `total_farm_gold` means
