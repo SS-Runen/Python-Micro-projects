@@ -22,7 +22,13 @@ from .greedy_farm_build import (
 from .purchase_metrics import auc_effective_dps_piecewise
 
 MarginalObjective = Literal["dps_per_gold", "horizon_greedy_roi"]
-LeafScore = Literal["total_farm_gold", "early_dps_auc"]
+LeafScore = Literal["total_farm_gold", "early_dps_auc", "farm_gold_per_gold_spent"]
+
+
+def _farm_gold_per_gold_spent(res: SimResult, epsilon: float) -> float:
+    """Modeled farm income per gold paid to shop (higher = better return on item spend)."""
+    denom = max(res.total_gold_spent_on_items, epsilon)
+    return res.total_farm_gold / denom
 
 
 def _simulate_greedy_hook_early_dps_auc(
@@ -217,7 +223,8 @@ def _marginals_for_beam_step(
 class FarmBuildSearch:
     """
     Beam search over purchase prefixes. Default leaf score is full-horizon ``total_farm_gold``;
-    set ``leaf_score='early_dps_auc'`` to maximize ∫ effective_dps dt over ``early_horizon_seconds``.
+    set ``leaf_score='early_dps_auc'`` to maximize ∫ effective_dps dt over ``early_horizon_seconds``;
+    set ``leaf_score='farm_gold_per_gold_spent'`` to maximize ``total_farm_gold / total_gold_spent_on_items``.
     """
 
     data: GameDataBundle
@@ -282,7 +289,10 @@ class FarmBuildSearch:
                 purchase_hook=hook_g,
                 jungle_starter_item_id=self.jungle_starter_item_id,
             )
-            best_val = res_g.total_farm_gold
+            if self.leaf_score == "farm_gold_per_gold_spent":
+                best_val = _farm_gold_per_gold_spent(res_g, self.epsilon)
+            else:
+                best_val = res_g.total_farm_gold
         leaves_evaluated = 1
         best_res = res_g
         best_order = tuple(order_g)
@@ -373,7 +383,10 @@ class FarmBuildSearch:
                             purchase_hook=hook_f,
                             jungle_starter_item_id=self.jungle_starter_item_id,
                         )
-                        fv = res_i.total_farm_gold
+                        if self.leaf_score == "farm_gold_per_gold_spent":
+                            fv = _farm_gold_per_gold_spent(res_i, self.epsilon)
+                        else:
+                            fv = res_i.total_farm_gold
                     leaves_evaluated += 1
                     tup = tuple(order_i)
                     children_scores.append((new_prefix, fv, res_i, tup))

@@ -14,6 +14,7 @@ def default_minion_economy_tables() -> dict[str, Any]:
     """
     Two-point interpolation per type: minute 0 and minute 25 (mid-game proxy).
     Values scale linearly between; extrapolation clamps to endpoints.
+    Extrapolated lane waves (see :mod:`LoLPerfmon.sim.wave_schedule`) use the same tables by game minute.
     """
     return {
         "melee": {

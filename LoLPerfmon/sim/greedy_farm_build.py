@@ -12,7 +12,7 @@ from .clear import effective_dps
 from .config import FarmMode
 from .data_loader import GameDataBundle
 from .marginal_farm_tick import marginal_farm_gold_per_tick_derivative
-from .models import ChampionProfile
+from .models import ChampionProfile, ItemDef, is_build_endpoint_item
 from .simulator import (
     MAX_INVENTORY_SLOTS,
     PurchasePolicy,
@@ -190,6 +190,27 @@ def make_early_stop_full_inventory_no_dps_marginal(
             marginal_income_cap=False,
         )
         return len(cands) == 0
+
+    return early_stop
+
+
+def make_early_stop_six_build_endpoints(
+    items: dict[str, ItemDef],
+) -> Callable[[SimulationState], bool]:
+    """
+    End when the bag has :data:`MAX_INVENTORY_SLOTS` items and each is a **build endpoint**
+    (Data Dragon ``into`` empty — see :func:`~LoLPerfmon.sim.models.is_build_endpoint_item`).
+    Missing item ids are treated as non-endpoints.
+    """
+
+    def early_stop(state: SimulationState) -> bool:
+        if len(state.inventory) < MAX_INVENTORY_SLOTS:
+            return False
+        for iid in state.inventory:
+            it = items.get(iid)
+            if it is None or not is_build_endpoint_item(it):
+                return False
+        return True
 
     return early_stop
 
@@ -403,7 +424,7 @@ def beam_refined_farm_build(
     horizon_candidate_cap: int = 48,
     jungle_starter_item_id: str | None = None,
     marginal_income_cap: bool = True,
-    leaf_score: Literal["total_farm_gold", "early_dps_auc"] = "total_farm_gold",
+    leaf_score: Literal["total_farm_gold", "early_dps_auc", "farm_gold_per_gold_spent"] = "total_farm_gold",
     early_horizon_seconds: float = 900.0,
 ) -> tuple[tuple[str, ...], float, SimResult, BeamFarmMetadata | GreedyFarmMetadata]:
     """
@@ -441,6 +462,7 @@ __all__ = [
     "greedy_farm_build",
     "greedy_farm_build_waveclear_dps_saturation",
     "make_early_stop_full_inventory_no_dps_marginal",
+    "make_early_stop_six_build_endpoints",
     "make_forced_prefix_then_greedy_hook",
     "make_greedy_hook",
     "make_greedy_lane_hook",

@@ -14,10 +14,17 @@ class ItemDef:
     total_cost: float
     stats: "StatBonus"
     from_ids: tuple[str, ...] = field(default_factory=tuple)
+    #: Data Dragon ``into`` — ids this item upgrades into; empty means **build endpoint** (no further upgrades).
+    into_ids: tuple[str, ...] = field(default_factory=tuple)
     #: Data Dragon ``tags`` (e.g. ``Boots``) for shop compatibility checks.
     tags: tuple[str, ...] = field(default_factory=tuple)
     #: Max copies of this item id in inventory (League: one terminal legendary, one Seal, many Daggers).
     max_inventory_copies: int = 6
+
+
+def is_build_endpoint_item(it: ItemDef) -> bool:
+    """True if Data Dragon ``into`` is empty — no further shop upgrades from this item."""
+    return len(it.into_ids) == 0
 
 
 @dataclass(frozen=True)
@@ -119,6 +126,11 @@ def load_items_from_json(items_list: list[Mapping[str, Any]]) -> dict[str, ItemD
             from_ids = tuple(str(x) for x in fid)
         else:
             from_ids = ()
+        iid = raw.get("into_ids")
+        if isinstance(iid, (list, tuple)):
+            into_ids = tuple(str(x) for x in iid)
+        else:
+            into_ids = ()
         mic = int(raw.get("max_inventory_copies", 6))
         tr = raw.get("tags")
         if isinstance(tr, (list, tuple)):
@@ -131,6 +143,7 @@ def load_items_from_json(items_list: list[Mapping[str, Any]]) -> dict[str, ItemD
             total_cost=float(raw["total_cost"]),
             stats=bonus,
             from_ids=from_ids,
+            into_ids=into_ids,
             tags=tags,
             max_inventory_copies=mic,
         )

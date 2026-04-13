@@ -303,6 +303,8 @@ def item_def_from_ddragon_entry(item_id: str, raw: dict[str, Any]) -> ItemDef | 
     bonus = _bonus_from_item_stats(stats_f)
     from_raw = raw.get("from") or []
     from_ids = tuple(str(x) for x in from_raw) if isinstance(from_raw, list) else ()
+    into_raw = raw.get("into") or []
+    into_ids = tuple(str(x) for x in into_raw) if isinstance(into_raw, list) else ()
     mic = max_inventory_copies_from_ddragon(str(item_id), raw, from_ids)
     tags_raw = raw.get("tags") or []
     tags = tuple(str(x) for x in tags_raw) if isinstance(tags_raw, list) else ()
@@ -312,6 +314,7 @@ def item_def_from_ddragon_entry(item_id: str, raw: dict[str, Any]) -> ItemDef | 
         total_cost=float(total),
         stats=bonus,
         from_ids=from_ids,
+        into_ids=into_ids,
         tags=tags,
         max_inventory_copies=mic,
     )

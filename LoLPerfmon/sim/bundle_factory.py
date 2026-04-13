@@ -73,6 +73,7 @@ def _offline_placeholder_items() -> dict[str, ItemDef]:
             total_cost=400.0,
             stats=StatBonus(ability_power=18.0, health=80.0),
             from_ids=(),
+            into_ids=("cheap_ap_upgrade_placeholder",),
         ),
         "cheap_ad": ItemDef(
             id="cheap_ad",
@@ -80,6 +81,7 @@ def _offline_placeholder_items() -> dict[str, ItemDef]:
             total_cost=450.0,
             stats=StatBonus(attack_damage=20.0),
             from_ids=(),
+            into_ids=("cheap_ad_upgrade_placeholder",),
         ),
         "offline_jungle_pet": ItemDef(
             id="offline_jungle_pet",
@@ -87,6 +89,7 @@ def _offline_placeholder_items() -> dict[str, ItemDef]:
             total_cost=450.0,
             stats=StatBonus(ability_power=5.0),
             from_ids=(),
+            into_ids=(),
             tags=("Jungle",),
             max_inventory_copies=1,
         ),
