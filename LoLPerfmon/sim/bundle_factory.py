@@ -6,7 +6,7 @@ No JSON seed files are required for the default path.
 
 from __future__ import annotations
 
-from .data_loader import GameDataBundle, GameRules, WaveComposition
+from .data_loader import GameDataBundle, GameRules
 from .ddragon_availability import DDragonAuditReport, build_ddragon_audit_report
 from .ddragon_fetch import (
     champions_from_raw,
@@ -112,19 +112,20 @@ def _rules(patch_label: str) -> GameRules:
     )
 
 
-def _waves_for_60m() -> list[WaveComposition]:
-    return generate_lane_waves_until(3600.0, SR_FIRST_WAVE_SPAWN_SECONDS, SR_WAVE_INTERVAL_SECONDS)
-
-
-def build_offline_bundle() -> GameDataBundle:
+def build_offline_bundle(lane_horizon_seconds: float = 3600.0) -> GameDataBundle:
     rules = _rules("offline-computed")
     champs = {"generic_ap": _offline_generic_ap_carry()}
     items = _offline_placeholder_items()
+    waves = generate_lane_waves_until(
+        lane_horizon_seconds,
+        SR_FIRST_WAVE_SPAWN_SECONDS,
+        SR_WAVE_INTERVAL_SECONDS,
+    )
     return GameDataBundle(
         rules=rules,
         champions=champs,
         items=items,
-        waves=_waves_for_60m(),
+        waves=waves,
         minion_economy=default_minion_economy_tables(),
         data_dir=None,
     )
@@ -156,6 +157,7 @@ def load_ddragon_bundle_with_audit(
     full_sr_item_catalog: bool = False,
     ranked_summoners_rift_only: bool = True,
     champion_keys: tuple[str, ...] = CHAMPION_KEYS_DEFAULT,
+    lane_horizon_seconds: float = 3600.0,
 ) -> tuple[GameDataBundle | None, DDragonAuditReport | None]:
     """
     Single fetch of ``item.json`` and champion files; builds audit report and bundle.
@@ -182,11 +184,16 @@ def load_ddragon_bundle_with_audit(
     if len(items) < 2:
         items = {**items, **_offline_placeholder_items()}
     rules = _rules(version)
+    waves = generate_lane_waves_until(
+        lane_horizon_seconds,
+        SR_FIRST_WAVE_SPAWN_SECONDS,
+        SR_WAVE_INTERVAL_SECONDS,
+    )
     bundle = GameDataBundle(
         rules=rules,
         champions=champs,
         items=items,
-        waves=_waves_for_60m(),
+        waves=waves,
         minion_economy=default_minion_economy_tables(),
         data_dir=None,
     )
@@ -200,6 +207,7 @@ def get_game_bundle_with_audit(
     *,
     full_sr_item_catalog: bool = False,
     ranked_summoners_rift_only: bool = True,
+    lane_horizon_seconds: float = 3600.0,
 ) -> tuple[GameDataBundle, DDragonAuditReport | None]:
     """
     Like :func:`get_game_bundle` but returns ``(bundle, audit_report)``.
@@ -215,6 +223,7 @@ def get_game_bundle_with_audit(
         timeout=timeout,
         full_sr_item_catalog=full_sr_item_catalog,
         ranked_summoners_rift_only=ranked_summoners_rift_only,
+        lane_horizon_seconds=lane_horizon_seconds,
     )
     if bundle is not None:
         return bundle, report

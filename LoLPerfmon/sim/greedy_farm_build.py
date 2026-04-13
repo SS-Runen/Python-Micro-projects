@@ -14,6 +14,7 @@ from .data_loader import GameDataBundle
 from .marginal_farm_tick import marginal_farm_gold_per_tick_derivative
 from .models import ChampionProfile
 from .simulator import (
+    MAX_INVENTORY_SLOTS,
     PurchasePolicy,
     SimResult,
     SimulationState,
@@ -160,6 +161,39 @@ def _greedy_purchase_burst(
             order_sink.append(best)
 
 
+def make_early_stop_full_inventory_no_dps_marginal(
+    profile: ChampionProfile,
+    items: dict,
+    epsilon: float,
+    *,
+    data: GameDataBundle,
+    farm_mode: FarmMode = FarmMode.LANE,
+    eta_lane: float = 1.0,
+) -> Callable[[SimulationState], bool]:
+    """
+    End simulation when the bag has :data:`MAX_INVENTORY_SLOTS` items and
+    :func:`_marginal_candidates` finds no acquisition that increases modeled
+    :func:`~LoLPerfmon.sim.clear.effective_dps` (``marginal_income_cap=False``).
+    """
+
+    def early_stop(state: SimulationState) -> bool:
+        if len(state.inventory) < MAX_INVENTORY_SLOTS:
+            return False
+        cands = _marginal_candidates(
+            state,
+            profile,
+            items,
+            epsilon,
+            data=data,
+            farm_mode=farm_mode,
+            eta_lane=eta_lane,
+            marginal_income_cap=False,
+        )
+        return len(cands) == 0
+
+    return early_stop
+
+
 def make_greedy_hook(
     profile: ChampionProfile,
     items: dict,
@@ -300,6 +334,60 @@ def greedy_farm_build(
     return tuple(order), res.total_farm_gold, res, meta
 
 
+def greedy_farm_build_waveclear_dps_saturation(
+    data: GameDataBundle,
+    champion_id: str,
+    *,
+    eta_lane: float = 1.0,
+    t_max: float | None = None,
+    defer_purchases_until: float | None = None,
+    epsilon: float = 1e-9,
+    farm_mode: FarmMode = FarmMode.LANE,
+    jungle_starter_item_id: str | None = None,
+) -> tuple[tuple[str, ...], SimResult, GreedyFarmMetadata, bool]:
+    """
+    Greedy shop using **Δeffective_dps / gold** only (no throughput-capped marginal farm tick).
+    Stops early when inventory is full (:data:`MAX_INVENTORY_SLOTS`) and no modeled purchase
+    raises :func:`~LoLPerfmon.sim.clear.effective_dps`; otherwise runs until ``t_max`` or wave data
+    ends. The fourth return is True iff :attr:`SimResult.ended_by_early_stop`.
+    """
+    profile = data.champions[champion_id]
+    order: list[str] = []
+    early = make_early_stop_full_inventory_no_dps_marginal(
+        profile,
+        data.items,
+        epsilon,
+        data=data,
+        farm_mode=farm_mode,
+        eta_lane=eta_lane,
+    )
+    hook = make_greedy_hook(
+        profile,
+        data.items,
+        defer_purchases_until,
+        epsilon,
+        order_sink=order,
+        data=data,
+        farm_mode=farm_mode,
+        eta_lane=eta_lane,
+        marginal_income_cap=False,
+    )
+    res = simulate(
+        data,
+        champion_id,
+        farm_mode,
+        PurchasePolicy(buy_order=()),
+        eta_lane=eta_lane,
+        t_max=t_max,
+        defer_purchases_until=defer_purchases_until,
+        purchase_hook=hook,
+        jungle_starter_item_id=jungle_starter_item_id,
+        early_stop=early,
+    )
+    meta = GreedyFarmMetadata(epsilon=epsilon, purchase_count=len(order))
+    return tuple(order), res, meta, res.ended_by_early_stop
+
+
 def beam_refined_farm_build(
     data: GameDataBundle,
     champion_id: str,
@@ -346,6 +434,8 @@ __all__ = [
     "GreedyFarmMetadata",
     "beam_refined_farm_build",
     "greedy_farm_build",
+    "greedy_farm_build_waveclear_dps_saturation",
+    "make_early_stop_full_inventory_no_dps_marginal",
     "make_forced_prefix_then_greedy_hook",
     "make_greedy_hook",
     "make_greedy_lane_hook",

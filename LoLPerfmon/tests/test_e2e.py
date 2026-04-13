@@ -63,6 +63,25 @@ def test_e2e_buy_two_cheapest_full_horizon_offline() -> None:
     assert a in res.final_inventory and b in res.final_inventory
 
 
+def test_simulate_early_stop_sets_ended_by_early_stop() -> None:
+    data = get_game_bundle(offline=True)
+
+    def early_stop(state) -> bool:
+        return state.time_seconds >= 200.0
+
+    res = simulate(
+        data,
+        primary_champion_id(data),
+        FarmMode.LANE,
+        PurchasePolicy(buy_order=()),
+        t_max=5000.0,
+        purchase_hook=lambda _s: None,
+        early_stop=early_stop,
+    )
+    assert res.ended_by_early_stop
+    assert res.timeline[-1][0] < 5000.0
+
+
 @pytest.mark.integration
 def test_e2e_lane_data_dragon_bundle_if_online() -> None:
     if os.environ.get("LOLPERFMON_OFFLINE", "1").lower() in ("1", "true", "yes"):

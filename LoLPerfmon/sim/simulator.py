@@ -115,6 +115,7 @@ class SimResult:
     - ``total_gold_spent_on_items`` — all gold paid to the shop (components + crafts + full buys).
     - ``final_gold`` — wallet after income and purchases (``starting_gold`` + farm + passive - spent).
     - ``net_wealth_delta`` — ``final_gold - starting_gold`` (= farm + passive - spent).
+    - ``ended_by_early_stop`` — True when ``simulate(..., early_stop=...)`` returned early.
     """
 
     final_gold: float
@@ -126,6 +127,7 @@ class SimResult:
     total_gold_spent_on_items: float
     starting_gold: float
     net_wealth_delta: float
+    ended_by_early_stop: bool = False
 
 
 def default_build_optimizer_score(res: SimResult) -> float:
@@ -335,6 +337,7 @@ def simulate(
     jungle_starter_item_id: str | None = None,
     jungle_sell_at_seconds: float | None = None,
     jungle_sell_only_after_level_18: bool = False,
+    early_stop: Callable[[SimulationState], bool] | None = None,
 ) -> SimResult:
     """
     If ``purchase_hook`` or ``lane_purchase_hook`` is set, it runs at each purchase point
@@ -356,6 +359,10 @@ def simulate(
     the companion for ``JUNGLE_COMPANION_SELL_REFUND_FRACTION`` of ``total_cost`` (see
     :mod:`jungle_items`). If ``jungle_sell_only_after_level_18`` is True, sell is only
     attempted once ``level >= 18``.
+
+    If ``early_stop`` is set, it is evaluated after purchase hooks at each lane wave or
+    jungle cycle; when it returns True, the simulation ends immediately (no padding of
+    passive gold to ``t_max``). :attr:`SimResult.ended_by_early_stop` is True in that case.
     """
     if champion_id not in data.champions:
         raise KeyError(champion_id)
@@ -392,6 +399,7 @@ def simulate(
     total_farm = 0.0
     total_passive = 0.0
     t_prev = 0.0
+    ended_by_early_stop = False
 
     if farm_mode == FarmMode.LANE:
         k = 0
@@ -431,6 +439,9 @@ def simulate(
                 on_wave(state, t_wave, k)
             t_prev = t_wave
             k += 1
+            if early_stop is not None and early_stop(state):
+                ended_by_early_stop = True
+                break
     else:
         t_next = rules.jungle_base_cycle_seconds
         jk = 0
@@ -468,8 +479,11 @@ def simulate(
             t_prev = t_next
             t_next += rules.jungle_base_cycle_seconds
             jk += 1
+            if early_stop is not None and early_stop(state):
+                ended_by_early_stop = True
+                break
 
-    if t_prev < t_end:
+    if not ended_by_early_stop and t_prev < t_end:
         pg = passive_gold_in_interval(t_prev, t_end, cfg)
         state.gold += pg
         total_passive += pg
@@ -488,4 +502,5 @@ def simulate(
         total_gold_spent_on_items=state.total_gold_spent_on_items,
         starting_gold=starting_gold,
         net_wealth_delta=net_delta,
+        ended_by_early_stop=ended_by_early_stop,
     )
