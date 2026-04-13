@@ -14,6 +14,7 @@ SR_PASSIVE_GOLD_PER_10_SECONDS = 20.4
 SR_PASSIVE_GOLD_START_SECONDS = 65.0
 
 # https://wiki.leagueoflegends.com/en-us/Farming — first wave 0:35, then every 30s
+# Wave index / spawn cadence for extrapolated waves: :mod:`LoLPerfmon.sim.wave_schedule`.
 SR_FIRST_WAVE_SPAWN_SECONDS = 35.0
 SR_WAVE_INTERVAL_SECONDS = 30.0
 

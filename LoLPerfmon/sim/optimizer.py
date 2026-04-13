@@ -5,7 +5,7 @@ from typing import Callable
 
 from .config import FarmMode
 from .data_loader import GameDataBundle
-from .simulator import PurchasePolicy, SimResult, default_build_optimizer_score, simulate
+from .simulator import PurchasePolicy, SimResult, SimulationState, default_build_optimizer_score, simulate
 
 
 def best_item_order_exhaustive(
@@ -16,6 +16,8 @@ def best_item_order_exhaustive(
     score: Callable[[SimResult], float] = default_build_optimizer_score,
     eta_lane: float = 1.0,
     t_max: float | None = None,
+    early_stop: Callable[[SimulationState], bool] | None = None,
+    extrapolate_lane_waves: bool | None = None,
 ) -> tuple[tuple[str, ...], float, SimResult]:
     """
     Try every permutation of ``item_ids`` as fixed buy order; return best by ``score``.
@@ -26,6 +28,10 @@ def best_item_order_exhaustive(
     For **recipe-correct** goal lists, prefer :func:`LoLPerfmon.sim.build_path_optimizer.optimal_interleaved_build`
     or :func:`LoLPerfmon.sim.build_path_optimizer.acquisition_sequence_for_finished_roots`
     with **finished-item roots**; see ``DATA_SOURCES.md`` (Build optimization vs recipe expansion).
+
+    Pass ``t_max=float("inf")`` with ``early_stop`` (e.g. :func:`LoLPerfmon.sim.greedy_farm_build.make_early_stop_six_build_endpoints`)
+    to run until a stop condition; use ``extrapolate_lane_waves=True`` if the horizon can exceed
+    the bundle’s precomputed wave list (see :func:`LoLPerfmon.sim.simulator.simulate`).
     """
     best_order: tuple[str, ...] = ()
     best_val = float("-inf")
@@ -39,6 +45,8 @@ def best_item_order_exhaustive(
             pol,
             eta_lane=eta_lane,
             t_max=t_max,
+            early_stop=early_stop,
+            extrapolate_lane_waves=extrapolate_lane_waves,
         )
         v = score(res)
         if v > best_val:

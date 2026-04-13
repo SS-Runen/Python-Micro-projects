@@ -18,14 +18,15 @@ from LoLPerfmon.sim.simulator import MAX_INVENTORY_SLOTS, PurchasePolicy, simula
 
 def _bundle_with_linear_mythic() -> GameDataBundle:
     ob = build_offline_bundle()
-    a = ItemDef("cmp_a", "Comp A", 100.0, StatBonus(ability_power=10.0), ())
-    b = ItemDef("cmp_b", "Comp B", 200.0, StatBonus(ability_power=5.0), ())
+    a = ItemDef("cmp_a", "Comp A", 100.0, StatBonus(ability_power=10.0), (), into_ids=("mythic_x",))
+    b = ItemDef("cmp_b", "Comp B", 200.0, StatBonus(ability_power=5.0), (), into_ids=("mythic_x",))
     myth = ItemDef(
         "mythic_x",
         "Mythic X",
         700.0,
         StatBonus(ability_power=80.0),
         ("cmp_a", "cmp_b"),
+        into_ids=(),
         max_inventory_copies=1,
     )
     items = dict(ob.items)

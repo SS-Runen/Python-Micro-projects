@@ -6,6 +6,7 @@ by :func:`simulate` jungle sell parameters.
 
 from __future__ import annotations
 
+import math
 from collections import Counter
 from dataclasses import dataclass, field
 from typing import Callable
@@ -23,6 +24,7 @@ from .config import FarmMode, GameConfig
 from .data_loader import GameDataBundle
 from .passive import passive_gold_in_interval
 from .stats import total_stats
+from .wave_schedule import wave_composition_at_index
 from .xp_level import level_from_total_xp, xp_for_minion_kill
 from .jungle_items import (
     JUNGLE_COMPANION_SELL_REFUND_FRACTION,
@@ -338,6 +340,7 @@ def simulate(
     jungle_sell_at_seconds: float | None = None,
     jungle_sell_only_after_level_18: bool = False,
     early_stop: Callable[[SimulationState], bool] | None = None,
+    extrapolate_lane_waves: bool | None = None,
 ) -> SimResult:
     """
     If ``purchase_hook`` or ``lane_purchase_hook`` is set, it runs at each purchase point
@@ -363,6 +366,16 @@ def simulate(
     If ``early_stop`` is set, it is evaluated after purchase hooks at each lane wave or
     jungle cycle; when it returns True, the simulation ends immediately (no padding of
     passive gold to ``t_max``). :attr:`SimResult.ended_by_early_stop` is True in that case.
+
+    **Time horizon:** pass ``t_max=float("inf")`` for no fixed end time; this **requires**
+    ``early_stop`` (otherwise the sim would not terminate). Infinite time skips the final
+    passive-gold pad to ``t_max``.
+
+    **Lane waves beyond the bundle:** if ``extrapolate_lane_waves`` is ``None`` (default),
+    it is ``True`` when ``t_max`` is infinite and ``False`` otherwise. When ``True``, wave
+    composition for index ``k`` is synthesized via :func:`~LoLPerfmon.sim.wave_schedule.wave_composition_at_index`
+    whenever the bundle has no precomputed wave at ``k``. Set ``extrapolate_lane_waves=True``
+    for long finite horizons that exceed the bundle’s wave list.
     """
     if champion_id not in data.champions:
         raise KeyError(champion_id)
@@ -372,6 +385,12 @@ def simulate(
     rules = data.rules
     cfg = config_from_rules(data)
     t_end = t_max if t_max is not None else cfg.t_max_seconds
+    if math.isinf(t_end) and early_stop is None:
+        raise ValueError("t_max=inf requires early_stop so the simulation can terminate")
+    if extrapolate_lane_waves is None:
+        extrapolate_lane = math.isinf(t_end)
+    else:
+        extrapolate_lane = extrapolate_lane_waves
     starting_gold = float(rules.start_gold)
 
     state = SimulationState(
@@ -405,9 +424,9 @@ def simulate(
         k = 0
         while True:
             t_wave = rules.first_wave_spawn_seconds + k * rules.wave_interval_seconds
-            if t_wave > t_end:
+            if not math.isinf(t_end) and t_wave > t_end:
                 break
-            if k > max_wave_index:
+            if not extrapolate_lane and k > max_wave_index:
                 break
             pg = passive_gold_in_interval(t_prev, t_wave, cfg)
             state.gold += pg
@@ -415,6 +434,8 @@ def simulate(
             state.time_seconds = t_wave
             _purchase_round(state, items, defer_purchases_until, hook)
             wave = data.wave_at_index(k)
+            if wave is None and extrapolate_lane:
+                wave = wave_composition_at_index(k)
             if wave is None:
                 k += 1
                 t_prev = t_wave
@@ -445,7 +466,7 @@ def simulate(
     else:
         t_next = rules.jungle_base_cycle_seconds
         jk = 0
-        while t_next <= t_end:
+        while math.isinf(t_end) or t_next <= t_end:
             pg = passive_gold_in_interval(t_prev, t_next, cfg)
             state.gold += pg
             total_passive += pg
@@ -483,7 +504,7 @@ def simulate(
                 ended_by_early_stop = True
                 break
 
-    if not ended_by_early_stop and t_prev < t_end:
+    if not ended_by_early_stop and not math.isinf(t_end) and t_prev < t_end:
         pg = passive_gold_in_interval(t_prev, t_end, cfg)
         state.gold += pg
         total_passive += pg

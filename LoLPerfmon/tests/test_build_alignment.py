@@ -16,14 +16,29 @@ from LoLPerfmon.sim.simulator import MAX_INVENTORY_SLOTS, PurchasePolicy, simula
 def _bundle_ludens_style() -> GameDataBundle:
     """NLR + Lost Chapter components craft into Luden's-like mythic."""
     ob = build_offline_bundle()
-    nlr = ItemDef("nlr", "Needlessly Large Rod", 400.0, StatBonus(ability_power=40.0), ())
-    lc = ItemDef("lc", "Lost Chapter", 500.0, StatBonus(ability_power=30.0, mana=100.0), ())
+    nlr = ItemDef(
+        "nlr",
+        "Needlessly Large Rod",
+        400.0,
+        StatBonus(ability_power=40.0),
+        (),
+        into_ids=("ludens",),
+    )
+    lc = ItemDef(
+        "lc",
+        "Lost Chapter",
+        500.0,
+        StatBonus(ability_power=30.0, mana=100.0),
+        (),
+        into_ids=("ludens",),
+    )
     ludens = ItemDef(
         "ludens",
         "Luden's (fixture)",
         2600.0,
         StatBonus(ability_power=100.0),
         ("nlr", "lc"),
+        into_ids=(),
         max_inventory_copies=1,
     )
     items = dict(ob.items)

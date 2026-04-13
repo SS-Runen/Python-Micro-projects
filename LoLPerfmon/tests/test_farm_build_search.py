@@ -45,6 +45,25 @@ def test_farm_build_search_class_api() -> None:
     assert meta.leaves_evaluated >= 1
 
 
+def test_farm_build_search_farm_gold_per_gold_spent_leaf_score() -> None:
+    data = build_offline_bundle()
+    search = FarmBuildSearch(
+        data=data,
+        champion_id="generic_ap",
+        farm_mode=FarmMode.LANE,
+        t_max=400.0,
+        beam_depth=1,
+        beam_width=2,
+        max_leaf_evals=15,
+        leaf_score="farm_gold_per_gold_spent",
+    )
+    order, val, res, meta = search.run()
+    assert isinstance(order, tuple)
+    assert res.total_gold_spent_on_items > 0
+    assert abs(val - res.total_farm_gold / res.total_gold_spent_on_items) < 1e-6
+    assert meta.leaves_evaluated >= 1
+
+
 def test_farm_build_search_early_dps_auc_leaf_score() -> None:
     data = build_offline_bundle()
     search = FarmBuildSearch(
