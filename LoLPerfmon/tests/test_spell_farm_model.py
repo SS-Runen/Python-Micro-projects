@@ -51,6 +51,25 @@ def test_bonus_ad_only_scaling_uses_bonus_attack_damage() -> None:
 
     z5 = (0.0, 0.0, 0.0, 0.0, 0.0)
     b5 = (0.5, 0.5, 0.5, 0.5, 0.5)
+    dead = SpellLine(
+        cooldown=1e6,
+        base_by_rank=(),
+        ap_total_by_rank=z5,
+        ap_bonus_by_rank=z5,
+        ad_total_by_rank=z5,
+        ad_bonus_by_rank=z5,
+        max_rank=5,
+    )
+    dead_r = SpellLine(
+        cooldown=1e6,
+        base_by_rank=(),
+        ap_total_by_rank=z5,
+        ap_bonus_by_rank=z5,
+        ad_total_by_rank=z5,
+        ad_bonus_by_rank=z5,
+        max_rank=3,
+        is_ultimate=True,
+    )
     line = SpellLine(
         cooldown=4.0,
         base_by_rank=(),
@@ -58,15 +77,56 @@ def test_bonus_ad_only_scaling_uses_bonus_attack_damage() -> None:
         ap_bonus_by_rank=z5,
         ad_total_by_rank=z5,
         ad_bonus_by_rank=b5,
+        max_rank=5,
     )
     sf = SpellFarmCoefficients(
-        lines=(line,),
+        lines=(line, dead, dead, dead_r),
         needs_kit_ap_fallback=False,
         needs_kit_ad_fallback=False,
     )
     d_low = sf.rotation_ability_dps(11, 0.0, 0.0, 80.0, 20.0, 0.0)
     d_high = sf.rotation_ability_dps(11, 0.0, 0.0, 60.0, 40.0, 0.0)
     assert d_high > d_low + 1e-9
+
+
+def test_optimal_skill_points_sum_to_champion_level() -> None:
+    from LoLPerfmon.sim.spell_farm_model import (
+        SpellFarmCoefficients,
+        SpellLine,
+        max_skill_points_for_ultimate,
+    )
+
+    z5 = (0.1,) * 5
+    line = SpellLine(
+        cooldown=5.0,
+        base_by_rank=(),
+        ap_total_by_rank=z5,
+        ap_bonus_by_rank=z5,
+        ad_total_by_rank=z5,
+        ad_bonus_by_rank=z5,
+        max_rank=5,
+    )
+    ult = SpellLine(
+        cooldown=5.0,
+        base_by_rank=(),
+        ap_total_by_rank=z5,
+        ap_bonus_by_rank=z5,
+        ad_total_by_rank=z5,
+        ad_bonus_by_rank=z5,
+        max_rank=3,
+        is_ultimate=True,
+    )
+    sf = SpellFarmCoefficients(
+        lines=(line, line, line, ult),
+        needs_kit_ap_fallback=False,
+        needs_kit_ad_fallback=False,
+    )
+    for lv in (1, 6, 11, 18):
+        r = sf.optimal_waveclear_rank_allocation(lv, 50.0, 0.0, 60.0, 0.0, 0.0)
+        assert sum(r) == min(lv, 5 + 5 + 5 + 3)
+        assert r[3] <= max_skill_points_for_ultimate(lv)
+    r5 = sf.optimal_waveclear_rank_allocation(5, 50.0, 0.0, 60.0, 0.0, 0.0)
+    assert r5[3] == 0
 
 
 def test_statblock_bonus_matches_intrinsic_base() -> None:

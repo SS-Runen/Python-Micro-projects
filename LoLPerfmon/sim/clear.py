@@ -24,7 +24,7 @@ def lane_clear_dps(profile: ChampionProfile, level: int, stats: StatBlock) -> fl
 
     sf = profile.spell_farm
     if sf is not None and sf.lines:
-        spell_part = sf.rotation_ability_dps(
+        ranks = sf.optimal_waveclear_rank_allocation(
             level,
             stats.ability_power,
             stats.bonus_ability_power,
@@ -32,8 +32,16 @@ def lane_clear_dps(profile: ChampionProfile, level: int, stats: StatBlock) -> fl
             stats.bonus_attack_damage,
             stats.ability_haste,
         )
+        spell_part = sf.rotation_raw_dps_for_ranks(
+            ranks,
+            stats.ability_power,
+            stats.bonus_ability_power,
+            stats.attack_damage,
+            stats.bonus_attack_damage,
+            stats.ability_haste,
+        )
         spell_part *= mana_sustain_factor_on_rotation(
-            profile, level, sf, stats.ability_haste
+            profile, level, sf, stats.ability_haste, ranks
         )
         if sf.needs_kit_ap_fallback:
             spell_part += k.ap_weight * stats.ability_power

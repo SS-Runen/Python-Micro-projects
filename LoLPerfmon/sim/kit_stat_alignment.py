@@ -20,17 +20,12 @@ from .config import FarmMode
 from .item_heuristics import downward_recipe_closure
 from .jungle_items import is_jungle_pet_companion_starter
 from .models import ChampionProfile, ItemDef
-from .spell_farm_model import SpellLine
-from .stats import total_stats
+from .spell_farm_model import SpellFarmCoefficients, SpellLine
+from .stats import StatBlock, total_stats
 
 PrimaryAxis = Literal["ap", "ad", "mixed"]
 
 _RATIO_EPS = 1.05
-
-
-def _ability_rank_index(level: int) -> int:
-    lv = max(1, min(18, level))
-    return max(0, min(4, (lv - 1) // 3))
 
 
 def _line_mean_cd(sl: SpellLine) -> float:
@@ -38,17 +33,27 @@ def _line_mean_cd(sl: SpellLine) -> float:
 
 
 def _dominant_spell_line_coeffs(
-    sf: SpellFarmCoefficients, level: int
+    sf: SpellFarmCoefficients, level: int, stat_block: StatBlock
 ) -> tuple[float, float, float]:
     """
-    Return (ap_coeff, ad_coeff, line_score) for the spell line whose scaling magnitude / CD is largest.
-    Coeffs are ap_total+ap_bonus and ad_total+ad_bonus at the rank index for ``level``.
+    Return (ap_coeff, ad_coeff, line_score) for the spell line whose scaling magnitude / CD is largest
+    under :meth:`~LoLPerfmon.sim.spell_farm_model.SpellFarmCoefficients.optimal_waveclear_rank_allocation`.
     """
-    ri = _ability_rank_index(level)
+    ranks = sf.optimal_waveclear_rank_allocation(
+        level,
+        stat_block.ability_power,
+        stat_block.bonus_ability_power,
+        stat_block.attack_damage,
+        stat_block.bonus_attack_damage,
+        stat_block.ability_haste,
+    )
     best_score = -1.0
     best_ap = 0.0
     best_ad = 0.0
-    for sl in sf.lines:
+    for sl, rk in zip(sf.lines, ranks):
+        if rk <= 0:
+            continue
+        ri = min(rk - 1, 4)
         cd = max(_line_mean_cd(sl), 0.35)
         apt = sl.ap_total_by_rank[ri] + sl.ap_bonus_by_rank[ri]
         adt = sl.ad_total_by_rank[ri] + sl.ad_bonus_by_rank[ri]
@@ -60,16 +65,18 @@ def _dominant_spell_line_coeffs(
 
 
 def infer_primary_ability_damage_axis(
-    profile: ChampionProfile, *, level: int = 11
+    profile: ChampionProfile, *, level: int = 11, stat_block: StatBlock | None = None
 ) -> tuple[PrimaryAxis, float, float]:
     """
     Classify modeled ability farm DPS as primarily **AP**, **AD**, or **mixed**.
 
+    Uses optimal waveclear skill ranks at ``level`` and ``stat_block`` (naked champion growth when omitted).
     Returns ``(axis, dominant_line_ap_coeff, dominant_line_ad_coeff)`` for diagnostics.
     """
     sf = profile.spell_farm
     if sf is not None and sf.lines:
-        ap_c, ad_c, mag = _dominant_spell_line_coeffs(sf, level)
+        st = stat_block if stat_block is not None else total_stats(profile, level, (), {})
+        ap_c, ad_c, mag = _dominant_spell_line_coeffs(sf, level, st)
         if mag <= 1e-12:
             return _axis_from_kit_only(profile.kit), ap_c, ad_c
         if ap_c > ad_c * _RATIO_EPS:

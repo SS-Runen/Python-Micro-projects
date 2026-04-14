@@ -13,6 +13,8 @@ Simulation code under `LoLPerfmon/sim/` follows this order for **Classic Summone
 
 Modules: `ddragon_fetch.py` (CDN loads; SR classic map id `11`; optional **ranked/draft** item filter via `item_eligible_ranked_summoners_rift_5v5` on full catalogs), `ddragon_availability.py`, `ddragon_spell_parse.py`, `bundle_factory.get_game_bundle_with_audit`.
 
+**Skill-point tuples:** Data Dragon supplies per-spell `maxrank` and slot order, not a list of legal rank assignments. [`skill_order_reachability.py`](sim/skill_order_reachability.py) encodes Classic SR reachability (levels 1–3 basics, R at 6/11/16) for [`spell_farm_model.py`](sim/spell_farm_model.py) waveclear DPS.
+
 Wiki or repo YAML must **never** override official JSON when Data Dragon is available for the same fact.
 
 ## Unconstrained farm / clear-speed optimization
