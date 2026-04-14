@@ -148,24 +148,30 @@ def upward_recipe_closure_within_catalog(
     return out
 
 
-def meaningful_waveclear_exploration_catalog(
+def waveclear_relevant_item_catalog(
     full_items: Mapping[str, ItemDef],
     farm_mode: FarmMode,
     profile: ChampionProfile,
     *,
     exclude_tags: frozenset[str] | None = None,
     require_tags: frozenset[str] | None = None,
-    reference_level: int = 1,
+    reference_level: int = 11,
     dps_delta_epsilon: float = 1e-4,
+    allow_full_catalog_fallback: bool = False,
 ) -> dict[str, ItemDef]:
     """
-    Wave-clear catalog (tag + lane pet rules + downward closure), then drop items with **no**
-    modeled Δ[`effective_dps`](clear.py) at ``reference_level`` (default **1**, spawn stats),
-    add **upward** ``into_ids``
-    prerequisites toward surviving seeds, then **downward** ``from_ids`` closure from the merged
-    set so recipes stay valid for :func:`~LoLPerfmon.sim.simulator.acquire_goal`.
+    Items that can plausibly increase modeled waveclear for this champion.
 
-    If every item fails the DPS gate, returns the unfiltered wave-clear dict (fallback).
+    1. Tag-filtered waveclear base (see :func:`filter_waveclear_item_catalog`).
+    2. **DPS seeds**: items with positive :func:`modeled_delta_effective_dps` at ``reference_level``
+       (spells + autos via :func:`~LoLPerfmon.sim.clear.effective_dps`).
+    3. **Upward** closure toward those seeds, then **downward** recipe closure.
+
+    If no DPS seed exists, falls back to **stat-axis** seeds from
+    :mod:`~LoLPerfmon.sim.kit_stat_alignment` (ability AP/AD/mixed vs item flat stats).
+
+    If still empty and ``allow_full_catalog_fallback`` is True, returns the tag-filtered ``base``
+    dict (legacy behavior). Otherwise returns an empty dict (caller may treat as error).
     """
     base = filter_waveclear_item_catalog(
         full_items,
@@ -173,16 +179,57 @@ def meaningful_waveclear_exploration_catalog(
         exclude_tags=exclude_tags,
         require_tags=require_tags,
     )
-    seeds = {
+    dps_seeds = {
         iid
         for iid in base
-        if modeled_delta_effective_dps(profile, iid, full_items, level=reference_level) > dps_delta_epsilon
+        if modeled_delta_effective_dps(profile, iid, full_items, level=reference_level)
+        > dps_delta_epsilon
     }
-    if not seeds:
+    if dps_seeds:
+        up = upward_recipe_closure_within_catalog(dps_seeds, base)
+        merged = dps_seeds | up
+        return downward_recipe_closure(merged, full_items)
+
+    from .kit_stat_alignment import infer_primary_ability_damage_axis, item_matches_primary_damage_axis
+
+    axis, _, _ = infer_primary_ability_damage_axis(profile, level=reference_level)
+    stat_seeds = {iid for iid, it in base.items() if item_matches_primary_damage_axis(it, axis)}
+    if stat_seeds:
+        return downward_recipe_closure(stat_seeds, full_items)
+
+    if allow_full_catalog_fallback:
         return base
-    up = upward_recipe_closure_within_catalog(seeds, base)
-    merged = seeds | up
-    return downward_recipe_closure(merged, full_items)
+    return {}
+
+
+def meaningful_waveclear_exploration_catalog(
+    full_items: Mapping[str, ItemDef],
+    farm_mode: FarmMode,
+    profile: ChampionProfile,
+    *,
+    exclude_tags: frozenset[str] | None = None,
+    require_tags: frozenset[str] | None = None,
+    reference_level: int = 11,
+    dps_delta_epsilon: float = 1e-4,
+    allow_full_catalog_fallback: bool = True,
+) -> dict[str, ItemDef]:
+    """
+    Backward-compatible alias for :func:`waveclear_relevant_item_catalog`.
+
+    Defaults ``reference_level`` to **11** (mid-game) for the DPS gate. When
+    ``allow_full_catalog_fallback`` is True (default), restores legacy behavior of returning
+    the full tag-filtered catalog if both DPS and stat-axis seeds would otherwise yield nothing.
+    """
+    return waveclear_relevant_item_catalog(
+        full_items,
+        farm_mode,
+        profile,
+        exclude_tags=exclude_tags,
+        require_tags=require_tags,
+        reference_level=reference_level,
+        dps_delta_epsilon=dps_delta_epsilon,
+        allow_full_catalog_fallback=allow_full_catalog_fallback,
+    )
 
 
 def exploration_path_value_by_item(
@@ -277,4 +324,5 @@ __all__ = [
     "modeled_dps_uplift_per_gold",
     "rank_item_ids_by_dps_uplift_per_gold",
     "upward_recipe_closure_within_catalog",
+    "waveclear_relevant_item_catalog",
 ]

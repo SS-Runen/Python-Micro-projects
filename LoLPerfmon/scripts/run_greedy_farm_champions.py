@@ -26,7 +26,7 @@ def main() -> None:
     p = argparse.ArgumentParser(description="Greedy/beam lane or jungle farm build (Lux, Karthus, Quinn)")
     p.add_argument("--t-max", type=float, default=3600.0)
     p.add_argument("--beam-width", type=int, default=3)
-    p.add_argument("--beam-depth", type=int, default=1)
+    p.add_argument("--beam-depth", type=int, default=8)
     p.add_argument("--max-leaf-evals", type=int, default=27)
     p.add_argument(
         "--farm-mode",

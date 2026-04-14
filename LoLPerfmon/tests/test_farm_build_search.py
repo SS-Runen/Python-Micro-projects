@@ -82,3 +82,21 @@ def test_farm_build_search_early_dps_auc_leaf_score() -> None:
     assert val > 0.0
     assert res.total_farm_gold >= 0.0
     assert meta.leaves_evaluated >= 1
+
+
+def test_farm_build_search_branching_and_survivor_knobs() -> None:
+    data = build_offline_bundle()
+    search = FarmBuildSearch(
+        data=data,
+        champion_id="generic_ap",
+        farm_mode=FarmMode.LANE,
+        t_max=300.0,
+        beam_depth=2,
+        beam_width=4,
+        beam_branching_width=3,
+        beam_survivors=1,
+        max_leaf_evals=30,
+    )
+    _order, _val, _res, meta = search.run()
+    assert meta.beam_width == 1
+    assert meta.leaves_evaluated >= 1

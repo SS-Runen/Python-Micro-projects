@@ -60,6 +60,8 @@ class StatBonus:
     attack_damage: float = 0.0
     ability_power: float = 0.0
     bonus_attack_speed_fraction: float = 0.0
+    crit_chance: float = 0.0
+    crit_damage_bonus: float = 0.0
     ability_haste: float = 0.0
     health: float = 0.0
     mana: float = 0.0
@@ -150,6 +152,8 @@ def load_items_from_json(items_list: list[Mapping[str, Any]]) -> dict[str, ItemD
             attack_damage=float(st.get("attack_damage", 0)),
             ability_power=float(st.get("ability_power", 0)),
             bonus_attack_speed_fraction=float(st.get("bonus_attack_speed_fraction", 0)),
+            crit_chance=float(st.get("crit_chance", 0)),
+            crit_damage_bonus=float(st.get("crit_damage_bonus", 0)),
             ability_haste=float(st.get("ability_haste", 0)),
             health=float(st.get("health", 0)),
             mana=float(st.get("mana", 0)),

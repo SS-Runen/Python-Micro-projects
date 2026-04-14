@@ -11,6 +11,8 @@ class StatDelta:
     attack_damage: float = 0.0
     ability_power: float = 0.0
     bonus_attack_speed_fraction: float = 0.0
+    crit_chance: float = 0.0
+    crit_damage_bonus: float = 0.0
     ability_haste: float = 0.0
     health: float = 0.0
     mana: float = 0.0
@@ -32,6 +34,8 @@ class StatBlock:
     mana: float
     armor: float
     magic_resist: float
+    crit_chance: float = 0.0
+    crit_damage_bonus: float = 0.0
 
 
 def clamp_champion_level(level: int) -> int:
@@ -78,6 +82,8 @@ def apply_items(items: tuple[ItemDef, ...]) -> StatDelta:
             ability_power=d.ability_power + it.stats.ability_power,
             bonus_attack_speed_fraction=d.bonus_attack_speed_fraction
             + it.stats.bonus_attack_speed_fraction,
+            crit_chance=d.crit_chance + it.stats.crit_chance,
+            crit_damage_bonus=d.crit_damage_bonus + it.stats.crit_damage_bonus,
             ability_haste=d.ability_haste + it.stats.ability_haste,
             health=d.health + it.stats.health,
             mana=d.mana + it.stats.mana,
@@ -114,6 +120,8 @@ def total_stats(profile: ChampionProfile, level: int, inventory: tuple[str, ...]
         bonus_attack_damage=bonus_ad,
         bonus_ability_power=bonus_ap,
         attack_speed=attack_speed,
+        crit_chance=max(0.0, min(1.0, delta.crit_chance)),
+        crit_damage_bonus=max(0.0, delta.crit_damage_bonus),
         ability_haste=ah,
         health=hp,
         mana=mana,

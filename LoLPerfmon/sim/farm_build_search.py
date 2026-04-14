@@ -7,7 +7,7 @@ from __future__ import annotations
 from dataclasses import dataclass
 from typing import Callable, Literal
 
-from .item_heuristics import meaningful_waveclear_exploration_catalog
+from .item_heuristics import filter_waveclear_item_catalog, waveclear_relevant_item_catalog
 
 from .config import FarmMode
 from .data_loader import GameDataBundle
@@ -32,9 +32,9 @@ from .greedy_farm_build import (
 from .purchase_metrics import auc_effective_dps_piecewise
 
 
-def _meaningful_catalog_reference_level(marginal_reference_level: int | None) -> int:
-    """Spawn snapshot when path heuristics follow sim level (``None``); else fixed gate level."""
-    return 1 if marginal_reference_level is None else marginal_reference_level
+def _waveclear_catalog_reference_level(marginal_reference_level: int | None) -> int:
+    """Level for DPS gate and stat-axis catalog; aligns with typical path heuristics (mid-game)."""
+    return 11 if marginal_reference_level is None else marginal_reference_level
 
 
 MarginalObjective = Literal["dps_per_gold", "horizon_greedy_roi"]
@@ -164,6 +164,7 @@ def _ranked_horizon_next_items(
     path_into_weight: float = 0.45,
     ideal_target_top_k: int = 16,
     ideal_path_boost: float = 0.25,
+    normalize_marginal_path_blend: bool = True,
 ) -> list[tuple[str, float, float, float]]:
     """Rank next purchases by Δleaf_primary vs baseline stepwise hook (nested full sims)."""
     dps_ranked = ranked_marginal_acquisitions(
@@ -185,6 +186,7 @@ def _ranked_horizon_next_items(
         path_into_weight=path_into_weight,
         ideal_target_top_k=ideal_target_top_k,
         ideal_path_boost=ideal_path_boost,
+        normalize_marginal_path_blend=normalize_marginal_path_blend,
     )
     cap = max(horizon_candidate_cap, 4)
     candidate_ids = [r[0] for r in dps_ranked[:cap]]
@@ -214,6 +216,7 @@ def _ranked_horizon_next_items(
             path_into_weight=path_into_weight,
             ideal_target_top_k=ideal_target_top_k,
             ideal_path_boost=ideal_path_boost,
+            normalize_marginal_path_blend=normalize_marginal_path_blend,
         )
         res_i = simulate(
             data,
@@ -267,6 +270,7 @@ def _marginals_for_beam_step(
     path_into_weight: float = 0.45,
     ideal_target_top_k: int = 16,
     ideal_path_boost: float = 0.25,
+    normalize_marginal_path_blend: bool = True,
 ) -> list[tuple[str, float, float, float]]:
     st = state_after_prefix(data, items, prefix, farm_mode, jungle_starter_item_id)
     if st is None:
@@ -286,6 +290,7 @@ def _marginals_for_beam_step(
         path_into_weight=path_into_weight,
         ideal_target_top_k=ideal_target_top_k,
         ideal_path_boost=ideal_path_boost,
+        normalize_marginal_path_blend=normalize_marginal_path_blend,
     )
     if prefix:
         return ranked_marginal_acquisitions(st, profile, items, epsilon, **margs_kw)
@@ -318,6 +323,7 @@ def _marginals_for_beam_step(
             path_into_weight,
             ideal_target_top_k,
             ideal_path_boost,
+            normalize_marginal_path_blend,
         )
     return ranked_marginal_acquisitions(st, profile, items, epsilon, **margs_kw)
 
@@ -340,11 +346,15 @@ class FarmBuildSearch:
     t_max: float | None = None
     defer_purchases_until: float | None = None
     epsilon: float = 1e-9
-    beam_depth: int = 1
-    beam_width: int = 3
-    max_leaf_evals: int = 27
+    beam_depth: int = 8
+    beam_width: int = 64
+    #: Marginal expansions considered from each prefix. Defaults to ``beam_width`` when unset.
+    beam_branching_width: int | None = None
+    #: Number of prefixes kept after each depth. Defaults to ``beam_width`` when unset.
+    beam_survivors: int | None = None
+    max_leaf_evals: int = 512
     marginal_objective: MarginalObjective = "horizon_greedy_roi"
-    horizon_candidate_cap: int = 48
+    horizon_candidate_cap: int = 128
     #: Required for :class:`FarmMode.JUNGLE` beam prefix snapshots (same starter as :func:`simulate`).
     jungle_starter_item_id: str | None = None
     #: If True, greedy marginals skip purchases with negligible marginal farm gold (capped throughput).
@@ -382,28 +392,40 @@ class FarmBuildSearch:
     ideal_target_top_k: int = 16
     #: Multiplier when a path reaches an ideal target (see :func:`exploration_path_value_by_item`).
     ideal_path_boost: float = 0.25
+    #: Min–max normalize immediate vs path terms before blending in greedy marginals.
+    normalize_marginal_path_blend: bool = True
+    #: If True, waveclear candidate derivation may fall back to tag-filtered full catalog.
+    allow_full_catalog_fallback: bool = False
 
     def run(self) -> tuple[tuple[str, ...], float, SimResult, BeamFarmMetadata | StepwiseFarmMetadata]:
         profile = self.data.champions[self.champion_id]
         items = self.data.items
         d = max(1, self.beam_depth)
-        w = max(1, self.beam_width)
+        branch_w = max(1, self.beam_branching_width or self.beam_width)
+        surv_w = max(1, self.beam_survivors or self.beam_width)
         eff_mtick: MarginalTickObjective = (
             "clear_count" if self.leaf_score == "total_clear_units" else self.marginal_tick_objective
         )
 
         mc_ids = self.marginal_candidate_ids
         if self.meaningful_exploration and mc_ids is None:
-            mc_ids = frozenset(
-                meaningful_waveclear_exploration_catalog(
+            cat = waveclear_relevant_item_catalog(
+                self.data.items,
+                self.farm_mode,
+                profile,
+                exclude_tags=self.meaningful_exclude_tags,
+                require_tags=self.meaningful_require_tags,
+                reference_level=_waveclear_catalog_reference_level(self.marginal_reference_level),
+                allow_full_catalog_fallback=self.allow_full_catalog_fallback,
+            )
+            if not cat and self.allow_full_catalog_fallback:
+                cat = filter_waveclear_item_catalog(
                     self.data.items,
                     self.farm_mode,
-                    profile,
                     exclude_tags=self.meaningful_exclude_tags,
                     require_tags=self.meaningful_require_tags,
-                    reference_level=_meaningful_catalog_reference_level(self.marginal_reference_level),
-                ).keys()
-            )
+                )
+            mc_ids = frozenset(cat.keys())
 
         order_g: list[str] = []
         hook_g = make_stepwise_farm_hook(
@@ -426,6 +448,7 @@ class FarmBuildSearch:
             path_into_weight=self.path_into_weight,
             ideal_target_top_k=self.ideal_target_top_k,
             ideal_path_boost=self.ideal_path_boost,
+            normalize_marginal_path_blend=self.normalize_marginal_path_blend,
         )
         if self.leaf_score == "early_dps_auc":
             best_val, res_g = _simulate_greedy_hook_early_dps_auc(
@@ -494,6 +517,7 @@ class FarmBuildSearch:
             self.path_into_weight,
             self.ideal_target_top_k,
             self.ideal_path_boost,
+            self.normalize_marginal_path_blend,
         )
         if not first_margs:
             meta = StepwiseFarmMetadata(epsilon=self.epsilon, purchase_count=len(best_order))
@@ -534,8 +558,9 @@ class FarmBuildSearch:
                     self.path_into_weight,
                     self.ideal_target_top_k,
                     self.ideal_path_boost,
+                    self.normalize_marginal_path_blend,
                 )
-                for row in margs[:w]:
+                for row in margs[:branch_w]:
                     next_id = row[0]
                     if leaves_evaluated >= self.max_leaf_evals:
                         break
@@ -562,6 +587,7 @@ class FarmBuildSearch:
                         path_into_weight=self.path_into_weight,
                         ideal_target_top_k=self.ideal_target_top_k,
                         ideal_path_boost=self.ideal_path_boost,
+                        normalize_marginal_path_blend=self.normalize_marginal_path_blend,
                     )
                     if self.leaf_score == "early_dps_auc":
                         fv, res_i = _simulate_greedy_hook_early_dps_auc(
@@ -606,12 +632,12 @@ class FarmBuildSearch:
                         best_order = tup
             if not children_scores:
                 break
-            children_scores.sort(key=lambda x: -x[1])
-            beam_prefixes = [c[0] for c in children_scores[:w]]
+            children_scores.sort(key=lambda x: (-x[1], x[0]))
+            beam_prefixes = [c[0] for c in children_scores[:surv_w]]
 
         meta = BeamFarmMetadata(
             beam_depth=d,
-            beam_width=w,
+            beam_width=surv_w,
             max_leaf_evals=self.max_leaf_evals,
             epsilon=self.epsilon,
             leaves_evaluated=leaves_evaluated,

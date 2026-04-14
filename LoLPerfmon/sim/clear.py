@@ -15,12 +15,16 @@ def lane_clear_dps(profile: ChampionProfile, level: int, stats: StatBlock) -> fl
     fallbacks when AP/AD scaling is missing from JSON. **Ability haste** shortens modeled
     spell cooldowns (League formula); the legacy linear ``ah_weight × AH`` term applies only
     when no spell farm model is present. **Auto-attack** contribution is
-    ``auto_attack_clear_weight * as_weight * attack_speed * attack_damage`` (often zero for
-    mages). If no spell model exists, falls back to linear :class:`KitParams` weights.
+    ``auto_attack_clear_weight * as_weight * attack_speed * expected_auto_damage`` where
+    ``expected_auto_damage = attack_damage * (1 + crit_chance * (0.75 + crit_damage_bonus))``
+    (often near AD for mages). If no spell model exists, falls back to linear :class:`KitParams`
+    weights.
     """
     k = profile.kit
     ah_linear = k.ah_weight * stats.ability_haste
-    auto_part = k.auto_attack_clear_weight * k.as_weight * stats.attack_speed * stats.attack_damage
+    crit_inc = 0.75 + max(0.0, stats.crit_damage_bonus)
+    expected_auto_damage = stats.attack_damage * (1.0 + max(0.0, min(1.0, stats.crit_chance)) * crit_inc)
+    auto_part = k.auto_attack_clear_weight * k.as_weight * stats.attack_speed * expected_auto_damage
 
     sf = profile.spell_farm
     if sf is not None and sf.lines:

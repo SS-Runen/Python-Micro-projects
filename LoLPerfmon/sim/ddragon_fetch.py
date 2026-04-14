@@ -261,12 +261,25 @@ def item_json_full(version: str, timeout: float = 30.0) -> dict[str, Any] | None
 
 
 def _bonus_from_item_stats(stats: dict[str, float]) -> StatBonus:
+    crit_pct = float(
+        stats.get("FlatCritChanceMod", 0)
+        or stats.get("PercentCritChanceMod", 0)
+        or stats.get("CritChance", 0)
+        or 0
+    )
+    crit_dmg_pct = float(
+        stats.get("FlatCritDamageMod", 0)
+        or stats.get("PercentCritDamageMod", 0)
+        or 0
+    )
     return StatBonus(
         attack_damage=float(stats.get("FlatPhysicalDamageMod", 0) or 0),
         ability_power=float(stats.get("FlatMagicDamageMod", 0) or 0),
         bonus_attack_speed_fraction=float(stats.get("PercentAttackSpeedMod", 0) or 0) / 100.0
         if stats.get("PercentAttackSpeedMod")
         else 0.0,
+        crit_chance=max(0.0, crit_pct) / 100.0,
+        crit_damage_bonus=max(0.0, crit_dmg_pct) / 100.0,
         ability_haste=float(stats.get("FlatHasteMod", 0) or stats.get("FlatAbilityHasteMod", 0) or 0),
         health=float(stats.get("FlatHPPoolMod", 0) or 0),
         mana=float(stats.get("FlatMPPoolMod", 0) or 0),

@@ -43,6 +43,16 @@ def _level_weight_for_marginal_blend(level: int) -> float:
     return max(0.0, min(1.0, (14 - level) / 13.0))
 
 
+def _min_max_unit_interval(values: list[float]) -> list[float]:
+    """Map values to [0, 1]; constant inputs become 0.5 for stable blending."""
+    if not values:
+        return []
+    lo, hi = min(values), max(values)
+    if hi - lo < 1e-18:
+        return [0.5] * len(values)
+    return [(v - lo) / (hi - lo) for v in values]
+
+
 def _try_marginal_acquire(
     trial: SimulationState,
     item_id: str,
@@ -113,6 +123,7 @@ def _marginal_candidates(
     path_into_weight: float = 0.45,
     ideal_target_top_k: int = 16,
     ideal_path_boost: float = 0.25,
+    normalize_marginal_path_blend: bool = True,
 ) -> list[tuple[str, float, float, float]]:
     """
     One pass over ``items``: acquisitions that succeed on a snapshot and pass marginal rules.
@@ -137,6 +148,10 @@ def _marginal_candidates(
     ``marginal_reference_level``: level for :func:`~LoLPerfmon.sim.item_heuristics.exploration_path_value_by_item`
     static path/ideal heuristics. ``None`` (default) uses the current sim level so champion
     base stat growth matches :func:`~LoLPerfmon.sim.stats.total_stats` at that level.
+
+    When ``normalize_marginal_path_blend`` is True, **immediate** and **path** terms are
+    min–max normalized across this candidate batch before combining so ``path_into_weight`` is
+    a tradeoff on comparable [0, 1] scales (recommended when ``marginal_income_cap`` is True).
     """
     path_ref = (
         marginal_reference_level
@@ -158,7 +173,7 @@ def _marginal_candidates(
             dg_ddps = marginal_clear_units_per_tick_derivative(data, farm_mode, eta_lane, profile, state)
         else:
             dg_ddps = marginal_farm_gold_per_tick_derivative(data, farm_mode, eta_lane, profile, state)
-    out: list[tuple[str, float, float, float]] = []
+    raw_rows: list[tuple[str, float, float, float, float]] = []
     for iid in sorted(items.keys()):
         if marginal_candidate_ids is not None and iid not in marginal_candidate_ids:
             continue
@@ -195,12 +210,31 @@ def _marginal_candidates(
             score_cap = marginal_tick / denom
             if use_level_weighted_marginal:
                 w = _level_weight_for_marginal_blend(state.level)
-                score = w * score_cap + (1.0 - w) * score_dps
+                imm = w * score_cap + (1.0 - w) * score_dps
             else:
-                score = score_cap
+                imm = score_cap
         else:
-            score = score_dps
-        score += path_into_weight * path_val.get(iid, 0.0)
+            imm = score_dps
+        pv = path_val.get(iid, 0.0)
+        raw_rows.append((iid, imm, pv, delta, paid))
+
+    out: list[tuple[str, float, float, float]] = []
+    if not raw_rows:
+        return out
+
+    if normalize_marginal_path_blend and len(raw_rows) >= 1:
+        imms = [r[1] for r in raw_rows]
+        pvs = [r[2] for r in raw_rows]
+        nim = _min_max_unit_interval(imms)
+        npv = _min_max_unit_interval(pvs)
+        for i, row in enumerate(raw_rows):
+            iid, _imm, _pv, delta, paid = row
+            score = nim[i] + path_into_weight * npv[i]
+            out.append((iid, score, delta, paid))
+        return out
+
+    for iid, imm, pv, delta, paid in raw_rows:
+        score = imm + path_into_weight * pv
         out.append((iid, score, delta, paid))
     return out
 
@@ -235,6 +269,7 @@ def ranked_marginal_acquisitions(
     path_into_weight: float = 0.45,
     ideal_target_top_k: int = 16,
     ideal_path_boost: float = 0.25,
+    normalize_marginal_path_blend: bool = True,
 ) -> list[tuple[str, float, float, float]]:
     """Sorted best-first: score desc, delta desc, item_id asc."""
     cands = _marginal_candidates(
@@ -256,6 +291,7 @@ def ranked_marginal_acquisitions(
         path_into_weight=path_into_weight,
         ideal_target_top_k=ideal_target_top_k,
         ideal_path_boost=ideal_path_boost,
+        normalize_marginal_path_blend=normalize_marginal_path_blend,
     )
     cands.sort(key=lambda t: (-t[1], -t[2], t[0]))
     return cands
@@ -283,6 +319,7 @@ def _stepwise_purchase_burst(
     path_into_weight: float = 0.45,
     ideal_target_top_k: int = 16,
     ideal_path_boost: float = 0.25,
+    normalize_marginal_path_blend: bool = True,
 ) -> None:
     if defer_purchases_until is not None and state.time_seconds + 1e-9 < defer_purchases_until:
         return
@@ -307,6 +344,7 @@ def _stepwise_purchase_burst(
             path_into_weight=path_into_weight,
             ideal_target_top_k=ideal_target_top_k,
             ideal_path_boost=ideal_path_boost,
+            normalize_marginal_path_blend=normalize_marginal_path_blend,
         )
         best = _pick_best_marginal(cands)
         if best is None:
@@ -344,6 +382,7 @@ def make_early_stop_full_inventory_no_dps_marginal(
     path_into_weight: float = 0.45,
     ideal_target_top_k: int = 16,
     ideal_path_boost: float = 0.25,
+    normalize_marginal_path_blend: bool = True,
 ) -> Callable[[SimulationState], bool]:
     """
     End simulation when the bag has :data:`MAX_INVENTORY_SLOTS` items and
@@ -371,6 +410,7 @@ def make_early_stop_full_inventory_no_dps_marginal(
             path_into_weight=path_into_weight,
             ideal_target_top_k=ideal_target_top_k,
             ideal_path_boost=ideal_path_boost,
+            normalize_marginal_path_blend=normalize_marginal_path_blend,
         )
         return len(cands) == 0
 
@@ -419,6 +459,7 @@ def make_stepwise_farm_hook(
     path_into_weight: float = 0.45,
     ideal_target_top_k: int = 16,
     ideal_path_boost: float = 0.25,
+    normalize_marginal_path_blend: bool = True,
 ) -> Callable[[SimulationState], None]:
     def purchase_hook(state: SimulationState) -> None:
         _stepwise_purchase_burst(
@@ -442,6 +483,7 @@ def make_stepwise_farm_hook(
             path_into_weight=path_into_weight,
             ideal_target_top_k=ideal_target_top_k,
             ideal_path_boost=ideal_path_boost,
+            normalize_marginal_path_blend=normalize_marginal_path_blend,
         )
 
     return purchase_hook
@@ -473,6 +515,7 @@ def make_forced_prefix_then_stepwise_hook(
     path_into_weight: float = 0.45,
     ideal_target_top_k: int = 16,
     ideal_path_boost: float = 0.25,
+    normalize_marginal_path_blend: bool = True,
 ) -> Callable[[SimulationState], None]:
     forced: deque[str] = deque(forced_prefix)
 
@@ -516,6 +559,7 @@ def make_forced_prefix_then_stepwise_hook(
             path_into_weight=path_into_weight,
             ideal_target_top_k=ideal_target_top_k,
             ideal_path_boost=ideal_path_boost,
+            normalize_marginal_path_blend=normalize_marginal_path_blend,
         )
 
     return purchase_hook
@@ -561,8 +605,10 @@ def stepwise_farm_build(
     path_into_weight: float = 0.45,
     ideal_target_top_k: int = 16,
     ideal_path_boost: float = 0.25,
+    normalize_marginal_path_blend: bool = True,
     marginal_objective: Literal["dps_per_gold", "horizon_greedy_roi"] = "horizon_greedy_roi",
-    horizon_candidate_cap: int = 48,
+    horizon_candidate_cap: int = 128,
+    allow_full_catalog_fallback: bool = False,
 ) -> tuple[tuple[str, ...], float, SimResult, BeamFarmMetadata | StepwiseFarmMetadata]:
     """
     Single-step beam (``beam_depth=1``, ``beam_width=1``) with path-aware stepwise shop policy.
@@ -572,15 +618,16 @@ def stepwise_farm_build(
     profile = data.champions[champion_id]
     mc_ids = marginal_candidate_ids
     if meaningful_exploration and mc_ids is None:
-        from .item_heuristics import meaningful_waveclear_exploration_catalog
+        from .item_heuristics import waveclear_relevant_item_catalog
 
-        cat_lv = 1 if marginal_reference_level is None else marginal_reference_level
+        cat_lv = 11 if marginal_reference_level is None else marginal_reference_level
         mc_ids = frozenset(
-            meaningful_waveclear_exploration_catalog(
+            waveclear_relevant_item_catalog(
                 data.items,
                 farm_mode,
                 profile,
                 reference_level=cat_lv,
+                allow_full_catalog_fallback=allow_full_catalog_fallback,
             ).keys()
         )
     return beam_refined_farm_build(
@@ -607,6 +654,8 @@ def stepwise_farm_build(
         path_into_weight=path_into_weight,
         ideal_target_top_k=ideal_target_top_k,
         ideal_path_boost=ideal_path_boost,
+        normalize_marginal_path_blend=normalize_marginal_path_blend,
+        allow_full_catalog_fallback=allow_full_catalog_fallback,
     )
 
 
@@ -617,12 +666,14 @@ def beam_refined_farm_build(
     t_max: float | None = None,
     defer_purchases_until: float | None = None,
     epsilon: float = 1e-9,
-    beam_depth: int = 1,
-    beam_width: int = 3,
-    max_leaf_evals: int = 27,
+    beam_depth: int = 8,
+    beam_width: int = 64,
+    beam_branching_width: int | None = None,
+    beam_survivors: int | None = None,
+    max_leaf_evals: int = 512,
     farm_mode: FarmMode = FarmMode.LANE,
     marginal_objective: Literal["dps_per_gold", "horizon_greedy_roi"] = "horizon_greedy_roi",
-    horizon_candidate_cap: int = 48,
+    horizon_candidate_cap: int = 128,
     jungle_starter_item_id: str | None = None,
     marginal_income_cap: bool = True,
     leaf_score: Literal[
@@ -644,6 +695,8 @@ def beam_refined_farm_build(
     path_into_weight: float = 0.45,
     ideal_target_top_k: int = 16,
     ideal_path_boost: float = 0.25,
+    normalize_marginal_path_blend: bool = True,
+    allow_full_catalog_fallback: bool = False,
 ) -> tuple[tuple[str, ...], float, SimResult, BeamFarmMetadata | StepwiseFarmMetadata]:
     """
     Beam search over purchase prefixes (depth ``beam_depth``, width ``beam_width``).
@@ -667,6 +720,8 @@ def beam_refined_farm_build(
         epsilon=epsilon,
         beam_depth=beam_depth,
         beam_width=beam_width,
+        beam_branching_width=beam_branching_width,
+        beam_survivors=beam_survivors,
         max_leaf_evals=max_leaf_evals,
         marginal_objective=marginal_objective,
         horizon_candidate_cap=horizon_candidate_cap,
@@ -689,6 +744,8 @@ def beam_refined_farm_build(
         path_into_weight=path_into_weight,
         ideal_target_top_k=ideal_target_top_k,
         ideal_path_boost=ideal_path_boost,
+        normalize_marginal_path_blend=normalize_marginal_path_blend,
+        allow_full_catalog_fallback=allow_full_catalog_fallback,
     )
     return search.run()
 

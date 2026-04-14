@@ -56,3 +56,33 @@ def test_stepwise_matches_minimal_beam_config() -> None:
     )
     assert isinstance(meta_b, BeamFarmMetadata)
     assert abs(s_farm - b_farm) < 1e-6
+
+
+def test_ranked_marginals_support_normalized_path_blend() -> None:
+    data = build_offline_bundle()
+    profile = data.champions["generic_ap"]
+    st = SimulationState(
+        time_seconds=0.0,
+        gold=float(data.rules.start_gold),
+        inventory=[],
+        total_xp=0.0,
+        level=1,
+        buy_queue=[],
+        total_gold_spent_on_items=0.0,
+    )
+    normed = ranked_marginal_acquisitions(
+        st,
+        profile,
+        data.items,
+        1e-9,
+        normalize_marginal_path_blend=True,
+    )
+    raw = ranked_marginal_acquisitions(
+        st,
+        profile,
+        data.items,
+        1e-9,
+        normalize_marginal_path_blend=False,
+    )
+    assert normed
+    assert raw
