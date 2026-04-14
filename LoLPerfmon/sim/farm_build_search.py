@@ -31,6 +31,12 @@ from .greedy_farm_build import (
 )
 from .purchase_metrics import auc_effective_dps_piecewise
 
+
+def _meaningful_catalog_reference_level(marginal_reference_level: int | None) -> int:
+    """Spawn snapshot when path heuristics follow sim level (``None``); else fixed gate level."""
+    return 1 if marginal_reference_level is None else marginal_reference_level
+
+
 MarginalObjective = Literal["dps_per_gold", "horizon_greedy_roi"]
 LeafScore = Literal["total_farm_gold", "early_dps_auc", "farm_gold_per_gold_spent", "total_clear_units"]
 
@@ -154,7 +160,7 @@ def _ranked_horizon_next_items(
     allow_sell_non_starter_items: bool = False,
     use_level_weighted_marginal: bool = False,
     marginal_candidate_ids: frozenset[str] | None = None,
-    marginal_reference_level: int = 11,
+    marginal_reference_level: int | None = None,
     path_into_weight: float = 0.45,
     ideal_target_top_k: int = 16,
     ideal_path_boost: float = 0.25,
@@ -257,7 +263,7 @@ def _marginals_for_beam_step(
     allow_sell_non_starter_items: bool = False,
     use_level_weighted_marginal: bool = False,
     marginal_candidate_ids: frozenset[str] | None = None,
-    marginal_reference_level: int = 11,
+    marginal_reference_level: int | None = None,
     path_into_weight: float = 0.45,
     ideal_target_top_k: int = 16,
     ideal_path_boost: float = 0.25,
@@ -368,7 +374,8 @@ class FarmBuildSearch:
     #: Passed to :func:`~LoLPerfmon.sim.item_heuristics.meaningful_waveclear_exploration_catalog` when meaningful.
     meaningful_exclude_tags: frozenset[str] | None = None
     meaningful_require_tags: frozenset[str] | None = None
-    marginal_reference_level: int = 11
+    #: Fixed level for path/ideal static heuristics; ``None`` uses current sim level (clamped 1–18).
+    marginal_reference_level: int | None = None
     #: Weight on transitive ``into_ids`` path value (:func:`~LoLPerfmon.sim.item_heuristics.exploration_path_value_by_item`).
     path_into_weight: float = 0.45
     #: Top-``k`` items by modeled ΔDPS seed “ideal clear” targets for path boost.
@@ -394,7 +401,7 @@ class FarmBuildSearch:
                     profile,
                     exclude_tags=self.meaningful_exclude_tags,
                     require_tags=self.meaningful_require_tags,
-                    reference_level=self.marginal_reference_level,
+                    reference_level=_meaningful_catalog_reference_level(self.marginal_reference_level),
                 ).keys()
             )
 

@@ -30,7 +30,7 @@ from .simulator import (
     try_acquire_with_lane_starter_sells,
     try_acquire_with_shop_sells,
 )
-from .stats import total_stats
+from .stats import clamp_champion_level, total_stats
 from .item_heuristics import exploration_path_value_by_item
 
 MarginalTickObjective = Literal["farm_gold", "clear_count"]
@@ -109,7 +109,7 @@ def _marginal_candidates(
     allow_sell_non_starter_items: bool = False,
     use_level_weighted_marginal: bool = False,
     marginal_candidate_ids: frozenset[str] | None = None,
-    marginal_reference_level: int = 11,
+    marginal_reference_level: int | None = None,
     path_into_weight: float = 0.45,
     ideal_target_top_k: int = 16,
     ideal_path_boost: float = 0.25,
@@ -133,11 +133,20 @@ def _marginal_candidates(
     With ``endpoints_only_marginals``, skips **pure shop components** (no ``from``, non-empty
     ``into``) so the shop only adds endpoints or recipe parents (``from_ids`` non-empty), i.e.
     full buys or crafts—not standalone Long Swords / Tomes.
+
+    ``marginal_reference_level``: level for :func:`~LoLPerfmon.sim.item_heuristics.exploration_path_value_by_item`
+    static path/ideal heuristics. ``None`` (default) uses the current sim level so champion
+    base stat growth matches :func:`~LoLPerfmon.sim.stats.total_stats` at that level.
     """
+    path_ref = (
+        marginal_reference_level
+        if marginal_reference_level is not None
+        else clamp_champion_level(state.level)
+    )
     path_val = exploration_path_value_by_item(
         profile,
         items,
-        reference_level=marginal_reference_level,
+        reference_level=path_ref,
         ideal_target_top_k=ideal_target_top_k,
         ideal_path_boost=ideal_path_boost,
     )
@@ -222,7 +231,7 @@ def ranked_marginal_acquisitions(
     allow_sell_non_starter_items: bool = False,
     use_level_weighted_marginal: bool = False,
     marginal_candidate_ids: frozenset[str] | None = None,
-    marginal_reference_level: int = 11,
+    marginal_reference_level: int | None = None,
     path_into_weight: float = 0.45,
     ideal_target_top_k: int = 16,
     ideal_path_boost: float = 0.25,
@@ -270,7 +279,7 @@ def _stepwise_purchase_burst(
     allow_sell_non_starter_items: bool = False,
     use_level_weighted_marginal: bool = False,
     marginal_candidate_ids: frozenset[str] | None = None,
-    marginal_reference_level: int = 11,
+    marginal_reference_level: int | None = None,
     path_into_weight: float = 0.45,
     ideal_target_top_k: int = 16,
     ideal_path_boost: float = 0.25,
@@ -331,7 +340,7 @@ def make_early_stop_full_inventory_no_dps_marginal(
     allow_sell_non_starter_items: bool = False,
     use_level_weighted_marginal: bool = False,
     marginal_candidate_ids: frozenset[str] | None = None,
-    marginal_reference_level: int = 11,
+    marginal_reference_level: int | None = None,
     path_into_weight: float = 0.45,
     ideal_target_top_k: int = 16,
     ideal_path_boost: float = 0.25,
@@ -406,7 +415,7 @@ def make_stepwise_farm_hook(
     allow_sell_non_starter_items: bool = False,
     use_level_weighted_marginal: bool = False,
     marginal_candidate_ids: frozenset[str] | None = None,
-    marginal_reference_level: int = 11,
+    marginal_reference_level: int | None = None,
     path_into_weight: float = 0.45,
     ideal_target_top_k: int = 16,
     ideal_path_boost: float = 0.25,
@@ -460,7 +469,7 @@ def make_forced_prefix_then_stepwise_hook(
     allow_sell_non_starter_items: bool = False,
     use_level_weighted_marginal: bool = False,
     marginal_candidate_ids: frozenset[str] | None = None,
-    marginal_reference_level: int = 11,
+    marginal_reference_level: int | None = None,
     path_into_weight: float = 0.45,
     ideal_target_top_k: int = 16,
     ideal_path_boost: float = 0.25,
@@ -548,7 +557,7 @@ def stepwise_farm_build(
     use_level_weighted_marginal: bool = False,
     meaningful_exploration: bool = False,
     marginal_candidate_ids: frozenset[str] | None = None,
-    marginal_reference_level: int = 11,
+    marginal_reference_level: int | None = None,
     path_into_weight: float = 0.45,
     ideal_target_top_k: int = 16,
     ideal_path_boost: float = 0.25,
@@ -565,12 +574,13 @@ def stepwise_farm_build(
     if meaningful_exploration and mc_ids is None:
         from .item_heuristics import meaningful_waveclear_exploration_catalog
 
+        cat_lv = 1 if marginal_reference_level is None else marginal_reference_level
         mc_ids = frozenset(
             meaningful_waveclear_exploration_catalog(
                 data.items,
                 farm_mode,
                 profile,
-                reference_level=marginal_reference_level,
+                reference_level=cat_lv,
             ).keys()
         )
     return beam_refined_farm_build(
@@ -630,7 +640,7 @@ def beam_refined_farm_build(
     marginal_candidate_ids: frozenset[str] | None = None,
     meaningful_exclude_tags: frozenset[str] | None = None,
     meaningful_require_tags: frozenset[str] | None = None,
-    marginal_reference_level: int = 11,
+    marginal_reference_level: int | None = None,
     path_into_weight: float = 0.45,
     ideal_target_top_k: int = 16,
     ideal_path_boost: float = 0.25,

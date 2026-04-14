@@ -155,12 +155,13 @@ def meaningful_waveclear_exploration_catalog(
     *,
     exclude_tags: frozenset[str] | None = None,
     require_tags: frozenset[str] | None = None,
-    reference_level: int = 11,
+    reference_level: int = 1,
     dps_delta_epsilon: float = 1e-4,
 ) -> dict[str, ItemDef]:
     """
     Wave-clear catalog (tag + lane pet rules + downward closure), then drop items with **no**
-    modeled Δ[`effective_dps`](clear.py) at ``reference_level``, add **upward** ``into_ids``
+    modeled Δ[`effective_dps`](clear.py) at ``reference_level`` (default **1**, spawn stats),
+    add **upward** ``into_ids``
     prerequisites toward surviving seeds, then **downward** ``from_ids`` closure from the merged
     set so recipes stay valid for :func:`~LoLPerfmon.sim.simulator.acquire_goal`.
 

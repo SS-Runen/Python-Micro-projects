@@ -34,6 +34,11 @@ class StatBlock:
     magic_resist: float
 
 
+def clamp_champion_level(level: int) -> int:
+    """Clamp simulated champion level to ``[1, 18]`` for stat growth and spell-rank indexing."""
+    return max(1, min(18, int(level)))
+
+
 def growth_stat(base: float, growth: float, bonus_from_items: float, level: int) -> float:
     """
     Primary growth formula (wiki Champion statistic), level >= 1.
