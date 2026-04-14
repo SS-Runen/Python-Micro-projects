@@ -69,7 +69,7 @@ Useful flags:
 ### Programmatic API
 
 - `LoLPerfmon.sim.simulator.simulate` — lane or jungle ticks with optional **`purchase_hook`** or fixed `PurchasePolicy(buy_order=...)`.
-- `LoLPerfmon.sim.greedy_farm_build.greedy_farm_build` / `beam_refined_farm_build` — greedy and beam search; pass **`farm_mode`**.
+- `LoLPerfmon.sim.greedy_farm_build.stepwise_farm_build` / `beam_refined_farm_build` — path-aware stepwise shop policy and beam search; pass **`farm_mode`**.
 - `LoLPerfmon.sim.farm_build_search.FarmBuildSearch` — configurable beam search class.
 - Notebook `LoLPerfmon/waveclear_item_optimizer.ipynb` — examples and validation entrypoints.
 

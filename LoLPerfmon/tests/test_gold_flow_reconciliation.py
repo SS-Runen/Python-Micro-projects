@@ -4,13 +4,13 @@ from __future__ import annotations
 
 from LoLPerfmon.sim.bundle_factory import build_offline_bundle
 from LoLPerfmon.sim.config import FarmMode
-from LoLPerfmon.sim.greedy_farm_build import greedy_farm_build
+from LoLPerfmon.sim.greedy_farm_build import stepwise_farm_build
 from LoLPerfmon.sim.simulator import PurchasePolicy, gold_flow_reconciliation_error, simulate
 
 
 def test_gold_flow_reconciliation_offline_lane_greedy() -> None:
     data = build_offline_bundle()
-    _order, _farm, res, _meta = greedy_farm_build(data, "generic_ap", t_max=400.0)
+    _order, _farm, res, _meta = stepwise_farm_build(data, "generic_ap", t_max=400.0)
     assert gold_flow_reconciliation_error(res) < 1e-5
 
 

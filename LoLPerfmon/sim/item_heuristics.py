@@ -184,6 +184,71 @@ def meaningful_waveclear_exploration_catalog(
     return downward_recipe_closure(merged, full_items)
 
 
+def exploration_path_value_by_item(
+    profile: ChampionProfile,
+    items_by_id: Mapping[str, ItemDef],
+    *,
+    reference_level: int = 11,
+    ideal_target_top_k: int = 16,
+    ideal_path_boost: float = 0.25,
+) -> dict[str, float]:
+    """
+    Static path value for purchase ranking: for each item id, take the maximum
+    :func:`modeled_dps_uplift_per_gold` over itself and all items reachable following Data Dragon
+    ``into_ids`` (finished upgrades). Optionally scale up that max when the subtree can reach one
+    of the top-``ideal_target_top_k`` items by :func:`modeled_delta_effective_dps` at
+    ``reference_level`` (proxy “high clear” ideal targets for the kit).
+
+    Bounded ``O(|items| + edges)`` with memoization; cycles in ``into_ids`` are guarded.
+    """
+    if not items_by_id:
+        return {}
+    k = max(1, min(ideal_target_top_k, len(items_by_id)))
+    ranked = sorted(
+        (
+            (iid, modeled_delta_effective_dps(profile, iid, items_by_id, level=reference_level))
+            for iid in items_by_id
+        ),
+        key=lambda t: (-t[1], t[0]),
+    )
+    ideal_set = frozenset(t[0] for t in ranked[:k])
+    memo_raw: dict[str, float] = {}
+    memo_reach: dict[str, bool] = {}
+    visiting: set[str] = set()
+
+    def dfs(iid: str) -> tuple[float, bool]:
+        if iid in memo_raw:
+            return memo_raw[iid], memo_reach[iid]
+        if iid not in items_by_id:
+            return 0.0, False
+        if iid in visiting:
+            u = modeled_dps_uplift_per_gold(profile, iid, items_by_id, level=reference_level)
+            return u, iid in ideal_set
+        visiting.add(iid)
+        u = modeled_dps_uplift_per_gold(profile, iid, items_by_id, level=reference_level)
+        raw_max = u
+        reach = iid in ideal_set
+        for c in items_by_id[iid].into_ids:
+            if c not in items_by_id:
+                continue
+            rc, rr = dfs(c)
+            raw_max = max(raw_max, rc)
+            reach = reach or rr
+        visiting.remove(iid)
+        memo_raw[iid] = raw_max
+        memo_reach[iid] = reach
+        return raw_max, reach
+
+    for root in items_by_id:
+        dfs(root)
+    mult = 1.0 + ideal_path_boost
+    return {
+        iid: memo_raw[iid] * (mult if memo_reach[iid] else 1.0)
+        for iid in items_by_id
+        if iid in memo_raw
+    }
+
+
 def rank_item_ids_by_dps_uplift_per_gold(
     profile: ChampionProfile,
     items_by_id: Mapping[str, ItemDef],
@@ -204,6 +269,7 @@ def rank_item_ids_by_dps_uplift_per_gold(
 __all__ = [
     "DEFAULT_WAVECLEAR_EXCLUDE_TAGS",
     "downward_recipe_closure",
+    "exploration_path_value_by_item",
     "filter_waveclear_item_catalog",
     "meaningful_waveclear_exploration_catalog",
     "modeled_delta_effective_dps",

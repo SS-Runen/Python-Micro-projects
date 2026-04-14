@@ -205,6 +205,8 @@ def main() -> None:
         marginal_objective = args.marginal_objective
     elif args.leaf_score == "total_clear_units":
         marginal_objective = "horizon_greedy_roi"
+    elif args.leaf_score == "total_farm_gold":
+        marginal_objective = "horizon_greedy_roi"
     else:
         marginal_objective = "dps_per_gold"
 
@@ -285,7 +287,8 @@ def main() -> None:
         )
     else:
         t_sim = args.t_max
-        extrap = None
+        # Finite horizons beyond the precomputed wave list need synthetic waves (see simulate).
+        extrap = True
         t_note = f"{args.t_max:.0f}s"
 
     lines: list[str] = [

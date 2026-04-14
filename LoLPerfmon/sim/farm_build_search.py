@@ -23,10 +23,10 @@ from .simulator import (
 )
 from .greedy_farm_build import (
     BeamFarmMetadata,
-    GreedyFarmMetadata,
     MarginalTickObjective,
-    make_forced_prefix_then_greedy_hook,
-    make_greedy_hook,
+    StepwiseFarmMetadata,
+    make_forced_prefix_then_stepwise_hook,
+    make_stepwise_farm_hook,
     ranked_marginal_acquisitions,
 )
 from .purchase_metrics import auc_effective_dps_piecewise
@@ -154,11 +154,12 @@ def _ranked_horizon_next_items(
     allow_sell_non_starter_items: bool = False,
     use_level_weighted_marginal: bool = False,
     marginal_candidate_ids: frozenset[str] | None = None,
-    build_toward_weight: float = 0.0,
-    long_term_uplift_weight: float = 0.0,
     marginal_reference_level: int = 11,
+    path_into_weight: float = 0.45,
+    ideal_target_top_k: int = 16,
+    ideal_path_boost: float = 0.25,
 ) -> list[tuple[str, float, float, float]]:
-    """Rank next purchases by Δleaf_primary vs baseline greedy (nested full sims)."""
+    """Rank next purchases by Δleaf_primary vs baseline stepwise hook (nested full sims)."""
     dps_ranked = ranked_marginal_acquisitions(
         state,
         profile,
@@ -174,9 +175,10 @@ def _ranked_horizon_next_items(
         allow_sell_non_starter_items=allow_sell_non_starter_items,
         use_level_weighted_marginal=use_level_weighted_marginal,
         marginal_candidate_ids=marginal_candidate_ids,
-        build_toward_weight=build_toward_weight,
-        long_term_uplift_weight=long_term_uplift_weight,
         marginal_reference_level=marginal_reference_level,
+        path_into_weight=path_into_weight,
+        ideal_target_top_k=ideal_target_top_k,
+        ideal_path_boost=ideal_path_boost,
     )
     cap = max(horizon_candidate_cap, 4)
     candidate_ids = [r[0] for r in dps_ranked[:cap]]
@@ -185,7 +187,7 @@ def _ranked_horizon_next_items(
     rows: list[tuple[str, float, float, float]] = []
     for iid in candidate_ids:
         order_i: list[str] = []
-        hook_f = make_forced_prefix_then_greedy_hook(
+        hook_f = make_forced_prefix_then_stepwise_hook(
             profile,
             items,
             defer_purchases_until,
@@ -202,9 +204,10 @@ def _ranked_horizon_next_items(
             allow_sell_non_starter_items=allow_sell_non_starter_items,
             use_level_weighted_marginal=use_level_weighted_marginal,
             marginal_candidate_ids=marginal_candidate_ids,
-            build_toward_weight=build_toward_weight,
-            long_term_uplift_weight=long_term_uplift_weight,
             marginal_reference_level=marginal_reference_level,
+            path_into_weight=path_into_weight,
+            ideal_target_top_k=ideal_target_top_k,
+            ideal_path_boost=ideal_path_boost,
         )
         res_i = simulate(
             data,
@@ -254,9 +257,10 @@ def _marginals_for_beam_step(
     allow_sell_non_starter_items: bool = False,
     use_level_weighted_marginal: bool = False,
     marginal_candidate_ids: frozenset[str] | None = None,
-    build_toward_weight: float = 0.0,
-    long_term_uplift_weight: float = 0.0,
     marginal_reference_level: int = 11,
+    path_into_weight: float = 0.45,
+    ideal_target_top_k: int = 16,
+    ideal_path_boost: float = 0.25,
 ) -> list[tuple[str, float, float, float]]:
     st = state_after_prefix(data, items, prefix, farm_mode, jungle_starter_item_id)
     if st is None:
@@ -272,9 +276,10 @@ def _marginals_for_beam_step(
         allow_sell_non_starter_items=allow_sell_non_starter_items,
         use_level_weighted_marginal=use_level_weighted_marginal,
         marginal_candidate_ids=marginal_candidate_ids,
-        build_toward_weight=build_toward_weight,
-        long_term_uplift_weight=long_term_uplift_weight,
         marginal_reference_level=marginal_reference_level,
+        path_into_weight=path_into_weight,
+        ideal_target_top_k=ideal_target_top_k,
+        ideal_path_boost=ideal_path_boost,
     )
     if prefix:
         return ranked_marginal_acquisitions(st, profile, items, epsilon, **margs_kw)
@@ -303,9 +308,10 @@ def _marginals_for_beam_step(
             allow_sell_non_starter_items,
             use_level_weighted_marginal,
             marginal_candidate_ids,
-            build_toward_weight,
-            long_term_uplift_weight,
             marginal_reference_level,
+            path_into_weight,
+            ideal_target_top_k,
+            ideal_path_boost,
         )
     return ranked_marginal_acquisitions(st, profile, items, epsilon, **margs_kw)
 
@@ -331,7 +337,7 @@ class FarmBuildSearch:
     beam_depth: int = 1
     beam_width: int = 3
     max_leaf_evals: int = 27
-    marginal_objective: MarginalObjective = "dps_per_gold"
+    marginal_objective: MarginalObjective = "horizon_greedy_roi"
     horizon_candidate_cap: int = 48
     #: Required for :class:`FarmMode.JUNGLE` beam prefix snapshots (same starter as :func:`simulate`).
     jungle_starter_item_id: str | None = None
@@ -352,7 +358,7 @@ class FarmBuildSearch:
     allow_lane_starter_sell: bool = True
     #: If True, after lane starters, greedy may sell any inventory item (50% refund) to afford a buy.
     allow_sell_non_starter_items: bool = False
-    #: Blend farm-tick marginal with raw ΔDPS/gold by champion level (see greedy_farm_build).
+    #: Blend farm-tick marginal with raw ΔDPS/gold by champion level (see :mod:`greedy_farm_build`).
     use_level_weighted_marginal: bool = False
     #: If True and ``marginal_candidate_ids`` is None, restrict greedy/beam marginals to
     #: :func:`~LoLPerfmon.sim.item_heuristics.meaningful_waveclear_exploration_catalog`.
@@ -362,13 +368,15 @@ class FarmBuildSearch:
     #: Passed to :func:`~LoLPerfmon.sim.item_heuristics.meaningful_waveclear_exploration_catalog` when meaningful.
     meaningful_exclude_tags: frozenset[str] | None = None
     meaningful_require_tags: frozenset[str] | None = None
-    #: Recipe-graph lookahead: max child :func:`~LoLPerfmon.sim.item_heuristics.modeled_dps_uplift_per_gold`.
-    build_toward_weight: float = 0.12
-    #: Static ΔDPS/gold for the candidate item at ``marginal_reference_level`` (save-vs-buy signal).
-    long_term_uplift_weight: float = 0.15
     marginal_reference_level: int = 11
+    #: Weight on transitive ``into_ids`` path value (:func:`~LoLPerfmon.sim.item_heuristics.exploration_path_value_by_item`).
+    path_into_weight: float = 0.45
+    #: Top-``k`` items by modeled ΔDPS seed “ideal clear” targets for path boost.
+    ideal_target_top_k: int = 16
+    #: Multiplier when a path reaches an ideal target (see :func:`exploration_path_value_by_item`).
+    ideal_path_boost: float = 0.25
 
-    def run(self) -> tuple[tuple[str, ...], float, SimResult, BeamFarmMetadata | GreedyFarmMetadata]:
+    def run(self) -> tuple[tuple[str, ...], float, SimResult, BeamFarmMetadata | StepwiseFarmMetadata]:
         profile = self.data.champions[self.champion_id]
         items = self.data.items
         d = max(1, self.beam_depth)
@@ -391,7 +399,7 @@ class FarmBuildSearch:
             )
 
         order_g: list[str] = []
-        hook_g = make_greedy_hook(
+        hook_g = make_stepwise_farm_hook(
             profile,
             items,
             self.defer_purchases_until,
@@ -407,9 +415,10 @@ class FarmBuildSearch:
             allow_sell_non_starter_items=self.allow_sell_non_starter_items,
             use_level_weighted_marginal=self.use_level_weighted_marginal,
             marginal_candidate_ids=mc_ids,
-            build_toward_weight=self.build_toward_weight,
-            long_term_uplift_weight=self.long_term_uplift_weight,
             marginal_reference_level=self.marginal_reference_level,
+            path_into_weight=self.path_into_weight,
+            ideal_target_top_k=self.ideal_target_top_k,
+            ideal_path_boost=self.ideal_path_boost,
         )
         if self.leaf_score == "early_dps_auc":
             best_val, res_g = _simulate_greedy_hook_early_dps_auc(
@@ -474,12 +483,13 @@ class FarmBuildSearch:
             self.allow_sell_non_starter_items,
             self.use_level_weighted_marginal,
             mc_ids,
-            self.build_toward_weight,
-            self.long_term_uplift_weight,
             self.marginal_reference_level,
+            self.path_into_weight,
+            self.ideal_target_top_k,
+            self.ideal_path_boost,
         )
         if not first_margs:
-            meta = GreedyFarmMetadata(epsilon=self.epsilon, purchase_count=len(best_order))
+            meta = StepwiseFarmMetadata(epsilon=self.epsilon, purchase_count=len(best_order))
             return best_order, best_val, best_res, meta
 
         beam_prefixes: list[tuple[str, ...]] = [()]
@@ -513,9 +523,10 @@ class FarmBuildSearch:
                     self.allow_sell_non_starter_items,
                     self.use_level_weighted_marginal,
                     mc_ids,
-                    self.build_toward_weight,
-                    self.long_term_uplift_weight,
                     self.marginal_reference_level,
+                    self.path_into_weight,
+                    self.ideal_target_top_k,
+                    self.ideal_path_boost,
                 )
                 for row in margs[:w]:
                     next_id = row[0]
@@ -523,7 +534,7 @@ class FarmBuildSearch:
                         break
                     new_prefix = prefix + (next_id,)
                     order_i: list[str] = []
-                    hook_f = make_forced_prefix_then_greedy_hook(
+                    hook_f = make_forced_prefix_then_stepwise_hook(
                         profile,
                         items,
                         self.defer_purchases_until,
@@ -540,9 +551,10 @@ class FarmBuildSearch:
                         allow_sell_non_starter_items=self.allow_sell_non_starter_items,
                         use_level_weighted_marginal=self.use_level_weighted_marginal,
                         marginal_candidate_ids=mc_ids,
-                        build_toward_weight=self.build_toward_weight,
-                        long_term_uplift_weight=self.long_term_uplift_weight,
                         marginal_reference_level=self.marginal_reference_level,
+                        path_into_weight=self.path_into_weight,
+                        ideal_target_top_k=self.ideal_target_top_k,
+                        ideal_path_boost=self.ideal_path_boost,
                     )
                     if self.leaf_score == "early_dps_auc":
                         fv, res_i = _simulate_greedy_hook_early_dps_auc(

@@ -1,5 +1,8 @@
 """
-Greedy and bounded-beam farm build search (lane or jungle). See OPTIMIZATION_CRITERIA.md.
+Stepwise path-aware farm build search and bounded beam (lane or jungle). See OPTIMIZATION_CRITERIA.md.
+
+Purchase ranking blends **immediate** capped farm-tick marginals with **transitive** recipe-path
+value toward high modeled-clear items (:func:`~LoLPerfmon.sim.item_heuristics.exploration_path_value_by_item`).
 """
 
 from __future__ import annotations
@@ -28,7 +31,7 @@ from .simulator import (
     try_acquire_with_shop_sells,
 )
 from .stats import total_stats
-from .item_heuristics import modeled_dps_uplift_per_gold
+from .item_heuristics import exploration_path_value_by_item
 
 MarginalTickObjective = Literal["farm_gold", "clear_count"]
 
@@ -90,24 +93,6 @@ def _recipe_craft_burst(
             break
 
 
-def _max_into_uplift_per_gold(
-    profile: ChampionProfile,
-    it: ItemDef,
-    items: dict,
-    *,
-    level: int,
-) -> float:
-    best = 0.0
-    for pid in it.into_ids:
-        if pid not in items:
-            continue
-        best = max(
-            best,
-            modeled_dps_uplift_per_gold(profile, pid, items, level=level),
-        )
-    return best
-
-
 def _marginal_candidates(
     state: SimulationState,
     profile: ChampionProfile,
@@ -124,27 +109,38 @@ def _marginal_candidates(
     allow_sell_non_starter_items: bool = False,
     use_level_weighted_marginal: bool = False,
     marginal_candidate_ids: frozenset[str] | None = None,
-    build_toward_weight: float = 0.0,
-    long_term_uplift_weight: float = 0.0,
     marginal_reference_level: int = 11,
+    path_into_weight: float = 0.45,
+    ideal_target_top_k: int = 16,
+    ideal_path_boost: float = 0.25,
 ) -> list[tuple[str, float, float, float]]:
     """
     One pass over ``items``: acquisitions that succeed on a snapshot and pass marginal rules.
     Returns tuples ``(item_id, score, delta_dps, gold_paid)`` unsorted.
 
+    Score blends (1) **immediate** farm or clear marginal per gold paid with (2) **path** value:
+    transitive max modeled ΔDPS/gold along ``into_ids`` toward top modeled-clear targets
+    (:func:`~LoLPerfmon.sim.item_heuristics.exploration_path_value_by_item`), so components on
+    routes to strong finishers are not ranked only by myopic ΔDPS from the cheap step alone.
+
     With ``allow_sell_non_starter_items``, trials use :func:`try_acquire_with_shop_sells`
     (lane starters first, then any item). With ``allow_lane_starter_sell`` only, trials use
     :func:`try_acquire_with_lane_starter_sells`.
 
-    With ``marginal_income_cap`` and ``data`` set, score uses a first-order tick estimate
-    ``(d tick_metric / d dps) * Δdps / gold_paid`` (SciPy ``approx_fprime`` on capped throughput).
-    Use ``marginal_tick_objective='farm_gold'`` (default) or ``'clear_count'`` for minions/monsters
-    per tick. Candidates with negligible marginal per tick are dropped even if Δdps > 0.
+    With ``marginal_income_cap`` and ``data`` set, the immediate term uses a first-order tick
+    estimate ``(d tick_metric / d dps) * Δdps / gold_paid`` (capped throughput).
 
     With ``endpoints_only_marginals``, skips **pure shop components** (no ``from``, non-empty
     ``into``) so the shop only adds endpoints or recipe parents (``from_ids`` non-empty), i.e.
     full buys or crafts—not standalone Long Swords / Tomes.
     """
+    path_val = exploration_path_value_by_item(
+        profile,
+        items,
+        reference_level=marginal_reference_level,
+        ideal_target_top_k=ideal_target_top_k,
+        ideal_path_boost=ideal_path_boost,
+    )
     base_stats = total_stats(profile, state.level, tuple(state.inventory), items)
     dps0 = effective_dps(profile, state.level, base_stats)
     dg_ddps = 0.0
@@ -195,14 +191,7 @@ def _marginal_candidates(
                 score = score_cap
         else:
             score = score_dps
-        if long_term_uplift_weight > 0.0:
-            score += long_term_uplift_weight * modeled_dps_uplift_per_gold(
-                profile, iid, items, level=marginal_reference_level
-            )
-        if build_toward_weight > 0.0 and it_def.into_ids:
-            score += build_toward_weight * _max_into_uplift_per_gold(
-                profile, it_def, items, level=marginal_reference_level
-            )
+        score += path_into_weight * path_val.get(iid, 0.0)
         out.append((iid, score, delta, paid))
     return out
 
@@ -233,9 +222,10 @@ def ranked_marginal_acquisitions(
     allow_sell_non_starter_items: bool = False,
     use_level_weighted_marginal: bool = False,
     marginal_candidate_ids: frozenset[str] | None = None,
-    build_toward_weight: float = 0.0,
-    long_term_uplift_weight: float = 0.0,
     marginal_reference_level: int = 11,
+    path_into_weight: float = 0.45,
+    ideal_target_top_k: int = 16,
+    ideal_path_boost: float = 0.25,
 ) -> list[tuple[str, float, float, float]]:
     """Sorted best-first: score desc, delta desc, item_id asc."""
     cands = _marginal_candidates(
@@ -253,15 +243,16 @@ def ranked_marginal_acquisitions(
         allow_sell_non_starter_items=allow_sell_non_starter_items,
         use_level_weighted_marginal=use_level_weighted_marginal,
         marginal_candidate_ids=marginal_candidate_ids,
-        build_toward_weight=build_toward_weight,
-        long_term_uplift_weight=long_term_uplift_weight,
         marginal_reference_level=marginal_reference_level,
+        path_into_weight=path_into_weight,
+        ideal_target_top_k=ideal_target_top_k,
+        ideal_path_boost=ideal_path_boost,
     )
     cands.sort(key=lambda t: (-t[1], -t[2], t[0]))
     return cands
 
 
-def _greedy_purchase_burst(
+def _stepwise_purchase_burst(
     state: SimulationState,
     profile: ChampionProfile,
     items: dict,
@@ -279,9 +270,10 @@ def _greedy_purchase_burst(
     allow_sell_non_starter_items: bool = False,
     use_level_weighted_marginal: bool = False,
     marginal_candidate_ids: frozenset[str] | None = None,
-    build_toward_weight: float = 0.0,
-    long_term_uplift_weight: float = 0.0,
     marginal_reference_level: int = 11,
+    path_into_weight: float = 0.45,
+    ideal_target_top_k: int = 16,
+    ideal_path_boost: float = 0.25,
 ) -> None:
     if defer_purchases_until is not None and state.time_seconds + 1e-9 < defer_purchases_until:
         return
@@ -302,9 +294,10 @@ def _greedy_purchase_burst(
             allow_sell_non_starter_items=allow_sell_non_starter_items,
             use_level_weighted_marginal=use_level_weighted_marginal,
             marginal_candidate_ids=marginal_candidate_ids,
-            build_toward_weight=build_toward_weight,
-            long_term_uplift_weight=long_term_uplift_weight,
             marginal_reference_level=marginal_reference_level,
+            path_into_weight=path_into_weight,
+            ideal_target_top_k=ideal_target_top_k,
+            ideal_path_boost=ideal_path_boost,
         )
         best = _pick_best_marginal(cands)
         if best is None:
@@ -323,6 +316,9 @@ def _greedy_purchase_burst(
         _recipe_craft_burst(state, items, order_sink)
 
 
+_greedy_purchase_burst = _stepwise_purchase_burst
+
+
 def make_early_stop_full_inventory_no_dps_marginal(
     profile: ChampionProfile,
     items: dict,
@@ -335,9 +331,10 @@ def make_early_stop_full_inventory_no_dps_marginal(
     allow_sell_non_starter_items: bool = False,
     use_level_weighted_marginal: bool = False,
     marginal_candidate_ids: frozenset[str] | None = None,
-    build_toward_weight: float = 0.0,
-    long_term_uplift_weight: float = 0.0,
     marginal_reference_level: int = 11,
+    path_into_weight: float = 0.45,
+    ideal_target_top_k: int = 16,
+    ideal_path_boost: float = 0.25,
 ) -> Callable[[SimulationState], bool]:
     """
     End simulation when the bag has :data:`MAX_INVENTORY_SLOTS` items and
@@ -361,9 +358,10 @@ def make_early_stop_full_inventory_no_dps_marginal(
             allow_sell_non_starter_items=allow_sell_non_starter_items,
             use_level_weighted_marginal=use_level_weighted_marginal,
             marginal_candidate_ids=marginal_candidate_ids,
-            build_toward_weight=build_toward_weight,
-            long_term_uplift_weight=long_term_uplift_weight,
             marginal_reference_level=marginal_reference_level,
+            path_into_weight=path_into_weight,
+            ideal_target_top_k=ideal_target_top_k,
+            ideal_path_boost=ideal_path_boost,
         )
         return len(cands) == 0
 
@@ -391,7 +389,7 @@ def make_early_stop_six_build_endpoints(
     return early_stop
 
 
-def make_greedy_hook(
+def make_stepwise_farm_hook(
     profile: ChampionProfile,
     items: dict,
     defer_purchases_until: float | None,
@@ -408,12 +406,13 @@ def make_greedy_hook(
     allow_sell_non_starter_items: bool = False,
     use_level_weighted_marginal: bool = False,
     marginal_candidate_ids: frozenset[str] | None = None,
-    build_toward_weight: float = 0.0,
-    long_term_uplift_weight: float = 0.0,
     marginal_reference_level: int = 11,
+    path_into_weight: float = 0.45,
+    ideal_target_top_k: int = 16,
+    ideal_path_boost: float = 0.25,
 ) -> Callable[[SimulationState], None]:
     def purchase_hook(state: SimulationState) -> None:
-        _greedy_purchase_burst(
+        _stepwise_purchase_burst(
             state,
             profile,
             items,
@@ -430,18 +429,20 @@ def make_greedy_hook(
             allow_sell_non_starter_items=allow_sell_non_starter_items,
             use_level_weighted_marginal=use_level_weighted_marginal,
             marginal_candidate_ids=marginal_candidate_ids,
-            build_toward_weight=build_toward_weight,
-            long_term_uplift_weight=long_term_uplift_weight,
             marginal_reference_level=marginal_reference_level,
+            path_into_weight=path_into_weight,
+            ideal_target_top_k=ideal_target_top_k,
+            ideal_path_boost=ideal_path_boost,
         )
 
     return purchase_hook
 
 
-make_greedy_lane_hook = make_greedy_hook
+make_greedy_hook = make_stepwise_farm_hook
+make_greedy_lane_hook = make_stepwise_farm_hook
 
 
-def make_forced_prefix_then_greedy_hook(
+def make_forced_prefix_then_stepwise_hook(
     profile: ChampionProfile,
     items: dict,
     defer_purchases_until: float | None,
@@ -459,9 +460,10 @@ def make_forced_prefix_then_greedy_hook(
     allow_sell_non_starter_items: bool = False,
     use_level_weighted_marginal: bool = False,
     marginal_candidate_ids: frozenset[str] | None = None,
-    build_toward_weight: float = 0.0,
-    long_term_uplift_weight: float = 0.0,
     marginal_reference_level: int = 11,
+    path_into_weight: float = 0.45,
+    ideal_target_top_k: int = 16,
+    ideal_path_boost: float = 0.25,
 ) -> Callable[[SimulationState], None]:
     forced: deque[str] = deque(forced_prefix)
 
@@ -484,7 +486,7 @@ def make_forced_prefix_then_greedy_hook(
             else:
                 return
         _recipe_craft_burst(state, items, order_sink)
-        _greedy_purchase_burst(
+        _stepwise_purchase_burst(
             state,
             profile,
             items,
@@ -501,18 +503,25 @@ def make_forced_prefix_then_greedy_hook(
             allow_sell_non_starter_items=allow_sell_non_starter_items,
             use_level_weighted_marginal=use_level_weighted_marginal,
             marginal_candidate_ids=marginal_candidate_ids,
-            build_toward_weight=build_toward_weight,
-            long_term_uplift_weight=long_term_uplift_weight,
             marginal_reference_level=marginal_reference_level,
+            path_into_weight=path_into_weight,
+            ideal_target_top_k=ideal_target_top_k,
+            ideal_path_boost=ideal_path_boost,
         )
 
     return purchase_hook
 
 
+make_forced_prefix_then_greedy_hook = make_forced_prefix_then_stepwise_hook
+
+
 @dataclass(frozen=True)
-class GreedyFarmMetadata:
+class StepwiseFarmMetadata:
     epsilon: float
     purchase_count: int
+
+
+GreedyFarmMetadata = StepwiseFarmMetadata
 
 
 @dataclass(frozen=True)
@@ -524,7 +533,7 @@ class BeamFarmMetadata:
     leaves_evaluated: int
 
 
-def greedy_farm_build(
+def stepwise_farm_build(
     data: GameDataBundle,
     champion_id: str,
     eta_lane: float = 1.0,
@@ -539,15 +548,17 @@ def greedy_farm_build(
     use_level_weighted_marginal: bool = False,
     meaningful_exploration: bool = False,
     marginal_candidate_ids: frozenset[str] | None = None,
-    build_toward_weight: float = 0.0,
-    long_term_uplift_weight: float = 0.0,
     marginal_reference_level: int = 11,
-) -> tuple[tuple[str, ...], float, SimResult, GreedyFarmMetadata]:
+    path_into_weight: float = 0.45,
+    ideal_target_top_k: int = 16,
+    ideal_path_boost: float = 0.25,
+    marginal_objective: Literal["dps_per_gold", "horizon_greedy_roi"] = "horizon_greedy_roi",
+    horizon_candidate_cap: int = 48,
+) -> tuple[tuple[str, ...], float, SimResult, BeamFarmMetadata | StepwiseFarmMetadata]:
     """
-    Greedily maximize marginal farm income proxy (or Δeffective_dps / gold when cap off) at each
-    purchase opportunity. Primary score for comparison is ``total_farm_gold`` on the returned
-    :class:`SimResult`. ``farm_mode``: lane (minion waves) or jungle (camp cycles)—mutually
-    exclusive per run.
+    Single-step beam (``beam_depth=1``, ``beam_width=1``) with path-aware stepwise shop policy.
+    Prefer :func:`beam_refined_farm_build` for deeper prefixes. ``meaningful_exploration`` narrows
+    marginal candidates via :func:`~LoLPerfmon.sim.item_heuristics.meaningful_waveclear_exploration_catalog`.
     """
     profile = data.champions[champion_id]
     mc_ids = marginal_candidate_ids
@@ -562,126 +573,31 @@ def greedy_farm_build(
                 reference_level=marginal_reference_level,
             ).keys()
         )
-    order: list[str] = []
-    hook = make_greedy_hook(
-        profile,
-        data.items,
-        defer_purchases_until,
-        epsilon,
-        order_sink=order,
-        data=data,
-        farm_mode=farm_mode,
+    return beam_refined_farm_build(
+        data,
+        champion_id,
         eta_lane=eta_lane,
+        t_max=t_max,
+        defer_purchases_until=defer_purchases_until,
+        epsilon=epsilon,
+        beam_depth=1,
+        beam_width=1,
+        max_leaf_evals=8,
+        farm_mode=farm_mode,
+        marginal_objective=marginal_objective,
+        horizon_candidate_cap=horizon_candidate_cap,
+        jungle_starter_item_id=jungle_starter_item_id,
         marginal_income_cap=marginal_income_cap,
         allow_lane_starter_sell=allow_lane_starter_sell,
         allow_sell_non_starter_items=allow_sell_non_starter_items,
         use_level_weighted_marginal=use_level_weighted_marginal,
+        meaningful_exploration=False,
         marginal_candidate_ids=mc_ids,
-        build_toward_weight=build_toward_weight,
-        long_term_uplift_weight=long_term_uplift_weight,
         marginal_reference_level=marginal_reference_level,
+        path_into_weight=path_into_weight,
+        ideal_target_top_k=ideal_target_top_k,
+        ideal_path_boost=ideal_path_boost,
     )
-    res = simulate(
-        data,
-        champion_id,
-        farm_mode,
-        PurchasePolicy(buy_order=()),
-        eta_lane=eta_lane,
-        t_max=t_max,
-        defer_purchases_until=defer_purchases_until,
-        purchase_hook=hook,
-        jungle_starter_item_id=jungle_starter_item_id,
-    )
-    meta = GreedyFarmMetadata(epsilon=epsilon, purchase_count=len(order))
-    return tuple(order), res.total_farm_gold, res, meta
-
-
-def greedy_farm_build_waveclear_dps_saturation(
-    data: GameDataBundle,
-    champion_id: str,
-    *,
-    eta_lane: float = 1.0,
-    t_max: float | None = None,
-    defer_purchases_until: float | None = None,
-    epsilon: float = 1e-9,
-    farm_mode: FarmMode = FarmMode.LANE,
-    jungle_starter_item_id: str | None = None,
-    allow_lane_starter_sell: bool = True,
-    allow_sell_non_starter_items: bool = False,
-    use_level_weighted_marginal: bool = False,
-    meaningful_exploration: bool = False,
-    marginal_candidate_ids: frozenset[str] | None = None,
-    build_toward_weight: float = 0.0,
-    long_term_uplift_weight: float = 0.0,
-    marginal_reference_level: int = 11,
-) -> tuple[tuple[str, ...], SimResult, GreedyFarmMetadata, bool]:
-    """
-    Greedy shop using **Δeffective_dps / gold** only (no throughput-capped marginal farm tick).
-    Stops early when inventory is full (:data:`MAX_INVENTORY_SLOTS`) and no modeled purchase
-    raises :func:`~LoLPerfmon.sim.clear.effective_dps`; otherwise runs until ``t_max`` or wave data
-    ends. The fourth return is True iff :attr:`SimResult.ended_by_early_stop`.
-    """
-    profile = data.champions[champion_id]
-    mc_ids = marginal_candidate_ids
-    if meaningful_exploration and mc_ids is None:
-        from .item_heuristics import meaningful_waveclear_exploration_catalog
-
-        mc_ids = frozenset(
-            meaningful_waveclear_exploration_catalog(
-                data.items,
-                farm_mode,
-                profile,
-                reference_level=marginal_reference_level,
-            ).keys()
-        )
-    order: list[str] = []
-    early = make_early_stop_full_inventory_no_dps_marginal(
-        profile,
-        data.items,
-        epsilon,
-        data=data,
-        farm_mode=farm_mode,
-        eta_lane=eta_lane,
-        allow_lane_starter_sell=allow_lane_starter_sell,
-        allow_sell_non_starter_items=allow_sell_non_starter_items,
-        use_level_weighted_marginal=use_level_weighted_marginal,
-        marginal_candidate_ids=mc_ids,
-        build_toward_weight=build_toward_weight,
-        long_term_uplift_weight=long_term_uplift_weight,
-        marginal_reference_level=marginal_reference_level,
-    )
-    hook = make_greedy_hook(
-        profile,
-        data.items,
-        defer_purchases_until,
-        epsilon,
-        order_sink=order,
-        data=data,
-        farm_mode=farm_mode,
-        eta_lane=eta_lane,
-        marginal_income_cap=False,
-        allow_lane_starter_sell=allow_lane_starter_sell,
-        allow_sell_non_starter_items=allow_sell_non_starter_items,
-        use_level_weighted_marginal=use_level_weighted_marginal,
-        marginal_candidate_ids=mc_ids,
-        build_toward_weight=build_toward_weight,
-        long_term_uplift_weight=long_term_uplift_weight,
-        marginal_reference_level=marginal_reference_level,
-    )
-    res = simulate(
-        data,
-        champion_id,
-        farm_mode,
-        PurchasePolicy(buy_order=()),
-        eta_lane=eta_lane,
-        t_max=t_max,
-        defer_purchases_until=defer_purchases_until,
-        purchase_hook=hook,
-        jungle_starter_item_id=jungle_starter_item_id,
-        early_stop=early,
-    )
-    meta = GreedyFarmMetadata(epsilon=epsilon, purchase_count=len(order))
-    return tuple(order), res, meta, res.ended_by_early_stop
 
 
 def beam_refined_farm_build(
@@ -695,7 +611,7 @@ def beam_refined_farm_build(
     beam_width: int = 3,
     max_leaf_evals: int = 27,
     farm_mode: FarmMode = FarmMode.LANE,
-    marginal_objective: Literal["dps_per_gold", "horizon_greedy_roi"] = "dps_per_gold",
+    marginal_objective: Literal["dps_per_gold", "horizon_greedy_roi"] = "horizon_greedy_roi",
     horizon_candidate_cap: int = 48,
     jungle_starter_item_id: str | None = None,
     marginal_income_cap: bool = True,
@@ -714,14 +630,16 @@ def beam_refined_farm_build(
     marginal_candidate_ids: frozenset[str] | None = None,
     meaningful_exclude_tags: frozenset[str] | None = None,
     meaningful_require_tags: frozenset[str] | None = None,
-    build_toward_weight: float = 0.12,
-    long_term_uplift_weight: float = 0.15,
     marginal_reference_level: int = 11,
-) -> tuple[tuple[str, ...], float, SimResult, BeamFarmMetadata | GreedyFarmMetadata]:
+    path_into_weight: float = 0.45,
+    ideal_target_top_k: int = 16,
+    ideal_path_boost: float = 0.25,
+) -> tuple[tuple[str, ...], float, SimResult, BeamFarmMetadata | StepwiseFarmMetadata]:
     """
     Beam search over purchase prefixes (depth ``beam_depth``, width ``beam_width``).
     Default leaf score is full-horizon ``total_farm_gold``; use ``leaf_score='early_dps_auc'``
-    to maximize ∫ modeled effective DPS dt over ``early_horizon_seconds``. Greedy tail after prefix.
+    to maximize ∫ modeled effective DPS dt over ``early_horizon_seconds``. Path-aware stepwise
+    tail after each prefix (see :func:`make_stepwise_farm_hook`).
 
     Pass ``early_stop`` and ``t_max=float('inf')`` (e.g. with
     :func:`make_early_stop_six_build_endpoints`) to run until a custom stop condition; set
@@ -757,9 +675,10 @@ def beam_refined_farm_build(
         marginal_candidate_ids=marginal_candidate_ids,
         meaningful_exclude_tags=meaningful_exclude_tags,
         meaningful_require_tags=meaningful_require_tags,
-        build_toward_weight=build_toward_weight,
-        long_term_uplift_weight=long_term_uplift_weight,
         marginal_reference_level=marginal_reference_level,
+        path_into_weight=path_into_weight,
+        ideal_target_top_k=ideal_target_top_k,
+        ideal_path_boost=ideal_path_boost,
     )
     return search.run()
 
@@ -768,13 +687,15 @@ __all__ = [
     "MarginalTickObjective",
     "BeamFarmMetadata",
     "GreedyFarmMetadata",
+    "StepwiseFarmMetadata",
     "beam_refined_farm_build",
     "ranked_marginal_acquisitions",
-    "greedy_farm_build",
-    "greedy_farm_build_waveclear_dps_saturation",
+    "stepwise_farm_build",
     "make_early_stop_full_inventory_no_dps_marginal",
     "make_early_stop_six_build_endpoints",
     "make_forced_prefix_then_greedy_hook",
+    "make_forced_prefix_then_stepwise_hook",
     "make_greedy_hook",
     "make_greedy_lane_hook",
+    "make_stepwise_farm_hook",
 ]
