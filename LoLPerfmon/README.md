@@ -25,7 +25,9 @@ The **`LoLPerfmon`** directory is a **Python package** (it has `LoLPerfmon/__ini
 
 The main script for **exporting** beam-searched farm builds to a text file is:
 
-**[`LoLPerfmon/scripts/export_gameplay_build_orders.py`](scripts/export_gameplay_build_orders.py)** — documented as the **CLI entry point** for that workflow (writes under `LoLPerfmon/.local/` by default; use `--help` for leaf scores, item tag filters, `--only-champions`, six-slot mode, etc.).
+**[`LoLPerfmon/scripts/export_gameplay_build_orders.py`](scripts/export_gameplay_build_orders.py)** — documented as the **CLI entry point** for that workflow (writes under `LoLPerfmon/.local/` by default). By default it applies **wave-clear catalog heuristics** ([`sim/item_heuristics.py`](sim/item_heuristics.py): tag excludes, optional require-tags, lane jungle-pet strip, recipe closure, jungle companion merge). Use `--no-waveclear-heuristics` for tag filters only. **`--stat-align-waveclear`** narrows the shop to items whose stats match the champion’s inferred primary **ability** scaling (AP vs AD from spell coefficients, or [`KitParams`](sim/models.py) fallback; see [`sim/kit_stat_alignment.py`](sim/kit_stat_alignment.py)). **`--print-modeled-dps-steps`** appends a per-buy Δ`effective_dps` table (fixed level; not a full income sim). See **`--help`** for leaf scores, `--exclude-item-tags` / `--require-item-tags`, `--only-champions`, six-slot mode, etc. For the stat → DPS → throughput → gold/clears chain and heuristic vs preset-root tradeoffs, see [`OPTIMIZATION_CRITERIA.md`](OPTIMIZATION_CRITERIA.md).
+
+**[`LoLPerfmon/scripts/analyze_waveclear_stat_alignment.py`](scripts/analyze_waveclear_stat_alignment.py)** — ranks a large **stat-compatible** slice of the catalog by modeled ΔDPS/gold and optional `--build-order` step traces (no beam search).
 
 ```bash
 # repository root

@@ -83,11 +83,50 @@ Myopic equivalence above is **not** fixed by “normalizing units” in the marg
 
 Default ranked SR bundles do **not** filter by role line. Items with the Data Dragon **`Support`** tag (often cheap full endpoints with AP) compete with “Damage” items unless you **exclude tags** at load or export time ([`sim/item_tag_filters.py`](sim/item_tag_filters.py), [`scripts/export_gameplay_build_orders.py`](scripts/export_gameplay_build_orders.py)).
 
+### Wave-clear catalog heuristics (explore full SR, then search)
+
+Blind greedy or beam search over the **entire** ranked-SR item dict is a poor match for “high-stat finished carry” narratives: myopic marginals favor cheap ΔDPS/gold steps, and throughput saturation zeros out farm/clear derivatives. The intended **primary** workflow is still **catalog-driven** (no user-supplied six-item list): **enumerate the full bundle**, apply **layered static filters**, then run greedy/beam only on the **surviving** `items` dict (same simulator and scores).
+
+Implementation: [`sim/item_heuristics.py`](sim/item_heuristics.py).
+
+1. **Hard tag rejects** — default exclude set includes `Support`, `GoldPer`, `Consumable`, `Trinket`, `Vision` (merged with `--exclude-item-tags` on [`scripts/export_gameplay_build_orders.py`](scripts/export_gameplay_build_orders.py)). Optional **`--require-item-tags`** narrows role (e.g. `SpellDamage`).
+2. **Farm mode** — **lane:** drop modern **jungle pet starters** so laners do not buy companions; **jungle:** merge **companion** item defs back from the full bundle after filtering so starters still resolve.
+3. **Recipe closure** — [`downward_recipe_closure`](sim/item_heuristics.py) adds every `from_ids` component reachable from kept items so [`acquire_goal`](sim/simulator.py) can craft parents; the dict stays recipe-complete without naming preset builds.
+4. **Optional static ranking** — [`modeled_dps_uplift_per_gold`](sim/item_heuristics.py) / [`rank_item_ids_by_dps_uplift_per_gold`](sim/item_heuristics.py) rank items by modeled Δ[`effective_dps`](sim/clear.py) per gold for the champion kit (single-item inventory proxy). Use for diagnostics or future top-K marginal narrowing; it does **not** replace forward `simulate`.
+
+5. **Meaningful contribution filter + recipe closure** — [`meaningful_waveclear_exploration_catalog`](sim/item_heuristics.py) starts from the same wave-clear pool, keeps items whose modeled Δ[`effective_dps`](sim/clear.py) at a reference level exceeds a small epsilon (items that cannot move modeled farm DPS for this kit are dropped), adds **upward** prerequisites via Data Dragon `into_ids` toward surviving items, then **downward** `from_ids` closure so the shop dict stays recipe-complete. Greedy/beam use this as the **marginal candidate allow-list** while [`simulate`](sim/simulator.py) still receives the full item map for crafting (`meaningful_exploration` on [`FarmBuildSearch`](sim/farm_build_search.py) / [`beam_refined_farm_build`](sim/greedy_farm_build.py); off in plain [`greedy_farm_build`](sim/greedy_farm_build.py) for backward compatibility).
+
+6. **Near-term + long-term marginal blend (bounded)** — Purchase ranking can add a **build-toward** term (max [`modeled_dps_uplift_per_gold`](sim/item_heuristics.py) among direct `into_ids` children) and a **long-term static uplift** term (same metric for the candidate item), controlled by `build_toward_weight` and `long_term_uplift_weight` on [`FarmBuildSearch`](sim/farm_build_search.py). Defaults favor save-for-big-item signals without unbounded catalog enumeration. Empty-prefix **horizon ROI** (`marginal_objective=horizon_greedy_roi`) still runs **nested full simulations** (capped by `horizon_candidate_cap`) for non-myopic first-step ranking.
+
+[`export_gameplay_build_orders.py`](scripts/export_gameplay_build_orders.py) applies this pipeline **by default** (`waveclear_heuristics=on` in the header). Use **`--no-waveclear-heuristics`** to revert to manual tag filters only.
+
+**Stat-aligned pool (optional):** [`sim/kit_stat_alignment.py`](sim/kit_stat_alignment.py) infers whether **AP** or **AD** (or **mixed**) dominates on the spell line with the largest combined scaling-per-cooldown at the reference rank, then keeps items whose flat stats plausibly feed that axis (e.g. AP + ability haste for AP carries). Pass **`--stat-align-waveclear`** on the export script to search only on that closed catalog. **`--print-modeled-dps-steps`** (or stat-align) appends a **static** per-purchase Δ[`effective_dps`](sim/clear.py) table along the reported buy order (fixed level; not a replacement for forward farm/clear sim). For ranked lists without beam search, use [`scripts/analyze_waveclear_stat_alignment.py`](scripts/analyze_waveclear_stat_alignment.py).
+
+### From compatible stats to farm gold and clear counts
+
+For a fixed champion and horizon, the simulator ties items to income through **one** modeling chain (see [`clear.py`](sim/clear.py), [`simulator.py`](sim/simulator.py)):
+
+1. **Inventory** adds to [`StatBonus`](sim/models.py) via [`total_stats`](sim/stats.py).
+2. **[`effective_dps`](sim/clear.py)** (lane clear DPS) increases with stats that matter for the kit (AD/AP/AS/AH, spell model, etc.).
+3. **Throughput** — lane [`throughput_ratio`](sim/clear.py) and jungle route efficiency scale with clear speed vs interval until **capped**; past the cap, extra DPS does not increase the next farm tick.
+4. **Totals** — [`SimResult.total_farm_gold`](sim/simulator.py), [`total_lane_minions_cleared`](sim/simulator.py), [`total_jungle_monsters_cleared`](sim/simulator.py) accumulate from those ticks.
+
+Heuristics should prefer champion-**compatible** items whose stats actually move **`effective_dps`** in this model; saturation is the ceiling where more stats stop helping **modeled** farm/clear on the next tick.
+
+### Heuristic pool vs preset finished-item roots
+
+- **Default / primary:** Greedy or beam on a **heuristic-filtered** full-catalog pool (above). No **player-provided** list of six finished items is required to produce a reference export.
+- **Optional diagnostic / benchmark:** [`optimal_interleaved_build`](sim/build_path_optimizer.py) and related helpers find **recipe-respecting interleaving** when **explicit finished item ids** (roots) are supplied—best for “given these six items, best purchase order,” regression tests, or comparing against catalog search. Treat that path as **supplementary**, not a prerequisite for the main wave-clear workflow.
+
 ## What `total_farm_gold` means
 
 - **Lane:** Sum of **discrete** per-wave gold ticks when lane farming: throughput from clear time vs wave interval, **not** a continuous last-hit model.
 - **Jungle:** Sum of per-route gold ticks scaled by clear speed vs base cycle time.
 - **Not** a claim of matching in-game CS/sec or client-accurate combat.
+
+**Split buckets (mode-pure runs):** [`SimResult.total_lane_minion_farm_gold`](sim/simulator.py) holds only lane wave farm ticks; [`SimResult.total_jungle_monster_farm_gold`](sim/simulator.py) holds only jungle route farm ticks. Each run uses **one** [`FarmMode`](sim/config.py), so one of these is zero and `total_farm_gold` equals their sum. Use [`primary_farm_gold_for_mode`](sim/simulator.py) when you want the active mode’s bucket explicitly. **Do not** add lane and jungle farm gold into one optimization scalar across modes (XP / jungle augment story is lane-vs-jungle separate in product terms; exact penalty math is not required in v1).
+
+**Wallet vs farm total:** Passive gold ([`passive_gold_in_interval`](sim/passive.py)) and shop sell credits are **not** included in `total_farm_gold`. For a full breakdown and reconciliation check, use [`gold_income_breakdown`](sim/simulator.py) / [`gold_flow_reconciliation_error`](sim/simulator.py) on [`SimResult`](sim/simulator.py). The export script [`scripts/export_gameplay_build_orders.py`](scripts/export_gameplay_build_orders.py) prints per-run `gold_income_breakdown`, share percentages, and reconciliation error.
 
 ## Greedy and beam search
 

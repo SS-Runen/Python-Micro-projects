@@ -96,6 +96,8 @@ class SimulationState:
     level: int
     buy_queue: list[str]
     total_gold_spent_on_items: float = 0.0
+    #: Credits from :func:`sell_item_once` / companion sell (not farm or passive ticks).
+    total_shop_sell_gold: float = 0.0
     #: Item ids that must not be purchased again this run (single-copy epics/legendaries; see :func:`_register_acquisition_blocks`).
     blocked_purchase_ids: set[str] = field(default_factory=set)
 
@@ -121,9 +123,11 @@ class SimResult:
       real-client optimality).
 
     - ``total_passive_gold`` — passive income (does not depend on items in this model).
+    - ``total_shop_sell_gold`` — gold credited from shop sells (lane starters, items, jungle pet sell).
     - ``total_gold_spent_on_items`` — all gold paid to the shop (components + crafts + full buys).
-    - ``final_gold`` — wallet after income and purchases (``starting_gold`` + farm + passive - spent).
-    - ``net_wealth_delta`` — ``final_gold - starting_gold`` (= farm + passive - spent).
+    - ``final_gold`` — wallet after income and purchases
+      (``starting_gold + total_farm_gold + total_passive_gold + total_shop_sell_gold - total_gold_spent_on_items``).
+    - ``net_wealth_delta`` — ``final_gold - starting_gold`` (includes sells; see :func:`gold_flow_reconciliation_error`).
     - ``ended_by_early_stop`` — True when ``simulate(..., early_stop=...)`` returned early.
 
     **Throughput aggregates (lane/jungle):** sums of per-tick **throughput** scalars—useful
@@ -136,6 +140,13 @@ class SimResult:
 
     - ``total_lane_minions_cleared`` — lane only: sum per wave of ``throughput_ratio × eta_lane × minion_count`` (same ``thr`` as gold; count is uniform across melee/caster/siege).
     - ``total_jungle_monsters_cleared`` — jungle only: sum per cycle of ``eff × jungle_monsters_per_route``.
+
+    **Split farm income (mutually exclusive by ``FarmMode``):**
+
+    - ``total_lane_minion_farm_gold`` — lane only: sum of per-wave lane ``gold_gain`` (minion wave income proxy). Zero in ``FarmMode.JUNGLE``.
+    - ``total_jungle_monster_farm_gold`` — jungle only: sum of per-cycle ``gold_gain`` from abstract routes (monster/camp farm proxy). Zero in ``FarmMode.LANE``.
+
+    ``total_farm_gold`` remains ``total_lane_minion_farm_gold + total_jungle_monster_farm_gold`` (one term zero per run). Do **not** add lane and jungle farm gold into one optimization objective across modes.
     """
 
     final_gold: float
@@ -147,11 +158,14 @@ class SimResult:
     total_gold_spent_on_items: float
     starting_gold: float
     net_wealth_delta: float
+    total_shop_sell_gold: float = 0.0
     ended_by_early_stop: bool = False
     total_lane_throughput_units: float = 0.0
     total_jungle_route_eff_units: float = 0.0
     total_lane_minions_cleared: float = 0.0
     total_jungle_monsters_cleared: float = 0.0
+    total_lane_minion_farm_gold: float = 0.0
+    total_jungle_monster_farm_gold: float = 0.0
 
 
 def default_build_optimizer_score(res: SimResult) -> float:
@@ -160,6 +174,51 @@ def default_build_optimizer_score(res: SimResult) -> float:
     sums described there. Does **not** maximize residual ``final_gold`` (wallet).
     """
     return res.total_farm_gold
+
+
+def primary_farm_gold_for_mode(res: SimResult, farm_mode: FarmMode) -> float:
+    """
+    Farm ticks attributed to the active ``farm_mode`` only: lane minion proxy vs jungle route proxy.
+    Equals :attr:`SimResult.total_farm_gold` for any single-mode run (the other bucket is zero).
+    """
+    if farm_mode == FarmMode.LANE:
+        return res.total_lane_minion_farm_gold
+    return res.total_jungle_monster_farm_gold
+
+
+def gold_income_breakdown(res: SimResult) -> dict[str, float]:
+    """
+    Return named gold components for troubleshooting (all from :class:`SimResult`).
+
+    Farm ticks are **lane or jungle** per ``simulate`` mode; there is no separate “last-hit” lane
+    gold. Passive uses :mod:`passive` rules (SR default: linear rate after ``passive_gold_start_seconds``).
+    """
+    return {
+        "starting_gold": res.starting_gold,
+        "total_farm_gold": res.total_farm_gold,
+        "total_lane_minion_farm_gold": res.total_lane_minion_farm_gold,
+        "total_jungle_monster_farm_gold": res.total_jungle_monster_farm_gold,
+        "total_passive_gold": res.total_passive_gold,
+        "total_shop_sell_gold": res.total_shop_sell_gold,
+        "total_gold_spent_on_items": res.total_gold_spent_on_items,
+        "final_gold": res.final_gold,
+        "net_wealth_delta": res.net_wealth_delta,
+    }
+
+
+def gold_flow_reconciliation_error(res: SimResult, epsilon: float = 1e-6) -> float:
+    """
+    Absolute error between ``final_gold`` and the book-keeping sum
+    ``starting + farm + passive + sells - spent``. Should be ~0 for every :func:`simulate` run.
+    """
+    implied = (
+        res.starting_gold
+        + res.total_farm_gold
+        + res.total_passive_gold
+        + res.total_shop_sell_gold
+        - res.total_gold_spent_on_items
+    )
+    return abs(implied - res.final_gold)
 
 
 def default_clear_count_score(res: SimResult, farm_mode: FarmMode) -> float:
@@ -280,7 +339,9 @@ def sell_item_once(
     if it is None or inventory_count(state.inventory, item_id) < 1:
         return False
     state.inventory.remove(item_id)
-    state.gold += shop_sell_refund_gold(it)
+    refund = shop_sell_refund_gold(it)
+    state.gold += refund
+    state.total_shop_sell_gold += refund
     state.blocked_purchase_ids.discard(item_id)
     return True
 
@@ -300,7 +361,9 @@ def sell_jungle_companion_once(
     if math.isclose(refund_fraction, JUNGLE_COMPANION_SELL_REFUND_FRACTION):
         return sell_item_once(state, companion_id, items_by_id)
     state.inventory.remove(companion_id)
-    state.gold += float(it.total_cost) * refund_fraction
+    credit = float(it.total_cost) * refund_fraction
+    state.gold += credit
+    state.total_shop_sell_gold += credit
     state.blocked_purchase_ids.discard(companion_id)
     return True
 
@@ -540,6 +603,7 @@ def simulate(
         level=1,
         buy_queue=list(policy.buy_order),
         total_gold_spent_on_items=0.0,
+        total_shop_sell_gold=0.0,
         blocked_purchase_ids=set(),
     )
     resolved_jungle_starter: str | None = None
@@ -555,6 +619,8 @@ def simulate(
     max_wave_index = max(cum.keys()) if cum else 0
     timeline: list[tuple[float, float, int]] = [(0.0, state.gold, state.level)]
     total_farm = 0.0
+    total_lane_minion_farm = 0.0
+    total_jungle_monster_farm = 0.0
     total_passive = 0.0
     total_lane_thr_sum = 0.0
     total_jungle_eff_sum = 0.0
@@ -601,6 +667,7 @@ def simulate(
             xp_gain = _xp_for_wave_fraction(wave, state.level, thr, rules)
             state.gold += gold_gain
             total_farm += gold_gain
+            total_lane_minion_farm += gold_gain
             state.total_xp += xp_gain
             state.level = level_from_total_xp(state.total_xp, rules)
             _purchase_round(state, items, defer_purchases_until, hook)
@@ -633,6 +700,7 @@ def simulate(
             xp_gain = rules.jungle_base_route_xp * eff
             state.gold += gold_gain
             total_farm += gold_gain
+            total_jungle_monster_farm += gold_gain
             state.total_xp += xp_gain
             state.level = level_from_total_xp(state.total_xp, rules)
             _purchase_round(state, items, defer_purchases_until, hook)
@@ -674,9 +742,12 @@ def simulate(
         total_gold_spent_on_items=state.total_gold_spent_on_items,
         starting_gold=starting_gold,
         net_wealth_delta=net_delta,
+        total_shop_sell_gold=state.total_shop_sell_gold,
         ended_by_early_stop=ended_by_early_stop,
         total_lane_throughput_units=total_lane_thr_sum,
         total_jungle_route_eff_units=total_jungle_eff_sum,
         total_lane_minions_cleared=total_lane_minions_sum,
         total_jungle_monsters_cleared=total_jungle_monsters_sum,
+        total_lane_minion_farm_gold=total_lane_minion_farm,
+        total_jungle_monster_farm_gold=total_jungle_monster_farm,
     )

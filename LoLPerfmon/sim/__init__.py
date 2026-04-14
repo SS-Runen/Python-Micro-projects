@@ -22,6 +22,23 @@ from .greedy_farm_build import (
     make_early_stop_six_build_endpoints,
     ranked_marginal_acquisitions,
 )
+from .item_heuristics import (
+    DEFAULT_WAVECLEAR_EXCLUDE_TAGS,
+    downward_recipe_closure,
+    filter_waveclear_item_catalog,
+    meaningful_waveclear_exploration_catalog,
+    modeled_delta_effective_dps,
+    modeled_dps_uplift_per_gold,
+    rank_item_ids_by_dps_uplift_per_gold,
+    upward_recipe_closure_within_catalog,
+)
+from .kit_stat_alignment import (
+    filter_waveclear_catalog_stat_aligned,
+    infer_primary_ability_damage_axis,
+    item_matches_primary_damage_axis,
+    marginal_dps_along_build_order,
+    rank_stat_aligned_items_by_modeled_dps_per_gold,
+)
 from .models import is_build_endpoint_item, is_pure_shop_component
 from .marginal_clear import clear_upgrade_report
 from .ddragon_spell_parse import base_ability_dps_hint_from_mean_cooldown, parse_champion_spells
@@ -49,6 +66,9 @@ from .simulator import (
     blocked_purchase_ids_from_inventory,
     default_build_optimizer_score,
     default_clear_count_score,
+    gold_flow_reconciliation_error,
+    primary_farm_gold_for_mode,
+    gold_income_breakdown,
     sell_item_once,
     simulate,
 )
@@ -80,6 +100,19 @@ __all__ = [
     "greedy_farm_build",
     "ranked_marginal_acquisitions",
     "make_early_stop_six_build_endpoints",
+    "DEFAULT_WAVECLEAR_EXCLUDE_TAGS",
+    "downward_recipe_closure",
+    "filter_waveclear_item_catalog",
+    "meaningful_waveclear_exploration_catalog",
+    "modeled_delta_effective_dps",
+    "modeled_dps_uplift_per_gold",
+    "rank_item_ids_by_dps_uplift_per_gold",
+    "upward_recipe_closure_within_catalog",
+    "infer_primary_ability_damage_axis",
+    "item_matches_primary_damage_axis",
+    "filter_waveclear_catalog_stat_aligned",
+    "rank_stat_aligned_items_by_modeled_dps_per_gold",
+    "marginal_dps_along_build_order",
     "is_build_endpoint_item",
     "is_pure_shop_component",
     "clear_upgrade_report",
@@ -105,6 +138,9 @@ __all__ = [
     "MAX_INVENTORY_SLOTS",
     "default_build_optimizer_score",
     "default_clear_count_score",
+    "primary_farm_gold_for_mode",
+    "gold_income_breakdown",
+    "gold_flow_reconciliation_error",
     "simulate",
     "compare_purchase_timing",
     "marginal_farm_rate",

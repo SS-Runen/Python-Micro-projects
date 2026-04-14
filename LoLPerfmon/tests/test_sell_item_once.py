@@ -29,4 +29,5 @@ def test_sell_item_once_credits_gold_and_frees_block() -> None:
     assert sell_item_once(st, "a", items)
     assert st.inventory == []
     assert abs(st.gold - 100.0) < 1e-9
+    assert abs(st.total_shop_sell_gold - 100.0) < 1e-9
     assert "a" not in st.blocked_purchase_ids

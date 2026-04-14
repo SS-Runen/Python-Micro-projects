@@ -9,7 +9,22 @@ maximizes modeled **∫ effective DPS dt** over ``--early-horizon-seconds``.
 Use ``--leaf-score total_farm_gold`` to optimize full-horizon farm income instead.
 Use ``--leaf-score total_clear_units`` to maximize modeled **minion** (lane) or **monster** (jungle) clears (see ``OPTIMIZATION_CRITERIA.md``); this combination **defaults** ``marginal_objective=horizon_greedy_roi`` so the first purchase is ranked by nested full-sim Δclears, not only myopic tick derivatives. Override with ``--marginal-objective dps_per_gold`` if needed. Jungle runs with ``marginal_income_cap=True`` so clear-tick marginals apply.
 
-Optional **item tag filters** (comma-separated Data Dragon tags): ``--exclude-item-tags Support`` removes support mythics from the shop for carry-style runs; ``--require-item-tags Damage`` keeps only items tagged Damage (combine carefully so the catalog stays non-empty). Use ``--only-champions lux`` (etc.) to run a **single** REFERENCE champion with a role-specific ``--require-item-tags``; when ``require_tags`` is set and the **jungle** champion is included, **jungle companion items** are merged back into the catalog so the starter pet id still resolves.
+By default, **wave-clear catalog heuristics** apply (see ``sim/item_heuristics.py``): layered tag excludes
+(Support, GoldPer, consumables, trinkets, vision), optional ``--require-item-tags``, lane-specific removal of
+jungle pet starters, **downward recipe closure** so components stay available for parents, and (jungle) merge of
+**companion** item defs from the full bundle. Disable with ``--no-waveclear-heuristics`` and use only
+``--exclude-item-tags`` / ``--require-item-tags`` if needed.
+
+Optional **stat-aligned waveclear pool** (``--stat-align-waveclear``): after tag/lane/jungle rules, restrict
+candidate items to those whose stats match the champion’s inferred primary **ability** scaling (AP vs AD
+from Data Dragon spell coefficients, or :class:`KitParams` fallback), plus recipe closure. See
+``sim/kit_stat_alignment.py`` and ``scripts/analyze_waveclear_stat_alignment.py`` for ranked lists and
+per-step modeled DPS along a purchase order.
+
+Optional **item tag filters** (comma-separated Data Dragon tags): ``--exclude-item-tags Support`` adds to the
+default exclude set when heuristics are on; ``--require-item-tags Damage`` keeps only items tagged Damage
+(combine carefully so the catalog stays non-empty). Use ``--only-champions lux`` (etc.) to run a **single**
+REFERENCE champion with a role-specific ``--require-item-tags``.
 
 **Six terminal items (default on):** ``--six-terminal-items`` runs each sim with
 ``t_max=inf``, lane wave extrapolation, and an early stop when **six inventory slots** hold
@@ -37,10 +52,20 @@ from LoLPerfmon.sim.bundle_factory import build_offline_bundle, load_ddragon_bun
 from LoLPerfmon.sim.config import FarmMode
 from LoLPerfmon.sim.ddragon_fetch import latest_version
 from LoLPerfmon.sim.greedy_farm_build import beam_refined_farm_build, make_early_stop_six_build_endpoints
+from LoLPerfmon.sim.item_heuristics import DEFAULT_WAVECLEAR_EXCLUDE_TAGS, filter_waveclear_item_catalog
+from LoLPerfmon.sim.kit_stat_alignment import (
+    infer_primary_ability_damage_axis,
+    marginal_dps_along_build_order,
+)
 from LoLPerfmon.sim.item_tag_filters import filter_items_by_tags
 from LoLPerfmon.sim.jungle_items import is_jungle_companion_item, jungle_pet_companion_item_ids_sorted
 from LoLPerfmon.sim.models import ItemDef, is_build_endpoint_item
-from LoLPerfmon.sim.simulator import SimulationState, default_clear_count_score
+from LoLPerfmon.sim.simulator import (
+    SimulationState,
+    default_clear_count_score,
+    gold_flow_reconciliation_error,
+    gold_income_breakdown,
+)
 
 # Defaults match the grid winner in ``benchmark_deep_beam_grid.py`` (depth=8, width=3, same
 # max_leaf_evals budget as the widest/deepest grid cell: 50 + 16×6²).
@@ -147,10 +172,31 @@ def main() -> None:
         help="Comma-separated tags: keep only items that have at least one listed tag (empty = no filter).",
     )
     p.add_argument(
+        "--no-waveclear-heuristics",
+        action="store_true",
+        help="Do not apply layered wave-clear catalog filter (see sim/item_heuristics.py); tag args only.",
+    )
+    p.add_argument(
         "--only-champions",
         default="",
         metavar="IDS",
         help="Comma-separated champion ids to include (e.g. lux,quinn,karthus). Default: all in REFERENCE.",
+    )
+    p.add_argument(
+        "--stat-align-waveclear",
+        action="store_true",
+        help="Restrict shop to items aligned with inferred primary AP/AD ability scaling (see kit_stat_alignment).",
+    )
+    p.add_argument(
+        "--stat-align-level",
+        type=int,
+        default=11,
+        help="Champion level for spell-coeff rank and axis inference when --stat-align-waveclear (default 11).",
+    )
+    p.add_argument(
+        "--print-modeled-dps-steps",
+        action="store_true",
+        help="Append per-purchase Δeffective_dps table (fixed level; not farm sim). Implied by --stat-align-waveclear.",
     )
     args = p.parse_args()
 
@@ -183,7 +229,7 @@ def main() -> None:
             print("Data Dragon bundle unavailable", file=sys.stderr)
             sys.exit(1)
 
-    items_before_tag_filter = bundle.items
+    items_full_catalog = bundle.items
     only_ids = _parse_only_champions_csv(args.only_champions)
     ref_champs = REFERENCE if not offline else (("generic_ap", FarmMode.LANE, True),)
     champs = tuple(c for c in ref_champs if only_ids is None or c[0] in only_ids)
@@ -196,37 +242,49 @@ def main() -> None:
 
     ex_tags = _parse_item_tag_csv(args.exclude_item_tags)
     rq_tags = _parse_item_tag_csv(args.require_item_tags)
-    if ex_tags or rq_tags:
-        filtered_items = filter_items_by_tags(
-            bundle.items, exclude_tags=ex_tags, require_tags=rq_tags
-        )
-        if not filtered_items:
-            print(
-                "Item tag filter removed all items; relax --exclude-item-tags / --require-item-tags.",
-                file=sys.stderr,
-            )
-            sys.exit(1)
-        bundle = replace(bundle, items=filtered_items)
-    if rq_tags and any(c[1] == FarmMode.JUNGLE for c in champs):
-        merged = dict(bundle.items)
-        for iid, it in items_before_tag_filter.items():
-            if is_jungle_companion_item(it):
-                merged[iid] = it
-        bundle = replace(bundle, items=merged)
+
+    def build_item_catalog_for_champion(farm_mode: FarmMode, champion_id: str) -> dict[str, ItemDef]:
+        from LoLPerfmon.sim.kit_stat_alignment import filter_waveclear_catalog_stat_aligned as _stat_cat
+
+        if args.no_waveclear_heuristics:
+            cat = dict(items_full_catalog)
+            if ex_tags or rq_tags:
+                cat = filter_items_by_tags(cat, exclude_tags=ex_tags, require_tags=rq_tags)
+        else:
+            merged_ex = DEFAULT_WAVECLEAR_EXCLUDE_TAGS | ex_tags
+            rq = rq_tags if rq_tags else None
+            if args.stat_align_waveclear and champion_id in bundle.champions:
+                cat = _stat_cat(
+                    items_full_catalog,
+                    farm_mode,
+                    bundle.champions[champion_id],
+                    exclude_tags=merged_ex,
+                    require_tags=rq,
+                    level=args.stat_align_level,
+                )
+            else:
+                cat = filter_waveclear_item_catalog(
+                    items_full_catalog, farm_mode, exclude_tags=merged_ex, require_tags=rq
+                )
+        if farm_mode == FarmMode.JUNGLE:
+            merged = dict(cat)
+            for iid, it in items_full_catalog.items():
+                if is_jungle_companion_item(it):
+                    merged[iid] = it
+            cat = merged
+        return cat
 
     out: Path = args.out
     out.parent.mkdir(parents=True, exist_ok=True)
 
     if six_mode:
         t_sim = float("inf")
-        early = _six_endpoints_or_max_clock(bundle.items, args.six_terminal_max_seconds)
         extrap = True
         t_note = (
             f"inf (stop at 6 build-endpoint items or {args.six_terminal_max_seconds:.0f}s simulated clock)"
         )
     else:
         t_sim = args.t_max
-        early = None
         extrap = None
         t_note = f"{args.t_max:.0f}s"
 
@@ -236,7 +294,12 @@ def main() -> None:
         f"search: beam_depth={args.beam_depth} beam_width={args.beam_width} max_leaf_evals={args.max_leaf_evals} "
         f"t_max={t_note} marginal_objective={marginal_objective} leaf_score={args.leaf_score} "
         f"six_terminal_items={six_mode}",
+        f"waveclear_heuristics={'off' if args.no_waveclear_heuristics else 'on'}",
     ]
+    if not args.no_waveclear_heuristics:
+        merged_ex_line = sorted(DEFAULT_WAVECLEAR_EXCLUDE_TAGS | ex_tags)
+        lines.append(f"waveclear_default_exclude_tags (merged with --exclude-item-tags)={merged_ex_line}")
+    lines.append(f"stat_align_waveclear={args.stat_align_waveclear} stat_align_level={args.stat_align_level}")
     if ex_tags or rq_tags:
         lines.append(
             f"item_catalog_filter exclude_tags={sorted(ex_tags)} require_tags={sorted(rq_tags)}"
@@ -271,12 +334,24 @@ def main() -> None:
             lines.append(f"# skip {cid}: not in bundle")
             lines.append("")
             continue
+        filtered_items = build_item_catalog_for_champion(farm_mode, cid)
+        if not filtered_items:
+            lines.append(
+                f"# skip {cid}: empty item catalog after filters; relax tags or use --no-waveclear-heuristics"
+            )
+            lines.append("")
+            continue
+        champ_bundle = replace(bundle, items=filtered_items)
+        if six_mode:
+            early = _six_endpoints_or_max_clock(champ_bundle.items, args.six_terminal_max_seconds)
+        else:
+            early = None
         if farm_mode == FarmMode.JUNGLE:
             best = None
             best_sid: str | None = None
-            for sid in jungle_pet_companion_item_ids_sorted(bundle):
+            for sid in jungle_pet_companion_item_ids_sorted(champ_bundle):
                 pack = beam_refined_farm_build(
-                    bundle,
+                    champ_bundle,
                     cid,
                     t_max=t_sim,
                     beam_width=args.beam_width,
@@ -298,10 +373,10 @@ def main() -> None:
                     best_sid = sid
             assert best is not None and best_sid is not None
             order, primary_score, res_best, meta = best
-            starter_name = bundle.items[best_sid].name if best_sid in bundle.items else best_sid
+            starter_name = champ_bundle.items[best_sid].name if best_sid in champ_bundle.items else best_sid
         else:
             order, primary_score, res_best, meta = beam_refined_farm_build(
-                bundle,
+                champ_bundle,
                 cid,
                 t_max=t_sim,
                 beam_width=args.beam_width,
@@ -319,7 +394,7 @@ def main() -> None:
             )
             starter_name = None
 
-        names = [bundle.items[i].name if i in bundle.items else i for i in order]
+        names = [champ_bundle.items[i].name if i in champ_bundle.items else i for i in order]
         lines.append(f"=== {cid.upper()} ({farm_mode.value}) ===")
         if starter_name:
             lines.append(f"jungle_starter: {starter_name}")
@@ -336,15 +411,58 @@ def main() -> None:
         else:
             lines.append(f"leaf_metric total_farm_gold (full sim to t_max): {primary_score:.2f}")
         lines.append(f"total_farm_gold same run (reference): {res_best.total_farm_gold:.2f}")
+        gb = gold_income_breakdown(res_best)
+        income_gross = (
+            gb["total_farm_gold"] + gb["total_passive_gold"] + gb["total_shop_sell_gold"]
+        )
+        lines.append(
+            "gold_income_breakdown: "
+            f"farm_ticks={gb['total_farm_gold']:.2f} passive={gb['total_passive_gold']:.2f} "
+            f"shop_sells={gb['total_shop_sell_gold']:.2f} (farm+passive+sells_sum={income_gross:.2f})"
+        )
+        if income_gross > 1e-9:
+            fp = 100.0 * gb["total_farm_gold"] / income_gross
+            pp = 100.0 * gb["total_passive_gold"] / income_gross
+            sp = 100.0 * gb["total_shop_sell_gold"] / income_gross
+            lines.append(
+                f"gold_income_shares_pct: farm_ticks={fp:.1f}% passive={pp:.1f}% shop_sells={sp:.1f}%"
+            )
+        lines.append(
+            "gold_flow: "
+            f"starting={gb['starting_gold']:.2f} spent_on_items={gb['total_gold_spent_on_items']:.2f} "
+            f"final_wallet={gb['final_gold']:.2f} net_wealth_delta={gb['net_wealth_delta']:.2f}"
+        )
+        rec_err = gold_flow_reconciliation_error(res_best)
+        lines.append(
+            f"gold_flow_reconciliation_abs_error={rec_err:.2e} (expect ~0; start+farm+passive+sells-spent=final)"
+        )
         if args.leaf_score == "total_clear_units":
             lines.append(
                 f"default_clear_count_score check: {default_clear_count_score(res_best, farm_mode):.4f}"
             )
         lines.append(f"sim ended_by_early_stop: {res_best.ended_by_early_stop}")
         lines.append(f"meta: {meta}")
+        prof = bundle.champions[cid]
+        ax, ap_c, ad_c = infer_primary_ability_damage_axis(prof, level=args.stat_align_level)
+        lines.append(
+            f"inferred_primary_ability_axis={ax} dominant_line_ap_coeff={ap_c:.6g} "
+            f"dominant_line_ad_coeff={ad_c:.6g} (level={args.stat_align_level} spell rank)"
+        )
+        if args.stat_align_waveclear or args.print_modeled_dps_steps:
+            steps = marginal_dps_along_build_order(
+                prof, tuple(order), champ_bundle.items, level=args.stat_align_level
+            )
+            lines.append(
+                "modeled_effective_dps_per_step (fixed level, sticker-cost ratio; not farm tick / gold sim):"
+            )
+            for row in steps:
+                lines.append(
+                    f"  step {row['step']}: {row['item_id']}  Δdps={row['delta_dps']:.4f} "
+                    f"Δdps/item_sticker_cost={row['delta_dps_per_item_total_cost']:.6f}  dps_after={row['dps_after']:.4f}"
+                )
         if six_mode:
             fin = res_best.final_inventory
-            all_ep = all(is_build_endpoint_item(bundle.items[i]) for i in fin if i in bundle.items)
+            all_ep = all(is_build_endpoint_item(champ_bundle.items[i]) for i in fin if i in champ_bundle.items)
             lines.append(
                 f"final_inventory ({len(fin)} slots): all DD endpoints (into empty) = {all_ep}"
             )
@@ -362,10 +480,10 @@ def main() -> None:
                         "(many items still list upgrades in into, e.g. Amplifying Tome, NLR; raise cap or accept longer sims)."
                     )
             for i, oid in enumerate(fin, 1):
-                nm = bundle.items[oid].name if oid in bundle.items else oid
+                nm = champ_bundle.items[oid].name if oid in champ_bundle.items else oid
                 ep = (
-                    is_build_endpoint_item(bundle.items[oid])
-                    if oid in bundle.items
+                    is_build_endpoint_item(champ_bundle.items[oid])
+                    if oid in champ_bundle.items
                     else False
                 )
                 lines.append(f"  slot {i}: {nm}  [{oid}]  endpoint={ep}")

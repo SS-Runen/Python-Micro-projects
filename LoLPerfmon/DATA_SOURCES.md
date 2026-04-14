@@ -9,7 +9,7 @@ Simulation code under `LoLPerfmon/sim/` follows this order for **Classic Summone
 | **3** | **Community mirrors** of Data Dragon | Convenience only; **numeric ground truth** must match the official CDN JSON. |
 | **4** | **[League of Legends Wiki](https://wiki.leagueoflegends.com/en-us/Item)** (e.g. items, uniqueness, boots) | Human-readable rules and cross-checks when Data Dragon does not encode a behavior the sim enforces. **Do not** override Data Dragon numbers when they conflict. |
 | **5** | **Local SR rules** (`summoners_rift_rules.py`, `minion_defaults.py`, `wave_schedule.py`) | Documented constants (passive cadence, waves, XP curve); prefer values traceable to official design posts/patch notes where possible. |
-| **6** | **Offline bundle** (`build_offline_bundle`) | **CI / no-network / DD failure only.** Not patch-accurate; labeled placeholder. |
+| **6** | **Offline bundle** (`build_offline_bundle`) | **CI / no-network / DD failure only.** Not patch-accurate; labeled placeholder. Prefer **frozen** committed excerpts or CI-cached Data Dragon JSON when tests must be reproducible; avoid inventing numeric stand-ins for Riot-sourced fields when policy requires “no local fake stats.” |
 
 Modules: `ddragon_fetch.py` (CDN loads; SR classic map id `11`; optional **ranked/draft** item filter via `item_eligible_ranked_summoners_rift_5v5` on full catalogs), `ddragon_availability.py`, `ddragon_spell_parse.py`, `bundle_factory.get_game_bundle_with_audit`.
 

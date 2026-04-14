@@ -31,6 +31,7 @@ def _snapshot_state(s: SimulationState) -> SimulationState:
         level=s.level,
         buy_queue=list(s.buy_queue),
         total_gold_spent_on_items=s.total_gold_spent_on_items,
+        total_shop_sell_gold=s.total_shop_sell_gold,
         blocked_purchase_ids=set(s.blocked_purchase_ids),
     )
 
