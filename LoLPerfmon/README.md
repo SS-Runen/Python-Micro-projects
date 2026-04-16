@@ -1,103 +1,31 @@
-# LoLPerfmon — lane / jungle farm simulation
+# LoLPerfmon
 
-Python simulation of discrete **lane** or **jungle** farm income and recipe-aware purchases (Data Dragon when online). Scope: **Classic Summoner’s Rift 5v5**. **Selling, swapping, and most item actives are not modeled.**
+Farming speed model, deterministic farm simulator, and beam-search item purchase paths.
 
-## Setup
+## Layout
 
-From the **repository root** (parent of `LoLPerfmon/`):
+- `sim/` — config, models, economy, combat throughput, simulator, metrics, search
+- `data/` — canonical JSON (champions, items, minions, monsters), manifest
+- `ingest/` — Data Dragon fetch, normalization, reconciliation, updater
+- `scripts/` — `run_optimize_farm_build.py`, `run_optimize_batch.py`, `sync_game_data.py`, `audit_data_discrepancies.py`
+- `tests/`
 
-```bash
-python -m pytest LoLPerfmon/tests -q
-```
-
-Ensure `LoLPerfmon` is importable (run commands from repo root, or add the root to `PYTHONPATH`).
-
-## Running simulations
-
-### Package vs CLI entry points
-
-The **`LoLPerfmon`** directory is a **Python package** (it has `LoLPerfmon/__init__.py` and `LoLPerfmon/sim/__init__.py`). There is **no** `LoLPerfmon/__main__.py`, so you **cannot** run `python -m LoLPerfmon` as an application.
-
-**How to run things:**
-
-1. **Command-line scripts** in **`LoLPerfmon/scripts/`** — these are the **entry points** for operators (they call `argparse`, load Data Dragon, and invoke `simulate` / beam search). Treat them like small apps: run with `python path/to/script.py` from the **repository root** (or any layout where `LoLPerfmon` imports correctly).
-2. **Imports in your own code** — `from LoLPerfmon.sim import …` (see **Programmatic API** below).
-
-The main script for **exporting** beam-searched farm builds to a text file is:
-
-**[`LoLPerfmon/scripts/export_gameplay_build_orders.py`](scripts/export_gameplay_build_orders.py)** — documented as the **CLI entry point** for that workflow (writes under `LoLPerfmon/.local/` by default). By default it applies **wave-clear catalog heuristics** ([`sim/item_heuristics.py`](sim/item_heuristics.py): tag excludes, optional require-tags, lane jungle-pet strip, recipe closure, jungle companion merge). Use `--no-waveclear-heuristics` for tag filters only. **`--stat-align-waveclear`** narrows the shop to items whose stats match the champion’s inferred primary **ability** scaling (AP vs AD from spell coefficients, or [`KitParams`](sim/models.py) fallback; see [`sim/kit_stat_alignment.py`](sim/kit_stat_alignment.py)). **`--print-modeled-dps-steps`** appends a per-buy Δ`effective_dps` table (fixed level; not a full income sim). See **`--help`** for leaf scores, `--exclude-item-tags` / `--require-item-tags`, `--only-champions`, six-slot mode, etc. For the stat → DPS → throughput → gold/clears chain and heuristic vs preset-root tradeoffs, see [`OPTIMIZATION_CRITERIA.md`](OPTIMIZATION_CRITERIA.md).
-
-**[`LoLPerfmon/scripts/analyze_waveclear_stat_alignment.py`](scripts/analyze_waveclear_stat_alignment.py)** — ranks a large **stat-compatible** slice of the catalog by modeled ΔDPS/gold and optional `--build-order` step traces (no beam search).
+## Commands
 
 ```bash
-# repository root
-python LoLPerfmon/scripts/export_gameplay_build_orders.py --help
-python LoLPerfmon/scripts/export_gameplay_build_orders.py --leaf-score total_farm_gold --out LoLPerfmon/.local/example_builds.txt
+python3 -m venv .venv && .venv/bin/pip install pytest
+.venv/bin/python -m pytest LoLPerfmon/tests -q
+.venv/bin/python LoLPerfmon/scripts/run_optimize_farm_build.py --champion lux --mode lane
 ```
 
-### Greedy / beam farm build (CLI)
-
-Uses **`beam_refined_farm_build`**: runs a **pure greedy** baseline, then **beam search** over **purchase prefixes** up to **`beam_depth`** with width **`beam_width`**, each leaf scored by full-horizon **`total_farm_gold`**. Default champions: Lux, Karthus, Quinn (offline: `generic_ap` only).
-
-**Live Data Dragon** (full SR catalog, needs network):
+Data sync (network): fetches Data Dragon, stores raw under `data/raw/ddragon/<patch>/`. Use `--write-canonical` to write all normalized items (large).
 
 ```bash
-export LOLPERFMON_OFFLINE=0
-python LoLPerfmon/scripts/run_greedy_farm_champions.py --t-max 3600 --beam-width 3 --beam-depth 2 --farm-mode lane --timeout 60
+.venv/bin/python LoLPerfmon/scripts/sync_game_data.py --dry-run
+.venv/bin/python LoLPerfmon/scripts/audit_data_discrepancies.py
 ```
 
-**Offline**:
+## Notes
 
-```bash
-export LOLPERFMON_OFFLINE=1
-python LoLPerfmon/scripts/run_greedy_farm_champions.py
-```
-
-Useful flags:
-
-| Flag | Meaning |
-|------|---------|
-| `--t-max` | Horizon (seconds) |
-| `--beam-width` | Prefixes kept per beam layer |
-| `--beam-depth` | How many purchase layers to branch |
-| `--max-leaf-evals` | Cap on full `simulate` calls |
-| `--farm-mode` | `lane` (default) or `jungle` — mutually exclusive income |
-| `--marginal-objective` | `dps_per_gold` (default) or `horizon_greedy_roi` (nested sims at empty prefix; costly) |
-| `--horizon-candidate-cap` | Max candidates when ranking with `horizon_greedy_roi` |
-| `--timeout` | HTTP timeout for Data Dragon when online |
-
-### Programmatic API
-
-- `LoLPerfmon.sim.simulator.simulate` — lane or jungle ticks with optional **`purchase_hook`** or fixed `PurchasePolicy(buy_order=...)`.
-- `LoLPerfmon.sim.greedy_farm_build.stepwise_farm_build` / `beam_refined_farm_build` — path-aware stepwise shop policy and beam search; pass **`farm_mode`**.
-- `LoLPerfmon.sim.farm_build_search.FarmBuildSearch` — configurable beam search class.
-- Notebook `LoLPerfmon/waveclear_item_optimizer.ipynb` — examples and validation entrypoints.
-
-### Checks without pytest
-
-```bash
-python -c "from LoLPerfmon.validation_checks import format_report, run_validation, validation_summary; r=run_validation(data_dir=None, offline=True); print(format_report(r, style='text')); print(validation_summary(r))"
-```
-
-## Interpreting results
-
-### What to optimize (primary score)
-
-The intended objective is **`SimResult.total_farm_gold`** over **`t_max`** (lane or jungle), **not** residual **`final_gold`**. Passive gold accrues on the same timeline; see **`OPTIMIZATION_CRITERIA.md`**.
-
-### What the printed “buy order” is
-
-The **sequence of successful `acquire_goal` purchases** (components, crafts, full buys). Repeated names often mean **components were crafted away** before the same id is bought again.
-
-### Greedy / beam are not globally optimal
-
-Beam search is **bounded** (`beam_depth`, `beam_width`, `max_leaf_evals`). It is **not** exhaustive over all purchase orders.
-
-### `clear_upgrade_report` (CLI tail line)
-
-Reports whether a hypothetical **full sticker** buy would increase **modeled `effective_dps`** at the end snapshot; it does **not** prove global farm optimality.
-
-### Data and rules
-
-- Source hierarchy and SR 5v5: **`DATA_SOURCES.md`**.
-- Purchase validity: **`sim/simulator.py`**, **`sim/ddragon_fetch.py`**.
+- Wiki parsing is stubbed; reconcile pipeline supports Data Dragon vs on-disk canonical items.
+- See [Data Dragon](https://riot-api-libraries.readthedocs.io/en/latest/ddragon.html) for upstream semantics.
