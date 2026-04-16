@@ -25,6 +25,7 @@ def beam_search_farm_build(
     jungle_monster: UnitStatic | None,
     cfg: BeamSearchConfig | None = None,
     leaf_score: str = "total_farm_gold",
+    starter_item_id: str | None = None,
 ) -> tuple[tuple[str, ...], float, SimResult]:
     cfg = cfg or BeamSearchConfig()
     if mode == FarmMode.LANE and lane_minion is None:
@@ -55,6 +56,7 @@ def beam_search_farm_build(
             cfg.t_max,
             lane_minion=lane_minion,
             jungle_monster=jungle_monster,
+            starter_item_id=starter_item_id,
         )
 
     def consider(prefix: tuple[str, ...], res: SimResult) -> None:
@@ -98,6 +100,7 @@ def beam_search_farm_build(
             cfg.t_max,
             lane_minion=lane_minion,
             jungle_monster=jungle_monster,
+            starter_item_id=starter_item_id,
         )
         return (), score(res), res
     return best

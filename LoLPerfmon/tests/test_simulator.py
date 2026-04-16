@@ -1,3 +1,5 @@
+import pytest
+
 from LoLPerfmon.data.loaders import data_root_default, load_bundle
 from LoLPerfmon.sim.config import FarmMode
 from LoLPerfmon.sim.simulator import simulate_farm_horizon, simulate_with_buy_order
@@ -16,6 +18,24 @@ def test_simulate_lane_positive_gold():
     )
     assert res.total_farm_gold > 0
     assert res.passive_gold_total > 0
+
+
+def test_simulate_with_starter_item_paid_from_starting_gold():
+    root = data_root_default()
+    ch, items, units, _ = load_bundle(root)
+    at = items["amplifying_tome"]
+    res = simulate_with_buy_order(
+        ch["lux"],
+        FarmMode.LANE,
+        items,
+        (),
+        60.0,
+        lane_minion=units["lane_melee"],
+        starter_item_id="amplifying_tome",
+    )
+    assert res.gold_spent == pytest.approx(at.cost)
+    assert res.final_inventory is not None
+    assert "amplifying_tome" in res.final_inventory
 
 
 def test_buy_order_spends_and_clears_more():

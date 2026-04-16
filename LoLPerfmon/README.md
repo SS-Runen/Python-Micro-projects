@@ -4,7 +4,7 @@ Farming speed model, deterministic farm simulator, and beam-search item purchase
 
 ## Layout
 
-- `sim/` — config, models, economy, combat throughput, simulator, metrics, search
+- `sim/` — config, models, economy, combat throughput, simulator, sim logging, search
 - `data/` — canonical JSON (champions, items, minions, monsters), manifest
 - `ingest/` — Data Dragon fetch, normalization, reconciliation, updater
 - `scripts/` — CLIs below
@@ -27,43 +27,26 @@ Scripts add the repo root to `sys.path` so `LoLPerfmon` imports resolve when run
 
 ## Scripts
 
-### `scripts/run_optimize_farm_build.py`
+### `scripts/run_sim.py`
 
-Beam search over item buy orders for **one** champion. Loads bundled data from `LoLPerfmon/data/`.
+Standard entry point: **beam search** over item buy orders from **00:00** game time. Use `--champion` or `--champions`, and `--role laner` or `--role jungler` (not `lane`/`jungle`). Loads bundled data from `LoLPerfmon/data/`.
 
 | Option | Description |
 |--------|-------------|
-| `--champion` | Required. Champion id matching `data/champions/<id>.json` (e.g. `lux`, `karthus`). |
-| `--mode` | Required. `lane` or `jungle`. |
+| `--champion` / `--champions` | One champion id, or several for a batch summary. |
+| `--role` | Required. `laner` or `jungler`. |
 | `--t-max` | Simulation horizon in seconds (default `600`). |
-| `--beam-width` | Beam width (default `4`). |
-| `--max-depth` | Max purchases in the sequence (default `4`). |
-| `--max-leaf-evals` | Cap on simulator evaluations (default `128`). |
-| `--leaf-score` | `total_farm_gold` or `total_clear_units` (default `total_farm_gold`). |
+| `--starter-item` / `--no-starter` | Optional starting item; defaults by role when omitted. |
+| `--beam-width`, `--max-depth`, `--max-leaf-evals`, `--leaf-score` | Beam search tuning (same idea as before). |
+| `--log-interval SEC` | After search, **replay** the best buy order once and log simulator state every `SEC` game seconds to stderr (e.g. `10` for troubleshooting accuracy). Single `--champion` runs only; `0` disables (default). |
 
 **Examples:**
 
 ```bash
-.venv/bin/python LoLPerfmon/scripts/run_optimize_farm_build.py --champion lux --mode lane
-.venv/bin/python LoLPerfmon/scripts/run_optimize_farm_build.py --champion karthus --mode jungle --t-max 900 --leaf-score total_clear_units
-```
-
----
-
-### `scripts/run_optimize_batch.py`
-
-Same optimizer as above, but runs **several** champions in one invocation. Uses fixed internal beam settings (`beam_width=4`, `max_depth=3`, `max_leaf_evals=64`).
-
-| Option | Description |
-|--------|-------------|
-| `--champions` | Required. One or more champion ids. Unknown ids are skipped with a message. |
-| `--mode` | Required. `lane` or `jungle`. |
-| `--t-max` | Simulation horizon in seconds (default `600`). |
-
-**Example:**
-
-```bash
-.venv/bin/python LoLPerfmon/scripts/run_optimize_batch.py --champions lux karthus --mode lane
+.venv/bin/python LoLPerfmon/scripts/run_sim.py --champion lux --role laner
+.venv/bin/python LoLPerfmon/scripts/run_sim.py --champion karthus --role jungler --t-max 900 --leaf-score total_clear_units
+.venv/bin/python LoLPerfmon/scripts/run_sim.py --champions lux karthus --role laner
+.venv/bin/python LoLPerfmon/scripts/run_sim.py --champion lux --role laner --log-interval 10 --no-starter --t-max 120
 ```
 
 ---

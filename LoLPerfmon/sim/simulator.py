@@ -17,7 +17,10 @@ from LoLPerfmon.sim.item_progression import (
     complete_recipe_in_inventory,
 )
 from LoLPerfmon.sim.models import ChampionStatic, ItemStatic, UnitStatic
+from LoLPerfmon.sim.sim_logging import PeriodicSimLog, format_sim_snapshot, get_sim_logger
 from LoLPerfmon.sim.spawn_timeline import JungleCampSchedule, LaneWaveSchedule
+
+_log = get_sim_logger()
 
 
 @dataclass
@@ -90,11 +93,15 @@ def simulate_farm_horizon(
     jungle_monster: UnitStatic | None = None,
     xp_gain_rate: float = 1.0,
     dt: float = 1.0,
+    starter_item_id: str | None = None,
+    log_interval_sec: float | None = None,
 ) -> SimResult:
     if len(inventory) != MAX_INVENTORY_SLOTS:
         raise ValueError("inventory must be 6 slots")
+    inv = list(inventory)
     wallet = STARTING_GOLD
     spent = 0.0
+    wallet, spent = _apply_starter_item(items_catalog, starter_item_id, inv, wallet, spent)
     xp = 0.0
     level = 1
     farm_gold = 0.0
@@ -107,15 +114,30 @@ def simulate_farm_horizon(
     t = 0.0
     lm = lane_minion
     jm = jungle_monster
+    tick_log = PeriodicSimLog(log_interval_sec)
+    if log_interval_sec:
+        _log.info(
+            "sim_horizon_start t_max=%s mode=%s champion=%s starter=%s lane_unit=%s jungle_unit=%s dt=%s",
+            t_max,
+            mode.value,
+            champ.champion_id,
+            starter_item_id,
+            getattr(lm, "unit_id", None) if lm else None,
+            getattr(jm, "unit_id", None) if jm else None,
+            dt,
+        )
     while t < t_max:
         step = min(dt, t_max - t)
         passive_acc += passive_gold_over_interval(step)
         wallet += passive_gold_over_interval(step)
-        stats = effective_combat_stats(champ, level, inventory, items_catalog)
+        stats = effective_combat_stats(champ, level, inv, items_catalog)
+        lane_dps_snap: float | None = None
+        jungle_dps_snap: float | None = None
         if mode == FarmMode.LANE:
             if lm is None:
                 raise ValueError("lane_minion required for LANE mode")
             dps = lane_clear_dps(stats)
+            lane_dps_snap = dps
             g, c = lane_farm_tick(dps, lm, wave, step)
             farm_gold += g
             lane_cleared += c
@@ -124,6 +146,7 @@ def simulate_farm_horizon(
             if jm is None:
                 raise ValueError("jungle_monster required for JUNGLE mode")
             dps = jungle_clear_dps(stats)
+            jungle_dps_snap = dps
             g, c = jungle_farm_tick(dps, jm, jsched, step)
             farm_gold += g
             jungle_cleared += c
@@ -133,6 +156,31 @@ def simulate_farm_horizon(
         if new_lv != level:
             level = new_lv
         t += step
+
+        def _emit_horizon() -> None:
+            _log.info(
+                "%s",
+                format_sim_snapshot(
+                    t,
+                    mode,
+                    champ,
+                    level=level,
+                    xp=xp,
+                    wallet=wallet,
+                    passive_gold=passive_acc,
+                    farm_gold=farm_gold,
+                    gold_spent=spent,
+                    lane_cleared=lane_cleared,
+                    jungle_cleared=jungle_cleared,
+                    lane_dps=lane_dps_snap,
+                    jungle_dps=jungle_dps_snap,
+                    inventory=inv,
+                    lane_unit_id=getattr(lm, "unit_id", None) if lm else None,
+                    jungle_unit_id=getattr(jm, "unit_id", None) if jm else None,
+                ),
+            )
+
+        tick_log.after_time_step(t, _emit_horizon)
         for h in HORIZONS_SEC:
             if abs(t - h) < dt * 0.5 or (t >= h and t - step < h):
                 key = f"farm_gold@{int(h)}s"
@@ -146,7 +194,7 @@ def simulate_farm_horizon(
         gold_spent=spent,
         final_wallet=wallet,
         checkpoints=checkpoints,
-        final_inventory=tuple(inventory),
+        final_inventory=tuple(inv),
     )
     return res
 
@@ -162,6 +210,27 @@ def _first_free_slot(inv: list[str | None]) -> int | None:
     return None
 
 
+def _apply_starter_item(
+    items_catalog: dict[str, ItemStatic],
+    starter_item_id: str | None,
+    inv: list[str | None],
+    wallet: float,
+    spent: float,
+) -> tuple[float, float]:
+    if not starter_item_id:
+        return wallet, spent
+    if starter_item_id not in items_catalog:
+        raise KeyError(starter_item_id)
+    it = items_catalog[starter_item_id]
+    if it.cost > wallet:
+        raise ValueError(f"starter item {starter_item_id!r} costs {it.cost} but starting gold is {wallet}")
+    slot = _first_free_slot(inv)
+    if slot is None:
+        raise ValueError("no empty inventory slot for starter item")
+    inv[slot] = starter_item_id
+    return wallet - it.cost, spent + it.cost
+
+
 def simulate_with_buy_order(
     champ: ChampionStatic,
     mode: FarmMode,
@@ -172,6 +241,8 @@ def simulate_with_buy_order(
     lane_minion: UnitStatic | None = None,
     jungle_monster: UnitStatic | None = None,
     dt: float = 1.0,
+    starter_item_id: str | None = None,
+    log_interval_sec: float | None = None,
 ) -> SimResult:
     if mode == FarmMode.LANE and lane_minion is None:
         raise ValueError("lane_minion")
@@ -180,6 +251,7 @@ def simulate_with_buy_order(
     inv: list[str | None] = [None] * MAX_INVENTORY_SLOTS
     wallet = STARTING_GOLD
     spent = 0.0
+    wallet, spent = _apply_starter_item(items_catalog, starter_item_id, inv, wallet, spent)
     xp = 0.0
     level = 1
     farm_gold = 0.0
@@ -193,20 +265,38 @@ def simulate_with_buy_order(
     t = 0.0
     lm = lane_minion
     jm = jungle_monster
+    tick_log = PeriodicSimLog(log_interval_sec)
+    buy_len = len(buy_order)
+    if log_interval_sec:
+        _log.info(
+            "sim_buy_order_start t_max=%s mode=%s champion=%s starter=%s buy_order_len=%s lane_unit=%s jungle_unit=%s dt=%s",
+            t_max,
+            mode.value,
+            champ.champion_id,
+            starter_item_id,
+            buy_len,
+            getattr(lm, "unit_id", None) if lm else None,
+            getattr(jm, "unit_id", None) if jm else None,
+            dt,
+        )
     while t < t_max:
         step = min(dt, t_max - t)
         pg = passive_gold_over_interval(step)
         passive_acc += pg
         wallet += pg
         stats = effective_combat_stats(champ, level, inv, items_catalog)
+        lane_dps_snap: float | None = None
+        jungle_dps_snap: float | None = None
         if mode == FarmMode.LANE and lm is not None:
             dps = lane_clear_dps(stats)
+            lane_dps_snap = dps
             g, c = lane_farm_tick(dps, lm, wave, step)
             farm_gold += g
             lane_cleared += c
             xp += c * float(lm.gold_xp_reward.get("xp", 60.0)) * 0.01
         elif mode == FarmMode.JUNGLE and jm is not None:
             dps = jungle_clear_dps(stats)
+            jungle_dps_snap = dps
             g, c = jungle_farm_tick(dps, jm, jsched, step)
             farm_gold += g
             jungle_cleared += c
@@ -237,6 +327,33 @@ def simulate_with_buy_order(
             inv[slot] = iid
             buy_idx += 1
         t += step
+
+        def _emit_buy() -> None:
+            _log.info(
+                "%s",
+                format_sim_snapshot(
+                    t,
+                    mode,
+                    champ,
+                    level=level,
+                    xp=xp,
+                    wallet=wallet,
+                    passive_gold=passive_acc,
+                    farm_gold=farm_gold,
+                    gold_spent=spent,
+                    lane_cleared=lane_cleared,
+                    jungle_cleared=jungle_cleared,
+                    lane_dps=lane_dps_snap,
+                    jungle_dps=jungle_dps_snap,
+                    inventory=inv,
+                    buy_idx=buy_idx,
+                    buy_order_len=buy_len,
+                    lane_unit_id=getattr(lm, "unit_id", None) if lm else None,
+                    jungle_unit_id=getattr(jm, "unit_id", None) if jm else None,
+                ),
+            )
+
+        tick_log.after_time_step(t, _emit_buy)
         for h in HORIZONS_SEC:
             if t >= h and (t - step) < h:
                 key = f"farm_gold@{int(h)}s"
