@@ -23,10 +23,24 @@ def main() -> None:
     p.add_argument("--max-depth", type=int, default=4)
     p.add_argument("--max-leaf-evals", type=int, default=128)
     p.add_argument("--leaf-score", choices=("total_farm_gold", "total_clear_units"), default="total_farm_gold")
+    p.add_argument(
+        "--ensure-champion",
+        action="store_true",
+        help="If champion data is missing under data/champions, run Wiki + Data Dragon ingest then retry load",
+    )
     args = p.parse_args()
     root = data_root_default()
     ch, items, units, _ = load_bundle(root)
     cid = args.champion.lower()
+    if cid not in ch and args.ensure_champion:
+        from LoLPerfmon.ingest.champion_sync import sync_champion_to_disk
+
+        try:
+            sync_champion_to_disk(root, cid)
+        except (OSError, KeyError, RuntimeError, ValueError) as ex:
+            print(f"ensure-champion failed: {ex}", file=sys.stderr)
+            sys.exit(1)
+        ch, items, units, _ = load_bundle(root)
     if cid not in ch:
         print(f"Unknown champion {cid}", file=sys.stderr)
         sys.exit(1)

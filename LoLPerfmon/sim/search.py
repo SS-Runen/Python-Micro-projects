@@ -3,7 +3,7 @@ from __future__ import annotations
 from dataclasses import dataclass
 
 from LoLPerfmon.sim.config import FarmMode
-from LoLPerfmon.sim.models import ChampionStatic, UnitStatic
+from LoLPerfmon.sim.models import ChampionStatic, ItemStatic, UnitStatic
 from LoLPerfmon.sim.simulator import SimResult, simulate_with_buy_order
 
 
@@ -45,6 +45,8 @@ def beam_search_farm_build(
     def eval_prefix(prefix: tuple[str, ...]) -> SimResult:
         nonlocal leaves_evaluated
         leaves_evaluated += 1
+        # Prefixes may list a completed item after its components; the simulator
+        # resolves recipe combine when inventory holds builds_from.
         return simulate_with_buy_order(
             champ,
             mode,

@@ -6,13 +6,16 @@ from LoLPerfmon.sim.combat_throughput import effective_combat_stats, jungle_clea
 from LoLPerfmon.sim.config import (
     FarmMode,
     HORIZONS_SEC,
-    LANE_MINIONS_FIRST_SPAWN_SEC,
     MAX_INVENTORY_SLOTS,
     PASSIVE_GOLD_AT_5MIN,
-    PASSIVE_GOLD_PER_SEC,
     STARTING_GOLD,
 )
 from LoLPerfmon.sim.economy import passive_gold_over_interval
+from LoLPerfmon.sim.item_progression import (
+    can_combine_recipe,
+    combine_gold_cost,
+    complete_recipe_in_inventory,
+)
 from LoLPerfmon.sim.models import ChampionStatic, ItemStatic, UnitStatic
 from LoLPerfmon.sim.spawn_timeline import JungleCampSchedule, LaneWaveSchedule
 
@@ -26,6 +29,7 @@ class SimResult:
     gold_spent: float = 0.0
     final_wallet: float = 0.0
     checkpoints: dict[str, float] = field(default_factory=dict)
+    final_inventory: tuple[str | None, ...] | None = None
 
 
 def xp_for_level(level: int) -> float:
@@ -47,7 +51,6 @@ def lane_farm_tick(
 ) -> tuple[float, float]:
     hp = float(minion.base_hp_armor_mr.get("hp", 400.0))
     gold_per = float(minion.gold_xp_reward.get("gold", 20.0))
-    xp_per = float(minion.gold_xp_reward.get("xp", 60.0))
     if hp <= 0 or dps <= 0:
         return 0.0, 0.0
     time_per_kill = hp / dps
@@ -143,6 +146,7 @@ def simulate_farm_horizon(
         gold_spent=spent,
         final_wallet=wallet,
         checkpoints=checkpoints,
+        final_inventory=tuple(inventory),
     )
     return res
 
@@ -216,6 +220,15 @@ def simulate_with_buy_order(
             if iid not in items_catalog:
                 break
             it = items_catalog[iid]
+            if it.builds_from and can_combine_recipe(inv, items_catalog, iid):
+                combine_cost = combine_gold_cost(it, items_catalog)
+                if wallet < combine_cost:
+                    break
+                wallet -= combine_cost
+                spent += combine_cost
+                inv[:] = complete_recipe_in_inventory(inv, items_catalog, iid)
+                buy_idx += 1
+                continue
             slot = _first_free_slot(inv)
             if slot is None or wallet < it.cost:
                 break
@@ -237,4 +250,5 @@ def simulate_with_buy_order(
         gold_spent=spent,
         final_wallet=wallet,
         checkpoints=checkpoints,
+        final_inventory=tuple(inv),
     )

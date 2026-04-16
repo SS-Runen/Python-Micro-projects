@@ -14,6 +14,7 @@ from LoLPerfmon.data.loaders import data_root_default, load_items_dir
 from LoLPerfmon.ingest.normalizer import ddragon_item_to_record
 from LoLPerfmon.ingest.reconcile import compute_discrepancies
 from LoLPerfmon.ingest.sources import fetch_ddragon_item_raw, latest_ddragon_patch
+from LoLPerfmon.ingest.wiki_items import LIST_OF_ITEMS_URL, fetch_wiki_list_of_items_html, normalize_item_display_name, parse_wiki_item_list_grid
 
 
 def item_to_dict(item) -> dict:
@@ -35,6 +36,14 @@ def main() -> None:
     p.add_argument("--patch", type=str, default="")
     p.add_argument("--data-root", type=Path, default=None)
     p.add_argument("--out", type=Path, default=None)
+    p.add_argument("--skip-wiki", action="store_true", help="Do not fetch Wiki SR allowlist for extra metrics")
+    p.add_argument("--wiki-url", type=str, default="", help="Override List of items page URL")
+    p.add_argument(
+        "--wiki-html-file",
+        type=Path,
+        default=None,
+        help="Use local HTML instead of fetching (for tests or offline)",
+    )
     args = p.parse_args()
     root = args.data_root or data_root_default()
     patch = args.patch or latest_ddragon_patch()
@@ -54,7 +63,37 @@ def main() -> None:
     high = [d for d in disc if d.severity == "high"]
     if args.out:
         args.out.write_text(json.dumps([d.__dict__ for d in disc], indent=2) + "\n", encoding="utf-8")
-    print(f"patch={patch} items_local={len(current)} items_ddragon={len(normalized)} discrepancies={len(disc)} high={len(high)}")
+
+    wiki_line = ""
+    if not args.skip_wiki:
+        try:
+            if args.wiki_html_file and args.wiki_html_file.is_file():
+                wiki_html = args.wiki_html_file.read_text(encoding="utf-8")
+            else:
+                wiki_url = (args.wiki_url or "").strip() or LIST_OF_ITEMS_URL
+                wiki_html = fetch_wiki_list_of_items_html(wiki_url)
+            pr = parse_wiki_item_list_grid(wiki_html)
+            allow = pr.allowlist_normalized
+            dd_names = {
+                normalize_item_display_name(str(v.get("name", "")))
+                for v in data_obj.values()
+                if isinstance(v, dict)
+            }
+            dd_names.discard("")
+            matched = allow & dd_names
+            dd_not_on_wiki_sr = len(dd_names - allow)
+            wiki_only = len(allow - dd_names)
+            wiki_line = (
+                f" wiki_allowlist={len(allow)} ddragon_names={len(dd_names)} "
+                f"sr_name_join={len(matched)} ddragon_not_in_wiki_sr={dd_not_on_wiki_sr} wiki_only_no_ddragon_name={wiki_only}"
+            )
+        except Exception as e:
+            wiki_line = f" wiki_metrics_unavailable={e!r}"
+
+    print(
+        f"patch={patch} items_local={len(current)} items_ddragon={len(normalized)} discrepancies={len(disc)} high={len(high)}"
+        f"{wiki_line}"
+    )
 
 
 if __name__ == "__main__":

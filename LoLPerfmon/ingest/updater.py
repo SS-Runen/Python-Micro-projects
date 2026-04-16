@@ -29,6 +29,7 @@ def write_data_bundle(
     *,
     patch: str,
     dry_run: bool = False,
+    manifest_extra: dict[str, Any] | None = None,
 ) -> WriteReport:
     wrote: list[Path] = []
     items_dir = data_root / "items"
@@ -36,12 +37,14 @@ def write_data_bundle(
         p = items_dir / f"{iid}.json"
         if write_json(p, rec, dry_run=dry_run):
             wrote.append(p)
-    manifest = {
+    manifest: dict[str, Any] = {
         "schema_version": "1",
         "patch_version": patch,
         "sources": [{"name": "ddragon_normalized", "fetched_at": utc_timestamp()}],
         "checksums": {"items": checksum_json(items_by_id)},
     }
+    if manifest_extra:
+        manifest = {**manifest, **manifest_extra}
     mp = data_root / "manifest" / "data_manifest.json"
     if write_json(mp, manifest, dry_run=dry_run):
         wrote.append(mp)
