@@ -2,7 +2,7 @@
 Diff v. Tiger E -1
 
 Second Battle of El Alamein [Battle]
-@k @ASU-57 @1.567 @diag
+@k @ASU-57 @1.567 @diag @35 @0
 
 2026-03-07
 Diff v. Tiger E -1

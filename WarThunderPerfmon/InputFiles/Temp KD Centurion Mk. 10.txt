@@ -9,11 +9,11 @@ Event, TargetVehicle, Distance, Orientation, TargetSpeed, OwnSpeed
 
 2026-04-11
 BR 8.0
-Diff v. Conq
+Diff v. Conq 0
 
 Pradesh #2
-@K @T-54 (1947) @2.391, 2.386 @diag,near-para
-@k @ZSU-57-2 @1.213, 1.190 @diag,diag
+@K @T-54 (1947) @2.391, 2.386 @diag,near-para @30,0 @0,0
+@k @ZSU-57-2 @1.213, 1.190 @diag,diag @42,0 @0,0
 
 2026-04-06
 BR 8.0

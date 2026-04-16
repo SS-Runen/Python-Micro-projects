@@ -1,3 +1,10 @@
+2026-04-12
+Diff v. Sherman Vc +1
+
+Fire Arc #2
+@k @T-34-85 @1.277 @diag @0 @0
+@k @T-34-85 (S53) @1.292 @diag @0 @0
+
 2026-01-18
 Diff v Sherman Vc +1
 
