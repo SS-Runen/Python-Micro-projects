@@ -20,14 +20,14 @@ Pradesh #1
 @k @T-54 (1947) @1.871 @para @0 @0
 @k @2S3M @2.048 @diag @0 @0
 
-2026-04-19
+2026-04-29
 BR 7.7
 Diff v. Cent 0
 
 Pradesh #2
-@k @IS-6 @1.973 @diag
-@k @IS-4 @1.073 @near-perp @0 @0
-@k @ZSL92 @1.248 @diag
+@k @IS-6 @1.973 @diag @30 @0
+@k @IS-4M @1.073 @diag @0 @0
+@k @ZSL92 @1.248 @para @23 @0
 
 2026-04-09
 BR 7.7
