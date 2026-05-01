@@ -12,6 +12,23 @@ KD records for maps on the avoidance list will be removed. This was implemented 
 
 Event, TargetVehicle, Distance, Orientation, TargetSpeed, OwnSpeed
 
+2026-05-01
+BR 8.0
+Diff v. Cent 0
+
+Pradesh #1
+@k @T-54 (1947) @1.871 @para @0 @0
+@k @2S3M @2.048 @diag @0 @0
+
+2026-04-19
+BR 7.7
+Diff v. Cent 0
+
+Pradesh #2
+@k @IS-6 @1.973 @diag
+@k @IS-4 @1.073 @near-perp @0 @0
+@k @ZSL92 @1.248 @diag
+
 2026-04-09
 BR 7.7
 Diff v. Cent -1

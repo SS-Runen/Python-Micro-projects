@@ -1,9 +1,19 @@
+2026-04-23
+Diff v. Tiger II Nr. 1-50 0
+
+Second Battle of El Alamein #1
+@k @M18 @0.889 @diag @39 @0
+@k @T-34-85 (S-53) @2.104 @para @0 @0
+@k @U-sh 204 GK @0.323 @para @61 @0
+@k @Charioteer Mk VII (French) @2.398 @para @-3 @0
+@k @T-44 @0.268 @near-perp @55 @0
+
 2026-04-17
-Diff v. Tiger II Nr. 1-50
+Diff v. Tiger II Nr. 1-50 0
 
 Fire Arc #2 [Battle]
-@k @IS-2 (1944) @1.661 @diag @
-@k @T-34-85 @1.474, 1.467 @diag,diag @
+@k @IS-2 (1944) @1.661 @diag @0 @0
+@k @T-34-85 @1.474, 1.467 @diag,diag @26,0 @0,0
 
 2026-02-22
 Diff v. Tiger II Nr. 1-50 0
