@@ -12,6 +12,15 @@ KD records for maps on the avoidance list will be removed. This was implemented 
 
 Event, TargetVehicle, Distance, Orientation, TargetSpeed, OwnSpeed
 
+2026-05-24
+BR 7.7
+Diff v. Cent 0
+
+Second Battle of El Alamein #1
+@k @T-54 (1949) @2.241 @para @0 @0
+@k @PT-76-57 @2.233 @near-para @0 @0
+@k @T-44-100 @1.401 @diag @0 @0
+
 2026-05-01
 BR 8.0
 Diff v. Cent 0
