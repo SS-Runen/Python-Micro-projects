@@ -1,5 +1,11 @@
 Event, Vehicle, Distance, Orientation, Speed, SelfSpeed
 
+2026-07-31
+Diff v. Olifant
+
+Second Battle of El Alamein #1
+@k @T-55AMD-1 @1.860 @para
+
 2026-02-21
 Diff v. Olifant 0
 
