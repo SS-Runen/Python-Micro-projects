@@ -7,8 +7,16 @@ If a vehicle is moving, state the relative orientation of movement in the orient
 
 Event, TargetVehicle, Distance, Orientation, TargetSpeed, OwnSpeed
 
+2026-08-02
+BR 7.7
+Diff v. Conq
+
+Pradesh #1
+@k @Type 62 @2.058 @diag @0 @0
+
 2026-07-25
 BR 8.0
+Diff v. Conq 0
 
 Pradesh #1
 @k @T-54 (1949) @1.882 @near-para @0 @0
