@@ -1,5 +1,4 @@
 Naafiri
 - Lacks waveclear. Slow auto-attacks. Requires short-range jump (3rd) and projectile AoE (1st) to clear. Cooldowns result in less clear speed than Anivia even at level six and up.
 
-2024-06-26
 
