@@ -1,3 +1,16 @@
+If there were no kills or deaths in a match, it is not counted in the vehicle ratio balance.
+All battles that do not meet the minimum target fighting range (2km for BR 7 and above, 1.5 for everything below) is not counted in the vehicle battle count balance.
+
+2026-08-15
+Diff v. Ferdinand
+
+Second Battle of El Alamein #1
+* This M26 stood still for all shots despite the X-ray view not showing disabled mobility.
+*@k @M26 @1.983 @diag @0 @0
+@K @Super Hellcat @1.353 @near-perp @0 @0
+@K @M44 @2.721 @near-para @0 @0
+@k @CA Lorraine @1.655 @diag
+
 2026-02-16
 Diff v. Ferdinand 0
 

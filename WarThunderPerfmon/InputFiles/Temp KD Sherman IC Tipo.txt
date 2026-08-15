@@ -1,3 +1,5 @@
+All battles that do not meet the minimum target fighting range (2km for BR 7 and above, 1.5 for everything below) is not counted in the vehicle battle count balance.
+
 2026-07-11
 DIff v. Tiger E 0
 

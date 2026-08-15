@@ -1,6 +1,6 @@
 KD records for maps on the avoidance list will be removed. This was implemented on Aug. 14, 2023, and applies to all vehicles.
 
-If there were no kills or deaths in a match, it is not counted.
+If there were no kills or deaths in a match, it is not counted in the vehicle ratio balance.
 All battles that do not meet the minimum target fighting range (2km for BR 7 and above, 1.5 for everything below) is not counted in the vehicle battle count balance.
 
 If a vehicle is stationary, state the orientation of the surface hit in the orientation field.
@@ -10,7 +10,8 @@ Event, TargetVehicle, Distance, Orientation, TargetSpeed, OwnSpeed
 
 2026-08-02
 BR 7.7
-Diff v. Conq
+Diff v. Conq 0
+X
 
 Pradesh #2
 @k @Type 63 @1.966 @diag @0 @0
