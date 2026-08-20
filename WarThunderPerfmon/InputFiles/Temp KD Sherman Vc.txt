@@ -1,7 +1,7 @@
 All battles that do not meet the minimum target fighting range (2km for BR 7 and above, 1.5 for everything below) is not counted in the vehicle battle count balance.
 
 2026-04-12
-Diff v. Tiger E -1
+Diff v. Tiger E 0
 
 Second Battle of El Alamein #1
 @k @SU-152 @0.707 @diag @0 @0

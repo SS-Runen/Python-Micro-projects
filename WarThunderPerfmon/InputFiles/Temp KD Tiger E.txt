@@ -2,7 +2,7 @@ If there were no kills or deaths in a match, it is not counted.
 All battles that do not meet the minimum target fighting range (2km for BR 7 and above, 1.5 for everything below) is not counted in the vehicle battle count balance.
 
 2026-04-12
-Diff v. Sherman Vc +1
+Diff v. Sherman Vc 0
 
 Fire Arc #2
 @k @T-34-85 @1.277 @diag @0 @0

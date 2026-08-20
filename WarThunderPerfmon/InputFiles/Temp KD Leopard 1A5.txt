@@ -1,6 +1,8 @@
+All battles that do not meet the minimum target fighting range (2km for BR 7 and above, 1.5 for everything below) is not counted in the vehicle battle count balance.
+
 Event, Vehicle, Distance, Orientation, Speed, SelfSpeed
 
-2026-08-05
+2026-08-20
 Diff v. Olifant
 
 

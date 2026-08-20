@@ -7,11 +7,11 @@ If a role is played the number of required games/times, it will be marked with a
 2026-08-03
 Priority
 Jungle
-XX
+XXXX|
 
 Secondary
 Bottom Carry
-
+XX|
 Low-priority
 Top
 

@@ -1,11 +1,18 @@
+All battles that do not meet the minimum target fighting range (2km for BR 7 and above, 1.5 for everything below) is not counted in the vehicle battle count balance.
+
 -------------------
 Olifant Mk.2 Guide
 
-- Moving into and out of line of sight is much slower even when full upgraded. Use the commander's thermal sight. Stay as close to cover as possible without showing any part of the turret, including any hatches.
+- Moving into and out of line of sight is much slower even when fully upgraded. Use the commander's thermal sight. Stay as close to cover as possible without showing any part of the turret, including any hatches.
 Use the thermal sight to avoid having to move in and out of cover as much as the Rooikat.
 
-2026-08-05
-Diff v. Leo 1A5
+2026-08-20
+Diff v. Leo 1A5 0
+
+Pradesh #1
+@k @PTL02 @1.672 @para @0 @0
+@k @T-62M-1 @2.073 @diag
+@k @ZTS63 @1.737, 1.740 @near-perp, near-perp
 
 2026-07-31
 Diff v. Leo 1A5 +1
