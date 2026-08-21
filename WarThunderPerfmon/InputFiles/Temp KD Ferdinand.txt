@@ -1,10 +1,21 @@
 If there were no kills or deaths in a match, it is not counted in the vehicle ratio balance.
-All battles that do not meet the minimum target fighting range (2km for BR 7 and above, 1.5 for everything below) is not counted in the vehicle battle count balance.
+All battles that do not meet the minimum target fighting range (2km) is not counted in the vehicle battle count balance.
 
-2026-08-15
+2026-08-21
 Diff v. Tiger II Nr. 1-50
 
+Fire Arc #2 [Battle]
+@k @M18 @1.957 @diag @0 @0
+@k @M4A3E2 (76) W @2.001 @diag @0 @0
+@k @T-25 @2.046 @diag @0 @0
+@k @M36B2 @1.326 @para
+@K @M4/T26 @1.624 @diag @0 @0
+@kb @M36B2 @1.517 @diag @0 @0
 
+Fire Arc #2
+@k @SU-152 @1.911, 1.910 @diag,diag
+@k @M36B2 @1.305 @near-perp @0 @0
+@kb @T-44 @0.679 @near-perp @0 @0
 
 2026-04-23
 Diff v. Tiger II Nr. 1-50 0

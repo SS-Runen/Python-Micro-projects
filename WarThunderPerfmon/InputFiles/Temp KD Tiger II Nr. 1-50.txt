@@ -1,8 +1,12 @@
 If there were no kills or deaths in a match, it is not counted in the vehicle ratio balance.
 All battles that do not meet the minimum target fighting range (2km for BR 7 and above, 1.5 for everything below) is not counted in the vehicle battle count balance.
 
+2026-08-21
+
+
+
 2026-08-15
-Diff v. Ferdinand
+Diff v. Ferdinand +1
 
 Second Battle of El Alamein #1
 * This M26 stood still for all shots despite the X-ray view not showing disabled mobility.
