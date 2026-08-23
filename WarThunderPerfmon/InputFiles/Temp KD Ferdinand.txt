@@ -2,7 +2,7 @@ If there were no kills or deaths in a match, it is not counted in the vehicle ra
 All battles that do not meet the minimum target fighting range (2km) is not counted in the vehicle battle count balance.
 
 2026-08-21
-Diff v. Tiger II Nr. 1-50
+Diff v. Tiger II Nr. 1-50 0
 
 Fire Arc #2 [Battle]
 @k @M18 @1.957 @diag @0 @0
