@@ -5,7 +5,7 @@ All battles that do not meet the minimum target fighting range (2km for BR 7 and
 Diff v. Ferdinand
 
 Second Battle of El Alamein #1
-@k @M18 @1.680 @perp @0 @0
+@k @M18 @1.680 @perp @2 @0
 @kb @M-51 @2.730, 2.732 @diag,para @0,0 @0,0
 
 2026-08-15
