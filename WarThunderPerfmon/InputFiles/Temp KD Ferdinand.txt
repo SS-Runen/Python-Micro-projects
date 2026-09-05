@@ -8,8 +8,8 @@ Fire Arc #2 [Battle]
 @k @M18 @1.957 @diag @0 @0
 @k @M4A3E2 (76) W @2.001 @diag @0 @0
 @k @T-25 @2.046 @diag @0 @0
-@k @M36B2 @1.326 @para
-@K @M4/T26 @1.624 @diag @0 @0
+@k @M36B2 @1.326 @para @13 @0
+@K @M4/T26 @1.624 @diag @12 @0
 @kb @M36B2 @1.517 @diag @0 @0
 
 Fire Arc #2

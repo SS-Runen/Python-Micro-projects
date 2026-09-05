@@ -14,7 +14,7 @@ Diff v. Conq 0
 X
 
 Pradesh #2
-@k @Type 63 @1.966 @diag @0 @0
+@k @Type 63 @1.966 @diag @-7 @0
 
 Pradesh #1
 @k @Type 62 @2.058 @diag @0 @0
