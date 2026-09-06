@@ -18,8 +18,8 @@ Diff v. Leo 1A5 0
 
 Pradesh #1
 @k @PTL02 @1.672 @para @0 @0
-@k @T-62M-1 @2.073 @diag
-@k @ZTS63 @1.737, 1.740 @near-perp, near-perp
+@k @T-62M-1 @2.073 @diag @-4 @0
+@k @ZTS63 @1.737, 1.740 @near-perp, near-perp @9,0 @0,0
 
 2026-07-31
 Diff v. Leo 1A5 +1

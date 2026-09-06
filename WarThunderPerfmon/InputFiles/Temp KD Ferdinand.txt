@@ -13,8 +13,8 @@ Fire Arc #2 [Battle]
 @kb @M36B2 @1.517 @diag @0 @0
 
 Fire Arc #2
-@k @SU-152 @1.911, 1.910 @diag,diag
-@k @M36B2 @1.305 @near-perp @0 @0
+@k @SU-152 @1.911, 1.910 @diag,diag @9,0 @0,0
+@k @M36B2 @1.305 @near-perp @1 @0
 @kb @T-44 @0.679 @near-perp @0 @0
 
 2026-04-23
