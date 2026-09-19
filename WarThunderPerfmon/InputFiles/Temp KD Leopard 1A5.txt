@@ -2,7 +2,19 @@ All battles that do not meet the minimum target fighting range (2km for BR 7 and
 
 Event, Vehicle, Distance, Orientation, Speed, SelfSpeed
 
+2026-09-19
+Diff v. Olifant 0
+XX
 
+Pradesh #1
+@k @Object 689 @1.899 @diag
+@k @M113A1 (TOW) @2.218 @near-para
+
+Second Battle of El Alamein #1
+@k @T-55AMD-1 @3.013 @diag @0 @0
+@k @T-62 @2.483 @near-para @0 @0
+@k @BMD-4 @2.482 @diag @0 @0
+@kb @M60A3 TTS @2.756 @diag @0 @0
 
 2026-07-31
 Diff v. Olifant -1
