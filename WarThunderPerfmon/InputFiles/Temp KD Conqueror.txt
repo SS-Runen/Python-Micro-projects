@@ -17,6 +17,12 @@ All battles that do not meet the minimum target fighting range (2km for BR 7 and
 
 Event, TargetVehicle, Distance, Orientation, TargetSpeed, OwnSpeed
 
+2026-09-
+BR
+Diff v. Cent.
+
+
+
 2026-08-12
 BR 7.7
 Diff v. Cent. 0
