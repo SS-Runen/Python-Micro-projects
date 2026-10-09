@@ -1,4 +1,10 @@
 All battles that do not meet the minimum target fighting range (2km for BR 7 and above, 1.5 for everything below) is not counted in the vehicle battle count balance.
+Battles at ranges lower than one thousand five hundred meters are not counted as part of the battle count balancing among vehicles.
+
+2026-10-09
+
+Fire Arc #2 [Battle]
+@k @T-34-85 @1.276 @near-perp @0 @0
 
 2026-07-11
 DIff v. Tiger E 0

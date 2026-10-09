@@ -8,8 +8,22 @@ If a vehicle is moving, state the relative orientation of movement in the orient
 
 Event, TargetVehicle, Distance, Orientation, TargetSpeed, OwnSpeed
 
-2026-10-03
+2026-10-09
+Diff v. Tiger E +1
+X
 
+Fire Arc #2
+@k @T-34-85 @1.413, 1.403 @diag,diag
+@k @ASU-57 @1.394 @near-para @0 @0
+@k @BTR-ZD @2.066 @diag @0 @0
+
+Fire Arc #2
+@k @AMX-13 (FL11) @0.867 @para @0 @0
+
+2026-10-03
+Diff v. Tiger E 0
+
+Second Battle of El Alamein #1
 @K @M18 (Taiwan) @0.760 @perp,perp
 @K @T-34-85 @1.154, 1.154 @para,para
 @k @M4A3E2 (France) @1.241 @perp @0 @0
