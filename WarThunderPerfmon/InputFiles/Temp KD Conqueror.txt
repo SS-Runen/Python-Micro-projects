@@ -17,11 +17,15 @@ All battles that do not meet the minimum target fighting range (2km for BR 7 and
 
 Event, TargetVehicle, Distance, Orientation, TargetSpeed, OwnSpeed
 
-2026-09-
+2026-10-11
 BR
 Diff v. Cent.
+X
 
-
+Second Battle of El Alamein #1
+@k @T-44 @2.375 @para @0 @0
+@K @T-54 (1947) @2.375 @near-perp
+@k @T-54 (1949) @1.456 @near-para @0 @0
 
 2026-08-12
 BR 7.7
