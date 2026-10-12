@@ -8,6 +8,15 @@ If a vehicle is moving, state the relative orientation of movement in the orient
 
 Event, TargetVehicle, Distance, Orientation, TargetSpeed, OwnSpeed
 
+2026-10-13
+BR 8.0
+Diff v. Conq
+
+Second Battle of El Alamein #1
+@K @PLZ05 @2.889 @para @0 @0
+@k @PLZ05 @2.884 @near-para @0 @0
+@k @PLZ05 @2.922 @diag @0 @0
+
 2026-10-04
 BR 8.0
 Diff v. Conq 0

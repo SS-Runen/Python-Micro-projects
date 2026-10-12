@@ -18,8 +18,8 @@ All battles that do not meet the minimum target fighting range (2km for BR 7 and
 Event, TargetVehicle, Distance, Orientation, TargetSpeed, OwnSpeed
 
 2026-10-11
-BR
-Diff v. Cent.
+BR 7.7
+Diff v. Cent. +1
 X
 
 Second Battle of El Alamein #1
