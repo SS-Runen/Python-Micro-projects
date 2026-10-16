@@ -2,6 +2,7 @@ All battles that do not meet the minimum target fighting range (2km for BR 7 and
 Battles at ranges lower than one thousand five hundred meters are not counted as part of the battle count balancing among vehicles.
 
 2026-10-09
+Diff v. Tiger E 0
 
 Fire Arc #2 [Battle]
 @k @T-34-85 @1.276 @near-perp @0 @0
@@ -85,7 +86,6 @@ Fire Arc #2
 @k @M24 (China) @1.264, 1.24 @near-perp,near-perp @20,0 @44,0
 @k @M18 @1.06 @perp @0 @0
 
-Enemy ran out of fire extinguishers after only being set on fire twice.
 @k @T-34-85 @2.03, 1.931 @diag,diag @0,0 @0,0
 @k @T-34-85 (D-5T) @1.901 @perp @15 @0
 
