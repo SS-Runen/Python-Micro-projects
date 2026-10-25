@@ -13,7 +13,7 @@ Diff v. Tiger E +1
 X
 
 Fire Arc #2
-@k @T-34-85 @1.413, 1.403 @diag,diag
+@k @T-34-85 @1.413, 1.403 @diag,diag @48,0 @0,0
 @k @ASU-57 @1.394 @near-para @0 @0
 @k @BTR-ZD @2.066 @diag @0 @0
 
