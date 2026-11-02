@@ -8,7 +8,7 @@ Diff. v. Olifant
 Second Battle of El Alamein #1
 @k @M113A1 (TOW) @2.409 @diag @0 @0
 @k @BMP-3 @2.184 @diag @0 @0
-@k @PGZ88 @2.346 @para @0 @0
+@k @PGZ88 @2.346 @para @12 @0
 @k @ZTZ88B @1.399 @diag @0 @0
 
 2026-09-19
