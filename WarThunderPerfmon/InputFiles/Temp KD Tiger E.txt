@@ -6,7 +6,7 @@ Diff v. Sherman Vc
 
 Fire Arc #2 [Battle]
 @k @KV-2 @1.845 @diag @0 @0
-@K @T-34-85 (D-5T) @1.852, 1.852 @diag,diag
+@K @T-34-85 (D-5T) @1.852, 1.852 @diag,diag @10,0 @0,0
 @k @T-20 @1.160, 1.250 @perp,diag @0,0 @0,0
 
 2026-04-12
