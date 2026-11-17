@@ -7,6 +7,13 @@ If a vehicle is stationary, state the orientation of the surface hit in the orie
 If a vehicle is moving, state the relative orientation of movement in the orientation field.
 
 Event, TargetVehicle, Distance, Orientation, TargetSpeed, OwnSpeed
+2026-11-17
+BR 8.0
+Diff v. Conq.
+
+Pradesh #2
+@k @2S19M1 @2.407 @near-perp @0 @0
+@k @Object 906 @1.925, 1.925 @perp, perp
 
 2026-10-31
 BR 7.7
