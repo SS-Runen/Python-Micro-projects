@@ -7,15 +7,15 @@ Olifant Mk.2 Guide
 Use the thermal sight to avoid having to move in and out of cover as much as the Rooikat.
 
 2026-11-18
-Diff v. Leo 1A5
+Diff v. Leo 1A5 +2
 
 Pradesh #1
-@k @BMD-4M @2.035 @diag @0 @0
+@k @BMD-4M @2.035 @diag @-6 @0
 @K @AFT09 @0.053 @perp @0 @0
 
 Pradesh #1
-@k @Object 775 @1.991 @diag @0 @0
-@K @BPM-3 @0.625 @para
+@k @Object 775 @1.991 @diag @6 @0
+@K @BPM-3 @0.625 @para @14 @0
 @kb @BMP-3 @1.391 @diag @0 @0
 
 2026-10-24
